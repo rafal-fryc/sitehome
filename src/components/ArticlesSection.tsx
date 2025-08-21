@@ -80,7 +80,7 @@ const ArticlesSection = () => {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-4 mb-6">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Legal Articles & Analysis
+              Articles & Analysis
             </h2>
             <Button 
               onClick={syncSubstack}
