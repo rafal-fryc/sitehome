@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink, Gavel, Search, FileCheck, Calculator } from "lucide-react";
 
-const ToolsSection = () => {
-  const tools = [
+const ProjectsSection = () => {
+  const projects = [
     {
       title: "Legal Research Assistant",
       description: "An AI-powered tool that helps streamline legal research by analyzing case law, statutes, and legal precedents to provide comprehensive summaries and citations.",
@@ -58,7 +58,7 @@ const ToolsSection = () => {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Legal Technology Tools
+            Technology Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Innovative applications and tools designed to enhance legal practice, 
@@ -67,8 +67,8 @@ const ToolsSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {tools.map((tool, index) => {
-            const IconComponent = tool.icon;
+          {projects.map((project, index) => {
+            const IconComponent = project.icon;
             return (
               <Card key={index} className="p-8 bg-gradient-to-br from-card to-accent/30 border-0 shadow-soft hover:shadow-elegant transition-all duration-300 hover:border-gold/20 border border-transparent">
                 <div className="space-y-6">
@@ -79,9 +79,9 @@ const ToolsSection = () => {
                         <IconComponent className="h-8 w-8 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-semibold text-foreground">{tool.title}</h3>
-                        <Badge className={getStatusColor(tool.status)}>
-                          {tool.status}
+                        <h3 className="text-2xl font-semibold text-foreground">{project.title}</h3>
+                        <Badge className={getStatusColor(project.status)}>
+                          {project.status}
                         </Badge>
                       </div>
                     </div>
@@ -89,14 +89,14 @@ const ToolsSection = () => {
 
                   {/* Description */}
                   <p className="text-muted-foreground leading-relaxed">
-                    {tool.description}
+                    {project.description}
                   </p>
 
                   {/* Technologies */}
                   <div className="space-y-2">
                     <p className="text-sm font-medium text-foreground">Technologies:</p>
                     <div className="flex flex-wrap gap-2">
-                      {tool.technologies.map((tech, techIndex) => (
+                      {project.technologies.map((tech, techIndex) => (
                         <Badge key={techIndex} variant="secondary" className="text-xs">
                           {tech}
                         </Badge>
@@ -109,18 +109,18 @@ const ToolsSection = () => {
                     <Button 
                       variant="outline" 
                       size="sm"
-                      disabled={tool.status === "Planning"}
+                      disabled={project.status === "Planning"}
                     >
                       <Github className="mr-2 h-4 w-4" />
                       Code
                     </Button>
                     <Button 
                       size="sm"
-                      disabled={!["Live", "Beta"].includes(tool.status)}
+                      disabled={!["Live", "Beta"].includes(project.status)}
                       className="bg-gradient-to-r from-primary to-gold hover:from-primary-dark hover:to-gold-dark disabled:from-muted disabled:to-muted shadow-gold"
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
-                      {tool.status === "Live" ? "Try it" : tool.status === "Beta" ? "Preview" : "Coming Soon"}
+                      {project.status === "Live" ? "Try it" : project.status === "Beta" ? "Preview" : "Coming Soon"}
                     </Button>
                   </div>
                 </div>
@@ -139,4 +139,4 @@ const ToolsSection = () => {
   );
 };
 
-export default ToolsSection;
+export default ProjectsSection;

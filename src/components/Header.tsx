@@ -10,7 +10,7 @@ const Header = ({ activeSection, onSectionChange }: HeaderProps) => {
   const navigation = [
     { name: 'Home', id: 'home' },
     { name: 'Articles', id: 'articles' },
-    { name: 'Tools', id: 'tools' },
+    { name: 'Projects', id: 'projects' },
   ];
 
   return (

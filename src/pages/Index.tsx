@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ArticlesSection from '@/components/ArticlesSection';
-import ToolsSection from '@/components/ToolsSection';
+import ProjectsSection from '@/components/ProjectsSection';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -11,8 +11,8 @@ const Index = () => {
     switch (activeSection) {
       case 'articles':
         return <ArticlesSection />;
-      case 'tools':
-        return <ToolsSection />;
+      case 'projects':
+        return <ProjectsSection />;
       default:
         return <HeroSection />;
     }

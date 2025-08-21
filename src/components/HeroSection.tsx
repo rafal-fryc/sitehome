@@ -28,7 +28,7 @@ const HeroSection = () => {
                 <div className="p-3 bg-gradient-to-br from-primary/10 to-gold/10 rounded-lg border border-gold/20">
                   <FileText className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-semibold">Legal Articles</h3>
+                <h3 className="text-2xl font-semibold">Articles</h3>
               </div>
               <p className="text-muted-foreground text-left leading-relaxed">
                 In-depth analysis of contemporary legal issues, case studies, and academic research 
@@ -41,7 +41,7 @@ const HeroSection = () => {
                 <div className="p-3 bg-gradient-to-br from-primary/10 to-gold/10 rounded-lg border border-gold/20">
                   <Code className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-semibold">Legal Tools</h3>
+                <h3 className="text-2xl font-semibold">Projects</h3>
               </div>
               <p className="text-muted-foreground text-left leading-relaxed">
                 Practical applications and digital tools designed to streamline legal research, 
