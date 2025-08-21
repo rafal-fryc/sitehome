@@ -10,12 +10,9 @@ const HeroSection = () => {
           {/* Hero Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary-dark via-primary to-gold bg-clip-text text-transparent">
-              Law Student
-            </h1>
-              <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
+              <h1 className="text-3xl md:text-4xl font-semibold text-foreground">
                 Portfolio & Insights
-              </h2>
+              </h1>
             </div>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -54,11 +51,7 @@ const HeroSection = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-primary to-gold hover:from-primary-dark hover:to-gold-dark text-lg px-8 py-3 shadow-gold">
-              <Scale className="mr-2 h-5 w-5" />
-              Explore My Work
-            </Button>
+          <div className="flex justify-center items-center mt-12">
             <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-gold/30 hover:bg-gold/5 hover:border-gold">
               <Mail className="mr-2 h-5 w-5" />
               Get In Touch

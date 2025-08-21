@@ -18,7 +18,7 @@ const Header = ({ activeSection, onSectionChange }: HeaderProps) => {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center space-x-2">
           <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-gold"></div>
-          <span className="font-semibold text-lg">Law Student Portfolio</span>
+          <span className="font-semibold text-lg">Rafal's Portfolio</span>
         </div>
         
         <nav className="flex items-center space-x-1">
