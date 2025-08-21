@@ -46,7 +46,7 @@ const ArticlesSection = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <div className="flex-1 space-y-4">
                   <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full font-medium">
+                    <span className="px-3 py-1 bg-gradient-to-r from-primary/10 to-gold/10 text-primary rounded-full font-medium border border-gold/20">
                       {article.category}
                     </span>
                     <div className="flex items-center gap-1">
@@ -72,7 +72,7 @@ const ArticlesSection = () => {
                   </p>
                 </div>
                 
-                <Button className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary w-fit">
+                <Button className="bg-gradient-to-r from-primary to-gold hover:from-primary-dark hover:to-gold-dark w-fit shadow-gold">
                   Read Article
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -82,7 +82,7 @@ const ArticlesSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="text-lg px-8 py-3">
+          <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-gold/30 hover:bg-gold/5 hover:border-gold">
             View All Articles
           </Button>
         </div>

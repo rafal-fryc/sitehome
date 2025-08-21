@@ -10,9 +10,9 @@ const HeroSection = () => {
           {/* Hero Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary-dark via-primary to-primary-light bg-clip-text text-transparent">
-                Law Student
-              </h1>
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary-dark via-primary to-gold bg-clip-text text-transparent">
+              Law Student
+            </h1>
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
                 Portfolio & Insights
               </h2>
@@ -26,9 +26,9 @@ const HeroSection = () => {
 
           {/* Feature Cards */}
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12">
-            <Card className="p-8 bg-gradient-to-br from-card to-accent/30 border-0 shadow-elegant hover:shadow-xl transition-all duration-300">
+            <Card className="p-8 bg-gradient-to-br from-card to-accent/30 border-0 shadow-elegant hover:shadow-xl transition-all duration-300 hover:border-gold/20 border border-transparent">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
+                <div className="p-3 bg-gradient-to-br from-primary/10 to-gold/10 rounded-lg border border-gold/20">
                   <FileText className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-semibold">Legal Articles</h3>
@@ -39,9 +39,9 @@ const HeroSection = () => {
               </p>
             </Card>
 
-            <Card className="p-8 bg-gradient-to-br from-card to-accent/30 border-0 shadow-elegant hover:shadow-xl transition-all duration-300">
+            <Card className="p-8 bg-gradient-to-br from-card to-accent/30 border-0 shadow-elegant hover:shadow-xl transition-all duration-300 hover:border-gold/20 border border-transparent">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
+                <div className="p-3 bg-gradient-to-br from-primary/10 to-gold/10 rounded-lg border border-gold/20">
                   <Code className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-semibold">Legal Tools</h3>
@@ -55,11 +55,11 @@ const HeroSection = () => {
 
           {/* CTA Section */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary text-lg px-8 py-3">
+            <Button size="lg" className="bg-gradient-to-r from-primary to-gold hover:from-primary-dark hover:to-gold-dark text-lg px-8 py-3 shadow-gold">
               <Scale className="mr-2 h-5 w-5" />
               Explore My Work
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-3">
+            <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-gold/30 hover:bg-gold/5 hover:border-gold">
               <Mail className="mr-2 h-5 w-5" />
               Get In Touch
             </Button>

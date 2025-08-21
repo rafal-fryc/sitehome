@@ -17,7 +17,7 @@ const Header = ({ activeSection, onSectionChange }: HeaderProps) => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-primary-dark"></div>
+          <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-gold"></div>
           <span className="font-semibold text-lg">Law Student Portfolio</span>
         </div>
         
@@ -31,7 +31,7 @@ const Header = ({ activeSection, onSectionChange }: HeaderProps) => {
             >
               {item.name}
               {activeSection === item.id && (
-                <div className="absolute bottom-0 left-1/2 h-0.5 w-8 -translate-x-1/2 bg-primary-light" />
+                <div className="absolute bottom-0 left-1/2 h-0.5 w-8 -translate-x-1/2 bg-gradient-to-r from-primary-light to-gold" />
               )}
             </Button>
           ))}

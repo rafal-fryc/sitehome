@@ -70,12 +70,12 @@ const ToolsSection = () => {
           {tools.map((tool, index) => {
             const IconComponent = tool.icon;
             return (
-              <Card key={index} className="p-8 bg-gradient-to-br from-card to-accent/30 border-0 shadow-soft hover:shadow-elegant transition-all duration-300">
+              <Card key={index} className="p-8 bg-gradient-to-br from-card to-accent/30 border-0 shadow-soft hover:shadow-elegant transition-all duration-300 hover:border-gold/20 border border-transparent">
                 <div className="space-y-6">
                   {/* Header */}
                   <div className="flex items-start justify-between">
                     <div className="flex items-center space-x-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
+                      <div className="p-3 bg-gradient-to-br from-primary/10 to-gold/10 rounded-lg border border-gold/20">
                         <IconComponent className="h-8 w-8 text-primary" />
                       </div>
                       <div>
@@ -117,7 +117,7 @@ const ToolsSection = () => {
                     <Button 
                       size="sm"
                       disabled={!["Live", "Beta"].includes(tool.status)}
-                      className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary"
+                      className="bg-gradient-to-r from-primary to-gold hover:from-primary-dark hover:to-gold-dark disabled:from-muted disabled:to-muted shadow-gold"
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       {tool.status === "Live" ? "Try it" : tool.status === "Beta" ? "Preview" : "Coming Soon"}
@@ -130,7 +130,7 @@ const ToolsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="text-lg px-8 py-3">
+          <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-gold/30 hover:bg-gold/5 hover:border-gold">
             View All Projects
           </Button>
         </div>
