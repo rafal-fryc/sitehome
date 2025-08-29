@@ -53,7 +53,7 @@ const ArticlesSection = () => {
 
       toast({
         title: "Success",
-        description: `${data.message}. Found ${data.articlesProcessed} articles.`,
+        description: `${data.message}. ${data.newArticles} new, ${data.updatedArticles} updated.`,
       });
 
       // Refresh articles after sync

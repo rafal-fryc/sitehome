@@ -1,61 +1,64 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.55.0';
+import { XMLParser } from 'https://esm.sh/fast-xml-parser@4.2.5';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
-// Parse RSS XML to extract articles
-function parseRssToArticles(xmlString: string) {
-  const articles: any[] = [];
-  
-  // Simple regex-based XML parsing for RSS items
-  const itemRegex = /<item>(.*?)<\/item>/gs;
-  let match;
+interface ParsedArticle {
+  title: string;
+  excerpt: string;
+  substack_url: string;
+  published_date: string;
+  read_time: string;
+  category: string;
+}
 
-  while ((match = itemRegex.exec(xmlString)) !== null) {
-    const itemContent = match[1];
-    
-    // Extract title
-    const titleMatch = itemContent.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/) || 
-                      itemContent.match(/<title>(.*?)<\/title>/);
-    const title = titleMatch ? titleMatch[1].trim() : '';
-    
-    // Extract description/excerpt
-    const descMatch = itemContent.match(/<description><!\[CDATA\[(.*?)\]\]><\/description>/) || 
-                     itemContent.match(/<description>(.*?)<\/description>/);
-    let excerpt = descMatch ? descMatch[1].trim() : '';
-    
-    // Clean HTML from excerpt and limit length
-    excerpt = excerpt.replace(/<[^>]*>/g, '').substring(0, 200) + '...';
-    
-    // Extract link
-    const linkMatch = itemContent.match(/<link>(.*?)<\/link>/);
-    const substack_url = linkMatch ? linkMatch[1].trim() : '';
-    
-    // Extract publication date
-    const dateMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/);
-    const published_date = dateMatch ? new Date(dateMatch[1].trim()).toISOString() : new Date().toISOString();
-    
-    // Calculate read time (rough estimate: 200 words per minute)
-    const wordCount = excerpt.split(' ').length * 5; // Estimate full article is 5x excerpt
-    const readTime = Math.ceil(wordCount / 200);
-    
-    if (title && substack_url) {
-      articles.push({
+type RawItem = Record<string, unknown>;
+
+// Parse RSS XML to extract articles in a resilient way
+function parseRssToArticles(xmlString: string): ParsedArticle[] {
+  const parser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: '' });
+  const feed = parser.parse(xmlString) as { rss?: { channel?: { item?: RawItem | RawItem[] } } };
+  const items = feed?.rss?.channel?.item ?? [];
+  const itemArray: RawItem[] = Array.isArray(items) ? items : [items];
+
+  return itemArray
+    .map((item: RawItem): ParsedArticle => {
+      const rawTitle = item.title as unknown;
+      const title =
+        typeof rawTitle === 'object' && rawTitle !== null
+          ? String((rawTitle as Record<string, unknown>)['#text'] ?? '').trim()
+          : String(rawTitle ?? '').trim();
+
+      const descriptionRaw =
+        (item['content:encoded'] as unknown) || (item.description as unknown) || '';
+      const excerpt =
+        String(descriptionRaw).replace(/<[^>]*>/g, '').substring(0, 200) + '...';
+
+      const linkRaw = item.link as unknown;
+      const substack_url = String(linkRaw ?? '').trim();
+
+      const pubDateRaw = item.pubDate as unknown;
+      const published_date = pubDateRaw
+        ? new Date(String(pubDateRaw)).toISOString()
+        : new Date().toISOString();
+
+      const wordCount = excerpt.split(/\s+/).filter(Boolean).length * 5;
+      const readTime = Math.max(1, Math.ceil(wordCount / 200));
+
+      return {
         title,
         excerpt,
         substack_url,
         published_date,
         read_time: `${readTime} min read`,
-        category: 'Legal Analysis'
-      });
-    }
-  }
-  
-  return articles;
+        category: 'Legal Analysis',
+      };
+    })
+    .filter((article: ParsedArticle) => article.title && article.substack_url);
 }
 
 serve(async (req) => {
@@ -76,7 +79,13 @@ serve(async (req) => {
     const substackUrl = 'https://rafalfryc.substack.com/feed';
     console.log(`Fetching RSS from: ${substackUrl}`);
     
-    const rssResponse = await fetch(substackUrl);
+    const rssResponse = await fetch(substackUrl, {
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (compatible; SubstackSync/1.0; +https://rafalfryc.com)',
+        Accept: 'application/rss+xml, application/xml',
+      },
+    });
     if (!rssResponse.ok) {
       throw new Error(`Failed to fetch RSS: ${rssResponse.status} ${rssResponse.statusText}`);
     }
