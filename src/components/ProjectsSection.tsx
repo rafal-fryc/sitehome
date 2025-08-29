@@ -106,22 +106,64 @@ const ProjectsSection = () => {
 
                   {/* Actions */}
                   <div className="flex gap-3 pt-4">
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      disabled={project.status === "Planning"}
-                    >
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Button>
-                    <Button 
-                      size="sm"
-                      disabled={!["Live", "Beta"].includes(project.status)}
-                      className="bg-gradient-to-r from-primary to-gold hover:from-primary-dark hover:to-gold-dark disabled:from-muted disabled:to-muted shadow-gold"
-                    >
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      {project.status === "Live" ? "Try it" : project.status === "Beta" ? "Preview" : "Coming Soon"}
-                    </Button>
+                    {project.githubUrl && project.githubUrl !== "#" ? (
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm">
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="mr-2 h-4 w-4" />
+                          Code
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        disabled
+                      >
+                        <Github className="mr-2 h-4 w-4" />
+                        Code
+                      </Button>
+                    )}
+
+                    {project.demoUrl && project.demoUrl !== "#" ? (
+                      <Button
+                        asChild
+                        size="sm"
+                        className="bg-gradient-to-r from-primary to-gold hover:from-primary-dark hover:to-gold-dark disabled:from-muted disabled:to-muted shadow-gold"
+                      >
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          {project.status === "Live"
+                            ? "Try it"
+                            : project.status === "Beta"
+                              ? "Preview"
+                              : "Coming Soon"}
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button
+                        size="sm"
+                        disabled
+                        className="bg-gradient-to-r from-primary to-gold hover:from-primary-dark hover:to-gold-dark disabled:from-muted disabled:to-muted shadow-gold"
+                      >
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        {project.status === "Live"
+                          ? "Try it"
+                          : project.status === "Beta"
+                            ? "Preview"
+                            : "Coming Soon"}
+                      </Button>
+                    )}
                   </div>
                 </div>
               </Card>
