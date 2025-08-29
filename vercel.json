@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/checklists", "destination": "https://YOUR-SUBAPP.vercel.app" },
+    { "source": "/checklists/:path*", "destination": "https://law-list-buddy-34.vercel.app/:path*" },
+
+    /* Only needed if your Lovable app has Vercel API functions */
+    { "source": "/checklists/api/:path*", "destination": "https://law-list-buddy-34.vercel.app/api/:path*" }
+  ]
+}
