@@ -6,13 +6,13 @@ import { Github, ExternalLink, Gavel, Search, FileCheck, Calculator } from "luci
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Legal Research Assistant",
-      description: "An AI-powered tool that helps streamline legal research by analyzing case law, statutes, and legal precedents to provide comprehensive summaries and citations.",
-      technologies: ["React", "TypeScript", "OpenAI API", "Legal Databases"],
+      title: "Compliance Checklist Generator",
+      description: "Stay on top of dozens of laws with a customizable checklist generator, allowing you to discern the requirements with a few clicks.",
+      technologies: ["Vite", "TypeScript", "OpenAI Codex"],
       status: "In Development",
       icon: Search,
-      githubUrl: "#",
-      demoUrl: "#"
+      githubUrl: "https://github.com/rafal-fryc/law-list-buddy-34",
+      demoUrl: "https://www.rafalsportfolio.me/checklists"
     },
     {
       title: "Contract Analysis Dashboard",
