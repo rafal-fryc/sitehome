@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { FileText, Code, Scale, Mail } from "lucide-react";
 
 const HeroSection = () => {
+  const [showEmail, setShowEmail] = useState(false);
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-accent/20 to-primary/5 px-4">
       <div className="container max-w-6xl">
@@ -51,11 +54,24 @@ const HeroSection = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="flex justify-center items-center mt-12">
-            <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-gold/30 hover:bg-gold/5 hover:border-gold">
+          <div className="flex flex-col items-center justify-center mt-12">
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 py-3 border-gold/30 hover:bg-gold/5 hover:border-gold"
+              onClick={() => setShowEmail(true)}
+            >
               <Mail className="mr-2 h-5 w-5" />
               Get In Touch
             </Button>
+            {showEmail && (
+              <a
+                href="mailto:rafstanfryc@gmail.com"
+                className="mt-4 text-lg text-primary hover:underline"
+              >
+                rafstanfryc@gmail.com
+              </a>
+            )}
           </div>
         </div>
       </div>
