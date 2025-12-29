@@ -15,13 +15,13 @@ const ProjectsSection = () => {
       demoUrl: "https://www.rafalsportfolio.me/checklists"
     },
     {
-      title: "Contract Analysis Dashboard",
-      description: "A comprehensive tool for analyzing legal contracts, identifying key clauses, potential risks, and ensuring compliance with standard legal frameworks.",
-      technologies: ["Python", "Natural Language Processing", "Flask", "PDF Processing"],
-      status: "Beta",
+      title: "Combined Report",
+      description: "A comprehensive analysis report of GDPR processing orders, aggregating data from multiple sources to provide insights into compliance patterns and regulatory trends.",
+      technologies: ["Data Analysis", "GDPR Compliance", "Report Generation", "Legal Research"],
+      status: "Live",
       icon: FileCheck,
-      githubUrl: "https://github.com/rafal-fryc/bluebookfirst",
-      demoUrl: "#"
+      githubUrl: "#",
+      demoUrl: "/GDPRorders"
     },
     {
       title: "Case Law Citation Generator",
