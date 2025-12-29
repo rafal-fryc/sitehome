@@ -15,7 +15,7 @@ const ProjectsSection = () => {
       demoUrl: "https://www.rafalsportfolio.me/checklists"
     },
     {
-      title: "Combined Report",
+      title: "GDPR Stop Processing Orders Report",
       description: "A comprehensive analysis report of GDPR processing orders, aggregating data from multiple sources to provide insights into compliance patterns and regulatory trends.",
       technologies: ["Data Analysis", "GDPR Compliance", "Report Generation", "Legal Research"],
       status: "Live",
