@@ -24,12 +24,12 @@ const ProjectsSection = () => {
       demoUrl: "/GDPRorders"
     },
     {
-      title: "Case Law Citation Generator",
-      description: "Automated citation generation tool that formats legal citations according to various style guides including Bluebook, APA, and jurisdiction-specific formats.",
-      technologies: ["JavaScript", "Citation APIs", "Legal Standards", "Web Scraping"],
+      title: "Statute Analysis Guide",
+      description: "A comprehensive guide for reading, interpreting, and applying statutes, regulations, and rules. Covers legal hierarchy, interpretation canons, requirement extraction, exemption handling, cross-jurisdictional comparison, and enforcement analysis — with practical checklists for compliance workflows.",
+      technologies: ["Statutory Interpretation", "Legal Compliance", "Regulatory Analysis", "Claude Code Skill"],
       status: "Live",
       icon: Gavel,
-      githubUrl: "#",
+      githubUrl: "https://github.com/lawvable/awesome-legal-skills/tree/main/skills/statute-analysis-rafal-fryc",
       demoUrl: "#"
     },
     {
