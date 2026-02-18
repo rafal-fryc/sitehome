@@ -1,4 +1,3 @@
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink, Gavel, Search, FileCheck, Calculator, BarChart3 } from "lucide-react";
@@ -63,28 +62,29 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-b from-background to-accent/10">
+    <section className="py-16 px-4 bg-background">
       <div className="container max-w-6xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Technology Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Innovative applications and tools designed to enhance legal practice, 
+          <p className="text-xl text-muted-foreground max-w-3xl">
+            Innovative applications and tools designed to enhance legal practice,
             streamline workflows, and bridge the gap between law and technology.
           </p>
+          <div className="border-b border-rule mt-4" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
-              <Card key={index} className="p-8 bg-gradient-to-br from-card to-accent/30 border-0 shadow-soft hover:shadow-elegant transition-all duration-300 hover:border-gold/20 border border-transparent">
+              <div key={index} className="p-8 bg-cream border border-rule border-l-[3px] border-l-primary">
                 <div className="space-y-6">
                   {/* Header */}
                   <div className="flex items-start justify-between">
                     <div className="flex items-center space-x-4">
-                      <div className="p-3 bg-gradient-to-br from-primary/10 to-gold/10 rounded-lg border border-gold/20">
+                      <div className="p-3 bg-primary/10 border border-rule">
                         <IconComponent className="h-8 w-8 text-primary" />
                       </div>
                       <div>
@@ -103,7 +103,7 @@ const ProjectsSection = () => {
 
                   {/* Technologies */}
                   <div className="space-y-2">
-                    <p className="text-sm font-medium text-foreground">Technologies:</p>
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide-label">Technologies</p>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
                         <Badge key={techIndex} variant="secondary" className="text-xs">
@@ -119,7 +119,8 @@ const ProjectsSection = () => {
                       <Button
                         asChild
                         variant="outline"
-                        size="sm">
+                        size="sm"
+                        className="border-rule-dark hover:bg-accent hover:border-gold">
                         <a
                           href={project.githubUrl}
                           target="_blank"
@@ -134,6 +135,7 @@ const ProjectsSection = () => {
                         variant="outline"
                         size="sm"
                         disabled
+                        className="border-rule-dark"
                       >
                         <Github className="mr-2 h-4 w-4" />
                         Code
@@ -144,7 +146,7 @@ const ProjectsSection = () => {
                       <Button
                         asChild
                         size="sm"
-                        className="bg-gradient-to-r from-primary to-gold hover:from-primary-dark hover:to-gold-dark disabled:from-muted disabled:to-muted shadow-gold"
+                        className="bg-primary text-primary-foreground border border-gold hover:bg-primary-light"
                       >
                         <a
                           href={project.demoUrl}
@@ -163,7 +165,7 @@ const ProjectsSection = () => {
                       <Button
                         size="sm"
                         disabled
-                        className="bg-gradient-to-r from-primary to-gold hover:from-primary-dark hover:to-gold-dark disabled:from-muted disabled:to-muted shadow-gold"
+                        className="bg-primary text-primary-foreground border border-gold"
                       >
                         <ExternalLink className="mr-2 h-4 w-4" />
                         {project.status === "Live"
@@ -175,13 +177,13 @@ const ProjectsSection = () => {
                     )}
                   </div>
                 </div>
-              </Card>
+              </div>
             );
           })}
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-gold/30 hover:bg-gold/5 hover:border-gold">
+          <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-gold hover:bg-accent">
             View All Projects
           </Button>
         </div>

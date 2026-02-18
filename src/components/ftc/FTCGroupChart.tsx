@@ -56,9 +56,9 @@ export default function FTCGroupChart({ data, mode, onBarClick }: Props) {
             <YAxis tick={{ fontSize: 12, fill: "hsl(158, 20%, 35%)" }} />
             <Tooltip
               contentStyle={{
-                background: "hsl(50, 25%, 94%)",
-                border: "1px solid hsl(50, 15%, 85%)",
-                borderRadius: 8,
+                background: "hsl(40, 50%, 98%)",
+                border: "1px solid hsl(40, 25%, 80%)",
+                borderRadius: 0,
                 fontFamily: "EB Garamond, serif",
               }}
             />
@@ -101,13 +101,13 @@ export default function FTCGroupChart({ data, mode, onBarClick }: Props) {
           />
           <Tooltip
             contentStyle={{
-              background: "hsl(50, 25%, 94%)",
-              border: "1px solid hsl(50, 15%, 85%)",
-              borderRadius: 8,
+              background: "hsl(40, 50%, 98%)",
+              border: "1px solid hsl(40, 25%, 80%)",
+              borderRadius: 0,
               fontFamily: "EB Garamond, serif",
             }}
           />
-          <Bar dataKey="count" fill="hsl(158, 60%, 35%)" name="Cases" cursor="pointer" radius={[0, 4, 4, 0]}>
+          <Bar dataKey="count" fill="hsl(158, 60%, 35%)" name="Cases" cursor="pointer">
             {chartData.map((_, i) => (
               <Cell key={i} fill={i % 2 === 0 ? "hsl(158, 60%, 35%)" : "hsl(45, 85%, 55%)"} />
             ))}

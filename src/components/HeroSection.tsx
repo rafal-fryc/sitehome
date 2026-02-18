@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { FileText, Code, Scale, Mail } from "lucide-react";
 
 const HeroSection = () => {
   const [showEmail, setShowEmail] = useState(false);
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-accent/20 to-primary/5 px-4">
+    <section className="py-20 px-4 bg-background">
       <div className="container max-w-6xl">
         <div className="text-center space-y-8">
           {/* Hero Content */}
@@ -17,40 +16,40 @@ const HeroSection = () => {
                 Portfolio & Insights
               </h1>
             </div>
-            
+
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Exploring the intersection of law and technology through thoughtful analysis, 
+              Exploring the intersection of law and technology through thoughtful analysis,
               practical tools, and academic research.
             </p>
           </div>
 
           {/* Feature Cards */}
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12">
-            <Card className="p-8 bg-gradient-to-br from-card to-accent/30 border-0 shadow-elegant hover:shadow-xl transition-all duration-300 hover:border-gold/20 border border-transparent">
+            <div className="p-8 bg-cream border border-rule border-l-[3px] border-l-primary">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-gold/10 rounded-lg border border-gold/20">
+                <div className="p-3 bg-primary/10 border border-rule">
                   <FileText className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-semibold">Articles</h3>
               </div>
               <p className="text-muted-foreground text-left leading-relaxed">
-                In-depth analysis of contemporary legal issues, case studies, and academic research 
+                In-depth analysis of contemporary legal issues, case studies, and academic research
                 exploring the evolving landscape of law.
               </p>
-            </Card>
+            </div>
 
-            <Card className="p-8 bg-gradient-to-br from-card to-accent/30 border-0 shadow-elegant hover:shadow-xl transition-all duration-300 hover:border-gold/20 border border-transparent">
+            <div className="p-8 bg-cream border border-rule border-l-[3px] border-l-primary">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-gold/10 rounded-lg border border-gold/20">
+                <div className="p-3 bg-primary/10 border border-rule">
                   <Code className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-semibold">Projects</h3>
               </div>
               <p className="text-muted-foreground text-left leading-relaxed">
-                Practical applications and digital tools designed to streamline legal research, 
+                Practical applications and digital tools designed to streamline legal research,
                 case management, and academic workflows.
               </p>
-            </Card>
+            </div>
           </div>
 
           {/* CTA Section */}
@@ -58,7 +57,7 @@ const HeroSection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-3 border-gold/30 hover:bg-gold/5 hover:border-gold"
+              className="text-lg px-8 py-3 border-rule-dark hover:bg-accent hover:border-gold"
               onClick={() => setShowEmail(true)}
             >
               <Mail className="mr-2 h-5 w-5" />

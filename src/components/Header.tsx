@@ -14,25 +14,27 @@ const Header = ({ activeSection, onSectionChange }: HeaderProps) => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full bg-primary border-b-[3px] border-gold">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-gold"></div>
-          <span className="font-semibold text-lg">Rafal's Portfolio</span>
+          <div className="h-8 w-8 bg-gold/20 border border-gold flex items-center justify-center">
+            <span className="text-primary-foreground font-bold text-sm">R</span>
+          </div>
+          <span className="font-semibold text-lg text-primary-foreground">Rafal's Portfolio</span>
         </div>
-        
+
         <nav className="flex items-center space-x-1">
           {navigation.map((item) => (
             <Button
               key={item.id}
-              variant={activeSection === item.id ? "default" : "ghost"}
+              variant="ghost"
               onClick={() => onSectionChange(item.id)}
-              className="relative"
+              className={cn(
+                "text-primary-foreground/80 hover:text-primary-foreground hover:bg-white/10 relative",
+                activeSection === item.id && "text-primary-foreground border-b-2 border-gold"
+              )}
             >
               {item.name}
-              {activeSection === item.id && (
-                <div className="absolute bottom-0 left-1/2 h-0.5 w-8 -translate-x-1/2 bg-gradient-to-r from-primary-light to-gold" />
-              )}
             </Button>
           ))}
         </nav>

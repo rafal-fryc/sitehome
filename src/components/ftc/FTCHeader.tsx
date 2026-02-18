@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function FTCHeader() {
   return (
-    <header className="py-8 px-4 bg-gradient-to-br from-primary-dark via-primary to-gold-dark text-primary-foreground">
+    <header className="py-8 px-4 bg-primary border-b-[3px] border-gold text-primary-foreground">
       <div className="container max-w-6xl mx-auto">
         <Button
           asChild

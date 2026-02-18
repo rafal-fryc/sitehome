@@ -1,4 +1,3 @@
-import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { GroupStats, GroupingMode, FTCDataPayload } from "@/types/ftc";
 
@@ -22,12 +21,12 @@ export default function FTCGroupList({ data, mode, selectedGroup, onSelectGroup 
       {groups.map((g) => {
         const isSelected = selectedGroup === g.key;
         return (
-          <Card
+          <div
             key={g.key}
-            className={`p-4 cursor-pointer transition-all duration-200 border ${
+            className={`p-4 cursor-pointer transition-colors border border-l-[3px] ${
               isSelected
-                ? "border-gold bg-gold/5 shadow-gold"
-                : "border-transparent bg-gradient-to-br from-card to-accent/30 shadow-soft hover:shadow-elegant hover:border-gold/20"
+                ? "border-l-gold border-gold bg-gold/5"
+                : "border-l-primary border-rule bg-cream hover:border-gold/50"
             }`}
             onClick={() => onSelectGroup(g.key)}
           >
@@ -52,7 +51,7 @@ export default function FTCGroupList({ data, mode, selectedGroup, onSelectGroup 
                 </Badge>
               )}
             </div>
-          </Card>
+          </div>
         );
       })}
     </div>

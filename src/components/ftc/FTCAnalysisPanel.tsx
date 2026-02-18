@@ -1,4 +1,3 @@
-import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { GroupStats, GroupingMode, FTCDataPayload } from "@/types/ftc";
 
@@ -22,7 +21,7 @@ export default function FTCAnalysisPanel({ data, mode, groupKey }: Props) {
   if (!analysisEntry || !group) return null;
 
   return (
-    <Card className="p-6 bg-gradient-to-br from-card to-accent/30 border-0 shadow-soft">
+    <div className="p-6 bg-cream border border-rule border-l-[3px] border-l-gold">
       <h3 className="text-xl font-bold text-foreground mb-2">
         {analysisEntry.title}
       </h3>
@@ -30,7 +29,7 @@ export default function FTCAnalysisPanel({ data, mode, groupKey }: Props) {
 
       {group.top_categories && group.top_categories.length > 0 && (
         <div className="mb-3">
-          <p className="text-sm font-medium text-foreground mb-1">Top Categories:</p>
+          <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide-label mb-1">Top Categories</p>
           <div className="flex flex-wrap gap-1.5">
             {group.top_categories.map((cat) => (
               <Badge key={cat} variant="secondary" className="text-xs">
@@ -43,7 +42,7 @@ export default function FTCAnalysisPanel({ data, mode, groupKey }: Props) {
 
       {group.top_companies && group.top_companies.length > 0 && (
         <div>
-          <p className="text-sm font-medium text-foreground mb-1">Notable Companies:</p>
+          <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide-label mb-1">Notable Companies</p>
           <div className="flex flex-wrap gap-1.5">
             {group.top_companies.map((co) => (
               <Badge key={co} variant="outline" className="text-xs">
@@ -53,6 +52,6 @@ export default function FTCAnalysisPanel({ data, mode, groupKey }: Props) {
           </div>
         </div>
       )}
-    </Card>
+    </div>
   );
 }

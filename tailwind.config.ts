@@ -39,6 +39,11 @@ export default {
 					light: 'hsl(var(--gold-light))',
 					dark: 'hsl(var(--gold-dark))'
 				},
+				cream: 'hsl(var(--cream))',
+				rule: {
+					DEFAULT: 'hsl(var(--rule))',
+					dark: 'hsl(var(--rule-dark))'
+				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
@@ -75,9 +80,12 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: '0',
+				md: '0',
+				sm: '0'
+			},
+			letterSpacing: {
+				'wide-label': '1px'
 			},
 			keyframes: {
 				'accordion-down': {

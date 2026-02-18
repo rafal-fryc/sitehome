@@ -66,7 +66,7 @@ export default function FTCCaseTable({ cases }: Props) {
   }
 
   return (
-    <div className="rounded-lg border border-border/50 overflow-hidden">
+    <div className="border border-rule overflow-hidden">
       <Table>
         <TableHeader>
           <TableRow className="bg-muted/30">
