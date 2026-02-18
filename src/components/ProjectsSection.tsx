@@ -33,12 +33,12 @@ const ProjectsSection = () => {
       demoUrl: "#"
     },
     {
-      title: "Legal Fee Calculator",
-      description: "A transparent calculator for estimating legal fees based on case complexity, jurisdiction, and practice area, helping clients understand potential costs.",
-      technologies: ["Vue.js", "Data Analytics", "Legal Benchmarks", "API Integration"],
-      status: "Planning",
+      title: "TechRegParser",
+      description: "A multi-agent system that extracts requirements from data privacy and technology regulation statutes using Anthropic's Agent SDK. Features anti-hallucination safeguards with verbatim quotes, two-pass verification, and an interactive HTML viewer for filtering and exploring extracted obligations.",
+      technologies: ["Anthropic Agent SDK", "Multi-Agent System", "Regulatory Analysis", "Python"],
+      status: "Live",
       icon: Calculator,
-      githubUrl: "#",
+      githubUrl: "https://github.com/rafal-fryc/TechRegParser",
       demoUrl: "#"
     }
   ];
