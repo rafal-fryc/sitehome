@@ -1,0 +1,667 @@
+{
+  "case_info": {
+    "docket_number": "C-4798",
+    "company": {
+      "name": "1Health.io Inc.",
+      "incorporation_state": "Delaware",
+      "entity_type": "corporation",
+      "address": "201 Spear Street, Suite 1100, San Francisco, California 94105",
+      "business_description": "1Health.io Inc., also doing business as Vitagene, develops, advertises, and sells DNA health test kits and related products including health reports, ancestry reports, nutritional plans, fitness plans, beauty plans, and nutritional supplements customized to consumer DNA to consumers through websites and retailers such as Amazon."
+    },
+    "commissioners": [
+      "Lina M. Khan, Chair",
+      "Rebecca Kelly Slaughter",
+      "Alvaro M. Bedoya"
+    ],
+    "case_date": {
+      "month": 9,
+      "year": 2024
+    },
+    "legal_authority": "Federal Trade Commission Act",
+    "violation_type": "deceptive",
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/1923170-1healthiovitagene-matter"
+  },
+  "complaint": {
+    "factual_background": "1Health.io Inc. (d/b/a Vitagene) sold DNA health test kits to consumers and made numerous prominent promises about privacy and security of sensitive genetic and health data. However, the company publicly exposed health reports and genetic data for over 2,600 consumers in unsecured Amazon S3 buckets, failed to implement basic security measures despite multiple warnings, failed to separate DNA results from identifying information as promised, could not delete consumer data upon request due to lack of data inventory, and retroactively changed its privacy policy to allow broader sharing of consumer data without consent.",
+    "representations_made": [
+      {
+        "description": "Claimed to exceed industry-standard security practices to protect consumer privacy",
+        "quoted_text": "We use the latest technology and exceed industry-standard security practices to protect your privacy.",
+        "source_paragraph": 12
+      },
+      {
+        "description": "Claimed DNA results and samples are stored without name or identifying information",
+        "quoted_text": "Your results and DNA sample are stored without your name or any other common identifying information.",
+        "source_paragraph": 15
+      },
+      {
+        "description": "Claimed consumers can delete their data at any time and it will be removed from all servers",
+        "quoted_text": "You can delete your data at any time. This will remove your information from all of our servers.",
+        "source_paragraph": 17
+      },
+      {
+        "description": "Claimed physical DNA saliva samples are destroyed after analysis",
+        "quoted_text": "Vitagene destroys your physical DNA saliva sample after it has been analyzed.",
+        "source_paragraph": 18
+      }
+    ],
+    "counts": [
+      {
+        "count_number": 1,
+        "title": "Security Misrepresentation – Exceeding Industry Standards",
+        "representation": "Respondent represented that it exceeded industry-standard security practices to protect the privacy of consumers' sensitive personal information, including their health and genetic information",
+        "fact": "Respondent's security practices did not exceed industry-standard security practices to protect the privacy of consumers' sensitive personal information. Respondent stored health reports for at least 2,383 consumers and raw genetic data for at least 227 consumers in publicly accessible Amazon S3 buckets without access controls, encryption, logging, monitoring, or inventory controls",
+        "conclusion": "Therefore, the representations set forth in Paragraph 12 are false or misleading."
+      },
+      {
+        "count_number": 2,
+        "title": "Security Misrepresentation – Storing DNA Results without Identifying Information",
+        "representation": "Respondent represented that it stored consumers' DNA results without name or any other common identifying information",
+        "fact": "Respondent stored DNA results with name and other common identifying information. Health Reports contained consumers' names, dates of birth, referring doctor or dietician, genotype data, and health information",
+        "conclusion": "Therefore, the representations set forth in Paragraphs 15-16 are false or misleading."
+      },
+      {
+        "count_number": 3,
+        "title": "Privacy Misrepresentation – Data Deletion",
+        "representation": "Respondent represented that if a consumer requested deletion of his or her data, Respondent would remove all of that consumer's information",
+        "fact": "Because Respondent did not have an inventory of consumers' information, including in the Health and Genetic Buckets it exposed publicly, in at least some instances, Respondent could not delete all consumer information for consumers who requested deletion of their data",
+        "conclusion": "Therefore, the representations set forth in Paragraph 17 are false or misleading."
+      },
+      {
+        "count_number": 4,
+        "title": "Privacy Misrepresentation – Saliva Sample Destruction",
+        "representation": "Respondent represented that it destroys the consumer's physical DNA saliva sample shortly after the sample has been analyzed",
+        "fact": "Beginning in approximately December 2016, Respondent did not have measures in place to ensure that consumers' saliva samples were destroyed shortly after they had been analyzed. In particular, Respondent did not have a contract provision with its genotyping laboratory partner requiring such destruction",
+        "conclusion": "Therefore, the representations set forth in Paragraph 18 are false or misleading."
+      },
+      {
+        "count_number": 5,
+        "title": "Unfair Adoption of Material Retroactive Privacy Policy Changes",
+        "representation": "In April and December 2020, Respondent posted revised privacy policies containing material changes to Respondent's practices for sharing consumers' sensitive personal information with third parties, including the health and genetic information of consumers who purchased products and services from Respondent solely before April 2020",
+        "fact": "Respondent made those material retroactive changes without taking any additional steps to notify consumers or obtain consumers' consent even though Respondent's numerous prominent privacy and security claims when it had collected consumers' sensitive personal information demonstrate Respondent's understanding that consumers consider it important to be able to control and limit access to such information",
+        "conclusion": "Respondent's retroactive application of its revised privacy policies caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers. This is an unfair act or practice."
+      }
+    ]
+  },
+  "order": {
+    "definitions": {
+      "Affirmative Express Consent": "any freely given, specific, informed, and unambiguous indication of an individual consumer's wishes demonstrating agreement by the individual, such as by a clear affirmative action, following a Clear and Conspicuous disclosure to the individual of: (1) each category of Personal Information that Respondent will disclose to third parties; (2) the specific purpose(s) for the disclosures of each category of Personal Information; (3) each category of third party to which such disclosures will be made; (4) a simple, easily-located means for the consumer to withdraw consent; (5) any limitations on the consumer's ability to withdraw consent; and (6) all other information material to the provision of consent. The Clear and Conspicuous disclosure must be separate from any \"privacy policy,\" \"terms of service,\" \"terms of use,\" \"consent for research,\" or other similar document. The following do not constitute Affirmative Express Consent: 1. Inferring consent from the hovering over, muting, pausing, or closing of a given piece of content by the consumer; or 2. Obtaining consent through a user interface that has the substantial effect of subverting or impairing user autonomy, decision-making, or choice.",
+      "Clear and Conspicuous": "that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: 1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure (\"triggering representation\") is made through only one means. 2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. 3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. 4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. 5. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the triggering representation appears. 6. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. 7. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. 8. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
+      "Covered Customer": "any customer identified by Respondent as having had potentially exposed as of July 1, 2019, his or her Health Information that Respondent stored in the Amazon Web Services Simple Storage Service Datastore.",
+      "Covered Incident": "any incident: (1) that results in Respondent notifying, pursuant to a statutory or regulatory requirement, any U.S. federal, state, or local government entity that information of or about an individual consumer was, or is reasonably believed to have been, accessed, acquired, or publicly exposed without authorization; or (2) in which Health Information of or about an individual consumer was, or is reasonably believed to have been, accessed, acquired, or publicly exposed without authorization.",
+      "Covered Service Provider": "a person or entity that (i) uses or receives Health Information collected by or on behalf of Respondent for and at the direction of Respondent and no other individual or entity; (ii) does not disclose the Health Information, or any individually identifiable information derived from it, to an individual or entity other than Respondent; and (iii) does not use the Health Information for any purpose other than performing the services specified in the Covered Service Provider's contract with Respondent. Covered Service Provider includes any subcontractor to such Covered Service Provider bound by contract to data processing terms no less restrictive than the terms to which the Covered Service Provider is bound.",
+      "Health Information": "individually identifiable information relating to the health or genetics of an individual, including information: (1) concerning the propensity of that individual to develop a health condition; (2) concerning an analysis of the individual's DNA, RNA, chromosomes, proteins, or metabolites, in whole or in part; or (3) relating to the past, present, or future physical or mental health or conditions of an individual or the provision of health care to an individual.",
+      "Personal Information": "information from or about an individual consumer, including: (1) a first and last name; (2) a physical address; (3) an email address or other online contact information, such as a user identifier or a screen name; (4) a telephone number; (5) a financial account number; (6) credit or debit card information; (7) a persistent identifier, such as a customer number held in a \"cookie,\" a static Internet Protocol (\"IP\") address, a mobile device ID, or processor serial number; or (8) Health Information.",
+      "Respondent": "1Health.io Inc., also d/b/a Vitagene, Inc. and Vitagene, a corporation, and its successors and assigns.",
+      "Third Party": "any individual or entity other than: (1) a payment processor, laboratory, insurance company, insurance verification provider, hospital, or healthcare provider that Respondent has contractually obligated to limit the use and retention of Health Information to that which is directed by the individual who is identifiable by the Health Information; (2) an individual or entity to which Respondent discloses Health Information consistent with the Health Information Portability and Accountability Act (\"HIPAA\") of 1996, Pub. L. 104-191, 110 Stat. 1936, to the extent that HIPAA applies to the Health Information; (3) a Covered Service Provider; (4) an individual or entity to which Respondent discloses Health Information at the written direction of a customer who has obtained consent for that disclosure from the individual who is identifiable by the Health Information; or (5) an entity that purchases assets that include Health Information collected by Respondent, provided, however, that Health Information is not sold to the purchasing entity as a stand-alone asset, Respondent does not sell any Health Information to more than one purchasing entity, and the purchasing entity agrees by contract with the selling entity to be bound by: (a) Respondent's privacy policy in effect when such Health Information was collected and agrees to obtain Affirmative Express Consent of the individual who is identifiable by the Health Information before applying to the Health Information any policies or practices that are material changes from such privacy policy; and (b) the requirements set forth in Provision II of this Order, including the exclusions set forth within this definition."
+    },
+    "provisions": [
+      {
+        "provision_number": "I",
+        "title": "Prohibition against Misrepresentations",
+        "category": "prohibition",
+        "summary": "Respondent must not misrepresent security, privacy practices, data handling, program memberships, or government approvals in connection with any product or service.",
+        "requirements": [
+          {
+            "description": "Must not misrepresent the extent to which Respondent meets or exceeds industry-standard security or privacy practices",
+            "quoted_text": "IT IS ORDERED that Respondent; Respondent's officers, agents, and employees; and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service, must not misrepresent in any manner, expressly or by implication: A. The extent to which Respondent meets or exceeds industry-standard security or privacy practices;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not misrepresent the extent to which Respondent stores any Health Information with any other element of Personal Information",
+            "quoted_text": "B. The extent to which Respondent stores any Health Information with any other element of Personal Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not misrepresent the extent to which, or the purposes for which, Respondent collects, uses, discloses, maintains, deletes, or destroys a consumer's physical DNA sample or Personal Information upon request",
+            "quoted_text": "C. The extent to which, or the purposes for which, Respondent collects, uses, discloses, maintains, deletes, or destroys a consumer's: (1) physical DNA sample or (2) Personal Information upon request;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not misrepresent the extent to which Respondent is a member of, adheres to, complies with, is certified by, or otherwise participates in any privacy or security program",
+            "quoted_text": "D. The extent to which Respondent is a member of, adheres to, complies with, is certified by, or otherwise participates in any privacy or security program sponsored by a government entity or any third party, including any self-regulatory or standard-setting organization;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not misrepresent the extent to which Respondent otherwise protects the privacy, security, availability, confidentiality, or integrity of Personal Information",
+            "quoted_text": "E. The extent to which Respondent otherwise protects the privacy, security, availability, confidentiality, or integrity of Personal Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not misrepresent the extent to which Respondent has received approval or authorization for its claims, products, or services from any government agency",
+            "quoted_text": "F. The extent to which Respondent has received approval or authorization for its claims, products, or services from any government agency.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "II",
+        "title": "Affirmative Express Consent for Disclosure of Health Information to Third Parties",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must obtain Affirmative Express Consent from individuals before disclosing their Health Information to any Third Party, unless required by law.",
+        "requirements": [
+          {
+            "description": "Must obtain Affirmative Express Consent before disclosing Health Information to Third Parties",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent; Respondent's officers, agents, and employees; and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, shall not, unless required by law, disclose to any Third Party any Health Information unless Respondent obtains the Affirmative Express Consent of the individual who is identifiable by the Health Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "III",
+        "title": "Destruction of Saliva Samples",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must instruct laboratories to destroy DNA saliva samples retained for more than 180 days after analysis and provide written confirmation to the Commission.",
+        "requirements": [
+          {
+            "description": "Instruct laboratories to destroy DNA saliva samples retained for more than 180 days after analysis results were accepted",
+            "quoted_text": "IT IS FURTHER ORDERED that, on or before thirty (30) days after the issuance of this Order, Respondent and Respondent's officers, agents, and employees must: A. Instruct any laboratory that collected physical DNA saliva samples pursuant to a contract with Respondent to destroy any such sample that the laboratory has retained for more than 180 days after Respondent accepted the results of the laboratory's analysis of the sample;",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide a written statement to the Commission confirming instructions were given to laboratories, with copies of written instructions appended",
+            "quoted_text": "B. Provide a written statement to the Commission, sworn under penalty of perjury, confirming that Respondent has given such instructions, and append to that statement true and correct copies of any such written instructions.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IV",
+        "title": "Mandated Information Security Program",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must establish, implement, and maintain a comprehensive information security program that protects the security, confidentiality, and integrity of Personal Information, including written documentation, board reporting, risk assessments, safeguards, testing, and service provider requirements.",
+        "requirements": [
+          {
+            "description": "Establish and implement a comprehensive information security program within 60 days",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent, and any business that Respondent controls directly, or indirectly, in connection with the collection, maintenance, use, or disclosure of, or provision of access to, Personal Information, must, within sixty (60) days of issuance of this order, establish and implement, and thereafter maintain, a comprehensive information security program (\"Information Security Program\") that protects the security, confidentiality, and integrity of such Personal Information.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Document in writing the content, implementation, and maintenance of the Information Security Program",
+            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Information Security Program;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide the written program and evaluations to the board of directors or senior officer at least once every 12 months and within 30 days after a Covered Incident",
+            "quoted_text": "B. Provide the written program and any evaluations thereof or updates thereto to Respondent's board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Respondent responsible for Respondent's Information Security Program at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Designate a qualified employee or employees to coordinate and be responsible for the Information Security Program",
+            "quoted_text": "C. Designate a qualified employee or employees to coordinate and be responsible for the Information Security Program;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Assess and document internal and external risks at least once every 12 months and within 30 days following a Covered Incident",
+            "quoted_text": "D. Assess and document, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, internal and external risks to the security, confidentiality, or integrity of Personal Information that could result in the: (1) unauthorized collection, maintenance, use, or disclosure of, or provision of access to, Personal Information; or the (2) misuse, loss, theft, alteration, destruction, or other compromise of Personal Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Design, implement, maintain, and document safeguards that control for identified risks, including inventory policies, logging and monitoring, data access controls, and encryption of Health Information",
+            "quoted_text": "E. Design, implement, maintain, and document safeguards that control for the internal and external risks Respondent identifies to the security, confidentiality, or integrity of Personal Information identified in response to sub-Provision IV.D. Each safeguard must be based on the volume and sensitivity of the Personal Information that is at risk, and the likelihood that the risk could be realized and result in the: (1) unauthorized collection, maintenance, use, or disclosure of, or provision of access to, Personal Information; or the (2) misuse, loss, theft, alteration, destruction, or other compromise of Personal Information. Such safeguards must also include: 1. Policies, procedures, and technical measures to systematically inventory Personal Information in Respondent's control; 2. Policies, procedures, and technical measures to log and monitor access to repositories of Personal Information in Respondent's control; 3. Data access controls for all repositories of Personal Information in Respondent's control, such as: (a) restricting inbound connections to approved IP addresses and (b) requiring authentication to access them; and 4. Encryption, or at least equivalent protection, of all Health Information in Respondent's control that is reasonably linkable to an individual consumer, computer, or device, including in transit and at rest.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Assess the sufficiency of safeguards at least once every 12 months and within 30 days following a Covered Incident, and modify the program based on results",
+            "quoted_text": "F. Assess, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, the sufficiency of any safeguards in place to address the internal and external risks to the security, confidentiality, or integrity of Personal Information, and modify the Information Security Program based on the results;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Test and monitor the effectiveness of safeguards at least once every 12 months and within 30 days following a Covered Incident, including vulnerability testing every 4 months and penetration testing every 12 months",
+            "quoted_text": "G. Test and monitor the effectiveness of the safeguards at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, and modify the Information Security Program based on the results. Such testing and monitoring must include vulnerability testing of Respondent's network(s) once every four (4) months and promptly (not to exceed thirty (30) days) after a Covered Incident, and penetration testing of Respondent's network(s) at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Select and retain service providers capable of safeguarding Personal Information and contractually require them to implement and maintain sufficient safeguards",
+            "quoted_text": "H. Select and retain service providers capable of safeguarding Personal Information they access through or receive from Respondent, and contractually require service providers to implement and maintain safeguards sufficient to address the internal and external risks to the security, confidentiality, or integrity of Personal Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Evaluate and adjust the Information Security Program at least once every 12 months based on changes to operations, incidents, new technology, or other circumstances",
+            "quoted_text": "I. Evaluate and adjust the Information Security Program in light of any changes to Respondent's operations or business arrangements, a Covered Incident, new or more efficient technological or operational methods to control for the risks identified in Provision IV.D of this Order, or any other circumstances that Respondent knows or has reason to know may have an impact on the effectiveness of the Information Security Program or any of its individual safeguards. At a minimum, Respondent must evaluate the Information Security Program at least once every twelve (12) months and modify the Information Security Program based on the results.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "V",
+        "title": "Information Security Assessments by a Third Party",
+        "category": "assessment",
+        "summary": "Respondent must obtain initial and biennial third-party assessments of its Information Security Program for 20 years, with the initial assessment covering the first 180 days and subsequent biennial assessments covering each two-year period thereafter.",
+        "requirements": [
+          {
+            "description": "Obtain assessments from a qualified, objective, independent third-party professional who uses accepted procedures, conducts independent review, and retains documents for 5 years",
+            "quoted_text": "A. The Assessments must be obtained from a qualified, objective, independent third-party professional (\"Assessor\"), who: (1) uses procedures and standards generally accepted in the profession; (2) conducts an independent review of the Information Security Program; and (3) retains all documents relevant to each Assessment for five (5) years after completion of such Assessment and will provide such documents to the Commission within ten (10) days of receipt of a written request from a representative of the Commission.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide the name, affiliation, and qualifications of the proposed Assessor to the Associate Director for Enforcement for approval",
+            "quoted_text": "B. For each Assessment, Respondent must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name, affiliation, and qualifications of the proposed Assessor, whom the Associate Director shall have the authority to approve in her or his sole discretion.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Ensure the reporting period covers the first 180 days after Order issuance for initial Assessment and each two-year period thereafter for 20 years for biennial Assessments",
+            "quoted_text": "C. The reporting period for the Assessments must cover: (1)the first 180 days after the issuance date of the Order for the initial Assessment; and (2) each two-year period thereafter for twenty (20) years after issuance of the Order for the biennial Assessments.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Each Assessment must determine whether the Information Security Program has been implemented and maintained, assess effectiveness, identify gaps or weaknesses, address status of prior gaps, and identify specific evidence examined",
+            "quoted_text": "D. Each Assessment must, for the entire assessment period: 1. Determine whether Respondent has implemented and maintained the Information Security Program required by Provision IV of this Order, titled Mandated Information Security Program; 2. Assess the effectiveness of Respondent's implementation and maintenance of sub-Provisions IV.A-I; 3. Identify any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program; 4. Address the status of gaps or weaknesses in, or instances of material non-compliance with, the Information Security Program that were identified in any prior Assessment required by this Order; and 5. Identify specific evidence (including documents reviewed, sampling and testing performed, and interviews conducted) examined to make such determinations, assessments, and identifications, and explain why the evidence that the Assessor examined is: (a) appropriate for assessing an enterprise of Respondent's size, complexity, and risk profile; and (b) sufficient to justify the Assessor's findings.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Complete each Assessment within 60 days after the end of the reporting period and submit initial Assessment to the Commission within 10 days after completion",
+            "quoted_text": "E. Each Assessment must be completed within sixty (60) days after the end of the reporting period to which the Assessment applies. Unless otherwise directed by a Commission representative in writing, Respondent must submit an unredacted copy of the initial Assessment and a proposed redacted copy suitable for public disclosure to the Commission within ten (10) days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
+            "deadline": "60 days to complete Assessment; 10 days to submit",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VI",
+        "title": "Cooperation with Third-Party Information Security Assessor",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must cooperate with the third-party Assessor by providing all relevant information and materials, network and IT asset information, and must not misrepresent any material facts to the Assessor.",
+        "requirements": [
+          {
+            "description": "Provide or make available to the Assessor all information and material in Respondent's possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege",
+            "quoted_text": "A. Provide or otherwise make available to the Assessor all information and material in its possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide or make available to the Assessor information about Respondent's network(s) and all IT assets so the Assessor can determine the scope and have visibility to in-scope portions",
+            "quoted_text": "B. Provide or otherwise make available to the Assessor information about Respondent's network(s) and all of Respondent's IT assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the network(s) and IT assets deemed in scope;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Disclose all material facts to the Assessor and not misrepresent any fact material to the Assessor's determination, assessment, or identification",
+            "quoted_text": "C. Disclose all material facts to the Assessor, and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor's: (1) determination of whether Respondent has implemented and maintained the Information Security Program required by Provision IV of this Order, titled Mandated Information Security Program; (2) assessment of the effectiveness of the implementation and maintenance of sub-Provisions IV.A-I; or (3) identification of any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VII",
+        "title": "Annual Certification",
+        "category": "compliance_reporting",
+        "summary": "Respondent must provide the Commission with annual certifications from a senior corporate manager or officer confirming compliance with the Order, including disclosure of any material noncompliance and description of Covered Incidents.",
+        "requirements": [
+          {
+            "description": "Provide the Commission with annual certification from a senior corporate manager or officer confirming Order compliance, absence of material noncompliance, and description of Covered Incidents",
+            "quoted_text": "A. One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from a senior corporate manager, or, if no such senior corporate manager exists, a senior officer of Respondent responsible for Respondent's Information Security Program that: (1) Respondent has established, implemented, and maintained the requirements of this Order; (2) Respondent is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission; and (3) includes a brief description of all Covered Incidents during the certified period.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit all annual certifications to the Commission via email or overnight courier",
+            "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VIII",
+        "title": "Covered Incident Reports",
+        "category": "compliance_reporting",
+        "summary": "Respondent must submit a report to the Commission within 10 days (or 10 business days for Health Information breaches) of any Covered Incident, including incident details, affected information types, number of consumers affected, remediation actions, and copies of consumer notices.",
+        "requirements": [
+          {
+            "description": "Submit a Covered Incident report to the Commission within 10 days of government notification or 10 business days of discovery of Health Information breach",
+            "quoted_text": "IT IS FURTHER ORDERED that, within: (1) ten (10) days of any notification to a United States federal, state, or local government entity of a Covered Incident; or (2) ten (10) business days of discovery that individually identifiable Health Information of or about an individual consumer was, or is reasonably believed to have been, accessed, acquired, or publicly exposed without authorization, Respondent must submit a report to the Commission. The report must include, to the extent possible: A. The date, estimated date, or estimated date range when the Covered Incident occurred; B. A description of the facts relating to the Covered Incident, including the causes of the Covered Incident, if known; C. A description of each type of information that was affected by the Covered Incident; D. The number of consumers whose information was affected by the Covered Incident; E. The acts that Respondent has taken to date to remediate the Covered Incident and protect Personal Information from further exposure or access, and protect affected individuals from identity theft or other harm that may result from the Covered Incident; and F. A representative copy of any materially different notice sent by Respondent to consumers or to any U.S. federal, state, or local government entity.",
+            "deadline": "10 days or 10 business days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IX",
+        "title": "Monetary Relief",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must pay $75,000 to the Commission within 8 days of the effective date of the Order by electronic fund transfer.",
+        "requirements": [
+          {
+            "description": "Pay $75,000 to the Commission",
+            "quoted_text": "A. Respondent must pay to the Commission $75,000.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Make payment within 8 days of the effective date of the Order by electronic fund transfer",
+            "quoted_text": "B. Such payment must be made within eight (8) days of the effective date of this Order by electronic fund transfer in accordance with instructions provided by a representative of the Commission.",
+            "deadline": "8 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "X",
+        "title": "Additional Monetary Provisions",
+        "category": "affirmative_obligation",
+        "summary": "Respondent relinquishes all rights to transferred assets, and the Order establishes provisions for payment enforcement, bankruptcy proceedings, use of funds for consumer redress, default interest, and tax identification for delinquent amounts.",
+        "requirements": [
+          {
+            "description": "Respondent relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order",
+            "quoted_text": "A. Respondent relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Facts alleged in the Complaint will be taken as true in any subsequent civil litigation to enforce payment rights",
+            "quoted_text": "B. The facts alleged in the Complaint will be taken as true, without further proof, in any subsequent civil litigation by or on behalf of the Commission to enforce its rights to any payment pursuant to this Order, such as a nondischargeability complaint in any bankruptcy case.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Facts alleged in the Complaint establish all elements for action under Bankruptcy Code Section 523(a)(2)(A)",
+            "quoted_text": "C. The facts alleged in the Complaint establish all elements necessary to sustain an action by or on behalf of the Commission pursuant to Section 523(a)(2)(A) of the Bankruptcy Code, 11 U.S.C. § 523(a)(2)(A), and this Order will have collateral estoppel effect for such purposes.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Money paid to the Commission may be used for consumer redress, related expenses, consumer information remedies, or deposited to the U.S. Treasury",
+            "quoted_text": "D. All money paid to the Commission pursuant to this Order may be deposited into a fund administered by the Commission or its designee to be used for relief, including consumer redress and any attendant expenses for the administration of any redress fund. If a representative of the Commission decides that direct redress to consumers is wholly or partially impracticable or money remains after redress is completed, the Commission may apply any remaining money for such other relief (including consumer information remedies) as it determines to be reasonably related to Respondent's practices alleged in the Complaint. Any money not used is to be deposited to the U.S. Treasury.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "In the event of default on payment obligation, interest accrues from the date of default to the date of payment, and entire amount becomes due if default continues for 10 days",
+            "quoted_text": "E. In the event of default on any obligation to make payment under this Order, interest, computed as if pursuant to 28 U.S.C. § 1961(a), shall accrue from the date of default to the date of payment. In the event such default continues for ten (10) days beyond the date that payment is due, the entire amount will immediately become due and payable.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Each day of nonpayment is a separate violation for which a civil penalty shall accrue",
+            "quoted_text": "F. Each day of nonpayment is a violation through continuing failure to obey or neglect to obey a final order of the Commission and thus will be deemed a separate offense and violation for which a civil penalty shall accrue.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Respondent's Taxpayer Identification Number may be used for collecting and reporting on delinquent amounts",
+            "quoted_text": "G. Respondent acknowledges that its Taxpayer Identification Numbers (Social Security or Employer Identification Number), which Respondent has previously submitted to the Commission, may be used for collecting and reporting on any delinquent amount arising out of this Order, in accordance with 31 U.S.C. § 7701.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XI",
+        "title": "Customer Information",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must provide sufficient customer information to enable the Commission to administer consumer redress to all Covered Customers, and must provide any additional redress-related information within 14 days of a written request.",
+        "requirements": [
+          {
+            "description": "Provide sufficient customer information to enable the Commission to efficiently administer consumer redress to all Covered Customers",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent must directly or indirectly provide sufficient customer information to enable the Commission to efficiently administer consumer redress to all Covered Customers. Respondent represents that it has provided this redress information to the Commission.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide any information related to redress within 14 days of a written request from a Commission representative",
+            "quoted_text": "If a representative of the Commission requests in writing any information related to redress, Respondent must provide it, in the form prescribed by the Commission representative, within fourteen (14) days.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XII",
+        "title": "Acknowledgments of the Order",
+        "category": "acknowledgment",
+        "summary": "Respondent must submit acknowledgment of receipt of the Order within 10 days, deliver copies to all relevant personnel for 20 years, and obtain signed acknowledgments from recipients within 30 days.",
+        "requirements": [
+          {
+            "description": "Submit to the Commission an acknowledgment of receipt of this Order within 10 days after the effective date",
+            "quoted_text": "A. Respondent, within ten (10) days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Deliver a copy of the Order to all principals, officers, directors, LLC managers and members, employees with managerial responsibilities, and business entities resulting from structural changes for 20 years",
+            "quoted_text": "B. For twenty (20) years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives having managerial responsibilities for conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Report and Notices. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "10 days for current personnel; before assumption of responsibilities for others",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Obtain a signed and dated acknowledgment of receipt of the Order from each individual or entity to which a copy was delivered within 30 days",
+            "quoted_text": "C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XIII",
+        "title": "Compliance Reports and Notices",
+        "category": "compliance_reporting",
+        "summary": "Respondent must submit compliance reports at 90 days (regarding saliva sample destruction) and one year (comprehensive compliance report), provide notices within 14 days of changes to contact information, corporate structure, or ownership of Health Information assets, and notify of bankruptcy proceedings within 14 days.",
+        "requirements": [
+          {
+            "description": "Submit a compliance report within 90 days describing compliance with Provision III (Destruction of Saliva Samples), including laboratory responses",
+            "quoted_text": "A. Ninety (90) days after entry of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, describing in detail its compliance with Provision III of this Order, titled Destruction of Saliva Samples. The report shall include, for each laboratory that Respondent instructed to destroy physical DNA saliva samples, a statement setting forth in detail the laboratory's response to Respondent, if any, including, but not limited to, whether the laboratory destroyed such saliva samples and, if not, why the laboratory did not destroy such saliva samples, to the extent that the laboratory provided such information to Respondent.",
+            "deadline": "90 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit a compliance report one year after issuance identifying contact information, business activities, Personal Information collection practices, compliance with each Provision, and Acknowledgments obtained",
+            "quoted_text": "B. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (1) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (2) identify all of Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (3) describe the activities of each business, including the goods and services offered, what Personal Information is collected, and the means of advertising, marketing, and sales; (4) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the material changes Respondent made to comply with the Order; and (5) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit a compliance notice within 14 days of any change in designated points of contact, corporate structure, or ownership of assets including Health Information",
+            "quoted_text": "C. Respondent must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in the following: (1) any designated point of contact; (2) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order; or (3) ownership of Respondent's assets where such assets include Health Information, even if such change in ownership does not otherwise require the submission of a compliance notice.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing",
+            "quoted_text": "D. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within fourteen (14) days of its filing.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XIV",
+        "title": "Recordkeeping",
+        "category": "recordkeeping",
+        "summary": "Respondent must create and retain records for 20 years, including accounting records, personnel records, consumer complaints, privacy/security representations, consent documents, Assessment materials, and all records demonstrating compliance with the Order.",
+        "requirements": [
+          {
+            "description": "Create accounting records showing revenues, costs, and net profit or loss for 20 years and retain each such record for 5 years",
+            "quoted_text": "A. Accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination for 20 years and retain each for 5 years",
+            "quoted_text": "B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person's: name, addresses, telephone numbers, job title or position, dates of service, and (if applicable) the reason for termination;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create and retain copies of all consumer complaints and refund requests concerning the subject matter of the Order and any responses for 20 years, retaining each for 5 years",
+            "quoted_text": "C. Copies or records of all consumer complaints and refund requests concerning the subject matter of the Order, whether received directly or indirectly, such as through a third party, and any response;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create and retain copies of each widely disseminated representation describing the extent to which Respondent maintains or protects privacy, security, availability, confidentiality, or integrity of Personal Information for 20 years, retaining each for 5 years",
+            "quoted_text": "D. A copy of each widely disseminated representation by Respondent that describes the extent to which Respondent maintains or protects the privacy, security, availability, confidentiality, or integrity of any Personal Information, including any representation concerning a change in any website or other service controlled by Respondent that relates to privacy, security, availability, confidentiality, or integrity of Personal Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create and retain sample copies of each different document relating to attempts to obtain Affirmative Express Consent and copies of documents demonstrating consumer consent for 20 years, retaining each for 5 years",
+            "quoted_text": "E. A sample copy of each different document relating to any attempt by Respondent to obtain the Affirmative Express Consent of consumers and copies of any documents demonstrating such consent provided by consumers, as required by Part II of this Order;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Retain for 5 years after preparation of each Assessment all materials and evidence the Assessor considered, reviewed, relied upon or examined to prepare the Assessment",
+            "quoted_text": "F. For five (5) years after the date of preparation of each Assessment required by this Order, all materials and evidence that the Assessor considered, reviewed, relied upon or examined to prepare the Assessment, whether prepared by or on behalf of Respondent, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Respondent's compliance with related Provisions of this Order, for the compliance period covered by such Assessment;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create and retain all records necessary to demonstrate full compliance with each Provision of this Order, including all submissions to the Commission, for 20 years, retaining each for 5 years",
+            "quoted_text": "G. All records necessary to demonstrate full compliance with each Provision of this Order, including all submissions to the Commission.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XV",
+        "title": "Compliance Monitoring",
+        "category": "monitoring",
+        "summary": "The Commission has the right to monitor Respondent's compliance, including requesting additional compliance reports and records within 10 days, interviewing personnel, and using other lawful investigative means including posing as consumers or other entities.",
+        "requirements": [
+          {
+            "description": "Within 10 days of receipt of a written request from a Commission representative, submit additional compliance reports or other requested information and produce records for inspection and copying",
+            "quoted_text": "A. Within ten (10) days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "For matters concerning this Order, Commission representatives are authorized to communicate directly with Respondent and interview anyone affiliated with Respondent who has agreed to such an interview",
+            "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with any Respondent who has agreed to such an interview. The interviewee may have counsel present.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "The Commission may use all other lawful means, including posing as consumers, suppliers, or other entities, to monitor compliance",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XVI",
+        "title": "Order Effective Dates",
+        "category": "duration",
+        "summary": "This Order is final and effective upon publication on the Commission's website and will terminate 20 years from the date of issuance or 20 years from the most recent date the U.S. or Commission files a complaint alleging violation of this Order, whichever comes later.",
+        "requirements": [
+          {
+            "description": "Order is final and effective upon publication on the Commission's website",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Order will terminate 20 years from the date of issuance or 20 years from the most recent date a complaint is filed alleging violation of the Order, whichever comes later",
+            "quoted_text": "This Order will terminate twenty (20) years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      }
+    ],
+    "duration": {
+      "duration_years": 20,
+      "termination_text": "This Order will terminate twenty (20) years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later"
+    }
+  },
+  "metadata": {
+    "source_files": {
+      "complaint": "09.24, 1Health.ioVitagene Complaint (Pending).pdf",
+      "order": "09.24, 1Health.ioVitagene Order (Pending).pdf"
+    },
+    "extraction_stats": {
+      "complaint_counts": 5,
+      "complaint_representations": 4,
+      "order_provisions": 16,
+      "order_definitions": 9,
+      "order_requirements": 60
+    },
+    "processing_time_seconds": 267.9
+  }
+}

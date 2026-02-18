@@ -1,0 +1,328 @@
+{
+  "case_info": {
+    "docket_number": "C-4325",
+    "company": {
+      "name": "CERIDIAN CORPORATION",
+      "incorporation_state": "Delaware",
+      "entity_type": "corporation",
+      "address": "3311 East Old Shakopee Road, Minneapolis, Minnesota 55425",
+      "business_description": "Ceridian is a service provider that provides payroll processing, payroll-related tax filing, benefits administration, and other human resource services to business customers. The company operates Powerpay, a web-based payroll processing service that allows small business customers to enter employee personal information, manage payroll data, and automate payroll processing."
+    },
+    "commissioners": [
+      "Jon Leibowitz, Chairman",
+      "William E. Kovacic",
+      "J. Thomas Rosch",
+      "Edith Ramirez",
+      "Julie Brill"
+    ],
+    "case_date": {
+      "month": 6,
+      "year": 2011
+    },
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)",
+    "violation_type": "both",
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/102-3160-ceridian-corporation-matter"
+  },
+  "complaint": {
+    "factual_background": "Ceridian Corporation, a payroll processing service provider, promised customers it implemented reasonable security measures to protect sensitive employee data including Social Security numbers and bank account information. However, the company failed to implement basic security practices such as encrypting stored data, preventing SQL injection attacks, or adequately detecting unauthorized access. In December 2009, hackers exploited these failures through a SQL injection attack and exported personal information of at least 27,673 individuals.",
+    "representations_made": [
+      {
+        "description": "Claimed comprehensive security program designed in accordance with ISO 27000 series standards and industry best practices",
+        "quoted_text": "Worry-free Safety & Reliability . . . When managing employee health and payroll data, security is paramount with Ceridian. Our comprehensive security program is designed in accordance with ISO 27000 series standards, industry best practices and federal, state and local regulatory requirements.",
+        "source_paragraph": 6
+      },
+      {
+        "description": "Promised to use reasonable degree of care to maintain confidentiality of customer information",
+        "quoted_text": "Confidentiality and Privacy: [Ceridian] shall use the same degree of care as it uses to protect its own confidential information of like nature, but no less than a reasonable degree of care, to maintain in confidence the confidential information of the [customer].",
+        "source_paragraph": 7
+      },
+      {
+        "description": "Represented that it implemented reasonable and appropriate measures to protect personal information against unauthorized access",
+        "quoted_text": "Through the means described in Paragraphs 6 and 7, respondent represented, expressly or by implication, that it implemented reasonable and appropriate measures to protect personal information against unauthorized access.",
+        "source_paragraph": 10
+      }
+    ],
+    "counts": [
+      {
+        "count_number": 1,
+        "title": "Deceptive Data Security Claims",
+        "representation": "Respondent represented that it implemented reasonable and appropriate measures to protect personal information against unauthorized access",
+        "fact": "Respondent did not implement reasonable and appropriate measures to protect personal information against unauthorized access. Respondent stored personal information in clear readable text, created unnecessary risks by storing it indefinitely without business need, did not adequately assess vulnerability to SQL injection attacks, did not implement readily available defenses to such attacks, and failed to employ reasonable measures to detect and prevent unauthorized access",
+        "conclusion": "Therefore, the representations set forth in Paragraphs 6 and 7 were, and are, false or misleading."
+      },
+      {
+        "count_number": 2,
+        "title": "Unfair Data Security Practices",
+        "representation": "Respondent failed to employ reasonable and appropriate measures to prevent unauthorized access to personal information",
+        "fact": "Respondent's practices caused, or are likely to cause, substantial injury to consumers that is not offset by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers",
+        "conclusion": "This practice was, and is, an unfair act or practice."
+      }
+    ]
+  },
+  "order": {
+    "definitions": {
+      "Personally identifiable information or personal information": "individually identifiable information from or about an individual consumer including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) a telephone number; (e) a Social Security number; (f) a driver's license or other state-issued identification number; (g) a financial institution account number; (h) credit or debit card information, including card number, expiration date, and security code; (i) a persistent identifier, such as a customer number held in a \"cookie\" or processor serial number, that is combined with other available data that identifies an individual consumer; or (j) any information that is combined with any of (a) through (i) above. For the purpose of this provision, a \"consumer\" shall mean any person, including, but not limited to, any user of respondent's services; any employee of respondent, or any individual seeking to become an employee, where \"employee\" shall mean an agent, servant, salesperson, associate, independent contractor, or other person directly or indirectly under the control of respondent.",
+      "Respondent": "Ceridian and its subsidiaries, divisions, successors and assigns, except that no provision of this Order shall apply to any foreign entity, to the extent that its conduct does not fall within the Commission's jurisdiction.",
+      "Commerce": "as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44."
+    },
+    "provisions": [
+      {
+        "provision_number": "I",
+        "title": "Prohibition Against Misrepresentations About Privacy and Security",
+        "category": "prohibition",
+        "summary": "Respondent must not misrepresent the extent to which it maintains and protects the privacy, confidentiality, or integrity of personal information collected from or about consumers.",
+        "requirements": [
+          {
+            "description": "Must not misrepresent privacy, confidentiality, or integrity protections for personal information",
+            "quoted_text": "IT IS ORDERED that respondent and its officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, website, or other device, shall not misrepresent in any manner, expressly or by implication, the extent to which respondent maintains and protects the privacy, confidentiality, or integrity of any personal information collected from or about consumers.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "II",
+        "title": "Comprehensive Information Security Program",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must establish and maintain a comprehensive information security program to protect personal information, including designation of security personnel, risk assessments, safeguards implementation and testing, service provider oversight, and program evaluation.",
+        "requirements": [
+          {
+            "description": "Establish and implement comprehensive information security program no later than service date",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent and its officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, website, or other device, shall, no later than the date of service of this order, establish and implement, and thereafter maintain, a comprehensive information security program that is reasonably designed to protect the security, confidentiality, and integrity of personal information collected from or about consumers. Such program, the content and implementation of which must be fully documented in writing, shall contain administrative, technical, and physical safeguards appropriate to respondent's size and complexity, the nature and scope of respondent's activities, and the sensitivity of the personal information collected from or about consumers",
+            "deadline": "date of service",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Designate employee(s) to coordinate and be accountable for the information security program",
+            "quoted_text": "the designation of an employee or employees to coordinate and be accountable for the information security program",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Identify material risks and assess safeguards, including risks in employee training, information systems, and attack prevention/detection/response",
+            "quoted_text": "the identification of material internal and external risks to the security, confidentiality, and integrity of personal information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to, (1) employee training and management, (2) information systems, including network and software design, information processing, storage, transmission, and disposal, and (3) prevention, detection, and response to attacks, intrusions, or other systems failure",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Design and implement reasonable safeguards and regularly test or monitor their effectiveness",
+            "quoted_text": "the design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Select and retain service providers capable of safeguarding personal information and require them by contract to maintain appropriate safeguards",
+            "quoted_text": "the development and use of reasonable steps to select and retain service providers capable of appropriately safeguarding personal information they receive from respondent and requiring service providers by contract to implement and maintain appropriate safeguards",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Evaluate and adjust information security program based on testing results, operational changes, or other material circumstances",
+            "quoted_text": "the evaluation and adjustment of respondent's information security program in light of the results of the testing and monitoring required by subpart C, any material changes to respondent's operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its information security program",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "III",
+        "title": "Third-Party Security Assessments",
+        "category": "assessment",
+        "summary": "Respondent must obtain initial and biennial third-party security assessments from qualified professionals for twenty years, covering the security program's implementation and effectiveness.",
+        "requirements": [
+          {
+            "description": "Obtain initial assessment covering first 180 days after service of order",
+            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Part II of this order, respondent shall obtain initial and biennial assessments and reports (\"Assessments\") from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession",
+            "deadline": "180 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Obtain biennial assessments for each two-year period for twenty years after service",
+            "quoted_text": "each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Each assessment must set forth specific safeguards implemented and maintained",
+            "quoted_text": "set forth the specific administrative, technical, and physical safeguards that respondent has implemented and maintained during the reporting period",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Each assessment must explain appropriateness of safeguards to respondent's operations",
+            "quoted_text": "explain how such safeguards are appropriate to respondent's size and complexity, the nature and scope of respondent's activities, and the sensitivity of the personal information collected from or about consumers",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Each assessment must explain how safeguards meet or exceed Part II requirements",
+            "quoted_text": "explain how the safeguards that have been implemented meet or exceed the protections required by Part II of this order",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Each assessment must certify security program's operating effectiveness",
+            "quoted_text": "certify that respondent's security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of personal information is protected and has so operated throughout the reporting period",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Complete each assessment within 60 days after end of reporting period",
+            "quoted_text": "Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide initial assessment to FTC within 10 days after preparation",
+            "quoted_text": "Respondent shall provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Retain all subsequent biennial assessments until order terminates and provide within 10 days of request",
+            "quoted_text": "All subsequent biennial Assessments shall be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IV",
+        "title": "Recordkeeping",
+        "category": "recordkeeping",
+        "summary": "Respondent must maintain and make available to the FTC various compliance-related documents for specified periods.",
+        "requirements": [
+          {
+            "description": "Maintain assessment-related materials for 3 years after each assessment preparation",
+            "quoted_text": "for a period of three (3) years after the date of preparation of each Assessment required under Part III of this order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of the respondent, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials relating to respondent's compliance with Parts II and III of this order, for the compliance period covered by such Assessment",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Maintain other compliance documents for 5 years from preparation or dissemination",
+            "quoted_text": "unless covered by IV.A, for a period of five (5) years from the date of preparation or dissemination, whichever is later, all other documents relating to compliance with this order, including but not limited to: 1. all advertisements and promotional materials containing any representations covered by this order, as well as all materials used or relied upon in making or disseminating the representation; and 2. any documents, whether prepared by or on behalf of respondent, that contradict, qualify, or call into question respondent's compliance with this order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "V",
+        "title": "Order Acknowledgment and Distribution",
+        "category": "acknowledgment",
+        "summary": "Respondent must deliver a copy of the order to all current and future subsidiaries and relevant personnel.",
+        "requirements": [
+          {
+            "description": "Deliver order to current subsidiaries and personnel within 30 days after service",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall deliver a copy of this order to all current and future subsidiaries, current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having responsibilities relating to the subject matter of this order. Respondent shall deliver this order to such current subsidiaries and personnel within thirty (30) days after service of this order",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Deliver order to future subsidiaries and personnel within 30 days of assuming position",
+            "quoted_text": "and to such future subsidiaries and personnel within thirty (30) days after the person assumes such position or responsibilities",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VI",
+        "title": "Notification of Corporate Changes",
+        "category": "compliance_reporting",
+        "summary": "Respondent must notify the FTC at least 30 days prior to any corporate changes affecting compliance obligations.",
+        "requirements": [
+          {
+            "description": "Notify Commission at least 30 days prior to corporate changes affecting compliance",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall notify the Commission at least thirty (30) days prior to any change in the corporation(s) that may affect compliance obligations arising under this order, including, but not limited to: a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "If learning of changes fewer than 30 days prior, notify as soon as practicable",
+            "quoted_text": "Provided, however, that, with respect to any proposed change in the corporation(s) about which respondent learns fewer than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
+            "deadline": "as soon as practicable",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VII",
+        "title": "Compliance Reporting",
+        "category": "compliance_reporting",
+        "summary": "Respondent must file compliance reports with the Commission within specified timeframes.",
+        "requirements": [
+          {
+            "description": "File initial compliance report within 60 days after service of order",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent within sixty (60) days after the date of service of this order, shall file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of its compliance with this order.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit additional compliance reports within 10 days of written notice from Commission",
+            "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, it shall submit an additional true and accurate written report.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VIII",
+        "title": "Order Termination",
+        "category": "duration",
+        "summary": "The order will terminate on June 8, 2031, or twenty years from the most recent complaint filing, whichever is later, with certain exceptions.",
+        "requirements": [
+          {
+            "description": "Order terminates per specified timeline and conditions",
+            "quoted_text": "This order will terminate on June 8, 2031, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Part in this order that terminates in fewer than twenty (20) years; B. this order's application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Part.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      }
+    ],
+    "duration": {
+      "duration_years": 20,
+      "termination_text": "This order will terminate on June 8, 2031, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later"
+    }
+  },
+  "metadata": {
+    "source_files": {
+      "complaint": "06.11, Ceridian Corporation Complaint.pdf",
+      "order": "06.11, Ceridian Corporation Order.pdf"
+    },
+    "extraction_stats": {
+      "complaint_counts": 2,
+      "complaint_representations": 3,
+      "order_provisions": 8,
+      "order_definitions": 3,
+      "order_requirements": 25
+    },
+    "processing_time_seconds": 119.5
+  }
+}

@@ -1,0 +1,746 @@
+{
+  "case_info": {
+    "docket_number": "1:19-cv-03297-TWT",
+    "company": {
+      "name": "Equifax Inc.",
+      "incorporation_state": "Georgia",
+      "entity_type": "corporation",
+      "address": "1550 Peachtree Street, NW, Atlanta, Georgia 30309",
+      "business_description": "Equifax is one of the three nationwide consumer reporting agencies in the United States. It collects, processes, stores, and maintains vast quantities of personal information about more than 200 million U.S. consumers, offering credit reporting and information products and services to businesses and consumers."
+    },
+    "commissioners": [],
+    "case_date": {
+      "month": 7,
+      "year": 2019
+    },
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a), and the Standards for Safeguarding Customer Information Rule, 16 C.F.R. Part 314",
+    "violation_type": "both",
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/172-3203-equifax-inc"
+  },
+  "complaint": {
+    "factual_background": "Equifax, one of three nationwide consumer reporting agencies, suffered a massive data breach affecting 147 million consumers due to failure to patch a critical Apache Struts vulnerability and implement basic security measures. Attackers exploited the unpatched vulnerability in the ACIS Dispute Portal to access databases containing names, Social Security numbers, dates of birth, addresses, and payment card information. The breach resulted from multiple security failures including lack of network segmentation, storing credentials in plain text, failure to encrypt sensitive data, and inadequate intrusion detection systems.",
+    "representations_made": [
+      {
+        "description": "Claimed to limit access to personal information only to employees with a reasonable business need and to maintain reasonable physical, technical, and procedural safeguards",
+        "quoted_text": "We limit access to your personal information to employees having a reasonable need to access this information to provide products and services to you . . . We have reasonable physical, technical, and procedural safeguards to help protect your personal information.",
+        "source_paragraph": 27
+      },
+      {
+        "description": "Made the same security representations to small business customers regarding access controls and safeguards",
+        "quoted_text": "That policy recites the same security statement set forth above in Paragraph 27.",
+        "source_paragraph": 30
+      }
+    ],
+    "counts": [
+      {
+        "count_number": 1,
+        "title": "Unfair Data Security Practices",
+        "representation": "Defendant failed to provide reasonable security for sensitive personal information collected, processed, maintained, or stored within its computer networks",
+        "fact": "Defendant engaged in numerous failures including inadequate patch management, failure to implement intrusion protection controls, lack of network segmentation, failure to implement access controls, storing sensitive data in plain text, and inadequate security training",
+        "conclusion": "Defendant's actions caused or are likely to cause substantial injury to consumers that consumers cannot reasonably avoid themselves and that is not outweighed by countervailing benefits to consumers or competition, constituting unfair acts or practices in violation of Section 5 of the FTC Act"
+      },
+      {
+        "count_number": 2,
+        "title": "Deceptive Security Representations to Consumers",
+        "representation": "Defendant represented that it limits access to personal information to employees having a reasonable need to access this information and that it has reasonable physical, technical, and procedural safeguards to protect personal information for direct-to-consumer offerings",
+        "fact": "In truth and in fact, in numerous instances, Defendant failed to limit access to personal information to employees having a reasonable need to access this information and lacked reasonable physical, technical, or procedural safeguards to protect this information",
+        "conclusion": "Defendant's representations are false or misleading and constitute a deceptive act or practice in violation of Section 5(a) of the FTC Act"
+      },
+      {
+        "count_number": 3,
+        "title": "Deceptive Security Representations to Small Businesses",
+        "representation": "Defendant represented that it limits access to personal information to employees having a reasonable need to access this information and that it has reasonable physical, technical, and procedural safeguards to protect personal information for U.S. Equifax Small Business Products",
+        "fact": "In truth and in fact, in numerous instances, Defendant failed to limit access to personal information to employees having a reasonable need to access this information and lacked reasonable physical, technical, or procedural safeguards to protect this information",
+        "conclusion": "Defendant's representations are false or misleading and constitute a deceptive act or practice in violation of Section 5(a) of the FTC Act"
+      },
+      {
+        "count_number": 4,
+        "title": "Violations of GLB Act Safeguards Rule",
+        "representation": "As a financial institution subject to the GLB Act Safeguards Rule, Defendant was required to design and implement safeguards to address foreseeable internal and external risks, regularly test or monitor the effectiveness of safeguards, and evaluate and adjust the information security program",
+        "fact": "In numerous instances, Defendant failed to design and implement safeguards to address foreseeable internal and external risks to the security, confidentiality, and integrity of customer information, has not regularly tested or monitored the effectiveness of the safeguards, and has not evaluated and adjusted Defendant's information security program in light of the results of testing and monitoring, and other relevant circumstances",
+        "conclusion": "Defendant's acts or practices violate the Safeguards Rule, 16 C.F.R. Part 314"
+      }
+    ]
+  },
+  "order": {
+    "definitions": {
+      "Affected Consumer": "the approximately One Hundred Forty Seven Million (147,000,000) U.S. consumers whom Defendant has identified whose Personal Information was accessed without authorization as a result of the Breach.",
+      "Alternative Reimbursement Compensation": "compensation for any Affected Consumer who does not make a claim to enroll in the Product, and instead, has or has concurrent with their claim obtained a credit monitoring or protection product.",
+      "Assisted Identity Restoration Services": "the identity restoration services, as set forth in Section IX and described in Exhibit A, offered to all Affected Consumers who have or may have experienced identity theft or fraud.",
+      "Breach": "the information security incident publicly disclosed by Defendant on or about September 7, 2017.",
+      "Claims Administration Protocol": "the protocol that has been approved by a representative of the Commission and which will be submitted to and approved by the MDL Court, to implement the claims administration and Settlement process in the Multi-District Litigation.",
+      "Claims Forms": "the forms that have been approved by a representative of the Commission and which will be submitted to and approved by the MDL Court, that Affected Consumers submit to the Settlement Administrator in paper or via the Settlement Website to make claims for Out-of-Pocket Losses, Alternative Reimbursement Compensation, the Product, and Single-Bureau Monitoring.",
+      "Class Action Effective Date": "the first business day after the MDL Court enters final approval of the Settlement, and either: a. the time for appeal, petition, rehearing or other review has expired, or b. if one or more appeals, petitions, requests for rehearing or other reviews are filed regarding any issue with the Settlement, when i. the final approval order and judgment is affirmed without material change and the time for further appeals, petitions, requests for rehearing or other reviews has expired, or ii. all appeals, petitions, rehearings, or other reviews are dismissed or otherwise disposed of and the time for further appeals, petitions, requests for rehearing or other review has expired.",
+      "Clear(ly) and Conspicuous(ly)": "that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: a. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure (\"Triggering Representation\") is made in only one means. b. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. c. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. d. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. e. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in a language in which the Triggering Representation appears. f. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. g. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. h. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
+      "Consumer Fund": "the account established to provide restitution and redress to Affected Consumers as described in Sections VIII, IX and X, and which will be overseen by the MDL Court and which represents an undifferentiated portion of the consumer restitution fund as defined in the Settlement.",
+      "Consumer Report": "has the meaning provided in the Fair Credit Reporting Act (\"FCRA\"), 15 U.S.C. § 1681 et seq., and any amendments thereto. As of the date of entry of this Order, \"Consumer Report\" is defined under the FCRA as any written, oral, or other communication of any information by a Consumer Reporting Agency bearing on a consumer's credit worthiness, credit standing, credit capacity, character, general reputation, personal characteristics, or mode of living which is used or expected to be used or collected in whole or in part for the purpose of serving as a factor in establishing the consumer's eligibility for: a. credit or insurance to be used primarily for personal, family, or household purposes; b. employment purposes; or c. any other purpose authorized under FCRA Section 604, 15 U.S.C. § 1681b.",
+      "Consumer Reporting Agency": "has the meaning provided in the FCRA, 15 U.S.C. § 1681 et seq., and any amendments thereto. As of the date of entry of this Order, \"Consumer Reporting Agency\" is defined under the FCRA as any person which, for monetary fees, dues, or on a cooperative nonprofit basis, regularly engages in whole or in part in the practice of assembling or evaluating consumer credit information or other information on consumers for the purpose of furnishing Consumer Reports to third parties, and which uses any means or facility of interstate commerce for the purpose of preparing or furnishing Consumer Reports.",
+      "Covered Incident": "any instance in which any U.S. federal, state, or local law or regulation requires Defendant to notify any U.S. federal, state, or local government entity that Personal Information collected or received, directly or indirectly, by Defendant from or about an individual consumer was, or is reasonably believed to have been, accessed or acquired without authorization, and the incident affects at least 250 U.S. consumers.",
+      "Defendant": "(1) Equifax Inc., and its successors and assigns, and (2) Equifax Inc.'s subsidiaries, and their successors and assigns, incorporated in the United States, that do business in the United States, or that collect, store, or process Personal Information from or about consumers in the United States to the extent that their conduct falls within the Commission's jurisdiction.",
+      "Extended Claims Period": "the period of time ending four years after the conclusion of the Initial Claims Period.",
+      "Full Service Identity Restoration Services": "the identity restoration services offered to all Affected Consumers enrolled in the Product, as described in Exhibit A.",
+      "Initial Claims Period": "the period of time ending six months after entry of the order permitting issuance of notice in the Multi-District Litigation.",
+      "MDL Court": "the Court presiding over the Multi-District Litigation.",
+      "Multi-District Litigation": "those actions filed against Equifax Inc. and/or one or more of its subsidiaries asserting claims related to the Breach by or on behalf of one or more consumers that have been or will be transferred to the federal proceedings styled In re Equifax Inc. Customer Data Breach Litigation, 1:17-md-02800-TWT (N.D. Ga.).",
+      "Notice and Settlement Administration Costs and Expenses": "the costs and expenses of the Notice Provider, Notice Plan, Claims Administration Protocol, and Settlement Administrator.",
+      "Notice Date": "sixty days after the MDL Court issues an order permitting issuance of notice of the Settlement.",
+      "Notice Plan": "the plan that has been approved by a representative of the Commission and which will be submitted to, approved by, and overseen by the MDL Court, for providing notice to Affected Consumers in the Multi-District Litigation.",
+      "Notice Provider": "Signal Interactive Media or another independent third-party agent or administrator that has been approved by a representative of the Commission, and which will be submitted to, approved by, and overseen by the MDL Court to implement the Notice Plan.",
+      "Out-of-Pocket Losses": "verifiable unreimbursed costs or expenditures that an Affected Consumer incurred and that are fairly traceable to the Breach, which are eligible for reimbursement from the Consumer Fund as set forth in Sections IX.B.1.c and IX.B.2.",
+      "Personal Consumer Report": "the Consumer Report made available to consumers by any entity within Defendant that compiles and maintains files on consumers on a nationwide basis as defined under 15 U.S.C. § 1681a(p).",
+      "Personal Information": "individually identifiable information from or about an individual consumer, including: a. first and last name; b. home or other physical address; c. email address; d. telephone number; e. date of birth; f. Social Security number; g. other government-issued identification numbers, such as a driver's license number, military identification number, passport number, or other personal identification number; h. financial institution account number; i. credit or debit card information; or j. authentication credentials, such as a username and password.",
+      "Preventative Measures": "placement or removal of security freezes or obtaining credit monitoring services.",
+      "Product": "the three-bureau credit and identity monitoring product, including any changes, as described in Exhibit A and approved by a representative of the Commission and then approved by the MDL Court.",
+      "Service Awards": "compensation awarded to the consumers named as plaintiffs in the Multi-District Litigation.",
+      "Settlement": "the settlement resolving the Multi-District Litigation.",
+      "Settlement Administrator": "JND Legal Administration, or another independent third-party agent or administrator that has been approved by a representative of the Commission, and which will be submitted to, approved by, and overseen by the MDL Court to implement the processes described in the Claims Administration Protocol, and claims and Settlement process in the Multi-District Litigation.",
+      "Settlement Website": "the website established by the Settlement Administrator, and described in the Claims Administration Protocol, that has been approved by a representative of the Commission to provide information about the Settlement, including deadlines and case documents, and permit Affected Consumers to electronically submit Claims Forms.",
+      "States' Attorneys General": "the 50 state and territory attorneys general that are each entering into a stipulated judgment on or about July 22, 2019 with Equifax Inc. for claims related to the Breach.",
+      "Time Compensation": "compensation to an Affected Consumer for time spent by that Affected Consumer (1) taking Preventative Measures and/or (2) remedying fraud, identity theft, or other misuse of an Affected Consumer's Personal Information that is fairly traceable to the Breach."
+    },
+    "provisions": [
+      {
+        "provision_number": "I",
+        "title": "Prohibition Against Misrepresentations",
+        "category": "prohibition",
+        "summary": "Defendant is permanently restrained from misrepresenting the extent to which it maintains and protects the privacy, security, confidentiality, or integrity of any Personal Information.",
+        "requirements": [
+          {
+            "description": "Must not misrepresent security and privacy practices regarding Personal Information",
+            "quoted_text": "IT IS ORDERED that Defendant, Defendant's officers, agents, employees, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any good or service, are hereby permanently restrained and enjoined from misrepresenting, expressly or by implication, the extent to which Defendant maintains and protects the privacy, security, confidentiality, or integrity of any Personal Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "II",
+        "title": "Mandated Information Security Program",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must establish, implement, and maintain a comprehensive information security program for twenty years, including written documentation, board reporting, risk assessments, safeguards, testing, and service provider oversight.",
+        "requirements": [
+          {
+            "description": "Establish and maintain comprehensive information security program for 20 years",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant shall establish and implement, and thereafter maintain, for twenty years after entry of this Order, a comprehensive information security program (\"Information Security Program\") designed to protect the security, confidentiality, and integrity of Personal Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Document the Information Security Program in writing",
+            "quoted_text": "Document in writing the content, implementation, and maintenance of the Information Security Program, including the following: 1. Documented risk assessments required under Section II.D; 2. Documented safeguards required under Section II.E; and 3. A description of the procedures adopted to implement and monitor the Information Security Program, including procedures for evaluating and adjusting the Information Security Program as required under Section II.I;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Provide written Information Security Program to board of directors or senior officer at least annually",
+            "quoted_text": "Provide the written Information Security Program and any material evaluations thereof or updates thereto to Defendant's board of directors or a relevant subcommittee thereof, or equivalent governing body or, if no such board or equivalent governing body exists, to a senior officer of Defendant responsible for Defendant's Information Security Program at least once every twelve months;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Designate qualified employee(s) to coordinate and oversee the Information Security Program",
+            "quoted_text": "Designate a qualified employee or employees to coordinate, oversee, and be responsible for the Information Security Program;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Assess internal and external risks to Personal Information at least annually and within 45 days of Covered Incidents",
+            "quoted_text": "Assess, at least once every twelve months, internal and external risks to the security, confidentiality, or integrity of Personal Information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information and document those risks that are material. Defendant shall further assess and document internal and external risks as described above as they relate to a Covered Incident promptly (not to exceed forty-five days) following verification of such a Covered Incident;",
+            "deadline": "45 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Design, implement, maintain, and document safeguards including patch management, vulnerability remediation, IT asset inventory, network protections, access controls, encryption, secure development practices, security training, vulnerability reporting process, and employee complaint process",
+            "quoted_text": "Design, implement, maintain, and document safeguards that control for the material internal and external risks Defendant identifies to the security, confidentiality, or integrity of Personal Information identified in response to Section II.D. Each safeguard shall be based on the volume and sensitivity of the Personal Information that is at risk, and the likelihood, given the existence of other safeguards, that the risk could be realized and result in the unauthorized access, collection, use, alteration, destruction, or disclosure of the Personal Information. Such safeguards shall also include: 1. Establishing patch management policies and procedures that require confirmation that any directives to apply patches or remediate vulnerabilities are received and completed and that include timelines for addressing vulnerabilities that account for the severity and exploitability of the risk implicated; 2. Establishing and enforcing policies and procedures to ensure the timely remediation of critical and/or high-risk security vulnerabilities; 3. Identifying and documenting a comprehensive information technology (\"IT\") asset inventory that includes hardware, software, and location of the assets; 4. Designing and implementing protections such as network intrusion protection, host intrusion protection, and file integrity monitoring, across Defendant's network and IT assets, including Defendant's legacy technologies; 5. Designing, implementing, and maintaining measures to limit unauthorized access in any network or system that stores, collects, maintains, or processes Personal Information, such as segmentation of networks and databases and properly configured firewalls; 6. Implementing access controls across Defendant's network, such as multi-factor authentication and strong password requirements; 7. Limiting user access privileges to systems that provide access to Personal Information to employees, contractors, or other authorized third parties with a business need to access such information and establishing regular documented review of such access privileges; 8. Implementing protections, such as encryption, tokenization, or other at least equivalent protections, for Personal Information collected, maintained, processed, or stored by Defendant, including in transit and at rest. To the extent that any of the identified protections are infeasible, equivalent protections shall include effective alternative compensating controls designed to protect unencrypted data at rest or in transit, which shall be reviewed and approved by the qualified employee or employees designated to coordinate, oversee, and be responsible for the Information Security Program; 9. Establishing and enforcing written policies, procedures, guidelines, and standards designed to: a. Ensure the use of secure development practices for applications developed in-house; and b. Evaluate, assess, or test the security of externally developed applications used within Defendant's technology environment; 10.Establishing regular information security training programs, updated, as applicable, to address internal or external risks identified by Defendant, including, at a minimum: a. At least annual information security awareness training for all employees, including notifying employees of the process for submitting complaints and concerns pursuant to Section II.E.12; and b. Training for software developers relating to secure software development principles and intended to address well-known and reasonably foreseeable vulnerabilities, such as cross-site scripting, structured query language injection, and other risks identified by Defendant through risk assessments and/or penetration testing; 11.Establishing a clear and easily accessible process for receiving and addressing security vulnerability reports from third parties such as security researchers and academics; and 12.By August 30, 2019, establishing a clear and easily accessible process overseen by a senior corporate manager for employees to submit complaints or concerns about Defendant's information security practices, including establishing a clear process for reviewing, addressing, and escalating employee complaints or concerns.",
+            "deadline": "August 30, 2019",
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Assess sufficiency of safeguards at least annually and within 45 days of Covered Incidents",
+            "quoted_text": "Assess, at least once every twelve months, the sufficiency of any safeguards in place to address the risks to the security, confidentiality, or integrity of Personal Information, and evaluate and implement any needed modifications to the Information Security Program based on the results. Defendant shall further assess the sufficiency of safeguards as described above, as they relate to a Covered Incident, promptly (not to exceed forty-five days) following verification of such an incident.",
+            "deadline": "45 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Test and monitor effectiveness of safeguards at least annually and within 60 days of Covered Incidents, including quarterly vulnerability testing and annual penetration testing",
+            "quoted_text": "Test and monitor the effectiveness of the safeguards at least once every twelve months and, as they relate to a Covered Incident, promptly (not to exceed sixty days) following verification of such an incident, and modify the Information Security Program based on the results. Such testing shall include vulnerability testing of Defendant's network at least once every four months and, as it relates to a Covered Incident, promptly (not to exceed sixty days) following verification of such an incident, and penetration testing of Defendant's network at least once every twelve months and, as it relates to a Covered Incident, promptly (not to exceed sixty days) following verification of such an incident;",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Select and retain service providers capable of safeguarding Personal Information and contractually require them to maintain safeguards",
+            "quoted_text": "Select and retain service providers capable of safeguarding Personal Information they access through or receive from Defendant, and contractually require service providers to implement and maintain safeguards tailored to the amount and the type of Personal Information at issue;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Evaluate and adjust Information Security Program at least annually, within 60 days of Covered Incidents, and when operations change",
+            "quoted_text": "Evaluate and adjust the Information Security Program in light of any changes to Defendant's operations or business arrangements, including, without limitation, acquisition or licensing of any new information systems, technologies, or assets through merger or acquisition, a Covered Incident, or any other circumstances that Defendant knows or has reason to know may have a material impact on the effectiveness of the Information Security Program. At a minimum, Defendant must evaluate the Information Security Program at least once every twelve months and, as it relates to a Covered Incident, promptly (not to exceed sixty days) following verification of such an incident and modify the Information Security Program based on the results.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "III",
+        "title": "Information Security Assessments by a Third Party",
+        "category": "assessment",
+        "summary": "Defendant must obtain initial and biennial third-party assessments of its Information Security Program for twenty years, conducted by qualified independent assessors using professional standards.",
+        "requirements": [
+          {
+            "description": "Obtain initial Assessment covering first 180 days after Order entry",
+            "quoted_text": "The reporting period for the Assessments must cover: (1) the first 180 days after the entry date of the Order for the initial Assessment;",
+            "deadline": "180 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Obtain biennial Assessments for twenty years",
+            "quoted_text": "The reporting period for the Assessments must cover: ... (2) each two-year period thereafter for twenty years after entry of the Order for the biennial Assessments.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Obtain Assessments from qualified, objective, independent third-party professional meeting specified criteria",
+            "quoted_text": "The Assessments must be obtained from a qualified, objective, independent third-party professional (\"Assessor\"), who: (1) uses procedures and standards generally accepted in the profession; (2) is a Certified Information Systems Security Professional (\"CISSP\") or a Certified Information Systems Auditor (\"CISA\"), or other similarly qualified person or organization; (3) has at least five years of experience evaluating the effectiveness of computer system security or information system security; (4) conducts an independent review of the Information Security Program; and (5) is contractually required to retain all documents relevant to each Assessment for five years after completion of such Assessment, and to provide such documents to the Commission within fourteen days of receipt of a written request from a representative of the Commission.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Provide Associate Director with name of selected Assessor for approval",
+            "quoted_text": "For each Assessment, Defendant shall provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name and affiliation of the person selected to conduct the Assessment, which the Associate Director shall have the authority to approve in his or her sole discretion.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Complete each Assessment within 60 days after end of reporting period",
+            "quoted_text": "Each Assessment must be completed within sixty days after the end of the reporting period to which the Assessment applies.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit each Assessment to Commission within 10 days after completion",
+            "quoted_text": "Unless otherwise directed by a Commission representative in writing, Defendant must submit each Assessment to the Commission within ten days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IV",
+        "title": "Cooperation with Third Party Information Security Assessor",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must not withhold material facts or misrepresent information to the Assessor, and must provide the Assessor with comprehensive information about its network and IT assets.",
+        "requirements": [
+          {
+            "description": "Must not withhold material facts from or misrepresent information to the Assessor",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant, Defendant's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any Assessment required by Section III of this Order titled Information Security Assessments by a Third Party, must not withhold any material facts from the Assessor, and must not misrepresent, expressly or by implication, any fact material to the Assessor's: (1) evaluation of whether Defendant has implemented and maintained the Information Security Program required by Section II of this Order, titled Mandated Information Security Program; (2) assessment of the effectiveness of the implementation and maintenance of subsections A-I of Section II; or (3) identification of any gaps or weaknesses in the Information Security Program.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide Assessor with information about entire network and IT assets, including access and all relevant materials",
+            "quoted_text": "Defendant shall provide the Assessor with information about Defendant's entire network and all of Defendant's IT assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the network and IT assets deemed in scope. Defendant shall also provide or otherwise make available to the Assessor all information and material in its possession, custody, or control that is relevant to the Assessment.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "V",
+        "title": "Annual Certification",
+        "category": "compliance_reporting",
+        "summary": "Defendant must provide annual certifications from its board of directors or senior officer for twenty years, confirming compliance with the Order and disclosing any Covered Incidents.",
+        "requirements": [
+          {
+            "description": "Provide annual certification from board or senior officer starting one year after Order entry and continuing for 20 years",
+            "quoted_text": "For a total of twenty years and commencing one year after the entry date of this Order, and each year thereafter, provide the Commission with a certification from the board of directors, or a relevant subcommittee thereof, or other equivalent governing body or, if no such board or equivalent governing body exists, a senior officer of Defendant responsible for Defendant's Information Security Program, that: (1) Defendant has established, implemented, and maintained the requirements of this Order; (2) Defendant is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission; (3) Defendant has cooperated with the Assessor as required by Section IV of this Order; and (4) includes a brief description of any Covered Incident.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VI",
+        "title": "Covered Incident Reports",
+        "category": "compliance_reporting",
+        "summary": "Defendant must report Covered Incidents to the Commission within ten days of notifying any government entity, and provide quarterly summaries to its board of directors.",
+        "requirements": [
+          {
+            "description": "Submit Covered Incident report to Commission within 10 days of notifying government entity",
+            "quoted_text": "IT IS FURTHER ORDERED that for twenty years from the entry of the Order, Defendant, within a reasonable time after the date of Defendant's discovery of a Covered Incident, but in any event no later than ten days after the date Defendant first notifies any U.S. federal, state, or local government entity of the Covered Incident, must submit a report to the Commission.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide board of directors with quarterly summary of Covered Incidents within 30 days after each calendar quarter",
+            "quoted_text": "No more than thirty days after every calendar quarter, Defendant must provide Defendant's board of directors or a relevant subcommittee thereof, or equivalent governing body or, if no such board or equivalent governing body exists, to a senior officer of Defendant responsible for Defendant's Information Security Program, a report summarizing all Covered Incidents that occurred in that calendar quarter.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VII",
+        "title": "Monetary Judgment and Additional Monetary Obligations",
+        "category": "affirmative_obligation",
+        "summary": "Judgment of $425 million entered against Defendant, plus potential additional financial obligations if Product enrollment exceeds seven million Affected Consumers.",
+        "requirements": [
+          {
+            "description": "Judgment entered in the amount of $425,000,000",
+            "quoted_text": "Judgment in the amount of Four Hundred Twenty-Five Million Dollars ($425,000,000) is entered in favor of the Commission against Defendant.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Pay Additional Financial Obligations calculated per formulas if more than 7 million enroll in Product",
+            "quoted_text": "This order imposes additional financial obligations (\"Additional Financial Obligations\") on Defendant for the purpose of monetary relief for Affected Consumers. If more than seven million Affected Consumers enroll in the Product, then Defendant's Additional Financial Obligations will be calculated using the following formulas:",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          }
+        ]
+      },
+      {
+        "provision_number": "VIII",
+        "title": "Consumer Restitution and Redress Through Multi-District Litigation",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must deposit $300 million into the Consumer Fund in installments, with potential additional deposits up to $125 million for Out-of-Pocket Loss claims.",
+        "requirements": [
+          {
+            "description": "Deposit $150,000 within 15 days after filing of Order for Notice Provider setup costs",
+            "quoted_text": "Equifax Inc., its successors and assigns, shall deposit Three Hundred Million Dollars ($300,000,000) (the \"Payment\") into the Consumer Fund as follows: (i) One Hundred Fifty Thousand Dollars ($150,000) no later than fifteen days after the filing of this Order, to cover reasonable set-up costs of the Notice Provider;",
+            "deadline": "15 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Deposit $25 million within 15 days after MDL Court order permitting notice",
+            "quoted_text": "(ii) Twenty-Five Million Dollars ($25,000,000) no later than fifteen days after the MDL Court enters an order permitting issuance of notice of the Settlement, to cover reasonable costs and expenses of the Settlement Administrator and Notice Provider and set-up costs for the independent third-party provider of the Product and Assisted Identity Restoration Services;",
+            "deadline": "15 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Deposit remaining $300 million (less prior payments) within 15 days after Class Action Effective Date",
+            "quoted_text": "(iii) Three Hundred Million Dollars ($300,000,000) into the Consumer Fund, less any amounts paid pursuant to (i) and (ii), no later than fifteen days after the ClassAction Effective Date.",
+            "deadline": "15 days",
+            "verified": true,
+            "confidence": 0.8908554572271387
+          },
+          {
+            "description": "Deposit up to additional $125 million within 14 days of notification if Consumer Fund lacks sufficient funds for Out-of-Pocket Losses",
+            "quoted_text": "If the Consumer Fund lacks sufficient funds to pay claims for Out-of-Pocket Losses made during the Initial and Extended Claims Periods, Equifax Inc., its successors and assigns, deposits into the Consumer Fund, as needed to pay such claims on a monthly basis, up to an additional aggregate amount of One Hundred Twenty-Five Million Dollars ($125,000,000) within fourteen days after receipt of written notification from the Settlement Administrator that there are insufficient funds remaining in the Consumer Fund.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IX",
+        "title": "Consumer Fund for Multi-District Litigation",
+        "category": "affirmative_obligation",
+        "summary": "Specifies how the Consumer Fund must be used to provide Product enrollment, Alternative Reimbursement Compensation, Out-of-Pocket Loss reimbursement, Identity Restoration Services, and other relief to Affected Consumers.",
+        "requirements": [
+          {
+            "description": "Use at least $300 million from Consumer Fund exclusively for restitution and redress to Affected Consumers",
+            "quoted_text": "An amount no less than Three Hundred Million Dollars ($300,000,000), plus any amount deposited in the Consumer Fund pursuant to Sections VIII.B and VIII.C, including all accumulated interest, must be used and administered as described in Section IX for the exclusive purpose of providing restitution and redress to Affected Consumers.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Send Product activation codes within 45 days after Class Action Effective Date or conclusion of Initial Claims Period",
+            "quoted_text": "Defendant shall, through the independent third party provider of the Product, provide activation codes for enrollment in the Product to Affected Consumers who file a valid claim for the Product. Activation codes shall be sent no later than forty-five days after either the Class Action Effective Date or the conclusion of the Initial Claims Period, whichever is later.",
+            "deadline": "45 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide Assisted Identity Restoration Services for 7 years from Class Action Effective Date",
+            "quoted_text": "For a period of seven years from the Class Action Effective Date, Assisted Identity Restoration Services to an Affected Consumer.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "X",
+        "title": "Notice and Claims in Multi-District Litigation",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must supply information to Notice Provider and Settlement Administrator, provide weekly reports to Commission, and submit annual reports on claims administration.",
+        "requirements": [
+          {
+            "description": "Supply Notice Provider with information about Affected Consumers",
+            "quoted_text": "Defendant shall supply the Notice Provider with information in its possession, custody, or control, to the extent reasonably available, regarding Affected Consumers sufficient to enable the Notice Provider to implement the Notice Plan.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Supply Settlement Administrator with information about Affected Consumers",
+            "quoted_text": "Defendant shall supply the Settlement Administrator with information in its possession, custody, or control, to the extent reasonably available, regarding Affected Consumers sufficient to enable the Settlement Administrator to implement the Claims Administration Protocol.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide Commission with weekly reports prepared by Settlement Administrator",
+            "quoted_text": "Defendant shall provide to the Commission the weekly reports prepared by the Settlement Administrator pursuant to the Multi-District Litigation that summarize information related to the claims administration;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide Commission with annual reports containing claims, Product, and notice information within 60 days after reporting period",
+            "quoted_text": "This information must be submitted to the Commission within sixty days after the reporting period has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue N.W., Washington, D.C. 20580.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 0.85
+          }
+        ]
+      },
+      {
+        "provision_number": "XI",
+        "title": "Reversion of Consumer Relief to Administration by Commission",
+        "category": "affirmative_obligation",
+        "summary": "Defines Termination Events that would end Commission forbearance and require Defendant to pay funds directly to the Commission, and specifies payment amounts and cooperation requirements.",
+        "requirements": [
+          {
+            "description": "Pay $300 million plus interest within 21 days of receipt of Termination Event notice",
+            "quoted_text": "If the forbearance ends, within twenty-one days of receipt of written notice of a Termination Event, Equifax Inc., its successors and assigns, is ordered to pay the following amounts, plus any interest accumulated, less any payments that have already been disbursed by the Settlement Administrator from the Consumer Fund; Defendant is not entitled to any offset or other deduction unless a representative of the Commission agrees in writing in advance: 1. Three Hundred Million Dollars ($300,000,000), plus any interest accumulated, less any payments that have already been disbursed by the Settlement Administrator from the Consumer Fund;",
+            "deadline": "21 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Pay up to additional $125 million within 14 days of Commission notification if funds insufficient",
+            "quoted_text": "If the funds paid pursuant to Section XI.D.1 are insufficient to pay claims for Out-of-Pocket Losses made during the Initial and Extended Claims Periods, and subject to the monetary limits, if applicable, set forth in Sections IX.B, IX.C and IX.D, Equifax Inc., its successors and assigns, shall make additional payments of up to One Hundred Twenty-Five Million Dollars ($125,000,000) in the aggregate as needed on a monthly basis within fourteen days after receipt of written notification from a representative of the Commission that there are insufficient funds remaining;",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide information related to consumer relief within 14 days of Commission request",
+            "quoted_text": "In addition to payment, Defendant remains obligated to cooperate in the administration of consumer relief. If a representative of the Commission requests in writing any information related to consumer relief, Defendant must provide it, in the form prescribed by the Commission, within fourteen days.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XII",
+        "title": "Additional Monetary Provisions",
+        "category": "affirmative_obligation",
+        "summary": "Defendant relinquishes all rights to transferred assets; facts in Complaint establish elements for bankruptcy nondischargeability; funds to be used for consumer relief or deposited to U.S. Treasury.",
+        "requirements": [
+          {
+            "description": "Relinquish all rights to assets transferred pursuant to Order",
+            "quoted_text": "Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Use money paid to Commission for consumer relief or deposit to U.S. Treasury",
+            "quoted_text": "All money paid to the Commission shall be deposited into a fund administered by the Commission or its designee to be used for consumer relief, on behalf of the Commission, the Bureau, and States' Attorneys General, including the types of consumer relief enumerated in Section IX (such as enrollment in a credit monitoring product, out-of-pocket losses, time compensation, miscellaneous expenses, and identity theft restoration services), and any attendant expenses for the administration of any fund. If a representative of the Commission decides that direct redress to consumers is wholly or partially impracticable or money remains after consumer relief is completed under this subsection, the Commission may apply any remaining money for such other consumer relief (including consumer information remedies) as it determines to be reasonably related to Defendant's practices alleged in the Complaint. Any money not used for such consumer relief is to be deposited to the U.S. Treasury as disgorgement.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          }
+        ]
+      },
+      {
+        "provision_number": "XIII",
+        "title": "Single-Bureau Monitoring and Identity Theft Protection",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must offer Single-Bureau Monitoring to Affected Consumers for up to 10 or 18 years, provide free security freeze placement/removal for 10 years, and provide six free Personal Consumer Reports annually for seven years.",
+        "requirements": [
+          {
+            "description": "Offer Single-Bureau Monitoring such that aggregate credit monitoring equals 10 years",
+            "quoted_text": "Offer a single-bureau monitoring service with the features described in Exhibit A (\"Single-Bureau Monitoring) that has been approved by a representative of the Commission, to Affected Consumers who file a valid claim for Single-Bureau Monitoring and who enroll in the Product. Such Affected Consumers may enroll in the Single-Bureau Monitoring upon expiration of the Product, including any extensions thereof pursuant to Section IX, such that the aggregate number of years of credit monitoring provided under Section IX and the Single-Bureau Monitoring equals ten years, except as described in Subsection XIII.B, below.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Offer Affected Consumers under age 18 on May 13, 2017 additional Single-Bureau Monitoring such that aggregate equals 18 years",
+            "quoted_text": "Offer Affected Consumers who were under the age of eighteen on May 13, 2017, additional years of Single-Bureau Monitoring such that the aggregate number of years of credit monitoring provided under Section IX and the Single-Bureau Monitoring equals eighteen years.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide easily accessible free security freeze process for 10 years",
+            "quoted_text": "Provide all Affected Consumers with an easily accessible process to place or remove security freezes or locks on their Personal Consumer Report for free for a period of ten years following the date of entry of this Order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide clearly accessible process for all U.S. consumers to obtain six free Personal Consumer Reports annually for seven years starting December 31, 2019",
+            "quoted_text": "Separate and apart from any statutory or other legal requirements, for a period of seven years starting December 31, 2019, provide to all U.S. consumers a clearly accessible process to obtain six free copies during any twelve-month period of their Personal Consumer Report.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          }
+        ]
+      },
+      {
+        "provision_number": "XIV",
+        "title": "Prohibition on Advertising or Marketing to Consumers Who Use Identity Theft Protection Services",
+        "category": "prohibition",
+        "summary": "Defendant is prohibited from using Affected Consumer information to market or advertise products unless it makes clear disclosures and obtains affirmative express consent.",
+        "requirements": [
+          {
+            "description": "Must not use Affected Consumer information for marketing unless clear disclosure made and affirmative express consent obtained",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant, Defendant's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, shall not use any information provided by an Affected Consumer to enroll in or to use the products and services set forth in Sections IX, XIII.D, and Exhibit A, including the Product, Full Service Identity Restoration Services, Assisted Identity Restoration Services, and the Single-Bureau Credit Monitoring, or the free credit monitoring products (Equifax TrustedID Premier, Equifax Credit Watch Gold with 3 in 1 Monitoring, or Experian IDNotify) offered or paid by Defendant in connection with the Breach (or the fact that the consumer provided such information), to sell, upsell, cross-sell, or directly market or advertise its products or services unless Defendant: A. Makes a Clear and Conspicuous disclosure, separate and apart from any \"End User License Agreement,\" \"Privacy Policy,\" \"Terms of Use\" page, describing how Defendant will use the Affected Consumer's information; and B. Obtains and documents the Affected Consumer's affirmative express consent.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          }
+        ]
+      },
+      {
+        "provision_number": "XV",
+        "title": "Additional Notice",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must provide various notices to Affected Consumers and U.S. consumers through website hyperlinks, press releases, and social media.",
+        "requirements": [
+          {
+            "description": "Post hyperlink to Settlement Website on www.equifax.com within 7 days of MDL Court order or Commission Termination Event notice",
+            "quoted_text": "To Affected Consumers within seven days of entry of an order permitting issuance of notice of the Settlement, or the Commission notifying Defendant that it is exercising its rights under a Termination Event, whichever is earlier: 1. Posting a Clear and Conspicuous hyperlink to the Settlement Website on the top portion of the landing page for Defendant's primary, consumer-facing website, www.equifax.com, which shall state \"Visit [hyperlink to the Settlement Website] for information on the Equifax Data Breach Settlement\" or \"Equifax Data Breach Settlement,\" which shall remain posted until the expiration of the Initial Claims Period;",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Post hyperlink on www.equifaxsecurity2017.com until expiration of Extended Claims Period",
+            "quoted_text": "Posting a Clear and Conspicuous hyperlink to the Settlement Website on the top portion for the landing page for Defendant's www.equifaxsecurity2017.com website, which shall state \"Visit [hyperlink to the Settlement Website] for information on the Equifax Data Breach Settlement\" or \"Equifax Data Breach Settlement,\" which shall remain posted until the expiration of the Extended Claims Period;",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Issue press release with hyperlink to Settlement Website",
+            "quoted_text": "Issuing a press release, using terms consistent with the approved Notice Plan, including a hyperlink to the Settlement Website, with information about the Product, the Consumer Fund, and the Settlement Website;",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Send monthly Twitter notifications during Initial Claims Period and biannually during Extended Claims Period",
+            "quoted_text": "Sending a Twitter notification via Defendant's primary Twitter account monthly during the Initial Claims Period and then biannually during the Extended Claims Period, the text of which shall read \"Visit [hyperlink to the Settlement Website] for information on the Equifax Data Breach Settlement\";",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Post monthly Facebook notifications during Initial Claims Period and biannually during Extended Claims Period",
+            "quoted_text": "Posting a Facebook notification via Defendant's primary account monthly during the Initial Claims Period and then biannually during the Extended Claims Period, the text of which shall read \"Visit [hyperlink to the Settlement website] for information on the Equifax Data Breach Settlement.\"",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Issue press release 7 days after six free Personal Consumer Reports become available",
+            "quoted_text": "To U.S. consumers, issuing a press release seven days after the relief described in Section XIII.D becomes available, with information about the availability of six free copies of a U.S. consumer's Personal Consumer Report during any twelve-month period for seven years, including a hyperlink to the webpage where consumers can request free Personal Consumer Reports.",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 0.85
+          }
+        ]
+      },
+      {
+        "provision_number": "XVI",
+        "title": "Rule Violations",
+        "category": "prohibition",
+        "summary": "Defendant is permanently restrained and enjoined from violating the Safeguards Rule, 16 CFR Part 314.",
+        "requirements": [
+          {
+            "description": "Must not violate the Standards for Safeguarding Consumer Information Rule",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant, Defendant's officers, agents, employees and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service, are hereby permanently restrained and enjoined from violating any provision of the Standards for Safeguarding Consumer Information Rule, 16 C.F.R. Part 314, a copy of which is attached hereto as Exhibit B.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XVII",
+        "title": "Order Acknowledgments",
+        "category": "acknowledgment",
+        "summary": "Defendant must submit acknowledgment of receipt of Order and deliver copies to principals, officers, directors, managers, and employees with managerial responsibilities, obtaining signed acknowledgments.",
+        "requirements": [
+          {
+            "description": "Submit acknowledgment of receipt of Order within 7 days",
+            "quoted_text": "Defendant, within seven days of entry of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Deliver copy of Order to current personnel within 7 days",
+            "quoted_text": "Delivery must occur within 7 days of entry of this Order for current personnel.",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Deliver copy of Order to new personnel before they assume responsibilities",
+            "quoted_text": "For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Obtain signed and dated acknowledgments within 30 days",
+            "quoted_text": "From each individual or entity to which Defendant delivered a copy of this Order, Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order, which can be obtained electronically.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XVIII",
+        "title": "Compliance Reporting",
+        "category": "compliance_reporting",
+        "summary": "Defendant must submit compliance reports one year after Order entry and provide compliance notices within 14 days of specified changes for 20 years.",
+        "requirements": [
+          {
+            "description": "Submit compliance report one year after Order entry",
+            "quoted_text": "One year after entry of this Order, Defendant must submit a compliance report, sworn under penalty of perjury in which Defendant must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission may use to communicate with Defendant; (b) identify all of Defendant's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the types of goods or services offered, the means of advertising, marketing, and sales, and the categories or types of Personal Information collected, transferred, maintained, processed or stored by each business; (d) describe in detail whether and how Defendant is in compliance with each Section of this Order; and (e) provide a copy of or record proving each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Submit compliance notice within 14 days of changes to contact points or entity structure for 20 years",
+            "quoted_text": "For 20 years after entry of this Order, Defendant must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (a) any designated point of contact; or (b) the structure of any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit notice of bankruptcy or insolvency proceeding within 14 days of filing",
+            "quoted_text": "Defendant must submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against the Defendant within 14 days of its filing.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XIX",
+        "title": "Recordkeeping",
+        "category": "recordkeeping",
+        "summary": "Defendant must create and retain specified records for 20 years after Order entry, with each record retained for 5 years.",
+        "requirements": [
+          {
+            "description": "Create and retain accounting records, personnel records, consumer complaints, assessments, representations about security, Assessment materials, and compliance records",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant must create certain records for 20 years after entry of the Order, and retain each such record for 5 years. Specifically, Defendant must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold; B. Personnel records showing, for each person providing services, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reasons for termination; C. Copies or records of all U.S. consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, such as through a third party, and any response; D. A copy of each information security assessment required by this Order and any material evaluations of Defendant's physical, technical, or administrative controls to protect the confidentiality, integrity, or availability of Personal Information; E. A copy of each widely disseminated and unique representation by Defendant that describes the extent to which Defendant maintains or protects the privacy, confidentiality, security, or integrity of any Personal Information; F. For five years after the date of preparation of each Assessment required by this Order, all materials and evidence that are in the Defendant's possession and control that the Assessor considered, reviewed, relied upon or examined to prepare the Assessment, whether prepared by or on behalf of Defendant, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Defendant's compliance with related Sections of this Order, for the compliance period covered by such Assessment; and G. All records necessary to demonstrate full compliance with each provision of this Order; including all submissions to the Commission.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          }
+        ]
+      },
+      {
+        "provision_number": "XX",
+        "title": "Compliance Monitoring",
+        "category": "monitoring",
+        "summary": "Commission has authority to monitor compliance through requests for reports, depositions, document production, employee interviews, and other lawful means.",
+        "requirements": [
+          {
+            "description": "Respond to Commission requests for compliance reports, depositions, and documents within 14 days",
+            "quoted_text": "Within 14 days of receipt of a written request from a representative of the Commission, Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Permit Commission to interview employees or affiliated persons who agree to interview",
+            "quoted_text": "For matters concerning this Order, the Commission is authorized to communicate directly with Defendant. Defendant must permit representatives of the Commission to interview any employee or other person affiliated with Defendant who has agreed to such an interview.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XXI",
+        "title": "Severability",
+        "category": "duration",
+        "summary": "If any provision is held invalid, the remaining provisions remain in effect.",
+        "requirements": [
+          {
+            "description": "Severability of Order provisions",
+            "quoted_text": "IT IS FURTHER ORDERED that if any clause, provision, or section of this Order shall, for any reason, be held illegal, invalid, or unenforceable, such illegality, invalidity or unenforceability shall not affect any other clause, provision or section of this Order and this Order shall be construed and enforced as if such illegal, invalid or unenforceable clause, section or provision had not been contained herein.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XXII",
+        "title": "Retention of Jurisdiction",
+        "category": "duration",
+        "summary": "Court retains jurisdiction for construction, modification, and enforcement of the Order.",
+        "requirements": [
+          {
+            "description": "Court retains jurisdiction",
+            "quoted_text": "IT IS FUTHER ORDERED that this Court retain jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      }
+    ],
+    "duration": {
+      "duration_years": 20,
+      "termination_text": "IT IS FURTHER ORDERED that Defendant shall establish and implement, and thereafter maintain, for twenty years after entry of this Order, a comprehensive information security program (\"Information Security Program\") designed to protect the security, confidentiality, and integrity of Personal Information."
+    }
+  },
+  "metadata": {
+    "source_files": {
+      "complaint": "07.19, Equifax Complaint.pdf",
+      "order": "07.19, Equifax Order.pdf"
+    },
+    "extraction_stats": {
+      "complaint_counts": 4,
+      "complaint_representations": 2,
+      "order_provisions": 22,
+      "order_definitions": 33,
+      "order_requirements": 64
+    },
+    "processing_time_seconds": 369.0
+  }
+}

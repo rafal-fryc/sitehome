@@ -1,0 +1,117 @@
+{
+  "case_info": {
+    "docket_number": "222-3105",
+    "company": {
+      "name": "Illuminate Education, Inc.",
+      "incorporation_state": "California",
+      "entity_type": "corporation",
+      "address": "2911 Peach Street, Wisconsin Rapids, WI 54494",
+      "business_description": "Illuminate is an education technology company that makes cloud-based Pre-K–12 educational software/web applications and instructional and assessment tools. The company markets and sells its products to schools and school districts for use by teachers and administrators, providing services including attendance tracking, testing administration, learning assessments, student progress monitoring, disability screening, social-emotional behavior tracking, data analytics, and instructional strategy development."
+    },
+    "commissioners": [
+      "Andrew N. Ferguson, Chairman",
+      "Mark R. Meador"
+    ],
+    "case_date": {
+      "month": 12,
+      "year": 2025
+    },
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act",
+    "violation_type": "unfair",
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/222-3105-illuminate-education-inc-matter"
+  },
+  "complaint": {
+    "factual_background": "Illuminate Education, an education technology company serving over 17 million students and 5,200 school districts, suffered a data breach from December 2021 to January 2022 that exposed personal information of more than 10.1 million students. The breach occurred because Illuminate failed to implement basic security measures including encryption, deprovisioning former employee accounts, multi-factor authentication, and threat detection systems. A threat actor gained access using credentials from an employee who departed in 2018—over three and a half years before the breach—and remained undetected for 13 days while exfiltrating 787 database backups. Illuminate also failed to timely notify affected parties, with some notifications occurring nearly two years after the breach.",
+    "representations_made": [
+      {
+        "description": "Claimed to protect data and maintain unwavering commitment to student data privacy with physical, electronic, and procedural security measures",
+        "quoted_text": "We protect your data like it's our own. We pledge our unwavering commitment to student data privacy. We take security measures—physical, electronic, and procedural—to help defend against the unauthorized access and disclosure of your information. In addition to the restrictions discussed in this Privacy Policy, our employees are required to comply with information security safeguards, and our systems are protected by technological measures to help prevent unauthorized individuals from gaining access.",
+        "source_paragraph": 33
+      },
+      {
+        "description": "Claimed to maintain strict administrative, technical and physical procedures with limited access through user/password credentials and two factor authentication",
+        "quoted_text": "maintains strict administrative, technical and physical procedures to protect information stored in our servers, and that [a]ccess to information is limited (through user/password credentials and two factor authentication) to those employees who require it to perform their job functions. Illuminate also represented it implemented practices and procedures designed to meet or exceed … private industry best practices, regarding the proper handling and security of student information.",
+        "source_paragraph": 35
+      },
+      {
+        "description": "Claimed to use encryption technology to protect student data while in motion or in its custody from unauthorized disclosure",
+        "quoted_text": "it agreed to use encryption technology to protect student data while in motion or in its custody from unauthorized disclosure. In addition to these representations, Illuminate represented that it maintained a log of data-changing operations, and conducted periodic risk assessments and remediated any identified material security and privacy vulnerabilities in a timely manner.",
+        "source_paragraph": 36
+      },
+      {
+        "description": "Claimed to have put in place reasonable and appropriate security, technical, and organizational measures to protect student data",
+        "quoted_text": "it had put in place reasonable and appropriate security, technical, and organizational measures to protect its usage of student data against accidental or unlawful destruction or accidental loss, alterations, and unauthorized use, disclosure, or access.",
+        "source_paragraph": 37
+      },
+      {
+        "description": "Claimed to store and process student data in accordance with SANS Top 20 Security Controls with encryption in accordance with NIST Special Publication 800-57",
+        "quoted_text": "it would store and process student data in accordance with commercial standard practices that are no less rigorous than those outlined in the SANS Top 20 Security Controls, and that student data would be encrypted in transmission and at rest in accordance with NIST Special Publication 800-57.",
+        "source_paragraph": 38
+      },
+      {
+        "description": "Promised to provide notifications of any breach or unauthorized release of student data as early as 24 or 48 hours from discovery",
+        "quoted_text": "Illuminate promised to provide notifications of any breach or unauthorized release of student data as early as 24 or 48 hours, respectively, from the knowledge or discovery of a potential breach.",
+        "source_paragraph": 40
+      },
+      {
+        "description": "Represented that it would timely notify school districts whose data has been exposed as a result of a breach or unintended disclosure",
+        "quoted_text": "Illuminate has represented that it would timely notify school districts whose data has been exposed as a result of a breach or unintended disclosure of confidential or personally identifiable information.",
+        "source_paragraph": 45
+      }
+    ],
+    "counts": [
+      {
+        "count_number": 1,
+        "title": "Unfair Information Security Practices",
+        "representation": "Illuminate failed to employ reasonable and appropriate measures to protect personal information including: storing student data unencrypted, failing to implement access controls, failing to remove inactive accounts and expired passwords, failing to enforce SSO and MFA, failing to employ threat detection and response, failing to implement IAM policies, failing to configure logging and monitoring tools, and failing to establish incident response plans",
+        "fact": "These failures led to a breach exposing personal information of more than 10.1 million students, causing substantial injury in the form of fraud, identity theft, monetary loss, time spent remedying these injuries, and reputational harm from disclosure of sensitive information such as IEP status and medical diagnoses",
+        "conclusion": "This practice caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves. This practice is an unfair act or practice."
+      },
+      {
+        "count_number": 2,
+        "title": "Data Security Misrepresentations",
+        "representation": "Illuminate represented that it implemented reasonable measures to protect personal information against unauthorized access",
+        "fact": "Illuminate did not implement reasonable measures to protect personal information against unauthorized access. Illuminate failed to: deprovision accounts for terminated employees; enable appropriate logging and multi-factor authentication; take measures to maintain reasonable administrative, technical and physical safeguards and practices; limit internal access; encrypt student personal information; and timely remediate any material security and privacy vulnerabilities identified through internal risk assessments",
+        "conclusion": "Therefore, the representation set forth in Paragraph 43 is false or misleading."
+      },
+      {
+        "count_number": 3,
+        "title": "Misrepresentations to School Districts Regarding Notice",
+        "representation": "Illuminate represented that it would timely notify school districts whose data has been exposed as a result of a breach or unintended disclosure of confidential or personally identifiable information",
+        "fact": "Illuminate failed to provide timely notice to school districts and students whose personal information was exposed because of the breach. Illuminate did not provide breach notifications to most schools until March to July 2022, well over three months after the fact, and in some cases notified schools, school districts, and approximately 387,000 students as late as October 2023, nearly two years after the breach",
+        "conclusion": "Therefore, Illuminate's representations as set forth in Paragraph 45 are false or misleading."
+      }
+    ]
+  },
+  "order": {
+    "definitions": {
+      "Authorized User": "any employee, contractor, agent, customer, or other person that is authorized to access any of Respondent's information systems or data.",
+      "Covered Incident": "any incident that results in Respondent notifying, pursuant to a statutory or regulatory requirement, any U.S. federal, state, or local government entity that information of or about an individual consumer was, or is reasonably believed to have been, accessed, acquired, or publicly exposed without authorization.",
+      "Covered Information": "information from or about an individual consumer used, collected or retained in connection with a Covered Product including: (a) a first and last name; (b) a home or physical address; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) a mobile or other telephone number; (e) a driver's license or other government-issued identification number; (f) date of birth; (g) Medical Information; (h) user ID, or other persistent identifier that can be used to recognize a user over time and across different devices, websites, or online services; (i) user account credentials, such as a login name and password (whether plain text, encrypted, hashed, and/or salted); (j) student demographic information (such as foster status, homelessness status, economic status, other population characteristics); (k) disability information; (l) special education needs information; or (m) disciplinary incident information.",
+      "Covered Product": "any product offered by Respondent that is marketed, offered for sale, or sold, directly or indirectly, in the United States, including eSchoolData, eduCLIMBER, DnA, FastBridge and SchoolCity, and all versions, revisions, and successor products.",
+      "Deidentified Information": "information that cannot reasonably identify, relate to, describe, be capable of being associated with, or be linked, directly or indirectly, to a particular person, in that Respondent must, at a minimum: 1. Have implemented technical safeguards that prohibit reidentification of the person to whom the information may pertain; 2. Have implemented business processes that specifically prohibit reidentification of the information, including by buyers, customers, or other entities to whom Respondent provides the information; 3. Have implemented business processes to prevent inadvertent release of Deidentified Information; and 4. Make no attempt to reidentify the information.",
+      "Delete": "to remove Covered Information such that it is not maintained in retrievable form and cannot be retrieved in the normal course of business.",
+      "Medical Information": "information relating to the health of an individual consumer, including but not limited to medical history information, prescription information, physical or mental health testing information, health insurance information, or physician exam or health professional notes.",
+      "Respondent": "Illuminate Education, Inc., a California corporation, and its successors and assigns."
+    },
+    "provisions": [],
+    "duration": {
+      "duration_years": null,
+      "termination_text": "Provided, further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal."
+    }
+  },
+  "metadata": {
+    "source_files": {
+      "complaint": "12.25, Illuminate Education Complaint (Pending).pdf",
+      "order": "12.25, Illuminate Education Order (Pending).pdf"
+    },
+    "extraction_stats": {
+      "complaint_counts": 3,
+      "complaint_representations": 7,
+      "order_provisions": 0,
+      "order_definitions": 8,
+      "order_requirements": 0
+    },
+    "processing_time_seconds": 228.5
+  }
+}

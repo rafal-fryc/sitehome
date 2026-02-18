@@ -1,10 +1,9 @@
 {
   "rewrites": [
     { "source": "/GDPRorders", "destination": "/GDPRorders.html" },
-    { "source": "/FTCAnalytics", "destination": "/FTCAnalytics.html" },
     { "source": "/checklists", "destination": "https://law-list-buddy-34.vercel.app" },
     { "source": "/checklists/:path*", "destination": "https://law-list-buddy-34.vercel.app/:path*" },
-
-    { "source": "/checklists/api/:path*", "destination": "https://law-list-buddy-34.vercel.app/api/:path*" }
+    { "source": "/checklists/api/:path*", "destination": "https://law-list-buddy-34.vercel.app/api/:path*" },
+    { "source": "/((?!data|GDPRorders|checklists).*)", "destination": "/index.html" }
   ]
 }

@@ -1,0 +1,409 @@
+{
+  "case_info": {
+    "docket_number": "C-4662",
+    "company": {
+      "name": "Uber Technologies, Inc.",
+      "incorporation_state": "Delaware",
+      "entity_type": "corporation",
+      "address": "1455 Market St. #400, San Francisco, California 94103",
+      "business_description": "Uber operates a mobile software application that connects consumers who provide transportation services (Uber Drivers) with consumers seeking those services (Riders). The company also operates a website and collects personal information from both drivers and riders, including names, email addresses, phone numbers, addresses, profile pictures, Social Security numbers, driver's license information, bank account information, vehicle registration information, insurance information, and precise geolocation data."
+    },
+    "commissioners": [
+      "Joseph J. Simons, Chairman",
+      "Noah Joshua Phillips",
+      "Rohit Chopra",
+      "Rebecca Kelly Slaughter",
+      "Christine S. Wilson"
+    ],
+    "case_date": {
+      "month": 10,
+      "year": 2018
+    },
+    "legal_authority": "Federal Trade Commission Act, 15 U.S.C. § 45(a)",
+    "violation_type": "deceptive",
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/152-3054-c-4662-uber-technologies-inc-matter"
+  },
+  "complaint": {
+    "factual_background": "Uber Technologies, Inc. made representations about monitoring internal employee access to consumer data and implementing reasonable security measures to protect personal information. However, Uber failed to consistently monitor internal access to consumer data and failed to implement basic security controls for data stored in its Amazon S3 Datastore. These failures resulted in two major data breaches in 2014 and 2016, exposing personal information of millions of Uber Drivers and Riders, including names, driver's license numbers, Social Security numbers, bank account information, and geolocation data. Uber also failed to disclose the 2016 breach for over a year despite an ongoing FTC investigation.",
+    "representations_made": [
+      {
+        "description": "Claimed that internal access to consumer personal information is closely monitored and audited by data security specialists on an ongoing basis",
+        "quoted_text": "The policy is also clear that access to rider and driver accounts is being closely monitored and audited by data security specialists on an ongoing basis, and any violations of the policy will result in disciplinary action, including the possibility of termination and legal action.",
+        "source_paragraph": 11
+      },
+      {
+        "description": "Claimed to use standard, industry-wide, commercially reasonable security practices including encryption, firewalls, and SSL to protect personal information",
+        "quoted_text": "The Personal Information and Usage Information we collect is securely stored within our databases, and we use standard, industry-wide, commercially reasonable security practices such as encryption, firewalls and SSL (Secure Socket Layers) for protecting your information—such as any portions of your credit card number which we retain (we do not ourselves retain your entire credit card information) and geo-location information.",
+        "source_paragraph": 16
+      },
+      {
+        "description": "Customer service representatives claimed to use the most up to date technology and services to ensure information is not compromised",
+        "quoted_text": "Your information will be stored safely and used only for purposes you've authorized. We use the most up to date technology and services to ensure that none of these are compromised.",
+        "source_paragraph": 17
+      },
+      {
+        "description": "Customer service representatives claimed to be extra vigilant in protecting all private and personal information",
+        "quoted_text": "I understand that you do not feel comfortable sending your personal information via online. However, we're extra vigilant in protecting all private and personal information.",
+        "source_paragraph": 17
+      },
+      {
+        "description": "Customer service representatives claimed all personal information is kept secure and encrypted to the highest security standards available",
+        "quoted_text": "All of your personal information, including payment methods, is kept secure and encrypted to the highest security standards available.",
+        "source_paragraph": 17
+      }
+    ],
+    "counts": [
+      {
+        "count_number": 1,
+        "title": "Internal Access Monitoring Misrepresentation",
+        "representation": "Respondent represented that internal access to consumers' personal information is closely monitored and audited by data security specialists on an ongoing basis",
+        "fact": "Respondent has not closely monitored and audited internal access to consumers' personal information by data security specialists on an ongoing basis. Uber's automated monitoring system was not effectively staffed, was discontinued in August 2015, and for approximately six months only monitored access to high-profile internal accounts while not otherwise monitoring internal access unless specifically reported",
+        "conclusion": "Therefore, the representation set forth in Paragraph 28 is false or misleading."
+      },
+      {
+        "count_number": 2,
+        "title": "Data Security Misrepresentation",
+        "representation": "Respondent represented that it would provide reasonable security for consumers' personal information stored in its databases",
+        "fact": "Respondent did not provide reasonable security for consumers' personal information stored in its databases. Uber failed to implement reasonable access controls (including use of distinct access keys, job-function-based restrictions, and multi-factor authentication), failed to implement security training and guidance, failed to have a written information security program until September 2014, and stored sensitive personal information in clear text rather than encrypting it. These failures resulted in two data breaches in 2014 and 2016 affecting millions of consumers",
+        "conclusion": "Therefore, the representation set forth in Paragraph 30 is false or misleading."
+      }
+    ]
+  },
+  "order": {
+    "definitions": {
+      "Covered Incident": "any instance in which any United States federal, state, or local law or regulation requires Respondent to notify any U.S. federal, state, or local government entity that information collected or received, directly or indirectly, by Respondent from or about an individual consumer was, or is reasonably believed to have been, accessed or acquired without authorization.",
+      "Personal Information": "individually identifiable information collected or received, directly or indirectly, by Respondent from or about an individual consumer, including: (1) a first and last name; (2) a physical address; (3) an email address; (4) a telephone number; (5) a Social Security number; (6) a driver's license or other government-issued identification number; (7) a financial institution account number; (8) persistent identifiers associated with a particular consumer or device; or (9) precise geo-location data of an individual or mobile device, including GPS-based, WiFi-based, or cell-based location information.",
+      "Respondent": "Uber Technologies, Inc. and its successors and assigns."
+    },
+    "provisions": [
+      {
+        "provision_number": "I",
+        "title": "Prohibition Against Misrepresentations",
+        "category": "prohibition",
+        "summary": "Respondent must not misrepresent the extent to which it monitors internal access to Personal Information or protects the privacy, confidentiality, security, or integrity of Personal Information.",
+        "requirements": [
+          {
+            "description": "Must not misrepresent the extent to which Respondent monitors or audits internal access to consumers' Personal Information",
+            "quoted_text": "IT IS ORDERED that Respondent and Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service must not misrepresent in any manner, expressly or by implication: A. the extent to which Respondent monitors or audits internal access to consumers' Personal Information",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not misrepresent the extent to which Respondent protects the privacy, confidentiality, security, or integrity of any Personal Information",
+            "quoted_text": "IT IS ORDERED that Respondent and Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service must not misrepresent in any manner, expressly or by implication: B. the extent to which Respondent protects the privacy, confidentiality, security, or integrity of any Personal Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          }
+        ]
+      },
+      {
+        "provision_number": "II",
+        "title": "Mandated Privacy Program",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must establish and maintain a comprehensive privacy program reasonably designed to address privacy risks and protect the privacy and confidentiality of Personal Information.",
+        "requirements": [
+          {
+            "description": "Establish and implement a comprehensive privacy program no later than the effective date of this Order",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent must, no later than the effective date of this Order, establish and implement, and thereafter maintain, a comprehensive privacy program that is reasonably designed to (1) address privacy risks related to the development and management of new and existing products and services for consumers, and (2) protect the privacy and confidentiality of Personal Information.",
+            "deadline": "effective date",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Designate an employee or employees to coordinate and be responsible for the privacy program",
+            "quoted_text": "A. the designation of an employee or employees to coordinate and be responsible for the privacy program",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Identify reasonably foreseeable risks and assess sufficiency of safeguards, including consideration of risks in employee training, product design, secure software design, third-party vulnerability reports, and attack prevention and response",
+            "quoted_text": "B. the identification of reasonably foreseeable risks, both internal and external, that could result in Respondent's unauthorized collection, use, or disclosure of Personal Information and an assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including: (1) employee training and management, including training on the requirements of this Order; (2) product design, development, and research; (3) secure software design, development, and testing, including access key and secret key management and secure cloud storage; (4) review, assessment, and response to third-party security vulnerability reports, including through a \"bug bounty\" or similar program; and (5) prevention, detection, and response to attacks, intrusions, or systems failures",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Design and implement reasonable controls and procedures to address risks and regularly test or monitor their effectiveness",
+            "quoted_text": "C. the design and implementation of reasonable controls and procedures to address such risks and regular testing or monitoring of the effectiveness of those controls and procedures",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Develop and use reasonable steps to select and retain service providers capable of protecting Personal Information and require them by contract to maintain appropriate privacy protections",
+            "quoted_text": "D. the development and use of reasonable steps to select and retain service providers capable of appropriately protecting the privacy of Personal Information they receive from Respondent and requiring service providers, by contract, to implement and maintain appropriate privacy protections for such Personal Information",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Evaluate and adjust the privacy program in light of testing results, monitoring, operational changes, or other circumstances that may impact effectiveness",
+            "quoted_text": "E. the evaluation and adjustment of Respondent's privacy program in light of the results of the testing and monitoring required by sub-provision C, any changes to Respondent's operations or business arrangements, or any other circumstances that Respondent knows or has reason to know may have an impact on the effectiveness of the privacy program.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "III",
+        "title": "Privacy Assessments by a Third Party",
+        "category": "assessment",
+        "summary": "Respondent must obtain initial and biennial third-party privacy assessments for 20 years.",
+        "requirements": [
+          {
+            "description": "Obtain assessments completed by a qualified, objective, independent third-party professional with at least 3 years of experience in privacy and data protection, approved by the Associate Director for Enforcement",
+            "quoted_text": "A. The Assessments must be completed by a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. An individual qualified to prepare such Assessments must have a minimum of 3 years of experience in the field of privacy and data protection. All individuals selected to complete such Assessments must be approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, in his or her sole discretion.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Ensure the initial Assessment covers the first 180 days after issuance and biennial Assessments cover each 2-year period thereafter for 20 years",
+            "quoted_text": "B. The reporting period for the Assessments must cover: (1) the first 180 days after the issuance date of the Order for the initial Assessment, and (2) each 2-year period thereafter for 20 years after the issuance date of the Order for the biennial Assessments.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Ensure each Assessment sets forth specific privacy controls implemented, explains their appropriateness, shows they meet or exceed Order requirements, and certifies their effectiveness",
+            "quoted_text": "C. Each Assessment must: 1. set forth the specific privacy controls that Respondent has implemented and maintained during the reporting period; 2. explain how such privacy controls are appropriate to Respondent's size and complexity, the nature and scope of Respondent's activities, and the sensitivity of the Personal Information; 3. explain how the privacy controls that have been implemented meet or exceed the protections required by the Provision of this Order titled Mandated Privacy Program; and 4. certify that the privacy controls are operating with sufficient effectiveness to provide reasonable assurance to protect the privacy of Personal Information and that the controls have so operated throughout the reporting period.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Complete each Assessment within 60 days after the end of the reporting period",
+            "quoted_text": "D. Each Assessment must be completed within 60 days after the end of the reporting period to which the Assessment applies.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide each Assessment to the Commission within 10 days after the Assessment has been completed",
+            "quoted_text": "Respondent must provide each Assessment to the Commission within 10 days after the Assessment has been completed.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IV",
+        "title": "Covered Incident Reports",
+        "category": "compliance_reporting",
+        "summary": "Respondent must submit a report to the Commission within 10 days of notifying any government entity of a Covered Incident.",
+        "requirements": [
+          {
+            "description": "Submit a Covered Incident report to the Commission no later than 10 days after first notifying any U.S. government entity of the incident",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent, within a reasonable time after the date of Respondent's discovery of a Covered Incident, but in any event no later than 10 days after the date Respondent first notifies any U.S. federal, state, or local government entity of the Covered Incident, must submit a report to the Commission",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Include in the report the date of the incident, description of facts, types of information affected, number of consumers affected, remediation acts taken, and copies of notices sent",
+            "quoted_text": "A. The report must include, to the extent possible: 1. the date, estimated date, or estimated date range when the Covered Incident occurred; 2. a description of the facts relating to the Covered Incident, including the causes and scope of the Covered Incident, if known; 3. a description of each type of information that triggered the notification obligation to the U.S. federal, state, or local government entity; 4. the number of consumers whose information triggered the notification obligation to the U.S. federal, state, or local government entity; 5. the acts that Respondent has taken to date to remediate the Covered Incident and protect Personal Information from further exposure or access; and 6. a representative copy of each materially different notice required by U.S. federal, state, or local law or regulation and sent by Respondent to consumers or to any U.S. federal, state, or local government entity.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "V",
+        "title": "Acknowledgments of the Order",
+        "category": "acknowledgment",
+        "summary": "Respondent must obtain acknowledgments of receipt of this Order from itself and deliver the Order to relevant personnel for 20 years.",
+        "requirements": [
+          {
+            "description": "Submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury within 10 days after the effective date",
+            "quoted_text": "A. Respondent, within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "For 20 years, deliver a copy of this Order to all principals, officers, directors, LLC managers and members, relevant employees and agents, and any business entity resulting from structural changes, within 10 days for current personnel and before responsibilities are assumed for others",
+            "quoted_text": "B. For 20 years after the issuance date of this Order, Respondent must deliver, or for contingent workers, cause to be delivered, a copy of this Order to (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives who participate in conduct related to the subject matter of the Order, including all employees, agents, and representatives who regularly access Personal Information; and (3) any business entity resulting from any change in structure as set forth in the Provision of this Order titled Compliance Report and Notices. Delivery must occur within 10 days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Obtain a signed and dated acknowledgment of receipt of this Order from each individual or entity to which the Order was delivered, within 30 days",
+            "quoted_text": "C. From each individual or entity to which Respondent delivered, or caused to be delivered, a copy of this Order, Respondent must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VI",
+        "title": "Compliance Report and Notices",
+        "category": "compliance_reporting",
+        "summary": "Respondent must submit a compliance report one year after issuance and provide notices of certain changes within 14 days.",
+        "requirements": [
+          {
+            "description": "Submit a compliance report one year after the issuance date, sworn under penalty of perjury, identifying contact information, subsidiaries, business activities, compliance with each provision, and providing copies of acknowledgments",
+            "quoted_text": "A. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which: 1. Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, that representatives of the Commission may use to communicate with Respondent; (b) identify all of Respondent's subsidiaries that are registered as business entities in any state of the United States by all of their names, primary telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the products and services offered by each business and the Personal Information each business collects, maintains, transfers or stores; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes Respondent made to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit a compliance notice within 14 days of any change in designated point of contact or structure of Respondent that may affect compliance obligations",
+            "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (1) any designated point of contact; or (2) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding within 14 days of its filing",
+            "quoted_text": "C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VII",
+        "title": "Recordkeeping",
+        "category": "recordkeeping",
+        "summary": "Respondent must create and retain specified records for 20 years after issuance, with each record retained for 5 years unless otherwise specified.",
+        "requirements": [
+          {
+            "description": "Create accounting records showing revenues from all goods or services sold, for 20 years after issuance, retaining each for 5 years",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for 20 years after the issuance date of the Order, and retain each such record for 5 years, unless otherwise specified below. Specifically, Respondent must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination for each person providing services, for 20 years, retaining each for 5 years",
+            "quoted_text": "B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an independent contractor, employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create records of all consumer complaints concerning the subject matter of the Order and any response, for 20 years, retaining each for 5 years",
+            "quoted_text": "C. Records of all consumer complaints directed at Respondent, or forwarded to Respondent by a third party, concerning the subject matter of the Order, and any response",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create all records necessary to demonstrate full compliance with each provision of this Order, for 20 years, retaining each for 5 years",
+            "quoted_text": "D. All records necessary to demonstrate full compliance with each Provision of this Order, including all submissions to the Commission",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create a copy of each widely disseminated representation describing the extent to which Respondent maintains or protects privacy, security, and confidentiality of Personal Information, for 20 years, retaining each for 5 years",
+            "quoted_text": "E. A copy of each widely disseminated representation by Respondent that describes the extent to which Respondent maintains or protects the privacy, security, and confidentiality of Personal Information, including any representation concerning a change in Respondent's practices with respect to the privacy, security, and confidentiality of Personal Information",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Retain for 5 years after preparation all materials relied upon to prepare each Assessment, including plans, reports, studies, reviews, audits, policies, training materials, and assessments",
+            "quoted_text": "F. For 5 years after the date of preparation of each Assessment required by this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Respondent, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Respondent's compliance with related Provisions of this Order, for the compliance period covered by such Assessment",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Retain for 5 years from the date created or received reports from bug bounty or similar programs and records showing review, assessment, and response to such reports",
+            "quoted_text": "G. For 5 years from the date created or received, reports received by Respondent from individuals or entities that seek payment, rewards, or recognition through a \"bug bounty\" or similar program for reporting a security vulnerability that relates to potential or actual access to or acquisition of Personal Information, and records sufficient to show Respondent's review, assessment of, and response to any such reports",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Retain for 5 years from the date created or received copies of all subpoenas and other communications with law enforcement relating to compliance with this Order",
+            "quoted_text": "H. For 5 years from the date created or received, copies of all subpoenas and other communications with law enforcement, if such communications relate to Respondent's compliance with this Order",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Retain for 5 years from the date created or received all records that contradict, qualify, or call into question Respondent's compliance with this Order",
+            "quoted_text": "I. For 5 years from the date created or received, all records, whether prepared by or on behalf of Respondent, that contradict, qualify, or call into question Respondent's compliance with this Order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VIII",
+        "title": "Compliance Monitoring",
+        "category": "monitoring",
+        "summary": "The Commission may monitor Respondent's compliance by requesting reports, inspecting records, interviewing personnel, and using other lawful means.",
+        "requirements": [
+          {
+            "description": "Within 10 days of a written request from the Commission, submit additional compliance reports or other requested information sworn under penalty of perjury, and produce records for inspection and copying",
+            "quoted_text": "A. Within 10 days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Permit Commission representatives to communicate directly with Respondent and interview anyone affiliated with Respondent who has agreed to such an interview",
+            "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "The Commission may use all other lawful means, including posing as consumers or other entities, to monitor compliance",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IX",
+        "title": "Order Effective Dates",
+        "category": "duration",
+        "summary": "The Order is final and effective upon publication on the Commission's website and will terminate on October 25, 2038, or 20 years from the most recent complaint filing, whichever is later.",
+        "requirements": [
+          {
+            "description": "Order is final and effective upon publication on ftc.gov",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      }
+    ],
+    "duration": {
+      "duration_years": 20,
+      "termination_text": "This Order will terminate on October 25, 2038, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than 20 years; B. This Order's application to a Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision."
+    }
+  },
+  "metadata": {
+    "source_files": {
+      "complaint": "10.18, Uber Technologies Complaint.pdf",
+      "order": "10.18, Uber Technologies Order.pdf"
+    },
+    "extraction_stats": {
+      "complaint_counts": 2,
+      "complaint_representations": 5,
+      "order_provisions": 9,
+      "order_definitions": 3,
+      "order_requirements": 34
+    },
+    "processing_time_seconds": 142.3
+  }
+}

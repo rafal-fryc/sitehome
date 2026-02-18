@@ -1,0 +1,341 @@
+{
+  "case_info": {
+    "docket_number": "C-4575",
+    "company": {
+      "name": "Henry Schein Practice Solutions, Inc.",
+      "incorporation_state": "Utah",
+      "entity_type": "corporation",
+      "address": "1220 South 630 East, American Fork, Utah 84003",
+      "business_description": "Henry Schein Practice Solutions, Inc. manufactures, advertises, offers for sale, sells, and distributes office management software for dental practices, including the Dentrix software which enables dentists to perform common office tasks such as entering patient data, sending appointment reminders, processing patient payments, submitting patient insurance claims, documenting treatment planning, and recording diagnostic information."
+    },
+    "commissioners": [
+      "Edith Ramirez, Chairwoman",
+      "Maureen K. Ohlhausen",
+      "Terrell McSweeny"
+    ],
+    "case_date": {
+      "month": 5,
+      "year": 2016
+    },
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45 et seq.",
+    "violation_type": "deceptive",
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/142-3161-c4575-henry-schein-practice-solutions-inc-matter"
+  },
+  "complaint": {
+    "factual_background": "Henry Schein Practice Solutions marketed its Dentrix G5 dental office management software as providing encryption capabilities to protect patient data and help dentists comply with HIPAA requirements. However, the company knew the software used a proprietary, untested algorithm that was less secure than industry-standard encryption like AES. Even after US-CERT and NIST issued vulnerability alerts in June 2013 calling it a 'weak obfuscation algorithm,' the company continued marketing it as encryption for seven more months.",
+    "representations_made": [
+      {
+        "description": "Claimed Dentrix G5 provides encryption capabilities to help keep patient records safe and secure and comply with HIPAA",
+        "quoted_text": "The database also provides new encryption capabilities that can help keep patient records safe and secure. And of course, encryption plays a key role in your efforts to stay compliant with HIPAA security standards.",
+        "source_paragraph": 9
+      },
+      {
+        "description": "Claimed Dentrix G5 stores patient data in an encrypted format with improved protection",
+        "quoted_text": "Henry Schein is pleased to announce the release of Dentrix G5. G5 stores information in an SQL database, which . . . offers improved protection by storing your patient data in an encrypted format.",
+        "source_paragraph": 9
+      },
+      {
+        "description": "Claimed the SQL database offers improved protection by storing customer data in encrypted format as a defense against data protection regulations",
+        "quoted_text": "The SQL database also offers improved protection by storing customer data in an encrypted format. With ever-increasing data protection regulations, Dentrix G5 provides an important line of defense for both patient and practitioner.",
+        "source_paragraph": 9
+      },
+      {
+        "description": "Claimed Dentrix G5 provides improved data protection by storing customer data in encrypted format to help meet regulatory obligations",
+        "quoted_text": "With the release of Dentrix G5, Dentrix now stores information in an SQL database, which delivers several distinct benefits for your practice, including improved data access speed and improved data protection by storing customer data in an encrypted format. With medical professionals under strict regulatory obligations to protect their patients' personal health information, the new Dentrix G5 database provides an important line of defense for both patient and practitioner.",
+        "source_paragraph": 9
+      },
+      {
+        "description": "Claimed Dentrix G5's embedded SQL database provides advanced protection without requiring users to manage another system",
+        "quoted_text": "Dentrix versions prior to G5 relied on the underlying Microsoft operating system and file system safeguard to protect user data. Unfortunately, these were rarely activated by default, and if practices failed to turn them on, their data were at risk to hackers. With Dentrix G5's embedded SQL database, users have the advanced protection they need without burdening them with another system to manage.",
+        "source_paragraph": 9
+      }
+    ],
+    "counts": [
+      {
+        "count_number": 1,
+        "title": "Deceptive Claims of Encryption – Industry-Standard",
+        "representation": "Dentrix G5 provides industry-standard encryption",
+        "fact": "Dentrix G5 used technology that was less secure than industry-standard encryption, specifically a proprietary algorithm that had not been tested publicly and was described by US-CERT as a 'weak obfuscation algorithm' rather than true encryption",
+        "conclusion": "Therefore, the representation set forth in Paragraph 19 was false or misleading."
+      },
+      {
+        "count_number": 2,
+        "title": "Deceptive Claims of Encryption – Regulatory Obligations",
+        "representation": "Dentrix G5 helps dentists protect patient data, as required by HIPAA",
+        "fact": "Dentrix G5 used technology that was not capable of helping dentists protect patient data as required by HIPAA, as it did not meet NIST guidance for encryption (which recommends AES encryption) and would not qualify for the safe harbor under HHS's Breach Notification Rule",
+        "conclusion": "Therefore, the representation set forth in Paragraph 21 was false or misleading."
+      }
+    ]
+  },
+  "order": {
+    "definitions": {
+      "Affected Customer(s)": "any consumer, including any dental practice, that purchased the Dentrix G5 dental office practice management software.",
+      "Commerce": "as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44.",
+      "Clear(ly) and Conspicuous(ly)": "that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: A. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication, even if the representation requiring the disclosure is made in only one means. B. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. C. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. D. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. E. On a product label, the disclosure must be presented on the principal display panel. F. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the representation that requires the disclosure appears.",
+      "HIPAA": "the Health Insurance Portability and Accountability Act of 1996, Pub.L. 104-191, 110 Stat. 1936.",
+      "Personal Information": "individually identifiable information from or about an individual consumer including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name; (c) online contact information, such as an email address, instant messaging user identifier, or screen name; (d) a telephone number; (e) a Social Security number; (f) a driver's license number or other government-issued identification number; (g) a bank account, debit card, or credit card account number; (h) a photograph; and (i) medical information about a consumer including, but not limited to, prescription information, clinical laboratory testing information, health insurance information, physician examination notes, and medical history.",
+      "Respondent": "Henry Schein Practice Solutions, Inc. and its successors and assigns."
+    },
+    "provisions": [
+      {
+        "provision_number": "I",
+        "title": "Prohibition Against Misrepresentations About Security and Privacy",
+        "category": "prohibition",
+        "summary": "Respondent must not misrepresent the encryption capabilities, regulatory compliance abilities, or privacy and security protections of any product or service designed to collect or store Personal Information.",
+        "requirements": [
+          {
+            "description": "Must not misrepresent whether or to what extent the product or service offers industry-standard encryption",
+            "quoted_text": "IT IS ORDERED that Respondent, directly or through any corporation, subsidiary, division, or other device, in connection with the labeling, advertising, promotion, offering for sale, sale, or distribution of any product or service designed to collect or store Personal Information, in or affecting commerce, shall not misrepresent, in any matter, expressly or by implication: A. whether or to what extent the product or service offers industry-standard encryption;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not misrepresent the ability of the product or service to help customers meet regulatory obligations related to privacy or security",
+            "quoted_text": "B. the ability of the product or service to help customers meet regulatory obligations related to privacy or security;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not misrepresent the extent to which a product or service maintains the privacy, security, confidentiality, and integrity of Personal Information",
+            "quoted_text": "C. the extent to which a product or service maintains the privacy, security, confidentiality, and integrity of Personal Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "II",
+        "title": "Customer Notification Program",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must notify Affected Customers that Dentrix G5 uses less complex encryption than AES industry standard, identify eligible customers, mail notices, establish a toll-free number and email for inquiries, and submit compliance reports.",
+        "requirements": [
+          {
+            "description": "Identify all Affected Customers who purchased Dentrix G5 prior to January 2014",
+            "quoted_text": "A. Respondent must identify all Affected Customers who purchased Dentrix G5 prior to January 2014 (\"eligible customers\"). 1. Such eligible customers, and their contact information, must be identified to the extent such information is in Respondent's possession, custody, or control.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Notify all identified eligible customers by mailing a notice in the form shown in Attachment A, using envelope shown in Attachment B, with no other enclosures, by first-class mail with address correction service",
+            "quoted_text": "B. Respondent must notify all identified eligible customers by mailing each a notice: 1. The letter must be in the form shown in Attachment A. 2. The envelope containing the letter must be in the form shown in Attachment B. 3. The mailing of the notification letter must not include any other enclosures. 4. The mailing must be sent by first-class mail, postage prepaid, address correction service requested with forwarding and return postage guaranteed. For any mailings returned as undeliverable, Respondent must use standard search methodologies such as re-checking Respondent's records and the Postal Service's National Change of Address database and re-mailing to the corrected address within eight days.",
+            "deadline": "8 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Notify all eligible customers within 60 days after service of order and any eligible customers identified thereafter within 30 days of their identification",
+            "quoted_text": "C. Respondent must notify all eligible customers within sixty (60) days after service of this order and any eligible customers identified thereafter within thirty (30) days of their identification.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Establish a toll-free telephone number and an email address dedicated to responding to inquiries about the order and respond promptly and accurately to such inquiries",
+            "quoted_text": "D. Respondent must establish a toll-free telephone number and an email address dedicated to responding to inquiries about the order and must respond promptly and accurately to such inquiries.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit reports on notification program under penalty of perjury within 120 days after service of order, annually thereafter, and at conclusion of program",
+            "quoted_text": "E. Respondent must submit reports on its notification program under penalty of perjury: 1. Respondent must submit a report, within one hundred and twenty (120) days after the date of service of this order, annually thereafter, and at the conclusion of the program summarizing its compliance to date, including: the total number of eligible customers identified, notices mailed, and notices re-mailed, the number of mailings returned as undeliverable, and efforts taken to locate the customers for whom mailings were returned and deliver them the notice, as well as the number of calls and emails received and their disposition. For customers for whom mailings were returned as undeliverable, Respondent shall make reasonable efforts to locate and notify those customers.",
+            "deadline": "120 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit any information regarding the notice program, including underlying customer data, within 10 days of Commission request",
+            "quoted_text": "2. If a representative of the Commission requests any information regarding the notice program, including any of the underlying customer data, Respondent must submit it within ten (10) days of the request.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "III",
+        "title": "Monetary Payment",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must pay $250,000 to the Commission within 8 days of the effective date of the order by electronic fund transfer.",
+        "requirements": [
+          {
+            "description": "Pay $250,000 to the Commission within 8 days of the effective date of order by electronic fund transfer",
+            "quoted_text": "A. Respondent must pay to the Commission $250,000, which Respondent stipulates its undersigned counsel holds in escrow for no purpose other than payment to the Commission. B. Such payment must be made within eight (8) days of the effective date of this order by electronic fund transfer in accordance with instructions provided by a representative of the Commission.",
+            "deadline": "8 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IV",
+        "title": "Consumer Redress Fund Administration",
+        "category": "affirmative_obligation",
+        "summary": "Money paid to the Commission may be deposited into a fund for consumer redress and related relief, with interest accruing on defaults and penalties for nonpayment.",
+        "requirements": [
+          {
+            "description": "Money paid may be used for consumer redress, information remedies, or deposited to U.S. Treasury if redress is impracticable or funds remain",
+            "quoted_text": "A. All money paid to the Commission pursuant to this order may be deposited into a fund administered by the Commission or its designee to be used for relief, including consumer redress and any attendant expenses for the administration of any redress fund. If a representative of the Commission decides that direct redress to Affected Customers is wholly or partially impracticable or money remains after redress is completed, the Commission may apply any remaining money for such other relief (including consumer information remedies) as it determines to be reasonably related to Respondent's practices alleged in the complaint. Any money not used is to be deposited to the U.S. Treasury.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "In event of default, interest accrues from date of default to date of payment; if default continues for 10 days beyond due date, entire amount becomes immediately due and payable",
+            "quoted_text": "B. In the event of default on any obligation to make payment under this order, interest, computed as if pursuant to 28 U.S.C. § 1961(a), shall accrue from the date of default to the date of payment. In the event such default continues for ten (10) days beyond the date that payment is due, the entire amount will immediately become due and payable.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "V",
+        "title": "Customer Information for Redress",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must provide customer information to enable the Commission to administer consumer redress to Affected Customers, within 14 days of written request.",
+        "requirements": [
+          {
+            "description": "Provide sufficient customer information to enable Commission to administer consumer redress; if Commission requests redress information in writing, provide it within 14 days",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent must directly or indirectly provide sufficient customer information to enable the Commission to efficiently administer consumer redress to all Affected Customers. Respondent represents that it has provided this redress information to the Commission. If a representative of the Commission requests in writing any information related to redress, Respondent must provide it, in the form prescribed by the Commission representative, within fourteen (14) days.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 0.85
+          }
+        ]
+      },
+      {
+        "provision_number": "VI",
+        "title": "Recordkeeping Requirements",
+        "category": "recordkeeping",
+        "summary": "Respondent must maintain for five years after dissemination all advertisements, materials relied upon, and evidence that contradicts representations, and make them available to the Commission upon request.",
+        "requirements": [
+          {
+            "description": "For 5 years after last date of dissemination of any representation covered by order, maintain and make available to Commission all advertisements and promotional materials, materials relied upon, and contradictory evidence",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent shall, for five (5) years after the last date of dissemination of any representation covered by this order, maintain and upon request make available to the Commission for inspection and copying: A. All advertisements and promotional materials containing the representation; B. All materials that were relied upon in disseminating the representation; and C. All tests, reports, studies, surveys, demonstrations, or other evidence in its possession or control that contradict, qualify, or call into question the representation, or the basis relied upon for the representation, including complaints and other communications with consumers or with governmental or consumer protection organizations.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VII",
+        "title": "Order Acknowledgment and Distribution",
+        "category": "acknowledgment",
+        "summary": "Respondent must deliver a copy of the order to current and future personnel with managerial responsibilities within 30 days, and secure signed acknowledgments of receipt within 30 days of delivery.",
+        "requirements": [
+          {
+            "description": "Deliver copy of order to current principals, officers, directors, managers, and employees with managerial responsibilities within 30 days after service of order",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent shall deliver a copy of this order to all current and for the next five (5) years future principals, officers, directors, and managers, and to all current and future employees having managerial responsibilities with respect to the subject matter of this order. Respondent shall deliver this order to such current personnel within thirty (30) days after service of this order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Deliver order to future personnel within 30 days after they assume position or responsibilities",
+            "quoted_text": "Respondent shall deliver this order to all current and for the next five (5) years future principals, officers, directors, and managers, and to all current and future employees having managerial responsibilities with respect to the subject matter of this order. Respondent shall deliver this order to such current personnel within thirty (30) days after service of this order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "For any business entity resulting from change in structure, deliver order at least 10 days prior to the change",
+            "quoted_text": "For any business entity resulting from any change in structure set forth in Part VIII, delivery shall be at least ten (10) days prior to the change in structure.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Secure signed and dated statement acknowledging receipt of order within 30 days of delivery from all persons receiving a copy",
+            "quoted_text": "Respondent must secure a signed and dated statement acknowledging receipt of this order, within thirty (30) days of delivery, from all persons receiving a copy of the order pursuant to this section.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VIII",
+        "title": "Corporate Change Notification",
+        "category": "compliance_reporting",
+        "summary": "Respondent must notify the Commission at least 30 days prior to any corporate change affecting compliance obligations, such as dissolution, merger, bankruptcy, or change in name or address.",
+        "requirements": [
+          {
+            "description": "Notify Commission at least 30 days prior to any corporate change affecting compliance obligations (dissolution, merger, subsidiary creation, bankruptcy, name or address change)",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent shall notify the Commission at least thirty (30) days prior to any change in the corporation(s) that may affect compliance obligations arising under this order, including but not limited to a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "If learning of proposed change less than 30 days prior, notify Commission as soon as practicable after obtaining such knowledge",
+            "quoted_text": "Provided, however, that with respect to any proposed change in the corporation about which Respondent learns less than thirty (30) days prior to the date such action is to take place, Respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IX",
+        "title": "Compliance Reporting",
+        "category": "compliance_reporting",
+        "summary": "Respondent must file a compliance report with the Commission within 60 days after service of the order and submit additional reports within 10 days of Commission request.",
+        "requirements": [
+          {
+            "description": "File true and accurate compliance report with Commission within 60 days after service of order, setting forth manner and form of compliance",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent, within sixty (60) days after the date of service of this order, shall file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of its compliance with this order.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit additional true and accurate written reports within 10 days of receipt of written notice from Commission representative",
+            "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, Respondent shall submit additional true and accurate written reports.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "X",
+        "title": "Order Duration and Termination",
+        "category": "duration",
+        "summary": "The order will terminate on May 20, 2036, or 20 years from the most recent date the United States or FTC files a complaint in federal court alleging violation of the order, whichever comes later.",
+        "requirements": [
+          {
+            "description": "Order terminates on May 20, 2036, or 20 years from most recent complaint filing date, whichever is later",
+            "quoted_text": "This order will terminate on May 20, 2036, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this order that terminates in less than twenty (20) years; B. This order's application to any Respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      }
+    ],
+    "duration": {
+      "duration_years": 20,
+      "termination_text": "This order will terminate on May 20, 2036, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this order that terminates in less than twenty (20) years; B. This order's application to any Respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part. Provided further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Part as thought the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal."
+    }
+  },
+  "metadata": {
+    "source_files": {
+      "complaint": "05.16, Henry Schein Practice Solutions Complaint.pdf",
+      "order": "05.16, Henry Schein Practice Solutions Order.pdf"
+    },
+    "extraction_stats": {
+      "complaint_counts": 2,
+      "complaint_representations": 5,
+      "order_provisions": 10,
+      "order_definitions": 6,
+      "order_requirements": 23
+    },
+    "processing_time_seconds": 124.2
+  }
+}

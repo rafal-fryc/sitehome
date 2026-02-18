@@ -1,0 +1,112 @@
+{
+  "case_info": {
+    "docket_number": "3:16-cv-3474",
+    "company": {
+      "name": "InMobi Pte Ltd.",
+      "incorporation_state": "Singapore",
+      "entity_type": "private limited company",
+      "address": "30 Cecil Street, #19-08, Prudential Tower, Singapore 049712",
+      "business_description": "InMobi operates a mobile advertising network and provides an advertising platform for mobile application developers and advertisers. By integrating their software development kit (InMobi SDK), developers can monetize applications through various ad formats including banner ads, interstitial ads, and native ads."
+    },
+    "commissioners": [
+      "Maneesha Mithal, Associate Director",
+      "Mark Eichorn, Assistant Director",
+      "Nithan Sannappa, Attorney",
+      "Jacqueline Connor, Attorney"
+    ],
+    "case_date": {
+      "month": 6,
+      "year": 2016
+    },
+    "legal_authority": "Sections 5(a)(1), 5(m)(1)(A), 13(b), and 16(a) of the Federal Trade Commission Act, 15 U.S.C. §§ 45(a)(1), 45(m)(1)(A), 53(b), and 56(a), and Sections 1303(c) and 1306(d) of the Children's Online Privacy Protection Act of 1998, 15 U.S.C. §§ 6502(c) and 6505(d)",
+    "violation_type": "both",
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/152-3203-inmobi-pte-ltd"
+  },
+  "complaint": {
+    "factual_background": "InMobi, a mobile advertising network, misrepresented its location tracking practices and violated children's privacy protections. The company told app developers it would only track users' locations with permission, but it secretly collected WiFi network information to track location even when users denied permission. InMobi also collected personal information from thousands of child-directed apps for behavioral advertising without parental consent, despite claiming it did not collect information from children.",
+    "representations_made": [
+      {
+        "description": "Claimed to track location and serve geo-targeted ads only if Android location API permissions were granted",
+        "quoted_text": "To allow InMobi to show Geo targeted ads, you need to add the ACCESS_COURSE_LOCATION [sic] and ACCESS_FINE_LOCATION permissions.",
+        "source_paragraph": 28
+      },
+      {
+        "description": "Claimed to track location and serve geo-targeted ads only if iOS location API access was provided",
+        "quoted_text": "You can set the user location by using the location methods in the ad request. . . Passing the location object allows for better targeting, and potentially higher eCPMs [effective cost per thousand impressions].",
+        "source_paragraph": 30
+      },
+      {
+        "description": "Claimed location parameter was required for geo-targeting to be considered",
+        "quoted_text": "This [location] parameter is passed to InMobi provided that the user allows it. It should contain the latitude, longitude, and accuracy, separated by commas. This parameter is required if the request is needed to be considered for geo-targeting.",
+        "source_paragraph": 32
+      },
+      {
+        "description": "Claimed to track location and serve geo-targeted ads only with user opt-in consent",
+        "quoted_text": "First, we take in location data on each user, in the form of user opt-in lat/long signals. Then we add real world context to these signals to figure out what places or businesses the user has visited. Our machine learning algorithms mine for patterns in this location history to identify what these trends mean about the user, from which we can infer what kind of consumer the user is.",
+        "source_paragraph": 34
+      },
+      {
+        "description": "Claimed not to knowingly collect personal information from children under 13 in Privacy Policy",
+        "quoted_text": "We do not knowingly collect any personal information about children under the age of 13. If we become aware that we have collected personal information about a child under the age of 13, that information will be immediately deleted from our database.",
+        "source_paragraph": 42
+      },
+      {
+        "description": "Claimed not to collect information from children's sites for behavioral advertising in COPPA Policy",
+        "quoted_text": "In response to the new COPPA rules effective on July 1, 2013 InMobi is continuing to ensure that we do not collect and use information from children's sites for behavioral advertising (often referred to as interest based advertising). We will continue to only use any data in the manner that COPPA prescribes.",
+        "source_paragraph": 43
+      }
+    ],
+    "counts": [
+      {
+        "count_number": 1,
+        "title": "Misrepresentation About Location API Requirements",
+        "representation": "Defendant represented it tracked the consumer's location and served geo-targeted ads only if the application developer and consumer had provided access to the Android and iOS location APIs",
+        "fact": "Defendant tracked the consumer's location and served geo-targeted ads by collecting BSSID and other information related to the WiFi network to which a consumer's device was connected or in-range, even if the consumer had not provided access to the location APIs",
+        "conclusion": "Therefore, the representation set forth in Paragraph 51 was false or misleading and constituted a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+      },
+      {
+        "count_number": 2,
+        "title": "Misrepresentation About Opt-In Consent",
+        "representation": "Defendant represented it tracked the consumer's location and served geo-targeted ads only if the consumer had provided opt-in consent",
+        "fact": "Defendant tracked the consumer's location and served geo-targeted ads by collecting BSSID and other information related to the WiFi network to which a consumer's device was connected or in-range, even if the consumer had not provided opt-in consent",
+        "conclusion": "Therefore, the representation set forth in Paragraph 53 was false or misleading and constituted a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+      },
+      {
+        "count_number": 3,
+        "title": "Misrepresentation About Children's Data Collection",
+        "representation": "Defendant represented that it did not collect or use personal information from applications directed to children",
+        "fact": "Defendant collected and used personal information from applications directed to children",
+        "conclusion": "Therefore, the representation set forth in Paragraph 55 was false or misleading and constituted a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+      },
+      {
+        "count_number": 4,
+        "title": "COPPA Rule Violations",
+        "representation": "Defendant operated a Web site or online service directed to children and collected and used personal information from children with actual knowledge",
+        "fact": "Defendant failed to: (1) provide sufficient notice on its Web site or online services of the information it collects online from children and how it uses such information; (2) provide direct notice to parents of the information Defendant collects online from children and how it uses such information; and (3) obtain verifiable parental consent before any collection or use of personal information from children",
+        "conclusion": "Defendant's acts or practices violated the COPPA Rule, 16 C.F.R. Part 312, which constitutes an unfair or deceptive act or practice in or affecting commerce, in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+      }
+    ]
+  },
+  "order": {
+    "definitions": {},
+    "provisions": [],
+    "duration": {
+      "duration_years": null,
+      "termination_text": ""
+    }
+  },
+  "metadata": {
+    "source_files": {
+      "complaint": "06.16, InMobi Pte Complaint.pdf",
+      "order": "06.16, InMobi Pte Order.pdf"
+    },
+    "extraction_stats": {
+      "complaint_counts": 4,
+      "complaint_representations": 6,
+      "order_provisions": 0,
+      "order_definitions": 0,
+      "order_requirements": 0
+    },
+    "processing_time_seconds": 310.7
+  }
+}

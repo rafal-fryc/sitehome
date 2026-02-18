@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Gavel, Search, FileCheck, Calculator } from "lucide-react";
+import { Github, ExternalLink, Gavel, Search, FileCheck, Calculator, BarChart3 } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
@@ -40,6 +40,15 @@ const ProjectsSection = () => {
       icon: Calculator,
       githubUrl: "https://github.com/rafal-fryc/TechRegParser",
       demoUrl: "#"
+    },
+    {
+      title: "FTC Enforcement Analytics",
+      description: "An interactive dashboard analyzing 285+ FTC enforcement actions across data privacy, consumer protection, COPPA, and more. Explore cases grouped by year, presidential administration, or regulatory category — with violation breakdowns, bar charts, and downloadable case files for each action.",
+      technologies: ["React", "TypeScript", "Recharts", "Data Pipeline"],
+      status: "Live",
+      icon: BarChart3,
+      githubUrl: "#",
+      demoUrl: "/FTCAnalytics"
     }
   ];
 

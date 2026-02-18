@@ -1,0 +1,330 @@
+{
+  "case_info": {
+    "docket_number": "3:25-cv-07363",
+    "company": {
+      "name": "Apitor Technology Co., Ltd.",
+      "incorporation_state": "",
+      "entity_type": "corporation",
+      "address": "",
+      "business_description": "Apitor develops, markets and distributes programmable robot toys designed for children ages 6 to 14. The robot toys are sold through online retailers such as Amazon, and users must download and operate Defendant's app to program its toys to make them move."
+    },
+    "commissioners": [],
+    "case_date": {
+      "month": 10,
+      "year": 2025
+    },
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a), and the Children's Online Privacy Protection Rule (COPPA Rule), 16 C.F.R. part 312",
+    "violation_type": "both",
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/apitor"
+  },
+  "complaint": {
+    "factual_background": "Apitor Technology Co., Ltd. develops and sells programmable robot toys designed for children ages 6 to 14. Through its Android mobile app, the company collected precise geolocation data from thousands of children under age 13 by integrating a third-party SDK (JPush) that transmitted location information to servers without parental notice or consent. Despite claiming COPPA compliance in its privacy policy, Apitor failed to disclose this third-party geolocation collection and failed to obtain verifiable parental consent before collecting children's personal information.",
+    "representations_made": [
+      {
+        "description": "Claimed commitment to COPPA compliance and protection of children's privacy",
+        "quoted_text": "The Privacy Policy contains a section entitled \"Children's Privacy\" declaring, \"We care about children's privacy. We are committed to complying with the Children's Online Privacy Protection Act (COPPA).\"",
+        "source_paragraph": 21
+      },
+      {
+        "description": "Claimed that certain personal information is only stored locally and not uploaded to servers",
+        "quoted_text": "Defendant states that, while some \"Personal Information\" is collected or stored locally on the Apitor App or on the robot device, \"there is no uploading of such information to the web or Apitor servers.\"",
+        "source_paragraph": 21
+      },
+      {
+        "description": "Claimed that parental notification and consent would be obtained before activating accounts or enabling data collection features",
+        "quoted_text": "Defendant claims that it will notify a parent and obtain verifiable consent before \"activating an account,\" or \"enabling certain data collecting features for their child,\" namely, product use information and browsing information.",
+        "source_paragraph": 21
+      }
+    ],
+    "counts": [
+      {
+        "count_number": 1,
+        "title": "Failure to Provide Notice and Obtain Verifiable Parental Consent",
+        "representation": "Defendant operated an Android app directed to children that collected geolocation information from children under 13, claiming COPPA compliance and proper notice and consent procedures",
+        "fact": "Defendant failed to provide direct notice to parents regarding collection of geolocation data, failed to provide sufficient notice on its website or services about the third-party collection of geolocation information through the JPush SDK, and failed to obtain verifiable parental consent before collecting personal information from children",
+        "conclusion": "Defendant violated Sections 312.4(b)-(c), 312.4(d), and 312.5(a) of the COPPA Rule, 16 C.F.R. §§ 312.4(b)-(c), 312.4(d), 312.5(a), which constitutes an unfair or deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+      }
+    ]
+  },
+  "order": {
+    "definitions": {
+      "Affected User": "a user of Defendant's mobile application for Android or a Parent of such user.",
+      "Child": "an individual under the age of 13.",
+      "Clear(ly) and conspicuous(ly)": "a required disclosure is easily noticeable (i.e., difficult to miss) and easily understandable by reasonable consumers, including in all of the following ways: 1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure is made in only one means. 2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. 3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for reasonable consumers to easily hear and understand it. 4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. 5. The disclosure must use diction and syntax understandable to reasonable consumers and must appear in each language in which the representation that requires the disclosure appears. 6. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. 7. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. 8. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"reasonable consumers\" includes members of that group.",
+      "Collects or Collection": "the gathering of any Personal Information from a Child by any means, including but not limited to: 1. Requesting, prompting, or encouraging a Child to submit Personal Information online; 2. Enabling a Child to make Personal Information publicly available in identifiable form; or 3. Passive tracking of a Child online.",
+      "Defendant": "Apitor Technology Co., Ltd., and its successors and assigns.",
+      "Delete": "to remove Personal Information such that it is not maintained in retrievable form and cannot be retrieved in the normal course of business.",
+      "Disclose or Disclosure": "with respect to Personal Information: 1. The Release of Personal Information Collected by an Operator from a Child in identifiable form for any purpose, except where an Operator provides such information to a Person who provides Support for the Internal Operations of the Website or Online Service; and 2. Making Personal Information Collected by an Operator from a Child publicly available in identifiable form by any means, including but not limited to a public posting through the Internet, or through a personal home page or screen posted on a website or online service; a pen pal service; an electronic mail service; a message board; or a chat room.",
+      "Internet": "collectively the myriad of computer and telecommunications facilities, including equipment and operating software, which comprise the interconnected world-wide network of networks that employ the Transmission Control Protocol/Internet Protocol, or any predecessor or successor protocols to such protocol, to communicate information of all kinds by wire, radio, or other methods of transmission.",
+      "Online Contact Information": "an email address or any other substantially similar identifier that permits direct contact with a Person online, including but not limited to an instant messaging user identifier, a voice over internet protocol (\"VOIP\") identifier, or a video chat user identifier.",
+      "Operators": "any Person who operates a website located on the Internet or an online service and who Collects or maintains Personal Information from or about the users of or visitors to such website or online service, or on whose behalf such information is Collected or maintained, or offers products or services for sale through that website or online service, where such website or online service is operated for commercial purposes involving commerce among the several States or with one or more foreign nations; in any territory of the United States or in the District of Columbia, or between any such territory and another such territory or any State or foreign nation; or between the District of Columbia and any State, territory, or foreign nation. Personal Information is Collected or maintained on behalf of an Operator when: 1. It is Collected or maintained by an agent or service provider of the Operator; or 2. The Operator benefits by allowing another Person to collect Personal Information directly from users of such website or online service.",
+      "Parent": "includes a legal guardian.",
+      "Person": "any individual, partnership, corporation, trust, estate, cooperative, association, or other entity.",
+      "Personal Information": "individually identifiable information about an individual Collected online, including: 1. A first and last name; 2. A home or other physical address including street name and name of a city or town; 3. Online Contact Information; 4. A screen or user name where it functions in the same manner as Online Contact Information; 5. A telephone number; 6. A Social Security number; 7. A persistent identifier that can be used to recognize a user over time and across different websites or online services. Such persistent identifier includes but is not limited to a customer number held in a cookie, an Internet Protocol (\"IP\") address, a processor or device serial number, or unique device identifier; 8. A photograph, video, or audio file where such file contains a Child's image or voice; 9. Geolocation information sufficient to identify street name and name of a city or town; or 10. Information concerning the Child or the Parents of that Child that the Operator Collects online from the Child and combines with an identifier described in this definition.",
+      "Release of Personal Information": "the sharing, selling, renting, or transfer of Personal Information to any Third Party.",
+      "Support for the Internal Operations of the Website or Online Service": "1. Those activities necessary to: a. Maintain or analyze the functioning of the website or online service; b. Perform network communications; c. Authenticate users of, or personalize the content on, the website or online service; d. Serve contextual advertising on the website or online service or cap the frequency of advertising; e. Protect the security or integrity of the user, website, or online service; f. Ensure legal or regulatory compliance; or g. Fulfill a request of a Child as permitted by Section 312.5(c)(3) and (4) of the COPPA Rule (attached as Appendix A); 2. So long as the information Collected for the activities listed in paragraphs (1)(a)–(g) of this definition is not used or Disclosed to contact a specific individual, including through behavioral advertising, to amass a profile on a specific individual, or for any other purpose.",
+      "Third Party": "any Person who is not: 1. An Operator with respect to the Collection or maintenance of Personal Information on the website or online service; or 2. A Person who provides Support for the Internal Operations of the Website or Online Service and who does not use or Disclose information protected under 16 C.F.R. part 312 (attached as Appendix A) for any other purpose.",
+      "Verifiable Parental Consent": "making any reasonable effort (taking into consideration available technology) to ensure that before Personal Information is Collected from a Child, a Parent of the Child: 1. Receives notice of the Operator's Personal Information Collection, use, and Disclosure practices; and 2. Authorizes any Collection, use, and/or Disclosure of the Personal Information, using a method reasonably calculated, in light of available technology, to ensure that the Person providing consent is the Child's Parent.",
+      "Website or Online Service Directed to Children": "a commercial website or online service, or portion thereof, that is targeted to Children. 1. In determining whether a website or online service, or a portion thereof, is directed to Children, the Commission will consider its subject matter, visual content, use of animated characters or Child-oriented activities and incentives, music or other audio content, age of models, presence of Child celebrities or celebrities who appeal to Children, language or other characteristics of the website or online service, as well as whether advertising promoting or appearing on the website or online service is directed to Children. The Commission will also consider competent and reliable empirical evidence regarding audience composition and evidence regarding the intended audience. 2. A website or online service shall be deemed directed to Children when it has actual knowledge that it is Collecting Personal Information directly from users of another Website or Online Service Directed to Children. 3. A website or online service that is directed to children under the criteria set forth in paragraph (1) of this definition, but that does not target Children as its primary audience, shall not be deemed directed to Children if it: a. Does not Collect Personal Information from any visitor prior to Collecting age information; and b. Prevents the Collection, use, or Disclosure of Personal Information from visitors who identify themselves as under age 13 without first complying with the notice and parental consent provisions of 16 C.F.R. part 312. 4. A website or online service shall not be deemed directed to Children solely because it refers or links to a commercial Website or Online Service Directed to Children by using information location tools, including a directory, index, reference, pointer, or hypertext link."
+    },
+    "provisions": [
+      {
+        "provision_number": "I",
+        "title": "Injunction Concerning Collection of Personal Information from Children",
+        "category": "prohibition",
+        "summary": "Defendant is permanently restrained from violating COPPA requirements, including failing to provide notice to parents, failing to obtain verifiable parental consent, and failing to delete children's personal information upon parental request.",
+        "requirements": [
+          {
+            "description": "Must not fail to make reasonable efforts to ensure parents receive direct notice of practices regarding collection, use, or disclosure of personal information from children",
+            "quoted_text": "IT IS ORDERED that Defendant and Defendant's officers, agents, employees, and attorneys, and all other Persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with being an Operator of any Website or Online Service Directed to Children or of any website or online service with actual knowledge that it is Collecting or maintaining Personal Information from a Child, are hereby permanently restrained and enjoined from: A. Failing to make reasonable efforts, taking into account available technology, to ensure that a Parent of a Child receives direct notice of Defendant's practices with regard to the Collection, use, or Disclosure of Personal Information from Children, including notice of any material change in the Collection, use, or Disclosure practices to which the Parent has previously consented, unless the COPPA Rule (attached as Appendix A), provides an exception to providing such notice;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.8678260869565217
+          },
+          {
+            "description": "Must not fail to post a clear and conspicuous link to an online notice of information practices on the home page and at each area where personal information is collected from children",
+            "quoted_text": "B. Failing to post a Clear and Conspicuous link to an online notice of Defendant's information practices with regard to Children on the home or landing page or screen of its website or online service, and at each area of the website or online service where Personal Information is Collected from Children, unless the COPPA Rule (attached as Appendix A), provides an exception to providing such notice;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not fail to obtain verifiable parental consent before collection, use, or disclosure of personal information from children",
+            "quoted_text": "C. Failing to obtain Verifiable Parental Consent before any Collection, use, or Disclosure of Personal Information from Children, including consent to any material change in the Collection, use, or Disclosure practices to which the Parent has previously consented, unless the COPPA Rule (attached as Appendix A), provides an exception to obtaining Verifiable Parental Consent;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not fail to delete a child's personal information at the request of a parent",
+            "quoted_text": "D. Failing to Delete a Child's Personal Information at the request of a Parent;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not retain personal information collected from a child for longer than reasonably necessary to fulfill the purpose for which it was collected",
+            "quoted_text": "E. Retaining Personal Information Collected online from a Child for longer than reasonably necessary to fulfill the purpose for which the information was Collected;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not violate the COPPA Rule",
+            "quoted_text": "F. Violating the COPPA Rule (attached as Appendix A).",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "II",
+        "title": "Injunction Concerning Children's Personal Information Previously Collected",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must delete all personal information associated with affected users within 60 days unless verifiable parental consent was obtained, and must provide a written statement to the Commission confirming deletion.",
+        "requirements": [
+          {
+            "description": "Delete all personal information associated with any affected user unless direct notice was provided and verifiable parental consent was obtained",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant and Defendant's officers, agents, employees, and attorneys, and all other Persons in active concert or participation with any of them, who receive actual notice of this Order, within 60 days of entry of this Order, must: A. Delete all Personal Information that is associated with anyAffected User, unless Defendant has provided direct notice and obtained Verifiable Parental Consent.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 0.749271137026239
+          },
+          {
+            "description": "Provide a written statement to the Commission describing all processes for obtaining consent, identifying total number of users by consent status, describing personal information retained, and confirming deletion of required information",
+            "quoted_text": "B. Provide a written statement to the Commission, sworn under penalty of perjury, that: 1. Describes all processes through which Defendant provided direct notice and sought to obtain Verifiable Parental Consent for any users covered by this Section; 2. Identifies the total number of users for whom (a) direct notice was provided; (b) Defendant obtained Verifiable Parental Consent; (c)Verifiable Parent Consent was affirmatively declined; and (d) no response was provided; 3. Describes in detail any Personal Information Defendant retains, the basis for such retention, and, as applicable, the specific government agency, law, regulation, or court order that requires such retention; and 4. Confirms that all Personal Information required to be Deleted by this Section has been Deleted.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 0.980363196125908
+          }
+        ]
+      },
+      {
+        "provision_number": "III",
+        "title": "Monetary Judgment and Suspension",
+        "category": "affirmative_obligation",
+        "summary": "A judgment of $500,000 is entered against Defendant but is suspended based on the truthfulness of Defendant's financial statements. The suspension may be lifted if material misstatements are found.",
+        "requirements": [
+          {
+            "description": "Judgment of $500,000 is entered in favor of Plaintiff against Defendant as a civil penalty",
+            "quoted_text": "IT IS FURTHER ORDERED that: A. Judgment in the amount of Five Hundred Thousand Dollars ($500,000) is entered in favor of Plaintiff against Defendant as a civil penalty.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "The judgment is suspended subject to the truthfulness and accuracy of Defendant's financial representations",
+            "quoted_text": "B. The judgment is suspended subject to the Subsections below. C. The Commission's and Plaintiff's agreement to the suspension of the judgment is expressly premised upon the truthfulness, accuracy, and completeness of Defendant's sworn financial statements and related documents (collectively, \"financial representations\") submitted to the Commission, namely: the Financial Statement of Defendant Apitor Technology Co., Ltd. signed on June 5, 2025, including the attachments.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit Taxpayer Identification Number to Plaintiff within 7 days of entry of this Order",
+            "quoted_text": "H. Defendant acknowledges that its United States Employer Identification Number, Social Security Number, or other Taxpayer Identification Number (\"TIN\"), if any, must be submitted to Plaintiff within 7 days of entry of this Order.",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IV",
+        "title": "Order Acknowledgments",
+        "category": "acknowledgment",
+        "summary": "Defendant must obtain acknowledgments of receipt of this Order from itself, all relevant personnel, and any successor business entities.",
+        "requirements": [
+          {
+            "description": "Defendant must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant obtain acknowledgments of receipt of this Order: A. Defendant, within 7 days of entry of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "For 5 years after entry of this Order, deliver a copy of this Order to all principals, officers, directors, managers, employees with managerial responsibilities, agents and representatives, and successor business entities",
+            "quoted_text": "B. For 5 years after entry of this Order, Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees having managerial responsibilities for conduct related to the subject matter of the Order and all agents and representatives who participate in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within 7 days of entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Obtain signed and dated acknowledgment of receipt from each individual or entity to which Defendant delivered a copy of this Order",
+            "quoted_text": "C. From each individual or entity to which Defendant delivered a copy of this Order, Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 0.7051671732522796
+          }
+        ]
+      },
+      {
+        "provision_number": "V",
+        "title": "Compliance Reporting",
+        "category": "compliance_reporting",
+        "summary": "Defendant must submit compliance reports to the Commission one year after entry of this Order, and for 10 years must submit compliance notices within 14 days of certain changes.",
+        "requirements": [
+          {
+            "description": "Submit a compliance report one year after entry of this Order, including contact information, business details, activities, compliance status, and Order acknowledgments",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant make timely submissions to the Commission: A. One year after entry of this Order, Defendant must submit a compliance report, sworn under penalty of perjury. Defendant must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission and Plaintiff may use to communicate with Defendant; (b) identify all of Defendant's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered and the means of advertising, marketing, and sales; (d) describe in detail whether and how Defendant is in compliance with each Section of this Order; and (e) provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year",
+            "verified": true,
+            "confidence": 0.9826748971193416
+          },
+          {
+            "description": "For 10 years after entry of this Order, submit compliance notice within 14 days of any change in designated point of contact or entity structure",
+            "quoted_text": "B. For 10 years after entry of this Order, Defendant must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: Defendant must report any change in: (a) any designated point of contact; or (b) the structure of any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit to the Commission notice of filing of any bankruptcy petition or insolvency proceeding within 14 days of its filing",
+            "quoted_text": "C. Defendant must submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Defendant within 14 days of its filing.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VI",
+        "title": "Recordkeeping",
+        "category": "recordkeeping",
+        "summary": "Defendant must create certain records for 10 years after entry of the Order and retain each such record for 5 years, including accounting records, personnel records, consumer complaints, and compliance records.",
+        "requirements": [
+          {
+            "description": "Create and retain accounting records showing revenues from all goods or services sold",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant must create certain records for 10 years after entry of the Order, and retain each such record for 5 years. Specifically, Defendant must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create and retain personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination for each person providing services",
+            "quoted_text": "B. Personnel records showing, for each person providing services, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create and retain records of all consumer complaints and refund requests related to privacy practices and any response",
+            "quoted_text": "C. Records of all consumer complaints and refund requests related to Defendant's privacy practices, whether received directly or indirectly, such as through a third party, and any response;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.9982539682539683
+          },
+          {
+            "description": "Create and retain all records necessary to demonstrate full compliance with each provision of this Order",
+            "quoted_text": "D. All records necessary to demonstrate fullcompliance with each provision of this Order, including all submissions to the Commission.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VII",
+        "title": "Compliance Monitoring",
+        "category": "monitoring",
+        "summary": "The Commission and Plaintiff are authorized to monitor Defendant's compliance through various means, including requesting additional reports, conducting depositions, obtaining discovery, interviewing personnel, and posing as consumers.",
+        "requirements": [
+          {
+            "description": "Within 14 days of receipt of written request, Defendant must submit additional compliance reports, appear for depositions, and produce documents for inspection",
+            "quoted_text": "IT IS FURTHER ORDERED that, for the purpose of monitoring Defendant's compliance with this Order and any failure to transfer any assets as required by this Order: A. Within 14 days of receipt of a written request from a representative of the Commission or Plaintiff, Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying. The Commission and Plaintiff are also authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including depositions by remote means), 31, 33, 34, 36, 45, and 69.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 0.9327291812456263
+          },
+          {
+            "description": "Commission and Plaintiff are authorized to communicate directly with Defendant and interview employees or affiliated persons who consent to such interviews",
+            "quoted_text": "B. For matters concerning this Order, the Commission and Plaintiff are authorized to communicate directly with Defendant. Defendant must permit representatives of the Commission and Plaintiff to interview any employee or other person affiliated with Defendant who has agreed to such an interview. The person interviewed may have counsel present.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.9131908831908833
+          },
+          {
+            "description": "Commission and Plaintiff may use all other lawful means, including posing as consumers or suppliers, without prior notice or identification",
+            "quoted_text": "C. The Commission and Plaintiff may use all other lawful means, including posing, through its representatives as consumers, suppliers, or other individuals or entities, to Defendant or any individual or entity affiliated with Defendant, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VIII",
+        "title": "Retention of Jurisdiction",
+        "category": "duration",
+        "summary": "The Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+        "requirements": [
+          {
+            "description": "Court retains jurisdiction for construction, modification, and enforcement of this Order",
+            "quoted_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.9664548494983278
+          }
+        ]
+      }
+    ],
+    "duration": {
+      "duration_years": null,
+      "termination_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order."
+    }
+  },
+  "metadata": {
+    "source_files": {
+      "complaint": "10.25, Apitor Complaint.pdf",
+      "order": "10.25, Apitor Order.pdf"
+    },
+    "extraction_stats": {
+      "complaint_counts": 1,
+      "complaint_representations": 3,
+      "order_provisions": 8,
+      "order_definitions": 18,
+      "order_requirements": 25
+    },
+    "processing_time_seconds": 534.4
+  }
+}

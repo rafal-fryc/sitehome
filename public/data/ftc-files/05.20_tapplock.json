@@ -1,0 +1,469 @@
+{
+  "case_info": {
+    "docket_number": "C-4718",
+    "company": {
+      "name": "Tapplock, Inc.",
+      "incorporation_state": "Ontario",
+      "entity_type": "corporation",
+      "address": "121 Richmond Street West, Toronto, Ontario M5H 2K1, Canada",
+      "business_description": "Tapplock is an Internet of Things (IoT) company that sells Internet-connected, fingerprint-enabled smart locks to U.S. consumers. The smart locks interact with a companion mobile application that logs user data including usernames, email addresses, profile photos, location history, and precise geolocation, and allows users to lock and unlock their devices via Bluetooth."
+    },
+    "commissioners": [
+      "Joseph J. Simons, Chairman",
+      "Noah Joshua Phillips",
+      "Rohit Chopra",
+      "Rebecca Kelly Slaughter",
+      "Christine S. Wilson"
+    ],
+    "case_date": {
+      "month": 5,
+      "year": 2020
+    },
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)(1)",
+    "violation_type": "deceptive",
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/192-3011-tapplock-inc-matter"
+  },
+  "complaint": {
+    "factual_background": "Tapplock, Inc. marketed Internet-connected smart padlocks as 'Bold. Sturdy. Secure.' and claimed to follow industry best practices for data security. However, the company failed to implement basic security measures, resulting in critical vulnerabilities that allowed researchers to unlock the physical locks in seconds, bypass authentication to access all user accounts and personal information, and remotely lock/unlock any nearby Tapplock due to unencrypted Bluetooth communications.",
+    "representations_made": [
+      {
+        "description": "Claimed smart locks were secure",
+        "quoted_text": "Respondent advertised its smart locks to consumers as 'Bold. Sturdy. Secure.'",
+        "source_paragraph": 8
+      },
+      {
+        "description": "Advertised locks as strengthened with double-layered lock design, anti-shim and anti-pry technologies, and designed to be unbreakable",
+        "quoted_text": "Respondent's advertisements touted that its 'secure' smart locks were also: • 'strengthened with double-layered lock design;' • designed with 'anti-shim and anti-pry technologies' (Shimming refers to inserting a foreign object into the latch, and prying refers to using a lever to force open a padlock); and • designed to be 'unbreakable'",
+        "source_paragraph": 9
+      },
+      {
+        "description": "Claimed to take reasonable precautions and follow industry best practices to protect personal information",
+        "quoted_text": "To protect your personal information, we take reasonable precautions and follow industry best practices to make sure it is not inappropriately lost, misused, accessed, disclosed, altered or destroyed.",
+        "source_paragraph": 10
+      },
+      {
+        "description": "Claimed users can share access to locks and subsequently limit or revoke such shared access",
+        "quoted_text": "Respondent also claims that users can share access to their locks with an unlimited number of other people, and that users can subsequently limit or revoke such shared access.",
+        "source_paragraph": 11
+      }
+    ],
+    "counts": [
+      {
+        "count_number": 1,
+        "title": "Deceptive Representation Regarding Security",
+        "representation": "Respondent represented that its smart locks were secure",
+        "fact": "Respondent's smart locks were not secure. Security researchers identified critical physical and electronic vulnerabilities, including the ability to unlock locks by unscrewing the back panel, bypass authentication to access all user accounts, and lock/unlock any nearby lock due to unencrypted Bluetooth communications",
+        "conclusion": "Therefore, the representation set forth in Paragraph 17 is false or misleading."
+      },
+      {
+        "count_number": 2,
+        "title": "Deceptive Representation Regarding Protection of Personal Information",
+        "representation": "Respondent represented that it took reasonable precautions and followed industry best practices to protect the personal information provided by consumers",
+        "fact": "Respondent failed to take reasonable precautions and follow industry best practices to protect personal information. Respondent had no security program prior to vulnerability discovery, failed to identify security risks, failed to employ sufficient authentication measures, failed to adopt written security standards, and failed to implement adequate security training for employees",
+        "conclusion": "Therefore, the representation set forth in Paragraph 19 is false or misleading."
+      }
+    ]
+  },
+  "order": {
+    "definitions": {
+      "Covered Device": "means (a) any computing device sold by Respondent that operates using an operating system, including any smart lock, smartphone, tablet, wearable, sensor, or any peripheral of any portable computing device; and (b) the software used to access, operate, manage, or configure a device subject to part (a) of this definition, including, but not limited to, the firmware, web or mobile applications, and any related online services, that are advertised, developed, branded, or sold by Respondent, directly or indirectly.",
+      "Covered Incident": "means any instance in which (a) any United States federal, state, or local law or regulation requires Respondent to notify any U.S. federal, state, or local government entity that information collected or received, directly or indirectly, by Respondent from or about an individual consumer was, or is reasonably believed to have been, accessed or acquired without authorization; or (b) Respondent discovers that Covered Devices or Personal Information necessary to access such Covered Devices (such as a key code) were, or are reasonably believed to have been, accessed without authorization.",
+      "Personal Information": "means individually identifiable information from or about an individual consumer, including: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town, or other information about the location of the individual, including but not limited to fine or coarse location or GPS coordinates; (c) an email address; (d) a persistent identifier for computers or mobile devices, such as a customer number held in a \"cookie,\" a static Internet Protocol (\"IP\") address, or a processor serial number; (e) a date of birth; (f) photograph; and (g) key code used to control access to a Covered Device.",
+      "Respondent": "means Tapplock, Inc., and its successors and assigns."
+    },
+    "provisions": [
+      {
+        "provision_number": "I",
+        "title": "Prohibition against Misrepresentations about Privacy and Security",
+        "category": "prohibition",
+        "summary": "Respondent must not misrepresent the extent to which it maintains and protects the security of Covered Devices or the privacy, security, confidentiality, or integrity of Personal Information.",
+        "requirements": [
+          {
+            "description": "Must not misrepresent the extent to which Respondent maintains and protects the security of a Covered Device",
+            "quoted_text": "IT IS ORDERED that Respondent, Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service, must not misrepresent in any manner, expressly or by implication, the extent to which Respondent maintains and protects: (1) the security of a Covered Device; or (2) the privacy, security, confidentiality, or integrity of Personal Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "II",
+        "title": "Mandated Device Security and Information Security Program",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must establish and maintain a comprehensive Security Program that protects the security of Covered Devices and the security, confidentiality, and integrity of Personal Information.",
+        "requirements": [
+          {
+            "description": "Establish and maintain comprehensive Security Program protecting Covered Devices and Personal Information",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent must not transfer, sell, share, collect, maintain, or store Personal Information or manufacture or sell Covered Devices unless it establishes and implements, and thereafter maintains, a comprehensive Security Program (\"Security Program\") that protects: (1) the security of Covered Devices; and (2) the security, confidentiality, and integrity of Personal Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Document in writing the content, implementation, and maintenance of the Security Program",
+            "quoted_text": "Document in writing the content, implementation, and maintenance of the Security Program;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide the written program and evaluations to board of directors or senior officer at least once every 12 months and within 30 days after a Covered Incident",
+            "quoted_text": "Provide the written program and any evaluations thereof or updates thereto to Respondent's board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Respondent responsible for Respondent's Security Program at least once every 12 months and promptly (not to exceed 30 days) after a Covered Incident;",
+            "deadline": "12 months",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Designate a qualified employee or employees to coordinate and be responsible for the Security Program",
+            "quoted_text": "Designate a qualified employee or employees to coordinate and be responsible for the Security Program;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Assess and document internal and external risks at least once every 12 months and within 30 days following a Covered Incident",
+            "quoted_text": "Assess and document, at least once every 12 months and promptly (not to exceed 30 days) following a Covered Incident, internal and external risks to the security of Covered Devices and to the security, confidentiality, or integrity of Personal Information that could result in the unauthorized disclosure, misuse, loss, theft, alteration, destruction, or other compromise of such information;",
+            "deadline": "12 months",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Design, implement, maintain, and document safeguards that control for identified risks",
+            "quoted_text": "Design, implement, maintain, and document safeguards that control for the internal and external risks Respondent identifies to the security of Covered Devices and to the security, confidentiality, or integrity of Personal Information identified in response to sub-Provision II.D. Each safeguard must be based on (1) the sensitivity of the Covered Device's function, and (2) the volume and sensitivity of the Personal Information that is at risk, and the likelihood that the risk could be realized and result in the unauthorized access, collection, use, alteration, destruction, or disclosure of the Personal Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Train all employees at least once every 12 months on how to safeguard Personal Information",
+            "quoted_text": "Training of all of Respondent's employees, at least once every 12 months, on how to safeguard Personal Information;",
+            "deadline": "12 months",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Implement technical measures to monitor all networks, Covered Devices, and systems to identify data security events",
+            "quoted_text": "Technical measures to monitor all of Respondent's networks, Covered Devices, and all systems and assets within those networks to identify data security events, including unauthorized attempts to exfiltrate Personal Information from those networks;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Implement data access controls for all databases storing Personal Information",
+            "quoted_text": "Data access controls for all databases storing Personal Information, including by, at a minimum, (a) restricting inbound connections to approved IP addresses, (b) requiring authentication to access them, and (c) limiting employee access to what is needed to perform that employee's job function.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Assess the sufficiency of safeguards at least once every 12 months and within 30 days following a Covered Incident",
+            "quoted_text": "Assess, at least once every 12 months and promptly (not to exceed 30 days) following a Covered Incident, the sufficiency of any safeguards in place to address the risks to the security of Covered Devices and the security, confidentiality, or integrity of Personal Information, and modify the Security Program based on the results;",
+            "deadline": "12 months",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Test and monitor the effectiveness of safeguards at least once every 12 months and within 30 days following a Covered Incident, including vulnerability testing once every four months and penetration testing at least once every 12 months",
+            "quoted_text": "Test and monitor the effectiveness of the safeguards at least once every 12 months and promptly (not to exceed 30 days) following a Covered Incident, and modify the Security Program based on the results. Such testing and monitoring must include: (1) vulnerability testing of Respondent's network once every four months and promptly (not to exceed 30 days) after a Covered Incident; and (2) penetration testing of Respondent's network at least once every 12 months and promptly (not to exceed 30 days) after a Covered Incident;",
+            "deadline": "12 months",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Select and retain service providers capable of safeguarding Covered Devices and Personal Information and contractually require them to implement safeguards",
+            "quoted_text": "Select and retain service providers capable of safeguarding Covered Devices and Personal Information they access through or receive from Respondent, and contractually require service providers to implement and maintain safeguards for Covered Devices and Personal Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Evaluate and adjust the Security Program at least once every 12 months in light of changes to operations, Covered Incidents, new technologies, or other relevant circumstances",
+            "quoted_text": "Evaluate and adjust the Security Program in light of any changes to Respondent's operations or business arrangements, a Covered Incident, new or more efficient technological or operational methods to control for the risks identified in Part II.D., or any other circumstances that Respondent knows or has reason to know may have an impact on the effectiveness of the Security Program. At a minimum, Respondent must evaluate the Security Program at least once every 12 months and modify the Security Program based on the results.",
+            "deadline": "12 months",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "III",
+        "title": "Device and Information Security Assessments by a Third Party",
+        "category": "assessment",
+        "summary": "Respondent must obtain initial and biennial third-party assessments of its Security Program for 20 years.",
+        "requirements": [
+          {
+            "description": "Obtain assessments from a qualified, objective, independent third-party professional using accepted procedures and standards",
+            "quoted_text": "The Assessments must be obtained from a qualified, objective, independent third-party professional (\"Assessor\"), who: (1) uses procedures and standards generally accepted in the profession; (2) conducts an independent review of the Security Program; and (3) retains all documents relevant to each Assessment for five years after completion of such Assessment and provides such documents to the Commission within ten days of receipt of a written request from a representative of the Commission.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide the Associate Director for Enforcement with the name and affiliation of the selected Assessor for approval",
+            "quoted_text": "For each Assessment, Respondent must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name and affiliation of the person selected to conduct the Assessment, which the Associate Director shall have the authority to approve in his sole discretion.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Initial Assessment must cover the first 180 days after Order issuance; biennial Assessments cover each two-year period thereafter for 20 years",
+            "quoted_text": "The reporting period for the Assessments must cover: (1) the first 180 days after the issuance date of the Order for the initial Assessment; and (2) each two year period thereafter for 20 years after issuance of the Order for the biennial Assessments.",
+            "deadline": "180 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Each Assessment must determine whether Security Program is implemented, assess effectiveness, identify gaps or weaknesses, and identify specific evidence examined",
+            "quoted_text": "Each Assessment must, for the entire assessment period,: (1) determine whether Respondent has implemented and maintained the Security Program required by Provision II of this Order, titled Mandated Device Security and Information Security Program; (2) assess the effectiveness of Respondent's implementation and maintenance of sub-Provisions II.A-I; (3) identify any gaps or weaknesses in, or instances of material noncompliance with, the Security Program; and (4) identify specific evidence (including, but not limited to, documents reviewed, sampling and testing performed, and interviews conducted) examined to make such determinations, assessments, and identifications, and explain why the evidence that the Assessor examined is sufficient to justify the Assessor's findings.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Complete each Assessment within 60 days after the end of the reporting period and submit initial Assessment to Commission within 10 days after completion",
+            "quoted_text": "Each Assessment must be completed within 60 days after the end of the reporting period to which the Assessment applies. Unless otherwise directed by a Commission representative in writing, Respondent must submit the initial Assessment to the Commission within ten days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IV",
+        "title": "Cooperation with Third Party Information Security Assessor",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must provide all relevant information to the Assessor and must not withhold material facts or misrepresent facts to the Assessor.",
+        "requirements": [
+          {
+            "description": "Provide or make available to the Assessor all information and material in Respondent's possession relevant to the Assessment for which there is no reasonable claim of privilege",
+            "quoted_text": "Provide or otherwise make available to the Assessor all information and material in its possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not withhold any material facts to the Assessor and must not misrepresent any fact material to the Assessor's determinations",
+            "quoted_text": "Not withhold any material facts to the Assessor, and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor's: (1) determination of whether Respondent has implemented and maintained the Security Program required by Provision II of this Order, titled Mandated Device Security and Information Security Program; (2) assessment of the effectiveness of the implementation and maintenance of sub-Provisions II.A-I; or (3) identification of any gaps or weaknesses in the Security Program.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "V",
+        "title": "Annual Certification",
+        "category": "compliance_reporting",
+        "summary": "Respondent must provide the Commission with annual certifications from a senior corporate manager or senior officer that the Order requirements have been established, implemented, and maintained.",
+        "requirements": [
+          {
+            "description": "One year after Order issuance and each year thereafter, provide Commission with certification that Respondent has established, implemented, and maintained Order requirements, is not aware of material noncompliance, and includes brief description of any Covered Incident",
+            "quoted_text": "One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from a senior corporate manager, or, if no such senior corporate manager exists, a senior officer of Respondent responsible for Respondent's Security Program that: (1) Respondent has established, implemented, and maintained the requirements of this Order; (2) Respondent is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission; and (3) includes a brief description of a Covered Incident. The certification must be based on the personal knowledge of the senior corporate manager, senior officer, or subject matter experts upon whom the senior corporate manager or senior officer reasonably relies in making the certification.",
+            "deadline": "1 year",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit all annual certifications via email to DEbrief@ftc.gov or by overnight courier",
+            "quoted_text": "Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, \"Tapplock, Inc., FTC File No. 192 3011, Docket No. C-4718.\"",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VI",
+        "title": "Acknowledgments of the Order",
+        "category": "acknowledgment",
+        "summary": "Respondent must obtain acknowledgments of receipt of this Order from itself, all relevant personnel, and business entities resulting from structural changes, and must deliver copies of the Order to these parties.",
+        "requirements": [
+          {
+            "description": "Within 10 days after the effective date of Order, submit to Commission an acknowledgment of receipt sworn under penalty of perjury",
+            "quoted_text": "Respondent, within ten days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "For 20 years after Order issuance, deliver a copy of Order to all principals, officers, directors, LLC managers and members, relevant employees and agents, and any business entity resulting from structural changes, within 10 days for current personnel and before new personnel assume responsibilities",
+            "quoted_text": "For 20 years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives with responsibilities related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in Provision VII of this Order titled Compliance Reports and Notices. Delivery must occur within ten days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Obtain signed and dated acknowledgment of receipt from each individual or entity to which Respondent delivered a copy of the Order within 30 days",
+            "quoted_text": "From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VII",
+        "title": "Compliance Report and Notices",
+        "category": "compliance_reporting",
+        "summary": "Respondent must submit compliance reports and notices to the Commission, including an annual compliance report one year after Order issuance and notices of changes in contact information, corporate structure, or bankruptcy proceedings.",
+        "requirements": [
+          {
+            "description": "One year after Order issuance, submit compliance report identifying contact information, business details, compliance with each provision, and copies of acknowledgments",
+            "quoted_text": "One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (1) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (2) identify all of Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (3) describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales; (4) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes Respondent made to comply with the Order; and (5) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year",
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Submit compliance notice within 14 days of any change in designated point of contact or corporate structure that may affect compliance obligations",
+            "quoted_text": "Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (1) any designated point of contact; or (2) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit notice of filing of any bankruptcy petition, insolvency proceeding, or similar proceeding within 14 days of its filing",
+            "quoted_text": "Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VIII",
+        "title": "Recordkeeping",
+        "category": "recordkeeping",
+        "summary": "Respondent must create and retain specific records for 20 years after Order issuance, with each record retained for five years.",
+        "requirements": [
+          {
+            "description": "Create accounting records showing revenues, costs, and net profit or loss, and retain for 5 years",
+            "quoted_text": "Accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination, and retain for 5 years",
+            "quoted_text": "Personnel records showing, for each person providing services, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create copies or records of all consumer complaints concerning the subject matter of the Order and any response, and retain for 5 years",
+            "quoted_text": "Copies or records of all consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, such as through a third party, and any response;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create a copy of each unique advertisement or other marketing material making a representation subject to this Order, and retain for 5 years",
+            "quoted_text": "A copy of each unique advertisement or other marketing material making a representation subject to this Order;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Create a copy of each widely disseminated representation describing the extent to which Respondent maintains or protects privacy, security, confidentiality, or integrity of Personal Information or security of Covered Devices, and retain for 5 years",
+            "quoted_text": "A copy of each widely disseminated representation by Respondent that describes the extent to which Respondent maintains or protects the privacy, confidentiality, security, or integrity of any Personal Information or the security of any Covered Device, including any representation concerning a change in any website or other service controlled by Respondent that relates to the privacy, confidentiality, security, or integrity of Personal Information or the security of Covered Devices;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Retain for 5 years after the date of preparation of each Assessment all materials and evidence that the Assessor considered, reviewed, relied upon or examined to prepare the Assessment",
+            "quoted_text": "For five years after the date of preparation of each Assessment required by this Order, all materials and evidence that the Assessor considered, reviewed, relied upon or examined to prepare the Assessment, whether prepared by or on behalf of Respondent, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Respondent's compliance with related Provisions of this Order, for the compliance period covered by such Assessment;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Retain for 5 years from the date received copies of all subpoenas and other communications with law enforcement if such communications relate to compliance with this Order",
+            "quoted_text": "For five years from the date received, copies of all subpoenas and other communications with law enforcement, if such communications relate to Respondent's compliance with this Order;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Retain for 5 years from the date created or received all records that tend to show any lack of compliance by Respondent with this Order",
+            "quoted_text": "For five years from the date created or received, all records, whether prepared by or on behalf of Respondent, that tend to show any lack of compliance by Respondent with this Order;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Retain all records necessary to demonstrate full compliance with each Provision of this Order, including all submissions to the Commission",
+            "quoted_text": "All records necessary to demonstrate full compliance with each Provision of this Order, including all submissions to the Commission.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IX",
+        "title": "Compliance Monitoring",
+        "category": "monitoring",
+        "summary": "The Commission has the authority to monitor Respondent's compliance with this Order, including requesting additional reports, producing records, interviewing personnel, and using other lawful means.",
+        "requirements": [
+          {
+            "description": "Within 10 days of receipt of a written request from Commission representative, submit additional compliance reports or other requested information sworn under penalty of perjury, and produce records for inspection and copying",
+            "quoted_text": "Within ten days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Permit representatives of the Commission to communicate directly with Respondent and to interview anyone affiliated with Respondent who has agreed to such an interview",
+            "quoted_text": "For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Commission may use all other lawful means to monitor compliance, including posing as consumers, suppliers, or other entities without identification or prior notice",
+            "quoted_text": "The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "X",
+        "title": "Order Effective Dates",
+        "category": "duration",
+        "summary": "This Order is final and effective upon publication on the Commission's website and will terminate May 18, 2040, or 20 years from the most recent date the United States or Commission files a complaint alleging any violation of this Order, whichever comes later.",
+        "requirements": [
+          {
+            "description": "Order is final and effective upon publication on ftc.gov and terminates May 18, 2040, or 20 years from most recent complaint filing, whichever is later",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order. This Order will terminate May 18, 2040, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than 20 years; B. This Order's application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      }
+    ],
+    "duration": {
+      "duration_years": 20,
+      "termination_text": "This Order will terminate May 18, 2040, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later"
+    }
+  },
+  "metadata": {
+    "source_files": {
+      "complaint": "05.20, Tapplock Complaint (Pending).pdf",
+      "order": "05.20, Tapplock Order (Pending).pdf"
+    },
+    "extraction_stats": {
+      "complaint_counts": 2,
+      "complaint_representations": 4,
+      "order_provisions": 10,
+      "order_definitions": 4,
+      "order_requirements": 42
+    },
+    "processing_time_seconds": 197.2
+  }
+}

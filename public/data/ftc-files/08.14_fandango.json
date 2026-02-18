@@ -1,0 +1,323 @@
+{
+  "case_info": {
+    "docket_number": "C-4481",
+    "company": {
+      "name": "Fandango, LLC",
+      "incorporation_state": "Delaware",
+      "entity_type": "limited liability company",
+      "address": "12200 W. Olympic Boulevard, Suite 400, Los Angeles, CA 90064",
+      "business_description": "Fandango provides a website and mobile applications that allow consumers to purchase movie tickets and view showtimes, trailers, and reviews. The company offers iOS and other mobile applications distributed through various app stores, including the iTunes App Store, where its app has been downloaded over 18.5 million times."
+    },
+    "commissioners": [
+      "Edith Ramirez, Chairwoman",
+      "Julie Brill",
+      "Maureen K. Ohlhausen",
+      "Joshua D. Wright",
+      "Terrell McSweeny"
+    ],
+    "case_date": {
+      "month": 8,
+      "year": 2014
+    },
+    "legal_authority": "Federal Trade Commission Act, 15 U.S.C. § 45 et seq.",
+    "violation_type": "deceptive",
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/132-3089-fandango-llc"
+  },
+  "complaint": {
+    "factual_background": "Fandango operated a mobile ticketing application for iOS that transmitted consumers' credit card information and login credentials over the internet. From March 2009 to March 2013, the application failed to validate SSL certificates, making it vulnerable to man-in-the-middle attacks on public Wi-Fi networks. Despite claiming to securely store and transfer consumer information, Fandango failed to implement basic security testing and ignored a security researcher's warning in December 2012.",
+    "representations_made": [
+      {
+        "description": "Claimed that consumer information is securely stored on the device and transferred during transactions",
+        "quoted_text": "Your information is securely stored on your device and transferred with your approval during each transaction.",
+        "source_paragraph": 22
+      },
+      {
+        "description": "Claimed that consumers could securely purchase tickets without needing an account",
+        "quoted_text": "You don't need an account to securely purchase tickets.",
+        "source_paragraph": 23
+      },
+      {
+        "description": "Represented that it provides reasonable and appropriate security for ticket purchases made through the Fandango Movies application for iOS",
+        "quoted_text": "As described in Paragraphs 22 and 23, Fandango represented, expressly or by implication, that it provides reasonable and appropriate security for ticket purchases made through the Fandango Movies application for iOS.",
+        "source_paragraph": 24
+      }
+    ],
+    "counts": [
+      {
+        "count_number": 1,
+        "title": "Deceptive Security Representations",
+        "representation": "Fandango represented that it provides reasonable and appropriate security for ticket purchases made through the Fandango Movies application for iOS",
+        "fact": "Fandango did not provide reasonable and appropriate security for ticket purchases made through the Fandango Movies application for iOS. The application failed to validate SSL certificates from March 2009 to March 2013, failed to appropriately test or audit the application's security, and failed to maintain an adequate process for receiving security vulnerability reports. Attackers could have decrypted, monitored, or altered transmitted information including credit card numbers, security codes, expiration dates, billing zip codes, email addresses, and passwords.",
+        "conclusion": "Therefore, the representation set forth in Paragraph 24 was false or misleading."
+      }
+    ]
+  },
+  "order": {
+    "definitions": {
+      "respondent": "Fandango, LLC and its successors and assigns.",
+      "Commerce": "as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44.",
+      "Covered information": "information from or about an individual consumer, including but not limited to (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) a telephone number; (e) a Social Security number; (f) a driver's license or other state-issued identification number; (g) a financial institution account number; (h) credit or debit card information; (i) a persistent identifier, such as a customer number held in a \"cookie,\" a static Internet Protocol (\"IP\") address, a mobile device ID, or processor serial number; (j) precise geo-location data of an individual or mobile device, including GPS-based, WiFi-based, or cell-based location information; or (k) an authentication credential, such as a username or password.",
+      "Computer": "any desktop, laptop computer, tablet, handheld device, telephone, or other electronic product or device that has a platform on which to download, install, or run any software program, code, script, or other content and to play any digital audio, visual, or audiovisual content.",
+      "Client software": "any program or application developed by respondent or any corporation, subsidiary, division, or affiliate owned or controlled by respondent, that is installed locally on a consumer's computer and that communicates with a server."
+    },
+    "provisions": [
+      {
+        "provision_number": "I",
+        "title": "Prohibition Against Misrepresentations About Security and Privacy",
+        "category": "prohibition",
+        "summary": "Respondent must not misrepresent the extent to which it protects the privacy, security, confidentiality, or integrity of covered information.",
+        "requirements": [
+          {
+            "description": "Must not misrepresent security or privacy practices",
+            "quoted_text": "IT IS ORDERED that respondent and its officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, website, or other device or affiliate owned or controlled by respondent, shall not misrepresent in any manner, expressly or by implication, the extent to which respondent or its products or services maintain and protect the privacy, security, confidentiality, or integrity of any covered information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "II",
+        "title": "Comprehensive Security Program",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must establish and maintain a comprehensive security program reasonably designed to address security risks and protect covered information.",
+        "requirements": [
+          {
+            "description": "Establish and implement comprehensive security program",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall, no later than the date of service of this order, establish and implement, and thereafter maintain, a comprehensive security program that is reasonably designed to (1) address security risks related to the development and management of new and existing products and services for consumers, and (2) protect the security, integrity and confidentiality of covered information, whether collected by respondent or input into, stored on, captured with, or accessed through a computer using respondent's products or services.",
+            "deadline": "date of service",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Designate employee(s) to coordinate and be accountable for security program",
+            "quoted_text": "the designation of an employee or employees to coordinate and be accountable for the security program;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Identify material internal and external security risks and assess safeguards",
+            "quoted_text": "the identification of material internal and external risks to the security, confidentiality, and integrity of covered information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, whether such information is in respondent's possession or is input into, stored on, captured with, or accessed through a computer using respondent's products or services, and assessment of the sufficiency of any safeguards in place to control these risks.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Conduct risk assessment in areas including employee training, product design, secure software development, vulnerability response, and attack prevention",
+            "quoted_text": "at a minimum, this risk assessment required by Subpart B should include consideration of risks in each area of relevant operation, including, but not limited to, (1) employee training and management, including in secure engineering and defensive programming; (2) product design and development; (3) secure software design, development, and testing; (4) review, assessment, and response to third-party security vulnerability reports, and (5) prevention, detection, and response to attacks, intrusions, or systems failures;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Design and implement reasonable safeguards and regularly test or monitor their effectiveness",
+            "quoted_text": "the design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures, including through reasonable and appropriate software security testing techniques;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Select and retain service providers capable of maintaining security practices and require them by contract to implement safeguards",
+            "quoted_text": "the development and use of reasonable steps to select and retain service providers capable of maintaining security practices consistent with this order, and requiring service providers by contract to implement and maintain appropriate safeguards;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Evaluate and adjust security program based on testing results, operational changes, or other material circumstances",
+            "quoted_text": "the evaluation and adjustment of respondent's security program in light of the results of the testing and monitoring required by subpart B, any material changes to respondent's operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its security program.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "III",
+        "title": "Third-Party Assessments",
+        "category": "assessment",
+        "summary": "For products or services offered through client software, respondent must obtain initial and biennial third-party security assessments for 20 years.",
+        "requirements": [
+          {
+            "description": "Obtain initial and biennial third-party security assessments from qualified professionals",
+            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Part II of this order, for any product or service offered through client software, respondent shall obtain initial and biennial assessments and reports (\"Assessments\") from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Initial Assessment must cover first 180 days after service of order",
+            "quoted_text": "The reporting period for the Assessments shall cover: (1) the first one hundred eighty (180) days after service of the order for the initial Assessment;",
+            "deadline": "180 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Biennial Assessments must cover each two-year period for 20 years after service",
+            "quoted_text": "and (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Each Assessment must be prepared within 60 days after end of reporting period",
+            "quoted_text": "Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide initial Assessment to FTC within 10 days after preparation",
+            "quoted_text": "Respondent shall provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Retain subsequent biennial Assessments and provide to FTC within 10 days of request",
+            "quoted_text": "All subsequent biennial Assessments shall be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 0.9865217391304348
+          }
+        ]
+      },
+      {
+        "provision_number": "IV",
+        "title": "Recordkeeping",
+        "category": "recordkeeping",
+        "summary": "Respondent must maintain and make available to the FTC records related to compliance with the order, including Assessment materials and compliance documents.",
+        "requirements": [
+          {
+            "description": "Maintain for 3 years all materials relied upon to prepare each Assessment",
+            "quoted_text": "for a period of three (3) years after the date of preparation of each Assessment required under Part III of this order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of the respondent, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials relating to respondent's compliance with Parts II and III of this order, for the compliance period covered by such Assessment;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Maintain for 5 years all other compliance documents including advertisements and materials contradicting compliance",
+            "quoted_text": "unless covered by IV.A, for a period of five (5) years from the date of preparation or dissemination, whichever is later, all other documents relating to compliance with this order, including but not limited to: i. all advertisements and promotional materials containing any representations covered by this order, as well as all materials used or relied upon in making or disseminating the representation; and ii. any documents, whether prepared by or on behalf of respondent, that contradict, qualify, or call into question respondent's compliance with this order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "V",
+        "title": "Order Distribution and Acknowledgment",
+        "category": "acknowledgment",
+        "summary": "Respondent must deliver a copy of the order to current and future personnel with relevant responsibilities and obtain signed acknowledgments.",
+        "requirements": [
+          {
+            "description": "Deliver order to current subsidiaries and personnel within 30 days after service",
+            "quoted_text": "Respondent shall deliver this order to such current subsidiaries and personnel within thirty (30) days after service of this order,",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Deliver order to future subsidiaries and personnel within 30 days after they assume position",
+            "quoted_text": "and to such future subsidiaries and personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "For business entity changes, deliver order at least 10 days prior to change",
+            "quoted_text": "For any business entity resulting from any change in structure set forth in Part VI, delivery shall be at least ten (10) days prior to the change in structure.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 0.9482389937106919
+          },
+          {
+            "description": "Obtain signed acknowledgment of receipt within 30 days of delivery",
+            "quoted_text": "Respondent must secure a signed and dated statement acknowledging receipt of this order, within thirty (30) days of delivery, from all persons receiving a copy of the order pursuant to this section.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VI",
+        "title": "Notification of Corporate Changes",
+        "category": "compliance_reporting",
+        "summary": "Respondent must notify the Commission at least 30 days prior to any corporate change that may affect compliance obligations.",
+        "requirements": [
+          {
+            "description": "Notify Commission at least 30 days prior to corporate changes affecting compliance",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall notify the Commission at least thirty (30) days prior to any change in the corporation(s) that may affect compliance obligations arising under this order, including, but not limited to: a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "If learning of change fewer than 30 days prior, notify as soon as practicable",
+            "quoted_text": "Provided, however, that, with respect to any proposed change in the corporation(s) about which respondent learns fewer than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VII",
+        "title": "Compliance Reporting",
+        "category": "compliance_reporting",
+        "summary": "Respondent must file compliance reports with the Commission detailing manner and form of compliance with the order.",
+        "requirements": [
+          {
+            "description": "File initial compliance report within 60 days after service of order",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent within sixty (60) days after the date of service of this order, shall file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of its compliance with this order.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit additional compliance report within 10 days of written notice from Commission",
+            "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, it shall submit an additional true and accurate written report.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VIII",
+        "title": "Order Termination",
+        "category": "duration",
+        "summary": "This provision specifies when the order will terminate and under what conditions the duration may be extended.",
+        "requirements": [
+          {
+            "description": "Order terminates after 20 years unless extended by federal complaint",
+            "quoted_text": "This order will terminate on August 13, 2034, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      }
+    ],
+    "duration": {
+      "duration_years": 20,
+      "termination_text": "This order will terminate on August 13, 2034, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Part in this order that terminates in fewer than twenty (20) years; B. this order's application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Part."
+    }
+  },
+  "metadata": {
+    "source_files": {
+      "complaint": "08.14, Fandango Complaint.pdf",
+      "order": "08.14, Fandango Order.pdf"
+    },
+    "extraction_stats": {
+      "complaint_counts": 1,
+      "complaint_representations": 3,
+      "order_provisions": 8,
+      "order_definitions": 5,
+      "order_requirements": 25
+    },
+    "processing_time_seconds": 134.9
+  }
+}

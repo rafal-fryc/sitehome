@@ -1,0 +1,498 @@
+{
+  "case_info": {
+    "docket_number": "C-4804",
+    "company": {
+      "name": "Blackbaud, Inc.",
+      "incorporation_state": "Delaware",
+      "entity_type": "corporation",
+      "address": "65 Fairchild Street, Charleston, South Carolina 29492",
+      "business_description": "Blackbaud provides data services and financial, fundraising, and administrative software services to more than 45,000 companies, nonprofits, foundations, educational institutions, healthcare organizations, and individual consumers. It generates revenues primarily from cloud and hosted software solutions, payment and transaction services, software maintenance and support services, and professional services including implementation, consulting, training, and analytic services."
+    },
+    "commissioners": [
+      "Lina M. Khan, Chair",
+      "Rebecca Kelly Slaughter",
+      "Alvaro M. Bedoya",
+      "Melissa Holyoak",
+      "Andrew Ferguson"
+    ],
+    "case_date": {
+      "month": 5,
+      "year": 2024
+    },
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)",
+    "violation_type": "both",
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/2023181-blackbaud-inc"
+  },
+  "complaint": {
+    "factual_background": "Blackbaud, a software company serving over 45,000 organizations, failed to implement basic security measures to protect millions of consumers' personal information. An attacker accessed Blackbaud's databases in February 2020, remaining undetected for over three months, and exfiltrated sensitive data including Social Security numbers, bank account information, medical records, and other personal information. Blackbaud then misrepresented the scope of the breach in its initial notification to customers, falsely claiming no sensitive information was accessed, delaying accurate disclosure for months.",
+    "representations_made": [
+      {
+        "description": "Claimed to maintain appropriate physical, electronic and procedural safeguards to protect personal information",
+        "quoted_text": "Security of your Personal Information. We restrict access to personal information collected about you at our website to our employees, our affiliates' employees, those who are otherwise specified in this Policy or others who need to know that information to provide the Services to you or in the course of conducting our business operations or activities. While no website can guarantee exhaustive security, we maintain appropriate physical, electronic and procedural safeguards to protect your personal information collected via the website. We protect our databases with various physical, technical and procedural measures and we restrict access to your information by unauthorized persons. We also advise all Blackbaud employees about their responsibility to protect customer data and we provide them with appropriate guidelines for adhering to our company's business ethics standards and confidentiality policies. Inside Blackbaud, data is stored in password-controlled servers with limited access.",
+        "source_paragraph": 18
+      },
+      {
+        "description": "Claimed that no credit card information, bank account information, or social security numbers were accessed in the breach",
+        "quoted_text": "The cybercriminal did not access credit card information, bank account information, or social security numbers. . . No action is required on your end because no personal information about your constituents was accessed.",
+        "source_paragraph": 13
+      }
+    ],
+    "counts": [
+      {
+        "count_number": 1,
+        "title": "Unfair Information Security Practices",
+        "representation": "Blackbaud failed to take reasonable steps to prevent unauthorized access to sensitive consumer data maintained by its customers on its network",
+        "fact": "Blackbaud failed to implement appropriate password controls, multifactor authentication, data exfiltration monitoring, data retention schedules, timely patching, security testing, firewall controls, and network segmentation",
+        "conclusion": "Blackbaud's actions caused or are likely to cause substantial injury to consumers that consumers cannot reasonably avoid themselves and that is not outweighed by countervailing benefits to consumers or competition. Therefore, Blackbaud's practices as described in Paragraph 19 above constitute unfair acts or practices in violation of Section 5 of the FTC Act, 15 U.S.C. §§ 45(a) and 45(n)."
+      },
+      {
+        "count_number": 2,
+        "title": "Unfair Data Retention Practices",
+        "representation": "Blackbaud failed to implement and enforce reasonable data retention practices for sensitive consumer data maintained by its customers on its network",
+        "fact": "Blackbaud did not enforce its own data retention policies, resulting in the company keeping customer's consumer data for years longer than was necessary, including data belonging to former customers, customers who had switched to products not affected by the breach, and even potential customers",
+        "conclusion": "Blackbaud's actions caused or are likely to cause substantial injury to consumers that consumers cannot reasonably avoid themselves and that is not outweighed by countervailing benefits to consumers or competition. Therefore, Blackbaud's practices as described in Paragraph 19(d) above constitute unfair acts or practices in violation of Section 5 of the FTC Act, 15 U.S.C. §§ 45(a) and 45(n)."
+      },
+      {
+        "count_number": 3,
+        "title": "Unfair Inaccurate Breach Notification",
+        "representation": "Blackbaud failed to accurately communicate the scope and severity of the breach in its initial notification to customers",
+        "fact": "Blackbaud's deceptive statements, combined with the months' long delay in providing accurate notice about the breach, led many customers to believe that notification to their consumers was unnecessary. Consumers suffered additional harm because they had no way to know that they needed to take any mitigating steps to protect themselves from identity theft",
+        "conclusion": "Blackbaud's actions caused or are likely to cause substantial injury to consumers that consumers cannot reasonably avoid themselves and that is not outweighed by countervailing benefits to consumer or competition. Therefore, Blackbaud's practices described in Paragraphs 12 and 13 above constitute unfair acts or practices in violation of Section 5 of the FTC Act, 15 U.S.C. §§ 45(a) and 45(n)."
+      },
+      {
+        "count_number": 4,
+        "title": "Deceptive Security Statements",
+        "representation": "Blackbaud has represented, directly or indirectly, expressly or by implication, that they used appropriate safeguards to protect consumers' personal information",
+        "fact": "Blackbaud did not maintain appropriate safeguards to protect consumers' personal information",
+        "conclusion": "Therefore, the representation set forth in Paragraph 18 is false or misleading."
+      },
+      {
+        "count_number": 5,
+        "title": "Deceptive Initial Breach Notification",
+        "representation": "Blackbaud has represented, directly or indirectly, expressly or by implication, that consumers' personal information had not been subject to the breach in its first notification",
+        "fact": "Consumers' personal information had been exfiltrated by the attacker in the breach",
+        "conclusion": "Therefore, the representation set forth in Paragraph 13 is false or misleading."
+      }
+    ]
+  },
+  "order": {
+    "definitions": {
+      "Covered Incident": "any incident that results in Respondent notifying, pursuant to a statutory or regulatory requirement, any U.S. federal, state, or local government entity that information of or about an individual consumer was, or is reasonably believed to have been, accessed, acquired, or publicly exposed without authorization.",
+      "Covered Information": "information from or about an individual consumer stored by Respondent's customers within Respondent's product databases including: (a) a first and last name: (b) a homeor physical address; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) a mobile or other telephone number; (e) a driver's license or other government-issued identification number; (f) date of birth; or (g) bank account, credit card, or debit card information.",
+      "Delayed Update Customers": "Respondent's customers to whom Respondent makes updates available but who do not automatically implement such updates due to the complexity of Respondent's customers implementing such updates into Respondent's customers' environments and business practices.",
+      "Delete": "to remove Covered Information such that it is not maintained in retrievable form and cannot be retrieved in the normal course of business.",
+      "Respondent": "Blackbaud, Inc., a Delaware corporation, and its successors and assigns."
+    },
+    "provisions": [
+      {
+        "provision_number": "I",
+        "title": "Prohibition against Misrepresentations about Privacy and Security",
+        "category": "prohibition",
+        "summary": "Respondent must not misrepresent the extent to which it maintains, uses, deletes, or discloses Covered Information; protects privacy, security, availability, confidentiality, or integrity of Covered Information; or the extent of any Covered Incident or unauthorized compromise.",
+        "requirements": [
+          {
+            "description": "Must not misrepresent the extent to which Respondent maintains, uses, Deletes, or discloses any Covered Information",
+            "quoted_text": "IT IS ORDERED that Respondent, Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service, must not misrepresent in any manner, expressly or by implication: A. The extent to which Respondent maintains, uses, Deletes, or discloses any Covered Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Must not misrepresent the extent to which Respondent protects the privacy, security, availability, confidentiality, or integrity of any Covered Information",
+            "quoted_text": "B. The extent to which Respondent protects the privacy, security, availability, confidentiality, or integrity of any Covered Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Must not misrepresent the extent of any Covered Incident or unauthorized disclosure, misuse, loss, theft, alteration, destruction, or other compromise of Covered Information",
+            "quoted_text": "C. The extent of any Covered Incident or unauthorized disclosure, misuse, loss, theft, alteration, destruction, or other compromise of Covered Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "II",
+        "title": "Mandated Data Deletion",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must delete or destroy customer backup files containing Covered Information not being retained for providing services unless otherwise requested by customers, and refrain from maintaining any Covered Information not necessary for the purpose for which it is stored.",
+        "requirements": [
+          {
+            "description": "Within 90 days after the Order Effective Date, Delete or destroy Respondent customer backup files containing Covered Information that is not being retained in connection with providing products or services to Respondent's customers unless otherwise requested by Respondent's customers, and provide a written statement to the Commission confirming deletion",
+            "quoted_text": "A. Within 90 days after the Order Effective Date, Delete or destroy Respondent customer backup files containingCovered Information that is not being retained in connection with providing products or services to Respondent's customers unless otherwise requested by Respondent's customers, and provide a written statement to the Commission, pursuant to the Provision entitled Compliance Reports and Notices, confirming that all such data has been Deleted or destroyed, specifically enumerating which types of information were Deleted or destroyed;",
+            "deadline": "90 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Refrain from maintaining any Covered Information not necessary for the purpose(s) for which such information is stored and/or maintained by Respondent",
+            "quoted_text": "B. Refrain from maintaining any Covered Information not necessary for the purpose(s) for which such information is stored and/or maintained by Respondent.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Within thirty (30) days after the obligation to retain legally-required information has ended, provide a written statement to the Commission confirming deletion or destruction of such information",
+            "quoted_text": "Within thirty (30) days after the obligation to retain the information has ended, Respondent shall provide an additional written statement to the Commission, sworn under penalty of perjury, confirming that Respondent has deleted or destroyed such information.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "III",
+        "title": "Data Retention Limits",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must document, make publicly available, and adhere to a retention schedule for customer backup files containing Covered Information that sets forth the purpose, business needs, and a set timeframe for Deletion that precludes indefinite retention.",
+        "requirements": [
+          {
+            "description": "Within 90 days of the Order Effective Date, document, make publicly available on its website(s), and adhere to a retention schedule for Respondent customer backup files containing Covered Information",
+            "quoted_text": "A. Within 90 days of the Order Effective Date, document, make publicly available on its website(s), and adhere to a retention schedule for Respondent customer backup files containing Covered Information, setting forth: (1) the purpose or purposes for which Covered Information is maintained by Respondent; (2) the specific business needs for Respondent retaining such Covered Information; and (3) a set timeframe for Deletion of Covered Information that precludes indefinite retention of any Covered Information.",
+            "deadline": "90 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Within 90 days after the Order Effective Date, provide a written statement to the Commission describing the retention schedule for Respondent customer backup files containing Covered Information made publicly available on its website(s)",
+            "quoted_text": "B. Within 90 days after the Order EffectiveDate, provide a written statement to the Commission, pursuant to the Provision entitled Compliance Report and Notices, describing the retention schedule for Respondent customer backup files containing Covered Information made publicly available on its website(s).",
+            "deadline": "90 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IV",
+        "title": "Mandated Information Security Program",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must establish and maintain a comprehensive information security program that protects the security, confidentiality, and integrity of Covered Information, including documentation, risk assessments, safeguards, testing, service provider oversight, and program evaluation.",
+        "requirements": [
+          {
+            "description": "Within ninety (90) days of the Order Effective Date, establish and implement, and thereafter maintain, a comprehensive information security program",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent, and any business that Respondent controls directly, or indirectly in connection with the maintenance, use, or disclosure of, or provision of access to, Covered Information, must, within ninety (90) days of the Order Effective Date, establish and implement, and thereafter maintain, a comprehensive information security program that protects the security, confidentiality, and integrity of such Covered Information",
+            "deadline": "90 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Document in writing the content, implementation, and maintenance of the Information Security Program",
+            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Information Security Program;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide the written Information Security Program and any evaluations thereof or updates thereto to Respondent's board of directors or governing body at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident",
+            "quoted_text": "B. Provide the written Information Security Program and any evaluations thereof or updates thereto to Respondent's board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Respondent responsible for Respondent's Information Security Program at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident;",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Designate a qualified employee or employees to coordinate and be responsible for the Information Security Program",
+            "quoted_text": "C. Designate a qualified employee or employees to coordinate and be responsible for the Information Security Program;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Assess and document, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, internal and external risks to the security, confidentiality, or integrity of Covered Information",
+            "quoted_text": "D. Assess and document, at least once every twelve (12) months and promptly (not to exceed thirty (30)days) following a Covered Incident, internal and external risks to the security, confidentiality, or integrity of Covered Information that could result in: (1) the unauthorized storage, maintenance, alteration, use, or disclosure of, or provision of access to, Covered Information; or (2)the misuse, loss, theft, and unauthorized alteration, destruction, or other compromise of Covered Information;",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Design, implement, maintain, and document safeguards to control for identified internal and external risks, including written security policy, security education and training, password requirements, multi-factor authentication for employees and contractors, multi-factor authentication for customers, access controls and monitoring, database access controls, logging and monitoring, technical safeguards, authentication procedures, asset inventory, encryption, maintenance policies for new consumer information types, and timely investigation and remediation of security events and vulnerabilities",
+            "quoted_text": "E. Design, implement, maintain, and document safeguards within Respondent's control that control for the internal and external risks Respondent identifies to the security, confidentiality, or integrity of Covered Information identified in response to sub-Provision D. Each safeguard must be based on the volume and sensitivity of the Covered Information that is at risk, and the likelihood that the risk could be realized and result in: (1)the unauthorized storage, maintenance, use, or disclosure of, or provision of access to, Covered Information; or (2) the misuse, loss, theft, and unauthorized alteration, destruction, or other compromise of Covered Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Require multi-factor authentication methods for all employees and contractors of Respondent and its affiliates in order to access any assets (including databases) storing Covered Information, which must not include telephone or SMS-based authentication methods and must be resistant to phishing attacks",
+            "quoted_text": "4. Requiring multi-factor authentication methods for all employees and contractors of Respondent and its affiliates in order to access any assets (including databases) storing Covered Information. Such multi-factor authentication methods for all employees and contractors of Respondent and its affiliates shall not include telephone or SMS-based authentication methods and must be resistant to phishing attacks.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Require multi-factor authentication methods for all Respondent's customers, except for those customers who use enterprise single sign on solutions within their organizations to access Respondent products and for Delayed Update Customers",
+            "quoted_text": "5. Requiring multi-factor authentication methods for all Respondent's customers, except for those customers who use enterprise single sign on solutions within their organizations to access Respondent products and for Delayed Update Customers. However, Respondent shall make available an update for multi-factor authentication methods for Delayed Update Customers;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Assess, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, the sufficiency of any safeguards in place and modify the Information Security Program based on the results",
+            "quoted_text": "F. Assess, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, the sufficiency of any safeguards in place to address the internal and external risks to the security, confidentiality, or integrity of Covered Information, and modify the Information Security Program based on the results;",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Test and monitor the effectiveness of the safeguards at least once every twelve (12) months and promptly (not to exceed 30 days) following a Covered Incident, including vulnerability scanning once every four months and penetration testing at least once every twelve (12) months",
+            "quoted_text": "G. Test and monitor the effectiveness of the safeguards specified in this Provision at least once every twelve (12) months and promptly (not to exceed 30 days) following a Covered Incident and modify the Information Security Program based on the results. Such testing and monitoring must include vulnerability scanning of Respondent's network(s) containing Covered Information once every four months and promptly (not to exceed 30 days) after a Covered Incident, and penetration testing of Respondent's network(s) containing Covered Information at least once every twelve (12) months and promptly (not to exceed 30 days) after a Covered Incident;",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Select and retain service providers capable of safeguarding Covered Information they access through or receive from Respondent, and contractually require service providers to implement and maintain safeguards sufficient to address the internal and external risks",
+            "quoted_text": "H. Select and retain service providers capable of safeguarding Covered Information they access through or receive from Respondent, and contractually require service providers to implement and maintain safeguards sufficient to address the internal and external risks to the security, confidentiality, or integrity of Covered Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "Evaluate and adjust the Information Security Program in light of any material changes to Respondent's operations or business arrangements, a Covered Incident, new or more efficient technological or operational methods, or any other circumstances that may impact effectiveness. At a minimum, evaluate the Information Security Program at least once every twelve (12) months",
+            "quoted_text": "I. Evaluate and adjust the Information Security Program in light of any material changes to Respondent's operations or business arrangements, a Covered Incident, new or more efficient technological or operational methods to control for the risks identified in sub-Provision IV.D of this Order, or any other circumstances that Respondent knows or has reason to know may have an impact on the effectiveness of the Information Security Program or any of its individual safeguards. At a minimum, Respondent must evaluate the Information Security Program at least once every twelve (12) months and modify the Information Security Program based on the results.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "V",
+        "title": "Information Security Assessments by a Third Party",
+        "category": "assessment",
+        "summary": "Respondent must obtain initial and biennial assessments from a qualified, objective, independent third-party professional who conducts an independent review of the Information Security Program.",
+        "requirements": [
+          {
+            "description": "Obtain initial and biennial assessments from a qualified, objective, independent third-party professional",
+            "quoted_text": "IT IS FURTHER ORDEREDthat, in connection with compliance with Provision IV of this Order titled Mandated Information Security Program, Respondent must obtain initial and biennial assessments",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide the Associate Director for Enforcement for the Bureau of Consumer Protection with the name, affiliation, and qualifications of the proposed Assessor for approval",
+            "quoted_text": "B. For each Assessment, Respondent must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name, affiliation, and qualifications of the proposed Assessor, whom the Associate Director shall have the authority to approve in their sole discretion.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Complete the initial Assessment within one hundred and twenty (120) days after the end of the reporting period for the initial Assessment (covering at least the first 180 days after the Information Security Program is established)",
+            "quoted_text": "E. The initial Assessment must be completed within one hundred and twenty (120) days after the end of the reporting period for the initial Assessment.",
+            "deadline": "120 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Complete each subsequent biennial Assessment within sixty (60) days after the end of the reporting period to which the Assessment applies",
+            "quoted_text": "Each subsequent biennial Assessment must be completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
+            "deadline": "60 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit the initial Assessment to the Commission within ten (10) days after the Assessment has been completed",
+            "quoted_text": "Unless otherwise directed by a Commission representative in writing, Respondent must submit the initial Assessment to the Commission within ten (10) days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director forEnforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania AvenueNW,Washington, DC 20580.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VI",
+        "title": "Cooperation with Third Party Information Security Assessor",
+        "category": "affirmative_obligation",
+        "summary": "Respondent must provide or make available to the Assessor all relevant information and material, information about Respondent's network(s) and IT assets, and must disclose all material facts and not misrepresent any fact material to the Assessor's determinations.",
+        "requirements": [
+          {
+            "description": "Provide or otherwise make available to the Assessor all information and material in its possession, custody, or control that is relevant to theAssessment for which there is no reasonable claim of privilege",
+            "quoted_text": "A. Provide or otherwise make available to the Assessor all information and material in its possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Provide or otherwise make available to the Assessor information about Respondent's network(s) and all of Respondent's IT assets that maintain Covered Information so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the network(s) and IT assets deemed in scope",
+            "quoted_text": "B. Provide or otherwise make available to the Assessor information about Respondent's network(s) and all of Respondent's IT assets that maintain Covered Information so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the network(s) and IT assets deemed in scope;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Disclose all material facts to the Assessor, and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor's determinations",
+            "quoted_text": "C. Disclose all material facts to the Assessor, and not misrepresent in any manner, expressly or by implication,any fact material to the Assessor's: (1) determination of whether Respondent has implemented and maintained the Information Security Program required by Provision IVof this Order, titled Mandated Information Security Program; (2) assessment of the effectiveness of the implementation and maintenance of sub-Provisions IV.A-I; or (3) identification of any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VII",
+        "title": "Annual Certification",
+        "category": "compliance_reporting",
+        "summary": "Respondent must provide the Commission with an annual certification from the Chief Information Security Officer that the requirements of the Order have been established, implemented, and maintained, with disclosure of any material noncompliance and a description of all Covered Incidents.",
+        "requirements": [
+          {
+            "description": "One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from Respondent's Chief Information Security Officer",
+            "quoted_text": "A. One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from Respondent's Chief Information Security Officer responsible for Respondent's Information Security Program that: (1) Respondent has established, implemented, and maintained the requirements of this Order; (2) Respondent is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission; and (3) includes a brief description of all Covered Incidents during the certified period.",
+            "deadline": "1 year",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit all annual certifications to the Commission via email to DEbrief@ftc.gov or by overnight courier",
+            "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW,Washington, DC 20580.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "VIII",
+        "title": "Covered Incident Reports",
+        "category": "compliance_reporting",
+        "summary": "Within ten (10) days of any notification to a United States federal, state, or local entity of a Covered Incident, Respondent must submit a report to the Commission including details about the incident, affected information and customers, remediation actions, and copies of notices sent.",
+        "requirements": [
+          {
+            "description": "Within ten (10) days of any notification to a United States federal, state, or local entity of a Covered Incident, submit a report to the Commission",
+            "quoted_text": "IT IS FURTHER ORDERED that, within ten (10) days of any notification to a United States federal, state, or local entity of a Covered Incident, Respondent must submit a repo1i to the Commission.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "IX",
+        "title": "Order Acknowledgements",
+        "category": "acknowledgment",
+        "summary": "Respondent must obtain acknowledgments of receipt of this Order from specified personnel and entities, submit its own acknowledgment to the Commission within 10 days, deliver the Order to principals, officers, directors, and relevant employees within specified timeframes, and obtain signed acknowledgments within 30 days.",
+        "requirements": [
+          {
+            "description": "Within 10 days after the Order Effective Date, submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury",
+            "quoted_text": "A. Respondent, within 10 days after the Order Effective Date, must submit to the Commission an acknowledgment ofreceipt of this Order sworn under penalty of pe1jmy.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "For 20 years after issuance of this Order, deliver a copy of this Order to all principals, officers, and directors; all employees having managerial responsibilities for cybersecurity, privacy, and the collection, use, or disclosure of Covered Information; and any business entity resulting from any change in structure. Delivery must occur within 10 days of the Order Effective Date for current personnel and before assumption of responsibilities for all others",
+            "quoted_text": "8. For 20 years after issuance ofthis Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, and directors; (2) all employees having managerial responsibilities for cybersecurity, privacy, and the collection, use, or disclosure of Covered Info1mation, and all agents and representatives who paiiicipate in cybersecurity, privacy, and the collection, use, or disclosure of Covered Info1mation; and (3) any business entity resulting from any change in strncture as set fo1ih in Provision X. Delive1y must occur within 10 days of the Order Effective Date for current personnel. For all others, delive1y must occur before they assume their responsibilities.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 0.85
+          },
+          {
+            "description": "From each individual or entity to which Respondent delivered a copy of this Order, obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order",
+            "quoted_text": "C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "X",
+        "title": "Compliance Reporting",
+        "category": "compliance_reporting",
+        "summary": "Respondent must submit a compliance report one year after issuance of the Order, compliance notices within 14 days of certain changes for 20 years, and notice of any bankruptcy or insolvency proceedings within 14 days of filing.",
+        "requirements": [
+          {
+            "description": "One year after issuance of this Order, submit a compliance report sworn under penalty of perjury identifying designated points of contact, all businesses, business activities, compliance with each Provision, and copies of Order Acknowledgments",
+            "quoted_text": "A. One year after issuance of this Order, Respondent must submit a compliance repo1i, sworn under penalty of pe1jmy. Respondent must: (a) identify the primaiy physical, postal, and email address and telephone nlllllber, as designated points of contact, which representatives of the Commission may use to collllllunicate with Respondent; (b) identify all of Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered, the means of adve1iising, marketing, and sales; (d ) describe in detail whether and how Respondent is in compliance with each Provision of this Order; and ( e) provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "For 20 years after issuance of this Order, submit a compliance notice sworn under penalty of perjury within 14 days of any change in designated point of contact or the structure of any entity that Respondent has any ownership interest in or controls",
+            "quoted_text": "B. For 20 years after issuance of this Order, Respondent must submit a compliance notice, sworn under penalty of pe1jmy, within 14 days of any change in the following: (a) any designated point of contact; or (b) the structure of any entity that Respondent has any ownership interest in or contl'ols directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidia1y, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing",
+            "quoted_text": "C. Respondent must submit to the Commission notice of the filing of any bankrnptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XI",
+        "title": "Recordkeeping",
+        "category": "recordkeeping",
+        "summary": "Respondent must create certain records for 20 years after issuance of the Order and retain each such record for 5 years, including accounting records, personnel records, consumer complaints, compliance records, and marketing materials.",
+        "requirements": [
+          {
+            "description": "Create certain records for 20 years after issuance of the Order and retain each such record for 5 years, including accounting records, personnel records, consumer complaints, compliance records, and marketing materials",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for 20 years after issuance of the Order and retain each such record for 5 years. Specifically, Respondent must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold; 8. Personnel records showing, for each person providing services relating to Covered Info1mation, whether as an employee or othe1wise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for te1mination; C. Records of all consumer complaints regarding security, privacy, or identity theft related to Covered Information whether received directly or indirectly, such as through a third party, and any response; D. All records necessa1y to demonstrate full compliance with each provision of this Order, including all submissions to the Commission; and E. A copy of each widely disseminated, unique adve1iisement or other marketing material that references or othe1wise relates to Respondent's privacy and data security practices.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      },
+      {
+        "provision_number": "XII",
+        "title": "Compliance Monitoring",
+        "category": "monitoring",
+        "summary": "For purposes of monitoring Respondent's compliance, within 14 days of a written request from the Commission, Respondent must submit additional reports, appear for depositions, and produce documents. The Commission may communicate directly with Respondent, interview employees, and use other lawful investigative means.",
+        "requirements": [
+          {
+            "description": "Within 14 days of receipt of a written request from a representative of the Commission, submit additional compliance reports or other requested information sworn under penalty of perjury, and appear for depositions and produce documents for inspection and copying",
+            "quoted_text": "A. Within 14 days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance repo1is or other requested infonnation, which must be sworn under penalty of pe1jmy; appear for depositions and produce documents for inspection and copying.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0
+          },
+          {
+            "description": "Permit representatives of the Commission to interview any employee or other person affiliated with Respondent who has agreed to such an interview",
+            "quoted_text": "B. For matters concerning this Order, the Commission is authorized to communicate directly with Respondent. Respondent must pennit representatives of the Commission to interview any employee or other person affiliated with Respondent who has agreed to such an interview.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85
+          }
+        ]
+      },
+      {
+        "provision_number": "XIII",
+        "title": "Order Effective Dates",
+        "category": "duration",
+        "summary": "This Order is final and effective upon the date of its publication on the Commission's website as a final order. The Order will terminate 20 years from the date of its issuance, or 20 years from the most recent date that the United States or the Commission files a complaint alleging any violation of this Order, whichever comes later.",
+        "requirements": [
+          {
+            "description": "Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order (the \"Order Effective Date\").",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0
+          }
+        ]
+      }
+    ],
+    "duration": {
+      "duration_years": 20,
+      "termination_text": "This Order will terminate 20 years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later"
+    }
+  },
+  "metadata": {
+    "source_files": {
+      "complaint": "05.24, Blackbaud Complaint (Pending).pdf",
+      "order": "05.24, Blackbaud Order (Pending).pdf"
+    },
+    "extraction_stats": {
+      "complaint_counts": 5,
+      "complaint_representations": 2,
+      "order_provisions": 13,
+      "order_definitions": 5,
+      "order_requirements": 41
+    },
+    "processing_time_seconds": 186.1
+  }
+}
