@@ -95,51 +95,51 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PIPE-01 | — | Pending |
-| PIPE-02 | — | Pending |
-| PIPE-03 | — | Pending |
-| PIPE-04 | — | Pending |
-| PIPE-05 | — | Pending |
-| PIPE-06 | — | Pending |
-| PIPE-07 | — | Pending |
-| PIPE-08 | — | Pending |
-| PIPE-09 | — | Pending |
-| PROV-01 | — | Pending |
-| PROV-02 | — | Pending |
-| PROV-03 | — | Pending |
-| PROV-04 | — | Pending |
-| PROV-05 | — | Pending |
-| PROV-06 | — | Pending |
-| PROV-07 | — | Pending |
-| PROV-08 | — | Pending |
-| PROV-09 | — | Pending |
-| PROV-10 | — | Pending |
-| PATN-01 | — | Pending |
-| PATN-02 | — | Pending |
-| PATN-03 | — | Pending |
-| PATN-04 | — | Pending |
-| ANLY-01 | — | Pending |
-| ANLY-02 | — | Pending |
-| ANLY-03 | — | Pending |
-| ANLY-04 | — | Pending |
-| ANLY-05 | — | Pending |
-| ANLY-06 | — | Pending |
-| ANLY-07 | — | Pending |
-| ANLY-08 | — | Pending |
-| INDY-01 | — | Pending |
-| INDY-02 | — | Pending |
-| INDY-03 | — | Pending |
-| NAVX-01 | — | Pending |
-| NAVX-02 | — | Pending |
-| NAVX-03 | — | Pending |
-| NAVX-04 | — | Pending |
-| NAVX-05 | — | Pending |
+| PIPE-01 | Phase 1 | Pending |
+| PIPE-02 | Phase 1 | Pending |
+| PIPE-03 | Phase 1 | Pending |
+| PIPE-04 | Phase 1 | Pending |
+| PIPE-05 | Phase 1 | Pending |
+| PIPE-06 | Phase 1 | Pending |
+| PIPE-07 | Phase 1 | Pending |
+| PIPE-08 | Phase 1 | Pending |
+| PIPE-09 | Phase 1 | Pending |
+| PROV-01 | Phase 3 | Pending |
+| PROV-02 | Phase 3 | Pending |
+| PROV-03 | Phase 3 | Pending |
+| PROV-04 | Phase 3 | Pending |
+| PROV-05 | Phase 3 | Pending |
+| PROV-06 | Phase 3 | Pending |
+| PROV-07 | Phase 3 | Pending |
+| PROV-08 | Phase 3 | Pending |
+| PROV-09 | Phase 3 | Pending |
+| PROV-10 | Phase 3 | Pending |
+| PATN-01 | Phase 5 | Pending |
+| PATN-02 | Phase 5 | Pending |
+| PATN-03 | Phase 5 | Pending |
+| PATN-04 | Phase 5 | Pending |
+| ANLY-01 | Phase 2 | Pending |
+| ANLY-02 | Phase 2 | Pending |
+| ANLY-03 | Phase 2 | Pending |
+| ANLY-04 | Phase 2 | Pending |
+| ANLY-05 | Phase 2 | Pending |
+| ANLY-06 | Phase 2 | Pending |
+| ANLY-07 | Phase 2 | Pending |
+| ANLY-08 | Phase 2 | Pending |
+| INDY-01 | Phase 4 | Pending |
+| INDY-02 | Phase 4 | Pending |
+| INDY-03 | Phase 4 | Pending |
+| NAVX-01 | Phase 2 | Pending |
+| NAVX-02 | Phase 2 | Pending |
+| NAVX-03 | Phase 2 | Pending |
+| NAVX-04 | Phase 2 | Pending |
+| NAVX-05 | Phase 2 | Pending |
 
 **Coverage:**
 - v1 requirements: 39 total
-- Mapped to phases: 0
-- Unmapped: 39 ⚠️
+- Mapped to phases: 39
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-24*
-*Last updated: 2026-02-24 after initial definition*
+*Last updated: 2026-02-24 after roadmap creation — all 39 v1 requirements mapped*
