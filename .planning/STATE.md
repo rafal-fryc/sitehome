@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-24)
 ## Current Position
 
 Phase: 1 of 5 (Data Pipeline)
-Plan: 3 of 4 in current phase
-Status: Executing
-Last activity: 2026-02-24 — Completed 01-03-PLAN.md (Build pipeline scripts)
+Plan: 4 of 4 in current phase
+Status: Executing — awaiting phase verification
+Last activity: 2026-02-24 — Completed 01-04-PLAN.md (Run pipeline & verify output)
 
-Progress: [███░░░░░░░] 15%
+Progress: [████░░░░░░] 20%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: 3 min
-- Total execution time: 0.13 hours
+- Total plans completed: 4
+- Average duration: 5 min
+- Total execution time: 0.33 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-data-pipeline | 3 | 8 min | 3 min |
+| 01-data-pipeline | 4 | 23 min | 6 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min), 01-02 (2 min), 01-03 (4 min)
-- Trend: Stable
+- Last 5 plans: 01-01 (2 min), 01-02 (4 min), 01-03 (4 min), 01-04 (15 min)
+- Trend: Stable (01-04 longer due to 293-file classification)
 
 *Updated after each plan completion*
 
@@ -51,6 +51,9 @@ Recent decisions affecting current work:
 - [Phase 1, Plan 03]: build-provisions.ts uses inline types (same pattern as build-ftc-data.ts) to avoid tsx path alias issues
 - [Phase 1, Plan 03]: Practice-area shard filenames use pa- prefix to disambiguate from statutory topic shards
 - [Phase 1, Plan 03]: build-ftc-data.ts reads classification tags from public/data/ftc-files/ copies (where classify script writes them)
+- [Phase 1, Plan 04]: Classification done by Claude Code agents (Opus 4.6) not API script — ANTHROPIC_API_KEY not available in shell, but agents classify directly
+- [Phase 1, Plan 04]: Privacy provision % at 49.5% — under 60% threshold, monitor in Phase 2
+- [Phase 1, Plan 04]: PIPE-06 (ftc-patterns.json) formally deferred to Phase 5
 
 ### Pending Todos
 
@@ -66,5 +69,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 01-03-PLAN.md (Build pipeline scripts: build-provisions.ts and enhanced build-ftc-data.ts)
+Stopped at: Completed 01-04-PLAN.md (Run pipeline & verify output — all 293 files classified, human approved)
 Resume file: None
