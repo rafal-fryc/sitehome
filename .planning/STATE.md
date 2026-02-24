@@ -46,6 +46,8 @@ Recent decisions affecting current work:
 - [Pre-Phase 1]: File split strategy (flat ftc-provisions.json vs topic-sharded files) must be decided before building any fetch hooks — measure actual file size after first pipeline run
 - [Phase 1, Plan 01]: EnhancedFTCCaseSummary uses `extends FTCCaseSummary` to preserve backward compat with categories field
 - [Phase 1, Plan 01]: ClassifiedProvision omits requirements array — plan spec did not include it; keeps interface focused on classification tags
+- [Phase 1, Plan 02]: business_description extracted from case_info.company.business_description (not case_info.business_description) — matching actual source file structure
+- [Phase 1, Plan 02]: Rule-based hints passed as structured context in prompt, not used as final classification answers — LLM makes final decisions
 - [Phase 1, Plan 03]: build-provisions.ts uses inline types (same pattern as build-ftc-data.ts) to avoid tsx path alias issues
 - [Phase 1, Plan 03]: Practice-area shard filenames use pa- prefix to disambiguate from statutory topic shards
 - [Phase 1, Plan 03]: build-ftc-data.ts reads classification tags from public/data/ftc-files/ copies (where classify script writes them)

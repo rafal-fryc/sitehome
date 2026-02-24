@@ -89,7 +89,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Data Pipeline | 1/4 | In Progress | - |
+| 1. Data Pipeline | 3/4 | In Progress | - |
 | 2. Tab Shell + Analytics | 0/TBD | Not started | - |
 | 3. Provisions Library | 0/TBD | Not started | - |
 | 4. Company & Industry View | 0/TBD | Not started | - |

@@ -7,10 +7,10 @@
 
 ### Data Classification Pipeline
 
-- [ ] **PIPE-01**: Build pipeline classifies each provision by statutory topic (COPPA, FCRA, GLBA, Health Breach Notification, CAN-SPAM, TCPA) using legal_authority and complaint fields
-- [ ] **PIPE-02**: Build pipeline classifies each provision by practice area (Privacy, Data Security, Deceptive Design / Dark Patterns, AI / Automated Decision-Making, Surveillance)
-- [ ] **PIPE-03**: Build pipeline tags each provision by remedy type (Monetary Penalty, Data Deletion, Comprehensive Security Program, Third-Party Assessment, Algorithmic Destruction, Biometric Ban, Compliance Monitoring, Recordkeeping, Prohibition, Other)
-- [ ] **PIPE-04**: Build pipeline classifies each case by industry sector inferred from company business_description field
+- [x] **PIPE-01**: Build pipeline classifies each provision by statutory topic (COPPA, FCRA, GLBA, Health Breach Notification, CAN-SPAM, TCPA) using legal_authority and complaint fields
+- [x] **PIPE-02**: Build pipeline classifies each provision by practice area (Privacy, Data Security, Deceptive Design / Dark Patterns, AI / Automated Decision-Making, Surveillance)
+- [x] **PIPE-03**: Build pipeline tags each provision by remedy type (Monetary Penalty, Data Deletion, Comprehensive Security Program, Third-Party Assessment, Algorithmic Destruction, Biometric Ban, Compliance Monitoring, Recordkeeping, Prohibition, Other)
+- [x] **PIPE-04**: Build pipeline classifies each case by industry sector inferred from company business_description field
 - [x] **PIPE-05**: Build pipeline produces denormalized `ftc-provisions.json` flat file with all provisions, topic tags, case context, and citations
 - [ ] **PIPE-06**: Build pipeline produces `ftc-patterns.json` with cross-case language pattern groups
 - [x] **PIPE-07**: Enhanced `ftc-cases.json` includes provision-level topic aggregations and industry sector per case
@@ -95,10 +95,10 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PIPE-01 | Phase 1 | Pending |
-| PIPE-02 | Phase 1 | Pending |
-| PIPE-03 | Phase 1 | Pending |
-| PIPE-04 | Phase 1 | Pending |
+| PIPE-01 | Phase 1 | Complete |
+| PIPE-02 | Phase 1 | Complete |
+| PIPE-03 | Phase 1 | Complete |
+| PIPE-04 | Phase 1 | Complete |
 | PIPE-05 | Phase 1 | Complete |
 | PIPE-06 | Phase 1 | Pending |
 | PIPE-07 | Phase 1 | Complete |
