@@ -1,0 +1,145 @@
+# Requirements: FTC Enforcement Provisions Library
+
+**Defined:** 2026-02-24
+**Core Value:** A legal practitioner can find every FTC consent order provision relevant to a specific topic, with exact paragraph-level citations and source links, in under 30 seconds.
+
+## v1 Requirements
+
+### Data Classification Pipeline
+
+- [ ] **PIPE-01**: Build pipeline classifies each provision by statutory topic (COPPA, FCRA, GLBA, Health Breach Notification, CAN-SPAM, TCPA) using legal_authority and complaint fields
+- [ ] **PIPE-02**: Build pipeline classifies each provision by practice area (Privacy, Data Security, Deceptive Design / Dark Patterns, AI / Automated Decision-Making, Surveillance)
+- [ ] **PIPE-03**: Build pipeline tags each provision by remedy type (Monetary Penalty, Data Deletion, Comprehensive Security Program, Third-Party Assessment, Algorithmic Destruction, Biometric Ban, Compliance Monitoring, Recordkeeping, Prohibition, Other)
+- [ ] **PIPE-04**: Build pipeline classifies each case by industry sector inferred from company business_description field
+- [ ] **PIPE-05**: Build pipeline produces denormalized `ftc-provisions.json` flat file with all provisions, topic tags, case context, and citations
+- [ ] **PIPE-06**: Build pipeline produces `ftc-patterns.json` with cross-case language pattern groups
+- [ ] **PIPE-07**: Enhanced `ftc-cases.json` includes provision-level topic aggregations and industry sector per case
+- [ ] **PIPE-08**: Classification runs entirely at build time — no classification logic ships to the browser
+- [ ] **PIPE-09**: TypeScript interfaces defined for all new data shapes before pipeline implementation
+
+### Provisions Library
+
+- [ ] **PROV-01**: User can browse provisions by selecting a substantive topic (statutory, practice area, or remedy type)
+- [ ] **PROV-02**: Each provision displays verbatim quoted order language as the primary content
+- [ ] **PROV-03**: Each provision shows exact paragraph-level citation (e.g., "Part II.A.3") plus working link to FTC.gov source document
+- [ ] **PROV-04**: Each provision card shows case context: company name, date issued, docket number, violation type
+- [ ] **PROV-05**: User can filter provisions within a topic by date range
+- [ ] **PROV-06**: User can filter provisions within a topic by company name
+- [ ] **PROV-07**: User can filter provisions within a topic by remedy type
+- [ ] **PROV-08**: User can sort provisions by date, company, or provision type
+- [ ] **PROV-09**: User can search across all provisions using text search (MiniSearch)
+- [ ] **PROV-10**: Provisions library displays total count of matching provisions and cases
+
+### Cross-Case Patterns
+
+- [ ] **PATN-01**: Build pipeline detects provisions with identical or near-identical titles across different consent orders
+- [ ] **PATN-02**: User can view pattern groups showing how specific provision language (e.g., "comprehensive security program") appears across multiple cases
+- [ ] **PATN-03**: Pattern timeline shows chronological evolution of recurring provision language
+- [ ] **PATN-04**: Structural/boilerplate provisions (monitoring, recordkeeping, acknowledgment) are excluded from pattern analysis or clearly labeled
+
+### Analytics & Trends
+
+- [ ] **ANLY-01**: Interactive bar/line charts showing enforcement action count by year
+- [ ] **ANLY-02**: Interactive charts showing enforcement trends by presidential administration
+- [ ] **ANLY-03**: Topic-over-time trend lines showing how enforcement focus shifts across statutory topics and practice areas
+- [ ] **ANLY-04**: Administration comparison view showing enforcement patterns side-by-side between administrations
+- [ ] **ANLY-05**: Detailed reference tables with case counts, provision counts, and breakdowns accompanying each chart
+- [ ] **ANLY-06**: Combined chart + table views — charts for visual overview, tables for drill-down
+- [ ] **ANLY-07**: Violation type breakdown (deceptive vs unfair vs both) maintained from existing analytics
+- [ ] **ANLY-08**: Provision-level analytics showing counts by remedy type, topic, and category
+
+### Company & Industry View
+
+- [ ] **INDY-01**: User can browse enforcement actions by industry sector (tech, health, retail, financial services, etc.)
+- [ ] **INDY-02**: Industry view shows how enforcement patterns (topics, remedy types) vary across sectors
+- [ ] **INDY-03**: Individual case cards within industry view show company details, provision summaries, and links to full provisions
+
+### Navigation & UX
+
+- [ ] **NAVX-01**: Tab navigation between Analytics, Provisions Library, and Patterns views under single FTC route
+- [ ] **NAVX-02**: URL-driven state via search params for active tab, selected topic, active filters
+- [ ] **NAVX-03**: Maintains law-library aesthetic (EB Garamond, cream/gold/dark-green palette)
+- [ ] **NAVX-04**: Performs smoothly with 293 cases and thousands of provisions in-browser
+- [ ] **NAVX-05**: OCR extraction quality disclosure where applicable — sourced text presented with appropriate caveat
+
+## v2 Requirements
+
+### Search & Discovery
+
+- **SRCH-01**: Full-text search across consent order documents (not just provisions)
+- **SRCH-02**: Saved searches and bookmarked provisions
+- **SRCH-03**: Side-by-side consent order comparison tool
+
+### Advanced Patterns
+
+- **PATN-05**: Fuzzy text similarity matching for provision language evolution (beyond exact title matching)
+- **PATN-06**: Automatic detection of novel provision language not seen in prior orders
+
+### Commissioner Analysis
+
+- **COMM-01**: Commissioner voting records and dissent tracking per case
+- **COMM-02**: Commissioner-level enforcement trend analysis
+
+## Out of Scope
+
+| Feature | Reason |
+|---------|--------|
+| User accounts / saved searches | Public reference tool, not SaaS product |
+| Real-time FTC data sync | Data pipeline runs offline, manual updates acceptable |
+| Mobile native app | Web-first, responsive design sufficient |
+| Backend database for FTC data | Static JSON pattern is proven and sufficient for 293 cases |
+| Server-side rendering | Existing SPA architecture is adequate for this dataset size |
+| PDF generation / export | Adds significant complexity; users can print/copy citations |
+
+## Traceability
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| PIPE-01 | — | Pending |
+| PIPE-02 | — | Pending |
+| PIPE-03 | — | Pending |
+| PIPE-04 | — | Pending |
+| PIPE-05 | — | Pending |
+| PIPE-06 | — | Pending |
+| PIPE-07 | — | Pending |
+| PIPE-08 | — | Pending |
+| PIPE-09 | — | Pending |
+| PROV-01 | — | Pending |
+| PROV-02 | — | Pending |
+| PROV-03 | — | Pending |
+| PROV-04 | — | Pending |
+| PROV-05 | — | Pending |
+| PROV-06 | — | Pending |
+| PROV-07 | — | Pending |
+| PROV-08 | — | Pending |
+| PROV-09 | — | Pending |
+| PROV-10 | — | Pending |
+| PATN-01 | — | Pending |
+| PATN-02 | — | Pending |
+| PATN-03 | — | Pending |
+| PATN-04 | — | Pending |
+| ANLY-01 | — | Pending |
+| ANLY-02 | — | Pending |
+| ANLY-03 | — | Pending |
+| ANLY-04 | — | Pending |
+| ANLY-05 | — | Pending |
+| ANLY-06 | — | Pending |
+| ANLY-07 | — | Pending |
+| ANLY-08 | — | Pending |
+| INDY-01 | — | Pending |
+| INDY-02 | — | Pending |
+| INDY-03 | — | Pending |
+| NAVX-01 | — | Pending |
+| NAVX-02 | — | Pending |
+| NAVX-03 | — | Pending |
+| NAVX-04 | — | Pending |
+| NAVX-05 | — | Pending |
+
+**Coverage:**
+- v1 requirements: 39 total
+- Mapped to phases: 0
+- Unmapped: 39 ⚠️
+
+---
+*Requirements defined: 2026-02-24*
+*Last updated: 2026-02-24 after initial definition*
