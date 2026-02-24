@@ -83,3 +83,68 @@ export type IndustrySector =
   | "Education"
   | "Social Media"
   | "Other";
+
+// Phase 1: Data Pipeline — Classification interfaces
+
+// Written into public/data/ftc-files/ source JSON by classify-provisions.ts
+export interface ClassifiedProvision {
+  provision_number: string;
+  title: string;
+  category: string;
+  summary: string;
+  statutory_topics: StatutoryTopic[];
+  practice_areas: PracticeArea[];
+  remedy_types: RemedyType[];
+}
+
+// Extends case_info in source files with classification tags
+export interface ClassifiedCaseInfo {
+  id: string;
+  docket_number: string;
+  company_name: string;
+  date_issued: string;
+  year: number;
+  administration: string;
+  legal_authority: string;
+  ftc_url?: string;
+  source_filename: string;
+  statutory_topics: StatutoryTopic[];
+  practice_areas: PracticeArea[];
+  industry_sectors: IndustrySector[];
+}
+
+// Denormalized provision in topic-sharded output files under public/data/provisions/
+export interface ProvisionRecord {
+  provision_number: string;
+  title: string;
+  category: string;
+  summary: string;
+  statutory_topics: StatutoryTopic[];
+  practice_areas: PracticeArea[];
+  remedy_types: RemedyType[];
+  case_id: string;
+  company_name: string;
+  date_issued: string;
+  year: number;
+  administration: string;
+  legal_authority: string;
+  ftc_url?: string;
+  docket_number: string;
+}
+
+// public/data/provisions/[topic]-provisions.json
+export interface ProvisionShardFile {
+  topic: string;
+  generated_at: string;
+  total_provisions: number;
+  provisions: ProvisionRecord[];
+}
+
+// Enhanced case summary in ftc-cases.json — keeps categories for backward compat
+export interface EnhancedFTCCaseSummary extends FTCCaseSummary {
+  statutory_topics: StatutoryTopic[];
+  practice_areas: PracticeArea[];
+  industry_sectors: IndustrySector[];
+  remedy_types: RemedyType[];
+  provision_counts_by_topic: Record<string, number>;
+}
