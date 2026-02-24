@@ -6,7 +6,7 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "331 W. Parish Lane Suite 106-317, Centerville, Utah 84014",
-      "business_description": "Illusory Systems, Inc., also doing business as Nomad, designed, operated, and advertised a cross-chain bridge service that allows users to transfer messages and assets across blockchain networks using the Nomad Messaging Protocol and Nomad Token Bridge."
+      "business_description": "Illusory Systems, Inc., doing business as Nomad, designed, operated, and advertised a cross-chain bridge service that allows users to transfer messages and assets between blockchain networks. The company developed the Nomad Messaging Protocol and offered the Nomad Token Bridge, a platform that used smart contracts to enable asset bridging across chains."
     },
     "commissioners": [
       "Andrew N. Ferguson, Chairman",
@@ -17,62 +17,90 @@
       "year": 2025
     },
     "legal_authority": "Section 5(a) of the Federal Trade Commission Act",
-    "violation_type": "both",
+    "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/illusory-systemsnomad"
   },
   "complaint": {
-    "factual_background": "Illusory Systems, Inc. (d/b/a Nomad) operated a cross-chain bridge that allowed users to transfer cryptocurrency assets between blockchain networks. Despite marketing itself as a 'security-first' platform, Nomad failed to implement basic secure coding practices, adequate testing, incident response systems, or security safeguards like circuit breakers. In August 2022, hackers exploited a vulnerability in inadequately tested code, draining approximately $186 million from the bridge, causing users to lose over $100 million.",
+    "factual_background": "Nomad (Illusory Systems, Inc.) operated a cross-chain cryptocurrency bridge and marketed it with prominent security-first claims, including that it was 'secure... period.' Despite these representations, Nomad failed to implement basic secure coding practices, lacked adequate testing, had no incident response plan, no circuit breakers, and insufficient security staff. In June 2022, Nomad deployed inadequately tested code containing a critical vulnerability. On August 1, 2022, hackers exploited that vulnerability, and because Nomad had no effective way to stop the attack, nearly all assets in the bridge—approximately $186 million—were drained within hours, causing users to lose more than $100 million.",
     "representations_made": [
       {
-        "description": "Claimed to provide high security for users bridging assets",
-        "quoted_text": "[Referencing Nomad's network] Powered by Nomad and Connext, users get the best of all worlds: High security, low cost, and fast bridging.",
-        "source_paragraph": 9
+        "description": "Claimed users get 'High security, low cost, and fast bridging' through the Nomad-powered network",
+        "quoted_text": "A. [Referencing Nomad’s network] Powered by Nomad and Connext, users get the best of all worlds: High security, low cost, and fast bridging. (Exhibit A, www.nomad.xyz) (emphasis added).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 50,
+        "quote_end_line": 53
       },
       {
-        "description": "Claimed to be a security-first cross-chain messaging protocol",
-        "quoted_text": "Nomad is a security-first cross-chain messaging protocol",
-        "source_paragraph": 9
+        "description": "Claimed Nomad is a 'security-first cross-chain messaging protocol'",
+        "quoted_text": "B. Nomad is a security-first cross-chain messaging protocol (Exhibit B, www.nomad.xyz) (emphasis added).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 54,
+        "quote_end_line": 55
       },
       {
-        "description": "Claimed to design the platform in a way that prioritizes safety and security of funds and messages",
-        "quoted_text": "With $1.5B in bridge hacks happening within the last 12 months, many people, protocols, and DAOs [Decentralized Autonomous Organizations] are looking for an interoperability solution that prioritizes the safety and security of their funds/cross chain messages. This is why we designed Nomad in a way that minimizes the trust assumptions for bridging. ... Nomad's optimistic verification allows any single, honest watcher to prevent fraud via on-chain proofs, and keep the entire system (and your funds/messages) safe.",
-        "source_paragraph": 9
+        "description": "Claimed Nomad's design minimizes trust assumptions and that any single honest watcher can prevent fraud and keep the entire system and users' funds safe",
+        "quoted_text": "C. With $1.5B in bridge hacks happening within the last 12 months, many people, protocols, and DAOs [Decentralized Autonomous Organizations] are looking for an interoperability solution that prioritizes the safety and security of their funds/cross chain messages. This is why we designed Nomad in a way that minimizes the trust assumptions for bridging. ... Nomad’s optimistic verification allows any single, honest watcher to prevent fraud via on-chain proofs, and keep the entire system (and your funds/messages) safe. (Exhibit C, https://medium.com/nomad-xyz-blog/nomad-announces-new- cohort-of-investors-to-help-grow-security-first-cross-chain-messaging- solution-d538f955d8c) (underlined emphasis in original; bold emphasis added).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 56,
+        "quote_end_line": 67
       },
       {
-        "description": "Claimed developers can securely build applications and that the company aims to minimize the probability and impact of security issues",
-        "quoted_text": "Using Nomad, developers can securely build cross-chain applications (or xApps) and bridge assets between chains. ... We strive to take advantage of every tool that protects users. We aim to minimize the probability and impact of security issues.",
-        "source_paragraph": 9
+        "description": "Claimed developers can securely build cross-chain applications using Nomad, and that Nomad strives to minimize the probability and impact of security issues",
+        "quoted_text": "D. Using Nomad, developers can securely build cross-chain applications (or xApps) and bridge assets between chains. ... We strive to take advantage of every tool that protects users. We aim to minimize the probability and impact of security issues. (Exhibit D, https://medium.com/nomad-xyz-blog/the-nomad-design- philosophy-6fc0eacf3263) (emphasis added).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 71,
+        "quote_end_line": 76
       },
       {
-        "description": "Claimed security is paramount and considers financial controls and common security measures from traditional finance",
-        "quoted_text": "Security is paramount for Nomad. ... This means considering financial controls and other common security measures taken in traditional finance.",
-        "source_paragraph": 9
+        "description": "Claimed 'Security is paramount for Nomad' and that it considers financial controls and other common security measures",
+        "quoted_text": "E. Security is paramount for Nomad. ... This means considering financial controls and other common security measures taken in traditional finance. (Exhibit E, docs.nomad.xyz/the-nomad-protocol/security) (emphasis added).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 77,
+        "quote_end_line": 80
       },
       {
-        "description": "Claimed to design the platform around principles that prioritize safety",
-        "quoted_text": "People want to bridge now, and we need to enable them to do it safely. As such, Nomad is designed around principles that prioritize safety, simplicity, and our users.",
-        "source_paragraph": 9
+        "description": "Claimed Nomad is designed around principles that prioritize safety, simplicity, and its users",
+        "quoted_text": "F. People want to bridge now, and we need to enable them to do it safely. As such, Nomad is designed around principles that prioritize safety, simplicity, and our users. (Exhibit F, https://medium.com/nomad-xyz-blog/nomad-raises-22m-seed- round-for-security-first-interoperability-5d6b15c96007) (underline emphasis in original; bold emphasis added).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 81,
+        "quote_end_line": 86
       },
       {
-        "description": "Claimed to be secure without qualification",
-        "quoted_text": "\"We're secure... period\"",
-        "source_paragraph": 9
+        "description": "CEO claimed 'We're secure... period'",
+        "quoted_text": "G. “We’re secure... period” (Exhibit G, https://x.com/nomadxyz_/status/1486804062431547395) (Respondent social media account quoting CEO) (quotes and ellipses in original; emphasis added).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 87,
+        "quote_end_line": 90
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "Unfair Security Practices",
-        "representation": "Respondent's failure to employ reasonable and appropriate software development practices",
-        "fact": "Respondent failed to implement well-known secure coding practices including adequate unit testing, security vulnerability reporting processes, a Written Information Security Plan, adequate security staffing, automated systems to detect unusual transactions, and circuit breakers or kill switches to prevent catastrophic loss",
-        "conclusion": "This failure caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves. This practice is an unfair act or practice."
+        "representation": "Respondent failed to employ reasonable and appropriate software development practices, including adequate code testing, incident response planning, vulnerability reporting processes, security staffing, transaction monitoring, and circuit breakers",
+        "fact": "These failures caused or are likely to cause substantial injury to consumers that is not outweighed by countervailing benefits and is not reasonably avoidable by consumers themselves, resulting in users losing over $100 million",
+        "conclusion": "This practice is an unfair act or practice in violation of Section 5(a) of the FTC Act."
       },
       {
         "count_number": 2,
         "title": "Security Misrepresentations",
-        "representation": "Respondent represented that it implemented secure software development practices",
-        "fact": "Respondent did not implement secure software development practices",
-        "conclusion": "Therefore, the representation set forth in Paragraph 28 is false or misleading."
+        "representation": "Respondent represented, directly or indirectly, expressly or by implication, that it implemented secure software development practices",
+        "fact": "In fact, Respondent did not implement secure software development practices, as set forth in Paragraph 11",
+        "conclusion": "Therefore, the representation set forth in Paragraph 28 is false or misleading, constituting a deceptive act or practice in violation of Section 5(a) of the FTC Act."
       }
     ]
   },
@@ -85,23 +113,27 @@
     "provisions": [
       {
         "provision_number": "I",
-        "title": "Prohibition against Misrepresentations",
+        "title": "Prohibition Against Misrepresentations",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent the extent to which they implement secure software development practices or protect the security of consumers' financial assets.",
+        "summary": "Respondent and all persons acting with it must not misrepresent, expressly or by implication, their secure software development practices or the protection of consumers' financial assets.",
         "requirements": [
           {
             "description": "Must not misrepresent the extent to which they implement secure software development practices",
-            "quoted_text": "IT IS ORDERED that Respondent, and Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service must not misrepresent in any manner, expressly or by implication: A. the extent to which they implement secure software development practices",
+            "quoted_text": "IT IS ORDERED that Respondent, and Respondent’s officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service must not misrepresent in any manner, expressly or by implication: A. the extent to which they implement secure software development practices; or B. the extent to which they protect the security of consumers’ financial assets.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 137,
+            "quote_end_line": 142
           },
           {
             "description": "Must not misrepresent the extent to which they protect the security of consumers' financial assets",
-            "quoted_text": "IT IS ORDERED that Respondent, and Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service must not misrepresent in any manner, expressly or by implication: B. the extent to which they protect the security of consumers' financial assets.",
+            "quoted_text": "A. the extent to which they implement secure software development practices; or B. the extent to which they protect the security of consumers’ financial assets.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 141,
+            "quote_end_line": 142
           }
         ]
       },
@@ -109,105 +141,106 @@
         "provision_number": "II",
         "title": "Mandated Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondent must establish, implement, and maintain a comprehensive information security program designed to protect consumers' financial assets against loss from theft or unauthorized access.",
+        "summary": "Respondent must establish, implement, and maintain a comprehensive information security program designed to protect consumers' financial assets against loss from theft or unauthorized access, satisfying numerous specific sub-requirements.",
         "requirements": [
           {
-            "description": "Establish and implement comprehensive information security program",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent, in connection with operating a Cross Chain Application must, within thirty (30) days of issuance of this order, establish and implement, and thereafter maintain, a comprehensive information security program (\"Information Security Program\") that is designed to protect consumers' financial assets against loss from theft or other unauthorized access.",
+            "description": "Within 30 days of issuance, establish and implement, and thereafter maintain, a comprehensive information security program designed to protect consumers' financial assets",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent, in connection with operating a Cross Chain Application must, within thirty (30) days of issuance of this order, establish and implement, and thereafter maintain, a comprehensive information security program (“Information Security Program”) that is designed to protect consumers’ financial assets against loss from theft or other unauthorized access. To satisfy this requirement, Respondent must, at a minimum:",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 144,
+            "quote_end_line": 149
           },
           {
             "description": "Document in writing the content, implementation, and maintenance of the Information Security Program",
-            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Information Security Program",
+            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Information Security Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 150,
+            "quote_end_line": 151
           },
           {
-            "description": "Provide the written program and evaluations to board of directors or senior officer at least once every twelve months",
-            "quoted_text": "B. Provide the written program and any evaluations thereof or updates thereto to its board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer responsible for its Information Security Program at least once every twelve (12) months",
-            "deadline": null,
+            "description": "Provide the written program and any evaluations or updates to the board of directors or senior officer at least once every 12 months",
+            "quoted_text": "B. Provide the written program and any evaluations thereof or updates thereto to its board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer responsible for its Information Security Program at least once every twelve (12) months;",
+            "deadline": "annually",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 155,
+            "quote_end_line": 158
           },
           {
             "description": "Designate an employee to coordinate and be responsible for the Information Security Program",
-            "quoted_text": "C. Designate an employee to coordinate and be responsible for the Information Security Program",
+            "quoted_text": "C. Designate an employee to coordinate and be responsible for the Information Security Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 159,
+            "quote_end_line": 160
           },
           {
-            "description": "Assess and document internal and external risks at least once every twelve months",
-            "quoted_text": "D. Assess and document, at least once every twelve (12) months, internal and external risks to the security of consumers' assets that could result in the misuse, loss, theft, or other compromise of consumers' assets",
+            "description": "Assess and document, at least once every 12 months, internal and external risks to the security of consumers' assets",
+            "quoted_text": "D. Assess and document, at least once every twelve (12) months, internal and external risks to the security of consumers’ assets that could result in the misuse, loss, theft, or other compromise of consumers’ assets;",
+            "deadline": "annually",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 161,
+            "quote_end_line": 163
+          },
+          {
+            "description": "Design, implement, maintain, and document safeguards that control for internal and external risks identified under Provision II.D, including secure software development, annual security training, technical monitoring for anomalous activity, and a pause mechanism for systems allowing irrevocable fund transfers",
+            "quoted_text": "E. Design, implement, maintain, and document safeguards that control for the internal and external risks to the security of consumers’ assets identified in response to sub- Provision II.D. Each safeguard must be based on the volume of the assets that are at risk, and the likelihood that the risk could be realized and result in the misuse, loss, theft, or other compromise of such assets. Such safeguards must also include: 1. The implementation of secure software development and testing practices; 2. Regular security training programs, on at least an annual basis, that are updated, as applicable, to address internal or external risks identified by Respondent under Provision II.D of this Order, and that include, at a minimum, security awareness training for all employees on Respondent’s security policies and procedures; 3. Technical measures to monitor all of Respondent’s services related to the security of consumers’ assets that are designed to identify anomalous activity and/or security events; and 4. For any systems that allow irrevocable actions such as the unrecoverable transfer of funds, a way to quickly pause or limit the functioning of the system if it exhibits unexpected behavior, such as the exploitation of a security vulnerability, until a remedy for the behavior can be deployed, unless technically infeasible, in which case the executive responsible for implementing Respondent’s Mandated Information Security Program must provide a written statement to the Commission within ninety (90) days of entry of this order, sworn under penalty of perjury, certifying that such measures are technically infeasible and providing a detailed explanation for that determination. The written statement must be based on the personal knowledge of the executive or subject matter experts upon whom the executive reasonably relies in making the statement.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 164,
+            "quote_end_line": 187
           },
           {
-            "description": "Design, implement, maintain, and document safeguards that control for internal and external risks",
-            "quoted_text": "E. Design, implement, maintain, and document safeguards that control for the internal and external risks to the security of consumers' assets identified in response to sub-Provision II.D. Each safeguard must be based on the volume of the assets that are at risk, and the likelihood that the risk could be realized and result in the misuse, loss, theft, or other compromise of such assets.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Implement secure software development and testing practices",
-            "quoted_text": "1. The implementation of secure software development and testing practices",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Conduct regular security training programs on at least an annual basis",
-            "quoted_text": "2. Regular security training programs, on at least an annual basis, that are updated, as applicable, to address internal or external risks identified by Respondent under Provision II.D of this Order, and that include, at a minimum, security awareness training for all employees on Respondent's security policies and procedures",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Implement technical measures to monitor services and identify anomalous activity and security events",
-            "quoted_text": "3. Technical measures to monitor all of Respondent's services related to the security of consumers' assets that are designed to identify anomalous activity and/or security events",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Implement ability to pause or limit systems that allow irrevocable actions if they exhibit unexpected behavior, or certify technical infeasibility",
-            "quoted_text": "4. For any systems that allow irrevocable actions such as the unrecoverable transfer of funds, a way to quickly pause or limit the functioning of the system if it exhibits unexpected behavior, such as the exploitation of a security vulnerability, until a remedy for the behavior can be deployed, unless technically infeasible, in which case the executive responsible for implementing Respondent's Mandated Information Security Program must provide a written statement to the Commission within ninety (90) days of entry of this order, sworn under penalty of perjury, certifying that such measures are technically infeasible and providing a detailed explanation for that determination.",
+            "description": "If a pause/limit mechanism for irrevocable transfer systems is technically infeasible, the responsible executive must provide a written sworn statement to the Commission within 90 days of entry of the order",
+            "quoted_text": "for the behavior can be deployed, unless technically infeasible, in which case the executive responsible for implementing Respondent’s Mandated Information Security Program must provide a written statement to the Commission within ninety (90) days of entry of this order, sworn under penalty of perjury, certifying that such measures are technically infeasible and providing a detailed explanation for that determination. The written statement must be based on the personal knowledge of the executive or subject matter experts upon whom the executive reasonably relies in making the statement.",
             "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 181,
+            "quote_end_line": 187
           },
           {
-            "description": "Assess the sufficiency of safeguards at least once every twelve months and modify the program based on results",
-            "quoted_text": "F. Assess, at least once every twelve (12) months, the sufficiency of any safeguards in place to address the internal and external risks to the security of consumers' assets, and modify the Information Security Program based on the results",
-            "deadline": null,
+            "description": "Assess at least once every 12 months the sufficiency of safeguards in place and modify the Information Security Program based on the results",
+            "quoted_text": "F. Assess, at least once every twelve (12) months, the sufficiency of any safeguards in place to address the internal and external risks to the security of consumers’ assets, and modify the Information Security Program based on the results;",
+            "deadline": "annually",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 188,
+            "quote_end_line": 190
           },
           {
-            "description": "Test and monitor the effectiveness of safeguards at least once every twelve months and modify the program based on results",
-            "quoted_text": "G. Test and monitor the effectiveness of the safeguards at least once every twelve (12) months, and modify the Information Security Program based on the results",
-            "deadline": null,
+            "description": "Test and monitor the effectiveness of safeguards at least once every 12 months, and modify the Information Security Program based on the results",
+            "quoted_text": "G. Test and monitor the effectiveness of the safeguards at least once every twelve (12) months, and modify the Information Security Program based on the results;",
+            "deadline": "annually",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 191,
+            "quote_end_line": 192
           },
           {
-            "description": "Select and retain capable service providers and contractually require them to implement safeguards",
-            "quoted_text": "H. Select and retain service providers capable of safeguarding financial assets they interact with on behalf of Respondent and contractually require service providers to implement and maintain safeguards sufficient to address the internal and external risks to the security of consumers' assets",
+            "description": "Select and retain capable service providers and contractually require them to implement and maintain sufficient safeguards",
+            "quoted_text": "H. Select and retain service providers capable of safeguarding financial assets they interact with on behalf of Respondent and contractually require service providers to implement and maintain safeguards sufficient to address the internal and external risks to the security of consumers’ assets; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 196,
+            "quote_end_line": 199
           },
           {
-            "description": "Evaluate and adjust the Information Security Program at least once every twelve months in light of changes or new circumstances",
-            "quoted_text": "I. Evaluate and adjust the Information Security Program in light of any changes to Respondent's operations or business arrangements, new or more efficient technological or operational methods to control for the risks identified in Provision II.D of this Order, or any other circumstances that Respondent knows or has reason to know may have an impact on the effectiveness of the Information Security Program or any of its individual safeguards. At a minimum, Respondent must evaluate the Information Security Program at least once every twelve (12) months and modify the Information Security Program based on the results.",
-            "deadline": null,
+            "description": "Evaluate and adjust the Information Security Program in light of any changes to operations, new technologies, or other circumstances that may affect program effectiveness; at a minimum, evaluate at least once every 12 months",
+            "quoted_text": "I. Evaluate and adjust the Information Security Program in light of any changes to Respondent’s operations or business arrangements, new or more efficient technological or operational methods to control for the risks identified in Provision II.D of this Order, or any other circumstances that Respondent knows or has reason to know may have an impact on the effectiveness of the Information Security Program or any of its individual safeguards. At a minimum, Respondent must evaluate the Information Security Program at least once every twelve (12) months and modify the Information Security Program based on the results.",
+            "deadline": "annually",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 200,
+            "quote_end_line": 206
           }
         ]
       },
@@ -215,56 +248,52 @@
         "provision_number": "III",
         "title": "Information Security Assessments by a Third Party",
         "category": "assessment",
-        "summary": "Respondent must obtain initial and biennial third-party assessments of its Information Security Program for ten years.",
+        "summary": "Respondent must obtain initial and biennial independent third-party assessments of its Information Security Program, following specific requirements for assessor qualifications, reporting periods, assessment content, and submission to the Commission.",
         "requirements": [
           {
-            "description": "Obtain assessments from a qualified, objective, independent third-party professional using accepted procedures and standards",
-            "quoted_text": "A. The Assessments must be obtained from a qualified, objective, independent third-party professional (\"Assessor\"), who: (1) uses procedures and standards generally accepted in the profession; (2) conducts an independent review of the Information Security Program; (3) retains all documents relevant to each Assessment for five (5) years after completion of such Assessment, and (4) will provide such documents to the Commission within ten (10) days of receipt of a written request from a representative of the Commission.",
-            "deadline": "10 days",
+            "description": "Obtain initial and biennial assessments from a qualified, objective, independent third-party professional using generally accepted procedures who retains documents for 5 years and provides them to the Commission within 10 days of request",
+            "quoted_text": "A. The Assessments must be obtained from a qualified, objective, independent third- party professional (“Assessor”), who: (1) uses procedures and standards generally accepted in the profession; (2) conducts an independent review of the Information Security Program; (3) retains all documents relevant to each Assessment for five (5) years after completion of such Assessment, and (4) will provide such documents to the Commission within ten (10) days of receipt of a written request from a representative of the Commission. No documents may be withheld on the basis of a claim of confidentiality, proprietary or trade secrets, work product protection, attorney-client privilege, statutory exemption, or any similar claim.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 211,
+            "quote_end_line": 218
           },
           {
-            "description": "Provide the Commission with the name, affiliation, and qualifications of the proposed Assessor for approval",
+            "description": "For each Assessment, provide the Associate Director for Enforcement, Bureau of Consumer Protection, with the name, affiliation, and qualifications of the proposed Assessor for approval",
             "quoted_text": "B. For each Assessment, Respondent must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name, affiliation, and qualifications of the proposed Assessor, whom the Associate Director has the authority to approve in her or his sole discretion.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 219,
+            "quote_end_line": 222
           },
           {
-            "description": "Conduct initial assessment covering the first 365 days after order issuance and biennial assessments for ten years thereafter",
+            "description": "Initial Assessment reporting period must cover the first 365 days after order issuance; biennial Assessments must cover each 2-year period thereafter for 10 years",
             "quoted_text": "C. The reporting period for the Assessments must cover: (1) the first 365 days after the issuance date of the Order for the initial Assessment; and (2) each 2-year period thereafter for ten (10) years after issuance of the Order for the biennial Assessments.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 223,
+            "quote_end_line": 225
           },
           {
-            "description": "Each assessment must determine implementation, assess effectiveness, identify gaps or weaknesses, and address prior findings",
-            "quoted_text": "D. Each Assessment must, for the entire assessment period: (1) determine whether Respondent has implemented and maintained the Information Security Program required by Provision II of this Order, titled Mandated Information Security Program; (2) assess the effectiveness of Respondent's implementation and maintenance of Provisions II.A-I; (3) identify any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program; (4) address the status of gaps or weaknesses in, or instances of material non-compliance with, the Information Security Program that were identified in any prior Assessment required by this Order",
+            "description": "Each Assessment must determine whether Respondent implemented and maintained the Information Security Program, assess effectiveness of Provisions II.A–I, identify gaps or weaknesses, address status of prior gaps, and identify specific evidence examined; must be signed by Assessor and state hours worked",
+            "quoted_text": "D. Each Assessment must, for the entire assessment period: (1) determine whether Respondent has implemented and maintained the Information Security Program required by Provision II of this Order, titled Mandated Information Security Program; (2) assess the effectiveness of Respondent’s implementation and maintenance of Provisions II.A-I; (3) identify any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program; (4) address the status of gaps or weaknesses in, or instances of material non- compliance with, the Information Security Program that were identified in any prior Assessment required by this Order; and (5) identify specific evidence (including documents reviewed, sampling and testing performed, and interviews conducted) examined to make such Page 7 of 13 determinations, assessments, and identifications, and explain why the evidence that the Assessor examined is (a) appropriate for assessing an enterprise of Respondent’s size, complexity, and risk profile; and (b) sufficient to justify the Assessor’s findings. No finding of any Assessment may rely primarily on assertions or attestations by Respondent’s management. The Assessment must be signed by the Assessor, state that the Assessor conducted an independent review of the Information Security Program and did not rely primarily on assertions or attestations by Respondent’s management, and state the number of hours that each member of the assessment team worked on the Assessment. To the extent that Respondent revises, updates, or adds one or more safeguards required under Provision II of this Order during an Assessment period, the Assessment must assess the effectiveness of the revised, updated, or added safeguard(s) for the time period in which it was in effect, and provide a separate statement detailing the basis for each revised, updated, or additional safeguard.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 226,
+            "quote_end_line": 249
           },
           {
-            "description": "Complete each assessment within sixty days after the end of the reporting period",
-            "quoted_text": "E. Each Assessment must be completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
-            "deadline": "60 days",
+            "description": "Each Assessment must be completed within 60 days after the end of the reporting period; initial Assessment must be submitted to the Commission within 10 days of completion via email to DEbrief@ftc.gov or overnight courier; subsequent biennial Assessments must be retained and provided within 10 days of request",
+            "quoted_text": "E. Each Assessment must be completed within sixty (60) days after the end of the reporting period to which the Assessment applies. Unless otherwise directed by a Commission representative in writing, Respondent must submit the initial Assessment to the Commission within ten (10) days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “In re Nomad, FTC File No. 2323016.” All subsequent biennial Assessments must be retained by Respondent until the order is terminated and provided to the Associate Director for Enforcement within ten (10) days of request. The initial Assessment and any subsequent biennial Assessment provided to the Commission must be marked, in the upper right-hand corner of each page, with the words “DPIP Assessment” in red lettering.",
+            "deadline": "60 days after reporting period ends; 10 days after completion for submission",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Submit initial assessment to the Commission within ten days after completion",
-            "quoted_text": "Unless otherwise directed by a Commission representative in writing, Respondent must submit the initial Assessment to the Commission within ten (10) days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Retain all subsequent biennial assessments until order termination and provide to the Associate Director within ten days of request",
-            "quoted_text": "All subsequent biennial Assessments must be retained by Respondent until the order is terminated and provided to the Associate Director for Enforcement within ten (10) days of request.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 250,
+            "quote_end_line": 261
           }
         ]
       },
@@ -272,28 +301,34 @@
         "provision_number": "IV",
         "title": "Cooperation with Third Party Information Security Assessor",
         "category": "affirmative_obligation",
-        "summary": "Respondent must cooperate fully with the third-party Assessor by providing all relevant information, network access, and disclosing all material facts.",
+        "summary": "Respondent must fully cooperate with the third-party Assessor by providing all relevant information, network and IT asset access, and disclosing all material facts without misrepresentation.",
         "requirements": [
           {
-            "description": "Provide or make available to the Assessor all information and material in its possession relevant to the Assessment",
+            "description": "Provide or make available to the Assessor all information and material in Respondent's possession, custody, or control relevant to the Assessment for which there is no reasonable claim of privilege",
             "quoted_text": "A. Provide or otherwise make available to the Assessor all information and material in its possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 266,
+            "quote_end_line": 268
           },
           {
-            "description": "Provide the Assessor with information about networks and IT assets, code, and code repositories related to security of consumers' assets",
-            "quoted_text": "B. Provide or otherwise make available to the Assessor information about Respondent's network(s) and all of Respondent's IT assets, code, and code repositories related to the security of consumers' assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the network(s) and IT assets, code and code repositories deemed in scope",
+            "description": "Provide or make available to the Assessor information about Respondent's networks, IT assets, code, and code repositories related to the security of consumers' assets to determine scope and visibility",
+            "quoted_text": "B. Provide or otherwise make available to the Assessor information about Respondent’s network(s) and all of Respondent’s IT assets, code, and code repositories related to the security of consumers’ assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the network(s) and IT assets, code and code repositories deemed in scope; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 269,
+            "quote_end_line": 273
           },
           {
-            "description": "Disclose all material facts to the Assessor and not misrepresent any fact material to the Assessor's determinations",
-            "quoted_text": "C. Disclose all material facts to the Assessor, and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor's: (1) determination of whether that Respondent has implemented and maintained the Information Security Program required by Provision II of this Order, titled Mandated Information Security Program; (2) assessment of the effectiveness of the implementation and maintenance of Provisions II.A-I; or (3) identification of any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program.",
+            "description": "Disclose all material facts to the Assessor and not misrepresent any fact material to the Assessor's determinations regarding the Information Security Program",
+            "quoted_text": "C. Disclose all material facts to the Assessor, and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor’s: (1) determination of whether that Respondent has implemented and maintained the Information Security Program required by Provision II of this Order, titled Mandated Information Security Program; (2) assessment of the effectiveness of the implementation and maintenance of Provisions II.A-I; or (3) identification of Page 8 of 13 any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 274,
+            "quote_end_line": 283
           }
         ]
       },
@@ -301,21 +336,25 @@
         "provision_number": "V",
         "title": "Annual Certification",
         "category": "compliance_reporting",
-        "summary": "Respondent's CEO must provide annual certifications to the Commission confirming establishment, implementation, and maintenance of order requirements and disclosure of any material noncompliance.",
+        "summary": "Respondent's CEO must annually certify to the Commission that Respondent has established, implemented, and maintained the Order's requirements and is not aware of any uncorrected or undisclosed material noncompliance.",
         "requirements": [
           {
-            "description": "Provide annual certification from CEO one year after order issuance and each year thereafter",
-            "quoted_text": "A. One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from Respondent's Chief Executive Officer that: (1) that Respondent has established, implemented, and maintained the requirements of this Order; and (2) that Respondent is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission.",
-            "deadline": null,
+            "description": "One year after issuance and each year thereafter, provide the Commission with a CEO certification that Respondent has established, implemented, and maintained Order requirements and is not aware of any material noncompliance that has not been corrected or disclosed",
+            "quoted_text": "A. One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from Respondent’s Chief Executive Officer that: (1) that Respondent has established, implemented, and maintained the requirements of this Order; and (2) that Respondent is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission.",
+            "deadline": "1 year after issuance, then annually",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 286,
+            "quote_end_line": 290
           },
           {
-            "description": "Submit annual certifications to the Commission via email or overnight courier",
-            "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, \"In re Nomad, FTC File No. 2323016.\"",
+            "description": "Submit all annual certifications via email to DEbrief@ftc.gov or by overnight courier to Associate Director for Enforcement, Bureau of Consumer Protection, with subject line beginning 'In re Nomad, FTC File No. 2323016'",
+            "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “In re Nomad, FTC File No. 2323016.”",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 291,
+            "quote_end_line": 295
           }
         ]
       },
@@ -323,42 +362,61 @@
         "provision_number": "VI",
         "title": "Return of Recovered Assets to Users",
         "category": "affirmative_obligation",
-        "summary": "Respondent must make available approximately $37.5 million in recovered assets to consumers affected by the Breach and provide notice of the refund process.",
+        "summary": "Respondent must make available approximately $37.5 million in recovered assets to consumers via bounty, recovery bridge, or court-ordered process; provide website notice for 11 months; complete return of remaining assets within one year; and report on the refund program under penalty of perjury.",
         "requirements": [
           {
-            "description": "Make available recovered assets (approximately $37,500,000) for the benefit of consumers through specified processes",
-            "quoted_text": "A. To the extent not already distributed through the process described in Provision VI.A(1) and (2) prior to the entry of the order, make available the assets it recovered after the Breach for the benefit of consumers—approximately $37,500,000 in nominal value as of the date of the Breach—or the liquidated value of such assets or asset equivalents, as follows: (1) Pursuant to the \"bridge hack bounty\" process that Respondent established to incentivize the return of assets; (2) Through the \"recovery bridge\" process that Respondent established on or about December 20, 2022, with any necessary adjustments to the process designed to facilitate the return of remaining assets to consumers; or (3) Pursuant to any procedure set forth by court order.",
+            "description": "Make available recovered assets (approximately $37,500,000 in nominal value as of the Breach date) for the benefit of consumers through the bridge hack bounty process, the recovery bridge process, or pursuant to any court order",
+            "quoted_text": "A. To the extent not already distributed through the process described in Provision VI.A(1) and (2) prior to the entry of the order, make available the assets it recovered after the Breach for the benefit of consumers—approximately $37,500,000 in nominal value as of the date of the Breach—or the liquidated value of such assets or asset equivalents, as follows: (1) Pursuant to the “bridge hack bounty” process that Respondent established to incentivize the return of assets; (2) Through the “recovery bridge” process that Respondent established on or about December 20, 2022, with any necessary adjustments to the process designed to facilitate the return of remaining assets to consumers; or (3) Pursuant to any procedure set forth by court order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 298,
+            "quote_end_line": 307
           },
           {
-            "description": "Provide notice to consumers of the refund for eleven months on Respondent's website",
-            "quoted_text": "B. For a period of eleven months after the effective date of this order, provide notice to consumers of the refund required by Provision VI.A. of this order. Such notice shall be clearly and prominently displayed on Respondent's website https://nomad.xyz.",
-            "deadline": null,
+            "description": "For 11 months after the effective date of the order, provide clearly and prominently displayed notice to consumers of the refund on Respondent's website https://nomad.xyz",
+            "quoted_text": "B. For a period of eleven months after the effective date of this order, provide notice to consumers of the refund required by Provision VI.A. of this order. Such notice shall be clearly and prominently displayed on Respondent’s website https://nomad.xyz.",
+            "deadline": "11 months after effectivedate",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 308,
+            "quote_end_line": 310
           },
           {
-            "description": "Return any remaining recovered assets within one year after the effective date or 30 days after the end of any litigation, whichever is later",
+            "description": "Within one year after the effective date of the Order, or 30 days after the end of any related litigation (whichever is later), return any remaining assets recovered from the Breach where technically feasible; if not technically feasible, include a detailed explanation in the Provision VI.D report",
             "quoted_text": "C. Within one year after the effective date of this Order, or 30 days after the end of any litigation involving or relating to the Breach, whichever is later in time, Respondent must, where technically feasible, return any remaining assets recovered from the Breach as required by Provision VI.A. In the event Respondent determines that the return of certain assets is not technically feasible, Respondent much include a detailed explanation for that determination in the report required by Provision VI.D.",
-            "deadline": "1 year",
+            "deadline": "1 year after effective date or 30 days after end of related litigation, whichever is later",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 311,
+            "quote_end_line": 316
           },
           {
-            "description": "Submit a report at the conclusion of the refund program summarizing compliance, including total transactions and value of assets returned",
-            "quoted_text": "D. Respondent must report on their refund program under penalty of perjury: 1. Respondent must submit a report at the conclusion of the program summarizing its compliance, including the total number of transactions and value of assets returned.",
+            "description": "Submit a report at the conclusion of the refund program summarizing compliance, including total number of transactions and value of assets returned",
+            "quoted_text": "1. Respondent must submit a report at the conclusion of the program summarizing its compliance, including the total number of transactions and value of assets returned.",
+            "deadline": "at conclusion of program",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 321,
+            "quote_end_line": 323
+          },
+          {
+            "description": "If a Commission representative requests information regarding the program, including underlying customer data, submit it within 10 business days of the request",
+            "quoted_text": "2. If a representative of the Commission requests any information regarding the program, including any of the underlying customer data, Respondent must submit it within ten business days of the request. Upon request by Respondent, this ten-business-day period may be extended for a reasonable number of days by the Commission’s requesting representative, and such extension shall not be unreasonably withheld.",
+            "deadline": "10 business days of request",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 324,
+            "quote_end_line": 328
+          },
+          {
+            "description": "Failure to provide required refunds or requested information will be treated as a continuing failure to obey the Order",
+            "quoted_text": "3. Failure to provide required refunds or any requested information will be treated as a continuing failure to obey this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Provide requested information regarding the refund program within ten business days of Commission request",
-            "quoted_text": "2. If a representative of the Commission requests any information regarding the program, including any of the underlying customer data, Respondent must submit it within ten business days of the request.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 329,
+            "quote_end_line": 330
           }
         ]
       },
@@ -366,28 +424,34 @@
         "provision_number": "VII",
         "title": "Acknowledgments of the Order",
         "category": "acknowledgment",
-        "summary": "Respondent must obtain and submit acknowledgments of receipt of the Order from specified personnel and entities.",
+        "summary": "Respondent must submit its own acknowledgment of receipt of the Order, deliver copies to principals, officers, relevant employees and agents, and future personnel, and obtain signed acknowledgments within 30 days.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt of Order to the Commission within 10 days after effective date",
+            "description": "Within 10 days after the effective date of the Order, submit to the Commission an acknowledgment of receipt of this Order",
             "quoted_text": "A. Respondent, within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 334,
+            "quote_end_line": 335
           },
           {
-            "description": "Deliver a copy of the Order to all principals, officers, directors, managers, employees with managerial responsibilities, and agents within 10 days for current personnel or before assuming responsibilities for new personnel",
+            "description": "Deliver a copy of the Order to all principals, officers, directors, LLC managers and members; all employees with managerial responsibilities for conduct related to the Order; all agents and representatives who participate in such conduct; and any resulting business entity from structural changes. Delivery within 10 days for current personnel; before assuming responsibilities for all others",
             "quoted_text": "B. Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees having managerial responsibilities for conduct related to the subject matter of the Order and all agents and representatives who participate in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Reports and Notices. Delivery must occur within 10 days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "10 days",
+            "deadline": "10 days for current personnel; before assuming responsibilities for others",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 336,
+            "quote_end_line": 342
           },
           {
-            "description": "Obtain signed and dated acknowledgments of receipt from each individual or entity to which the Order was delivered within 30 days",
+            "description": "From each individual or entity that received a copy, obtain within 30 days a signed and dated acknowledgment of receipt of the Order",
             "quoted_text": "C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 343,
+            "quote_end_line": 345
           }
         ]
       },
@@ -395,35 +459,52 @@
         "provision_number": "VIII",
         "title": "Compliance Reports and Notices",
         "category": "compliance_reporting",
-        "summary": "Respondent must submit annual compliance reports detailing business activities, compliance with the Order, and timely notices of changes to structure or contact information.",
+        "summary": "Respondent must file a sworn compliance report one year after issuance, notify the Commission within 14 days of changes to contact points or organizational structure, and notify the Commission within 14 days of any bankruptcy filing.",
         "requirements": [
           {
-            "description": "Submit a compliance report one year after issuance date, sworn under penalty of perjury, identifying contact information, all business activities, and compliance with each provision of the Order",
-            "quoted_text": "A. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: 1. Identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; 2. Identify all of Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; 3. Describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales; 4. Describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes Respondent made to comply with the Order; and 5. Provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
-            "deadline": "1 year",
+            "description": "One year after issuance of the Order, submit a compliance report sworn under penalty of perjury identifying contact information, all businesses, describing activities and compliance with each Provision, and providing copies of Order acknowledgments",
+            "quoted_text": "A. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: 1. Identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; Page 10 of 13 2. Identify all of Respondent’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; 3. Describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales; 4. Describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes Respondent made to comply with the Order; and 5. Provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year after issuance",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 349,
+            "quote_end_line": 365
           },
           {
-            "description": "Submit a compliance notice within 14 days of any change in designated point of contact",
-            "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: 1. any designated point of contact",
-            "deadline": "14 days",
+            "description": "Submit a sworn compliance notice within 14 days of any change in a designated point of contact or in the structure of Respondent or any entity it owns or controls that may affect compliance obligations under the Order",
+            "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: 1. any designated point of contact; or 2. the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days of change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 366,
+            "quote_end_line": 372
           },
           {
-            "description": "Submit a compliance notice within 14 days of any change in the structure of Respondent or any entity that may affect compliance obligations",
-            "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: 2. the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
-            "deadline": "14 days",
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding within 14 days of its filing",
+            "description": "Submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding within 14 days of filing",
             "quoted_text": "C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 373,
+            "quote_end_line": 375
+          },
+          {
+            "description": "All submissions required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 376,
+            "quote_end_line": 380
+          },
+          {
+            "description": "Unless otherwise directed, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to Associate Director for Enforcement, with subject line beginning 'In re Nomad, 2323016'",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: In re Nomad, 2323016.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 381,
+            "quote_end_line": 385
           }
         ]
       },
@@ -431,56 +512,70 @@
         "provision_number": "IX",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must create and retain specified records for 5 years, including accounting records, personnel records, consumer complaints, security representations, assessment materials, and compliance documentation.",
+        "summary": "Respondent must create and retain for 5 years specified records including accounting records, personnel records, consumer complaints, representations about security practices, Assessment materials, law enforcement communications, and all records necessary to demonstrate full compliance.",
         "requirements": [
           {
-            "description": "Create and retain accounting records showing all revenues, costs, and resulting net profit or loss for 5 years",
-            "quoted_text": "A. accounting records showing all revenues, the costs incurred in generating those revenues, and resulting net profit or loss",
-            "deadline": null,
+            "description": "Create and retain for 5 years accounting records showing all revenues, costs, and resulting net profit or loss",
+            "quoted_text": "A. accounting records showing all revenues, the costs incurred in generating those revenues, and resulting net profit or loss;",
+            "deadline": "5 years retention",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 390,
+            "quote_end_line": 391
           },
           {
-            "description": "Create and retain personnel records for each person providing services, including name, contact information, job title, dates of service, and reason for termination for 5 years",
-            "quoted_text": "B. personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination",
-            "deadline": null,
+            "description": "Create and retain for 5 years personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination for each person providing services related to any aspect of the Order",
+            "quoted_text": "B. personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "deadline": "5 years retention",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 395,
+            "quote_end_line": 398
           },
           {
-            "description": "Create and retain copies or records of all consumer complaints and refund requests and any responses for 5 years",
-            "quoted_text": "C. copies or records of all consumer complaints and refund requests, whether received directly or indirectly, such as through a third party, and any response",
-            "deadline": null,
+            "description": "Create and retain for 5 years copies or records of all consumer complaints and refund requests, whether received directly or indirectly, and any response",
+            "quoted_text": "C. copies or records of all consumer complaints and refund requests, whether received directly or indirectly, such as through a third party, and any response;",
+            "deadline": "5 years retention",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 399,
+            "quote_end_line": 400
           },
           {
-            "description": "Create and retain a copy of each widely disseminated and materially different representation about secure software development practices or protection of consumers' financial assets for 5 years",
-            "quoted_text": "D. a copy of each widely disseminated and materially different representation by Respondent that describes the extent to which Respondent implements secure software development practices or protects consumers' financial assets, including any representation concerning a change in any website or other service controlled by Respondent that relates to the security of consumers' financial assets",
-            "deadline": null,
+            "description": "Create and retain for 5 years a copy of each widely disseminated and materially different representation describing Respondent's secure software development practices or protection of consumers' financial assets, including representations concerning changes to any website or service related to security",
+            "quoted_text": "D. a copy of each widely disseminated and materially different representation by Respondent that describes the extent to which Respondent implements secure software development practices or protects consumers’ financial assets, including any representation concerning a change in any website or other service controlled by Respondent that relates to the security of consumers’ financial assets;",
+            "deadline": "5 years retention",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 401,
+            "quote_end_line": 405
           },
           {
-            "description": "Retain all materials relied upon to prepare each Assessment for 5 years after the date of preparation",
-            "quoted_text": "E. for 5 years after the date of preparation of each Assessment required by this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Respondent, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Respondent's compliance with related Provisions of this Order, for the compliance period covered by such Assessment",
-            "deadline": null,
+            "description": "For 5 years after preparation of each Assessment, retain all materials relied upon to prepare the Assessment, including plans, reports, studies, reviews, audits, policies, training materials, and assessments",
+            "quoted_text": "E. for 5 years after the date of preparation of each Assessment required by this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Respondent, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Respondent’s compliance with related Provisions of this Order, for the compliance period covered by such Assessment;",
+            "deadline": "5 years after each Assessment",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 406,
+            "quote_end_line": 410
           },
           {
-            "description": "Retain copies of all subpoenas and communications with law enforcement related to compliance with the Order for 5 years from the date received",
-            "quoted_text": "F. for 5 years from the date received, copies of all subpoenas and other communications with law enforcement, if such communication relate to Respondent's compliance with this Order",
-            "deadline": null,
+            "description": "For 5 years from the date received, retain copies of all subpoenas and other communications with law enforcement relating to Respondent's compliance with this Order",
+            "quoted_text": "F. for 5 years from the date received, copies of all subpoenas and other communications with law enforcement, if such communication relate to Respondent’s compliance with this Order; and",
+            "deadline": "5 years from date received",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 411,
+            "quote_end_line": 413
           },
           {
-            "description": "Retain all records necessary to demonstrate full compliance with each provision of the Order for 5 years",
+            "description": "Retain all records necessary to demonstrate full compliance with each provision of the Order, including all submissions to the Commission",
             "quoted_text": "G. all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 414,
+            "quote_end_line": 415
           }
         ]
       },
@@ -488,28 +583,34 @@
         "provision_number": "X",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission may monitor Respondent's compliance through requests for additional reports, inspection of records, interviews with personnel, and other lawful investigative means.",
+        "summary": "The Commission may monitor Respondent's compliance by requiring additional reports or records within 10 days of written request, interviewing Respondent's personnel, and using all other lawful means including undercover methods.",
         "requirements": [
           {
-            "description": "Within 10 days of written request from Commission representative, submit additional compliance reports or other requested information and produce records for inspection",
+            "description": "Within 10 days of receipt of a written request from a Commission representative, submit additional compliance reports or other requested information (sworn under penalty of perjury) and produce records for inspection and copying",
             "quoted_text": "A. Within 10 days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
-            "deadline": "10 days",
+            "deadline": "10 days of written request",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 419,
+            "quote_end_line": 422
           },
           {
-            "description": "Permit Commission representatives to communicate directly with Respondent and interview anyone affiliated with Respondent who has agreed to such an interview",
+            "description": "Permit Commission representatives to communicate directly with Respondent and to interview anyone affiliated with Respondent who has agreed to such an interview (with counsel present if desired)",
             "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 423,
+            "quote_end_line": 426
           },
           {
-            "description": "Allow the Commission to use all lawful means to monitor compliance, including posing as consumers or other entities without identification or prior notice",
-            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice.",
+            "description": "The Commission may use all other lawful means, including posing as consumers, suppliers, or other individuals without prior notice or identification, and may use compulsory process under Sections 9 and 20 of the FTC Act",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 427,
+            "quote_end_line": 431
           }
         ]
       },
@@ -517,21 +618,32 @@
         "provision_number": "XI",
         "title": "Order Effective Dates",
         "category": "duration",
-        "summary": "The Order is final and effective upon publication on the FTC website and will terminate 10 years from the date of issuance, subject to extensions if a complaint alleging violations is filed in federal court.",
+        "summary": "The Order is final and effective upon publication on the FTC's website and will terminate 10 years from issuance, or 10 years from the most recent date the Commission files a complaint alleging any violation of the Order in federal court, whichever is later.",
         "requirements": [
           {
-            "description": "Order is final and effective upon publication on ftc.gov",
-            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order.",
+            "description": "Order is final and effective upon publication on the Commission's website (ftc.gov) as a final order",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate 10",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 436,
+            "quote_end_line": 437
+          },
+          {
+            "description": "Order terminates 10 years from issuance or 10 years from the most recent date the Commission files a federal court complaint alleging a violation of the Order, whichever is later; with specified exceptions for shorter provisions, named respondents, and post-termination complaints",
+            "quoted_text": "publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate 10 years from the date of its issuance (which date may be stated at the end of this Order, near the Commission’s seal), or 10 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any provision in this Order that terminates in less than 10 years; B. This Order’s application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this provision. Provided, further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "deadline": "10 years",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 437,
+            "quote_end_line": 453
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 10,
-      "termination_text": "This Order will terminate 10 years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or 10 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later"
+      "termination_text": "This Order will terminate 10 years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or 10 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any provision in this Order that terminates in less than 10 years; B. This Order's application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this provision."
     }
   },
   "metadata": {
@@ -544,8 +656,32 @@
       "complaint_representations": 7,
       "order_provisions": 11,
       "order_definitions": 3,
-      "order_requirements": 51
+      "order_requirements": 49,
+      "provisions_per_section": {
+        "I": 2,
+        "II": 11,
+        "III": 5,
+        "IV": 3,
+        "V": 2,
+        "VI": 6,
+        "VII": 3,
+        "VIII": 5,
+        "IX": 7,
+        "X": 3,
+        "XI": 2
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 7,
+        "complaint_total": 7,
+        "order_verified": 49,
+        "order_total": 49
+      }
     },
-    "processing_time_seconds": 172.4
+    "processing_time_seconds": 120.1
   }
 }

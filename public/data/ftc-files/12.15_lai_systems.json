@@ -6,7 +6,7 @@
       "incorporation_state": "California",
       "entity_type": "limited liability company",
       "address": "11901 Santa Monica Boulevard, Suite 507, Los Angeles, California 90025",
-      "business_description": "LAI Systems, LLC, doing business as TapBlaze, develops and distributes mobile applications for download from Apple's App Store, Google Play, and the Amazon App Store. The company offers free-to-download apps directed to children that generate revenue through in-app advertising and in-app purchases."
+      "business_description": "LAI Systems, LLC, doing business as TapBlaze, develops and distributes mobile applications for download from Apple's App Store, Google Play, and Amazon App Store. The company offers a number of apps directed to children, including My Cake Shop, My Pizza Shop, Hair Salon Makeover, Friday Night Makeover, Marley the Talking Dog, and Animal Sounds. These free-to-download apps generate revenue through in-app advertising and in-app purchases."
     },
     "commissioners": [],
     "case_date": {
@@ -18,15 +18,43 @@
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/142-3261-lai-systems-llc"
   },
   "complaint": {
-    "factual_background": "LAI Systems, LLC (d/b/a TapBlaze) operated mobile apps directed at children under age 13, including My Cake Shop, My Pizza Shop, Hair Salon Makeover, Friday Night Makeover, Marley the Talking Dog, and Animal Sounds. Through these apps, the company allowed third-party advertising networks to collect personal information in the form of persistent identifiers from children for targeted advertising purposes. The company failed to provide required privacy notices to parents and failed to obtain verifiable parental consent before collecting this personal information, in violation of the Children's Online Privacy Protection Rule (COPPA).",
-    "representations_made": [],
+    "factual_background": "LAI Systems, LLC (d/b/a TapBlaze), a Los Angeles-based mobile app developer, operated numerous children's apps — including My Cake Shop, My Pizza Shop, Hair Salon Makeover, Friday Night Makeover, Marley the Talking Dog, and Animal Sounds — that were clearly directed to children under age 13. Through these apps, LAI allowed third-party advertising networks to collect persistent identifiers from child users for the purpose of serving targeted advertising, without ever notifying those networks that the apps were directed to children. LAI failed to post adequate privacy notices, failed to provide direct notice to parents, and failed to obtain verifiable parental consent before collecting children's personal information, all in violation of the COPPA Rule. These violations occurred continuously since at least July 1, 2013, exposing the company to civil penalties of up to $16,000 per violation.",
+    "representations_made": [
+      {
+        "description": "My Cake Shop was marketed as a fun cooking game for kids of all ages, explicitly targeting children as users of the app",
+        "quoted_text": "7 The description of the app in Google Play described it as a “[f]un cooking game for 8 kids of all ages. With this free cake maker kids app, you can let your inner pastry 9 chef go wild . . . .” (See Exhibit B.)",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 13,
+        "quote_start_line": 146,
+        "quote_end_line": 148
+      },
+      {
+        "description": "Animal Sounds was marketed as a learning game specifically for toddlers, and promoted as a tool to keep children entertained",
+        "quoted_text": "16 a slideshow. The description of the app in the Amazon App store stated it is a 17 “learning game for toddlers” and it will “keep your child entertained at a 18 restaurant, during a long drive or while shopping.” (See Exhibit G.)",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 18,
+        "quote_start_line": 179,
+        "quote_end_line": 181
+      },
+      {
+        "description": "LAI allowed third-party advertising networks to collect persistent identifiers from child users through its kids' apps for targeted advertising, without notifying the networks the apps were directed to children or requiring them to refrain from targeted advertising",
+        "quoted_text": "14 20. Through the kids’ apps, Defendant allowed third party advertising 15 networks to collect personal information in the form of persistent identifiers, in 16 order to serve targeted advertising on the app based on users’ activity over time 17 and across sites. Defendant did not inform these third-party advertising networks 18 that the apps are directed to children and did not instruct or contractually require 19 the advertising networks to refrain from targeted advertising. Nor did Defendant 20 8 Case 2:15-cv-09691 Document 1 Filed 12/17/15 Page 9 of 12 Page ID #:9 1 provide the required notices or obtain the required parental consent described in 2 Paragraph 9.",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 20,
+        "quote_start_line": 201,
+        "quote_end_line": 213
+      }
+    ],
     "counts": [
       {
         "count_number": 1,
-        "title": "COPPA Rule Violations",
-        "representation": "Defendant operated online services directed to children that collected or allowed collection of personal information (persistent identifiers) from children under age 13 through third-party advertising networks",
-        "fact": "Defendant failed to: (a) provide notice on its online services of the information collected from children, how it is used, and disclosure practices; (b) provide direct notice to parents of the information collected from children, how it is used, and disclosure practices; and (c) obtain verifiable parental consent before any collection or use of personal information from children",
-        "conclusion": "Therefore, Defendant has violated the Rule, 16 C.F.R. Part 312, specifically Sections 312.4(d), 312.4(b), and 312.5(a)(1), constituting an unfair or deceptive act or practice in violation of Section 5(a) of the FTC Act"
+        "title": "Violations of the COPPA Rule — Failure to Provide Notice, Direct Notice to Parents, and Obtain Verifiable Parental Consent",
+        "representation": "LAI operated children's-directed online services (kids' apps) through which personal information in the form of persistent identifiers was collected from children under age 13 on behalf of LAI by third-party advertising networks",
+        "fact": "LAI failed to: (a) post a privacy notice on its online services disclosing its information collection, use, and disclosure practices as required by 16 C.F.R. § 312.4(d); (b) provide direct notice to parents of its information practices as required by 16 C.F.R. § 312.4(b); and (c) obtain verifiable parental consent before any collection or use of personal information from children as required by 16 C.F.R. § 312.5(a)(1)",
+        "conclusion": "Therefore, Defendant violated the COPPA Rule, 16 C.F.R. Part 312, constituting an unfair or deceptive act or practice in or affecting commerce in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a), for which each collection, use, or disclosure constitutes a separate violation subject to civil penalties up to $16,000."
       }
     ]
   },
@@ -44,7 +72,7 @@
       "Person": "any individual, partnership, corporation, trust, estate, cooperative, association, or other entity.",
       "Personal information": "individually identifiable information about an individual collected online, including: 1. A first and last name; 2. A home or other physical address including street name and name of a city or town; 3. Online contact information; 4. A screen or user name where it functions in the same manner as online contact information; 5. A telephone number; 6. A Social Security number; 7. A persistent identifier that can be used to recognize a user over time and across different websites or online services. Such persistent identifier includes, but is not limited to, a customer number held in a cookie, an Internet Protocol (IP) address, a processor or device serial number, or unique device identifier; 8. A photograph, video, or audio file where such file contains a child's image or voice; 9. Geolocation information sufficient to identify street name and name of a city or town; or 10. Information concerning the child or the parents of that child that the operator collects online from the child and combines with an identifier described in this definition.",
       "Release of personal information": "the sharing, selling, renting, or transfer of personal information to any third party.",
-      "Support for the internal operations of the website or online service": "1. Those activities necessary to: a. Maintain or analyze the functioning of the website or online service; b. Perform network communications; c. Authenticate users of, or personalize the content on, the website or online service; d. Serve contextual advertising on the website or online service or cap the frequency of advertising; e. Protect the security or integrity of the user, website, or online service; f. Ensure legal or regulatory compliance; or g. Fulfill a request of a child as permitted by Section 312.5(c)(3) and (4) of COPPA; 2. So long as the information collected for these activities listed in 1(a) – (g) is not used or disclosed to contact a specific individual, including through behavioral advertising, to amass a profile on a specific individual, or for any other purpose.",
+      "Support for the internal operations of the website or online service": "1. Those activities necessary to: a. Maintain or analyze the functioning of the website or online service; b. Perform network communications; c. Authenticate users of, or personalize the content on, the website or online service; d. Serve contextual advertising on the website or online service or cap the frequency of advertising; e. Protect the security or integrity of the user, website, or online service; f. Ensure legal or regulatory compliance; or g. Fulfill a request of a child as permitted by Section 312.5(c)(3) and (4) of COPPA; 2. So long as the information collected for these activities listed in 1(a)–(g) is not used or disclosed to contact a specific individual, including through behavioral advertising, to amass a profile on a specific individual, or for any other purpose.",
       "Third party": "any person who is not: 1. An operator with respect to the collection or maintenance of personal information on the website or online service; or 2. A person who provides support for the internal operations of the website or online service and who does not use or disclose information protected under this part for any other purpose.",
       "Website or online service directed to children": "a commercial website or online service, or portion thereof, that is targeted to children."
     },
@@ -53,28 +81,34 @@
         "provision_number": "I",
         "title": "Injunction Concerning Collection of Personal Information from Children",
         "category": "prohibition",
-        "summary": "Defendant is permanently restrained from violating the Children's Online Privacy Protection Rule, including failing to provide notice to parents, post privacy notices, and obtain verifiable parental consent.",
+        "summary": "Defendant and those acting in concert with it are permanently restrained from violating the COPPA Rule, specifically from failing to provide direct parental notice, failing to post a prominent privacy notice link, and failing to obtain verifiable parental consent before collecting personal information from children.",
         "requirements": [
           {
-            "description": "Must not fail to make reasonable efforts to ensure that a parent of a child receives direct notice of Defendant's practices with regard to the collection, use, or disclosure of personal information from children, including notice of any material change",
-            "quoted_text": "IT IS ORDERED that Defendant and Defendant's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with being an operator of any website or online service directed to children or of any website or online service with actual knowledge that it is collecting or maintaining personal information from a child, are hereby permanently restrained and enjoined from violating the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312, including, but not limited to: A. failing to make reasonable efforts, taking into account available technology, to ensure that a parent of a child receives direct notice of Defendant's practices with regard to the collection, use, or disclosure of personal information from children, including notice of any material change in the collection, use, or disclosure practices to which the parent has previously consented",
+            "description": "Permanently refrain from failing to make reasonable efforts to ensure a parent of a child receives direct notice of Defendant's practices regarding collection, use, or disclosure of personal information from children, including notice of any material changes",
+            "quoted_text": "7 A. failing to make reasonable efforts, taking into account available technology, 8 to ensure that a parent of a child receives direct notice of Defendant’s practices 9 with regard to the collection, use, or disclosure of personal information from 10 children, including notice of any material change in the collection, use, or 11 disclosure practices to which the parent has previously consented;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9201461574728902
+            "confidence": 1.0,
+            "quote_start_line": 342,
+            "quote_end_line": 346
           },
           {
-            "description": "Must not fail to post a prominent and clearly labeled link to an online notice of its information practices with regard to children on the home or landing page or screen and at each area where personal information is collected from children",
-            "quoted_text": "failing to post a prominent and clearly labeled link to an online notice of its information practices with regard to children on the home or landing page or screen of its website or online service, and at each area of the website or online service where personal information is collected from children",
+            "description": "Permanently refrain from failing to post a prominent and clearly labeled link to an online notice of information practices with regard to children on the home or landing page and at each area where personal information is collected from children",
+            "quoted_text": "12 B. failing to post a prominent and clearly labeled link to an online notice of its 13 information practices with regard to children on the home or landing page or 14 screen of its website or online service, and at each area of the website or online 15 service where personal information is collected from children; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 347,
+            "quote_end_line": 350
           },
           {
-            "description": "Must not fail to obtain verifiable parental consent before any collection, use, or disclosure of personal information from children, including consent to any material change",
-            "quoted_text": "failing to obtain verifiable parental consent before any collection, use, or disclosure of personal information from children, including consent to any material change in the collection, use, or disclosure practices to which the parent has previously consented",
+            "description": "Permanently refrain from failing to obtain verifiable parental consent before any collection, use, or disclosure of personal information from children, including consent to any material change in collection, use, or disclosure practices",
+            "quoted_text": "16 C. failing to obtain verifiable parental consent before any collection, use, or 17 disclosure of personal information from children, including consent to any material 18 change in the collection, use, or disclosure practices to which the parent has 19 previously consented.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 351,
+            "quote_end_line": 354
           }
         ]
       },
@@ -82,28 +116,52 @@
         "provision_number": "II",
         "title": "Monetary Judgment for Civil Penalty",
         "category": "affirmative_obligation",
-        "summary": "Defendant must pay a civil penalty of $60,000 to the United States and relinquish all rights to the transferred assets.",
+        "summary": "Judgment of $60,000 in civil penalties is entered against Defendant, which must be paid within 7 days of entry of the Order by electronic fund transfer; Defendant relinquishes all rights to the transferred assets and acknowledges its Taxpayer Identification Number may be used to collect any delinquent amounts.",
         "requirements": [
           {
-            "description": "Pay $60,000 civil penalty to the Treasurer of the United States",
-            "quoted_text": "Defendant is ordered to pay to Plaintiff, by making payment to the Treasurer of the United States, sixty thousand dollars ($60,000), which, as Defendant stipulates, its undersigned counsel holds in escrow for no purpose other than payment to Plaintiff. Such payment must be made within seven (7) days of entry of this Order by electronic fund transfer in accordance with instructions previously provided by a representative of Plaintiff.",
+            "description": "Judgment in the amount of $60,000 is entered in favor of Plaintiff against Defendant as a civil penalty",
+            "quoted_text": "4 A. Judgment in the amount of sixty thousand dollars ($60,000) is entered in 5 favor of Plaintiff against Defendant as a civil penalty.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 363,
+            "quote_end_line": 364
+          },
+          {
+            "description": "Pay $60,000 to the Treasurer of the United States within seven (7) days of entry of the Order by electronic fund transfer",
+            "quoted_text": "6 B. Defendant is ordered to pay to Plaintiff, by making payment to the Treasurer 7 of the United States, sixty thousand dollars ($60,000), which, as Defendant 8 stipulates, its undersigned counsel holds in escrow for no purpose other than 9 payment to Plaintiff. Such payment must be made within seven (7) days of entry 10 of this Order by electronic fund transfer in accordance with instructions previously 11 provided by a representative of Plaintiff.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 365,
+            "quote_end_line": 370
           },
           {
-            "description": "Relinquish dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order",
-            "quoted_text": "Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets.",
+            "description": "Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets",
+            "quoted_text": "12 C. Defendant relinquishes dominion and all legal and equitable right, title, and 13 interest in all assets transferred pursuant to this Order and may not seek the return 14 of any assets.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9973913043478261
+            "confidence": 1.0,
+            "quote_start_line": 371,
+            "quote_end_line": 373
           },
           {
-            "description": "Submit Taxpayer Identification Number to the Commission for collecting and reporting on any delinquent amount",
-            "quoted_text": "Defendant acknowledges that its Taxpayer Identification Number, which Defendant must submit to the Commission, may be used for collecting and reporting on any delinquent amount arising out of this Order, in accordance with 31 U.S.C. § 7701.",
+            "description": "The facts alleged in the Complaint will be taken as true without further proof in any subsequent civil litigation by or on behalf of the Commission",
+            "quoted_text": "15 D. The facts alleged in the Complaint will be taken as true, without further 16 proof, in any subsequent civil litigation by or on behalf of the Commission, 17 including in a proceeding to enforce its rights to any payment or monetary 18 judgment pursuant to this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.8282828282828283
+            "confidence": 1.0,
+            "quote_start_line": 374,
+            "quote_end_line": 377
+          },
+          {
+            "description": "Defendant must submit its Taxpayer Identification Number to the Commission, which may be used for collecting and reporting on any delinquent amount arising out of this Order",
+            "quoted_text": "19 E. Defendant acknowledges that its Taxpayer Identification Number, which 20 Defendant must submit to the Commission, may be used for collecting and 10 Case 2:15-cv-09691 Document 2-1 Filed 12/17/15 Page 11 of 19 Page ID #:55 1 reporting on any delinquent amount arising out of this Order, in accordance with 2 31 U.S.C. § 7701.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 378,
+            "quote_end_line": 385
           }
         ]
       },
@@ -111,28 +169,34 @@
         "provision_number": "III",
         "title": "Order Acknowledgments",
         "category": "acknowledgment",
-        "summary": "Defendant must obtain acknowledgments of receipt of this Order from itself and from designated personnel.",
+        "summary": "Defendant must submit a sworn acknowledgment of receipt of the Order within 7 days, deliver copies to principals, officers, employees, and agents within 7 days (and to new personnel before they assume responsibilities), and obtain signed acknowledgments from each recipient within 30 days.",
         "requirements": [
           {
-            "description": "Defendant must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury",
-            "quoted_text": "Defendant, within seven (7) days of entry of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Within seven (7) days of entry of the Order, submit to the Commission a sworn acknowledgment of receipt of this Order under penalty of perjury",
+            "quoted_text": "6 A. Defendant, within seven (7) days of entry of this Order, must submit to the 7 Commission an acknowledgment of receipt of this Order sworn under penalty of 8 perjury.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 389,
+            "quote_end_line": 391
           },
           {
-            "description": "For three years after entry of this Order, deliver a copy of this Order to all principals, officers, directors, and managers; all employees, agents, and representatives having supervisory responsibilities relating to the collection, retention, storage, or security of personal information; and any business entity resulting from any change in structure",
-            "quoted_text": "For three (3) years after entry of this Order, Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and managers; (2) all employees, agents, and representatives having supervisory responsibilities relating to the collection, retention, storage, or security of personal information, and to the operation of any of Defendant's websites or online services; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within seven (7) days of entry of this Order for current personnel. To all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "7 days",
+            "description": "For three (3) years after entry of the Order, deliver a copy of the Order to all principals, officers, directors, managers, employees and agents with supervisory responsibilities relating to personal information or Defendant's websites/online services, and to any successor business entity; delivery for current personnel within seven (7) days and for all others before they assume responsibilities",
+            "quoted_text": "9 B. For three (3) years after entry of this Order, Defendant must deliver a copy 10 of this Order to: (1) all principals, officers, directors, and managers; (2) all 11 employees, agents, and representatives having supervisory responsibilities relating 12 to the collection, retention, storage, or security of personal information, and to the 13 operation of any of Defendant’s websites or online services; and (3) any business 14 entity resulting from any change in structure as set forth in the Section titled 15 Compliance Reporting. Delivery must occur within seven (7) days of entry of this 16 Order for current personnel. To all others, delivery must occur before they assume 17 their responsibilities.",
+            "deadline": "7 days for current personnel; before assuming responsibilities for others",
             "verified": true,
-            "confidence": 0.982982456140351
+            "confidence": 1.0,
+            "quote_start_line": 392,
+            "quote_end_line": 400
           },
           {
-            "description": "From each individual or entity to which Defendant delivered a copy of this Order, obtain a signed and dated acknowledgment of receipt",
-            "quoted_text": "From each individual or entity to which Defendant delivered a copy of this Order, Defendant must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "From each individual or entity to whom a copy of the Order was delivered, obtain within thirty (30) days a signed and dated acknowledgment of receipt",
+            "quoted_text": "18 C. From each individual or entity to which Defendant delivered a copy of this 19 Order, Defendant must obtain, within thirty (30) days, a signed and dated 20 acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.9992307692307693
+            "confidence": 1.0,
+            "quote_start_line": 401,
+            "quote_end_line": 403
           }
         ]
       },
@@ -140,28 +204,52 @@
         "provision_number": "IV",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Defendant must submit compliance reports to the Commission one year after entry and provide notice of certain changes within 14 days for ten years.",
+        "summary": "Defendant must submit a sworn compliance report one year after entry of the Order covering contact information, business activities, compliance status, privacy notices, and parental consent methods; must submit notices within 14 days of structural or contact changes for 10 years; must notify the Commission of any bankruptcy filing within 14 days; and must submit all required filings by email or overnight courier to the designated FTC address.",
         "requirements": [
           {
-            "description": "Submit a compliance report one year after entry of this Order, sworn under penalty of perjury, containing contact information, business details, compliance status, privacy notices, parental consent methods, parent review procedures, and Order Acknowledgments",
-            "quoted_text": "One year after entry of this Order, Defendant must submit a compliance report, sworn under penalty of perjury. In such report, Defendant must: 1. identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission and Plaintiff may use to communicate with Defendant; 2. identify all of Defendant's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; 3. describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales; 4. describe in detail whether and how Defendant is in compliance with each Section of this Order; 5. provide a copy of each different version of any privacy notice posted on each website or online service operated by Defendant or sent to parents of children that register on each website or online service; 6. provide a statement setting forth in detail the methods used to obtain verifiable parental consent prior to any collection, use, and/or disclosure of personal information from children; 7. provide a statement setting forth in detail the means provided for parents to review the personal information collected from their children and to refuse to permit its further use or maintenance; and 8. provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "description": "One year after entry of the Order, submit a sworn compliance report identifying contact points, all businesses and their activities, compliance status for each Order section, privacy notices, verifiable parental consent methods, means for parental review, and copies of Order acknowledgments",
+            "quoted_text": "4 A. One year after entry of this Order, Defendant must submit a compliance 5 report, sworn under penalty of perjury. In such report, Defendant must: 6 1. identify the primary physical, postal, and email address and telephone 7 number, as designated points of contact, which representatives of the Commission 8 and Plaintiff may use to communicate with Defendant; 9 2. identify all of Defendant’s businesses by all of their names, telephone 10 numbers, and physical, postal, email, and Internet addresses; 11 3. describe the activities of each business, including the goods and 12 services offered, the means of advertising, marketing, and sales; 13 4. describe in detail whether and how Defendant is in compliance with 14 each Section of this Order; 15 5. provide a copy of each different version of any privacy notice posted 16 on each website or online service operated by Defendant or sent to parents of 17 children that register on each website or online service; 18 6. provide a statement setting forth in detail the methods used to obtain 19 verifiable parental consent prior to any collection, use, and/or disclosure of 20 personal information from children; 12 Case 2:15-cv-09691 Document 2-1 Filed 12/17/15 Page 13 of 19 Page ID #:57 1 7. provide a statement setting forth in detail the means provided for 2 parents to review the personal information collected from their children and to 3 refuse to permit its further use or maintenance; and 4 8. provide a copy of each Order Acknowledgment obtained pursuant to 5 this Order, unless previously submitted to the Commission.",
             "deadline": "1 year",
             "verified": true,
-            "confidence": 0.9490789473684211
+            "confidence": 0.85,
+            "quote_start_line": 411,
+            "quote_end_line": 436
           },
           {
-            "description": "For ten years after entry of this Order, submit a compliance notice within 14 days of any change in designated point of contact or the structure of Defendant or any entity that Defendant has any ownership interest in or controls",
-            "quoted_text": "For ten (10) years after entry of this Order, Defendant must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in: (a) any designated point of contact; or (b) the structure of Defendant or any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
-            "deadline": "14 days",
+            "description": "For ten (10) years after entry of the Order, submit a sworn compliance notice within fourteen (14) days of any change in any designated point of contact or in Defendant's structure or any entity Defendant has an ownership interest in or controls that may affect compliance obligations under this Order",
+            "quoted_text": "6 B. For ten (10) years after entry of this Order, Defendant must submit a 7 compliance notice, sworn under penalty of perjury, within fourteen (14) days of 8 any change in: (a) any designated point of contact; or (b) the structure of 9 Defendant or any entity that Defendant has any ownership interest in or controls 10 directly or indirectly that may affect compliance obligations arising under this 11 Order, including: creation, merger, sale, or dissolution of the entity or any 12 subsidiary, parent, or affiliate that engages in any acts or practices subject to this 13 Order.",
+            "deadline": "14 days of any qualifying change, for 10 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 437,
+            "quote_end_line": 444
           },
           {
-            "description": "Submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Defendant within 14 days of its filing",
-            "quoted_text": "Defendant must submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Defendant within fourteen (14) days of its filing.",
+            "description": "Submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Defendant within fourteen (14) days of its filing",
+            "quoted_text": "14 C. Defendant must submit to the Commission notice of the filing of any 15 bankruptcy petition, insolvency proceeding, or similar proceeding by or against 16 Defendant within fourteen (14) days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 445,
+            "quote_end_line": 447
+          },
+          {
+            "description": "Any submission required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, concluding with the prescribed declaration language and supplying date, signatory's full name, title, and signature",
+            "quoted_text": "17 D. Any submission to the Commission required by this Order to be sworn under 18 penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, 19 such as by concluding: “I declare under penalty of perjury under the laws of the 20 United States of America that the foregoing is true and correct. Executed on: 13 Case 2:15-cv-09691 Document 2-1 Filed 12/17/15 Page 14 of 19 Page ID #:58 1 _____” and supplying the date, signatory’s full name, title (if applicable), and 2 signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 448,
+            "quote_end_line": 457
+          },
+          {
+            "description": "Unless otherwise directed, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC, 600 Pennsylvania Avenue NW, Washington, DC 20580; subject line must begin: United States v. LAI Systems, LLC",
+            "quoted_text": "3 E. Unless otherwise directed by a Commission representative in writing, all 4 submissions to the Commission pursuant to this Order must be emailed to 5 DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: 6 Associate Director for Enforcement, Bureau of Consumer Protection, Federal 7 Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The 8 subject line must begin: United States v. LAI Systems, LLC.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 458,
+            "quote_end_line": 463
           }
         ]
       },
@@ -169,28 +257,34 @@
         "provision_number": "V",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Defendant must create and retain specific records for ten years after entry of the Order, retaining each record for five years.",
+        "summary": "Defendant must create certain records for ten years after entry of the Order and retain each record for five years, including all compliance records and Commission submissions, consumer complaints and responses, and copies of all forms or screens through which personal information is collected along with related representations.",
         "requirements": [
           {
-            "description": "Create and retain for ten years all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant must create certain records for ten (10) years after entry of the Order, and retain each such record for five (5) years. Specifically, Defendant must create and retain the following records: A. all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
-            "deadline": null,
+            "description": "Create records for ten (10) years after entry of the Order and retain each such record for five (5) years, including all records necessary to demonstrate full compliance with each provision of this Order and all submissions to the Commission",
+            "quoted_text": "10 IT IS FURTHER ORDERED that Defendant must create certain records for 11 ten (10) years after entry of the Order, and retain each such record for five (5) 12 years. Specifically, Defendant must create and retain the following records: 13 A. all records necessary to demonstrate full compliance with each provision of 14 this Order, including all submissions to the Commission;",
+            "deadline": "Ongoing for 10 years, retain each record for 5 years",
             "verified": true,
-            "confidence": 0.9412081513828239
+            "confidence": 1.0,
+            "quote_start_line": 465,
+            "quote_end_line": 469
           },
           {
-            "description": "Create and retain for ten years copies of all consumer complaints relating to Defendant's collection of personal information whether received directly or indirectly, and any response",
-            "quoted_text": "copies of all consumer complaints relating to Defendant's collection of personal information whether received directly or indirectly, such as through a third party, and any response",
+            "description": "Create and retain copies of all consumer complaints relating to Defendant's collection of personal information, whether received directly or indirectly through a third party, and any response",
+            "quoted_text": "15 B. copies of all consumer complaints relating to Defendant’s collection of 16 personal information whether received directly or indirectly, such as through a 17 third party, and any response; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9851451187335093
+            "confidence": 1.0,
+            "quote_start_line": 470,
+            "quote_end_line": 472
           },
           {
-            "description": "Create and retain for ten years a copy of each materially different form, page, or screen created, maintained, or otherwise provided by Defendant through which personal information is collected, and a copy of each materially different document containing any representation made regarding collection, use, and disclosure practices pertaining to personal information",
-            "quoted_text": "a copy of each materially different form, page, or screen created, maintained, or otherwise provided by Defendant through which personal information is collected, and a copy of each materially different document containing any representation made directly or indirectly by Defendant regarding collection, use, and disclosure practices pertaining to personal information. Each webpage copy shall be accompanied by the URL of the webpage where the material was posted online. Electronic copies shall include all text and graphics files, audio scripts, and other computer files used in presenting information on the Internet. Provided, however, that for purposes of this subsection V.C, Defendant shall not be required to retain any document for longer than two (2) years after the document was created, or to retain a print or electronic copy of any amended webpage or screen to the extent that the amendment does not affect Defendant's compliance obligations under this Order.",
+            "description": "Create and retain a copy of each materially different form, page, or screen through which personal information is collected, and each materially different document containing representations regarding collection, use, and disclosure of personal information, with URL, text, graphics, audio scripts, and other computer files; retention not required beyond two (2) years after document creation for this subsection",
+            "quoted_text": "18 C. a copy of each materially different form, page, or screen created, maintained, 19 or otherwise provided by Defendant through which personal information is 20 collected, and a copy of each materially different document containing any 14 Case 2:15-cv-09691 Document 2-1 Filed 12/17/15 Page 15 of 19 Page ID #:59 1 representation made directly or indirectly by Defendant regarding collection, use, 2 and disclosure practices pertaining to personal information. Each webpage copy 3 shall be accompanied by the URL of the webpage where the material was posted 4 online. Electronic copies shall include all text and graphics files, audio scripts, and 5 other computer files used in presenting information on the Internet. Provided, 6 however, that for purposes of this subsection V.C, Defendant shall not be required 7 to retain any document for longer than two (2) years after the document was 8 created, or to retain a print or electronic copy of any amended webpage or screen 9 to the extent that the amendment does not affect Defendant’s compliance 10 obligations under this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.7673659673659674
+            "confidence": 0.85,
+            "quote_start_line": 473,
+            "quote_end_line": 489
           }
         ]
       },
@@ -198,28 +292,34 @@
         "provision_number": "VI",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission and Plaintiff have the right to monitor Defendant's compliance through various means, including requesting reports, depositions, document production, employee interviews, and undercover investigations.",
+        "summary": "The Commission and Plaintiff are authorized to monitor Defendant's compliance by requiring submission of additional reports, depositions, and document production within 14 days of written request; conducting direct communications and interviews with Defendant's personnel; and using all other lawful means including undercover approaches.",
         "requirements": [
           {
-            "description": "Within 14 days of receipt of a written request from the Commission or Plaintiff, submit additional compliance reports or other requested information, appear for depositions, and produce documents for inspection and copying",
-            "quoted_text": "Within fourteen (14) days of receipt of a written request from a representative of the Commission or Plaintiff, Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying. The Commission and Plaintiff are also authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
-            "deadline": "14 days",
+            "description": "Within fourteen (14) days of receipt of a written request from a representative of the Commission or Plaintiff, Defendant must submit additional compliance reports or other requested information sworn under penalty of perjury, appear for depositions, and produce documents for inspection and copying; the Commission and Plaintiff are also authorized to obtain discovery using Federal Rules of Civil Procedure 29, 30, 31, 33, 34, 36, 45, and 69",
+            "quoted_text": "14 A. Within fourteen (14) days of receipt of a written request from a 15 representative of the Commission or Plaintiff, Defendant must: submit additional 16 compliance reports or other requested information, which must be sworn under 17 penalty of perjury; appear for depositions; and produce documents for inspection 18 and copying. The Commission and Plaintiff are also authorized to obtain 19 discovery, without further leave of court, using any of the procedures prescribed by 20 15 Case 2:15-cv-09691 Document 2-1 Filed 12/17/15 Page 16 of 19 Page ID #:60 1 Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 2 34, 36, 45, and 69.",
+            "deadline": "14 days of written request",
             "verified": true,
-            "confidence": 0.914871550903901
+            "confidence": 0.85,
+            "quote_start_line": 493,
+            "quote_end_line": 505
           },
           {
-            "description": "Permit representatives of the Commission and Plaintiff to interview any employee or other person affiliated with Defendant who has agreed to such an interview",
-            "quoted_text": "For matters concerning this Order, the Commission and Plaintiff are authorized to communicate directly with Defendant. Defendant must permit representatives of the Commission and Plaintiff to interview any employee or other person affiliated with Defendant who has agreed to such an interview. The person interviewed may have counsel present.",
+            "description": "Defendant must permit representatives of the Commission and Plaintiff to interview any employee or other person affiliated with Defendant who has agreed to such an interview; the person interviewed may have counsel present",
+            "quoted_text": "3 B. For matters concerning this Order, the Commission and Plaintiff are 4 authorized to communicate directly with Defendant. Defendant must permit 5 representatives of the Commission and Plaintiff to interview any employee or other 6 person affiliated with Defendant who has agreed to such an interview. The person 7 interviewed may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 506,
+            "quote_end_line": 510
           },
           {
-            "description": "Allow the Commission and Plaintiff to use all other lawful means, including posing as consumers, suppliers, or other individuals or entities, without the necessity of identification or prior notice",
-            "quoted_text": "The Commission and Plaintiff may use all other lawful means, including posing, through its representatives as consumers, suppliers, or other individuals or entities, to Defendant or any individual or entity affiliated with Defendant, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Commission and Plaintiff may use all other lawful means, including posing as consumers, suppliers, or other individuals or entities to Defendant or any affiliated individual or entity, without necessity of identification or prior notice; nothing in this Order limits the Commission's lawful use of compulsory process under Sections 9 and 20 of the FTC Act",
+            "quoted_text": "8 C. The Commission and Plaintiff may use all other lawful means, including 9 posing, through its representatives as consumers, suppliers, or other individuals or 10 entities, to Defendant or any individual or entity affiliated with Defendant, without 11 the necessity of identification or prior notice. Nothing in this Order limits the 12 Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of 13 the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 511,
+            "quote_end_line": 516
           }
         ]
       },
@@ -227,21 +327,23 @@
         "provision_number": "VII",
         "title": "Retention of Jurisdiction",
         "category": "duration",
-        "summary": "The Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+        "summary": "The Court retains jurisdiction over this matter for purposes of construction, modification, and enforcement of the Order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction for purposes of construction, modification, and enforcement of this Order",
-            "quoted_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+            "description": "This Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order",
+            "quoted_text": "15 IT IS FURTHER ORDERED that this Court retains jurisdiction of this 16 matter for purposes of construction, modification, and enforcement of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 518,
+            "quote_end_line": 519
           }
         ]
       }
     ],
     "duration": {
-      "duration_years": 10,
-      "termination_text": "For ten (10) years after entry of this Order, Defendant must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in: (a) any designated point of contact; or (b) the structure of Defendant or any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order."
+      "duration_years": null,
+      "termination_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order."
     }
   },
   "metadata": {
@@ -251,11 +353,31 @@
     },
     "extraction_stats": {
       "complaint_counts": 1,
-      "complaint_representations": 0,
+      "complaint_representations": 3,
       "order_provisions": 7,
       "order_definitions": 15,
-      "order_requirements": 19
+      "order_requirements": 23,
+      "provisions_per_section": {
+        "I": 3,
+        "II": 5,
+        "III": 3,
+        "IV": 5,
+        "V": 3,
+        "VI": 3,
+        "VII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 1
+      },
+      "verification_details": {
+        "complaint_verified": 3,
+        "complaint_total": 3,
+        "order_verified": 23,
+        "order_total": 23
+      }
     },
-    "processing_time_seconds": 405.9
+    "processing_time_seconds": 295.6
   }
 }

@@ -6,274 +6,242 @@
       "incorporation_state": "California",
       "entity_type": "corporation",
       "address": "17595 Mt. Herrmann St., Fountain Valley, California 92708",
-      "business_description": "D-Link Systems, Inc. is a subsidiary of D-Link Corporation that designs, develops, markets, and manufactures networking devices including consumer routers and Internet-protocol (IP) cameras, along with related software and services. The company serves as the primary distributor of these products throughout the United States and provides customer support and security services."
+      "business_description": "D-Link Systems, Inc. (DLS) is a subsidiary of D-Link Corporation that designs, develops, markets, and distributes networking devices including consumer routers and Internet-protocol (IP) cameras, along with related software and services for the United States market."
     },
     "commissioners": [],
-    "date_issued": "2019-07-02",
-    "legal_authority": "Section 13(b) of the Federal Trade Commission Act, 15 U.S.C. § 53(b), and Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)",
+    "case_date": {
+      "month": 7,
+      "year": 2019
+    },
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/132-3157-x170030-d-link"
   },
   "complaint": {
-    "factual_background": "D-Link Corporation and D-Link Systems, Inc. designed, marketed, and sold routers and Internet-protocol cameras to U.S. consumers while failing to implement basic security measures. The companies made numerous public claims about their products' security features while failing to protect against well-known vulnerabilities including hard-coded credentials, command injection flaws, and inadequate private key protection. These failures exposed thousands of consumers to significant risks including unauthorized network access, surveillance of private activities, and theft of sensitive personal information.",
+    "factual_background": "D-Link Corporation and its U.S. subsidiary D-Link Systems, Inc. failed to take reasonable steps to secure the software in their consumer routers and IP cameras against well-known vulnerabilities, including hard-coded credentials, command injection flaws, and backdoors. D-Link also exposed its private code-signing key on a public website for approximately six months, and stored users' mobile app login credentials in clear, readable text. Despite these security failures, Defendants marketed their products with prominent claims that the devices were secure, easy to secure, and protected against unauthorized access. Thousands of consumers' devices were left vulnerable to remote attackers who could redirect web traffic, steal financial information, hijack cameras to spy on households, or enlist devices into botnets.",
     "representations_made": [
       {
-        "description": "Prohibited intentional backdoors and undocumented credentials in products",
-        "quoted_text": "D-Link prohibits at all times, including during product development by D-Link or its affiliates, any intentional product features or behaviors which allow unauthorized access to the device or network, including but not limited to undocumented account credentials, covert communication channels, 'backdoors' or undocumented traffic diversion. All such features and behaviors are considered serious and will be given the highest priority.",
-        "source_paragraph": 20
+        "description": "DLS's Security Event Response Policy stated that D-Link prohibits any intentional product features or behaviors allowing unauthorized access, including undocumented credentials, backdoors, and covert communication channels, and treats all such features as the highest priority",
+        "quoted_text": "15 D-Link prohibits at all times, including during product development by D-Link or its 16 affiliates, any intentional product features or behaviors which allow unauthorized access 17 to the device or network, including but not limited to undocumented account 18 credentials, covert communication channels, ‘backdoors’ or undocumented traffic 19 diversion. All such features and behaviors are considered serious and will be given the 20 highest priority.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 20,
+        "quote_start_line": 234,
+        "quote_end_line": 239
       },
       {
-        "description": "Routers support latest wireless security features to prevent unauthorized access",
-        "quoted_text": "supports the latest wireless security features to help prevent unauthorized access, be it from over a wireless network or from the Internet. Support for WPATM and WPA2TM standards ensure that you will be able to use the best possible encryption, regardless of your client devices. In addition [the router] utilizes dual active firewalls (SPI and NAT) to prevent potential attacks from across the Internet.",
-        "source_paragraph": 21
+        "description": "Router promotional brochures claimed the routers support the latest wireless security features to help prevent unauthorized access and utilize dual active firewalls to prevent potential attacks from across the Internet",
+        "quoted_text": "2 the router: 3 supports the latest wireless security features to help prevent unauthorized 4 access, be it from over a wireless network or from the Internet. Support for 5 WPATM and WPA2TM standards ensure that you will be able to use the best 6 possible encryption, regardless of your client devices. In addition [the router] 7 utilizes dual active firewalls (SPI and NAT) to prevent potential attacks from 8 across the Internet. 9 Delivering great wireless performance, network security and coverage [the 10 router] is ideal for upgrading your existing wireless network. (See PX 2).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 21,
+        "quote_start_line": 253,
+        "quote_end_line": 261
       },
       {
-        "description": "Routers ensure secure Wi-Fi network and utilize dual-active firewalls",
-        "quoted_text": "ensures a secure Wi-Fi network through the use of WPA/WPA2 wireless encryption. Simply press the WPS button to quickly establish a secure connection to new devices. The [router] also utilizes dual-active firewalls (SPI and NAT) to prevent potential attacks and intrusions from across the Internet.",
-        "source_paragraph": 21
+        "description": "Router promotional brochures claimed the router ensures a secure Wi-Fi network through WPA/WPA2 encryption and utilizes dual-active firewalls to prevent potential attacks and intrusions from across the Internet",
+        "quoted_text": "12 SECURITY,” that the router: 13 ensures a secure Wi-Fi network through the use of WPA/WPA2 wireless 14 encryption. Simply press the WPS button to quickly establish a secure 15 connection to new devices. The [router] also utilizes dual-active firewalls 16 (SPI and NAT) to prevent potential attacks and intrusions from across the 17 Internet. (See PX 3).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 21,
+        "quote_start_line": 263,
+        "quote_end_line": 268
       },
       {
-        "description": "Router supports latest wireless security features and utilizes SPI firewalls",
-        "quoted_text": "supports the latest wireless security features to help prevent unauthorized access, be it from over a wireless network or from the Internet. Support for WPATM and WPA2TM standards ensure that you will be able to use the best possible encryption method. In addition, this [router] utilizes Stateful Packet Inspection Firewalls (SPI) to help prevent potential attacks from across the Internet.",
-        "source_paragraph": 21
+        "description": "Router promotional brochures claimed the router supports the latest wireless security features to help prevent unauthorized access and uses SPI firewalls to help prevent potential attacks from across the Internet",
+        "quoted_text": "18 c. Under a bolded heading, “Advanced Network Security,” that the router: 19 supports the latest wireless security features to help prevent unauthorized 20 access, be it from over a wireless network or from the Internet. Support for 21 WPATM and WPA2TM standards ensure that you will be able to use the best 22 possible encryption method. In addition, this [router] utilizes Stateful Packet 23 Inspection Firewalls (SPI) to help prevent potential attacks from across the 24 Internet. (See PX 4).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 21,
+        "quote_start_line": 269,
+        "quote_end_line": 275
       },
       {
-        "description": "Router protects network with 128-bit security encryption and is one of the safest",
-        "quoted_text": "protects your network with 128-bit AES data security encryption – the same technology used in E-commerce or online banking. Create your own network name and password or put it at the tip of your fingers with 'Push Button Security' standard on every Amplifi device. With hassle-free plug and play installation, and advanced Wi-Fi protected setup, the [router] is not only one of the fastest routers available, its [sic] also one of the safest.",
-        "source_paragraph": 21
+        "description": "Router promotional brochures claimed the router protects the network with 128-bit AES encryption and is 'one of the safest' routers available",
+        "quoted_text": "25 d. Under a heading “128-bit Security Encryption,” that the router: 26 protects your network with 128-bit AES data security encryption – the same 27 technology used in E-commerce or online banking. Create your own network 28 COMPLAINT PAGE 8 Case 3:17-cv-00039-JD Document 44 Filed 03/20/17 Page 9 of 14 1 name and password or put it at the tip of your fingers with ‘Push Button 2 Security’ standard on every Amplifi device. With hassle-free plug and play 3 installation, and advanced Wi-Fi protected setup, the [router] is not only one 4 of the fastest routers available, its [sic] also one of the safest. (See PX 5).",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 21,
+        "quote_start_line": 276,
+        "quote_end_line": 287
       },
       {
-        "description": "IP cameras marketed with prominent security messaging",
-        "quoted_text": "brochures in the general form of Exhibit 6, which display the word 'SECURITY' in large, capital letters, in a vividly-colored footer across the bottom of each page. (See PX 6). In addition, Defendants have designed their IP camera packaging, including in the general form of Exhibit 7, to display security-related terms. Such terms include the words 'secure connection,' next to a lock icon, among the product features listed on the side of the box",
-        "source_paragraph": 22
+        "description": "IP camera promotional materials displayed the word 'SECURITY' prominently and used the term 'secure connection' next to a lock icon among product features",
+        "quoted_text": "5 22. Defendants highlight the security of their IP cameras in a wide range of 6 materials available on Defendant DLS’s website, including user manuals and promotional 7 brochures, which describe these features alongside language that specifically references the 8 device’s “security”. Such materials include, but are not limited to, brochures in the general 9 form of Exhibit 6, which display the word “SECURITY” in large, capital letters, in a vividly- 10 colored footer across the bottom of each page. (See PX 6). In addition, Defendants have 11 designed their IP camera packaging, including in the general form of Exhibit 7, to display 12 security-related terms. Such terms include the words “secure connection,” next to a lock icon, 13 among the product features listed on the side of the box (see PX 7).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 22,
+        "quote_start_line": 288,
+        "quote_end_line": 296
       },
       {
-        "description": "Router GUI instructs users to set password to secure the device",
-        "quoted_text": "To secure your new networking device, please set and verify a password below",
-        "source_paragraph": 23
+        "description": "Defendants' router graphical user interface instructed users to set a password 'to secure your new networking device' and stated it is 'highly recommended' to create a password 'to keep your router secure'",
+        "quoted_text": "20 a. “To secure your new networking device, please set and verify a password 21 below” (see PX 8); and 22 b. “It is highly recommended that you create a password to keep your router 23 secure.” (See PX 9).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 23,
+        "quote_start_line": 303,
+        "quote_end_line": 306
       },
       {
-        "description": "Router GUI recommends password to keep router secure",
-        "quoted_text": "It is highly recommended that you create a password to keep your router secure.",
-        "source_paragraph": 23
-      },
-      {
-        "description": "IP camera GUI instructs users to set password to secure the camera",
-        "quoted_text": "instructions to 'Set up an Admin ID and Password' or 'enter a password' in order 'to secure your camera'",
-        "source_paragraph": 24
-      },
-      {
-        "description": "IP camera GUI displays SECURICAM Network branding with lock icon",
-        "quoted_text": "security-related banners, including, but not limited to, the words 'SECURICAM Network,' alongside a lock icon, across the top of the GUI",
-        "source_paragraph": 24
+        "description": "Defendants' IP camera GUI instructed users to set up an Admin ID and Password 'to secure your camera' and displayed a 'SECURICAM Network' banner with a lock icon",
+        "quoted_text": "1 a. instructions to “Set up an Admin ID and Password” or “enter a password” in 2 order “to secure your camera” (see PX 10); and 3 b. security-related banners, including, but not limited to, the words “SECURICAM 4 Network,” alongside a lock icon, across the top of the GUI (see PX 11).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 24,
+        "quote_start_line": 316,
+        "quote_end_line": 319
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "Unfair Security Practices",
-        "representation": "Defendants offered routers and IP cameras to consumers for the purpose of protecting their local networks and accessing sensitive personal information",
-        "fact": "Defendants failed to take reasonable steps to secure the software for their routers and IP cameras, including failing to protect against hard-coded credentials and backdoors, command injection flaws, failing to maintain confidentiality of private signing keys, and failing to secure mobile app login credentials",
-        "conclusion": "Defendants' practices caused, or are likely to cause, substantial injury to consumers in the United States that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers. Therefore, Defendants' acts and practices constitute unfair acts or practices in or affecting commerce, in violation of Section 5 of the FTC Act."
+        "representation": "Defendants offered routers and IP cameras to consumers for the purpose of protecting their local networks and accessing sensitive personal information, but failed to take reasonable steps to secure the software for these devices",
+        "fact": "Defendants' failures to implement reasonable security measures caused or are likely to cause substantial injury to consumers that is not outweighed by countervailing benefits and is not reasonably avoidable by consumers",
+        "conclusion": "Defendants' acts and practices as described in Paragraphs 15-18 constitute unfair acts or practices in or affecting commerce, in violation of Section 5 of the FTC Act, 15 U.S.C. §§ 45(a) and 45(n)."
       },
       {
         "count_number": 2,
         "title": "Security Event Response Policy Misrepresentation",
-        "representation": "Defendants represented that they took reasonable steps to secure their products from unauthorized access, specifically stating they prohibited intentional backdoors, undocumented credentials, and covert communication channels",
-        "fact": "Defendants did not take reasonable steps to secure their products from unauthorized access",
-        "conclusion": "Therefore, the making of the representation constitutes a deceptive act or practice, in or affecting commerce in violation of Section 5(a) of the FTC Act."
+        "representation": "Through the Security Event Response Policy, Defendant DLS represented, directly or indirectly, expressly or by implication, that Defendants took reasonable steps to secure their products from unauthorized access",
+        "fact": "In truth and in fact, Defendants did not take reasonable steps to secure their products from unauthorized access",
+        "conclusion": "The making of the representation set forth in Paragraph 31 constitutes a deceptive act or practice, in or affecting commerce in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 3,
         "title": "Router Promotional Misrepresentations",
-        "representation": "Defendants represented that the routers described by promotional claims were secure from unauthorized access",
-        "fact": "Defendants' routers were not secure from unauthorized access and control",
-        "conclusion": "Therefore, the making of the representation constitutes a deceptive act or practice, in or affecting commerce in violation of Section 5(a) of the FTC Act."
+        "representation": "Through promotional materials described in Paragraph 21, Defendants represented, directly or indirectly, expressly or by implication, that the routers described by these claims were secure from unauthorized access",
+        "fact": "In truth and in fact, Defendants' routers were not secure from unauthorized access and control",
+        "conclusion": "The making of the representation set forth in Paragraph 34 constitutes a deceptive act or practice, in or affecting commerce in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 4,
         "title": "IP Camera Promotional Misrepresentations",
-        "representation": "Defendants represented that the IP cameras described by promotional claims were secure from unauthorized access and control",
-        "fact": "Defendants' IP cameras were not secure from unauthorized access and control",
-        "conclusion": "Therefore, the making of the representation constitutes a deceptive act or practice, in or affecting commerce in violation of Section 5(a) of the FTC Act."
+        "representation": "Through promotional materials described in Paragraph 22, Defendants represented, directly or indirectly, expressly or by implication, that the IP cameras described by these claims were secure from unauthorized access and control",
+        "fact": "In truth and in fact, Defendants' IP cameras were not secure from unauthorized access and control",
+        "conclusion": "The making of the representation set forth in Paragraph 37 constitutes a deceptive act or practice, in or affecting commerce in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 5,
         "title": "Router GUI Misrepresentations",
-        "representation": "Defendants represented through router graphical user interfaces that the routers were secure from unauthorized access",
-        "fact": "Defendants' routers were not secure from unauthorized access and control",
-        "conclusion": "Therefore, the making of the representation constitutes a deceptive act or practice, in or affecting commerce in violation of Section 5(a) of the FTC Act."
+        "representation": "Through the router graphical user interface described in Paragraph 23, Defendants represented, directly or indirectly, expressly or by implication, that the routers described by these claims were secure from unauthorized access",
+        "fact": "In truth and in fact, Defendants' routers were not secure from unauthorized access and control",
+        "conclusion": "The making of the representation set forth in Paragraph 40 constitutes a deceptive act or practice, in or affecting commerce in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 6,
         "title": "IP Camera GUI Misrepresentations",
-        "representation": "Defendants represented through IP camera graphical user interfaces that the IP cameras were secure from unauthorized access and control",
-        "fact": "Defendants' IP cameras were not secure from unauthorized access and control",
-        "conclusion": "Therefore, the making of the representation constitutes a deceptive act or practice, in or affecting commerce in violation of Section 5(a) of the FTC Act."
+        "representation": "Through the IP camera graphical user interface described in Paragraph 24, Defendants represented, directly or indirectly, expressly or by implication, that the IP cameras described by these claims were secure from unauthorized access and control",
+        "fact": "In truth and in fact, Defendants' IP cameras were not secure from unauthorized access and control",
+        "conclusion": "The making of the representation set forth in Paragraph 43 constitutes a deceptive act or practice, in or affecting commerce in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       }
     ]
   },
   "order": {
     "definitions": {
-      "Approved Standard": "\"Security for industrial automation and control systems – Part 4-1: Secure product development lifecycle requirements\", attached hereto as Exhibit A, or, in the event that such standard no longer exists, any successor standard established or approved by the International Electrotechnical Commission, or any successor entity thereto. In the event no such successor standard or successor entity exists, or at the election of Defendant, Approved Standard shall mean a standard of comparable scope and thoroughness approved, at his or her sole discretion, by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission. Any decision not to approve a standard must be accompanied by a writing setting forth in detail the reasons for denying such approval.",
-      "Defendant": "D-Link Systems, Inc. and its successors and assigns.",
-      "Covered Device": "Any IP Camera or Router that Defendant sells on or after January 5, 2017, directly or through authorized re-sellers to consumers in the United States; provided that \"Covered Device\" does not include IP Cameras or Routers that Defendant can establish that Defendant offers primarily for enterprises and other commercial entities, including products identified in Exhibit B.",
-      "IP Camera": "Any Internet Protocol (\"IP\") camera, cloud camera, or other Internet-accessible camera that transmits, or allows for the transmission of, video, audio, or audiovisual data over the Internet.",
-      "Router": "Any network device that forwards IP data packets from one network to another or from a network to the Internet."
+      "Approved Standard": "\"Approved Standard\" shall mean the \"Security for industrial automation and control systems – Part 4-1: Secure product development lifecycle requirements\", attached hereto as Exhibit A, or, in the event that such standard no longer exists, any successor standard established or approved by the International Electrotechnical Commission, or any successor entity thereto. In the event no such successor standard or successor entity exists, or at the election of Defendant, Approved Standard shall mean a standard of comparable scope and thoroughness approved, at his or her sole discretion, by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission. Any decision not to approve a standard must be accompanied by a writing setting forth in detail the reasons for denying such approval.",
+      "Defendant": "\"Defendant\" means D-Link Systems, Inc. and its successors and assigns.",
+      "Covered Device": "\"Covered Device\" shall mean any IP Camera or Router that Defendant sells on or after January 5, 2017, directly or through authorized re-sellers to consumers in the United States; provided that \"Covered Device\" does not include IP Cameras or Routers that Defendant can establish that Defendant offers primarily for enterprises and other commercial entities, including products identified in Exhibit B.",
+      "IP Camera": "\"IP Camera\" shall mean any Internet Protocol (\"IP\") camera, cloud camera, or other Internet-accessible camera that transmits, or allows for the transmission of, video, audio, or audiovisual data over the Internet.",
+      "Router": "\"Router\" shall mean any network device that forwards IP data packets from one network to another or from a network to the Internet."
     },
     "provisions": [
       {
         "provision_number": "I",
         "title": "Comprehensive Software Security Program",
         "category": "affirmative_obligation",
-        "summary": "Defendant must establish and maintain a comprehensive software security program for Covered Devices for 20 years, including documentation, risk assessments, safeguards, secure development processes, and regular evaluations.",
+        "summary": "Defendant must establish, implement, and maintain a comprehensive software security program for twenty years designed to protect the security of its Covered Devices, including at minimum nine categories of documented safeguards.",
         "requirements": [
           {
-            "description": "Establish and maintain comprehensive software security program for 20 years",
-            "quoted_text": "IT IS ORDERED that Defendant shall, for a period of twenty (20) years after entry of this Order, continue with or establish and implement, and maintain, a comprehensive software security program (\"Software Security Program\") that is designed to provide protection for the security of its Covered Devices, unless Defendant ceases to market, distribute, or sell any Covered Devices.",
+            "description": "Establish and maintain a comprehensive Software Security Program designed to protect the security of Covered Devices for twenty (20) years after entry of the Order",
+            "quoted_text": "IT IS ORDERED that Defendant shall, for a period of twenty (20) years after entry of 13 this Order, continue with or establish and implement, and maintain, a comprehensive software 14 15 security program (“Software Security Program”) that is designed to provide protection for the 16 security of its Covered Devices, unless Defendant ceases to market, distribute, or sell any 17 Covered Devices. Subject to Section II.I of this Order, to satisfy this requirement, Defendant 18 must, at a minimum:",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9915894039735099
+            "confidence": 1.0,
+            "quote_start_line": 127,
+            "quote_end_line": 136
           },
           {
-            "description": "Document the software security program in writing",
-            "quoted_text": "Document in writing the content, implementation, and maintenance of the Software Security Program;",
+            "description": "Document in writing the content, implementation, and maintenance of the Software Security Program",
+            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the 20 Software Security Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 138,
+            "quote_end_line": 140
           },
           {
-            "description": "Provide written program to board or senior officer at least annually",
-            "quoted_text": "Provide the written program and any evaluations thereof or updates thereto to Defendant's board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Defendant responsible for Defendant's Software Security Program at least once every twelve (12) months;",
-            "deadline": "12 months",
+            "description": "Provide the written program and any evaluations or updates to Defendant's board of directors or governing body at least once every twelve (12) months",
+            "quoted_text": "22 B. Provide the written program and any evaluations thereof or updates thereto to 23 Defendant’s board of directors or governing body or, if no such board or equivalent governing 24 body exists, to a senior officer of Defendant responsible for Defendant’s Software Security 25 Program at least once every twelve (12) months;",
+            "deadline": "annually (every 12 months)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 142,
+            "quote_end_line": 147
           },
           {
-            "description": "Designate qualified employee(s) to coordinate the program",
-            "quoted_text": "Designate a qualified employee or employees to coordinate and be responsible for the Software Security Program;",
+            "description": "Designate a qualified employee or employees to coordinate and be responsible for the Software Security Program",
+            "quoted_text": "C. Designate a qualified employee or employees to coordinate and be responsible for 2 the Software Security Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 158,
+            "quote_end_line": 160
           },
           {
-            "description": "Assess and document risks at least annually",
-            "quoted_text": "Assess and document, at least once every twelve (12) months, internal and external risks to the security of Covered Devices that could result in the unauthorized disclosure, misuse, loss, theft, alteration, destruction, or other compromise of such information input into, stored on or captured with, accessed, or transmitted by a Covered Device;",
-            "deadline": "12 months",
+            "description": "Assess and document at least once every twelve (12) months internal and external risks to the security of Covered Devices",
+            "quoted_text": "D. Assess and document, at least once every twelve (12) months, internal and 4 external risks to the security of Covered Devices that could result in the unauthorized disclosure, 5 misuse, loss, theft, alteration, destruction, or other compromise of such information input into, 6 7 stored on or captured with, accessed, or transmitted by a Covered Device;",
+            "deadline": "annually (every 12 months)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 162,
+            "quote_end_line": 168
           },
           {
-            "description": "Design, implement, and maintain safeguards as part of secure software development process",
-            "quoted_text": "Design, implement, maintain, and document safeguards, as a part of a secure software development process, that control for the internal and external risks Defendant identifies to the security of Covered Devices.",
+            "description": "Design, implement, maintain, and document safeguards as part of a secure software development process, including: security planning, threat modeling, pre-release code review using automated static analysis tools, pre-release vulnerability testing, ongoing code maintenance with a shared-code database, remediation processes, ongoing monitoring of security research, a vulnerability reporting process for security researchers, automatic firmware updates, at least 60-day advance notice to consumers before ceasing security updates, and biennial security training",
+            "quoted_text": "E. Design, implement, maintain, and document safeguards, as a part of a secure 9 software development process, that control for the internal and external risks Defendant 10 identifies to the security of Covered Devices. Such safeguards shall also include: 11 1. Engaging in security planning by enumerating in writing how 12 functionality and features will affect the security of Covered Devices; 13 14 2. Performing threat modeling to identify internal and external risks to the 15 security of data transmitted using Covered Devices; 16 3. Engaging in pre-release code review of every release of software for 17 Covered Devices through the use of automated static analysis tools; 18 4. Conducting pre-release vulnerability testing of every release of software 19 for Covered Devices; 20 5. Performing ongoing code maintenance by maintaining a database of 21 22 shared code to be used to help find other instances of a vulnerability when a vulnerability is 23 reported or otherwise discovered; 24 6. Remediation processes designed to address security flaws, or analogous 25 instances of security flaws, identified at any stage of software development process; 26 27 4 28 [PROPOSED] STIPULATED ORDER FOR INJUNCTION CASE NO. 3:17-cv-00039-JD Case 3:17-cv-00039-JD Document 272-1 Filed 07/02/19 Page 5 of 32 1 7. Ongoing monitoring of security research for potential vulnerabilities that 2 could affect Covered Devices; 3 8. A process for accepting vulnerability reports from security researchers, 4 which shall include providing a designated point of contact for security researchers, appointing 5 supervisory personnel to validate concerns; 6 7 9. Automatic firmware updates directly to the Covered Devices that are 8 configured to receive automatic firmware updates; 9 10. At least 60 days prior to ceasing security updates for a Covered Device, a 10 clear and conspicuous notice to consumers who registered their Covered Device, through the 11 communication channel(s) the consumer chose at the time of registration, and a clear and 12 conspicuous notice on the product information page of the Covered Device on Defendant’s 13 14 website that the Covered Device will no longer receive firmware updates; and 15 11. Biennial security training for personnel and vendors responsible for 16 developing, implementing, or reviewing Covered Device software, including firmware updates.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 170,
+            "quote_end_line": 234
           },
           {
-            "description": "Engage in security planning for functionality and features",
-            "quoted_text": "Engaging in security planning by enumerating in writing how functionality and features will affect the security of Covered Devices;",
+            "description": "Assess at least once every twelve (12) months the sufficiency of safeguards in place to address risks to the security of Covered Devices, and modify the Software Security Program based on the results",
+            "quoted_text": "F. Assess, at least once every twelve (12) months the sufficiency of any safeguards 18 in place to address the risks to the security of Covered Devices, and modify the Software 19 Security Program based on the results.",
+            "deadline": "annually (every 12 months)",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 236,
+            "quote_end_line": 240
+          },
+          {
+            "description": "Test and monitor the effectiveness of the safeguards at least once every twelve (12) months, and modify the Software Security Program based on the results",
+            "quoted_text": "G. Test and monitor the effectiveness of the safeguards at least once every twelve 21 22 (12) months, and modify the Software Security Program based on the results.",
+            "deadline": "annually (every 12 months)",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 242,
+            "quote_end_line": 244
+          },
+          {
+            "description": "Select and retain service providers capable of maintaining security practices consistent with this Order, and contractually require service providers to implement and maintain such safeguards",
+            "quoted_text": "23 H. Select and retain service providers capable of maintaining security practices 24 consistent with this Order, and contractually require service providers to implement and maintain 25 safeguards consistent with this Order; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 245,
+            "quote_end_line": 249
           },
           {
-            "description": "Perform threat modeling",
-            "quoted_text": "Performing threat modeling to identify internal and external risks to the security of data transmitted using Covered Devices;",
-            "deadline": null,
+            "description": "Evaluate and adjust the Software Security Program in light of any changes to Defendant's operations or business arrangements, at a minimum once every twelve (12) months",
+            "quoted_text": "I. Evaluate and adjust the Software Security Program in light of any changes to 2 Defendant’s operations or business arrangements, or any other circumstances that Defendant 3 knows or has reason to know may have an impact on the effectiveness of the Software Security 4 Program. At a minimum, Defendant must evaluate the Software Security Program at least once 5 every twelve (12) months and modify the Software Security Program based on the results.",
+            "deadline": "annually (every 12 months)",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Engage in pre-release code review through automated static analysis",
-            "quoted_text": "Engaging in pre-release code review of every release of software for Covered Devices through the use of automated static analysis tools;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Conduct pre-release vulnerability testing",
-            "quoted_text": "Conducting pre-release vulnerability testing of every release of software for Covered Devices;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.9990721649484536
-          },
-          {
-            "description": "Perform ongoing code maintenance with shared code database",
-            "quoted_text": "Performing ongoing code maintenance by maintaining a database of shared code to be used to help find other instances of a vulnerability when a vulnerability is reported or otherwise discovered;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.9998492462311558
-          },
-          {
-            "description": "Implement remediation processes for security flaws",
-            "quoted_text": "Remediation processes designed to address security flaws, or analogous instances of security flaws, identified at any stage of software development process;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Monitor security research for potential vulnerabilities",
-            "quoted_text": "Ongoing monitoring of security research for potential vulnerabilities that could affect Covered Devices;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Implement process for accepting vulnerability reports from security researchers",
-            "quoted_text": "A process for accepting vulnerability reports from security researchers, which shall include providing a designated point of contact for security researchers, appointing supervisory personnel to validate concerns;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Provide automatic firmware updates to configured devices",
-            "quoted_text": "Automatic firmware updates directly to the Covered Devices that are configured to receive automatic firmware updates;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Provide notice at least 60 days before ceasing security updates",
-            "quoted_text": "At least 60 days prior to ceasing security updates for a Covered Device, a clear and conspicuous notice to consumers who registered their Covered Device, through the communication channel(s) the consumer chose at the time of registration, and a clear and conspicuous notice on the product information page of the Covered Device on Defendant's website that the Covered Device will no longer receive firmware updates;",
-            "deadline": "60 days",
-            "verified": true,
-            "confidence": 0.9829276693455798
-          },
-          {
-            "description": "Provide biennial security training for personnel and vendors",
-            "quoted_text": "Biennial security training for personnel and vendors responsible for developing, implementing, or reviewing Covered Device software, including firmware updates.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.9996969696969698
-          },
-          {
-            "description": "Assess sufficiency of safeguards at least annually",
-            "quoted_text": "Assess, at least once every twelve (12) months the sufficiency of any safeguards in place to address the risks to the security of Covered Devices, and modify the Software Security Program based on the results.",
-            "deadline": "12 months",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Test and monitor effectiveness of safeguards at least annually",
-            "quoted_text": "Test and monitor the effectiveness of the safeguards at least once every twelve (12) months, and modify the Software Security Program based on the results.",
-            "deadline": "12 months",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Select and retain capable service providers with contractual security requirements",
-            "quoted_text": "Select and retain service providers capable of maintaining security practices consistent with this Order, and contractually require service providers to implement and maintain safeguards consistent with this Order;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.993963963963964
-          },
-          {
-            "description": "Evaluate and adjust program at least annually",
-            "quoted_text": "Evaluate and adjust the Software Security Program in light of any changes to Defendant's operations or business arrangements, or any other circumstances that Defendant knows or has reason to know may have an impact on the effectiveness of the Software Security Program. At a minimum, Defendant must evaluate the Software Security Program at least once every twelve (12) months and modify the Software Security Program based on the results.",
-            "deadline": "12 months",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 260,
+            "quote_end_line": 268
           }
         ]
       },
@@ -281,56 +249,88 @@
         "provision_number": "II",
         "title": "Software Security Assessments by a Third Party",
         "category": "assessment",
-        "summary": "Defendant must obtain initial and biennial third-party assessments of its Software Security Program from a qualified, independent assessor (CSSLP certified) for 10 years.",
+        "summary": "Defendant must obtain initial and biennial third-party assessments of its Software Security Program or the Approved Standard, conducted by a qualified independent Assessor, with results submitted to the FTC.",
         "requirements": [
           {
-            "description": "Obtain initial and biennial third-party assessments",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with compliance with Defendant's Software Security Program, Defendant must obtain initial and biennial assessments (\"Assessments\"):",
+            "description": "Obtain initial and biennial Assessments from a qualified, objective, independent third-party professional who is a Certified Secure Software Lifecycle Professional (CSSLP) with professional experience with secure Internet-accessible devices, uses generally accepted standards, conducts an independent review, and retains all documents for five (5) years",
+            "quoted_text": "Software Security Program, Defendant must obtain initial and biennial assessments 18 (“Assessments”): 19 A. The Assessments must be obtained from a qualified, objective, independent third- 20 party professional (“Assessor”), who: (1) is qualified as a Certified Secure Software Lifecycle 21 22 Professional (CSSLP) with professional experience with secure Internet-accessible devices; 23 (2) uses procedures and standards generally accepted in the profession; (3) conducts an 24 independent review of the Software Security Program, or, at the election of Defendant, an 25 assessment of the Approved Standard; and (4) retains all documents considered for each 26 Assessment for five (5) years after completion of such Assessment and will provide such 27 6 28 [PROPOSED] STIPULATED ORDER FOR INJUNCTION CASE NO. 3:17-cv-00039-JD Case 3:17-cv-00039-JD Document 272-1 Filed 07/02/19 Page 7 of 32 1 documents to the Commission within fourteen (14) days of receipt of a written request from a 2 representative of the Commission. No documents considered for an Assessment may be 3 withheld on the basis of a claim of confidentiality, proprietary or trade secrets, work product or 4 attorney client privilege.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 287,
+            "quote_end_line": 318
           },
           {
-            "description": "Use qualified, objective, independent third-party assessor",
-            "quoted_text": "The Assessments must be obtained from a qualified, objective, independent third-party professional (\"Assessor\"), who: (1) is qualified as a Certified Secure Software Lifecycle Professional (CSSLP) with professional experience with secure Internet-accessible devices; (2) uses procedures and standards generally accepted in the profession; (3) conducts an independent review of the Software Security Program, or, at the election of Defendant, an assessment of the Approved Standard; and (4) retains all documents considered for each Assessment for five (5) years after completion of such Assessment and will provide such documents to the Commission within fourteen (14) days of receipt of a written request from a representative of the Commission.",
-            "deadline": "14 days",
-            "verified": true,
-            "confidence": 0.8665447897623401
-          },
-          {
-            "description": "Provide assessor name to FTC for approval",
-            "quoted_text": "For each Assessment, Respondent shall provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name and affiliation of the person selected to conduct the Assessment, which the Associate Director shall have the authority to approve in his sole discretion.",
+            "description": "For each Assessment, provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the FTC with the name and affiliation of the person selected to conduct the Assessment, subject to the Associate Director's approval",
+            "quoted_text": "B. For each Assessment, Respondent shall provide the Associate Director for 6 7 Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the 8 name and affiliation of the person selected to conduct the Assessment, which the Associate 9 Director shall have the authority to approve in his sole discretion. Any decision not to approve 10 an individual selected to conduct such Assessment must be accompanied by a writing setting 11 forth in detail the reasons for denying such approval.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 320,
+            "quote_end_line": 330
           },
           {
-            "description": "Initial assessment covering entry to January 31, 2020; biennial assessments for 10 years thereafter",
-            "quoted_text": "The reporting period for the Assessments to FTC must cover: (1) from the entry of this Order to January 31, 2020, for the initial Assessment; and (2) each 2-year period thereafter for ten (10) years after entry of this Order for the biennial Assessments.",
+            "description": "The initial Assessment must cover from the entry of this Order to January 31, 2020; biennial Assessments must cover each 2-year period thereafter for ten (10) years after entry of this Order",
+            "quoted_text": "C. The reporting period for the Assessments to FTC must cover: (1) from the entry 13 14 of this Order to January 31, 2020, for the initial Assessment; and (2) each 2-year period 15 thereafter for ten (10) years after entry of this Order for the biennial Assessments.",
+            "deadline": "initial Assessment period ends January 31, 2020",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 332,
+            "quote_end_line": 335
+          },
+          {
+            "description": "If electing to assess compliance with the Software Security Program, the Assessment must determine whether the program is implemented and maintained, assess the effectiveness of sub-Sections I.A-I, identify gaps or weaknesses, and identify specific evidence examined",
+            "quoted_text": "D. If Defendant elects to assess Defendant’s compliance with the Software Security 17 Program, the Assessment must: (1) determine whether Defendant has implemented and 18 maintained the Software Security Program; (2) assess the effectiveness of Defendant’s 19 implementation and maintenance of sub-Sections I.A-I; (3) identify any gaps or weaknesses in 20 the Software Security Program; (4) identify specific evidence (such as documents reviewed, 21 22 sampling and testing performed, and interviews conducted) examined to make such 23 determinations, assessments, and identifications, and explain why the evidence that the Assessor 24 examined is sufficient to justify the Assessor’s findings; or,",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 337,
+            "quote_end_line": 350
           },
           {
-            "description": "Complete each assessment within 60 days after end of reporting period",
-            "quoted_text": "Each Assessment must be completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
-            "deadline": "60 days",
+            "description": "If electing to assess compliance with the Approved Standard, the Assessment must certify compliance with the Approved Standard, including specified provisions of IEC 62443-4-1",
+            "quoted_text": "E. If Defendant elects to assess Defendant’s compliance with the Approved 26 Standard, the Assessment must certify compliance with the Approved Standard, including, but 27 7 28 [PROPOSED] STIPULATED ORDER FOR INJUNCTION CASE NO. 3:17-cv-00039-JD Case 3:17-cv-00039-JD Document 272-1 Filed 07/02/19 Page 8 of 32 1 not limited to, the following provisions: (1) Part 6.4 (“SR-3: Product Security Requirements”); 2 (2) Part 6.5 (“SR-4: Product security requirements content”); (3) Part 6.3 (“SR-2: Threat 3 model”); (4) Part 8.3.1(c) (“Static Code Analysis”); (5) Part 9.4 (“SVV-3: Vulnerability 4 Testing”); (6) Part 9.5 (“Penetration Testing”); (7) Part 10.4 (“DM-3: Assessing security-related 5 issues”); (8) Part 10.5 (“DM-4: Addressing security-related issues”); (9) Part 10.2 (“DM-1: 6 7 Receiving notifications of security-related issues”); (10) Part 11.6 (“SUM-5: Timely delivery of 8 security patches”); (11) Part 10.6 (“DM-5: Disclosing security-related issues”); (12) Part 5.6 9 (“SM-4: Security expertise”).",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 352,
+            "quote_end_line": 378
           },
           {
-            "description": "Submit initial assessment to Commission within 20 days of completion",
-            "quoted_text": "Unless otherwise directed by a Commission representative in writing, Defendant must submit the initial Assessment to the Commission within twenty (20) days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
-            "deadline": "20 days",
+            "description": "No Assessment finding may rely solely on assertions or attestations by Defendant's management; the Assessment must be signed by the Assessor stating they conducted an independent review",
+            "quoted_text": "F. No finding of any Assessment shall rely solely on assertions or attestations by 11 Defendant’s management. The Assessment shall be signed by the Assessor and shall state that 12 the Assessor conducted an independent review of the Software Security Program or the 13 14 Approved Standard, and did not rely solely on assertions or attestations by Defendant’s 15 management.",
+            "deadline": null,
             "verified": true,
-            "confidence": 0.7888888888888889
+            "confidence": 1.0,
+            "quote_start_line": 380,
+            "quote_end_line": 387
           },
           {
-            "description": "Retain subsequent biennial assessments and provide within 20 days of request",
-            "quoted_text": "All subsequent biennial Assessments shall be retained by Defendant until the order is terminated and provided to the Associate Director for Enforcement within twenty (20) days of request.",
-            "deadline": "20 days",
+            "description": "Where third parties implement any Software Security Program criteria, Defendant must provide or cause to be provided to the Assessor all materials and documentation necessary to conduct the Assessment",
+            "quoted_text": "G. To the extent that Defendant has selected, appointed, or worked with a third party 17 to implement any of the criteria of the Software Security Program or any criteria of the Approved 18 Standard, Defendant shall provide to the Assessor, or cause to be provided to the Assessor, in 19 connection with the Assessment, all materials and documentation necessary for the Assessor to 20 conduct the Assessment of the effectiveness of the Comprehensive Software Security Program or 21 22 Approved Standard. All such materials and documentation shall be maintained and produced 23 upon request pursuant to the provisions of this Order.",
+            "deadline": null,
             "verified": true,
-            "confidence": 0.988974358974359
+            "confidence": 1.0,
+            "quote_start_line": 389,
+            "quote_end_line": 400
+          },
+          {
+            "description": "Each Assessment must be completed within sixty (60) days after the end of the reporting period; the initial Assessment must be submitted to the Commission within twenty (20) days after completion; all subsequent biennial Assessments must be retained and provided to the Associate Director within twenty (20) days of request",
+            "quoted_text": "H. Each Assessment must be completed within sixty (60) days after the end of the 25 reporting period to which the Assessment applies. Unless otherwise directed by a Commission 26 representative in writing, Defendant must submit the initial Assessment to the Commission 27 8 28 [PROPOSED] STIPULATED ORDER FOR INJUNCTION CASE NO. 3:17-cv-00039-JD Case 3:17-cv-00039-JD Document 272-1 Filed 07/02/19 Page 9 of 32 1 within twenty (20) days after the Assessment has been completed via email to DEbrief@ftc.gov 2 or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, 3 Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, 4 Washington, DC 20580. The subject line must begin, “In re D-Link Systems, FTC File No. 5 X170030.” All subsequent biennial Assessments shall be retained by Defendant until the order 6 7 is terminated and provided to the Associate Director for Enforcement within twenty (20) days of 8 request.",
+            "deadline": "60 days after end of reporting period; submit within 20 days after completion",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 402,
+            "quote_end_line": 428
+          },
+          {
+            "description": "If Defendant obtains an Assessment certifying compliance with the Approved Standard and with Section I.E.10, Defendant shall be deemed in compliance with Section I for two (2) years from the date of that Assessment or until the next January 31 Assessment deadline, whichever is earlier, subject to exceptions for misrepresentations and material changes in practices",
+            "quoted_text": "I. If Defendant obtains an Assessment (i) certifying that the Software Security 10 Program for the Covered Devices is in compliance with the Approved Standard and 11 (ii) certifying that Defendant is in compliance with Section I.E.10, Defendant shall be deemed in 12 compliance with Section I of this Order for two (2) years from the date of that Assessment or 13 14 until the next January 31 Assessment deadline, whichever is earlier. Provided, however: 15 1. Defendant shall not be deemed in compliance with Section I of this Order 16 based on a Section II Assessment if Defendant made a representation, express or implied, that 17 either misrepresented or omitted a material fact and such misrepresentation or omission would 18 likely affect a reasonable Assessor’s decision about whether Defendant complied with the 19 Approved Standard. Further, in the event that such a misrepresentation or omission was made 20 for the purpose of deceiving the Assessor, Defendant shall not be deemed in compliance with 21 22 any portion of Section I or Section II of this Order based on that Assessment. 23 2. Defendant shall not be deemed in compliance with Section I of this Order 24 based upon a Section II Assessment if Defendant materially changed its practices after the 25 Assessment in question, unless, at the time of the material change, an Assessor qualified under 26 27 9 28 [PROPOSED] STIPULATED ORDER FOR INJUNCTION CASE NO. 3:17-cv-00039-JD Case 3:17-cv-00039-JD Document 272-1 Filed 07/02/19 Page 10 of 32 1 this Section certifies that the material change does not cause Defendant to fall out of compliance 2 with the Approved Standard on which the Assessment in question was based.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 430,
+            "quote_end_line": 469
           }
         ]
       },
@@ -338,21 +338,25 @@
         "provision_number": "III",
         "title": "Cooperation with Third-Party Software Security Assessor",
         "category": "affirmative_obligation",
-        "summary": "Defendant must disclose all material facts to the assessor, not misrepresent any facts, and provide all necessary information for the assessment.",
+        "summary": "Defendant must disclose all material facts to the Assessor and provide all necessary information and materials for each Assessment, without misrepresentation.",
         "requirements": [
           {
-            "description": "Disclose all material facts to assessor and not misrepresent",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant, whether acting directly or indirectly, in connection with any Assessment required by Section II of this Order titled Software Security Assessments by a Third Party, must: Disclose all material facts to the Assessor, and must not misrepresent in any manner, expressly or by implication, any fact material to the Assessor's Assessment;",
+            "description": "Disclose all material facts to the Assessor and must not misrepresent in any manner, expressly or by implication, any fact material to the Assessor's Assessment",
+            "quoted_text": "A. Disclose all material facts to the Assessor, and must not misrepresent in any 9 manner, expressly or by implication, any fact material to the Assessor’s Assessment; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9787870619946092
+            "confidence": 1.0,
+            "quote_start_line": 479,
+            "quote_end_line": 481
           },
           {
-            "description": "Provide all necessary information and material to assessor",
-            "quoted_text": "Provide or otherwise make available to the Assessor all information and material in its possession, custody, or control that is necessary to the Assessment for which there is no reasonable claim of privilege.",
+            "description": "Provide or otherwise make available to the Assessor all information and material in its possession, custody, or control that is necessary to the Assessment for which there is no reasonable claim of privilege",
+            "quoted_text": "B. Provide or otherwise make available to the Assessor all information and material 11 in its possession, custody, or control that is necessary to the Assessment for which there is no 12 reasonable claim of privilege.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 483,
+            "quote_end_line": 487
           }
         ]
       },
@@ -360,21 +364,25 @@
         "provision_number": "IV",
         "title": "Annual Certification",
         "category": "compliance_reporting",
-        "summary": "Defendant must provide annual certifications from a senior corporate manager that requirements have been implemented and maintained, with no material noncompliance that has not been corrected or disclosed.",
+        "summary": "Defendant must annually submit to the FTC a sworn certification from a senior corporate manager confirming compliance with the Order and disclosing any material noncompliance.",
         "requirements": [
           {
-            "description": "Provide annual certification one year after entry and each year thereafter",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with compliance with Defendant's Software Security Program, Defendant shall: One year after the entry of this Order, and each year thereafter, provide the Commission with a certification from a senior corporate manager, or, if no such senior corporate manager exists, a senior officer of Defendant responsible for Defendant's Software Security Program that: (1) the requirements of this Order have been established, implemented, and maintained; and (2) Defendant is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission.",
-            "deadline": "12 months",
+            "description": "One year after entry of the Order, and each year thereafter, provide the Commission with a certification from a senior corporate manager or senior officer that: (1) the requirements of this Order have been established, implemented, and maintained; and (2) Defendant is not aware of any material noncompliance that has not been corrected or disclosed to the Commission",
+            "quoted_text": "A. One year after the entry of this Order, and each year thereafter, provide the 18 Commission with a certification from a senior corporate manager, or, if no such senior corporate 19 manager exists, a senior officer of Defendant responsible for Defendant’s Software Security 20 Program that: (1) the requirements of this Order have been established, implemented, and 21 22 maintained; and (2) Defendant is not aware of any material noncompliance that has not been (a) 23 corrected or (b) disclosed to the Commission. The certification must be based on the personal 24 knowledge of the senior corporate manager, senior officer, or subject matter experts upon whom 25 the senior corporate manager or senior officer reasonably relies in making the certification.",
+            "deadline": "1 year after entry, then annually",
             "verified": true,
-            "confidence": 0.9595120061967467
+            "confidence": 1.0,
+            "quote_start_line": 494,
+            "quote_end_line": 507
           },
           {
-            "description": "Submit annual certifications to Commission via specified channels",
-            "quoted_text": "Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, \"In re D-Link Systems, Inc., FTC File No. X170030.\"",
+            "description": "Submit all annual certifications to the Commission via email to DEbrief@ftc.gov or by overnight courier to Associate Director for Enforcement, with subject line beginning \"In re D-Link Systems, Inc., FTC File No. X170030\"",
+            "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all 2 annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or 3 by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau 4 of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, 5 Washington, DC 20580. The subject line must begin, “In re D-Link Systems, Inc., FTC File No. 6 7 X170030.”",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 518,
+            "quote_end_line": 528
           }
         ]
       },
@@ -382,21 +390,25 @@
         "provision_number": "V",
         "title": "Specific Conduct Provisions",
         "category": "prohibition",
-        "summary": "Defendant must stop selling IP camera setup wizard with specific representations and provide firmware update instructions to consumers who registered devices.",
+        "summary": "Defendant must stop selling or distributing the IP Camera set-up wizard software containing representations in Exhibit C, and must notify registered consumers to update their device firmware within 60 days.",
         "requirements": [
           {
-            "description": "Stop selling, distributing, or hosting IP camera setup wizard with specified representations",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant shall no longer sell, distribute, or host on its website the IP Camera set-up wizard software containing the representations shown in Exhibit C attached hereto for any Covered Devices.",
+            "description": "Defendant shall no longer sell, distribute, or host on its website the IP Camera set-up wizard software containing the representations shown in Exhibit C for any Covered Devices",
+            "quoted_text": "A. Defendant shall no longer sell, distribute, or host on its website the IP Camera set- 11 up wizard software containing the representations shown in Exhibit C attached hereto for any 12 Covered Devices.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 534,
+            "quote_end_line": 538
           },
           {
-            "description": "Provide firmware update instructions to registered consumers within 60 days",
-            "quoted_text": "Within 60 days of the effective date of this Order, provide clear and conspicuous notice to all consumers who registered their Covered Devices, through the communication channel(s) the consumer chose at the time of registration, containing instructions for updating said device with the latest firmware update.",
+            "description": "Within 60 days of the effective date of this Order, provide clear and conspicuous notice to all consumers who registered their Covered Devices, through the communication channel(s) the consumer chose at the time of registration, containing instructions for updating said device with the latest firmware update",
+            "quoted_text": "B. Within 60 days of the effective date of this Order, provide clear and conspicuous 14 15 notice to all consumers who registered their Covered Devices, through the communication 16 channel(s) the consumer chose at the time of registration, containing instructions for updating 17 said device with the latest firmware update.",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 540,
+            "quote_end_line": 546
           }
         ]
       },
@@ -404,28 +416,34 @@
         "provision_number": "VI",
         "title": "Order Acknowledgments",
         "category": "acknowledgment",
-        "summary": "Defendant must submit acknowledgment of receipt of Order and deliver copies to relevant personnel for three years, obtaining signed acknowledgments from recipients.",
+        "summary": "Defendant must obtain and submit acknowledgments of receipt of this Order from itself and relevant personnel, and deliver copies to all current and future responsible personnel.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt within 7 days",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant obtains acknowledgments of receipt of this Order: Defendant, within 7 days of entry of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Within 7 days of entry of this Order, submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury",
+            "quoted_text": "A. Defendant, within 7 days of entry of this Order, must submit to the Commission 22 23 an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 0.9996969696969698
+            "confidence": 1.0,
+            "quote_start_line": 554,
+            "quote_end_line": 556
           },
           {
-            "description": "Deliver order to principals, officers, directors, managers, and relevant employees for 3 years",
-            "quoted_text": "For three years after entry of this Order, Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees having managerial responsibilities for the security of Covered Devices and all agents and representatives who participate in the security of Covered Devices; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within 7 days of entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "7 days",
+            "description": "For three years after entry of this Order, deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees having managerial responsibilities for the security of Covered Devices and all agents and representatives who participate in the security of Covered Devices; and (3) any business entity resulting from any change in structure. Delivery must occur within 7 days of entry of this Order for current personnel and before others assume their responsibilities",
+            "quoted_text": "B. For three years after entry of this Order, Defendant must deliver a copy of this 25 Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all 26 employees having managerial responsibilities for the security of Covered Devices and all agents 27 11 28 [PROPOSED] STIPULATED ORDER FOR INJUNCTION CASE NO. 3:17-cv-00039-JD Case 3:17-cv-00039-JD Document 272-1 Filed 07/02/19 Page 12 of 32 1 and representatives who participate in the security of Covered Devices; and (3) any business 2 entity resulting from any change in structure as set forth in the Section titled Compliance 3 Reporting. Delivery must occur within 7 days of entry of this Order for current personnel. For 4 all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "7 days for current personnel; before assuming responsibilities for others",
             "verified": true,
-            "confidence": 0.8246844319775596
+            "confidence": 0.85,
+            "quote_start_line": 558,
+            "quote_end_line": 578
           },
           {
-            "description": "Obtain signed acknowledgments within 30 days from recipients",
-            "quoted_text": "From each individual or entity to which a Defendant delivered a copy of this Order, that Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "From each individual or entity to which a copy of this Order was delivered, obtain within 30 days a signed and dated acknowledgment of receipt of this Order",
+            "quoted_text": "C. From each individual or entity to which a Defendant delivered a copy of this 6 7 Order, that Defendant must obtain, within 30 days, a signed and dated acknowledgment of 8 receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 580,
+            "quote_end_line": 584
           }
         ]
       },
@@ -433,28 +451,52 @@
         "provision_number": "VII",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Defendant must submit compliance reports and notices regarding changes to contact information, business structure, or bankruptcy proceedings.",
+        "summary": "Defendant must file a compliance report on January 31, 2020 and timely notices for any changes in structure or bankruptcy filings, submitted sworn under penalty of perjury.",
         "requirements": [
           {
-            "description": "Submit initial compliance report by January 31, 2020",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant makes timely submissions to the Commission: On January 31, 2020, Defendant must submit a compliance report, sworn under penalty of perjury, which must: (1) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission may use to communicate with Defendant; (2) identifies all of that Defendant's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (3) describes the activities of each business, including the security and marketing practices; (4) describes in detail whether and how Defendant is in compliance with each Section of this Order (either directly or, at Defendant's election, Defendant may, for the purpose of satisfying this requirement as to Sections I and II, incorporate a Section II initial Assessment); and (5) provides a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "description": "On January 31, 2020, submit a compliance report sworn under penalty of perjury identifying contact information, all businesses, activities, compliance status for each Order section, and copies of Order Acknowledgments",
+            "quoted_text": "A. On January 31, 2020, Defendant must submit a compliance report, sworn under 13 penalty of perjury, which must: (1) identify the primary physical, postal, and email address and 14 15 telephone number, as designated points of contact, which representatives of the Commission may 16 use to communicate with Defendant; (2) identifies all of that Defendant’s businesses by all of 17 their names, telephone numbers, and physical, postal, email, and Internet addresses; (3) describes 18 the activities of each business, including the security and marketing practices; (4) describes in 19 detail whether and how Defendant is in compliance with each Section of this Order (either 20 directly or, at Defendant’s election, Defendant may, for the purpose of satisfying this 21 requirement as to Sections I and II, incorporate a Section II initial Assessment); and (5) provides 22 23 a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously 24 submitted to the Commission.",
             "deadline": "January 31, 2020",
             "verified": true,
-            "confidence": 0.9893810444874275
+            "confidence": 1.0,
+            "quote_start_line": 592,
+            "quote_end_line": 611
           },
           {
-            "description": "Submit compliance notice within 14 days of changes to contact or structure for 10 years",
-            "quoted_text": "For ten (10) years after entry of this Order, Defendant must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (a) any designated point of contact; or (b) the structure of Defendant or any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the Defendant or any subsidiary, parent, or affiliate that Defendant has any ownership interest in or controls directly or indirectly that engages in any acts or practices subject to this Order.",
-            "deadline": "14 days",
+            "description": "For ten (10) years after entry of this Order, submit a compliance notice sworn under penalty of perjury within 14 days of any change in designated point of contact or in the structure of Defendant or any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations under this Order",
+            "quoted_text": "B. For ten (10) years after entry of this Order, Defendant must submit a compliance 26 notice, sworn under penalty of perjury, within 14 days of any change in the following: (a) any 27 12 28 [PROPOSED] STIPULATED ORDER FOR INJUNCTION CASE NO. 3:17-cv-00039-JD Case 3:17-cv-00039-JD Document 272-1 Filed 07/02/19 Page 13 of 32 1 designated point of contact; or (b) the structure of Defendant or any entity that Defendant has 2 any ownership interest in or controls directly or indirectly that may affect compliance obligations 3 arising under this Order, including: creation, merger, sale, or dissolution of the Defendant or any 4 subsidiary, parent, or affiliate that Defendant has any ownership interest in or controls directly or 5 indirectly that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days of any triggering change",
             "verified": true,
-            "confidence": 0.8334457181389077
+            "confidence": 0.85,
+            "quote_start_line": 613,
+            "quote_end_line": 633
           },
           {
-            "description": "Submit notice of bankruptcy filing within 14 days",
-            "quoted_text": "Defendant must submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Defendant within 14 days of its filing.",
+            "description": "Submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Defendant within 14 days of its filing",
+            "quoted_text": "7 C. Defendant must submit to the Commission notice of the filing of any bankruptcy 8 petition, insolvency proceeding, or similar proceeding by or against such Defendant within 14 9 days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 635,
+            "quote_end_line": 639
+          },
+          {
+            "description": "Any submission required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under 11 penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by 12 concluding: “I declare under penalty of perjury under the laws of the United States of America 13 14 that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s 15 full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 641,
+            "quote_end_line": 648
+          },
+          {
+            "description": "Unless otherwise directed in writing, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to Associate Director for Enforcement, Bureau of Consumer Protection, FTC, 600 Pennsylvania Avenue NW, Washington, DC 20580, with subject line beginning \"FTC v. D-Link Systems, Inc., X170030\"",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all 17 submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or 18 sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, 19 Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, 20 Washington, DC 20580. The subject line must begin: FTC v. D-Link Systems, Inc., X170030.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 650,
+            "quote_end_line": 658
           }
         ]
       },
@@ -462,14 +504,16 @@
         "provision_number": "VIII",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Defendant must create and retain specific records for 10years after entry of Order, with each record retained for 5 years.",
+        "summary": "Defendant must create and retain specified records for ten years after entry of the Order (each retained for 5 years), including accounting records, personnel records, consumer complaints, compliance documents, and marketing materials.",
         "requirements": [
           {
-            "description": "Create and retain accounting records, personnel records, consumer complaints, compliance records, and marketing materials",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant must create certain records for ten (10) years after entry of the Order, and retain each such record for 5 years. Specifically, Defendant must create and retain the following records: accounting records showing the revenues from all goods or services sold; Defendant's personnel records showing, for each person providing services, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination; records of all consumer complaints and refund requests, whether received directly or indirectly, such as through a third party, concerning the subject matter of the Order; all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission; and a copy of each unique advertisement or other marketing material by Defendant making a representation subject to this Order.",
-            "deadline": null,
+            "description": "Create certain records for ten (10) years after entry of the Order, and retain each such record for 5 years, specifically: (A) accounting records showing revenues from all goods or services sold; (B) personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination; (C) records of all consumer complaints and refund requests; (D) all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission; and (E) a copy of each unique advertisement or other marketing material making a representation subject to this Order",
+            "quoted_text": "23 IT IS FURTHER ORDERED that Defendant must create certain records for ten (10) 24 years after entry of the Order, and retain each such record for 5 years. Specifically, Defendant 25 must create and retain the following records: 26 A. accounting records showing the revenues from all goods or services sold; 27 13 28 [PROPOSED] STIPULATED ORDER FOR INJUNCTION CASE NO. 3:17-cv-00039-JD Case 3:17-cv-00039-JD Document 272-1 Filed 07/02/19 Page 14 of 32 1 B. Defendant’s personnel records showing, for each person providing services, 2 whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job 3 title or position; dates of service; and (if applicable) the reason for termination; 4 C. records of all consumer complaints and refund requests, whether received directly 5 6 or indirectly, such as through a third party, concerning the subject matter of the Order; 7 D. all records necessary to demonstrate full compliance with each provision of this 8 Order, including all submissions to the Commission; and 9 E. a copy of each unique advertisement or other marketing material by Defendant 10 making a representation subject to this Order.",
+            "deadline": "10 years (create); 5 years (retain)",
             "verified": true,
-            "confidence": 0.8712226871222687
+            "confidence": 0.85,
+            "quote_start_line": 661,
+            "quote_end_line": 692
           }
         ]
       },
@@ -477,21 +521,34 @@
         "provision_number": "IX",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "FTC has authority to monitor compliance through document requests, depositions, interviews, and other investigative methods.",
+        "summary": "The FTC has the right to monitor Defendant's compliance through document requests, depositions, discovery, and interviews, with Defendant required to respond within 14 days of written requests.",
         "requirements": [
           {
-            "description": "Respond to Commission requests within 14 days for compliance reports, depositions, and document production",
-            "quoted_text": "IT IS FURTHER ORDERED that, for the purpose of monitoring Defendant's compliance with this Order: Within 14 days of receipt of a written request from a representative of the Commission, Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying.",
-            "deadline": "14 days",
+            "description": "Within 14 days of receipt of a written request from a representative of the Commission, Defendant must submit additional compliance reports or other requested information (sworn under penalty of perjury), appear for depositions, and produce documents for inspection and copying; the Commission is also authorized to obtain discovery using Federal Rules of Civil Procedure 29, 30, 31, 33, 34, 36, 45, and 69",
+            "quoted_text": "15 A. Within 14 days of receipt of a written request from a representative of the 16 Commission, Defendant must: submit additional compliance reports or other requested 17 information, which must be sworn under penalty of perjury; appear for depositions; and produce 18 documents for inspection and copying. The Commission is also authorized to obtain discovery, 19 without further leave of court, using any of the procedures prescribed by Federal Rules of Civil 20 Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69. Provided, 21 22 however, that Defendant, after attempting to resolve a dispute without court action and for good 23 cause shown, may file a motion with this Court seeking an order for one or more of the 24 protections set forth in Rule 26(c).",
+            "deadline": "14 days of written request",
             "verified": true,
-            "confidence": 0.9481929181929182
+            "confidence": 1.0,
+            "quote_start_line": 700,
+            "quote_end_line": 715
           },
           {
-            "description": "Permit Commission to interview employees and affiliated persons",
-            "quoted_text": "For matters concerning this Order, the Commission is authorized to communicate directly with Defendant, Defendant must permit representatives of the Commission to interview any employee or other person affiliated with Defendant who has agreed to such an interview. The person interviewed may have counsel present.",
+            "description": "For matters concerning this Order, the Commission is authorized to communicate directly with Defendant; Defendant must permit representatives of the Commission to interview any employee or other affiliated person who has agreed to such an interview, with counsel present if desired",
+            "quoted_text": "B. For matters concerning this Order, the Commission is authorized to communicate 26 directly with Defendant, Defendant must permit representatives of the Commission to interview 27 14 28 [PROPOSED] STIPULATED ORDER FOR INJUNCTION CASE NO. 3:17-cv-00039-JD Case 3:17-cv-00039-JD Document 272-1 Filed 07/02/19 Page 15 of 32 1 any employee or other person affiliated with Defendant who has agreed to such an interview. 2 The person interviewed may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.7006109979633401
+            "confidence": 0.85,
+            "quote_start_line": 717,
+            "quote_end_line": 731
+          },
+          {
+            "description": "The Commission may use all other lawful means, including posing as consumers, suppliers, or other individuals or entities, without the necessity of identification or prior notice; nothing in this Order limits the Commission's lawful use of compulsory process under Sections 9 and 20 of the FTC Act",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing, through its 4 representatives, as consumers, suppliers, or other individuals or entities, to Defendant or any 5 individual or entity affiliated with Defendant, without the necessity of identification or prior 6 7 notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, 8 pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1, nor does it limit 9 Defendant’s ability to assert any and all objections, defenses, rights, or privileges available to it, 10 as to any such process.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 733,
+            "quote_end_line": 745
           }
         ]
       },
@@ -499,21 +556,23 @@
         "provision_number": "X",
         "title": "Retention of Jurisdiction",
         "category": "duration",
-        "summary": "The Court retains jurisdiction for purposes of construction, modification, and enforcement of this Order.",
+        "summary": "The Court retains jurisdiction over this matter for the purposes of construction, modification, and enforcement of this Order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction for construction, modification, and enforcement",
-            "quoted_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+            "description": "The Court retains jurisdiction over this matter for the purposes of construction, modification, and enforcement of this Order",
+            "quoted_text": "X. RETENTION OF JURISl>JCTJON 2 3 . pwpous ofc onmw:tio11, modificatiOII, 8Tld enfon::i,ment ofl his Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.8166666666666667
+            "confidence": 1.0,
+            "quote_start_line": 770,
+            "quote_end_line": 774
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "IT IS ORDERED that Defendant shall, for a period of twenty (20) years after entry of this Order, continue with or establish and implement, and maintain, a comprehensive software security program (\"Software Security Program\") that is designed to provide protection for the security of its Covered Devices"
+      "termination_text": "IT IS ORDERED that Defendant shall, for a period of twenty (20) years after entry of this Order, continue with or establish and implement, and maintain, a comprehensive software security program (\"Software Security Program\") that is designed to provide protection for the security of its Covered Devices, unless Defendant ceases to market, distribute, or sell any Covered Devices."
     }
   },
   "metadata": {
@@ -523,11 +582,34 @@
     },
     "extraction_stats": {
       "complaint_counts": 6,
-      "complaint_representations": 10,
+      "complaint_representations": 8,
       "order_provisions": 10,
       "order_definitions": 5,
-      "order_requirements": 44
+      "order_requirements": 38,
+      "provisions_per_section": {
+        "I": 10,
+        "II": 9,
+        "III": 2,
+        "IV": 2,
+        "V": 2,
+        "VI": 3,
+        "VII": 5,
+        "VIII": 1,
+        "IX": 3,
+        "X": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 8,
+        "complaint_total": 8,
+        "order_verified": 38,
+        "order_total": 38
+      }
     },
-    "processing_time_seconds": 1194.2
+    "processing_time_seconds": 191.0
   }
 }

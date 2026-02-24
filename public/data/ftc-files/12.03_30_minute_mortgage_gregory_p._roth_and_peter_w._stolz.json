@@ -1,88 +1,104 @@
 {
   "case_info": {
-    "docket_number": "03-60021-CIV-LENARD-SIMONTON",
+    "docket_number": "03-6002 1-CIV-LENARD-SIMONTON",
     "company": {
       "name": "30 Minute Mortgage Inc.",
       "incorporation_state": "Florida",
       "entity_type": "corporation",
       "address": "102 N.E. 2nd Street, Suite 195, Boca Raton, Florida 33432",
-      "business_description": "30 Minute Mortgage Inc. is a mortgage company that advertises residential mortgage loans and operates websites through which it collects consumer loan applications. The company has sold or offered to sell completed applications to nonaffiliated third parties including mortgage brokers and lenders."
+      "business_description": "30 Minute Mortgage Inc. operates websites and sends unsolicited commercial emails advertising home mortgage loans, including adjustable rate mortgages. Rather than lending money directly, the company sells completed loan applications to nonaffiliated third parties including mortgage brokers and lenders."
     },
     "commissioners": [],
     "case_date": {
       "month": 12,
       "year": 2003
     },
-    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a); Section 13(b) of the Federal Trade Commission Act, 15 U.S.C. § 53(b); Section 108(c) of the Truth in Lending Act, 15 U.S.C. § 1607(c); Sections 505(a)(7) and 522(a) of the Gramm-Leach-Bliley Act, 15 U.S.C. §§ 6805(a)(7) & 6822(a)",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a); Section 108(c) of the Truth in Lending Act (TILA), 15 U.S.C. § 1607(c); and Sections 505(a)(7) and 522(a) of the Gramm-Leach-Bliley Act (GLB Act), 15 U.S.C. §§ 6805(a)(7) & 6822(a)",
     "violation_type": "both",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/022-3224-30-minute-mortgage-inc-gregory-p-roth-peter-w-stolz"
   },
   "complaint": {
-    "factual_background": "30 Minute Mortgage Inc. sent spam emails advertising 3.95% 30-year mortgages and claimed to be a national mortgage lender. In reality, they were not a lender at all but sold consumer applications to third parties. They also falsely claimed to use SSL encryption to protect consumer financial information but failed to implement such security measures in numerous instances. They collected detailed personal and financial information from consumers through deceptive pretexts.",
+    "factual_background": "30 Minute Mortgage Inc., along with its President Gregory P. Roth and National Sales Director Peter W. Stolz, sent unsolicited spam emails and operated websites falsely advertising 3.95% 30-year fixed mortgage loans, when in reality only adjustable rate mortgages were available. The company also misrepresented itself as a national mortgage lender, when it actually collected consumer loan applications and sold them to nonaffiliated third parties such as mortgage brokers and lenders. Defendants falsely claimed their websites used SSL encryption and HTTPS to protect consumers' personal and financial information, but in numerous instances no such security measures were in place. Furthermore, Defendants sold consumers' nonpublic personal financial information to third parties without providing required privacy notices or opt-out opportunities under the Gramm-Leach-Bliley Act.",
     "representations_made": [
       {
-        "description": "Claimed that 3.95% 30 year mortgages and 3.95% APR 30 year mortgages were available from 30 Minute Mortgage Inc.",
-        "quoted_text": "In credit advertisements (including but not necessarily limited to Exhibits A and B), Defendants have represented, expressly or by implication, that A. 3.95% 30 year mortgages are available from 30 Minute Mortgage Inc., and B. 3.95% APR [annual percentage rate] 30 year mortgages are available from 30 Minute Mortgage Inc.",
-        "source_paragraph": 19
+        "description": "Advertised that 3.95% 30-year mortgages and 3.95% APR 30-year mortgages were available from 30 Minute Mortgage Inc.",
+        "quoted_text": "Defendants have represented, expressly or by implication, that A. 3.95% 30 year mortgages are available from 30 Minute Mortgage Inc., and B. 3.95% APR [annual percentage rate] 30 year mortgages are available from 30 Minute Mortgage Inc.",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 19,
+        "quote_start_line": 140,
+        "quote_end_line": 145
       },
       {
-        "description": "Claimed that 30 Minute Mortgage Inc. is a mortgage lender",
-        "quoted_text": "In the course of advertising on the Internet (including but not necessarily limited to Exhibits C and D), Defendants have represented, expressly or by implication, that 30 Minute Mortgage Inc. is a mortgage lender.",
-        "source_paragraph": 23
+        "description": "Represented that 30 Minute Mortgage Inc. is a national mortgage lender and a California-based full-service mortgage lender",
+        "quoted_text": "11. On their websites, Defendants have stated that 30 Minute Mortgage Inc. is a \"national mortgage lender that seeks to provide residential mortgage loans to its consumers\" and \"a fast growing full service California based Mortgage Lender with outstanding products and a complete portfolio of Real Estate loans, including Conforming, Non-Conforming, Commercial, Investment and Government Loans.\" See. ex., Exhibits C & D.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 11,
+        "quote_start_line": 102,
+        "quote_end_line": 106
       },
       {
-        "description": "Claimed that pages asking for personal and financial information are delivered through HTTPS/SSL and that SSL technology is employed for transmission of such information",
-        "quoted_text": "In 30 Minute Mortgage Inc.'s online privacy policy (including but not necessarily limited to Exhibit C), Defendants have represented, expressly or by implication, that: A. The pages on Defendants' websites that ask for consumers' personal and financial information are delivered through \"HTTPS\" or SSL, and B. Defendants' websites employ SSL technology or other encryption for the transmission of personal and financial information.",
-        "source_paragraph": 27
+        "description": "Represented in their online privacy policy that all pages asking for personal and financial information are delivered through HTTPS, and that SSL technology encrypts and protects all transmitted personal and financial information",
+        "quoted_text": "A. \"All of the pages on our Web site that ask for your personal and financial information are delivered to your browser through HTTPS, a secure mode of communication.\"; and B. \"When you send your personal and financial information to us, it is protected by SSL (Secure Sockets Layer) Technology. SSL does not allow anyone to intercept and read your personal information. When you send your information to us, SSL encrypts it (translates the data into a string of gibberish characters). Only we can decode the encryption.\"",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 14,
+        "quote_start_line": 120,
+        "quote_end_line": 127
       },
       {
-        "description": "Claimed to be a national mortgage lender and California-based mortgage lender offering 3.95% 30 year mortgage loans",
-        "quoted_text": "In numerous instances, in connection with the marketing of residential mortgage loans, Defendants have employed pretexts to induce consumers to divulge their personal financial information. These pretexts include, but are not necessarily limited to, representing, expressly or by implication, that 30 Minute Mortgage Inc. is a national mortgage lender and a California-based mortgage lender and/or that 30 Minute Mortgage Inc. provides 3.95% 30 year mortgage loans and 3.95% 30 year APR mortgage loans.",
-        "source_paragraph": 50
+        "description": "Used false pretexts — including claiming to be a national mortgage lender offering 3.95% mortgage loans — to induce consumers to divulge personal financial information",
+        "quoted_text": "Defendants have employed pretexts to induce consumers to divulge their personal financial information. These pretexts include, but are not necessarily limited to, representing, expressly or by implication, that 30 Minute Mortgage Inc. is a national mortgage lender and a California-based mortgage lender andor that 30 Minute Mortgage Inc. provides 3.95% 30 year mortgage loans and 3.95% 30 year APR mortgage loans.",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 50,
+        "quote_start_line": 288,
+        "quote_end_line": 294
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "False Mortgage Rate Advertising",
-        "representation": "3.95% 30 year mortgages and 3.95% APR 30 year mortgages are available from 30 Minute Mortgage Inc.",
-        "fact": "3.95% 30 year mortgages are not available from 30 Minute Mortgage Inc., and 3.95% APR 30 year mortgages are not available from 30 Minute Mortgage Inc.",
-        "conclusion": "Therefore, Defendants' representations as alleged in paragraph 19 above were, and are, false or misleading and constitute deceptive acts or practices in or affecting commerce in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+        "representation": "3.95% 30-year mortgages and 3.95% APR 30-year mortgages are available from 30 Minute Mortgage Inc.",
+        "fact": "3.95% 30-year mortgages and 3.95% APR 30-year mortgages are not available from 30 Minute Mortgage Inc.; consumers who applied would receive an adjustable rate mortgage, not the advertised fixed-rate product.",
+        "conclusion": "Defendants' representations as alleged in paragraph 19 were, and are, false or misleading and constitute deceptive acts or practices in or affecting commerce in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 2,
-        "title": "False Lender Status Claim",
-        "representation": "30 Minute Mortgage Inc. is a mortgage lender",
-        "fact": "30 Minute Mortgage Inc. is not a mortgage lender",
-        "conclusion": "Therefore, Defendants' representation as alleged in paragraph 23 above was, and is, false or misleading and constitutes deceptive acts or practices in or affecting commerce in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+        "title": "False Mortgage Lender Representation",
+        "representation": "30 Minute Mortgage Inc. is a mortgage lender.",
+        "fact": "30 Minute Mortgage Inc. is not a mortgage lender; instead of lending money, Defendants sold or offered to sell thousands of completed consumer loan applications to nonaffiliated third parties including mortgage brokers and lenders.",
+        "conclusion": "Defendants' representation as alleged in paragraph 23 was, and is, false or misleading and constitutes deceptive acts or practices in or affecting commerce in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 3,
-        "title": "False Security Claims",
-        "representation": "The pages on Defendants' websites that ask for consumers' personal and financial information are delivered through HTTPS or SSL, and Defendants' websites employ SSL technology or other encryption for the transmission of personal and financial information",
-        "fact": "In numerous instances: The pages on Defendants' websites that ask for consumers' personal and financial information have not been delivered through HTTPS or SSL; and Defendants' websites have not employed SSL technology or other encryption for the transmission of personal and financial information",
-        "conclusion": "Therefore, Defendants' representations as alleged in paragraph 27 above were, and are, false or misleading and constitute deceptive acts or practices in or affecting commerce in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+        "title": "False Data Security Representations (SSL/HTTPS)",
+        "representation": "Pages on Defendants' websites that ask for personal and financial information are delivered through HTTPS or SSL, and Defendants' websites employ SSL technology or other encryption for the transmission of personal and financial information.",
+        "fact": "In numerous instances, the pages on Defendants' websites that ask for personal and financial information have not been delivered through HTTPS or SSL, and Defendants' websites have not employed SSL technology or other encryption for the transmission of personal and financial information.",
+        "conclusion": "Defendants' representations as alleged in paragraph 27 were, and are, false or misleading and constitute deceptive acts or practices in or affecting commerce in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 4,
-        "title": "TILA and Regulation Z Violations",
-        "representation": "Defendants advertised credit terms for 3.95% 30 Year Mortgages and 3.95% APR 30 Year Mortgages",
-        "fact": "Defendants violated TILA and Regulation Z by: advertising credit terms other than those terms that actually are or will be arranged or offered by the creditor; stating a rate of finance charge without disclosing the accurate annual percentage rate and whether it may be increased after consummation, and advertising a payment rate without making other required disclosures; and stating the period of repayment but failing to disclose the terms of repayment and the annual percentage rate and whether the rate may be increased after consummation",
-        "conclusion": "By engaging in the violations of TILA and Regulation Z set forth in paragraph 34 above, Defendants have also violated the FTC Act."
+        "title": "Truth in Lending Act (TILA) / Regulation Z Violations",
+        "representation": "Defendants advertised closed-end credit terms including '3.95% 30 Year Mortgages' and '3.95% APR 30 Year Mortgages' in their spam and website advertisements.",
+        "fact": "Defendants' credit advertisements violated TILA and Regulation Z by: (A) advertising credit terms other than those actually offered; (B) stating a finance charge rate without accurately disclosing the APR or the possibility of rate increases after consummation; and (C) stating a repayment period without disclosing repayment terms and the APR, including whether the rate could increase after consummation.",
+        "conclusion": "By engaging in these violations of TILA and Regulation Z, Defendants have also violated the FTC Act."
       },
       {
         "count_number": 5,
-        "title": "GLB Act Privacy Rule Violations",
-        "representation": "30 Minute Mortgage Inc. collected nonpublic personal information from consumers and sold or was about to sell this information to nonaffiliated third parties",
-        "fact": "On information and belief, Defendants have not delivered, and are not about to deliver, privacy and opt notices that comply with the GLB Act and Privacy Rule, and have not given, and are not about to give, consumers a reasonable opportunity to opt out of disclosures of their nonpublic personal information to nonaffiliated third parties",
-        "conclusion": "Disclosure by Defendants of mortgage application information received by 30 Minute Mortgage Inc. to nonaffiliated third parties under these circumstances violates Subtitle A of Title V of the GLB Act and the Privacy Rule."
+        "title": "GLB Act Privacy Rule Violations — Failure to Provide Privacy and Opt-Out Notices",
+        "representation": "Defendants collected nonpublic personal information from consumers through residential mortgage application forms and sold or were about to sell that information to nonaffiliated third parties.",
+        "fact": "Defendants did not deliver, and were not about to deliver, privacy and opt-out notices complying with Sections 502 and 503 of the GLB Act and the Privacy Rule, and did not give consumers a reasonable opportunity to opt out of disclosures of their nonpublic personal information to nonaffiliated third parties.",
+        "conclusion": "Disclosure by Defendants of mortgage application information to nonaffiliated third parties under these circumstances violates Subtitle A of Title V of the GLB Act and the Privacy Rule."
       },
       {
         "count_number": 6,
-        "title": "Pretexting to Obtain Customer Information",
-        "representation": "Defendants employed pretexts including representing that 30 Minute Mortgage Inc. is a national mortgage lender and a California-based mortgage lender and that 30 Minute Mortgage Inc. provides 3.95% 30 year mortgage loans and 3.95% 30 year APR mortgage loans",
-        "fact": "30 Minute Mortgage Inc. is not a national mortgage lender or a California-based mortgage lender, and 3.95% 30 year mortgage loans and 3.95% 30 year APR mortgage loans are not available from 30 Minute Mortgage Inc.",
-        "conclusion": "Therefore, Defendants' acts or practices violate Section 521 of the GLB Act, 15 U.S.C. § 6821."
+        "title": "GLB Act § 521 — Fraudulent Pretexting to Obtain Customer Financial Information",
+        "representation": "Defendants used pretexts — including falsely representing that 30 Minute Mortgage Inc. is a national and California-based mortgage lender offering 3.95% 30-year mortgage loans — to induce consumers to divulge their personal financial information.",
+        "fact": "30 Minute Mortgage Inc. is not a national or California-based mortgage lender, and 3.95% 30-year mortgage loans and 3.95% APR mortgage loans are not available from 30 Minute Mortgage Inc. Defendants thereby fraudulently obtained customer information of a financial institution, including monthly mortgage payment amounts and account/asset types and balances.",
+        "conclusion": "Defendants' acts or practices violate Section 521 of the GLB Act, 15 U.S.C. § 6821."
       }
     ]
   },
@@ -93,8 +109,8 @@
       "Defendant": "Peter W. Stolz and his officers, agents, servants, employees, subsidiaries, affiliates, successors, assigns, and all persons or entities in active concert or participation with him who receive actual notice of this Order by personal service or otherwise.",
       "Document": "synonymous in meaning and equal in scope to the usage of the term in Federal Rule of Civil Procedure 34(a), and includes writings, drawings, graphs, charts, photographs, audio and video recordings, computer records, and other data compilations from which information can be obtained and translated, if necessary, into reasonably usable form through detection devices. A draft or non-identical copy is a separate document within the meaning of the term.",
       "Plaintiff": "the Federal Trade Commission.",
-      "Privacy Rule": "the FTC's Privacy of Consumer Financial Information Rule, 16 C.F.R. Part 313. For purposes of Section IV of this Order, the terms \"consumer,\" \"financial institution,\" \"nonaffiliated third party,\" and \"nonpublic personal information\" are defined as set forth in Section 313.3 of the Privacy Rule, 16 C.F.R. § 313.3.",
-      "Regulation Z": "the regulation the Federal Reserve Board (\"FRB\") promulgated to implement TILA, 12 C.F.R. Part 226. The term also includes the FRB Official Staff Commentary on Regulation Z, 12 C.F.R. Part 226, Supp. 1. The terms \"annual percentage rate,\" \"consumer credit,\" and \"finance charge\" are defined as set forth in Sections 226.2, 226.4, and 226.23 of Regulation Z, 12 C.F.R. §§ 226.2, 226.4, & 226.22.",
+      "Privacy Rule": "the FTC's Privacy of Consumer Financial Information Rule, 16 C.F.R. Part 313. For purposes of Section N of this Order, the terms \"consumer,\" \"financial institution,\" \"nonaffiliated third party,\" and \"nonpublic personal information\" are defined as set forth in Section 313.3 of the Privacy Rule, 16 C.F.R. § 313.3.",
+      "Regulation Z": "the regulation the Federal Reserve Board ('FRB') promulgated to implement TILA, 12 C.F.R. Part 226. The term also includes the FRB Official Staff Commentary on Regulation Z, 12 C.F.R. Part 226, Supp. 1. The terms \"annual percentage rate,\" \"consumer credit,\" and \"finance charge\" are defined as set forth in Sections 226.2, 226.4, and 226.23 of Regulation Z, 12 C.F.R. §§ 226.2, 226.4, & 226.22.",
       "Subtitle A of Title V of the GLB Act": "15 U.S.C. §§ 6801-9",
       "Subtitle B of Title V of the GLB Act": "15 U.S.C. §§ 6821-27.",
       "TILA": "the Truth in Lending Act, 15 U.S.C. §§ 1601-1666j.",
@@ -103,37 +119,54 @@
     "provisions": [
       {
         "provision_number": "I",
-        "title": "Bond Requirements",
+        "title": "Bond Requirements for Unsolicited Commercial E-mail",
         "category": "affirmative_obligation",
-        "summary": "Defendant must obtain a $1,000,000 performance bond before engaging in sending unsolicited commercial e-mail and maintain it for 3 years after ceasing such activities.",
+        "summary": "Defendant is permanently enjoined from sending Unsolicited Commercial E-mail unless he first obtains a $1,000,000 performance bond, subject to specific terms regarding duration, surety, notice, and disclosure.",
         "requirements": [
           {
-            "description": "Obtain $1,000,000 performance bond prior to engaging in sending unsolicited commercial e-mail",
-            "quoted_text": "IT IS THEREFORE ORDERED that Defendant Peter W. Stolz, whether acting directly or indirectly through any persons or entities under his control, is hereby permanently enjoined and restrained from engaging in the sending of Unsolicited Commercial E-mail, unless, prior to engaging in such activities, he first obtains a performance bond in the principal sum of $1,000,000 (One Million Dollars) (\"Bond\").",
+            "description": "Defendant must obtain a $1,000,000 performance bond before sending Unsolicited Commercial E-mail, conditioned on compliance with FTC Act Section 5(a) and this Order, remaining in force while engaged in such activity and for three years after ceasing.",
+            "quoted_text": "IT IS THEREFORE ORDERED that Defendant Peter W. Stolz, whether acting directly or indirectly through any persons or entities under his control, is hereby permanently enjoined and restrained from engaging in the sending of Unsolicited Commercial E-mail, unless, prior to engaging in such activities, he first obtains a performance bond in the principal sum of $1,000,000 (One Million Dollars) (\"Bond\"). The ternw and conditions of the Bond are as follows: A. The Bond shall be conditioned upon compliance with Section 5(a) of the FTC Act and the provisions of this Order. The Bond shall be deemed continuous and remain in full force and effect as long as Defendant Peter W. Stolz is engaging in the sending of Unsolicited Commercial E-mail. Defendant Peter W. Stolz shall maintain the Bond for a period of three (3) years after he provides notice to the Commission that he has ceased engaging in the sending of Unsolicited Comnlercial E-mail. The Bond shall cite this Order as the subject matter of the Bond, and shall provide surety thereunder against financial loss resulting from whole or partial failure of performance due, in whole or in part, to any violation of Section 5 of the FTC Act or the provisions of this Order, or to any other violation of law;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 115,
+            "quote_end_line": 133
           },
           {
-            "description": "Maintain bond for 3 years after ceasing unsolicited commercial e-mail activities",
-            "quoted_text": "Defendant Peter W. Stolz shall maintain the Bond for a period of three (3) years after he provides notice to the Commission that he has ceased engaging in the sending of Unsolicited Commercial E-mail.",
+            "description": "The bond must be issued by a surety company admitted to do business in each relevant state and holding a Federal Certificate of Authority, in favor of the FTC and any injured consumer.",
+            "quoted_text": "B. The Bond required pursuant to this Section shall be an insurance agreement providing surety for financial loss issued by a surety company that is admitted to do business in each state in which Defendant Peter W. Stolz, or any entity directly or indirectly under such defendant's control, is doing business and that holds a Federal Certificate of Authority As Acceptable Surety on Federal Bond and Reinsuring. The Bond shall be in favor of both: (1) the Federal Trade Commission for the benefit of any consumer injured as a result of any activities that required obtaining the Bond; and (2) any consumer so injured;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 134,
+            "quote_end_line": 141
           },
           {
-            "description": "Provide notice to Commission at least 10 days before commencing activities requiring bond",
-            "quoted_text": "At least ten (10) days before commencing any activity that requires obtaining the Bond, Defendant Peter W. Stolz shall provide notice to the Commission describing in reasonable detail said activities, and include in such notice a copy of the Bond obtained;",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Include required disclosure when disclosing bond existence to recipients",
-            "quoted_text": "Defendant Peter W. Stolz shall not disclose the existence of any performance bond required by this Section to any recipient of Unsolicited Commercial E-mail, without also disclosing clearly and prominently, at the same time \"AS REQUIRED BY ORDER OF THE U.S. DISTRICT COURT IN SETTLEMENT OF CHARGES OF FALSE AND MISLEADING REPRESENTATIONS IN THE USAGE OF UNSOLICITED COMMERCIAL E-MAIL.\"",
+            "description": "The bond required under this Section is in addition to, and not in lieu of, any other bonds required by federal, state, or local law.",
+            "quoted_text": "C. The Bond required pursuant to this Section is in addition to, and not in lieu of, any other bonds required by federal, state, or local law;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 142,
+            "quote_end_line": 143
+          },
+          {
+            "description": "At least 10 days before commencing any activity requiring the bond, Defendant must provide written notice to the Commission describing the activities in reasonable detail and include a copy of the bond.",
+            "quoted_text": "D. At least ten (1 0) days before commencing any activity that requires obtaining the Bond, Defendant Peter W. Stolz shall provide notice to the Cornmission describing in reasonable detail said activities, and include in such notice a copy of the Bond obtained;",
+            "deadline": "10 days before commencing activity",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 144,
+            "quote_end_line": 147
+          },
+          {
+            "description": "Defendant must not disclose the existence of any performance bond to recipients of Unsolicited Commercial E-mail without simultaneously and prominently disclosing that it is required by order of the U.S. District Court.",
+            "quoted_text": "E. Defendant Peter W. Stolz shall not disclose the existence of any performance bond required by this Section to any recipient of Unsolicited Commercial E-mail, without also disclosing clearly and prominently, at the same time \"AS REQUlRED BY ORDER OF THE US,D ISTRICT COURT IN SETTLEMENT OF CHARGES OF FALSE AND MISLEADING REPRESENTATIONS IN THE USAGE OF UNSOLICITED COMMERCIAL E-MAIL.\"",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 148,
+            "quote_end_line": 155
           }
         ]
       },
@@ -141,42 +174,16 @@
         "provision_number": "II",
         "title": "Injunction Against Misrepresentations",
         "category": "prohibition",
-        "summary": "Defendant is permanently restrained from making false or misleading representations in connection with advertising or selling goods or services using the Internet or relating to residential mortgages.",
+        "summary": "Defendant is permanently enjoined from making any false or misleading express or implied misrepresentation or material omission in connection with Internet-advertised goods/services or residential mortgages, including mortgage terms, lender status, website security, and personal financial information.",
         "requirements": [
           {
-            "description": "Must not make false or misleading misrepresentations or omissions of material fact",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with the advertising, promotion, offering or sale of goods or services in or affecting commerce that are advertised or sold using the Internet (including but not limited to e-mail or websites) or that relate directly or indirectly to residential mortgages, Defendant is hereby permanently restrained and enjoined from making any express or implied misrepresentation or omission of material fact that is false or misleading, in any manner, directly or indirectly, to any consumer or entity",
+            "description": "Must not misrepresent mortgage terms or rates actually available, that 30 Minute Mortgage Inc. is a lender, security measures on any website, or any information material to a consumer's decision to provide personal financial information.",
+            "quoted_text": "1T IS FURTHER ORDERED that, in connection with the advertising, promotion, offering or sale of goods or services in or affecting commerce that are advertised or sold using the Internet (including but not limited to e-mail or websites) or that relate directly or indirectly to residential mortgages, Defendant is hereby permanently restrained and enjoined from making any express or implied misrepresentation or omission of material fact that is false or misleading, in any manner, directly or indirectly, to my consumer or entity, including but not limited to misrepresenting, expressly or by implication: A, the mortgage terms or rates that are in fact available through them; B, that 30 Minute Mortgage Tnc, is a mortgage lender; C. the security measures employed on any website; and D. any information material to a consumer's decision to provide personal financial information.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Must not misrepresent mortgage terms or rates available",
-            "quoted_text": "including but not limited to misrepresenting, expressly or by implication: A. the mortgage terms or rates that are in fact available through them;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must not misrepresent that 30 Minute Mortgage Inc. is a mortgage lender",
-            "quoted_text": "B. that 30 Minute Mortgage Inc. is a mortgage lender;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.9733962264150944
-          },
-          {
-            "description": "Must not misrepresent security measures employed on any website",
-            "quoted_text": "C. the security measures employed on any website;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must not misrepresent information material to a consumer's decision to provide personal financial information",
-            "quoted_text": "D. any information material to a consumer's decision to provide personal financial information.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 157,
+            "quote_end_line": 168
           }
         ]
       },
@@ -184,42 +191,52 @@
         "provision_number": "III",
         "title": "Injunction Against TILA and Regulation Z Violations",
         "category": "prohibition",
-        "summary": "Defendant is permanently restrained from violating the Truth in Lending Act and Regulation Z in connection with advertisements to promote consumer credit.",
+        "summary": "Defendant is permanently enjoined from violating TILA and/or Regulation Z in connection with any advertisement promoting consumer credit extensions, including advertising inaccurate credit terms, rates, payment rates, or repayment periods.",
         "requirements": [
           {
-            "description": "Must not advertise credit terms other than those actually arranged or offered by creditor",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with any advertisement to promote directly or indirectly any extension of consumer credit, Defendant is hereby permanently restrained and enjoined from violating TILA and/or Regulation Z by: A. advertising credit terms other than those terms that actually are or will be arranged or offered by the creditor, in violation of Section 226.24(a) of Regulation Z, 12 C.F.R. § 226.24(a);",
+            "description": "Must not advertise credit terms other than those actually arranged or offered by the creditor, in violation of Regulation Z § 226.24(a).",
+            "quoted_text": "A, advertising credit terms other than those terms that actually are or will be arranged or offered by the creditor, in violation of Section 226.24(a) of Regulation Z, 12 C.F.R. 8 226.24(a);",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 173,
+            "quote_end_line": 175
           },
           {
-            "description": "Must not state a finance charge rate without disclosing accurate annual percentage rate",
-            "quoted_text": "B. stating a rate of finance charge without disclosing the accurate \"annual percentage rate,\" and, if the annual percentage rate may be increased after consummation, that fact, in violation of Sections 144(c) and 107 of TILA, 15 U.S.C. §§ 1664(c) & 1606, and Sections 226.24(b) and 226.22 of Regulation Z, 12 C.F.R. §§ 226.24(b) & 226.22;",
+            "description": "Must not state a rate of finance charge without disclosing the accurate annual percentage rate and, if it may increase after consummation, that fact, in violation of TILA and Regulation Z §§ 226.24(b) and 226.22.",
+            "quoted_text": "B. stating a rate of finance charge without disclosing the accurate \"annual percentage rate,\" and, if the annual percentage rate may be increased after consummation, that fact, in violation of Sections 1441~a)n d 107 of TEA, 1 5 U.S .C. $9 l664(c) & 1606, and Sections 226.24@) and 226.22 of Regulation 2, 12 C.F.R. $5 226.24(b) & 226.22;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 178,
+            "quote_end_line": 182
           },
           {
-            "description": "Must not advertise payment rate in negative amortization transaction without required disclosures",
-            "quoted_text": "C. advertising a payment rate in a transaction where the consumer's payments are based upon a lower interest rate than the rate at which interest is accruing, without also making all other disclosures required by Section 226.24(b)-4 of the FRB Official Staff Commentary on Regulation Z, 12 C.F.R. § 226.24(b)-4, Supp. 1 (including the rate at which the interest is in fact accruing and the annual percentage rate);",
+            "description": "Must not advertise a payment rate in a transaction where payments are based on a lower interest rate than the accruing rate without making all required disclosures under Regulation Z § 226.24(d)-4.",
+            "quoted_text": "C. advertising a payment rate in a transaction where the consumer's payments are based upon a lower interest rate than'the rate at which interest is accruing, without also making all other disclosures requi~edb y Section 226.24@)-4 of the FRB Official Staff Commentary on Regulation 2, 12 C.F.R. tj 226.24e)-4, Supp. 1 (including the rate at which the interest is in fact accruing and the annual percentage rate);",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 183,
+            "quote_end_line": 188
           },
           {
-            "description": "Must not state repayment period without disclosing terms of repayment and annual percentage rate",
-            "quoted_text": "D. stating the period of repayment, but failing to disclose: (1) the terms of repayment and (2) the annual percentage rate, using that term, and, if the rate may be increased after consummation, that fact, in violation of Section 144(d) of TILA, 15 U.S.C. § 1664(d), and Section 226.24(c) of Regulation Z, 12 C.F.R. §",
+            "description": "Must not state the period of repayment without disclosing the terms of repayment and annual percentage rate (and, if the rate may increase, that fact), in violation of TILA § 144(d) and Regulation Z § 226.24(c).",
+            "quoted_text": "D. stating the period of repayment, but failing to disclose: (1) the terms of repayment and (2) the annual percentage rate, using that tern?, and, if the rate may be increased after consummation, that fact, in violation of Section 144(d) of TILA, 15 U.S.C. 4 1664(d), and Section 226.24(c) ofRegulation Z, 12 C.F.R. $",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9990402476780186
+            "confidence": 1.0,
+            "quote_start_line": 189,
+            "quote_end_line": 192
           },
           {
-            "description": "Must comply in all other respects with TILA and Regulation Z",
-            "quoted_text": "E. failing to comply in any other respect with TILA and/or Regulation Z.",
+            "description": "Must not fail to comply in any other respect with TILA and/or Regulation Z.",
+            "quoted_text": "E. failing to comply in any other respect with TILA andlor Regulation Z.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9744444444444444
+            "confidence": 1.0,
+            "quote_start_line": 193,
+            "quote_end_line": 193
           }
         ]
       },
@@ -227,28 +244,34 @@
         "provision_number": "IV",
         "title": "Injunction Against Violations of Subtitle A of Title V of the GLB Act",
         "category": "prohibition",
-        "summary": "Defendant is permanently restrained from violating Subtitle A of Title V of the Gramm-Leach-Bliley Act or the Privacy Rule.",
+        "summary": "Defendant is permanently enjoined from violating or assisting others in violating Subtitle A of Title V of the GLB Act or the Privacy Rule, including failing to provide required privacy/opt-out notices, improper disclosure of nonpublic personal information, and prohibited reuse or redisclosure of such information.",
         "requirements": [
           {
-            "description": "Must provide privacy and opt out notices at required time and manner",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant is hereby permanently restrained and enjoined from violating, or assisting others in violating, any part of Subtitle A of Title V of the GLB Act or the Privacy Rule, including but not limited to: A. failing to provide privacy and opt out notices at the time and in the manner required by Sections 502 and 503 of the GLB Act, 15 U.S.C. §§ 6802-03, and Sections 313.4 to 313.9 of the Privacy Rule, 16 C.F.R. §§ 313.4-9;",
+            "description": "Must not fail to provide privacy and opt-out notices at the time and in the manner required by GLB Act §§ 502-503 and Privacy Rule §§ 313.4-313.9.",
+            "quoted_text": "A. failing to provide privacy and opt out notices at the time and in the manner 8 required by Sections 502 and 503 of the GLB Act, 15 U.S.C. 5 $ 6802-03, and Sections 3 13.4 to 313.9 of the Privacy Rule, 16 C.F.R. $8 3 13.4-9;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 199,
+            "quote_end_line": 204
           },
           {
-            "description": "Must not disclose nonpublic personal information to nonaffiliated third parties in violation of GLB Act",
-            "quoted_text": "B. disclosing to any nonaffiliated third party any nonpublic personal information about a consumerin a manner that violates Section 502 of the GLB Act, 15 U.S.C. § 6802, or Section 313.10 of the Privacy Rule, 16 C.F.R. § 313.10;",
+            "description": "Must not disclose to any nonaffiliated third party any nonpublic personal information about a consumer in violation of GLB Act § 502 or Privacy Rule § 313.10.",
+            "quoted_text": "B. disclosing to any nonaffiliated third party any nonpublic personal information about a consumer in a manner that violates Section 502 of the GLB Act, 15 U.S.C. 3 6802, or Section 313.10 of the Privacy Rule, 16 C.F.R. $ 313.10; or",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9876271186440678
+            "confidence": 1.0,
+            "quote_start_line": 205,
+            "quote_end_line": 207
           },
           {
-            "description": "Must not reuse or redisclose nonpublic personal information received from nonaffiliated financial institutions",
-            "quoted_text": "C. reusing or redisclosing nonpublic personal information received from a nonaffiliated financial institution in a manner that is prohibited by Section 502(c) of the GLB Act, 15 U.S.C. § 6802(c), or Section 313.11 of the Privacy Rule, 16 C.F.R. § 313.11.",
+            "description": "Must not reuse or redisclose nonpublic personal information received from a nonaffiliated financial institution in a manner prohibited by GLB Act § 502(c) or Privacy Rule § 313.11.",
+            "quoted_text": "C. reusing or redisclosing nonpublic personal information received from a nonaffiliated financial institution in a manner that is prohibited by Section 502(c) of the GLB Act, 15 U.S.C. $ 6802(c), or Section 3 13.1 1 of the Privacy Rule, 16 C.F.R. 5 313.11.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 208,
+            "quote_end_line": 211
           }
         ]
       },
@@ -256,14 +279,16 @@
         "provision_number": "V",
         "title": "Injunction Against Violations of Subtitle B of Title V of the GLB Act",
         "category": "prohibition",
-        "summary": "Defendant is permanently restrained from obtaining or attempting to obtain customer information of financial institutions through false, fictitious, or fraudulent statements.",
+        "summary": "Defendant is permanently enjoined from violating or assisting others in violating Subtitle B of Title V of the GLB Act, including obtaining or attempting to obtain customer information of a financial institution through false, fictitious, or fraudulent statements.",
         "requirements": [
           {
-            "description": "Must not obtain or attempt to obtain customer information of financial institutions through false statements or pretexting",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant is hereby permanently restrained and enjoined from violating, or assisting others in violating, any part of Subtitle B of Title V of the GLB Act, including but not limited to obtaining or attempting to obtain \"customer information of a financial institution\" (including but not limited to monthly mortgage payment amounts and account asset types and balances) by making false, fictitious, or fraudulent statements or representations to consumers or financial institutions.",
+            "description": "Must not obtain or attempt to obtain customer information of a financial institution (including mortgage payment amounts and account/asset types and balances) by making false, fictitious, or fraudulent statements or representations to consumers or financial institutions.",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant is hereby permanently restrained and enjoined from violating, or assisting others in violating, any part of Subtitle B of Title V of the GLB Act, including but not limited to obtaining or attempting to obtain \"customer information of a financial institution\" (including but not limited to monthly mortgage payment amounts and account'asset types and balances) by making false, fictitious, or fraudulent statements or representations to consumers or financial institutions.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 214,
+            "quote_end_line": 219
           }
         ]
       },
@@ -271,42 +296,34 @@
         "provision_number": "VI",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The FTC is authorized to monitor compliance through written reports, document production, depositions, and on-site inspections.",
+        "summary": "The FTC is authorized to monitor Defendant's compliance through written reports, document production, depositions, business inspections, discovery, undercover posing as consumers or suppliers, and interviews of personnel.",
         "requirements": [
           {
-            "description": "Submit written reports within 15 days of FTC written notice",
-            "quoted_text": "IT IS FURTHER ORDERED that, for the purpose of monitoring and investigating compliance with any provision of this Order, A. within fifteen (15) days of receipt of written notice from a representative of the Commission, Defendant Peter W. Stolz shall submit written reports in addition to those required by Section VII, sworn to under penalty of perjury;",
-            "deadline": "15 days",
+            "description": "Within 15 days of written notice from the Commission, Defendant must submit sworn written reports, produce documents, appear for deposition, and/or provide entry to business locations for inspection during normal business hours.",
+            "quoted_text": "A. within fifteen (15 ) days of receipt of written notice from a representative of the Commission, Defendant Peter W. Stolz shall submit written reports in addition to those required by Section VII, sworn to under penalty of perjury; produce 9 documents for inspection and copying; appear for deposition; andlor provide entry during normal business hours to my business location in his possession or direct or indirect controI to inspect the business operation, provided that the Commission shall return any materials removed fiarn any business location pursuant to this Subsection within ten (10) business days of removing such materials for inventory and copying, and that Defendant Peter W. Stolz, after attempting to resolve a diSpute without court action and for good cause shown, may file a motion with this Court seeking an order including one or more of the protections set forth in Fed. R. Civ. P. 26(c);",
+            "deadline": "15 days of receipt of written notice",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 223,
+            "quote_end_line": 237
           },
           {
-            "description": "Produce documents for inspection and copying upon FTC request",
-            "quoted_text": "produce documents for inspection and copying;",
+            "description": "The Commission is authorized to monitor compliance by all other lawful means, including obtaining discovery from any person without further leave of court and posing as consumers and suppliers to Defendant or entities he manages or controls.",
+            "quoted_text": "B, in addition, the Commission is authorized to monitor compliance with this Order by all other lawful means, including but not limited to the following: 1, obtaining discovery from any person, without further leave of court, using the procedures prescribed by Fed. R. Civ. P. 30, 3 1, 33,34,36, and 45; 2. posing as consumers and suppliers to: Defendant Peter W. Stolz, Defendant Peter W. Stolz's employees, or any other entity managed or controlled in whole or in part by Defendant Peter W. Stolz, without the necessity of identification or prior notice;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.8888888888888888
+            "confidence": 1.0,
+            "quote_start_line": 238,
+            "quote_end_line": 245
           },
           {
-            "description": "Appear for deposition upon FTC request",
-            "quoted_text": "appear for deposition;",
+            "description": "Defendant must permit Commission representatives to interview any employer, consultant, independent contractor, representative, agent, or employee who has agreed to such an interview relating to conduct subject to this Order.",
+            "quoted_text": "C. Defendant Peter W. Slolz shall permit representatives of the Commission to interview any employer, consultant, independent contractor, representative, agent, or enlployee who has agreed to such an interview, relating in any way to any conduct subject to this Order. The person interviewed may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Provide entry to business locations for inspection during normal business hours",
-            "quoted_text": "and/or provide entry during normal business hours to any business location in his possession or direct or indirect control to inspect the business operation",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Permit FTC to interview employees, consultants, and agents who agree to interviews",
-            "quoted_text": "C. Defendant Peter W. Stolz shall permit representatives of the Commission to interview any employer, consultant, independent contractor, representative, agent, or employee who has agreed to such an interview, relating in any way to any conduct subject to this Order. The person interviewed may have counsel present.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 254,
+            "quote_end_line": 257
           }
         ]
       },
@@ -314,85 +331,96 @@
         "provision_number": "VII",
         "title": "Compliance Reporting by Defendant",
         "category": "compliance_reporting",
-        "summary": "Defendant must notify the FTC of changes in residence, employment, corporate structure, and file a comprehensive compliance report 180 days after order entry.",
+        "summary": "For five years, Defendant must notify the Commission of changes in residence, employment, name, and corporate structure; and must submit a sworn written compliance report 180 days after entry of the Order.",
         "requirements": [
           {
-            "description": "Notify FTC of changes in residence, mailing addresses, and telephone numbers within 10 days",
-            "quoted_text": "for a period of five (5) years from the date of entry of this Order, 1. Defendant Peter W. Stolz shall notify the Commission of the following: a. any changes in his residence, mailing addresses, and telephone numbers, within ten (10) days of the date of such change;",
-            "deadline": "10 days",
+            "description": "For five years from entry of the Order, Defendant must notify the Commission within 10 days of any changes in residence, mailing addresses, telephone numbers, or employment status (including the name and nature of each employer/business and his duties).",
+            "quoted_text": "A. for a period of five (5) years from the date of entry of this Order, 1. Defendant Peter W. Stolz shall notify the Commission of the following: a. any changes in his residence, mailing addresses, and telephone numbers, within ten (10) days of the date of such change; b. any changes in his employment status (including self-employment) within ten (10) days of the date of such change. Such notice shall include the name and address of each business that he is affiliated with, employed by, or perfoms services for; a statement of the nature of the business; and a statement of his duties and responsibilities in connection with the business;",
+            "deadline": "10 days of change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 261,
+            "quote_end_line": 270
           },
           {
-            "description": "Notify FTC of changes in employment status within 10 days",
-            "quoted_text": "b. any changes in his employment status (including self-employment) within ten (10) days of the date of such change. Such notice shall include the name and address of each business that he is affiliated with, employed by, or performs services for; a statement of the nature of the business; and a statement of his duties and responsibilities in connection with the business;",
-            "deadline": "10 days",
+            "description": "For five years, Defendant must notify the Commission of any changes in his name or use of aliases or fictitious names.",
+            "quoted_text": "c. any changes in his name or use of any aliases or fictitious names; and",
+            "deadline": "ongoing for 5 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 271,
+            "quote_end_line": 272
           },
           {
-            "description": "Notify FTC of changes in name or use of aliases",
-            "quoted_text": "c. any changes in his name or use of any aliases or fictitious names;",
-            "deadline": null,
+            "description": "Defendant must notify the Commission of corporate structure changes affecting compliance obligations (dissolution, merger, bankruptcy, name/address change, etc.) at least 30 days prior to such change, or as soon as practicable if he learns of it fewer than 30 days in advance.",
+            "quoted_text": "2. Defendant Peter W. Stolz shall notify the Commission of any changes in corporate structure that may affect compliance obligations arising under this Order, including but not limited to a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order; the filing of a bankruptcy petition; or a change in the corporate name or address, at least thirty (30) days prior to such change, provided that, with respect to any proposed change in the corporation about which he learns less than thirty (30) days prior to the date such action is to take place, he shall notify the Commission as soon as is practicable after obtaining such knowledge.",
+            "deadline": "30 days prior to change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 273,
+            "quote_end_line": 285
           },
           {
-            "description": "Notify FTC of corporate structure changes at least 30 days prior",
-            "quoted_text": "2. Defendant Peter W. Stolz shall notify the Commission of any changes in corporate structure that may affect compliance obligations arising under this Order, including but not limited to a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order; the filing of a bankruptcy petition; or a change in the corporate name or address, at least thirty (30) days prior to such change",
-            "deadline": "30 days",
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "File comprehensive compliance report 180 days after order entry",
-            "quoted_text": "B. One hundred eighty (180) days after the date of entry of this Order, Defendant Peter W. Stolz shall provide a written report to the FTC, sworn to under penalty of perjury, setting forth in detail the manner and form in which he has complied and is complying with this Order.",
+            "description": "Within 180 days of entry of the Order, Defendant must provide a sworn written report to the FTC detailing the manner and form in which he has complied and is complying with the Order, including required change notifications, acknowledgments of receipt, and a copy of any performance bond.",
+            "quoted_text": "B. One hundred eighty (180) days after the date of entry of this Order, Defendant Peter W. Stolz shall provide a written report to the FTC, sworn to under penalty of perjury, setting forth in detail the manner and form in which he has complied and is complying with this Order. This report shall include, but not be limited to: 1. any changes required to be reported pursuant to Subsection A above; 2. a copy of each acknowledgment of receipt of this Order obtained by Defendant pursuant to Section K; and 3. a copy of any performance bond obtained by Defendant pursuant to Section I.",
             "deadline": "180 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 286,
+            "quote_end_line": 294
           }
         ]
       },
       {
         "provision_number": "VIII",
-        "title": "Recordkeeping Provisions",
+        "title": "Record Keeping Provisions",
         "category": "recordkeeping",
-        "summary": "Defendant must create and retain accounting records, personnel records, customer files, complaints, and marketing materials for 8 years for businesses advertising or selling goods/services via Internet or relating to residential mortgages.",
+        "summary": "For eight years from entry of the Order, Defendant must create and retain accounting records, personnel records, customer files, complaints/refund requests, and all sales/marketing materials for any qualifying business he owns or controls.",
         "requirements": [
           {
-            "description": "Create and retain accounting records for 8 years",
-            "quoted_text": "IT IS FURTHER ORDERED that, for a period of eight (8) years from the date of entry of this Order, in connection with any business that engages in the advertising, promotion, offering or sale of goods or services in or affecting commerce that are advertised or sold using the Internet (including but not limited to e-mail or websites) or that relate directly or indirectly to residential mortgages where Defendant Peter W. Stolz is the majority owner of the business or directly or indirectly manages or controls the business, Defendant is hereby restrained and enjoined from failing to create and retain the following records: A. Accounting records that reflect the cost of goods or services sold, revenues generated, and the disbursement of such revenues;",
-            "deadline": null,
+            "description": "For eight years, Defendant must create and retain accounting records reflecting cost of goods/services sold, revenues generated, and disbursements.",
+            "quoted_text": "A. Ac.counting records that reflect the cost of goods or services sold, revenues generated, and the disbursement of such revenues;",
+            "deadline": "8 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 316,
+            "quote_end_line": 317
           },
           {
-            "description": "Create and retain personnel records for 8 years",
-            "quoted_text": "B. Personnel records accurately reflecting: the name, address, and telephone number of each person employed in any capacity by such business, including as an independent contractor; that person's job title or position; the date upon which the person commenced work; and the date and reason for the person's termination, if applicable;",
-            "deadline": null,
+            "description": "For eight years, Defendant must create and retain personnel records reflecting name, address, phone number, job title, start date, and termination date/reason for each person employed or engaged as an independent contractor.",
+            "quoted_text": "B. Personnel records accurately reflecting: the name, address, and telephone number of each person employed in any capacity by such business, including as an independent contractor; that person's job title or position; the date upon which the person conmlenced work; and the date and reason for the person's termination, if applicable;",
+            "deadline": "8 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 318,
+            "quote_end_line": 322
           },
           {
-            "description": "Create and retain customer files for 8 years",
+            "description": "For eight years, Defendant must create and retain customer files containing names, addresses, phone numbers, dollar amounts paid, quantities, and descriptions of items/services purchased.",
             "quoted_text": "C. Customer files containing the names, addresses, phone numbers, dollar amounts paid, quantity of items or services purchased, and description of items or services purchased, to the extent such information is obtained in the ordinary course of business;",
-            "deadline": null,
+            "deadline": "8 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 323,
+            "quote_end_line": 328
           },
           {
-            "description": "Create and retain complaints and refund requests for 8 years",
-            "quoted_text": "D. Complaints and refund requests (whether received directly, indirectly or through any third party) and any responses to those complaints or requests;",
-            "deadline": null,
+            "description": "For eight years, Defendant must create and retain complaints and refund requests (received directly, indirectly, or through third parties) and all responses thereto.",
+            "quoted_text": "D. Complaints and refund requests (whether received directly, indirectly or through any third party) and any responses to those complaints or requests; and",
+            "deadline": "8 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 329,
+            "quote_end_line": 330
           },
           {
-            "description": "Create and retain copies of marketing materials for 8 years",
+            "description": "For eight years, Defendant must create and retain copies of all sales scripts, training materials, advertisements, or other marketing materials.",
             "quoted_text": "E. Copies of all sales scripts, training materials, advertisements, or other marketing materials.",
-            "deadline": null,
+            "deadline": "8 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 331,
+            "quote_end_line": 332
           }
         ]
       },
@@ -400,28 +428,25 @@
         "provision_number": "IX",
         "title": "Distribution of Order by Defendant",
         "category": "acknowledgment",
-        "summary": "Defendant must deliver copies of the order to employees, officers, and managers of covered businesses and obtain signed acknowledgments within 30 days.",
+        "summary": "For five years, Defendant must deliver a copy of this Order to relevant employees, principals, officers, directors, and managers of qualifying businesses and obtain signed, dated acknowledgments of receipt within 30 days.",
         "requirements": [
           {
-            "description": "Deliver copy of order to employees, officers, directors, and managers for 5 years",
-            "quoted_text": "IT IS FURTHER ORDERED that, for a period of five (5) years from the date of entry of this Order, Defendant Peter W. Stolz shall deliver a copy of this Order to the employees (with responsibilities with respect to the subject matter of this Order), principals, officers, directors, and managers under Defendant Peter W. Stolz's control for any business that (a) employs or contracts for personal services from Defendant Peter W. Stolz and (b) engages in (1) the marketing, advertising, promotion, or offering of residential mortgages or services related to residential mortgages or (2) the marketing, advertising, promotion, or sending of Unsolicited Commercial E-mail.",
-            "deadline": null,
+            "description": "For five years, Defendant must deliver a copy of this Order to employees (with relevant responsibilities), principals, officers, directors, and managers of any qualifying business engaged in residential mortgage marketing or sending of Unsolicited Commercial E-mail.",
+            "quoted_text": "IT IS FURTHER ORDERED that, for a period of five (5) years fi-om the date of entry of this Order, Defendant Peter W. Stolz shall deliver a copy of this Order to the employees (with responsibilities with respect to the subject matter of this Order), principals, officers, directors, and managers under Defendant Peter W. Stolz's control for any business that (a) employs or contracts for personal services from Defendant Peter W. Stolz and (b) engages in (1) the marketing, advertising, promotion, or offering of residential mortgages or services related to residential mortgages or (2) the marketing, advertising, promotion, or sending of Unsolicited Commercial E-mail. Defendant Peter W. Stolz shall secure from each such person a signed and",
+            "deadline": "ongoing for 5 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 334,
+            "quote_end_line": 341
           },
           {
-            "description": "Secure signed and dated acknowledgments within 30 days",
-            "quoted_text": "Defendant Peter W. Stolz shall secure from each such person a signed and dated statement acknowledging receipt of the Order within thirty (30) days after the date of service of the Order or the commencement of the employment relationship.",
+            "description": "Defendant must obtain a signed and dated acknowledgment of receipt from each such person within 30 days of service of the Order or commencement of the employment relationship, and maintain such acknowledgments for eight years from entry of the Order.",
+            "quoted_text": "Commercial E-mail. Defendant Peter W. Stolz shall secure from each such person a signed and dated statement acknowledging receipt of the Order within thirty (30) days after the date of service of the Order or the commencement of the employment relationship. Defendant Peter W. Stolz shall maintain signed and dated acknowledgments ofthe receipt of copies of this Order, as required by this Section, until eight (8) years after the date of entry of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Maintain signed acknowledgments for 8 years",
-            "quoted_text": "Defendant Peter W. Stolz shall maintain signed and dated acknowledgments of the receipt of copies of this Order, as required by this Section, until eight (8) years after the date of entry of this Order.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.9804950495049505
+            "confidence": 1.0,
+            "quote_start_line": 341,
+            "quote_end_line": 345
           }
         ]
       },
@@ -429,14 +454,16 @@
         "provision_number": "X",
         "title": "Acknowledgment of Receipt of Order by Defendant",
         "category": "acknowledgment",
-        "summary": "Defendant must submit a truthful sworn statement acknowledging receipt of the order within 5 business days.",
+        "summary": "Defendant must submit a sworn statement to the Commission acknowledging receipt of this Order within five business days of receiving it.",
         "requirements": [
           {
-            "description": "Submit truthful sworn statement acknowledging receipt of order",
+            "description": "Within five business days of receipt of this Order as entered by the Court, Defendant must submit to the Commission a truthful sworn statement acknowledging receipt of the Order.",
             "quoted_text": "IT IS FURTHER ORDERED that Defendant Peter W. Stolz, within five (5) business days of receipt of this Order as entered by the Court, shall submit to the Commission a truthful sworn statement acknowledging receipt of this Order.",
             "deadline": "5 business days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 347,
+            "quote_end_line": 351
           }
         ]
       },
@@ -444,43 +471,51 @@
         "provision_number": "XI",
         "title": "Retention of Jurisdiction",
         "category": "duration",
-        "summary": "The Court retains jurisdiction over this matter for purposes of construction, modification, and enforcement.",
+        "summary": "The Court retains jurisdiction over this matter for purposes of construction, modification, and enforcement of the Order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction for construction, modification, and enforcement",
+            "description": "The Court retains jurisdiction for construction, modification, and enforcement of this Order.",
             "quoted_text": "IT IS FURTHER ORDERED that this Court shall retain jurisdiction of this matter for purposes of construction, modification and enforcement of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 353,
+            "quote_end_line": 354
           }
         ]
       },
       {
         "provision_number": "XII",
         "title": "Monitoring Compliance of Sales Personnel",
-        "category": "affirmative_obligation",
-        "summary": "Defendant must take reasonable steps to monitor and ensure that salespersons comply with the order, investigate complaints, and take corrective action.",
+        "category": "monitoring",
+        "summary": "Defendant is permanently enjoined from failing to take reasonable steps to monitor sales personnel compliance, failing to investigate consumer complaints, and failing to take corrective action against non-compliant salespersons.",
         "requirements": [
           {
-            "description": "Take reasonable steps to monitor and ensure salespersons comply with order",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant Peter W. Stolz, in connection with any business engaged in (1) the marketing, advertising, promotion, or offering of residential mortgages or services related to residential mortgages or (2) the marketing, advertising, promotion, or sending of Unsolicited Commercial E-mail, where Defendant Peter W. Stolz is the majority owner of the business or directly or indirectly manages or controls the business, is hereby permanently restrained and enjoined from: A. Failing to take reasonable steps sufficient to monitor and ensure that all employees and independent contractors engaged in sales or other customer service functions (\"salespersons\") comply with Sections I, II, III, IV, and V of this Order. Such steps shall include adequate monitoring of sales presentations or other calls with customers, and shall also include, at a minimum, the following: (1) listening to the oral representations made by salespersons; (2) establishing a procedure for receiving and responding to consumer complaints; and (3) ascertaining the number and nature of consumer complaints regarding transactions in which each salesperson is involved;",
+            "description": "Defendant must take reasonable steps to monitor and ensure all salespersons comply with Sections I, II, III, IV, and V of the Order, including listening to sales presentations, establishing a consumer complaint procedure, and tracking the number and nature of complaints per salesperson.",
+            "quoted_text": "A. Failing to take reasonable steps sufficient to monitor and ensure that all employees and independent contractors engaged in sales or other customer service functions (\"salespersons\") comply with Sections I, 11,111, W, and V of this Order. Such steps shall include adequate monitoring of sales presentations or other calls with customers, and shall also include, at a minimum, the following: (I) listening to the oral representations made by salespersons; (2) establishing a procedure for receiving and responding to consumer complaints; and (3) ascertaining the number and nature of consumer complaints regarding transactions in which each salesperson is involved;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 362,
+            "quote_end_line": 370
           },
           {
-            "description": "Promptly investigate fully any consumer complaint",
-            "quoted_text": "B. Failing promptly to investigate fully any consumer complaint received by any business to which this Section applies;",
+            "description": "Defendant must promptly and fully investigate any consumer complaint received by any qualifying business.",
+            "quoted_text": "B. Failing promptly to investigate fully any consumer conlplaint received by any business to which this Section applies; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 371,
+            "quote_end_line": 372
           },
           {
-            "description": "Take corrective action with respect to non-complying salespersons",
-            "quoted_text": "C. Failing to take corrective action with respect to any salesperson whom Defendant Peter W. Stolz determines is not complying with this Order, which may include training, disciplining, and/or terminating such salesperson.",
+            "description": "Defendant must take corrective action, which may include training, disciplining, and/or terminating any salesperson found not to be complying with this Order.",
+            "quoted_text": "C. Failing to take corrective action with respect to any salesperson whom Defendant Peter W. Stolz determines is not complying with this Order, which may include training, disciplining, andlor terminating such salesperson.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 375,
+            "quote_end_line": 377
           }
         ]
       },
@@ -488,21 +523,25 @@
         "provision_number": "XIII",
         "title": "Prohibitions Involving Consumer Lists",
         "category": "prohibition",
-        "summary": "Defendant is restrained from selling, renting, or disclosing identifying information of persons who submitted information to 30 Minute Mortgage Inc., and from benefiting from such information.",
+        "summary": "Defendant is permanently enjoined from selling, renting, transferring, or otherwise disclosing personal identifying information of any person who submitted information to 30 Minute Mortgage Inc., and from benefiting from or using such information obtained as a result of the activities alleged in the complaint.",
         "requirements": [
           {
-            "description": "Must not sell, rent, lease, or disclose identifying information of persons who submitted information to 30 Minute Mortgage Inc.",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant is hereby restrained and enjoined from: A. Selling, renting, leasing, transferring, or otherwise disclosing the name, address, telephone number, credit card number, bank account number, e-mail address, or other identifying information of any person who submitted such information to 30 Minute Mortgage Inc. at any time prior to entry of this Order, in connection with the advertising, promotion, telemarketing, offering for sale, or sale of any product or service in or affecting commerce;",
+            "description": "Defendant must not sell, rent, lease, transfer, or otherwise disclose the personal identifying information (including name, address, phone number, credit card number, bank account number, or email address) of any person who submitted such information to 30 Minute Mortgage Inc. prior to entry of this Order.",
+            "quoted_text": "A. Selling, renting, leasing, transferring, or otherwise disclosing the name, address, telephone number, credit card number, bank account number, e-mail address, or other identifying information of any person who submitted such information to 30 Minute Mortgage Inc. at any time prior to entry of this Order, in connection with the advertising, promotion, telemarketing, offering for sale, or sale of any product or service in or affecting commerce; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 380,
+            "quote_end_line": 385
           },
           {
-            "description": "Must not benefit from or use identifying or financial information submitted to Defendant or 30 Minute Mortgage Inc.",
-            "quoted_text": "B. Benefiting from or using the name, address, telephone number, credit card number, bank account number, e-mail address, or other identifying or financial information of any person who submitted such information to Defendant, Defendant Gregory P. Roth, or 30 Minute Mortgage Inc. as a result of, derived from, or otherwise related to the activities alleged in the Commission's complaint.",
+            "description": "Defendant must not benefit from or use the personal identifying or financial information of any person who submitted such information to Defendant, Gregory P. Roth, or 30 Minute Mortgage Inc. as a result of the activities alleged in the Commission's complaint.",
+            "quoted_text": "B. Benefiting from or using the name, address, telephone number, credit card number, bank account number, e-mail address, or other identifying or financial information of any person who submitted such infomation to Defendant, Defendant Gregory P. Roth, or 30 Minute Mortgage Inc. as a result of, derived fhm, or othenvise related to the activities alleged in the Commission's complaint.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 386,
+            "quote_end_line": 390
           }
         ]
       },
@@ -510,29 +549,33 @@
         "provision_number": "XIV",
         "title": "Fees and Costs",
         "category": "acknowledgment",
-        "summary": "Each party bears its own costs and attorneys' fees incurred in connection with this action.",
+        "summary": "Each party agrees to bear its own costs and attorneys' fees incurred in connection with this action.",
         "requirements": [
           {
-            "description": "Each party bears its own costs and attorneys' fees",
+            "description": "Each party to this Order agrees to bear its own costs and attorneys' fees incurred in connection with this action.",
             "quoted_text": "IT IS FURTHER ORDERED that each party to this Order hereby agrees to bear its own costs and attorneys' fees incurred in connection with this action.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 394,
+            "quote_end_line": 395
           }
         ]
       },
       {
         "provision_number": "XV",
         "title": "Entry of This Judgment",
-        "category": "acknowledgment",
-        "summary": "The Clerk shall enter this order immediately pursuant to Fed. R. Civ. P. 54(b).",
+        "category": "duration",
+        "summary": "The Court orders immediate entry of this judgment by the Clerk, finding no just reason for delay.",
         "requirements": [
           {
-            "description": "Clerk shall enter order immediately",
-            "quoted_text": "IT IS FURTHER ORDERED that, as there is no just reason for delay of entry of this judgment, pursuant to Fed. R. Civ. P. 54(b), the Clerk shall enter this Order immediately.",
-            "deadline": null,
+            "description": "As there is no just reason for delay, pursuant to Fed. R. Civ. P. 54(b), the Clerk shall enter this Order immediately.",
+            "quoted_text": "IT IS FURTHER 0RI)ERED that, as there is no just reason for delay of entry of this judgment, pursuant to Fed. R. Civ. P. 54(b), the Clerk shall enter this Order immediately.",
+            "deadline": "immediately",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 399,
+            "quote_end_line": 400
           }
         ]
       }
@@ -552,8 +595,36 @@
       "complaint_representations": 4,
       "order_provisions": 15,
       "order_definitions": 11,
-      "order_requirements": 45
+      "order_requirements": 38,
+      "provisions_per_section": {
+        "I": 5,
+        "II": 1,
+        "III": 5,
+        "IV": 3,
+        "V": 1,
+        "VI": 3,
+        "VII": 4,
+        "VIII": 5,
+        "IX": 2,
+        "X": 1,
+        "XI": 1,
+        "XII": 3,
+        "XIII": 2,
+        "XIV": 1,
+        "XV": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 4,
+        "complaint_total": 4,
+        "order_verified": 38,
+        "order_total": 38
+      }
     },
-    "processing_time_seconds": 940.2
+    "processing_time_seconds": 149.6
   }
 }

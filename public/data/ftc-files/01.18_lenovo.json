@@ -12,50 +12,66 @@
       "Maureen K. Ohlhausen, Acting Chairman",
       "Terrell McSweeny"
     ],
-    "date_issued": "2016",
+    "case_date": {
+      "month": 1,
+      "year": 2018
+    },
     "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/152-3134-lenovo-inc"
   },
   "complaint": {
-    "factual_background": "Lenovo preinstalled VisualDiscovery adware on over 750,000 consumer laptops sold in the U.S. between August 2014 and February 2015. The software acted as a man-in-the-middle, intercepting all Internet communications including encrypted https:// connections, to inject pop-up ads. Lenovo failed to adequately disclose this practice and failed to conduct reasonable security reviews, creating significant security vulnerabilities that put consumers' personal information at risk of unauthorized access.",
+    "factual_background": "Lenovo preinstalled ad-injecting software called VisualDiscovery on over 750,000 U.S. consumer laptops beginning in August 2014 without adequate disclosure. The software acted as a man-in-the-middle proxy between consumers and all websites they visited, including encrypted https:// sites, intercepting sensitive personal information such as login credentials, Social Security numbers, and financial data. VisualDiscovery installed a self-signed root certificate with a shared, easily-cracked private key ('komodia'), creating serious security vulnerabilities that exposed consumers to fraudulent certificate attacks and potential malware. Lenovo failed to conduct any meaningful security assessment of the software before preinstalling it and did not disclose the software's true capabilities to consumers prior to or at the time of purchase. The one-time pop-up notification Lenovo did provide misrepresented VisualDiscovery as merely a shopping discovery tool while omitting its man-in-the-middle functionality and data collection practices.",
     "representations_made": [
       {
-        "description": "Claimed VisualDiscovery was enabled on browsers and would allow consumers to discover similar products with best prices",
-        "quoted_text": "Respondent represented, directly or indirectly, expressly or by implication, to consumers that VisualDiscovery was enabled on their browser and would allow consumers to discover similar looking products with the best prices.",
-        "source_paragraph": 31
+        "description": "Claimed that VisualDiscovery was a browser-enabled feature that lets consumers discover visually similar products and best prices while shopping",
+        "quoted_text": "Explore shopping with VisualDiscovery: Your browser is enabled with VisualDiscovery which lets you discover visually similar products and best prices while you shop.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 15,
+        "quote_start_line": 116,
+        "quote_end_line": 118
+      },
+      {
+        "description": "Represented, directly or indirectly, to consumers that VisualDiscovery was enabled on their browser and would allow consumers to discover similar looking products with the best prices",
+        "quoted_text": "31. As alleged in Paragraphs 13-18, Respondent represented, directly or indirectly, expressly or by implication, to consumers that VisualDiscovery was enabled on their browser and would allow consumers to discover similar looking products with the best prices.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 31,
+        "quote_start_line": 247,
+        "quote_end_line": 249
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "Deceptive Failure to Disclose",
-        "representation": "Respondent represented that VisualDiscovery was enabled on their browser and would allow consumers to discover similar looking products with the best prices",
-        "fact": "Respondent failed to disclose, or failed to disclose adequately, that VisualDiscovery would act as a man-in-the-middle between consumers and all websites with which communicated, including sensitive communications with encrypted https:// websites, and collect and transmit consumer Internet browsing data to Superfish",
-        "conclusion": "Respondent's failure to disclose the material information described in Paragraph 32, in light of the representation set forth in Paragraph 31, was, and is, a deceptive act or practice."
+        "representation": "Lenovo represented to consumers that VisualDiscovery was enabled on their browser and would allow them to discover similar-looking products with the best prices while shopping.",
+        "fact": "Lenovo failed to disclose that VisualDiscovery would act as a man-in-the-middle between consumers and all websites they communicated with, including encrypted https:// websites, and would collect and transmit consumer Internet browsing data to Superfish.",
+        "conclusion": "Respondent's failure to disclose the material information, in light of the representation set forth in Paragraph 31, was, and is, a deceptive act or practice in violation of Section 5(a) of the Federal Trade Commission Act."
       },
       {
         "count_number": 2,
         "title": "Unfair Preinstallation of Man-in-the-Middle Software",
-        "representation": "Respondent preinstalled ad-injecting software that, without adequate notice or informed consent, acted as a man-in-the-middle between consumers and all the websites with which they communicated, including sensitive encrypted https:// websites, and collected and transmitted consumer Internet browsing data to Superfish",
-        "fact": "This practice caused or is likely to cause substantial injury to consumers, that is not offset by countervailing benefits to consumers or competition, and is not reasonably avoidable by consumers",
-        "conclusion": "This practice was, and is, an unfair act or practice."
+        "representation": "Lenovo preinstalled ad-injecting software that, without adequate notice or informed consent, acted as a man-in-the-middle between consumers and all websites they communicated with, including encrypted https:// websites, and collected and transmitted consumer Internet browsing data to Superfish.",
+        "fact": "This practice caused or was likely to cause substantial injury to consumers that was not offset by countervailing benefits to consumers or competition, and was not reasonably avoidable by consumers.",
+        "conclusion": "Respondent's preinstallation of VisualDiscovery without adequate notice or informed consent was, and is, an unfair act or practice in violation of Section 5(a) of the Federal Trade Commission Act."
       },
       {
         "count_number": 3,
         "title": "Unfair Security Practices",
-        "representation": "Respondent failed to take reasonable measures to assess and address security risks created by third-party software preinstalled on its laptops",
-        "fact": "This failure caused or is likely to cause substantial injury to consumers, that is not offset by countervailing benefits to consumers or competition, and is not reasonably avoidable by consumers",
-        "conclusion": "This practice was, and is, an unfair act or practice."
+        "representation": "Lenovo failed to take reasonable measures to assess and address security risks created by third-party software preinstalled on its laptops, including failing to adopt written security standards, assess data security risks prior to preinstallation, require Superfish to implement reasonable security measures, or adequately test VisualDiscovery before preinstalling it.",
+        "fact": "As a result of these failures, VisualDiscovery introduced two significant security vulnerabilities: it did not adequately verify digital certificates before replacing them (exposing consumers to spoofed websites), and it used a shared, easy-to-crack private encryption key on every laptop, enabling attackers to intercept encrypted communications across all affected Lenovo laptops.",
+        "conclusion": "Respondent's failure to take reasonable security measures caused or was likely to cause substantial injury to consumers not offset by countervailing benefits and not reasonably avoidable by consumers, and was, and is, an unfair act or practice in violation of Section 5(a) of the Federal Trade Commission Act."
       }
     ]
   },
   "order": {
     "definitions": {
       "Respondent": "Lenovo (United States) Inc., and its successors and assigns.",
-      "Affirmative express consent": "1. Prior to the initial operation of any covered software, it shall be clearly and conspicuously disclosed, separate and apart from any \"end user license agreement,\" \"privacy policy,\" \"terms of use\" page or similar document, the following: a. For any covered software that displays advertising, i. the fact that the covered software will display advertisements, including any pop-up advertisements; and ii. the frequency and circumstances under which such advertisements are displayed to the consumer; and b. For any covered software that transmits, or causes to be transmitted, covered information to a person or entity other than the consumer, i. the fact that the software will transmit, or cause to be transmitted, the covered information to a person or entity other than the consumer; ii. the types of covered information that will be transmitted to a person or entity other than the consumer; iii. the types of covered information that the receiving person or entity will share with third parties, which does not include an entity with a common corporate ownership and branding of Respondent or the software provider, a third party service provider, or any person or entity otherwise excluded by the Proviso in Part II of this Order; iv. the identity or specific categories of such third parties; and v. the purposes for sharing such covered information. 2. At the time this disclosure is made, a clear and conspicuous mechanism shall be provided for a consumer to indicate assent to the operation of the covered software by taking affirmative action authorizing its operation.",
+      "Affirmative express consent": "means that:\n1. Prior to the initial operation of any covered software, it shall be clearly and conspicuously disclosed, separate and apart from any \"end user license agreement,\" \"privacy policy,\" \"terms of use\" page or similar document, the following:\na. For any covered software that displays advertising,\ni. the fact that the covered software will display advertisements, including any pop-up advertisements; and\nii. the frequency and circumstances under which such advertisements are displayed to the consumer; and\nb. For any covered software that transmits, or causes to be transmitted, covered information to a person or entity other than the consumer,\ni. the fact that the software will transmit, or cause to be transmitted, the covered information to a person or entity other than the consumer;\nii. the types of covered information that will be transmitted to a person or entity other than the consumer;\niii. the types of covered information that the receiving person or entity will share with third parties, which does not include an entity with a common corporate ownership and branding of Respondent or the software provider, a third party service provider, or any person or entity otherwise excluded by the Proviso in Part II of this Order;\niv. the identity or specific categories of such third parties; and\nv. the purposes for sharing such covered information.\n2. At the time this disclosure is made, a clear and conspicuous mechanism shall be provided for a consumer to indicate assent to the operation of the covered software by taking affirmative action authorizing its operation.",
       "Application software": "any computer program designed for and used by consumers (e.g., database programs, word processing programs, games, Internet browsers, or browser add-ons) that Respondent preinstalls or causes to be preinstalled onto a covered product. Application software does not include device drivers; system software designed to configure, optimize or maintain a computer; operating systems; software bundled, integrated or included with operating systems; or software otherwise provided to Respondent for preinstallation on a covered product by an operating system provider.",
-      "Clear(ly) and conspicuous(ly)": "a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: 1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure (\"triggering representation\") is made through only one means. 2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. 3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. 4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. 5. On a product label, the disclosure must be presented on the principal display panel. 6. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the triggering representation appears. 7. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. 8. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. 9. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
+      "Clear(ly) and conspicuous(ly)": "means that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways:\n1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure (\"triggering representation\") is made through only one means.\n2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood.\n3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it.\n4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable.\n5. On a product label, the disclosure must be presented on the principal display panel.\n6. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the triggering representation appears.\n7. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications.\n8. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication.\n9. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
       "Covered information": "the following information from or about an individual consumer that is input into, stored on, accessed or transmitted through application software: (a) a first and last name; (b) a physical address; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) login credentials and passwords; (e) a telephone number; (f) a Social Security number; (g) a driver's license or other government-issued identification number; (h) a financial institution account number; (i) credit or debit card information; (j) any portion of the content of a consumer's communications; (k) any portion of the content of a consumer's files (e.g., documents, photos or videos); and (l) precise geolocation information sufficient to identify a street name and name of a city or town.",
       "Covered product": "any personal computer (i.e., desktop computers, laptops, laptops that convert into tablets or vice versa, and notebooks) that is manufactured by or on behalf of Respondent and is sold to U.S. consumers. Covered products do not include servers and server peripherals, mobile handsets or smartphones, or tablets or similar devices that are sold without an integrated or detachable physical keyboard. Covered products also do not include the actual personal computers specifically sold to enterprise customers with over 1,000 employees.",
       "Covered software": "1. Application software that injects advertisements into a consumer's Internet browsing session, including pop-up advertisements; or 2. Application software that transmits, or causes to be transmitted, covered information to a person or entity other than the consumer, except when a. the covered information is used only in an aggregated and/or de-identified form that does not disclose, report, or otherwise share any individually identifiable information; or b. the covered information is transmitted or used solely for one or more of the following purposes: i. being reasonably necessary for the software to perform a function or service that the consumer requests or otherwise interacts with; ii. authenticating the consumer; iii. configuring or setting up the software; or iv. assessing or analyzing the software's performance (e.g., to find or fix problems in the software, assess how consumers are using the software, or to make improvements to the software). Covered software does not include Internet browsers, antivirus software, parental control software, or other computer security software.",
@@ -68,14 +84,16 @@
         "provision_number": "I",
         "title": "Prohibited Misleading Representations",
         "category": "prohibition",
-        "summary": "Respondent must not make any misrepresentations about the features of covered software in advertising, promotion, or distribution.",
+        "summary": "Respondent and all persons acting in concert with it must not make any misrepresentation, express or implied, about any feature of covered software in connection with its advertising, promotion, sale, or distribution.",
         "requirements": [
           {
-            "description": "Must not misrepresent any feature of covered software",
+            "description": "Must not make any misrepresentation, in any manner, expressly or by implication, about any feature of covered software in connection with advertising, promotion, offering for sale, sale, or distribution of covered software",
             "quoted_text": "IT IS ORDERED that Respondent, its officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with the advertising, promotion, offering for sale, sale, or distribution of covered software shall not make a misrepresentation, in any manner, expressly or by implication, about any feature of the covered software.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 176,
+            "quote_end_line": 180
           }
         ]
       },
@@ -83,14 +101,34 @@
         "provision_number": "II",
         "title": "Affirmative Express Consent Provision",
         "category": "affirmative_obligation",
-        "summary": "Respondent must obtain affirmative express consent before preinstalling covered software, and provide instructions for revoking consent and effective opt-out mechanisms.",
+        "summary": "No later than 120 days after service of the Order, Respondent must not preinstall any covered software unless affirmative express consent is obtained from the consumer, revocation instructions are provided, and a reasonable opt-out or removal mechanism is available.",
         "requirements": [
           {
-            "description": "Must not preinstall covered software unless affirmative express consent is obtained, instructions for revoking consent are provided, and reasonable opt-out means are provided",
-            "quoted_text": "IT IS FURTHER ORDERED that, commencing no later than 120 days after the date of service of this Order, Respondent, its officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, shall not preinstall or cause to be preinstalled any covered software unless Respondent or the software provider: A. will obtain the consumer's affirmative express consent; B. provides instructions for how the consumer may revoke consent to the covered software's operation, which can include uninstalling the covered software; and C. provides a reasonable and effective means for consumers to opt out, disable or remove all of the covered software's operations, which can include uninstalling the covered software.",
+            "description": "Must not preinstall or cause to be preinstalled any covered software unless Respondent or the software provider will obtain the consumer's affirmative express consent",
+            "quoted_text": "IT IS FURTHER ORDERED that, commencing no later than 120 days after the date of service of this Order, Respondent, its officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, shall not preinstall or cause to be preinstalled any covered software unless Respondent or the software provider: A. will obtain the consumer’s affirmative express consent;",
             "deadline": "120 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 182,
+            "quote_end_line": 187
+          },
+          {
+            "description": "Must provide instructions for how the consumer may revoke consent to the covered software's operation, which can include uninstalling the covered software",
+            "quoted_text": "B. provides instructions for how the consumer may revoke consent to the covered software’s operation, which can include uninstalling the covered software; and",
+            "deadline": "120 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 188,
+            "quote_end_line": 189
+          },
+          {
+            "description": "Must provide a reasonable and effective means for consumers to opt out, disable, or remove all of the covered software's operations, which can include uninstalling the covered software",
+            "quoted_text": "C. provides a reasonable and effective means for consumers to opt out, disable or remove all of the covered software’s operations, which can include uninstalling the covered software.",
+            "deadline": "120 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 190,
+            "quote_end_line": 192
           }
         ]
       },
@@ -98,49 +136,61 @@
         "provision_number": "III",
         "title": "Mandated Software Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondent must establish and maintain a comprehensive written software security program to address security risks and protect covered information.",
+        "summary": "Respondent must establish, implement, and maintain a comprehensive software security program — documented in writing — containing administrative, technical, and physical safeguards addressing software security risks and protecting the security and integrity of covered information.",
         "requirements": [
           {
-            "description": "Establish and implement comprehensive software security program",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must, no later than the date of service of this Order, establish and implement, and thereafter maintain a comprehensive software security program that is reasonably designed to (1) address software security risks related to the development and management of new and existing application software, and (2) protect the security, confidentiality, and integrity of covered information. The content, implementation and maintenance of the software security program must be fully documented in writing.",
-            "deadline": "date of service",
+            "description": "Establish and implement, and thereafter maintain, a comprehensive written software security program reasonably designed to address software security risks and protect the security, confidentiality, and integrity of covered information",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent must, no later than the date of service of this Order, establish and implement, and thereafter maintain a comprehensive software security program that is reasonably designed to (1) address software security risks related to the development and management of new and existing application software, and (2) protect the security, confidentiality, and integrity of covered information. The content, implementation and maintenance of the software security program must be fully documented in writing. The software security program must contain administrative, technical, and physical safeguards appropriate to Respondent’s size and complexity, the nature and scope of Respondent’s activities, the nature of the application software, the security policies and practices of the software provider, and the sensitivity of the covered information, including:",
+            "deadline": "date of service of Order",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 196,
+            "quote_end_line": 205
           },
           {
-            "description": "Designate employee(s) to coordinate the software security program",
-            "quoted_text": "the designation of an employee or employees to coordinate and be responsible for the software security program",
+            "description": "Designate an employee or employees to coordinate and be responsible for the software security program",
+            "quoted_text": "A. the designation of an employee or employees to coordinate and be responsible for the software security program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 209,
+            "quote_end_line": 210
           },
           {
-            "description": "Identify and assess internal and external security risks",
-            "quoted_text": "the identification of internal and external risks to the security, confidentiality, or integrity of covered information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment must include consideration of risks in each area of relevant operation, including: (1) employee training and management; (2) application software design, including the processing, storage, transmission and disposal of covered information by the application software; and (3) the prevention, detection, and response to attacks, intrusions, or other vulnerabilities",
+            "description": "Identify internal and external risks to the security, confidentiality, or integrity of covered information, assess sufficiency of safeguards, and conduct risk assessments covering employee training, application software design, and prevention/detection/response to vulnerabilities",
+            "quoted_text": "B. the identification of internal and external risks to the security, confidentiality, or integrity of covered information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment must include consideration of risks in each area of relevant operation, including: (1) employee training and management; (2) application software design, including the processing, storage, transmission and disposal of covered information by the application software; and (3) the prevention, detection, and response to attacks, intrusions, or other vulnerabilities;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 211,
+            "quote_end_line": 219
           },
           {
-            "description": "Design and implement reasonable safeguards with regular testing",
-            "quoted_text": "the design and implementation of reasonable safeguards to control these risks, and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures",
+            "description": "Design and implement reasonable safeguards to control identified risks, and regularly test or monitor the effectiveness of safeguards' key controls, systems, and procedures",
+            "quoted_text": "C. the design and implementation of reasonable safeguards to control these risks, and regular testing or monitoring of the effectiveness of the safeguards’ key controls, systems, and procedures;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 220,
+            "quote_end_line": 222
           },
           {
-            "description": "Select and retain software providers with appropriate security practices",
-            "quoted_text": "the development and use of reasonable steps to select and retain software or service providers capable of maintaining security practices consistent with this Order, and requiring software and service providers, by contract, to implement and maintain appropriate safeguards",
+            "description": "Take reasonable steps to select and retain software or service providers capable of maintaining security practices consistent with this Order, and require them by contract to implement and maintain appropriate safeguards",
+            "quoted_text": "D. the development and use of reasonable steps to select and retain software or service providers capable of maintaining security practices consistent with this Order, and requiring software and service providers, by contract, to implement and maintain appropriate safeguards; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 223,
+            "quote_end_line": 226
           },
           {
-            "description": "Evaluate and adjust security program based on testing and changes",
-            "quoted_text": "the evaluation and adjustment of the software security program in light of the results of the testing and monitoring required by sub-provision C, any changes to Respondent's operations or business arrangements, or any other circumstances that Respondent knows or has reason to know may have an impact on the effectiveness of the software security program.",
+            "description": "Evaluate and adjust the software security program in light of testing and monitoring results, changes to Respondent's operations or business arrangements, or other circumstances that may affect the program's effectiveness",
+            "quoted_text": "E. the evaluation and adjustment of the software security program in light of the results of the testing and monitoring required by sub-provision C, any changes to Respondent’s operations or business arrangements, or any other circumstances that Respondent knows or has reason to know may have an impact on the effectiveness of the software security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 227,
+            "quote_end_line": 231
           }
         ]
       },
@@ -148,42 +198,43 @@
         "provision_number": "IV",
         "title": "Software Security Assessments by a Third Party",
         "category": "assessment",
-        "summary": "Respondent must obtain initial and biennial third-party assessments of its software security program for 20 years.",
+        "summary": "Respondent must obtain initial and biennial third-party assessments of its software security program from a qualified independent professional, covering defined reporting periods, with specific content requirements and submission deadlines to the Commission.",
         "requirements": [
           {
-            "description": "Obtain assessments from qualified independent third-party professionals",
-            "quoted_text": "The Assessments must be obtained from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. A professional qualified to prepare such Assessments must be a person qualified as a Certified Secure Software Lifecycle Professional (CSSLP) with professional experience with secure Internet-accessible, consumer-grade devices; an individual qualified as a Certified Information Systems Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA) with professional experience with secure Internet-accessible consumer-grade devices; or a qualified individual or entity approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
+            "description": "Obtain initial and biennial assessments from a qualified, objective, independent third-party professional using procedures and standards generally accepted in the profession (e.g., CSSLP, CISSP, or CISA with relevant experience, or FTC-approved individual/entity)",
+            "quoted_text": "A. The Assessments must be obtained from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. A professional qualified to prepare such Assessments must be a person qualified as a Certified Secure Software Lifecycle Professional (CSSLP) with professional experience with secure Internet-accessible, consumer-grade devices; an individual qualified as a Certified Information Systems Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA) with professional experience with secure Internet- accessible consumer-grade devices; or a qualified individual or entity approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 236,
+            "quote_end_line": 245
           },
           {
-            "description": "Initial assessment must cover first 180 days after order issuance",
-            "quoted_text": "The reporting period for the Assessments must cover: (1) the first 180 days after the issuance date of the Order for the initial Assessment, and (2) each 2-year period thereafter for 20 years after issuance of the Order for the biennial Assessments.",
-            "deadline": "180 days",
+            "description": "Assessments must cover: (1) the first 180 days after the Order issuance date for the initial Assessment, and (2) each 2-year period thereafter for 20 years after issuance for biennial Assessments",
+            "quoted_text": "B. The reporting period for the Assessments must cover: (1) the first 180 days after the issuance date of the Order for the initial Assessment, and (2) each 2-year period thereafter for 20 years after issuance of the Order for the biennial Assessments.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 249,
+            "quote_end_line": 251
           },
           {
-            "description": "Complete each assessment within 60 days after end of reporting period",
-            "quoted_text": "Each Assessment must be completed within 60 days after the end of the reporting period to which the Assessment applies.",
-            "deadline": "60 days",
+            "description": "Each Assessment must set forth specific safeguards implemented and maintained, explain how safeguards are appropriate to Respondent's operations and covered information, explain how safeguards meet Order requirements, and certify that the Mandated Software Security Program is operating with sufficient effectiveness",
+            "quoted_text": "C. Each Assessment must: 1. set forth the specific administrative, technical, and physical safeguards that Respondent has implemented and maintained during the reporting period; 2. explain how such safeguards are appropriate to Respondent’s size and complexity, the nature and scope of Respondent’s activities, the nature of the application software, the security policies and practices of the application software provider, and the sensitivity of the covered information; 3. explain how the safeguards that have been implemented meet or exceed the protections required by the Provision of this Order titled Mandated Software Security Program; and 4. certify that the Mandated Software Security Program is operating with sufficient effectiveness to provide reasonable assurance that the security of the application software preinstalled on covered products and the security, confidentiality, and integrity of covered information is protected, and that the Mandated Software Security Program has so operated throughout the reporting period.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 252,
+            "quote_end_line": 266
           },
           {
-            "description": "Submit initial assessment to Commission within 10 days of completion",
-            "quoted_text": "Respondent must submit the initial Assessment to the Commission within 10 days after the Assessment has been completed.",
-            "deadline": "10 days",
+            "description": "Each Assessment must be completed within 60 days after the end of the reporting period; the initial Assessment must be submitted to the Commission within 10 days after completion; all subsequent biennial Assessments must be retained until Order termination and submitted to the Commission within 10 days of a Commission request",
+            "quoted_text": "D. Each Assessment must be completed within 60 days after the end of the reporting period to which the Assessment applies. Respondent must submit the initial Assessment to the Commission within 10 days after the Assessment has been completed. Respondent must retain all subsequent biennial Assessments, at least until the Order terminates. Respondent must submit any biennial Assessments to the Commission within 10 days of a request from a representative of the Commission.",
+            "deadline": "60 days after reporting period end; 10 days after completion for initial submission",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Retain biennial assessments until order terminates and submit within 10 days of Commission request",
-            "quoted_text": "Respondent must retain all subsequent biennial Assessments, at least until the Order terminates. Respondent must submit any biennial Assessments to the Commission within 10 days of a request from a representative of the Commission.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 267,
+            "quote_end_line": 272
           }
         ]
       },
@@ -191,21 +242,25 @@
         "provision_number": "V",
         "title": "Acknowledgments of the Order",
         "category": "acknowledgment",
-        "summary": "Respondent must submit acknowledgment of receipt and deliver copies of the Order to relevant personnel for 5 years.",
+        "summary": "Respondent must submit a sworn acknowledgment of receipt of this Order within 10 days, and for 5 years must deliver a copy of the Order to all principals, officers, directors, and employees or agents with relevant managerial responsibilities, as well as to any successor business entities.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt sworn under penalty of perjury",
-            "quoted_text": "Respondent, within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Within 10 days after the effective date of this Order, submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury",
+            "quoted_text": "A. Respondent, within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 276,
+            "quote_end_line": 277
           },
           {
-            "description": "Deliver Order to principals, officers, directors, and relevant employees for 5 years",
-            "quoted_text": "For 5 years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, and directors; (2) all employees, agents, and representatives with managerial responsibilities related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Report and Notices. Delivery must occur within 10 days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "10 days",
+            "description": "For 5 years after the issuance date of this Order, deliver a copy of this Order to all principals, officers, and directors; all employees, agents, and representatives with managerial responsibilities related to the subject matter of the Order; and any business entity resulting from any change in structure — within 10 days after the effective date for current personnel, and before assuming responsibilities for all others",
+            "quoted_text": "B. For 5 years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, and directors; (2) all employees, agents, and representatives with managerial responsibilities related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Report and Notices. Delivery must occur within 10 days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "10 days for current personnel; before assuming responsibilities for others",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 278,
+            "quote_end_line": 284
           }
         ]
       },
@@ -213,28 +268,52 @@
         "provision_number": "VI",
         "title": "Compliance Report and Notices",
         "category": "compliance_reporting",
-        "summary": "Respondent must submit compliance reports and notices to the Commission regarding business activities, structural changes, and bankruptcy proceedings.",
+        "summary": "Respondent must submit a sworn annual compliance report one year after issuance, provide sworn notices within 14 days of changes in contact information or corporate structure, notify the Commission within 14 days of any bankruptcy filing, and route all submissions per specified instructions.",
         "requirements": [
           {
-            "description": "Submit one-year compliance report sworn under penalty of perjury",
-            "quoted_text": "One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of Respondent's business entities by all of their names; (c) describe the activities of each business, including the goods and services offered; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the costs incurred and changes made by the Respondent to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
-            "deadline": "1 year",
+            "description": "One year after the issuance date of this Order, submit a compliance report sworn under penalty of perjury identifying contact information, all business entities and their activities, compliance status with each Order provision including costs and changes made, and copies of Order acknowledgments",
+            "quoted_text": "A. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of Respondent’s business entities by all of their names; (c) describe the activities of each business, including the goods and services offered; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the costs incurred and changes made by the Respondent to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year after issuance",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 291,
+            "quote_end_line": 301
           },
           {
-            "description": "Submit compliance notice within 14 days of changes to contact information or corporate structure",
-            "quoted_text": "Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (a) any designated point of contact; or (b) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
-            "deadline": "14 days",
+            "description": "Submit a compliance notice sworn under penalty of perjury within 14 days of any change in designated points of contact or in the structure of Respondent or any entity Respondent owns or controls that may affect compliance obligations under this Order",
+            "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (a) any designated point of contact; or (b) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days of change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 302,
+            "quote_end_line": 307
           },
           {
-            "description": "Submit notice of bankruptcy filing within 14 days",
-            "quoted_text": "Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Respondent within 14 days of its filing.",
-            "deadline": "14 days",
+            "description": "Submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing",
+            "quoted_text": "C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Respondent within 14 days of its filing.",
+            "deadline": "14 days of filing",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 308,
+            "quote_end_line": 310
+          },
+          {
+            "description": "All submissions to the Commission required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____,” and supplying the date, signatory’s full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 311,
+            "quote_end_line": 315
+          },
+          {
+            "description": "Unless otherwise directed in writing, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC, 600 Pennsylvania Avenue NW, Washington, DC 20580, with subject line beginning: In re Lenovo (United States) Inc.",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: In re Lenovo (United States) Inc.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 316,
+            "quote_end_line": 321
           }
         ]
       },
@@ -242,14 +321,61 @@
         "provision_number": "VII",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must create and retain specific records for 20 years, with each record retained for 5 years unless otherwise specified.",
+        "summary": "Respondent must create specified records for 20 years after Order issuance and retain each for at least 5 years (unless otherwise specified), including accounting records, personnel records, consumer complaints, representations subject to the Order, assessment materials, and all records necessary to demonstrate full compliance.",
         "requirements": [
           {
-            "description": "Create and retain accounting records, personnel records, consumer complaints, representations, assessment materials, and compliance records",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for 20 years after the issuance date of the Order, and retain each such record for 5 years, unless otherwise specified below. Specifically, Respondent must create and retain the following records: A. accounting records showing the revenues from all covered products sold, the costs incurred in generating those revenues, and resulting net profit or loss; B. personnel records showing, for each person who must receive a copy of this Order pursuant to Part V.B., that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination; C. copies or records of all U.S. consumer complaints relating to covered software or the security of application software, whether received directly or indirectly, such as through a third party, and any response; D. a copy of each representation subject to this Order; E. for 5 years after the date of preparation of each Assessment required by this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Respondent, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Respondent's compliance with related Provisions of this Order, for the compliance period covered by such Assessment; and F. all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission.",
-            "deadline": null,
+            "description": "Create and retain for 5 years accounting records showing revenues from all covered products sold, costs incurred, and resulting net profit or loss",
+            "quoted_text": "A. accounting records showing the revenues from all covered products sold, the costs incurred in generating those revenues, and resulting net profit or loss;",
+            "deadline": "20 years creation period; 5 years retention",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 329,
+            "quote_end_line": 330
+          },
+          {
+            "description": "Create and retain for 5 years personnel records showing name, addresses, telephone numbers, job title or position, dates of service, and reason for termination (if applicable) for each person required to receive a copy of this Order",
+            "quoted_text": "B. personnel records showing, for each person who must receive a copy of this Order pursuant to Part V.B., that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "deadline": "20 years creation period; 5 years retention",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 331,
+            "quote_end_line": 333
+          },
+          {
+            "description": "Create and retain for 5 years copies or records of all U.S. consumer complaints relating to covered software or the security of application software, whether received directly or indirectly, and any response",
+            "quoted_text": "C. copies or records of all U.S. consumer complaints relating to covered software or the security of application software, whether received directly or indirectly, such as through a third party, and any response;",
+            "deadline": "20 years creation period; 5 years retention",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 334,
+            "quote_end_line": 336
+          },
+          {
+            "description": "Create and retain for 5 years a copy of each representation subject to this Order",
+            "quoted_text": "D. a copy of each representation subject to this Order;",
+            "deadline": "20 years creation period; 5 years retention",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 337,
+            "quote_end_line": 337
+          },
+          {
+            "description": "Retain for 5 years after the date of preparation of each Assessment all materials relied upon to prepare the Assessment, including plans, reports, studies, reviews, audits, audit trails, policies, training materials, assessments, and any other materials concerning compliance with related Order provisions",
+            "quoted_text": "E. for 5 years after the date of preparation of each Assessment required by this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Respondent, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Respondent’s compliance with related Provisions of this Order, for the compliance period covered by such Assessment; and",
+            "deadline": "5 years after preparation of each Assessment",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 338,
+            "quote_end_line": 343
+          },
+          {
+            "description": "Create and retain all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
+            "quoted_text": "F. all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission.",
+            "deadline": "20 years creation period; 5 years retention",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 344,
+            "quote_end_line": 345
           }
         ]
       },
@@ -257,28 +383,34 @@
         "provision_number": "VIII",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission has the right to monitor compliance through additional reports, records inspection, interviews, and other lawful investigative means.",
+        "summary": "The Commission is authorized to monitor Respondent's compliance by requiring additional reports and records within 10 days of a written request, communicating directly with Respondent, interviewing affiliated individuals (with counsel present), and using all other lawful means including undercover methods.",
         "requirements": [
           {
-            "description": "Submit additional compliance reports or information within 10 days of Commission request",
-            "quoted_text": "Within 10 days of receipt of a written request from a representative of the Commission, Respondent must submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
-            "deadline": "10 days",
+            "description": "Within 10 days of receipt of a written request from a Commission representative, submit additional compliance reports or other requested information sworn under penalty of perjury, and produce records for inspection and copying",
+            "quoted_text": "A. Within 10 days of receipt of a written request from a representative of the Commission, Respondent must submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
+            "deadline": "10 days of written request",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 349,
+            "quote_end_line": 352
           },
           {
-            "description": "Permit Commission representatives to communicate directly and conduct interviews",
-            "quoted_text": "For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with any Respondent who has agreed to such an interview. The interviewee may have counsel present.",
+            "description": "Permit representatives of the Commission to communicate directly with Respondent and to interview anyone affiliated with any Respondent who has agreed to such an interview; interviewee may have counsel present",
+            "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with any Respondent who has agreed to such an interview. The interviewee may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 353,
+            "quote_end_line": 356
           },
           {
-            "description": "Allow Commission to use lawful investigative means including posing as consumers",
-            "quoted_text": "The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Commission may use all other lawful means, including posing as consumers, suppliers, or other individuals, without identification or prior notice, and may use compulsory process under Sections 9 and 20 of the FTC Act",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 360,
+            "quote_end_line": 364
           }
         ]
       },
@@ -286,21 +418,32 @@
         "provision_number": "IX",
         "title": "Order Effective Dates",
         "category": "duration",
-        "summary": "The Order is effective upon publication and terminates on December 20, 2037, or 20 years from the most recent complaint filing, with specific exceptions.",
+        "summary": "This Order is effective upon publication on the FTC's website and will terminate on December 20, 2037, or 20 years from the most recent date a complaint alleging any violation of this Order is filed in federal court, whichever is later, subject to specified exceptions.",
         "requirements": [
           {
-            "description": "Order becomes effective upon publication on ftc.gov",
-            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order.",
+            "description": "Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate on",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 366,
+            "quote_end_line": 367
+          },
+          {
+            "description": "Order will terminate on December 20, 2037, or 20 years from the most recent date a complaint alleging any violation of this Order is filed in federal court, whichever comes later, subject to specified exceptions for provisions terminating earlier, non-named respondents, and post-termination complaints",
+            "quoted_text": "publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate on December 20, 2037, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Provision in this Order that terminates in less than 20 years; B. this Order’s application to any Respondent that is not named as a defendant in such complaint; and C. this Order if such complaint is filed after the Order has terminated pursuant to this Provision. Provided, further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 367,
+            "quote_end_line": 382
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This Order will terminate on December 20, 2037, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Provision in this Order that terminates in less than 20 years; B. this Order's application to any Respondent that is not named as a defendant in such complaint; and C. this Order if such complaint is filed after the Order has terminated pursuant to this Provision. Provided, further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal."
+      "termination_text": "This Order will terminate on December 20, 2037, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Provision in this Order that terminates in less than 20 years; B. this Order's application to any Respondent that is not named as a defendant in such complaint; and C. this Order if such complaint is filed afterthe Order has terminated pursuant to this Provision."
     }
   },
   "metadata": {
@@ -310,11 +453,33 @@
     },
     "extraction_stats": {
       "complaint_counts": 3,
-      "complaint_representations": 1,
+      "complaint_representations": 2,
       "order_provisions": 9,
       "order_definitions": 10,
-      "order_requirements": 23
+      "order_requirements": 32,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 3,
+        "III": 6,
+        "IV": 4,
+        "V": 2,
+        "VI": 5,
+        "VII": 6,
+        "VIII": 3,
+        "IX": 2
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 2
+      },
+      "verification_details": {
+        "complaint_verified": 2,
+        "complaint_total": 2,
+        "order_verified": 32,
+        "order_total": 32
+      }
     },
-    "processing_time_seconds": 158.6
+    "processing_time_seconds": 164.5
   }
 }

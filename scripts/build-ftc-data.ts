@@ -88,7 +88,7 @@ function classifyCategories(countTitles: string[], legalAuthority: string, factu
 
 // --- Main ---
 
-const FTC_SOURCE = path.resolve("C:/Users/rafst/Documents/projectas/FTC/output");
+const FTC_SOURCE = path.resolve("C:/Users/rafst/Documents/projectas/FTC/output_v2");
 const OUT_DIR = path.resolve("public/data");
 const FILES_DIR = path.resolve("public/data/ftc-files");
 

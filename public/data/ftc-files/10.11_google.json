@@ -6,7 +6,7 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043",
-      "business_description": "Google is a technology company best known for its web-based search engine, which provides free search results to consumers. Google provides various free web products to consumers, including Gmail, Google Reader, Picasa, and Blogger. Google also offers consumers the ability to create a Google profile to make information about themselves public and link to their content on Google product websites."
+      "business_description": "Google is a technology company best known for its web-based search engine, which provides free search results to consumers. Google also provides various free web products to consumers, including Gmail (web-based email), Google Reader, Picasa (photo sharing), and Blogger (weblog publishing)."
     },
     "commissioners": [
       "Jon Leibowitz, Chairman",
@@ -23,69 +23,89 @@
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/google-inc"
   },
   "complaint": {
-    "factual_background": "Google launched Google Buzz, a social networking service, within Gmail without adequately informing users or obtaining their consent. The company used information consumers had provided for Gmail email service to populate the social network, automatically creating followers and follow lists based on email and chat contacts. The service made previously private information public by default, including lists of people users emailed and chatted with most frequently, without clear disclosure or easy-to-find controls. This violated Google's own privacy policies that promised to use Gmail information only for email service purposes and to obtain consent before using information for different purposes.",
+    "factual_background": "Google launched a social networking service called Google Buzz in February 2010 within Gmail, using Gmail users' contact information to automatically enroll them with followers and people to follow without adequate notice or consent. Google's existing privacy policies promised that user information collected for Gmail would only be used for that service, and that Google would seek consent before using data for any other purpose. Despite these promises, Google used Gmail data to populate Buzz, exposed previously private contact lists publicly by default, and made opt-out controls confusing and difficult to find. Google also falsely represented that users who chose 'Nah, go to my inbox' or clicked 'Turn off Buzz' would not be enrolled in Buzz, when in fact they were enrolled in certain Buzz features. Additionally, Google claimed adherence to the U.S.-EU Safe Harbor Framework's Notice and Choice principles, which it violated by failing to notify or obtain consent from EU Gmail users before repurposing their data for Buzz.",
     "representations_made": [
       {
-        "description": "Gmail information would only be used to provide the email service",
+        "description": "Claimed that Gmail only stores, processes, and maintains user messages, contact lists, and account data in order to provide the Gmail email service to the user",
         "quoted_text": "Gmail stores, processes and maintains your messages, contact lists and other data related to your account in order to provide the service to you.",
-        "source_paragraph": 6
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 6,
+        "quote_start_line": 50,
+        "quote_end_line": 52
       },
       {
-        "description": "Google would ask for consent before using personal information for a different purpose than originally collected",
+        "description": "Claimed that if Google were to use personal information for a purpose different from that for which it was collected, Google would ask for user consent prior to such use",
         "quoted_text": "When you sign up for a particular service that requires registration, we ask you to provide personal information. If we use this information in a manner different than the purpose for which it was collected, then we will ask for your consent prior to such use.",
-        "source_paragraph": 6
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 6,
+        "quote_start_line": 56,
+        "quote_end_line": 60
       },
       {
-        "description": "Users who selected 'Nah, go to my inbox' or 'Turn off Buzz' would not be enrolled in Buzz",
-        "quoted_text": "Gmail users had to elect one of two options to proceed to their inboxes: 'Sweet! Check out Buzz' or 'Nah, go to my inbox.' ... Gmail users had an option to click a 'Turn off Buzz' link, contained in small type at the bottom of the Gmail home page after login.",
-        "source_paragraph": 8
+        "description": "Implied through options 'Nah, go to my inbox' and 'Turn off Buzz' that users clicking these options would not be enrolled in Buzz",
+        "quoted_text": "Gmail.” Gmail users had to elect one of two options to proceed to their inboxes: “Sweet! Check out Buzz” or “Nah, go to my inbox.” Exhibit A shows how the initial Buzz screen appeared to consumers. a. If a Gmail user selected “Nah, go to my inbox” from the initial Buzz screen, that user’s information was nonetheless shared in a number of ways: i. The user could be “followed” by other Gmail users who had enrolled in Buzz. ii. If the user had previously created a public Google profile, the user could appear on the public Google profiles of people who had enrolled in Buzz and were following the user. iii. A Buzz link would appear in the list of links on the user’s Gmail page. If the user clicked on the that link, he or she would be taken to the Buzz welcome screen and automatically enrolled in Buzz, without any disclosure of that fact and without any further action on the user’s part. Exhibit B shows how the Buzz welcome screen appeared to consumers. The user would be enrolled in Buzz even if the user did not click the “Okay” button at the bottom of the welcome screen. b. Regardless of whether they chose “Sweet! Check out Buzz” or “Nah, go to my inbox,” Gmail users had an option to click a “Turn off Buzz” link, contained in small type at the bottom of the Gmail home page after login. Clicking that link removed the Buzz tab from the user’s Gmail page. Gmail users who had clicked “Sweet! Check out Buzz” or had clicked on the Buzz link in Gmail, then later clicked the “Turn off Buzz” link, nonetheless continued to appear as a “follower” on the Google profiles and Google Buzz pages of the people whom they emailed the most. In addition, on each such profile, a “follow” link was placed next to the Gmail user’s name, so other individuals could begin following the user.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 8,
+        "quote_start_line": 77,
+        "quote_end_line": 102
       },
       {
-        "description": "Users would have control over what information would be made public through their Google profile",
-        "quoted_text": "The profile creation screen contained the following header: 'How do you want to appear to others?' The screen also included the following language in prominent, contrasting type: 'Before participating in Buzz, you need a public profile with your name and photo. It's visible on the web so friends can find and recognize you. You can post publicly to the world or privately to only the people you choose.'",
-        "source_paragraph": 9
+        "description": "Represented through Buzz enrollment screens and language such as 'How do you want to appear to others?' that consumers would be able to exercise control over what information would be made public through their Google public profile",
+        "quoted_text": "the following header: “How do you want to appear to others?” The screen also included the following language in prominent, contrasting type: “Before participating in Buzz, you need a public profile with your name and photo. It’s visible on the web so friends can find and recognize you. You can post publicly to the world or privately to only the people you choose.” The profile creation",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 121,
+        "quote_end_line": 125
       },
       {
-        "description": "Google adheres to the U.S.-EU Safe Harbor Privacy Principles",
-        "quoted_text": "Google adheres to the US Safe Harbor Privacy Principles of Notice, Choice, Onward Transfer, Security, Data Integrity, Access and Enforcement, and is registered with the U.S. Department of Commerce's Safe Harbor Program.",
-        "source_paragraph": 24
+        "description": "Claimed that Google adheres to the US Safe Harbor Privacy Principles of Notice, Choice, Onward Transfer, Security, Data Integrity, Access and Enforcement, and is registered with the U.S. Department of Commerce's Safe Harbor Program",
+        "quoted_text": "Google adheres to the US Safe Harbor Privacy Principles of Notice, Choice, Onward Transfer, Security, Data Integrity, Access and Enforcement, and is registered with the U.S. Department of Commerce’s Safe Harbor Program.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 24,
+        "quote_start_line": 272,
+        "quote_end_line": 274
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Misuse of Gmail Information",
-        "representation": "Google represented that it used, and would use, information from consumers signing up for Gmail only for the purpose of providing them with a web-based email service",
-        "fact": "Google did not use information from consumers signing up for Gmail only for the purpose of providing them with a web-based email service. Instead, Google used this information to populate its new social networking service",
+        "title": "False Representation: Gmail Data Used Only for Email Service",
+        "representation": "Google represented, expressly or by implication, that it used and would use information from consumers signing up for Gmail only for the purpose of providing them with a web-based email service.",
+        "fact": "Google did not use information from consumers signing up for Gmail only for the purpose of providing a web-based email service. Instead, Google used this information to populate its new Google Buzz social networking service.",
         "conclusion": "Therefore, the representations set forth in paragraph 13 were, and are, false or misleading and constitute a deceptive act or practice."
       },
       {
         "count_number": 2,
-        "title": "Failure to Obtain Consent",
-        "representation": "Google represented that it would seek consumers' consent to use information they provided for a purpose other than that for which it was collected",
-        "fact": "Google did not seek consumers' consent before using the information they provided in connection with Gmail for the Google Buzz social networking product",
+        "title": "False Representation: Consent Before Repurposing User Data",
+        "representation": "Google represented, expressly or by implication, that it would seek consumers' consent to use information they provided for a purpose other than that for which it was collected.",
+        "fact": "Google did not seek consumers' consent before using the information they provided in connection with Gmail for the Google Buzz social networking product.",
         "conclusion": "Therefore, the representations set forth in paragraph 15 were, and are, false or misleading and constitute a deceptive act or practice."
       },
       {
         "count_number": 3,
-        "title": "Deceptive Opt-Out Options",
-        "representation": "By offering the option 'Nah, go to my inbox,' as well as the option to 'Turn off Buzz,' Google represented that consumers who clicked on these options would not be enrolled in Buzz",
-        "fact": "Consumers who clicked on these options were enrolled in certain features of Buzz",
+        "title": "False Representation: Opting Out of Buzz",
+        "representation": "By offering the options 'Nah, go to my inbox' and 'Turn off Buzz,' Google represented, expressly or by implication, that consumers who clicked on these options would not be enrolled in Buzz.",
+        "fact": "Consumers who clicked on these options were nonetheless enrolled in certain features of Buzz, including appearing as followers on others' profiles and having follow links placed next to their names.",
         "conclusion": "Therefore, the representations set forth in paragraph 17 were, and are, false and misleading and constitute a deceptive act or practice."
       },
       {
         "count_number": 4,
-        "title": "Inadequate Disclosure of Default Public Settings",
-        "representation": "Through the Buzz enrollment screens and statements such as 'How do you want to appear to others?' Google represented that consumers would be able to exercise control over what information would be made public through their Google public profile",
-        "fact": "Google failed to disclose, or failed to disclose adequately, that in most instances the contacts with whom users emailed and chatted the most would become public by default and that user information submitted through other Google products would be automatically broadcast through Buzz. These facts would be material to consumers in their enrollment in and use of the Google Buzz service",
+        "title": "Deceptive Omission: Lack of Adequate Disclosure of Default Public Sharing",
+        "representation": "Through Buzz enrollment screens and statements such as 'How do you want to appear to others?' Google represented that consumers would be able to exercise control over what information would be made public through their Google public profile.",
+        "fact": "Google failed to disclose adequately that in most instances the contacts with whom users emailed and chatted the most would become public by default, and that user information from other Google products would be automatically broadcast through Buzz.",
         "conclusion": "Therefore, respondent's failure to adequately disclose these facts, in light of the representations made, was, and is, a deceptive act or practice."
       },
       {
         "count_number": 5,
-        "title": "Safe Harbor Violations",
-        "representation": "Google represented that it adhered to the US Safe Harbor Privacy Principles of Notice, Choice, Onward Transfer, Security, Data Integrity, Access and Enforcement",
-        "fact": "Google did not adhere to the US Safe Harbor Privacy Principles of Notice and Choice. In particular, respondent did not give Gmail users notice before using the information collected for Gmail for a purpose other than that for which it was originally collected. Respondent also did not give Gmail users choice about using their information for a purpose that was incompatible with the purpose for which it was originally collected",
-        "conclusion": "Therefore, the representations set forth in paragraphs 23 and 24 were, and are, false or misleading and constitutes a deceptive act or practice."
+        "title": "False Representation: Adherence to U.S.-EU Safe Harbor Framework",
+        "representation": "Google represented that it adheres to the US Safe Harbor Privacy Principles of Notice, Choice, Onward Transfer, Security, Data Integrity, Access and Enforcement, and is registered with the U.S. Department of Commerce's Safe Harbor Program.",
+        "fact": "Google did not adhere to the US Safe Harbor Privacy Principles of Notice and Choice. It did not give Gmail users notice before using their information for a purpose other than that for which it was originally collected, nor did it give users a choice about using their information for an incompatible purpose.",
+        "conclusion": "Therefore, the representations set forth in paragraphs 23 and 24 were, and are, false or misleading and constitute a deceptive act or practice."
       }
     ]
   },
@@ -101,45 +121,53 @@
     "provisions": [
       {
         "provision_number": "I",
-        "title": "Prohibition Against Misrepresentations About Privacy and Security",
+        "title": "Prohibition Against Misrepresentations About Privacy",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent the extent to which it maintains and protects privacy and confidentiality of covered information, or its participation in privacy or security compliance programs.",
+        "summary": "Respondent must not misrepresent the extent to which it maintains and protects the privacy and confidentiality of covered information, or misrepresent its participation in any privacy or compliance program such as the U.S.-EU Safe Harbor Framework.",
         "requirements": [
           {
-            "description": "Must not misrepresent the extent to which respondent maintains and protects privacy and confidentiality of covered information",
-            "quoted_text": "IT ISORDERED that respondent, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication: A. the extent to which respondent maintains and protects the privacy and confidentiality of any covered information, including, but not limited to, misrepresentations related to: (1) the purposes for which it collects and uses covered information, and (2) the extent to which consumers may exercise control over the collection, use, or disclosure of covered information.",
+            "description": "Must not misrepresent the extent to which respondent maintains and protects the privacy and confidentiality of covered information, including misrepresentations about the purposes for which it collects and uses covered information and the extent to which consumers may exercise control over such information.",
+            "quoted_text": "IT IS ORDERED that respondent, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication: A. the extent to which respondent maintains and protects the privacy and confidentiality of any covered information, including, but not limited to, misrepresentations related to: (1) the purposes for which it collects and uses covered information, and (2) the extent to which consumers may exercise control over the collection, use, or disclosure of covered information.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 94,
+            "quote_end_line": 100
           },
           {
-            "description": "Must not misrepresent participation in privacy, security, or compliance programs",
+            "description": "Must not misrepresent the extent to which respondent is a member of, adheres to, complies with, is certified by, is endorsed by, or otherwise participates in any privacy, security, or other compliance program, including the U.S.-EU Safe Harbor Framework.",
             "quoted_text": "B. the extent to which respondent is a member of, adheres to, complies with, is certified by, is endorsed by, or otherwise participates in any privacy, security, or any other compliance program sponsored by the government or any other entity, including, but not limited to, the U.S.-EU Safe Harbor Framework.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 101,
+            "quote_end_line": 104
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Affirmative Express Consent for New Information Sharing",
+        "title": "Disclosure and Consent Before New Sharing of User Information",
         "category": "affirmative_obligation",
-        "summary": "Before sharing identified information with third parties in ways that differ from stated practices at the time of collection, respondent must clearly disclose the sharing and obtain express affirmative consent from users.",
+        "summary": "Before any new or additional sharing of a Google user's identified information with third parties that represents a change from stated practices at the time of collection and results from a product or service change, respondent must clearly and prominently disclose the sharing and obtain express affirmative consent from the user.",
         "requirements": [
           {
-            "description": "Clearly and prominently disclose that user information will be disclosed to third parties, the identity or categories of such parties, and the purposes for sharing",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent, prior to any new or additional sharing by respondent of the Google user's identified information with any third party, that: 1) is a change from stated sharing practices in effect at the time respondent collected suchinformation, and 2) results from any change, addition, or enhancement to a product or service by respondent, in or affecting commerce, shall: A. Separate and apart from any final \"end user license agreement,\" \"privacy policy,\" \"terms of use\" page, or similar document, clearly and prominently disclose: (1) that the Google user's information will be disclosed to one or more third parties, (2) the identity or specific categories of such third parties, and (3) the purpose(s) for respondent's sharing;",
+            "description": "Separate from any end user license agreement, privacy policy, or terms of use page, clearly and prominently disclose: (1) that the Google user's information will be disclosed to one or more third parties, (2) the identity or specific categories of such third parties, and (3) the purpose(s) for respondent's sharing.",
+            "quoted_text": "A. Separate and apart from any final “end user license agreement,” “privacy policy,” “terms of use” page, or similar document, clearly and prominently disclose: (1) that the Google user’s information will be disclosed to one or more third parties, (2) the identity or specific categories of such third parties, and (3) the purpose(s) for respondent’s sharing; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 114,
+            "quote_end_line": 118
           },
           {
-            "description": "Obtain express affirmative consent from the Google user for such sharing",
+            "description": "Obtain express affirmative consent from the Google user to such sharing prior to any new or additional sharing described in Part II.",
             "quoted_text": "B. Obtain express affirmative consent from the Google user to such sharing.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 119,
+            "quote_end_line": 119
           }
         ]
       },
@@ -147,215 +175,227 @@
         "provision_number": "III",
         "title": "Comprehensive Privacy Program",
         "category": "affirmative_obligation",
-        "summary": "Respondent must establish, implement, and maintain a comprehensive privacy program that addresses privacy risks and protects covered information, with specific required elements including employee designation, risk assessments, privacy controls, service provider oversight, and program evaluation.",
+        "summary": "Respondent must establish, implement, and maintain a comprehensive written privacy program designed to address privacy risks in product development and to protect the privacy and confidentiality of covered information, including specific organizational, risk assessment, control, vendor management, and evaluation components.",
         "requirements": [
           {
-            "description": "Establish and implement a comprehensive privacy program by the date of service of the order",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent, in or affecting commerce, shall, no later than the date of service of this order, establish and implement, and thereafter maintain, a comprehensive privacy program that is reasonably designed to: (1) address privacy risks related to the development and management of new and existing products and services for consumers, and (2) protect the privacy and confidentiality of covered information. Such program, the content and implementation of which must be documented in writing, shall contain privacy controls and procedures appropriate to respondent's size and complexity, the nature and scope of respondent's activities, and the sensitivity of the covered information",
-            "deadline": "no later than the date of service of this order",
+            "description": "Establish and implement, no later than the date of service of this order, and thereafter maintain, a comprehensive privacy program reasonably designed to address privacy risks and protect covered information, documented in writing and appropriate to respondent's size, complexity, and the sensitivity of covered information.",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent, in or affecting commerce, shall, no later than the date of service of this order, establish and implement, and thereafter maintain, a comprehensive privacy program that is reasonably designed to: (1) address privacy risks related to the development and management of new and existing products and services for consumers, and (2) protect the privacy and confidentiality of covered information. Such program, the content and implementation of which must be documented in writing, shall contain privacy controls and procedures appropriate to respondent’s size and complexity, the nature and scope of respondent’s activities, and the sensitivity of the covered information, including:",
+            "deadline": "date of service of this order",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 121,
+            "quote_end_line": 128
           },
           {
-            "description": "Designate an employee or employees to coordinate and be responsible for the privacy program",
+            "description": "Designate an employee or employees to coordinate and be responsible for the privacy program.",
             "quoted_text": "A. the designation of an employee or employees to coordinate and be responsible for the privacy program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 129,
+            "quote_end_line": 130
           },
           {
-            "description": "Identify reasonably foreseeable material privacy risks and assess safeguards, including consideration of employee training and product design",
-            "quoted_text": "B. the identification of reasonably foreseeable, material risks, both internal and external, that could result in the respondent's unauthorized collection, use, or disclosure of covered information, and an assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this privacy risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management, including training on the requirements of this order, and (2) product design, development, and research.",
+            "description": "Identify reasonably foreseeable, material risks (internal and external) that could result in unauthorized collection, use, or disclosure of covered information, and assess the sufficiency of safeguards in place, including risks in employee training and management and in product design, development, and research.",
+            "quoted_text": "B. the identification of reasonably foreseeable, material risks, both internal and external, that could result in the respondent’s unauthorized collection, use, or disclosure of covered information, and an assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this privacy risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management, including training on the requirements of this order, and (2) product design, development, and research.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 131,
+            "quote_end_line": 138
           },
           {
-            "description": "Design and implement reasonable privacy controls and procedures to address identified risks, and regularly test or monitor their effectiveness",
+            "description": "Design and implement reasonable privacy controls and procedures to address identified risks, and regularly test or monitor the effectiveness of those privacy controls and procedures.",
             "quoted_text": "C. the design and implementation of reasonable privacy controls and procedures to address the risks identified through the privacy risk assessment, and regular testing or monitoring of the effectiveness of those privacy controls and procedures.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 139,
+            "quote_end_line": 142
           },
           {
-            "description": "Use reasonable steps to select and retain service providers capable of protecting covered information and require them by contract to implement appropriate privacy protections",
+            "description": "Develop and use reasonable steps to select and retain service providers capable of appropriately protecting the privacy of covered information, and require service providers by contract to implement and maintain appropriate privacy protections.",
             "quoted_text": "D. the development and use of reasonable steps to select and retain service providers capable of appropriately protecting the privacy of covered information they receive from respondent, and requiring service providers by contract to implement and maintain appropriate privacy protections.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 143,
+            "quote_end_line": 146
           },
           {
-            "description": "Evaluate and adjust the privacy program based on testing results, material changes to operations, or other circumstances that may impact program effectiveness",
-            "quoted_text": "E. the evaluation and adjustment of respondent's privacy program in light of the results of the testing and monitoring required by subpart C, any material changes to respondent's operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its privacy program.",
+            "description": "Evaluate and adjust respondent's privacy program in light of testing and monitoring results, material changes to respondent's operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its privacy program.",
+            "quoted_text": "E. the evaluation and adjustment of respondent’s privacy program in light of the results of the testing and monitoring required by subpart C, any material changes to respondent’s operations or business arrangements, or any Page 4 of 7 other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its privacy program.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 147,
+            "quote_end_line": 154
           }
         ]
       },
       {
         "provision_number": "IV",
-        "title": "Third-Party Privacy Assessments",
+        "title": "Initial and Biennial Third-Party Privacy Assessments",
         "category": "assessment",
-        "summary": "Respondent must obtain initial and biennial independent third-party assessments of its privacy program for 20 years, with the initial assessment covering the first 180 days and biennial assessments every two years thereafter, to be provided to the FTC within 10 days.",
+        "summary": "Respondent must obtain initial and biennial independent third-party privacy assessments from a qualified professional with at least three years of experience in privacy and data protection, approved by the FTC, covering specified content and delivered within defined timeframes.",
         "requirements": [
           {
-            "description": "Obtain initial third-party privacy assessment covering the first 180 days after service of the order",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Part III of this order, respondent shall obtain initial and biennial assessments and reports (\"Assessments\") from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. A person qualified to prepare such Assessments shall have a minimum of three (3) years of experience in the field of privacy and data protection. All persons conducting such Assessments and preparing such reports shall be approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, in his or her sole discretion. The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the order for the initial Assessment, and (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments.",
-            "deadline": "180 days",
+            "description": "Obtain initial and biennial assessments and reports from a qualified, objective, independent third-party professional with at least three years of experience in privacy and data protection, approved by the FTC Associate Director for Enforcement. The initial assessment covers the first 180 days after service of the order; biennial assessments cover each two-year period thereafter for 20 years.",
+            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Part III of this order, respondent shall obtain initial and biennial assessments and reports (“Assessments”) from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. A person qualified to prepare such Assessments shall have a minimum of three (3) years of experience in the field of privacy and data protection. All persons conducting such Assessments and preparing such reports shall be approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, in his or her sole discretion. The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the order for the initial Assessment, and (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments. Each Assessment shall:",
+            "deadline": "initial: 180 days after service; biennial: every 2 years for 20 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 156,
+            "quote_end_line": 166
           },
           {
-            "description": "Each assessment must set forth the specific privacy controls implemented and maintained",
-            "quoted_text": "Each Assessment shall: A. set forth the specific privacy controls that respondent has implemented and maintained during the reporting period;",
+            "description": "Each assessment must: (A) set forth specific privacy controls implemented and maintained during the reporting period; (B) explain how such controls are appropriate to respondent's size, complexity, and the sensitivity of covered information; (C) explain how the privacy controls meet or exceed Part III requirements; and (D) certify that the privacy controls are operating with sufficient effectiveness to provide reasonable assurance to protect the privacy of covered information throughout the reporting period.",
+            "quoted_text": "A. set forth the specific privacy controls that respondent has implemented and maintained during the reporting period; B. explain how such privacy controls are appropriate to respondent’s size and complexity, the nature and scope of respondent’s activities, and the sensitivity of the covered information; C. explain how the privacy controls that have been implemented meet or exceed the protections required by Part III of this order; and D. certify that the privacy controls are operating with sufficient effectiveness to provide reasonable assurance to protect the privacy of covered information and that the controls have so operated throughout the reporting period.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 167,
+            "quote_end_line": 176
           },
           {
-            "description": "Each assessment must explain how privacy controls are appropriate to respondent's size, complexity, activities, and sensitivity of covered information",
-            "quoted_text": "B. explain how such privacy controls are appropriate to respondent's size and complexity, the nature and scope of respondent's activities, and the sensitivity of the covered information;",
-            "deadline": null,
+            "description": "Each assessment must be prepared and completed within sixty (60) days after the end of the reporting period to which it applies.",
+            "quoted_text": "Each Assessment shall be prepared and completed within sixty (60) days after the end of the",
+            "deadline": "60 days after end of reporting period",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 177,
+            "quote_end_line": 177
           },
           {
-            "description": "Each assessment must explain how privacy controls meet or exceed the protections required by Part III",
-            "quoted_text": "C. explain how the privacy controls that have been implemented meet or exceed the protections required by Part III of this order;",
-            "deadline": null,
+            "description": "Provide the initial assessment to the FTC Associate Director for Enforcement within ten (10) days after the assessment has been prepared. All subsequent biennial assessments shall be retained until the order is terminated and provided to the Associate Director within ten (10) days of request.",
+            "quoted_text": "reporting period to which the Assessment applies. Respondent shall provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared. All subsequent biennial Assessments shall be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request.",
+            "deadline": "10 days after preparation (initial); 10 days after request (biennial)",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Each assessment must certify that privacy controls are operating with sufficient effectiveness to protect covered information",
-            "quoted_text": "D. certify that the privacy controls are operating with sufficient effectiveness to provide reasonable assurance to protect the privacy of covered information and that the controls have so operated throughout the reporting period.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Complete each assessment within 60 days after the end of the reporting period",
-            "quoted_text": "Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
-            "deadline": "60 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Provide the initial assessment to the FTC within 10 days after preparation",
-            "quoted_text": "Respondent shall provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Retain all subsequent biennial assessments until order termination and provide to FTC within 10 days of request",
-            "quoted_text": "All subsequent biennial Assessments shall be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 178,
+            "quote_end_line": 183
           }
         ]
       },
       {
         "provision_number": "V",
-        "title": "Recordkeeping Requirements",
+        "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must maintain and make available to the FTC various records including privacy-related statements, consumer complaints, compliance documents, and assessment materials for specified retention periods.",
+        "summary": "Respondent must maintain and make available to the FTC upon request various records related to privacy statements, consumer complaints, compliance documents, and assessment materials for specified retention periods.",
         "requirements": [
           {
-            "description": "Maintain for 3 years all widely disseminated statements about privacy and confidentiality of covered information with supporting materials",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall maintain and upon request make available to the Federal Trade Commission for inspection and copying, unless respondent asserts a valid legal privilege, a print or electronic copy of: A. for a period of three (3) years from the date of preparation or dissemination, whichever is later, all widely disseminated statements that describe the extent to which respondent maintains and protects the privacy and confidentiality of any covered information, with all materials relied upon in making or disseminating such statements;",
-            "deadline": null,
+            "description": "Maintain for three (3) years from the date of preparation or dissemination all widely disseminated statements describing the extent to which respondent maintains and protects the privacy and confidentiality of covered information, with all materials relied upon in making or disseminating such statements.",
+            "quoted_text": "A. for a period of three (3) years from the date of preparation or dissemination, whichever is later, all widely disseminated statements that describe the extent to which respondent maintains and protects the privacy and confidentiality of any covered information, with all materials relied upon in making or disseminating such statements;",
+            "deadline": "3 years retention",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 191,
+            "quote_end_line": 195
           },
           {
-            "description": "Maintain for 6 months all consumer complaints alleging unauthorized collection, use, or disclosure of covered information and responses",
+            "description": "Maintain for six (6) months from the date received all consumer complaints directed at or forwarded to respondent that allege unauthorized collection, use, or disclosure of covered information and any responses to such complaints.",
             "quoted_text": "B. for a period of six (6) months from the date received, all consumer complaints directed at respondent, or forwarded to respondent by a third party, that allege unauthorized collection, use, or disclosure of covered information and any responses to such complaints;",
-            "deadline": null,
+            "deadline": "6 months retention",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 196,
+            "quote_end_line": 199
           },
           {
-            "description": "Maintain for 5 years any documents that contradict, qualify, or question compliance with the order",
-            "quoted_text": "C. for a period of five (5) years from the date received, any documents, whether prepared by or on behalf of respondent, that contradict, qualify, or call into question respondent's compliance with this order;",
-            "deadline": null,
+            "description": "Maintain for five (5) years from the date received any documents that contradict, qualify, or call into question respondent's compliance with this order.",
+            "quoted_text": "C. for a period of five (5) years from the date received, any documents, whether prepared by or on behalf of respondent, that contradict, qualify, or call into question respondent’s compliance with this order; and",
+            "deadline": "5 years retention",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 200,
+            "quote_end_line": 202
           },
           {
-            "description": "Maintain for 3 years after preparation of each assessment all materials relied upon to prepare the assessment",
+            "description": "Maintain for three (3) years after the date of preparation of each assessment required under Part III all materials relied upon to prepare the assessment, including plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments.",
             "quoted_text": "D. for a period of three (3) years after the date of preparation of each Assessment required under Part III of this order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of respondent, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, for the compliance period covered by such Assessment.",
-            "deadline": null,
+            "deadline": "3 years retention",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 203,
+            "quote_end_line": 208
           }
         ]
       },
       {
         "provision_number": "VI",
-        "title": "Order Acknowledgment and Distribution",
+        "title": "Order Acknowledgment and Delivery",
         "category": "acknowledgment",
-        "summary": "Respondent must deliver a copy of the order to current and future principals, officers, directors, managers, and employees with supervisory responsibilities relating to the subject matter of the order.",
+        "summary": "Respondent must deliver a copy of this order to all current and future principals, officers, directors, managers, and employees or agents with supervisory responsibilities related to the order's subject matter, within specified timeframes.",
         "requirements": [
           {
-            "description": "Deliver order to current personnel with supervisory responsibilities within 30 days after service of the order",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having supervisory responsibilities relating to the subject matter of this order. Respondent shall deliver this order to such current personnel within thirty (30) days after service of this order",
-            "deadline": "30 days",
+            "description": "Deliver a copy of this order to all current principals, officers, directors, managers, and employees, agents, and representatives with supervisory responsibilities relating to the subject matter of this order within thirty (30) days after service of this order.",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having supervisory responsibilities relating to the subject matter of this order. Respondent shall deliver this order to such current personnel within thirty (30) days after service of this order, and to such future personnel within thirty (30) days after the",
+            "deadline": "30 days after service of this order",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 210,
+            "quote_end_line": 214
           },
           {
-            "description": "Deliver order to future personnel within 30 days after they assume their position or responsibilities",
-            "quoted_text": "and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
-            "deadline": "30 days",
+            "description": "Deliver a copy of this order to all future principals, officers, directors, managers, and employees, agents, and representatives with supervisory responsibilities relating to the subject matter of this order within thirty (30) days after the person assumes such position or responsibilities.",
+            "quoted_text": "(30) days after service of this order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "deadline": "30 days after person assumes position",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 214,
+            "quote_end_line": 215
           }
         ]
       },
       {
         "provision_number": "VII",
-        "title": "Corporate Change Notifications",
+        "title": "Notification of Corporate Changes",
         "category": "compliance_reporting",
-        "summary": "Respondent must notify the FTC at least 30 days prior to corporate changes that may affect compliance obligations, including dissolution, mergers, subsidiary creation, bankruptcy, or changes in name or address.",
+        "summary": "Respondent must notify the FTC at least thirty days prior to any corporate change that may affect compliance obligations under this order, including dissolution, mergers, name changes, or bankruptcy filings, with notice sent by certified mail.",
         "requirements": [
           {
-            "description": "Notify the FTC at least 30 days prior to corporate changes that may affect compliance obligations",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in either corporate name or address.",
-            "deadline": "30 days",
+            "description": "Notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations, including dissolution, assignment, sale, merger, or other action resulting in a successor corporation; creation or dissolution of a subsidiary, parent, or affiliate subject to this order; proposed bankruptcy petition; or a change in corporate name or address.",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in either corporate name or address. Provided, however, that, with respect to any proposed change in the corporation about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
+            "deadline": "30 days prior to corporate change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 217,
+            "quote_end_line": 225
           },
           {
-            "description": "Notify the FTC as soon as practicable if learning of corporate changes less than 30 days before they occur",
-            "quoted_text": "Provided, however, that, with respect to any proposed change in the corporation about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
-            "deadline": "as soon as is practicable",
+            "description": "If respondent learns of a proposed change less than thirty (30) days before it is to take place, notify the Commission as soon as practicable after obtaining such knowledge. All notices must be sent by certified mail to the FTC Associate Director, Division of Enforcement, Bureau of Consumer Protection.",
+            "quoted_text": "address. Provided, however, that, with respect to any proposed change in the corporation about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge. All notices required by this Part shall be sent by certified mail to the Associate Director, Page 6 of 7 Division of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580.",
+            "deadline": "as soon as practicable",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 223,
+            "quote_end_line": 231
           }
         ]
       },
       {
         "provision_number": "VIII",
-        "title": "Compliance Reporting to FTC",
+        "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondent must file a written compliance report with the FTC within 90 days after service of the order and additional reports within 10 days of request from the FTC.",
+        "summary": "Respondent must file an initial written compliance report with the FTC within ninety days of service of the order, and submit additional written reports within ten days of written request by the FTC.",
         "requirements": [
           {
-            "description": "File a true and accurate written report detailing compliance with the order within 90 days after service",
+            "description": "Within ninety (90) days after the date of service of this order, file with the Commission a true and accurate written report setting forth in detail the manner and form in which respondent has complied with this order.",
             "quoted_text": "IT IS FURTHER ORDERED that respondent shall, within ninety (90) days after the date of service of this order file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form in which respondent has complied with this order.",
-            "deadline": "90 days",
+            "deadline": "90 days after service of this order",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 233,
+            "quote_end_line": 235
           },
           {
-            "description": "Submit additional written compliance reports within 10 days of written notice from the FTC",
+            "description": "Within ten (10) days of receipt of written notice from a Commission representative, submit additional true and accurate written reports.",
             "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, respondent shall submit additional true and accurate written reports.",
-            "deadline": "10 days",
+            "deadline": "10 days after written notice",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 236,
+            "quote_end_line": 237
           }
         ]
       },
@@ -363,21 +403,23 @@
         "provision_number": "IX",
         "title": "Order Duration and Termination",
         "category": "duration",
-        "summary": "The order will terminate on October 13, 2031, or 20 years from the most recent date the United States or FTC files a complaint alleging violation of the order, whichever comes later.",
+        "summary": "This order terminates on October 13, 2031, or twenty years from the most recent date the FTC or United States files a complaint alleging a violation of the order in federal court, whichever is later, subject to specified exceptions.",
         "requirements": [
           {
-            "description": "Order remains in effect until termination date",
+            "description": "The order will terminate on October 13, 2031, or twenty (20) years from the most recent date the United States or the Commission files a complaint in federal court alleging any violation of the order, whichever comes later, subject to exceptions for parts that terminate in fewer than twenty years and for complaints filed after the order has already terminated.",
             "quoted_text": "This order will terminate on October 13, 2031, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Part in this order that terminates in fewer than twenty (20) years; B. this order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order as to such respondent will terminate according to this Part as though the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
-            "deadline": null,
+            "deadline": "October 13, 2031 or 20 years from most recent enforcement complaint",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 239,
+            "quote_end_line": 251
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This order will terminate on October 13, 2031, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later"
+      "termination_text": "This order will terminate on October 13, 2031, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Part in this order that terminates in fewer than twenty (20) years; B. this order if such complaint is filed after the order has terminated pursuant to this Part."
     }
   },
   "metadata": {
@@ -390,8 +432,30 @@
       "complaint_representations": 5,
       "order_provisions": 9,
       "order_definitions": 6,
-      "order_requirements": 29
+      "order_requirements": 25,
+      "provisions_per_section": {
+        "I": 2,
+        "II": 2,
+        "III": 6,
+        "IV": 4,
+        "V": 4,
+        "VI": 2,
+        "VII": 2,
+        "VIII": 2,
+        "IX": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 5,
+        "complaint_total": 5,
+        "order_verified": 25,
+        "order_total": 25
+      }
     },
-    "processing_time_seconds": 136.6
+    "processing_time_seconds": 123.3
   }
 }

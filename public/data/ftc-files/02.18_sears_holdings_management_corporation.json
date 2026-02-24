@@ -6,7 +6,7 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "3333 Beverly Road, Hoffman Estates, Illinois 60179",
-      "business_description": "Sears Holdings Management Corporation is a subsidiary of Sears Holdings Corporation that handles marketing operations for the Sears Roebuck and Kmart retail stores, and operates the sears.com and kmart.com retail Internet websites."
+      "business_description": "Sears Holdings Management Corporation is a subsidiary of Sears Holdings Corporation that handles marketing operations for the Sears Roebuck and Kmart retail stores and operates the sears.com and kmart.com retail Internet websites."
     },
     "commissioners": [
       "Jon Leibowitz, Chairman",
@@ -23,48 +23,98 @@
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/082-3099-c-4264-sears-holdings-management-corporation-corporation-matter"
   },
   "complaint": {
-    "factual_background": "Sears Holdings Management Corporation distributed software through its \"My SHC Community\" program that tracked nearly all Internet behavior on consumers' computers, including secure sessions, online banking, email headers, and other sensitive activities. The company failed to adequately disclose the extensive scope of the tracking, representing it only as tracking \"online browsing\" while burying detailed disclosures deep within a lengthy user agreement that most consumers would not read.",
+    "factual_background": "Sears Holdings Management Corporation (SHMC) operated a 'My SHC Community' market research program from approximately April 2007 through January 2008, in which it invited consumers to download and install a software application onto their computers. The invitations described the software as simply tracking consumers' 'online browsing' and emphasized community engagement and voluntary participation. However, once installed, the application ran silently in the background with no visible icon and transmitted nearly all Internet activity on the consumer's computer — including secure session data such as online banking statements, drug prescription records, video rental histories, library borrowing histories, and web-based email headers — to SHMC's remote servers. The full scope of the application's data collection was buried approximately 75 lines deep in a scroll box within a lengthy Privacy Statement and User License Agreement, and was never prominently disclosed at any earlier stage of the sign-up process.",
     "representations_made": [
       {
-        "description": "The Application would track consumers' online browsing",
-        "quoted_text": "Through the means described in paragraphs 3-12, respondent has represented, expressly or by implication, that the Application would track consumers' 'online browsing.'",
-        "source_paragraph": 13
+        "description": "The invitation email described the software as research software that would 'confidentially track your online browsing,' implying limited and non-sensitive data collection",
+        "quoted_text": "to know you better. You’ll also be asked to take a few minutes to download software that is powered by (VoiceFive). This research software will confidentially track your online browsing. This will help us better understand you and your needs, enabling us to create more relevant future offerings for you, other community members, and eventually all shoppers. You can uninstall the software at any time through the Add/Remove program utility on your computer.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 6,
+        "quote_start_line": 80,
+        "quote_end_line": 85
+      },
+      {
+        "description": "The initial pop-up box invited consumers to join 'My SHC Community' without any mention of the application or its tracking capabilities",
+        "quoted_text": "Ever wish you could talk directly to a retailer? Tell them about the products, services and offers that would really be right for you? If you’re interested in becoming part of something new, something different, we’d like to invite you to become a member of My SHC Community. My SHC Community, sponsored by Sears Holdings Corporation, is a dynamic and highly interactive on-line community. It’s a place where your voice is heard and your opinion matters, and what you want and need counts! The pop-up box made no mention of the Application. Likewise, the general “Privacy Policy” statement accessed via the hyperlink in the pop-up box did not mention the Application.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 5,
+        "quote_start_line": 46,
+        "quote_end_line": 54
+      },
+      {
+        "description": "The landing page restated representations about community interactions and membership benefits without mentioning the application",
+        "quoted_text": "7. Consumers who clicked on the “Join Today!” button in the email invitation were directed to a landing page (Exhibit C) that restated many of the aforementioned representations about the potential interactions between members and the “community” and about the putative benefits of membership. The landing page did not mention the Application.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 7,
+        "quote_start_line": 102,
+        "quote_end_line": 105
+      },
+      {
+        "description": "Through all means described, respondent represented expressly or by implication that the application would only track consumers' 'online browsing,' while failing to disclose the full scope of monitoring and transmission",
+        "quoted_text": "13. Through the means described in paragraphs 3-12, respondent has represented, expressly or by implication, that the Application would track consumers’ “online browsing.” Respondent failed to disclose adequately that the software application, when installed, would: monitor nearly all of the Internet behavior that occurs on consumers’ computers, including information exchanged between consumers and websites other than those owned, operated, or affiliated with respondent, information provided in secure sessions when interacting with third-party websites, shopping carts, and online accounts, and headers of web-based email; track certain non-Internet- related activities taking place on those computers; and transmit nearly all of the monitored information (excluding selected categories of filtered information) to respondent’s remote computer servers. These facts would be material to consumers in deciding to install the software. Respondent’s failure to disclose these facts, in light of the representations made, was, and is, a deceptive practice.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 13,
+        "quote_start_line": 178,
+        "quote_end_line": 189
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Failure to Disclose Tracking Scope",
-        "representation": "The Application would track consumers' 'online browsing'",
-        "fact": "Respondent failed to disclose adequately that the software application, when installed, would: monitor nearly all of the Internet behavior that occurs on consumers' computers, including information exchanged between consumers and websites other than those owned, operated, or affiliated with respondent, information provided in secure sessions when interacting with third-party websites, shopping carts, and online accounts, and headers of web-based email; track certain non-Internet-related activities taking place on those computers; and transmit nearly all of the monitored information (excluding selected categories of filtered information) to respondent's remote computer servers. These facts would be material to consumers in deciding to install the software.",
-        "conclusion": "Respondent's failure to disclose these facts, in light of the representations made, was, and is, a deceptive practice."
+        "title": "Deceptive Failure to Disclose Scope of Tracking Software",
+        "representation": "Respondent represented, expressly or by implication, that the application would track consumers' 'online browsing,' suggesting a limited form of data collection, while describing the program as a voluntary community engagement opportunity",
+        "fact": "The application, when installed, monitored nearly all Internet behavior on consumers' computers — including information exchanged during secure sessions with third-party websites, online banking statements, drug prescription records, video rental transactions, library borrowing histories, and headers of web-based email messages — and transmitted nearly all of that monitored information to respondent's remote servers; none of this was adequately disclosed before installation",
+        "conclusion": "Respondent's failure to disclose these facts, in light of the representations made, was, and is, a deceptive practice in violation of Section 5(a) of the Federal Trade Commission Act."
       }
     ]
   },
   "order": {
     "definitions": {
-      "Tracking Application": "any software program or application disseminated by or on behalf of respondent, its subsidiaries or affiliated companies, that is capable of being installed on consumers' computers and used by or on behalf of respondent to monitor, record, or transmit information about activities occurring on computers on which it is installed, or about data that is stored on, created on, transmitted from, or transmitted to the computers on which it is installed, unless the information monitored, recorded, or transmitted is limited solely to the following: (a) the configuration of the software program or application itself; (b) information regarding whether the software program or application is functioning as represented; or (c) information regarding consumers' use of the program or application itself."
+      "Tracking Application": "\"Tracking Application\" shall mean any software program or application disseminated by or on behalf of respondent, its subsidiaries or affiliated companies, that is capable of being installed on consumers' computers and used by or on behalf of respondent to monitor, record, or transmit information about activities occurring on computers on which it is installed, or about data that is stored on, created on, transmitted from, or transmitted to the computers on which it is installed, unless the information monitored, recorded, or transmitted is limited solely to the following: (a) the configuration of the software program or application itself; (b) information regarding whether the software program or application is functioning as represented; or (c) information regarding consumers' use of the program or application itself."
     },
     "provisions": [
       {
-        "provision_number": "N/A",
-        "title": "Order Reopening and Modification",
+        "provision_number": "1",
+        "title": "Reopening of Matter",
         "category": "acknowledgment",
-        "summary": "This is a 2018 modification order that reopens and modifies the definition of 'Tracking Application' in the original 2009 order.",
+        "summary": "The Commission orders the matter reopened pursuant to Section 5(b) of the FTC Act and the Commission's Rules of Practice.",
         "requirements": [
           {
-            "description": "Modify the definition of Tracking Application",
-            "quoted_text": "IT IS FURTHER ORDERED that the definition of 'Tracking Application' be, and it hereby is, revised to read: 4. 'Tracking Application' shall mean any software program or application disseminated by or on behalf of respondent, its subsidiaries or affiliated companies, that is capable of being installed on consumers' computers and used by or on behalf of respondent to monitor, record, or transmit information about activities occurring on computers on which it is installed, or about data that is stored on, created on, transmitted from, or transmitted to the computers on which it is installed, unless the information monitored, recorded, or transmitted is limited solely to the following: (a) the configuration of the software program or application itself; (b) information regarding whether the software program or application is functioning as represented; or (c) information regarding consumers' use of the program or application itself.",
+            "description": "The matter is ordered reopened by the Commission",
+            "quoted_text": "IT IS ORDERED that this matter be, and it hereby is, reopened; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 342,
+            "quote_end_line": 342
+          }
+        ]
+      },
+      {
+        "provision_number": "2",
+        "title": "Modification of 'Tracking Application' Definition",
+        "category": "affirmative_obligation",
+        "summary": "The definition of 'Tracking Application' in the original 2009 Order (Docket No. C-4264) is revised to exclude software that monitors, records, or transmits only: (a) its own configuration, (b) information about whether it is functioning as represented, or (c) information about consumers' use of the program or application itself.",
+        "requirements": [
+          {
+            "description": "The definition of 'Tracking Application' is revised to add three exclusions for consumer-expected tracking: (a) software configuration, (b) functionality verification, and (c) consumers' use of the program or application itself",
+            "quoted_text": "IT IS FURTHER ORDERED that the definition of “Tracking Application” be, and it hereby is, revised to read: 4. “Tracking Application” shall mean any software program or application disseminated by or on behalf of respondent, its subsidiaries or affiliated companies, that is capable of being installed on consumers’ computers and used by or on behalf of respondent to monitor, record, or transmit information about activities occurring on computers on which it is installed, or about data that is stored on, created on, transmitted 23 Comment of Consumers Union et al. at 12. 24 Commenter Chris Hoofnagle appears to express concern about modifying the Order to exclude mobile applications completely. The Commission agrees with this concern, but believes the proposed modifications are a technology-neutral way to ensure that the Order’s requirements apply similarly to websites and mobile applications. The modified Order would still apply to mobile applications that tracked consumers in unexpected ways. 9 from, or transmitted to the computers on which it is installed, unless the information monitored, recorded, or transmitted is limited solely to the following: (a) the configuration of the software program or application itself; (b) information regarding whether the software program or application is functioning as represented; or (c) information regarding consumers’ use of the program or application itself.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 343,
+            "quote_end_line": 363
           }
         ]
       }
     ],
     "duration": {
       "duration_years": null,
-      "termination_text": "Not included in this modification order document"
+      "termination_text": "No duration or termination clause is present in this Order Reopening and Modifying Order. Duration is governed by the original Decision and Order issued August 31, 2009 (Docket No. C-4264), which is not reproduced in this document."
     }
   },
   "metadata": {
@@ -74,11 +124,26 @@
     },
     "extraction_stats": {
       "complaint_counts": 1,
-      "complaint_representations": 1,
-      "order_provisions": 1,
+      "complaint_representations": 4,
+      "order_provisions": 2,
       "order_definitions": 1,
-      "order_requirements": 1
+      "order_requirements": 2,
+      "provisions_per_section": {
+        "1": 1,
+        "2": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 1
+      },
+      "verification_details": {
+        "complaint_verified": 4,
+        "complaint_total": 4,
+        "order_verified": 2,
+        "order_total": 2
+      }
     },
-    "processing_time_seconds": 47.5
+    "processing_time_seconds": 81.5
   }
 }

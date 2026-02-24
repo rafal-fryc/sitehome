@@ -6,7 +6,7 @@
       "incorporation_state": "Delaware",
       "entity_type": "limited liability company",
       "address": "1205 Ponderosa Drive, Moscow, ID 83843",
-      "business_description": "Goldenshores Technologies developed and distributed the Brightest Flashlight Free mobile application for Google's Android operating system. The application purportedly activates device lights including the LED camera flash to provide illumination, but also transmits user device data including precise geolocation and persistent device identifiers to third parties and advertising networks."
+      "business_description": "Goldenshores Technologies, LLC developed and distributed mobile applications for Android operating systems, including the Brightest Flashlight Free application which activates device lights to provide illumination."
     },
     "commissioners": [
       "Edith Ramirez, Chairwoman",
@@ -23,32 +23,49 @@
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/132-3087-goldenshores-technologies-llc-erik-m-geidl-matter"
   },
   "complaint": {
-    "factual_background": "Goldenshores Technologies distributed the \"Brightest Flashlight Free\" mobile app, which was downloaded tens of millions of times. The company's privacy policy and EULA stated they would collect device data to provide software updates and product support in a form that does not personally identify users. In reality, the app transmitted users' precise geolocation and persistent device identifiers to third-party advertising networks without adequate disclosure. The app also began transmitting this data immediately upon launch, even before users accepted or refused the EULA terms, despite representing that users could refuse data collection.",
+    "factual_background": "Goldenshores Technologies, LLC and Erik M. Geidl developed and distributed the 'Brightest Flashlight Free' mobile application, which was downloaded tens of millions of times. While the app claimed to collect device data only for software updates and support, it actually transmitted users' precise geolocation and persistent device identifiers to third-party advertising networks without adequate disclosure. Additionally, the app began transmitting this data immediately upon launch, even before users accepted or refused the End-User License Agreement.",
     "representations_made": [
       {
-        "description": "Claimed to collect device data only to provide software updates, product support, and verify compliance, and only in a form that does not personally identify users",
+        "description": "Respondents may periodically collect, maintain, process and use diagnostic and technical information to facilitate software updates, product support and other services, and to verify compliance with the license terms",
         "quoted_text": "Consent to Use of Data. Goldenshores Technologies and its subsidiaries and agents may collect, maintain, process and use diagnostic, technical and related information, including but not limited to information about your computer, system and application software, and peripherals, that is gathered periodically to facilitate the provision of software updates, product support and other services to you (if any) related to the Goldenshores Technologies Software, and to verify compliance with the terms of the License. Goldenshores Technologies may use this information, as long as it is in a form that does not personally identify you, to improve our products or to provide services or technologies to you.",
-        "source_paragraph": 9
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 74,
+        "quote_end_line": 82
       },
       {
-        "description": "Represented that users could refuse the EULA terms, including data collection terms, and thereby prevent the app from collecting their device data",
-        "quoted_text": "[R]ead this software license agreement (\"license\") carefully before using the Goldenshores Technologies Software. By using the Goldenshores Technologies software, you are agreeing to be bound by the terms of this license. If you do not agree to the terms of this license, do not install and/or use the software.",
-        "source_paragraph": 11
+        "description": "The same representation was reiterated in the EULA regarding consent to use of data for software updates, product support, and license compliance verification",
+        "quoted_text": "3. Consent to Use of Data. You agree that Goldenshores Technologies and its subsidiaries and agents may collect, maintain, process and use diagnostic, technical and related information, including but not limited to information about your computer, system and application software, and peripherals, that is gathered periodically to facilitate the provision of software updates, product support and other services to you (if any) related to the Goldenshores Technologies Software, and to verify compliance with the terms of this License. Goldenshores Technologies may use this information, as long as it is in a form that does not personally identify you, to improve our products or to provide services or technologies to you.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 12,
+        "quote_start_line": 107,
+        "quote_end_line": 116
+      },
+      {
+        "description": "Users must accept or refuse the EULA and could refuse the terms relating to collection and use of device data",
+        "quoted_text": "[R]ead this software license agreement (“license”) carefully before using the Goldenshores Technologies Software. By using the Goldenshores Technologies software, you are agreeing to be bound by the terms of this license. If you do not agree to the terms of this license, do not install and/or use the software. (Exhibit C, screens 4-5) The Brightest Flashlight EULA also represents that users must “Accept” or “Refuse” the EULA by selecting the appropriate button. (Exhibit C) Those buttons appear at the bottom of each screen displaying the EULA.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 11,
+        "quote_start_line": 94,
+        "quote_end_line": 101
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Deceptive Failure to Disclose Data Sharing with Third Parties",
-        "representation": "Respondents represented they may periodically collect, maintain, process, and use information from users' mobile devices to provide software updates, product support, and other services related to the app, and to verify compliance with the EULA",
-        "fact": "Respondents failed to disclose or adequately disclose that the Brightest Flashlight App transmits, or allows the transmission of, users' devices' precise geolocation along with persistent device identifiers to various third parties, including third party advertising networks",
+        "title": "Failure to Disclose Data Sharing with Third Parties",
+        "representation": "Respondents may periodically collect, maintain, process, and use information from users' mobile devices to provide software updates, product support, and other services to users related to the Brightest Flashlight App, and to verify users' compliance with respondents' EULA",
+        "fact": "When users run the Brightest Flashlight App, the application transmits, or allows the transmission of, their devices' precise geolocation along with persistent device identifiers to various third parties, including third party advertising networks. Respondents failed to disclose or adequately disclose this fact.",
         "conclusion": "The failure to disclose, or adequately disclose, these facts, in light of the representation made, was, and is, a deceptive practice."
       },
       {
         "count_number": 2,
-        "title": "False Representation About User Control Over Data Collection",
-        "representation": "Respondents represented that consumers have the option to refuse the terms of the Brightest Flashlight EULA, including those relating to the collection and use of device data, and thereby prevent the Brightest Flashlight App from ever collecting or using their device's data",
-        "fact": "Consumers cannot prevent the Brightest Flashlight App from ever collecting or using their device's data. Regardless of whether consumers accept or refuse the terms of the EULA, the Brightest Flashlight App transmits, or causes the transmission of, device data as soon as the consumer launches the application and before they have chosen to accept or refuse the terms of the EULA",
+        "title": "False Choice to Refuse Data Collection",
+        "representation": "Consumers have the option to refuse the terms of the Brightest Flashlight EULA, including those relating to the collection and use of device data, and thereby prevent the Brightest Flashlight App from ever collecting or using their device's data",
+        "fact": "Consumers cannot prevent the Brightest Flashlight App from ever collecting or using their device's data. Regardless of whether consumers accept or refuse the terms of the EULA, the Brightest Flashlight App transmits, or causes the transmission of, device data as soon as the consumer launches the application and before they have chosen to accept or refuse the terms of the Brightest Flashlight EULA.",
         "conclusion": "Therefore, the representation set forth in Paragraph 16 was, and is, false or misleading."
       }
     ]
@@ -70,60 +87,74 @@
         "requirements": [
           {
             "description": "Must not misrepresent the extent to which Covered Information is collected, used, disclosed, or shared",
-            "quoted_text": "IT IS ORDERED that respondents and their officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, or other device, in connection with the advertising, promotion, offering for sale, sale, or dissemination of any product or service, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication: A. The extent to which Covered Information is collected, used, disclosed, or shared",
+            "quoted_text": "IT IS ORDERED that respondents and their officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, or other device, in connection with the advertising, promotion, offering for sale, sale, or dissemination of any product or service, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication: A. The extent to which Covered Information is collected, used, disclosed, or shared; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 98,
+            "quote_end_line": 104
           },
           {
             "description": "Must not misrepresent the extent to which users may exercise control over the collection, use, disclosure, or sharing of Covered Information",
-            "quoted_text": "IT IS ORDERED that respondents and their officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, or other device, in connection with the advertising, promotion, offering for sale, sale, or dissemination of any product or service, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication: B. The extent to which users may exercise control over the collection, use, disclosure, or sharing of Covered Information collected from or about them, their computers or devices, or their online activities.",
+            "quoted_text": "B. The extent to which users may exercise control over the collection, use, disclosure, or sharing of Covered Information collected from or about them, their computers or devices, or their online activities.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 105,
+            "quote_end_line": 107
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Geolocation Information Disclosure and Consent Requirements",
+        "title": "Geolocation Information Collection Requirements",
         "category": "affirmative_obligation",
-        "summary": "Respondents must clearly and prominently disclose geolocation data collection practices on a separate screen and obtain affirmative express consent before collecting or transmitting geolocation information.",
+        "summary": "Respondents must provide clear and prominent disclosures and obtain affirmative express consent before collecting, transmitting, or allowing transmission of geolocation information from mobile applications.",
         "requirements": [
           {
             "description": "Clearly and prominently disclose, immediately prior to initial collection and on a separate screen, that the application collects geolocation information",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents and their officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, or other device, in connection with the advertising, promotion, offering for sale, sale, or dissemination of any mobile application that collects, transmits, or allows the transmission of geolocation information, in or affecting commerce, shall not collect, transmit, or allow the transmission of such information unless such application: A. Clearly and prominently, immediately prior to the initial collection of or transmission of such information, and on a separate screen from, any final \"end user license agreement,\" \"privacy policy,\" \"terms of use\" page, or similar document, discloses to the consumer the following: 1. That such application collects, transmits, or allows the transmission of, geolocation information",
+            "quoted_text": "A. Clearly and prominently, immediately prior to the initial collection of or transmission of such information, and on a separate screen from, any final “end user license agreement,” “privacy policy,” “terms of use” page, or similar document, discloses to the consumer the following: 1. That such application collects, transmits, or allows the transmission of, geolocation information;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 118,
+            "quote_end_line": 123
           },
           {
-            "description": "Disclose how geolocation information may be used",
-            "quoted_text": "A. Clearly and prominently, immediately prior to the initial collection of or transmission of such information, and on a separate screen from, any final \"end user license agreement,\" \"privacy policy,\" \"terms of use\" page, or similar document, discloses to the consumer the following: 2. How geolocation information may be used",
+            "description": "Clearly and prominently disclose how geolocation information may be used",
+            "quoted_text": "2. How geolocation information may be used;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 124,
+            "quote_end_line": 124
           },
           {
-            "description": "Disclose why the application is accessing geolocation information",
-            "quoted_text": "A. Clearly and prominently, immediately prior to the initial collection of or transmission of such information, and on a separate screen from, any final \"end user license agreement,\" \"privacy policy,\" \"terms of use\" page, or similar document, discloses to the consumer the following: 3. Why such application is accessing geolocation information",
+            "description": "Clearly and prominently disclose why the application is accessing geolocation information",
+            "quoted_text": "3. Why such application is accessing geolocation information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 125,
+            "quote_end_line": 125
           },
           {
-            "description": "Disclose the identity or specific categories of third parties that receive geolocation information",
-            "quoted_text": "A. Clearly and prominently, immediately prior to the initial collection of or transmission of such information, and on a separate screen from, any final \"end user license agreement,\" \"privacy policy,\" \"terms of use\" page, or similar document, discloses to the consumer the following: 4. The identity or specific categories of third parties that receive geolocation information directly or indirectly from such application",
+            "description": "Clearly and prominently disclose the identity or specific categories of third parties that receive geolocation information",
+            "quoted_text": "4. The identity or specific categories of third parties that receive geolocation information directly or indirectly from such application; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 126,
+            "quote_end_line": 127
           },
           {
             "description": "Obtain affirmative express consent from the consumer to the transmission of geolocation information",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents and their officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, or other device, in connection with the advertising, promotion, offering for sale, sale, or dissemination of any mobile application that collects, transmits, or allows the transmission of geolocation information, in or affecting commerce, shall not collect, transmit, or allow the transmission of such information unless such application: B. Obtains affirmative express consent from the consumer to the transmission of such information.",
+            "quoted_text": "B. Obtains affirmative express consent from the consumer to the transmission of such information.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 128,
+            "quote_end_line": 129
           }
         ]
       },
@@ -131,14 +162,16 @@
         "provision_number": "III",
         "title": "Data Deletion Requirement",
         "category": "affirmative_obligation",
-        "summary": "Respondents must delete all Covered Information relating to Affected Consumers collected prior to the order's entry date.",
+        "summary": "Respondents must delete all Covered Information relating to Affected Consumers that was collected prior to the order's entry date.",
         "requirements": [
           {
-            "description": "Delete all Covered Information relating to Affected Consumers that was collected prior to the order's entry date",
+            "description": "Delete all Covered Information relating to Affected Consumers that is within respondents' possession, custody, or control and was collected prior to the order's entry date",
             "quoted_text": "IT IS FURTHER ORDERED that respondents, within ten (10) days from the date of entry of this Order, shall delete all Covered Information relating to Affected Consumers that is within their possession, custody, or control and was collected at any time prior to the date of entry of this Order.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 131,
+            "quote_end_line": 134
           }
         ]
       },
@@ -146,101 +179,112 @@
         "provision_number": "IV",
         "title": "Recordkeeping Requirements",
         "category": "recordkeeping",
-        "summary": "Respondents must maintain and make available to the FTC for five years all advertisements, promotional materials, complaints, and documents demonstrating compliance with the order.",
+        "summary": "Respondents must maintain and make available to the FTC various documents including advertisements, promotional materials, complaints, and compliance documentation for five years.",
         "requirements": [
           {
             "description": "Maintain and make available all advertisements and promotional materials containing any representation covered by the order",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents shall, for five (5) years from the entry of this order or from the date of preparation, whichever is later, maintain and upon request make available to the Federal Trade Commission for inspection and copying: A. All advertisements and promotional materials containing any representation covered by this order, including but not limited to respondents' terms of use, end-user license agreements, frequently asked questions, privacy policies, and other documents publicly disseminated relating to: (a) the collection of data; (b) the use, disclosure or sharing of such data; and (c) opt-out practices and other mechanisms to limit or prevent such collection of data or the use, disclosure, or sharing of data",
-            "deadline": "5 years",
+            "quoted_text": "IT IS FURTHER ORDERED that respondents shall, for five (5) years from the entry of this order or from the date of preparation, whichever is later, maintain and upon request make available to the Federal Trade Commission for inspection and copying: A. All advertisements and promotional materials containing any representation covered by this order, including but not limited to respondents’ terms of use, end- user license agreements, frequently asked questions, privacy policies, and other documents publicly disseminated relating to: (a) the collection of data; (b) the use, disclosure or sharing of such data; and (c) opt-out practices and other mechanisms Page 4 of 7 to limit or prevent such collection of data or the use, disclosure, or sharing of data;",
+            "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 136,
+            "quote_end_line": 148
           },
           {
-            "description": "Maintain all materials relied upon in disseminating any representation covered by the order",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents shall, for five (5) years from the entry of this order or from the date of preparation, whichever is later, maintain and upon request make available to the Federal Trade Commission for inspection and copying: B. All materials that were relied upon in disseminating any representation covered by this order",
-            "deadline": "5 years",
+            "description": "Maintain and make available all materials relied upon in disseminating any representation covered by the order",
+            "quoted_text": "B. All materials that were relied upon in disseminating any representation covered by this order;",
+            "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 149,
+            "quote_end_line": 150
           },
           {
-            "description": "Maintain complaints or inquiries relating to any Covered Application and responses to those complaints or inquiries",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents shall, for five (5) years from the entry of this order or from the date of preparation, whichever is later, maintain and upon request make available to the Federal Trade Commission for inspection and copying: C. Complaints or inquiries relating to any Covered Application, and any responses to those complaints or inquiries",
-            "deadline": "5 years",
+            "description": "Maintain and make available complaints or inquiries relating to any Covered Application and responses to those complaints or inquiries",
+            "quoted_text": "C. Complaints or inquiries relating to any Covered Application, and any responses to those complaints or inquiries; and",
+            "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 151,
+            "quote_end_line": 152
           },
           {
-            "description": "Maintain documents sufficient to demonstrate compliance with each provision of the order",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents shall, for five (5) years from the entry of this order or from the date of preparation, whichever is later, maintain and upon request make available to the Federal Trade Commission for inspection and copying: D. Documents that are sufficient to demonstrate compliance with each provision of this order.",
-            "deadline": "5 years",
+            "description": "Maintain and make available documents sufficient to demonstrate compliance with each provision of the order",
+            "quoted_text": "D. Documents that are sufficient to demonstrate compliance with each provision of this order.",
+            "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 153,
+            "quote_end_line": 154
           }
         ]
       },
       {
         "provision_number": "V",
-        "title": "Order Distribution and Acknowledgment",
+        "title": "Order Acknowledgment Requirements",
         "category": "acknowledgment",
-        "summary": "Respondents must deliver a copy of the order to all current and future personnel with relevant responsibilities and obtain signed acknowledgments of receipt.",
+        "summary": "Respondents must deliver a copy of the order to relevant personnel and obtain signed acknowledgments of receipt for five years.",
         "requirements": [
           {
-            "description": "Deliver a copy of the order to all current and future principals, officers, directors, managers, employees, agents, and representatives with relevant responsibilities for five years",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents shall for five (5) years from the entry of this order deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having responsibilities with respect to the subject matter of this order, and shall secure from each such person a signed and dated statement acknowledging receipt of the order.",
-            "deadline": "5 years",
+            "description": "Deliver a copy of the order to all current and future principals, officers, directors, managers, employees, agents, and representatives having responsibilities with respect to the subject matter of the order, and secure signed and dated acknowledgment statements",
+            "quoted_text": "IT IS FURTHER ORDERED that respondents shall for five (5) years from the entry of this order deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having responsibilities with respect to the subject matter of this order, and shall secure from each such person a signed and dated statement acknowledging receipt of the order. Respondents shall",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 156,
+            "quote_end_line": 160
           },
           {
-            "description": "Deliver the order to current personnel within thirty days after service of the order",
-            "quoted_text": "Respondents shall deliver this order to current personnel within thirty (30) days after the date of service of this order",
+            "description": "Deliver the order to current personnel within thirty days after the date of service of the order",
+            "quoted_text": "deliver this order to current personnel within thirty (30) days after the date of service of this order, and to future personnel within thirty (30) days after the person assumes such position or",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 161,
+            "quote_end_line": 162
           },
           {
-            "description": "Deliver the order to future personnel within thirty days after they assume relevant positions or responsibilities",
-            "quoted_text": "Respondents shall deliver this order to future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "description": "Deliver the order to future personnel within thirty days after the person assumes such position or responsibilities",
+            "quoted_text": "order, and to future personnel within thirty (30) days after the person assumes such position or responsibilities.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.8942857142857144
+            "confidence": 1.0,
+            "quote_start_line": 162,
+            "quote_end_line": 163
           }
         ]
       },
       {
         "provision_number": "VI",
-        "title": "Corporate Change Notification for Goldenshores Technologies",
+        "title": "Corporate Change Notification (Goldenshores Technologies, LLC)",
         "category": "compliance_reporting",
-        "summary": "Goldenshores Technologies must notify the Commission at least thirty days prior to any corporate change that may affect compliance obligations.",
+        "summary": "Goldenshores Technologies, LLC must notify the Commission at least thirty days prior to any corporate change that may affect compliance obligations.",
         "requirements": [
           {
-            "description": "Notify the Commission at least thirty days prior to any corporate change affecting compliance obligations",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent Goldenshores Technologies, LLC, and its successors and assigns, shall notify the Commission at least thirty (30) days prior to any change in the corporation(s) that may affect compliance obligations arising under this order, including but not limited to: a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address.",
+            "description": "Notify the Commission at least thirty days prior to any change in the corporation that may affect compliance obligations, including dissolution, assignment, sale, merger, successor corporation, subsidiary creation/dissolution, bankruptcy filing, or change in corporate name or address",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent Goldenshores Technologies, LLC, and its successors and assigns, shall notify the Commission at least thirty (30) days prior to any change in the corporation(s) that may affect compliance obligations arising under this order, including but not limited to: a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address. Provided, however, that, with respect to any proposed change in the corporation about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge. Unless otherwise directed by a representative of the Commission in writing, all notices required by this Part shall be emailed to Debrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: In the Matter of Goldenshores Technologies, LLC, File No. 132-3087.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "If learning of a corporate change less than thirty days before it occurs, notify the Commission as soon as practicable",
-            "quoted_text": "Provided, however, that, with respect to any proposed change in the corporation about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 165,
+            "quote_end_line": 179
           }
         ]
       },
       {
         "provision_number": "VII",
-        "title": "Individual Employment Change Notification for Erik M. Geidl",
+        "title": "Individual Employment Change Notification (Erik M. Geidl)",
         "category": "compliance_reporting",
-        "summary": "Erik M. Geidl must notify the Commission for ten years of any discontinuance of current business or employment, or affiliation with any new business or employment.",
+        "summary": "Erik M. Geidl must notify the Commission of discontinuance of current business or employment, or affiliation with any new business or employment, for ten years.",
         "requirements": [
           {
-            "description": "Notify the Commission of discontinuance of current business or employment, or affiliation with new business or employment, for ten years after the order's issuance",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent Erik M. Geidl, for a period of ten (10) years after the date of issuance of this order, shall notify the Commission of the discontinuance of his current business or employment, or of his affiliation with any new business or employment. The notice shall include respondent's new business address and telephone number and a description of the nature of the business or employment and his duties and responsibilities.",
-            "deadline": "10 years",
+            "description": "Notify the Commission of discontinuance of current business or employment, or affiliation with any new business or employment, including new business address, telephone number, nature of business or employment, and duties and responsibilities",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent Erik M. Geidl, for a period of ten (10) years after the date of issuance of this order, shall notify the Commission of the discontinuance of his current business or employment, or of his affiliation with any new business or employment. The notice shall include respondent’s new business address and telephone number and a description of the nature of the business or employment and his duties and responsibilities. Unless otherwise directed by a representative of the Commission in writing, all notices required by this Part shall be emailed to Debrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: In the Matter of Goldenshores Technologies, LLC, File No. 132-3087.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 184,
+            "quote_end_line": 193
           }
         ]
       },
@@ -248,21 +292,25 @@
         "provision_number": "VIII",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondents must file an initial compliance report within sixty days and submit additional reports upon request.",
+        "summary": "Respondents must file compliance reports with the Commission within sixty days and upon request.",
         "requirements": [
           {
-            "description": "File a true and accurate compliance report within sixty days after service of the order",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents, within sixty (60) days after the date of service of this order, shall each file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of their own compliance with this order.",
+            "description": "File a true and accurate report with the Commission setting forth in detail the manner and form of compliance with the order",
+            "quoted_text": "IT IS FURTHER ORDERED that respondents, within sixty (60) days after the date of service of this order, shall each file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of their own compliance with this order. Within ten",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 195,
+            "quote_end_line": 197
           },
           {
-            "description": "Submit additional true and accurate written reports within ten days of receipt of written notice from the Commission",
-            "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, they shall submit additional true and accurate written reports.",
+            "description": "Submit additional true and accurate written reports within ten days of receipt of written notice from a Commissionrepresentative",
+            "quoted_text": "setting forth in detail the manner and form of their own compliance with this order. Within ten (10) days of receipt of written notice from a representative of the Commission, they shall submit additional true and accurate written reports.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 197,
+            "quote_end_line": 199
           }
         ]
       },
@@ -270,14 +318,16 @@
         "provision_number": "IX",
         "title": "Order Duration and Termination",
         "category": "duration",
-        "summary": "The order will terminate on March 31, 2034, or twenty years from the most recent date the FTC files a complaint in federal court alleging violation of the order, whichever comes later.",
+        "summary": "The order will terminate on March 31, 2034, or twenty years from the most recent date that a federal complaint alleging violation of the order is filed, whichever comes later.",
         "requirements": [
           {
-            "description": "Order remains in effect until the specified termination date",
-            "quoted_text": "This order will terminate on March 31, 2034, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this order that terminates in less than twenty (20) years; B. This order's application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part.",
+            "description": "Order remains in effect until March 31, 2034, or twenty years from the most recent federal complaint filing date, whichever is later, with exceptions for parts terminating earlier, respondents not named in complaints, and orders already terminated",
+            "quoted_text": "This order will terminate on March 31, 2034, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this order that terminates in less than twenty (20) years; B. This order’s application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 201,
+            "quote_end_line": 209
           }
         ]
       }
@@ -294,11 +344,33 @@
     },
     "extraction_stats": {
       "complaint_counts": 2,
-      "complaint_representations": 2,
+      "complaint_representations": 3,
       "order_provisions": 9,
       "order_definitions": 5,
-      "order_requirements": 21
+      "order_requirements": 20,
+      "provisions_per_section": {
+        "I": 2,
+        "II": 5,
+        "III": 1,
+        "IV": 4,
+        "V": 3,
+        "VI": 1,
+        "VII": 1,
+        "VIII": 2,
+        "IX": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 3,
+        "complaint_total": 3,
+        "order_verified": 20,
+        "order_total": 20
+      }
     },
-    "processing_time_seconds": 113.1
+    "processing_time_seconds": 103.9
   }
 }

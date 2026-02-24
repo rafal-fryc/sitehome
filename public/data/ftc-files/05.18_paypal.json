@@ -6,7 +6,7 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "2211 North First Street, San Jose, California 95131",
-      "business_description": "PayPal operates Venmo, a peer-to-peer payment and social networking application and website that allows consumers to make peer-to-peer payments and share information regarding such payments through a social network feed. The service has been offered to consumers since 2011."
+      "business_description": "PayPal, Inc. operates Venmo, a payment and social networking application and website that allows consumers to make peer-to-peer payments and to share information regarding such payments through a social network feed."
     },
     "commissioners": [
       "Joseph J. Simons, Chairman",
@@ -19,81 +19,110 @@
       "month": 5,
       "year": 2018
     },
-    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a); the Privacy of Consumer Financial Information Rule, 16 C.F.R. Part 313; and the Standards for Safeguarding Customer Information Rule, 16 C.F.R. Part 314",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a); the Privacy of Consumer Financial Information Rule (Reg. P), 16 C.F.R. Part 313; and the Standards for Safeguarding Customer Information Rule (Safeguards Rule), 16 C.F.R. Part 314",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/162-3102-paypal-inc-matter"
   },
   "complaint": {
-    "factual_background": "PayPal, through its Venmo service, made misleading claims about fund transfers, privacy controls, and data security. The company told users that credited funds could be transferred to bank accounts overnight, but failed to disclose that it often froze or reversed transactions during post-transfer fraud reviews. Venmo's privacy settings were confusingly designed such that users who believed they had made transactions private could still have them publicly shared. Additionally, Venmo claimed to use \"bank grade security\" but failed to implement basic safeguards like security notifications for password changes or added devices, allowing unauthorized account takeovers.",
+    "factual_background": "PayPal, Inc., operating as Venmo, made false and misleading representations to consumers about three core aspects of its peer-to-peer payment service. First, Venmo told consumers that funds were credited and available for transfer to external bank accounts, but routinely delayed or reversed transactions after consumers believed funds were secured—without disclosing this risk. Second, Venmo misled consumers about privacy settings, falsely implying that its Default Audience and Individual Audience Settings could restrict transaction visibility, when in fact a separate Transaction Sharing Setting could override those preferences without notice. Third, Venmo falsely claimed to use 'bank-grade security systems' while failing to maintain basic safeguards such as security notifications and adequate customer support. Venmo also violated the Gramm-Leach-Bliley Act by failing to provide clear, accurate, and adequately delivered privacy notices, and by failing to implement a written information security program or assess foreseeable security risks.",
     "representations_made": [
       {
-        "description": "Money is credited to consumer's Venmo account and can be transferred to external bank account",
-        "quoted_text": "Respondent, through Venmo, has represented, directly or indirectly, expressly or by implication, that money is credited to a consumer's Venmo account and can be transferred to an external bank account.",
-        "source_paragraph": 41
+        "description": "Claimed that money is credited to a consumer's Venmo account and can be transferred to an external bank account, including representations that consumers could 'cash out to any bank overnight' and 'transfer to any bank overnight'",
+        "quoted_text": "consumer’s mobile device. In numerous instances, the notifications have informed the recipients that they have been paid and they can transfer money to their external bank accounts. For example, at various times, the notifications have read “Money credited to your Venmo balance. Transfer to your bank overnight.” Other notifications have told consumers that someone “paid $[X] to your Venmo balance [description of transaction.] -- Leave it in Venmo or transfer it to your bank account.” An example of an email notification that Venmo has used appears as",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 10,
+        "quote_start_line": 64,
+        "quote_end_line": 69
       },
       {
-        "description": "Consumers can transfer funds to bank accounts overnight or within specific timeframes",
-        "quoted_text": "Venmo has represented generally that consumers can transfer funds to their bank within a specific time frame, often \"overnight.\" For example, at various times Venmo's homepage has stated that consumers who were sent funds through the Venmo system could \"cash out to any bank overnight.\"",
-        "source_paragraph": 11
+        "description": "Claimed that through the Default Audience Setting, consumers can restrict the visibility of all future transactions to specific groups such as 'Participants Only' or 'Friends'",
+        "quoted_text": "24. The label describing the Default Audience Setting would lead a reasonable consumer to believe that she could limit the visibility of all of her future transactions by restricting this setting. Thus, a consumer who sets the Default Audience Setting to “Participants Only” would likely assume that, by default, all of her transactions will be viewable only by the participants of the transaction, regardless of whether she is the initiator or recipient of a transaction.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 24,
+        "quote_start_line": 168,
+        "quote_end_line": 173
       },
       {
-        "description": "Through the Default Audience Setting, consumers can restrict visibility of future transactions to specific groups",
-        "quoted_text": "Respondent, through Venmo, has represented, directly or indirectly, expressly or by implication, that through the Default Audience Setting, consumers can restrict the visibility of future transactions to specific groups, such as \"Participants Only\" or \"Friends.\"",
-        "source_paragraph": 44
+        "description": "Falsely stated in the Privacy FAQ that setting the default audience to 'Private' or 'Participants Only' will ensure payments are only visible to the user and the other participant",
+        "quoted_text": "31. In addition, in early 2017, Venmo revised this Privacy FAQ to state that “[s]etting your default audience to “Private” or “Participants Only” will ensure that your payments are only visible to you and the other participant in the payment.” As described in paragraphs 25, 26 and 30, this statement is false.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 31,
+        "quote_start_line": 227,
+        "quote_end_line": 230
       },
       {
-        "description": "Through the Individual Audience Setting, consumers can restrict visibility of any single transaction to specific groups",
-        "quoted_text": "Respondent, through Venmo, has represented, directly or indirectly, expressly or by implication, that through the Individual Audience Setting, consumers can restrict the visibility of any single transaction to specific groups, such as \"Participants Only\" or \"Friends.\"",
-        "source_paragraph": 47
+        "description": "Claimed that through the Individual Audience Setting, consumers can restrict the visibility of any single transaction to specific groups such as 'Participants Only' or 'Friends'",
+        "quoted_text": "28. Venmo also allows consumers to change the audience for individual transactions without engaging with the “Settings” menu. Thus, if a user only wants a particular transaction to be kept private, she could change the audience setting for an individual transaction at the time she sends a payment (hereinafter, the “Individual Audience Setting”). On Venmo’s iOS app, the Individual Audience Setting appears the same or similar to the screenshot depicted below:",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 28,
+        "quote_start_line": 198,
+        "quote_end_line": 202
       },
       {
-        "description": "Venmo protected consumers' financial information with bank grade security systems",
-        "quoted_text": "Respondent, through Venmo, has represented, directly or indirectly, expressly or by implication, that Respondent protected consumers' financial information with \"bank grade security systems.\"",
-        "source_paragraph": 50
+        "description": "Claimed to protect consumers' financial information with 'bank-grade security systems and data encryption'",
+        "quoted_text": "its information security practices, including the following: a. “Venmo uses bank-grade security systems and data encryption to protect your financial information.” b. “Venmo uses bank grade security systems and data encryption to protect you and guard against unauthorized transactions and access to your personal or financial information.”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 32,
+        "quote_start_line": 233,
+        "quote_end_line": 238
+      },
+      {
+        "description": "Represented in its Privacy Policy that it shares a user's personal information with the user's 'social web' only when transactions are designated as public or friends-only, misrepresenting the true default sharing scope",
+        "quoted_text": "b. Venmo’s privacy notice is not accurate, as required by the Privacy Rule and Reg P. Venmo represents in its Privacy Policy that it shares a user’s personal information with the user’s “social web, if [the user’s] Venmo account transactions are designated as ‘public’ or friends-only payments . . . .” In fact, as described in Paragraphs 17-23, Venmo shares a consumer’s personal information by default with “everyone on the Internet,” including persons who do not have a Venmo account, and not just members of the consumer’s “social web”; and",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 38,
+        "quote_start_line": 317,
+        "quote_end_line": 323
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Misleading Fund Transfer Claims",
-        "representation": "Money is credited to a consumer's Venmo account and can be transferred to an external bank account",
-        "fact": "In numerous instances, Respondent failed to disclose that funds could be frozen or removed because Respondent has not yet approved the underlying transaction",
-        "conclusion": "Respondent's failure to disclose or disclose adequately the material information described in Paragraph 42, in light of the representation described in Paragraph 41, is a deceptive act or practice."
+        "title": "Deceptive Fund Transfer Representations",
+        "representation": "Venmo represented that money is credited to a consumer's Venmo account and can be transferred to an external bank account, including claims of overnight bank transfers",
+        "fact": "In numerous instances, Venmo failed to disclose that funds could be frozen or removed because Venmo had not yet approved the underlying transaction, and conducted fraud review only after a consumer attempted to transfer funds",
+        "conclusion": "Respondent's failure to disclose or disclose adequately the material information, in light of the representation, is a deceptive act or practice."
       },
       {
         "count_number": 2,
         "title": "Deceptive Default Audience Privacy Setting",
-        "representation": "Through the Default Audience Setting, consumers can restrict the visibility of future transactions to specific groups, such as \"Participants Only\" or \"Friends\"",
-        "fact": "The Default Audience Setting does not ensure that future transactions are visible only to friends or to the participants of the transaction, as other users can override these settings and make transactions public",
-        "conclusion": "Respondent's failure to disclose or disclose adequately the material information described in Paragraph 45, in light of the representation set forth in Paragraph 44, is a deceptive act or practice."
+        "representation": "Venmo represented that through the Default Audience Setting, consumers can restrict the visibility of future transactions to specific groups such as 'Participants Only' or 'Friends'",
+        "fact": "The Default Audience Setting does not ensure that future transactions are visible only to friends or to the participants of the transaction, because a separate Transaction Sharing Setting controlled by other users can override it",
+        "conclusion": "Respondent's failure to disclose or disclose adequately the material information, in light of the representation, is a deceptive act or practice."
       },
       {
         "count_number": 3,
         "title": "Deceptive Individual Audience Privacy Setting",
-        "representation": "Through the Individual Audience Setting, consumers can restrict the visibility of any single transaction to specific groups, such as \"Participants Only\" or \"Friends\"",
-        "fact": "The Individual Audience Setting does not ensure that any single transaction is visible only to friends or to the participants of the transaction, as other participants can retroactively make transactions public",
-        "conclusion": "Respondent's failure to disclose or disclose adequately the material information described in Paragraph 48, in light of the representation set forth in Paragraph 47, is a deceptive act or practice."
+        "representation": "Venmo represented that through the Individual Audience Setting, consumers can restrict the visibility of any single transaction to specific groups such as 'Participants Only' or 'Friends'",
+        "fact": "The Individual Audience Setting does not ensure that any single transaction remains visible only to friends or to the participants of the transaction, because another user can retroactively make the transaction public via the Transaction Sharing Setting",
+        "conclusion": "Respondent's failure to disclose or disclose adequately the material information, in light of the representation, is a deceptive act or practice."
       },
       {
         "count_number": 4,
-        "title": "False Security Claims",
-        "representation": "Respondent protected consumers' financial information with \"bank grade security systems\"",
-        "fact": "Respondent did not secure consumers' financial information with \"bank grade security systems.\" Respondent failed to provide security notifications regarding changes to account settings and was slow to respond to reports of unauthorized transactions",
-        "conclusion": "Therefore, the representation set forth in Paragraph 50 is false or misleading."
+        "title": "False Bank-Grade Security Claim",
+        "representation": "Venmo represented that it protected consumers' financial information with 'bank grade security systems and data encryption'",
+        "fact": "Venmo did not secure consumers' financial information with bank-grade security systems; it lacked security notifications for account changes, failed to maintain adequate customer support, and did not have a written information security program until approximately August 2014",
+        "conclusion": "The representation set forth in Paragraph 50 is false or misleading."
       },
       {
         "count_number": 5,
-        "title": "Privacy Rule and Reg. P Violations",
-        "representation": "Financial institutions must provide customers with a clear and conspicuous initial privacy notice that accurately reflects privacy policies and practices, delivered so each customer could reasonably be expected to receive actual notice",
-        "fact": "Respondent did not provide users with a clear and conspicuous initial privacy notice (grey text on light grey background), disseminated an initial privacy notice that does not accurately reflect its policies and practices, and failed to deliver the initial privacy notice so that each customer could reasonably be expected to receive actual notice",
-        "conclusion": "Therefore, Respondent violated the Privacy Rule, 16 C.F.R. § 313.4(a), § 313.9, and Reg. P, 12 C.F.R. § 1016.4, § 1016.9."
+        "title": "Violation of Privacy Rule and Reg. P",
+        "representation": "Venmo presented a signup screen disclosing its Privacy Policy only in grey text on a light grey background, and its Privacy Policy inaccurately stated it shares user information only with the user's 'social web' when transactions are public",
+        "fact": "Venmo was required to provide a clear and conspicuous initial privacy notice that accurately reflects its policies and practices and is delivered so each customer can reasonably be expected to receive actual notice; Venmo failed on all three requirements",
+        "conclusion": "Respondent violated the Privacy Rule, 16 C.F.R. §§ 313.4(a) and 313.9, and Reg. P, 12 C.F.R. §§ 1016.4 and 1016.9."
       },
       {
         "count_number": 6,
-        "title": "Safeguards Rule Violations",
-        "representation": "The Safeguards Rule requires financial institutions to identify reasonably foreseeable risks to customer information security and implement safeguards to control those risks",
-        "fact": "Respondent failed to have a written comprehensive information security program until approximately August 2014, failed to assess reasonably foreseeable risks until approximately September 2015, and failed to implement safeguards to protect consumer information until at least March 2015",
-        "conclusion": "Therefore, the conduct set forth in Paragraphs 59 – 61 is a violation of the Safeguards Rule, 16 C.F.R. § 314.4."
+        "title": "Violation of the Safeguards Rule",
+        "representation": "Venmo was required under the Safeguards Rule to maintain a comprehensive written information security program, assess foreseeable risks, and implement safeguards to protect customer information",
+        "fact": "Venmo failed to have a written information security program until approximately August 2014, failed to assess reasonably foreseeable security risks until approximately September 2014, and failed to implement basic safeguards including security notifications and adequate customer support until approximately March 2015",
+        "conclusion": "The conduct set forth in Paragraphs 59–61 is a violation of the Safeguards Rule, 16 C.F.R. § 314.4."
       }
     ]
   },
@@ -114,43 +143,51 @@
         "provision_number": "I",
         "title": "Prohibited Misrepresentations",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent any material restrictions to use the Payment and Social Networking Service or the extent to which it protects privacy, confidentiality, security, or integrity of covered information.",
+        "summary": "Respondent must not misrepresent any material restriction or condition to use any Payment and Social Networking Service, or the extent to which it protects the privacy, confidentiality, security, or integrity of covered information.",
         "requirements": [
           {
             "description": "Must not misrepresent any material restriction, limitation, or condition to use any Payment and Social Networking Service",
-            "quoted_text": "IT IS ORDERED that Respondent, and Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with the advertising, promotion, offering for sale, sale, or use of any Payment and Social Networking Service must not misrepresent or assist others in misrepresenting, expressly or by implication: A. Any material restriction, limitation, or condition to use any Payment and Social Networking Service",
+            "quoted_text": "I. IT IS ORDERED that Respondent, and Respondent’s officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with the advertising, promotion, offering for sale, sale, or use of any Payment and Social Networking Service must not misrepresent or assist others in misrepresenting, expressly or by implication: A. Any material restriction, limitation, or condition to use any Payment and Social Networking Service; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 98,
+            "quote_end_line": 105
           },
           {
-            "description": "Must not misrepresent the extent to which it protects privacy, confidentiality, security, or integrity of covered information",
+            "description": "Must not misrepresent the extent to which Respondent protects the privacy, confidentiality, security, or integrity of covered information, including consumer control over covered information disclosure and the level of security implemented",
             "quoted_text": "B. The extent to which Respondent, in connection with any Payment and Social Networking Service, protects the privacy, confidentiality, security, or integrity of any covered information, including: 1. The extent to which a consumer may exercise control over the disclosure of any covered information from or about a User and the steps a User must take to implement any such controls; and 2. The extent to which Respondent implements or adheres to a particular level of security.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 106,
+            "quote_end_line": 113
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Required Disclosures About Funds Availability",
+        "title": "Required Disclosures",
         "category": "affirmative_obligation",
-        "summary": "Respondent must disclose clearly and conspicuously that transactions are subject to review and that funds could be frozen or removed, both in representations about fund availability and through notices to users.",
+        "summary": "Within 150 days, Respondent must clearly and conspicuously disclose, near any representation about fund transfers, that transactions are subject to review and funds may be frozen; and must issue a notice to all Users about transaction review practices.",
         "requirements": [
           {
-            "description": "Must disclose that transactions are subject to review and funds could be frozen or removed when making representations about fund availability",
-            "quoted_text": "Within one hundred and fifty (150) days of the effective date of this Order, Respondent, and Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, when making any representation through any Payment and Social Networking Service, expressly or by implication, about the availability of funds to be transferred or withdrawn to a bank account (1) must disclose, clearly and conspicuously, and in close proximity to such representation (a) that the transaction is subject to review and (b) the fact, if true, that funds could be frozen or removed as a result of transaction reviews performed during the bank transfer or withdrawal process, and (2) the representation must not be otherwise misleading.",
+            "description": "Within 150 days of the effective date, when making any representation about availability of funds to be transferred or withdrawn to a bank account, must disclose clearly and conspicuously and in close proximity that the transaction is subject to review and that funds could be frozen or removed as a result of transaction reviews, and the representation must not be otherwise misleading",
+            "quoted_text": "A. Within one hundred and fifty (150) days of the effective date of this Order, Respondent, and Respondent’s officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, when making any representation through any Payment and Social Networking Service, expressly or by implication, about the availability of funds to be transferred or withdrawn to a bank account (1) must disclose, clearly and conspicuously, and in close proximity to such representation (a) that the transaction is subject to review and (b) the fact, if true, that funds could be frozen or removed as a result of transaction reviews performed during the bank transfer or withdrawal process, and (2) the representation must not be otherwise misleading.",
             "deadline": "150 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 119,
+            "quote_end_line": 128
           },
           {
-            "description": "Must issue notice to Users about transaction reviews and potential blocking or reversing of payments",
-            "quoted_text": "Respondent must issue a notice to Users, within one hundred and fifty (150) days of the effective date of this Order as follows: (i) for Users who have installed a Payment and Social Networking Service as an app, through the app such that the notice appears when the User next opens the app or (ii) for Users who have not installed a Payment and Social Networking Service as an app, through a text message, email, or other communication sufficient to provide clear and conspicuous notice prior to the User's next transaction. The notice shall disclose, clearly and conspicuously, and separate and apart from any \"privacy policy,\" \"terms of use,\" \"end user license agreement,\" or similar document, the fact, if true, that when a User attempts to transfer or withdraw funds to a bank account, Respondent (1) will perform transaction reviews, and (2) based on such review, may (i) block or delay the transfer or withdrawal, and/or (ii) reverse a payment transaction.",
+            "description": "Within 150 days of the effective date, must issue a notice to Users (via the app for app users, or via text/email/other communication for non-app users) disclosing clearly and conspicuously, separate from any privacy policy or terms of use, that Respondent will perform transaction reviews when a User attempts to transfer or withdraw funds and may block, delay, or reverse transactions based on such review",
+            "quoted_text": "B. Respondent must issue a notice to Users, within one hundred and fifty (150) days of the effective date of this Order as follows: (i) for Users who have installed a Payment and Social Networking Service as an app, through the app such that the notice appears when the User next opens the app or (ii) for Users who have not installed a Payment and Social Networking Service as an app, through a text message, email, or other communication sufficient to provide clear and conspicuous notice prior to the User’s next transaction. The notice shall disclose, clearly and conspicuously, and separate and apart from any “privacy policy,” “terms of use,” “end user license agreement,” or similar document, the fact, if true, that when a User attempts to transfer or withdraw funds to a bank account, Respondent (1) will perform transaction reviews, and (2) based on such review, may (i) block or delay the transfer or withdrawal, and/or (ii) reverse a payment transaction.",
             "deadline": "150 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 129,
+            "quote_end_line": 139
           }
         ]
       },
@@ -158,28 +195,16 @@
         "provision_number": "III",
         "title": "Additional Privacy Disclosures",
         "category": "affirmative_obligation",
-        "summary": "Respondent must clearly and conspicuously disclose to each User how transaction information will be shared and how privacy settings can limit visibility.",
+        "summary": "Within 150 days and continuing thereafter, Respondent must clearly and conspicuously disclose to each User how their transaction information will be shared and how they can use privacy settings to limit such sharing, at the time of their next transaction or account opening.",
         "requirements": [
           {
-            "description": "Must disclose how transaction information will be shared and how privacy settings work",
-            "quoted_text": "IT IS FURTHER ORDERED that, within one hundred and fifty (150) days of the effective date of this Order, and continuing thereafter, Respondent and Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any Payment or Social Networking Service, must clearly and conspicuously disclose to each User, through the Payment and Social Networking Service, and separate and apart from any \"privacy policy,\" \"terms of use,\" \"blog,\" \"helpful information\" page, or similar document: (1) how the User's transaction information will be shared with other Users; and (2) how the User can use privacy settings to limit or restrict the visibility or sharing of the User's transaction information on the Payment and Social Networking Service.",
+            "description": "Within 150 days and continuing thereafter, must clearly and conspicuously disclose to each User through the Payment and Social Networking Service, separate from any privacy policy or similar document: (1) how the User's transaction information will be shared with other Users; and (2) how the User can use privacy settings to limit or restrict the visibility or sharing of their transaction information. For existing Users, disclosure must occur at or immediately prior to the User's next transaction; for new Users, at the time of account opening. This disclosure must not contain any other information.",
+            "quoted_text": "III. IT IS FURTHER ORDERED that, within one hundred and fifty (150) days of the effective date of this Order, and continuing thereafter, Respondent and Respondent’s officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any Payment or Social Networking Service, must clearly and conspicuously disclose to each User, through the Payment and Social Networking Service, and separate and apart from any “privacy policy,” “terms of use,” “blog,” “helpful information” page, or similar document: (1) how the User’s transaction information will be shared with other Users; and (2) how the User can use privacy settings to limit or restrict the visibility or sharing of the User’s transaction information on the Payment and Social Networking Service. For Users that have already created an account when this disclosure is first issued, this disclosure must occur at or immediately prior to the time that the User next engages in a transaction through the Payment and Social Networking Service. For Users that have not created an account when this disclosure is first issued, this disclosure must occur at the time the User opens an account. This disclosure must not contain any other information.",
             "deadline": "150 days",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "For existing Users, disclosure must occur at or immediately prior to next transaction",
-            "quoted_text": "For Users that have already created an account when this disclosure is first issued, this disclosure must occur at or immediately prior to the time that the User next engages in a transaction through the Payment and Social Networking Service.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "For new Users, disclosure must occur when opening account",
-            "quoted_text": "For Users that have not created an account when this disclosure is first issued, this disclosure must occur at the time the User opens an account.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 141,
+            "quote_end_line": 155
           }
         ]
       },
@@ -190,18 +215,31 @@
         "summary": "Respondent is permanently restrained and enjoined from violating the Privacy of Consumer Financial Information Rule (Regulation P) and the Standards for Safeguarding Consumer Information Rule.",
         "requirements": [
           {
-            "description": "Must not violate the Privacy of Consumer Financial Information Rule (Regulation P), 12 C.F.R. Part 1016",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent, and Respondent's officers, agents, employees and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any Payment and Social Networking Service, are hereby permanently restrained and enjoined from violating any provision of: A. The Privacy of Consumer Financial Information Rule (Regulation P), 12 C.F.R. Part 1016",
+            "description": "Permanently restrained and enjoined from violating any provision of the Privacy of Consumer Financial Information Rule (Regulation P), 12 C.F.R. Part 1016",
+            "quoted_text": "IV. IT IS FURTHER ORDERED that Respondent, and Respondent’s officers, agents, employees and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any Payment and Social Networking Service, are hereby permanently restrained and enjoined from violating any provision of: A. The Privacy of Consumer Financial Information Rule (Regulation P), 12 C.F.R. Part 1016; or",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 160,
+            "quote_end_line": 166
           },
           {
-            "description": "Must not violate the Standards for Safeguarding Consumer Information Rule, 16 C.F.R. Part 314",
-            "quoted_text": "B. The Standards for Safeguarding Consumer Information Rule, 16 C.F.R. Part 314.",
+            "description": "Permanently restrained and enjoined from violating any provision of the Standards for Safeguarding Consumer Information Rule, 16 C.F.R. Part 314",
+            "quoted_text": "IV. IT IS FURTHER ORDERED that Respondent, and Respondent’s officers, agents, employees and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any Payment and Social Networking Service, are hereby permanently restrained and enjoined from violating any provision of: A. The Privacy of Consumer Financial Information Rule (Regulation P), 12 C.F.R. Part 1016; or B. The Standards for Safeguarding Consumer Information Rule, 16 C.F.R. Part 314.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 160,
+            "quote_end_line": 167
+          },
+          {
+            "description": "Compliance with any amended or modified version of the identified statutory sections or rules shall not constitute a violation of this Order",
+            "quoted_text": "In the event that any of the statutory sections or rules identified in this Part are hereafter amended or modified, compliance with that statutory section or rule as so amended or modified shall not be a violation of this Order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 168,
+            "quote_end_line": 170
           }
         ]
       },
@@ -209,77 +247,34 @@
         "provision_number": "V",
         "title": "Biennial Assessment Requirements",
         "category": "assessment",
-        "summary": "Respondent must obtain initial and biennial third-party assessments of the Venmo Payment and Social Networking Service for 10 years, certifying security program effectiveness.",
+        "summary": "Respondent must obtain initial and biennial third-party assessments of the Venmo Payment and Social Networking Service covering administrative, technical, and physical safeguards, with the initial assessment covering the first 180 days and biennial assessments covering each two-year period for 10 years.",
         "requirements": [
           {
-            "description": "Must obtain initial assessment covering first 180 days after service of Order",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent, and its successors and assigns, in connection with their compliance with Section IV(A) and (B) of this Order, shall obtain initial and biennial assessments and reports (\"Assessments\") of the Venmo Payment and Social Networking Service from a qualified, objective, independent third-party professional, using procedures and standards generally accepted in the profession. The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the Order for the initial Assessment",
-            "deadline": "180 days",
+            "description": "Must obtain an initial third-party assessment covering the first 180 days after service of the Order, which must set forth specific safeguards implemented, explain their appropriateness, explain how they meet Section IV(B) requirements, and certify the security program's operating effectiveness",
+            "quoted_text": "V. IT IS FURTHER ORDERED that Respondent, and its successors and assigns, in connection with their compliance with Section IV(A) and (B) of this Order, shall obtain initial and biennial assessments and reports (“Assessments”) of the Venmo Payment and Social Networking Service from a qualified, objective, independent third-party professional, using procedures and standards generally accepted in the profession. The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the Order for the initial Assessment, and (2) each two-year period thereafter for ten (10) years after service of this Order for the biennial Assessments. Each Assessment shall: A. Set forth the specific administrative, technical, and physical safeguards that Respondent has implemented and maintained during the reporting period; B. Explain how such safeguards are appropriate to Respondent’s size and complexity, the nature and scope of Respondent’s activities, and the sensitivity of the covered information collected from or about consumers; C. Explain how the safeguards that have been implemented meet or exceed the protections required by Section IV(B) of this Order; and D. Certify that Respondent’s security program(s) is operating with sufficient effectiveness to provide reasonable assurance that the confidentiality, security, and integrity of covered information is protected and has so operated throughout the reporting period.",
+            "deadline": "180 days (reporting period); assessment completed within 60 days after end of reporting period",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 172,
+            "quote_end_line": 189
           },
           {
-            "description": "Must obtain biennial assessments for each two-year period for 10 years after service of Order",
-            "quoted_text": "and (2) each two-year period thereafter for ten (10) years after service of this Order for the biennial Assessments.",
-            "deadline": null,
+            "description": "Must obtain biennial assessments for each two-year period for 10 years after service of the Order, each meeting the same content requirements as the initial assessment and completed within 60 days after the end of each reporting period, by a qualified CISSP, CISA, GIAC-certified individual, or FTC-approved professional",
+            "quoted_text": "Each Assessment must be completed within 60 days after the end of the reporting period to which the Assessment applies. The Assessment must be obtained from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. A professional qualified to prepare such Assessments must be: an individual qualified as a Certified Information System Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); an individual holding Global Information Assurance Certification (GIAC) from the SANS Institute; or a qualified individual or entity approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
+            "deadline": "Within 60 days after end of each reporting period",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 190,
+            "quote_end_line": 198
           },
           {
-            "description": "Each Assessment must set forth specific safeguards implemented and maintained",
-            "quoted_text": "Each Assessment shall: A. Set forth the specific administrative, technical, and physical safeguards that Respondent has implemented and maintained during the reporting period",
-            "deadline": null,
+            "description": "Must submit the initial Assessment to the Commission within 10 days after it has been completed; must retain all subsequent biennial Assessments at least until the Order terminates; must submit any biennial Assessments to the Commission within 10 days of a request from a Commission representative",
+            "quoted_text": "Respondent must submit the initial Assessment to the Commission within 10 days after the Assessment has been completed. Respondent must retain all subsequent biennial Assessments, at least until the Order terminates. Respondent must submit any biennial Assessments to the Commission within 10 days of a request from a representative of the Commission.",
+            "deadline": "10 days after completion (initial); 10 days of request (biennial)",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Each Assessment must explain how safeguards are appropriate to size, complexity, and sensitivity of information",
-            "quoted_text": "B. Explain how such safeguards are appropriate to Respondent's size and complexity, the nature and scope of Respondent's activities, and the sensitivity of the covered information collected from or about consumers",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Each Assessment must explain how safeguards meet or exceed Section IV(B) requirements",
-            "quoted_text": "C. Explain how the safeguards that have been implemented meet or exceed the protections required by Section IV(B) of this Order",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Each Assessment must certify that security program is operating effectively",
-            "quoted_text": "D. Certify that Respondent's security program(s) is operating with sufficient effectiveness to provide reasonable assurance that the confidentiality, security, and integrity of covered information is protected and has so operated throughout the reporting period.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Each Assessment must be completed within 60 days after the end of the reporting period",
-            "quoted_text": "Each Assessment must be completed within 60 days after the end of the reporting period to which the Assessment applies.",
-            "deadline": "60 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must submit initial Assessment to the Commission within 10 days after completion",
-            "quoted_text": "Respondent must submit the initial Assessment to the Commission within 10 days after the Assessment has been completed.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must retain all subsequent biennial Assessments until Order terminates",
-            "quoted_text": "Respondent must retain all subsequent biennial Assessments, at least until the Order terminates.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must submit biennial Assessments to Commission within 10 days of request",
-            "quoted_text": "Respondent must submit any biennial Assessments to the Commission within 10 days of a request from a representative of the Commission.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 202,
+            "quote_end_line": 206
           }
         ]
       },
@@ -287,42 +282,34 @@
         "provision_number": "VI",
         "title": "Acknowledgments of the Order",
         "category": "acknowledgment",
-        "summary": "Respondent must submit acknowledgment of receipt of the Order to the Commission, deliver copies to personnel for 20 years, and obtain signed acknowledgments from recipients.",
+        "summary": "Respondent must submit a sworn acknowledgment of receipt of this Order within 10 days, deliver copies to all principals, officers, employees, and new personnel, and obtain signed acknowledgments from each recipient within 60 days.",
         "requirements": [
           {
-            "description": "Must submit acknowledgment of receipt of Order to Commission",
-            "quoted_text": "Respondent, within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury",
+            "quoted_text": "A. Respondent, within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 210,
+            "quote_end_line": 211
           },
           {
-            "description": "Must deliver copy of Order to principals, officers, directors, managers, employees, agents, and representatives for 20 years",
-            "quoted_text": "For 20 years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives who participate in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Reports and Notices.",
-            "deadline": null,
+            "description": "For 20 years after the issuance date, must deliver a copy of this Order to all principals, officers, directors, LLC managers and members, employees, agents, and representatives who participate in conduct related to the subject matter of the Order, and any business entity resulting from a change in structure. Delivery must occur within 10 days for current personnel and before others assume their responsibilities.",
+            "quoted_text": "B. For 20 years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives who participate in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Reports and Notices. Delivery must occur within 10 days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "10 days (current personnel); before assuming responsibilities (new personnel)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 212,
+            "quote_end_line": 218
           },
           {
-            "description": "Delivery to current personnel must occur within 10 days after effective date",
-            "quoted_text": "Delivery must occur within 10 days after the effective date of this Order for current personnel.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Delivery to new personnel must occur before they assume responsibilities",
-            "quoted_text": "For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must obtain signed and dated acknowledgment from each recipient within 60 days",
-            "quoted_text": "From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within 60 days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "From each individual or entity to which a copy of the Order was delivered, must obtain within 60 days a signed and dated acknowledgment of receipt of this Order",
+            "quoted_text": "C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within 60 days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 219,
+            "quote_end_line": 221
           }
         ]
       },
@@ -330,28 +317,52 @@
         "provision_number": "VII",
         "title": "Compliance Reports and Notices",
         "category": "compliance_reporting",
-        "summary": "Respondent must submit annual compliance reports and notices of changes in structure or contact information to the Commission.",
+        "summary": "Respondent must submit a sworn compliance report one year after the issuance date, and must submit sworn notices within 14 days of any changes in points of contact, organizational structure, or bankruptcy filings.",
         "requirements": [
           {
-            "description": "Must submit compliance report one year after issuance of Order",
-            "quoted_text": "One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes Respondent made to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
-            "deadline": "1 year",
+            "description": "One year after the issuance date, must submit a sworn compliance report identifying contact information, all business names and addresses, describing activities, detailing compliance with each Order provision including changes made, and providing copies of all acknowledgments obtained",
+            "quoted_text": "A. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of Respondent’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes Respondent made to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year after issuance",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 225,
+            "quote_end_line": 236
           },
           {
-            "description": "Must submit compliance notice within 14 days of change in designated point of contact or structure",
-            "quoted_text": "Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (a) any designated point of contact; or (b) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that provides a Payment and Social Networking Service.",
-            "deadline": "14 days",
+            "description": "Must submit a sworn compliance notice within 14 days of any change in designated points of contact or in the structure of Respondent or any entity it owns or controls that may affect compliance obligations, including creation, merger, sale, or dissolution of any subsidiary, parent, or affiliate providing a Payment and Social Networking Service",
+            "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (a) any designated point of contact; or (b) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that provides a Payment and Social Networking Service.",
+            "deadline": "14 days of change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 237,
+            "quote_end_line": 242
           },
           {
-            "description": "Must submit notice of bankruptcy or insolvency filing within 14 days",
-            "quoted_text": "Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing.",
-            "deadline": "14 days",
+            "description": "Must submit notice of any bankruptcy petition, insolvency proceeding, or similar proceeding filed by or against Respondent within 14 days of its filing",
+            "quoted_text": "C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing.",
+            "deadline": "14 days of filing",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 246,
+            "quote_end_line": 247
+          },
+          {
+            "description": "Any submission to the Commission required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 248,
+            "quote_end_line": 252
+          },
+          {
+            "description": "Unless otherwise directed in writing, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC, 600 Pennsylvania Avenue NW, Washington, DC 20580, with the subject line beginning: In re PayPal",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: In re PayPal.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 253,
+            "quote_end_line": 257
           }
         ]
       },
@@ -359,56 +370,61 @@
         "provision_number": "VIII",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must create and retain specified records for 20 years after Order issuance, including accounting records, personnel records, consumer complaints, compliance materials, and marketing materials.",
+        "summary": "Respondent must create and retain specified records for 20 years after the issuance date, including accounting records, personnel records, consumer complaints, compliance records, advertising materials, and assessment materials.",
         "requirements": [
           {
-            "description": "Must create records for 20 years and retain each record for 5 years",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for 20 years after the issuance date of the Order, and retain each such record for 5 years, unless otherwise specified below.",
+            "description": "Must create and retain for 5 years accounting records showing revenues from all Payment and Social Networking Services sold",
+            "quoted_text": "VIII. IT IS FURTHER ORDERED that Respondent must create certain records for 20 years after the issuance date of the Order, and retain each such record for 5 years, unless otherwise specified below. Specifically, Respondent must create and retain the following records: A. accounting records showing the revenues from all Payment and Social Networking Services sold;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 259,
+            "quote_end_line": 263
           },
           {
-            "description": "Must create and retain accounting records showing revenues from Payment and Social Networking Services",
-            "quoted_text": "A. accounting records showing the revenues from all Payment and Social Networking Services sold",
+            "description": "Must create and retain for 5 years personnel records showing each service provider's name, addresses, telephone numbers, job title or position, dates of service, and reason for termination",
+            "quoted_text": "B. personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 264,
+            "quote_end_line": 267
           },
           {
-            "description": "Must create and retain personnel records",
-            "quoted_text": "B. personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination",
+            "description": "Must create and retain for 5 years copies or records of all consumer complaints regarding any Payment and Social Networking Service and any responses thereto",
+            "quoted_text": "C. copies or records of all consumer complaints regarding any Payment and Social Networking Service, whether received directly or indirectly, such as through a third party, and any response;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 268,
+            "quote_end_line": 270
           },
           {
-            "description": "Must create and retain copies of all consumer complaints and responses",
-            "quoted_text": "C. copies or records of all consumer complaints regarding any Payment and Social Networking Service, whether received directly or indirectly, such as through a third party, and any response",
+            "description": "Must create and retain for 5 years all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
+            "quoted_text": "D. all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 271,
+            "quote_end_line": 272
           },
           {
-            "description": "Must create and retain all records necessary to demonstrate full compliance with Order",
-            "quoted_text": "D. all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
+            "description": "Must create and retain for 5 years a copy of each unique Payment and Social Networking Service advertisement or other marketing material making a representation subject to this Order",
+            "quoted_text": "E. a copy of each unique Payment and Social Networking Service advertisement or other marketing material making a representation subject to this Order; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 273,
+            "quote_end_line": 274
           },
           {
-            "description": "Must create and retain copy of each unique advertisement or marketing material",
-            "quoted_text": "E. a copy of each unique Payment and Social Networking Service advertisement or other marketing material making a representation subject to this Order",
-            "deadline": null,
+            "description": "Must retain for 3 years after preparation of each Assessment all materials relied upon to prepare it, including plans, reports, studies, reviews, audits, audit trails, policies, training materials, assessments, and any other materials concerning compliance with related Order provisions",
+            "quoted_text": "F. for 3 years after the date of preparation of each Assessment required by this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Respondent, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Respondent’s compliance with related Provisions of this Order, for the compliance period covered by such Assessment.",
+            "deadline": "3 years after date of preparation of each Assessment",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must retain Assessment materials for 3 years after preparation",
-            "quoted_text": "F. for 3 years after the date of preparation of each Assessment required by this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Respondent, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Respondent's compliance with related Provisions of this Order, for the compliance period covered by such Assessment.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 275,
+            "quote_end_line": 280
           }
         ]
       },
@@ -416,57 +432,67 @@
         "provision_number": "IX",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission has the right to monitor compliance through requesting additional reports, interviewing personnel, and using other lawful means including posing as consumers.",
+        "summary": "The Commission is authorized to monitor Respondent's compliance by requesting additional reports and records, communicating directly with and interviewing Respondent's personnel, and using all other lawful investigative means including undercover contacts.",
         "requirements": [
           {
-            "description": "Must submit additional compliance reports or information within 10 days of written request from Commission",
-            "quoted_text": "Within 10 days of receipt of a written request from a representative of the Commission, Respondent must submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
-            "deadline": "10 days",
+            "description": "Within 10 days of receipt of a written request from a Commission representative, must submit additional compliance reports or other requested information sworn under penalty of perjury and produce records for inspection and copying",
+            "quoted_text": "A. Within 10 days of receipt of a written request from a representative of the Commission, Respondent must submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
+            "deadline": "10 days of request",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 287,
+            "quote_end_line": 290
           },
           {
-            "description": "Commission representatives are authorized to communicate directly with Respondent",
-            "quoted_text": "For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent.",
+            "description": "Must permit Commission representatives to communicate directly with Respondent and to interview anyone affiliated with Respondent who has agreed to such an interview, with counsel present if desired",
+            "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 291,
+            "quote_end_line": 294
           },
           {
-            "description": "Must permit Commission representatives to interview affiliated persons who agree",
-            "quoted_text": "Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present.",
+            "description": "The Commission may use all other lawful means, including posing as consumers, suppliers, or other individuals without identification or prior notice, and may use compulsory process under Sections 9 and 20 of the FTC Act",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Commission may use all lawful means to monitor compliance, including posing as consumers",
-            "quoted_text": "The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 295,
+            "quote_end_line": 299
           }
         ]
       },
       {
         "provision_number": "X",
-        "title": "Order Effective Dates",
+        "title": "Order Effective Dates and Duration",
         "category": "duration",
-        "summary": "The Order is effective upon publication on the Commission's website and will terminate on May 23, 2038, or 20 years from the most recent date a complaint is filed alleging violation of the Order, whichever is later.",
+        "summary": "This Order is effective upon publication on the FTC website and terminates on May 23, 2038, or 20 years from the most recent date a complaint is filed in federal court alleging a violation of this Order, whichever is later.",
         "requirements": [
           {
-            "description": "Order is final and effective upon publication on FTC website",
-            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order.",
+            "description": "This Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order",
+            "quoted_text": "X. IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 301,
+            "quote_end_line": 302
+          },
+          {
+            "description": "This Order will terminate on May 23, 2038, or 20 years from the most recent date the United States or the Commission files a complaint in federal court alleging any violation of this Order, whichever comes later, subject to specified exceptions",
+            "quoted_text": "publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate on May 23, 2038, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than 20 years; B. This Order’s application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. Provided, further, that if such complaint is dismissed or a federal court rules that Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 302,
+            "quote_end_line": 317
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This Order will terminate on May 23, 2038, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than 20 years; B. This Order's application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. Provided, further, that if such complaint is dismissed or a federal court rules that Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal."
+      "termination_text": "This Order will terminate on May 23, 2038, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than 20 years; B. This Order's application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision."
     }
   },
   "metadata": {
@@ -476,11 +502,34 @@
     },
     "extraction_stats": {
       "complaint_counts": 6,
-      "complaint_representations": 5,
+      "complaint_representations": 6,
       "order_provisions": 10,
       "order_definitions": 9,
-      "order_requirements": 39
+      "order_requirements": 30,
+      "provisions_per_section": {
+        "I": 2,
+        "II": 2,
+        "III": 1,
+        "IV": 3,
+        "V": 3,
+        "VI": 3,
+        "VII": 5,
+        "VIII": 6,
+        "IX": 3,
+        "X": 2
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 6,
+        "complaint_total": 6,
+        "order_verified": 30,
+        "order_total": 30
+      }
     },
-    "processing_time_seconds": 163.3
+    "processing_time_seconds": 130.0
   }
 }

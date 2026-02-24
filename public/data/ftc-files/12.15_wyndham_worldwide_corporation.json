@@ -1,55 +1,49 @@
 {
   "case_info": {
-    "docket_number": "2:13-CV-01887-ES-JAD",
+    "docket_number": "C-13-1887 (also cited as 2:13-CV-01887-ES-JAD)",
     "company": {
       "name": "Wyndham Worldwide Corporation",
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "22 Sylvan Way, Parsippany, New Jersey 07054",
-      "business_description": "Wyndham Worldwide is a hospitality company that franchises and manages hotels throughout the United States under twelve hotel brands. Through its subsidiaries, it operates approximately 7,000 hotels and provides information technology and security services to franchised and managed properties."
+      "business_description": "Wyndham Worldwide is a hospitality company that franchises and manages hotels throughout the United States. Through its subsidiaries, it operates and franchises approximately 7,000 hotels under twelve hotel brands, including the Wyndham brand, and provides various services including information technology services to franchised hotels."
     },
     "commissioners": [],
     "case_date": {
       "month": 12,
       "year": 2015
     },
-    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a), and Section 13(b) of the Federal Trade Commission Act, 15 U.S.C. § 53(b)",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a), enforced through Section 13(b) of the FTC Act, 15 U.S.C. § 53(b)",
     "violation_type": "both",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/1023142-x120032-wyndham-worldwide-corporation"
   },
   "complaint": {
-    "factual_background": "Wyndham Worldwide and its subsidiaries operated a hotel franchise network and failed to implement reasonable data security measures to protect consumer payment card information. Between April 2008 and January 2010, hackers successfully breached Wyndham's computer network on three separate occasions, compromising over 619,000 payment card accounts and exporting data to a domain registered in Russia. These breaches resulted in more than $10.6 million in fraud losses to consumers and businesses.",
+    "factual_background": "Wyndham Worldwide Corporation and its subsidiaries failed to maintain reasonable and appropriate data security for consumers' personal and payment card information across their network of approximately ninety Wyndham-branded hotels. Between April 2008 and January 2010, intruders exploited these security failures to breach Defendants' computer networks on three separate occasions, each time gaining access through the Phoenix, Arizona data center. The breaches resulted in the compromise of more than 619,000 consumer payment card account numbers, the export of hundreds of thousands of those account numbers to a domain registered in Russia, and more than $10.6 million in fraud losses. Despite these repeated intrusions, Defendants failed to take adequate remedial action after the first and second breaches, allowing subsequent attacks using the same malware and techniques. Throughout this period, Defendants publicly represented on their website that they used industry-standard practices and commercially reasonable efforts to protect consumers' personal information from unauthorized access.",
     "representations_made": [
       {
-        "description": "Claimed to safeguard customers' personally identifiable information using industry standard practices",
-        "quoted_text": "We safeguard our Customers' personally identifiable information by using industry standard practices. Although \"guaranteed security\" does not exist either on or off the Internet, we make commercially reasonable efforts to make our collection of such Information consistent with all applicable laws and regulations.",
-        "source_paragraph": 21
-      },
-      {
-        "description": "Claimed to use encryption and security measures to protect confidential information from loss, misuse, interception and hacking",
-        "quoted_text": "Currently, our Web sites utilize a variety of different security measures designed to protect personally identifiable information from unauthorized access by users both inside and outside of our company, including the use of 128-bit encryption based on a Class 3 Digital Certificate issued by Verisign Inc. This allows for utilization of Secure Sockets Layer, which is a method for encrypting data. This protects confidential information - such as credit card numbers, online forms, and financial data - from loss, misuse, interception and hacking.",
-        "source_paragraph": 21
-      },
-      {
-        "description": "Claimed to take commercially reasonable efforts to create and maintain firewalls and safeguards",
-        "quoted_text": "We take commercially reasonable efforts to create and maintain \"fire walls\" and other appropriate safeguards to ensure that to the extent we control the Information, the Information is used only as authorized by us and consistent with this Policy, and that the Information is not improperly altered or destroyed.",
-        "source_paragraph": 21
+        "description": "Claimed to safeguard customers' personally identifiable information using industry standard practices and commercially reasonable efforts, including 128-bit encryption, SSL, firewalls, and other appropriate safeguards to protect against unauthorized access, loss, misuse, interception, and hacking",
+        "quoted_text": "8 . . . We recognize the importance of protecting the privacy of individual-specific (personally identifiable) information 9 collected about guests, callers to our central reservation centers, visitors to our Web sites, and members participating 10 in our Loyalty Programs (collectively 'Customers') .... 11 This policy applies to residents of the United States, hotels of our Brands located in the United States, and Loyalty 12 Program activities in the United States only .... 13 We safeguard our Customers' personally identifiable information by using industry standard practices. Although 14 \"guaranteed security\" does not exist either on or off the Internet, we make commercially reasonable efforts to make 15 our collection of such Information consistent with all applicable laws and regulations. Currently, our Web sites 16 utilize a variety of different security measures designed to protect personally identifiable information from 17 unauthorized access by users both inside and outside of our company, including the use of 128-bit encryption based on a 18 Class 3 Digital Certificate issued by Veri sign Inc. This allows for utilization of Secure Sockets Layer, which is a 19 method for encrypting data. This protects confidential information - such as credit card numbers, online forms, and 20 financial data - from loss, misuse, interception and hacking. We take commercially reasonable efforts to create and 21 maintain \"fire walls\" and other appropriate safeguards to ensure that to the extent we control the Information, the 22 Information is used only as authorized by us and consistent -9- Case 2:12-cv-01365-PGR Document 28 Filed 08/09/12 Page 10 of 22 1 with this Policy, and that the Information is not improperly altered or destroyed.",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 21,
+        "quote_start_line": 235,
+        "quote_end_line": 267
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Deception - Data Security Misrepresentation",
-        "representation": "Defendants represented that they had implemented reasonable and appropriate measures to protect personal information against unauthorized access",
-        "fact": "Defendants did not implement reasonable and appropriate measures to protect personal information against unauthorized access. They failed to use firewalls, allowed storage of payment card data in clear text, permitted use of easily guessed passwords (such as 'micros' for both user ID and password), failed to patch known vulnerabilities, and failed to detect or prevent three separate breaches over two years",
-        "conclusion": "Therefore, Defendants' representations as set forth in Paragraph 44 of this Complaint are false or misleading and constitute deceptive acts or practices in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+        "title": "Deceptive Data Security Misrepresentation",
+        "representation": "In numerous instances, Defendants represented, directly or indirectly, expressly or by implication, that they had implemented reasonable and appropriate measures to protect personal information against unauthorized access",
+        "fact": "In truth and in fact, in numerous instances in which Defendants made those representations, Defendants did not implement reasonable and appropriate measures to protect personal information against unauthorized access",
+        "conclusion": "Defendants' representations as set forth in Paragraph 44 of this Complaint are false or misleading and constitute deceptive acts or practices in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)"
       },
       {
         "count_number": 2,
-        "title": "Unfairness - Failure to Implement Reasonable Security",
-        "representation": "Defendants failed to employ reasonable and appropriate measures to protect personal information against unauthorized access",
-        "fact": "Defendants' actions caused or are likely to cause substantial injury to consumers that consumers cannot reasonably avoid themselves and that is not outweighed by countervailing benefits to consumers or competition. The breaches resulted in over 619,000 compromised payment card accounts and more than $10.6 million in fraud losses",
-        "conclusion": "Therefore, Defendants' acts and practices as described in Paragraph 47 above constitute unfair acts or practices in violation of Section 5 of the FTC Act, 15 U.S.C. §§ 45(a) and 45(n)."
+        "title": "Unfair Data Security Practices",
+        "representation": "In numerous instances, Defendants failed to employ reasonable and appropriate measures to protect personal information against unauthorized access",
+        "fact": "Defendants' actions caused or are likely to cause substantial injury to consumers that consumers cannot reasonably avoid themselves and that is not outweighed by countervailing benefits to consumers or competition",
+        "conclusion": "Defendants' acts and practices constitute unfair acts or practices in violation of Section 5 of the FTC Act, 15 U.S.C. §§ 45(a) and 45(n)"
       }
     ]
   },
@@ -57,14 +51,14 @@
     "definitions": {
       "Approved Standard": "PCI DSS or, at the election of Hotels and Resorts, any standard of comparable scope and thoroughness approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
       "Breach": "an intrusion into a Cardholder Data Environment within a network that, as to Hotels and Resorts, is not an untrusted network, where Hotels and Resorts has reason to suspect the unauthorized disclosure, theft, modification, or destruction of Cardholder Data.",
-      "Cardholder Data": "the meaning PCI DSS Version 3.1, attached hereto as Appendix A, gives to the term \"Cardholder Data,\" i.e., \"cardholder data\" shall be defined, at a minimum, as the full PAN. The PAN is the unique payment card number(typically for credit or debit cards) that identifies the issuer and the particular cardholder account. Cardholder data may also appear in the form of the full PAN plus any of the following: cardholder name, expiration date, and/or service code.",
-      "Cardholder Data Environment": "the meaning PCI DSS Version 3.1, attached hereto as Appendix A, gives to the term \"cardholder data environment,\" i.e., the people, processes, and technology that store, process, or transmit cardholder data or sensitive authentication data.",
+      "Cardholder Data": "\"Cardholder Data\" shall have the meaning PCI DSS Version 3.1, attached hereto as Appendix A, gives to the term \"Cardholder Data,\" ie., \"cardholder data\" shall be defined, at a minimum, as the full PAN. The PAN is the unique payment card number(typically for credit or debit cards) that identifies the issuer and the particular cardholder account. Cardholder data may also appear in the form of the full PAN plus any of the following: cardholder name, expiration date, and/or service code.",
+      "Cardholder Data Environment": "shall have the meaning PCI DSS Version 3.1, attached hereto as Appendix A, gives to the term \"cardholder data environment,\" i.e., the people, processes, and technology that store, process, or transmit cardholder data or sensitive authentication data.",
       "Defendants": "(1) Hotels and Resorts; (2) Wyndham Hotel Management, Inc.; (3) Wyndham Hotel Group, LLC and its successors and assigns; and (4) Wyndham Worldwide Corporation and its successors and assigns.",
       "Hotels and Resorts": "Wyndham Hotels and Resorts, LLC, its subsidiaries and divisions, and its successors and assigns; provided, however, that in no event shall \"Hotels and Resorts\" include any of the Wyndham-branded Hotels. No entity shall be considered a subsidiary or a division for purposes of the definition of Hotels and Resorts in the event such entity is no longer a subsidiary or division of Hotels and Resorts.",
       "PCI DSS": "the Payment Card Industry Data Security Standard, Requirements and Security Assessment Procedures, Version 3.1, attached hereto as Appendix A, or, in the event such standard no longer exists, any successor standard established or approved by the Payment Card Industry Security Standards Council, any successor entity to said Council, or all of the major payment card brands. In the event no such successor standard or successor entity exists, PCI DSS shall mean a standard of comparable scope and thoroughness approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
       "Practice": "any act or omission implicating information security, including any conduct, implementation, control, configuration, procedure, process, or policy.",
       "Treat as an untrusted network": "to implement the security protections that PCI DSS Version 3.1, attached hereto as Appendix A, requires to be put in place with regard to an untrusted network.",
-      "Untrusted network": "the meaning that Requirement 1.2 of PCI DSS Version 3.1, attached hereto as Appendix A, gives to the term \"untrusted network,\" i.e., any network that is external to the networks belonging to the entity under review, and/or which is out of the entity's ability to control or manage.",
+      "Untrusted network": "any network that is external to the networks belonging to the entity under review, and/or which is out of the entity's ability to control or manage.",
       "Wyndham-branded Hotel": "an independently-owned hotel that is operated in the United States pursuant to a management or franchise agreement with Hotels and Resorts or Wyndham Hotel Management, Inc. or any of their respective subsidiaries (a) under one of the following brand names or any successor brand name to one of the following brand names: Wyndham Hotels and Resorts, Wyndham Grand, and Wyndham Garden Hotels, or (b) under any other hotel brand name that is marketed by Hotels and Resorts to potential licensees of such brand name by means of a Franchise Disclosure Document or any other regulatory disclosure document generally required by the Federal Trade Commission to be delivered to a potential licensee in connection with the sale of a franchise."
     },
     "provisions": [
@@ -72,49 +66,61 @@
         "provision_number": "I",
         "title": "Comprehensive Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Hotels and Resorts must establish, implement, and maintain a comprehensive information security program to protect cardholder data for twenty years.",
+        "summary": "Hotels and Resorts must establish, implement, and maintain a comprehensive information security program for 20 years, designed to protect the security, confidentiality, and integrity of Cardholder Data, including specific administrative, technical, and physical safeguards.",
         "requirements": [
           {
-            "description": "Establish and maintain comprehensive information security program",
-            "quoted_text": "IT IS ORDERED that Hotels and Resorts shall, no later than the date of entry of this Order, establish and implement, and thereafter maintain, for twenty (20) years after entry of this Order, a comprehensive information security program that is reasonably designed to protect the security, confidentiality, and integrity of Cardholder Data that it collects or receives in the United States from or about consumers.",
-            "deadline": "date of entry",
+            "description": "Establish and implement a comprehensive written information security program no later than the date of entry of this Order, and maintain it for twenty (20) years, reasonably designed to protect the security, confidentiality, and integrity of Cardholder Data.",
+            "quoted_text": "IT IS ORDERED that Hotels and Resorts shall, no later than the date of entry of this Order, establish and implement, and thereafter maintain, for twenty (20) years after entry of this Order, a comprehensive information security program that is reasonably designed to protect the security, confidentiality, and integrity of Cardholder Data that it collects or receives in the United States from or about consumers. Such program, the content and implementation of which must 4 Case 2:13-cv-01887-ES-JAD Document 283 Filed 12/11/15 Page 5 of 18 PageiD: 5024 be fully documented in writing, shall consist of the following administrative, technical, and physical safeguards appropriate to Hotels and Resorts' size and complexity, the nature and scope of Hotels and Resorts' activities, and the sensitivity of the Cardholder Data at issue:",
+            "deadline": "Date of entry of Order",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 101,
+            "quote_end_line": 112
           },
           {
-            "description": "Designate employee(s) to coordinate information security program",
-            "quoted_text": "the designation of an employee or employees to coordinate and be accountable for the information security program;",
+            "description": "Designate an employee or employees to coordinate and be accountable for the information security program.",
+            "quoted_text": "A the designation of an employee or employees to coordinate and be accountable for the information security program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 113,
+            "quote_end_line": 114
           },
           {
-            "description": "Identify and assess material internal and external risks to cardholder data",
-            "quoted_text": "the identification of material internal and external risks to the security, confidentiality, and integrity of Cardholder Data that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to, (1) employee training and management, (2) information systems, including network and software design, information processing, storage, transmission, and disposal, (3) risks emanating from the Wyndham-branded Hotels, and (4 ) prevention, detection, and response to attacks, intrusions, or other systems failure;",
+            "description": "Identify material internal and external risks to Cardholder Data security and assess the sufficiency of existing safeguards, including risks from employee training, information systems, Wyndham-branded Hotels, and prevention/detection/response to attacks.",
+            "quoted_text": "B. the identification of material internal and external risks to the security, confidentiality, and integrity of Cardholder Data that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to, (1) employee training and management, (2) information systems, including network and software design, information processing, storage, transmission, and disposal, (3) risks emanating from the Wyndham-branded Hotels, and (4 ) prevention, detection, and response to attacks, intrusions, or other systems failure;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 115,
+            "quote_end_line": 125
           },
           {
-            "description": "Design, implement, and test reasonable safeguards to control identified risks",
-            "quoted_text": "the design and implementation of reasonable safeguards to control the risks identified through risk assessment (including any risks emanating from the Wyndham-branded Hotels), and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures;",
+            "description": "Design and implement reasonable safeguards to control identified risks, and regularly test or monitor the effectiveness of key controls, systems, and procedures.",
+            "quoted_text": "C. the design and implementation of reasonable safeguards to control the risks identified through risk assessment (including any risks emanating from the Wyndham-branded Hotels), and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 126,
+            "quote_end_line": 129
           },
           {
-            "description": "Select and retain qualified service providers and require contractual safeguards",
-            "quoted_text": "the development and use of reasonable steps to select and retain service providers capable of appropriately safeguarding Cardholder Data they receive from Hotels and Resorts and requiring such service providers by contract to implement and maintain appropriate safeguards for such information;",
+            "description": "Develop and use reasonable steps to select and retain service providers capable of safeguarding Cardholder Data, and require such service providers by contract to implement and maintain appropriate safeguards.",
+            "quoted_text": "D. the development and use of reasonable steps to select and retain service providers capable of appropriately safeguarding Cardholder Data they receive from Hotels 5 Case 2:13-cv-01887-ES-JAD Document 283 Filed 12/11/15 Page 6 of 18 PageiD: 5025 and Resorts and requiring such service providers by contract to implement and maintain appropriate safeguards for such information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.8542274052478134
+            "confidence": 0.85,
+            "quote_start_line": 130,
+            "quote_end_line": 137
           },
           {
-            "description": "Evaluate and adjust information security program based on testing results and material changes",
-            "quoted_text": "the evaluation and adjustment of Hotels and Resorts' information security program described herein in light of the results of the testing and monitoring required by Part I.C or any other circumstances (including any material changes to Hotels and Resorts' operations or business arrangements) that Hotels and Resorts knows or has reason to know may have a material impact on the effectiveness of such information security program.",
+            "description": "Evaluate and adjust the information security program in light of testing/monitoring results or any material changes to operations or business arrangements that may affect the program's effectiveness.",
+            "quoted_text": "E. the evaluation and adjustment of Hotels and Resorts' information security program described herein in light of the results of the testing and monitoring required by Part I.C or any other circumstances (including any material changes to Hotels and Resorts' operations or business arrangements) that Hotels and Resorts knows or has reason to know may have a material impact on the effectiveness of such information security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 138,
+            "quote_end_line": 143
           }
         ]
       },
@@ -122,63 +128,52 @@
         "provision_number": "II",
         "title": "Cardholder Data Assessments",
         "category": "assessment",
-        "summary": "Hotels and Resorts must obtain annual third-party assessments of compliance with PCI DSS and related standards for up to twenty years.",
+        "summary": "Hotels and Resorts must annually obtain a written assessment of compliance with the Approved Standard, obtain additional certifications if noncompliant, and obtain a forensic investigator report following any large Breach, for up to 20 years after entry of the Order.",
         "requirements": [
           {
-            "description": "Obtain annual written assessment of compliance with Approved Standard by December 31",
-            "quoted_text": "Annually obtain a written assessment of the extent of Hotels and Resorts' compliance with the Approved Standard (each such annual assessment, together with any certification relative to such assessment that may be obtained pursuant to Part ll.B, being defined as an \"Assessment\"). Each annual Assessment shall be completed by December 31.",
+            "description": "Annually obtain a written assessment of Hotels and Resorts' compliance with the Approved Standard, to be completed by December 31 each year, including assessor certification of compliance with the Approved Standard, per-hotel untrusted-network status, risk management protocol compliance, and assessor independence/qualifications.",
+            "quoted_text": "A. Annually obtain a written assessment of the extent of Hotels and Resorts' compliance with the Approved Standard (each such annual assessment, together with any certification relative to such assessment that may be obtained pursuant to Part ll.B, being defined as an \"Assessment\"). Each annual Assessment shall be completed by December 31. For each annual Assessment, the assessor conducting the Assessment must certify as to the extent ofHotels and Resorts' compliance with the Approved Standard. In addition, the assessor must: 1. certify individually, as to each Wyndham-branded Hotel, whether Hotels and Resorts treats as an untrusted network any Wyndham-branded Hotel's network that has a Cardholder Data Environment, and if any such network 6 Case 2:13-cv-01887-ES-JAD Document 283 Filed 12/11/15 Page 7 of 18 PageiD: 5026 is not treated as untrusted, certify that such network either is included in the Assessment or has during the 12 months preceding the Assessment separately been validated to be fully compliant with the Approved Standard; 2. certify as to the extent of Hotels and Resorts' compliance with each element of a risk management protocol at least as thorough as Version 2.0 of the PCI DSS Risk Assessment Guidelines, attached hereto as Appendix B; and 3. certify that the Assessment was conducted by a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession, adheres to professional and business ethics, performs all duties objectively, and is free from any conflicts of interest that might compromise the assessor's independent judgment in performing Assessments. Professionals qualified to prepare Assessments shall be: a person qualified as a Certified Information Systems Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); a person holding Global Information Assurance Certification (GIAC) from the SysAdmin, Audit, Network, Security (SANS) Institute; a Qualified Security Assessor under PCI DSS (QSA); or, at the election of Hotels and Resorts, a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
+            "deadline": "Annually by December 31",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 149,
+            "quote_end_line": 184
+          },
+          {
+            "description": "If an Assessment is noncompliant, obtain a supplemental certification from a qualified assessor attesting to compliance with any requirements not previously certified, within sixty (60) days of completion of the Noncompliant Assessment.",
+            "quoted_text": "B. If the assessor that conducts an Assessment descnbed in Part ll.A does not certify that Hotels and Resorts is fully compliant with the Approved Standard on which the Assessment in question is based and with the risk protocol referenced in Part ll.A.2 (a ''Noncompliant Assessment\"), Hotels and Resorts shall, within sixty (60) days from the completion of the Noncompliant Assessment in question, obtain a certification from an assessor qualified under Part ll.A.3 attesting as to the extent of Hotels and Resorts' compliance with any requirements under the Approved Standard and/or the risk protocol in question that were not certified as being in place by the assessor that conducted the Assessment.",
+            "deadline": "60 days after Noncompliant Assessment",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 189,
+            "quote_end_line": 197
+          },
+          {
+            "description": "Within 180 days of discovering a Breach involving more than 10,000 unique payment card numbers, obtain a PCI Forensic Investigator Final Incident Report (or equivalent) meeting PCI Security Standards Council requirements.",
+            "quoted_text": "C. Within one hundred and eighty (180) days following discovery of a Breach involving more than 10,000 unique payment card numbers, Hotels and Resorts shall obtain an assessment that meets the requirements, established by the PCI Security Standards Council, of a PCI Forensic Investigator Final Incident Report (or the equivalent of such a report under then-current standards established by the PCI Security Standards Council, any successor entity to said council, or the major card brands), or, at the election of Hotels and Resorts, a standard of comparable scope and thoroughness approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
+            "deadline": "180 days after discovery of qualifying Breach",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 198,
+            "quote_end_line": 206
+          },
+          {
+            "description": "If Hotels and Resorts obtains a fully compliant Assessment with all required certifications, it shall be deemed in compliance with Part I for one year from the Assessment date or until the next December 31 deadline, whichever is earlier, subject to exceptions for misrepresentations or significant Practice changes.",
+            "quoted_text": "D. If Hotels and Resorts obtains (i) an Assessment certifying that Hotels and Resorts is fully compliant with the Approved Standard and (ii) such Assessment includes or is accompanied by the certifications called for by Part ll.A.l-ll.A3, Hotels and Resorts shall be deemed in compliance with Part I of this Order for one year from 8 Case 2:13-cv-01887-ES-JAD Document 283 Filed 12111115 Page 9 of 18 PageiD: 5028 the date of that Assessment or until the next December 31 Assessment deadline, whichever is earlier. Provided, however: 1. A Practice by Hotels and Resorts shall not be deemed in compliance with Part I of this Order based upon a Part ll.A Assessment ifH otels and Resorts made a representation, express or implied, regarding the Practice that either misrepresented or omitted a material fact and such misrepresentation or omission would likely affect a reasonable Assessor's decision about whether the Practice complied with the Approved Standard. Further, in the event that such a misrepresentation or omission was made for the purpose of deceiving the assessor, Hotels and Resorts shall not be deemed compliant with any portion of Part I or Part ll.A of this Order based on that Assessment. 2. Hotels and Resorts shall not be deemed in compliance with Part I of this Order based upon a Part ll.A Assessment as to any Practice that is a significant change from any Practice in place at the time of the Assessment in question, unless, at the time of the significant change, an assessor qualified under Part ll.A.3 certifies that the significant change does not cause Hotels and Resorts to fall out of compliance with the Approved Standard on which the Assessment in question was based.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 207,
+            "quote_end_line": 233
           },
           {
-            "description": "Assessor must certify extent of compliance with Approved Standard",
-            "quoted_text": "For each annual Assessment, the assessor conducting the Assessment must certify as to the extent ofHotels and Resorts' compliance with the Approved Standard.",
-            "deadline": null,
+            "description": "Provide each Assessment, Part II.B certification, or Part II.C report to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC, within ten (10) days after it is delivered by the assessor or investigator, by email to Debrief@ftc.gov or overnight courier.",
+            "quoted_text": "and Resorts shall provide each Assessment required by this Part II, including any Part II.B certification or Part II.C report, to the Associate Director for Enforcement, Bureau of Consumer 9 Case 2:13-cv-01887-ES-JAD Document 283 Filed 12/11115 Page 10 of 18 PageiD: 5029 Protection, Federal Trade Commission, within ten (10) days after the Assessment, certification, or report is delivered to Hotels and Resorts by the assessor or investigator in question. Unless otherwise directed by a representative of the Commission in writing, Hotels and Resorts shall email these materials to Debrief@ftc.gov or send them by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, D.C. 20580. The subject line must begin: FTC v. Wyndham Worldwide Corp., et. al., FTC File No. X120032.",
+            "deadline": "10 days after delivery by assessor",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Assessor must certify individually whether each Wyndham-branded Hotel's network is treated as untrusted or is validated as compliant",
-            "quoted_text": "certify individually, as to each Wyndham-branded Hotel, whether Hotels and Resorts treats as an untrusted network any Wyndham-branded Hotel's network that has a Cardholder Data Environment, and if any such network is not treated as untrusted, certify that such network either is included in the Assessment or has during the 12 months preceding the Assessment separately been validated to be fully compliant with the Approved Standard;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Assessor must certify extent of compliance with risk management protocol",
-            "quoted_text": "certify as to the extent of Hotels and Resorts' compliance with each element of a risk management protocol at least as thorough as Version 2.0 of the PCI DSS Risk Assessment Guidelines, attached hereto as Appendix B;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Assessor must certify that assessment was conducted by qualified, objective, independent third-party professional",
-            "quoted_text": "certify that the Assessment was conducted by a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession, adheres to professional and business ethics, performs all duties objectively, and is free from any conflicts of interest that might compromise the assessor's independent judgment in performing Assessments. Professionals qualified to prepare Assessments shall be: a person qualified as a Certified Information Systems Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); a person holding Global Information Assurance Certification (GIAC) from the SysAdmin, Audit, Network, Security (SANS) Institute; a Qualified Security Assessor under PCI DSS (QSA); or, at the election of Hotels and Resorts, a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "If assessment is noncompliant, obtain certification of extent of compliance with unfulfilled requirements within 60 days",
-            "quoted_text": "If the assessor that conducts an Assessment descnbed in Part ll.A does not certify that Hotels and Resorts is fully compliant with the ApprovedStandard on which the Assessment in question is based and with the risk protocol referenced in Part ll.A.2 (a \"Noncompliant Assessment\"), Hotels and Resorts shall, within sixty (60) days from the completion of the Noncompliant Assessment in question, obtain a certification from an assessor qualified under Part ll.A.3 attesting as to the extent of Hotels and Resorts' compliance with any requirements under the Approved Standard and/or the risk protocol in question that were not certified as being in place by the assessor that conducted the Assessment.",
-            "deadline": "60 days",
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Obtain PCI forensic investigator report within 180 days of breach involving more than 10,000 payment card numbers",
-            "quoted_text": "Within one hundred and eighty (180) days following discovery of a Breach involving more than 10,000 unique payment card numbers, Hotels and Resorts shall obtain an assessment that meets the requirements, established by the PCI Security Standards Council, of a PCI Forensic Investigator Final Incident Report (or the equivalent of such a report under then-current standards established by the PCI Security Standards Council, any successor entity to said council, or the major card brands), or, at the election of Hotels and Resorts, a standard of comparable scope and thoroughness approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
-            "deadline": "180 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Provide each assessment, certification, and report to FTC within 10 days of receipt",
-            "quoted_text": "Hotels and Resorts shall provide each Assessment required by this Part II, including any Part II.B certification or Part II.C report, to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, within ten (10) days after the Assessment, certification, or report is delivered to Hotels and Resorts by the assessor or investigator in question.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 236,
+            "quote_end_line": 248
           }
         ]
       },
@@ -186,42 +181,34 @@
         "provision_number": "III",
         "title": "Order Acknowledgements",
         "category": "acknowledgment",
-        "summary": "Defendants must submit acknowledgements of receipt of this Order and deliver copies to subsidiaries, personnel, and other specified parties.",
+        "summary": "Wyndham Worldwide Corporation, Wyndham Hotel Group LLC, and Hotels and Resorts must submit acknowledgements of receipt of this Order and deliver copies to subsidiaries, officers, employees, and other relevant personnel.",
         "requirements": [
           {
-            "description": "Wyndham Worldwide Corporation, Wyndham Hotel Group, LLC, and Hotels and Resorts must submit acknowledgement of receipt to Commission",
-            "quoted_text": "Wyndham Worldwide Corporation, Wyndham Hotel Group, LLC, and Hotels and Resorts, within seven (7) days of entry of this Order, must submit to the Commission an acknowledgement of receipt of this Order.",
-            "deadline": "7 days",
+            "description": "Wyndham Worldwide Corporation, Wyndham Hotel Group LLC, and Hotels and Resorts must each submit to the Commission an acknowledgement of receipt of this Order within seven (7) days of entry.",
+            "quoted_text": "A. Wyndham Worldwide Corporation, Wyndham Hotel Group, LLC, and Hotels and Resorts, within seven (7) days of entry of this Order, must submit to the Commission an acknowledgement of receipt of this Order.",
+            "deadline": "7 days of entry",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 252,
+            "quote_end_line": 254
           },
           {
-            "description": "Hotels and Resorts must deliver copy of Order to all current subsidiaries",
-            "quoted_text": "Hotels and Resorts shall deliver a copy of this Order: (1) to all its current subsidiaries within thirty (30) days after entry of this Order;",
-            "deadline": "30 days",
+            "description": "Hotels and Resorts shall deliver a copy of this Order to all current subsidiaries within thirty (30) days after entry, and to any future subsidiary within thirty (30) days after its acquisition, for ten (10) years after entry.",
+            "quoted_text": "B. Hotels and Resorts shall deliver a copy of this Order: (1) to all its current subsidiaries within thirty (30) days after entry of this Order; and (2) for ten (10) years after entry of this Order, to any future subsidiary within thirty (30) days after its acquisition by Hotels and Resorts.",
+            "deadline": "30 days after entry (current subsidiaries); 30 days after acquisition (future subsidiaries)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 255,
+            "quote_end_line": 258
           },
           {
-            "description": "Hotels and Resorts must deliver copy of Order to future subsidiaries within 30 days of acquisition for 10 years",
-            "quoted_text": "for ten (10) years after entry of this Order, to any future subsidiary within thirty (30) days after its acquisition by Hotels and Resorts.",
-            "deadline": "30 days",
+            "description": "For ten (10) years after entry, Wyndham Worldwide Corporation, Wyndham Hotel Group LLC, and Hotels and Resorts must deliver a copy of this Order to all controlling principals, board members, LLC managers/members, relevant officers and employees, and any business entity resulting from a structural change, within fourteen (14) days of entry for current personnel and before new personnel assume responsibilities.",
+            "quoted_text": "C. For ten (10) years after entry of this Order, Wyndham Worldwide Corporation, Wyndham Hotel Group, LLC, and Hotels and Resorts must deliver a copy of this Order to (1) all controlling principals, board of directors members, and LLC managers and members; (2) all officers, employees, agents, and representatives having responsibilities relating to the subject matter of this Order; and (3) any business entity resulting from any change in structure as set forth in the Part titled 10 Case 2:13-cv-01887 -ES-JAD Document 283 Filed 12/11115 Page 11 of 18 PageiD: 5030 Compliance Reporting. Delivery must occur within fourteen (14) days of entry of this Order for current personnel. For all other personnel, delivery must occur before they assume their responsibilities.",
+            "deadline": "14 days of entry for current personnel; before assuming responsibilities for new personnel",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Defendants must deliver copy of Order to current principals, board members, managers, officers, employees, agents, and representatives with relevant responsibilities within 14 days",
-            "quoted_text": "For ten (10) years after entry of this Order, Wyndham Worldwide Corporation, Wyndham Hotel Group, LLC, and Hotels and Resorts must deliver a copy of this Order to (1) all controlling principals, board of directors members, and LLC managers and members; (2) all officers, employees, agents, and representatives having responsibilities relating to the subject matter of this Order; and (3) any business entity resulting from any change in structure as set forth in the Part titled Compliance Reporting. Delivery must occur within fourteen (14) days of entry of this Order for current personnel.",
-            "deadline": "14 days",
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Defendants must deliver copy of Order to future personnel before they assume responsibilities for 10 years",
-            "quoted_text": "For all other personnel, delivery must occur before they assume their responsibilities.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 259,
+            "quote_end_line": 271
           }
         ]
       },
@@ -229,21 +216,34 @@
         "provision_number": "IV",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Defendants must submit compliance reports to the Commission and notify the Commission of changes in structure or designated points of contact.",
+        "summary": "Wyndham Worldwide Corporation, Wyndham Hotel Group LLC, and Hotels and Resorts must each submit an initial compliance report one year after entry and ongoing compliance notices within 14 days of any relevant structural or contact changes for 10 years.",
         "requirements": [
           {
-            "description": "Submit initial compliance report one year after entry of Order",
-            "quoted_text": "One year after entry of this Order, Wyndham Worldwide Corporation, Wyndham Hotel Group, LLC, and Hotels and Resorts each must submit a compliance report certified as truthful by a senior corporate officer with the requisite corporate and organizational authority that (a) identifies the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission may use to communicate with that Defendant; (b) identifies all of that Defendant's United States businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describes the activities of that Defendant's business and the involvement of any other Defendant; (d) describes in detail (either directly or by incorporating by reference a Part ll.A. Assessment) whether and how that Defendant is in compliance with each Part of this Order; and (e) provides a copy of each Order Acknowledgement obtained pursuant to this Order, unless previously submitted to the Commission.",
-            "deadline": "one year",
+            "description": "One year after entry of this Order, each of Wyndham Worldwide Corporation, Wyndham Hotel Group LLC, and Hotels and Resorts must submit a compliance report certified by a senior corporate officer, identifying contact information, business names, activities, compliance status (incorporating Part II.A Assessments where applicable), and copies of Order acknowledgements.",
+            "quoted_text": "A. One year after entry of this Order, Wyndham Worldwide Corporation, Wyndham Hotel Group, LLC, and Hotels and Resorts each must submit a compliance report certified as truthful by a senior corporate officer with the requisite corporate and organizational authority that (a) identifies the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission may use to communicate with that Defendant; (b) identifies all of that Defendant's United States businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describes the activities of that Defendant's business and the involvement of any other Defendant; (d) describes in detail (either directly or by incorporating by reference a Part ll.A. Assessment) whether and how that Defendant is in compliance with each Part of this Order; and (e) provides a copy of each Order Acknowledgement obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year after entry",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 275,
+            "quote_end_line": 288
           },
           {
-            "description": "Submit compliance notice within 14 days of change in designated point of contact or corporate structure for 10 years",
-            "quoted_text": "For ten (I 0) years after entry of this Order, each of Wyndham Worldwide Corporation, Wyndham Hotel Group, LLC, and Hotels and Resorts must submit a compliance notice within fourteen (14) days of any change in the following: (a) any designated point of contact; or (b) the structure of that Defendant or any entity that that Defendant bas any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, assignment, sale, merger, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any act or practice subject to this Order.",
-            "deadline": "14 days",
+            "description": "For ten (10) years after entry, each Defendant must submit a compliance notice within fourteen (14) days of any change in designated contact points or in the structure of the Defendant or any controlled entity that may affect compliance obligations, including creation, assignment, sale, merger, or dissolution of relevant entities.",
+            "quoted_text": "B. For ten (I 0) years after entry of this Order, each of Wyndham Worldwide Corporation, Wyndham Hotel Group, LLC, and Hotels and Resorts must submit a compliance notice within fourteen (14) days of any change in the following: 11 Case 2:13-cv-01887-ES-JAD Document 283 Filed 12/11/15 Page 12 of 18 PageiD: 5031 (a) any designated point of contact; or (b) the structure of that Defendant or any entity that that Defendant bas any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, assignment, sale, merger, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any act or practice subject to this Order.",
+            "deadline": "14 days of any qualifying change, for 10 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 289,
+            "quote_end_line": 301
+          },
+          {
+            "description": "All submissions to the Commission must be emailed to Debrief@ftc.gov or sent by overnight courier (not U.S. Postal Service) to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC, with the subject line beginning: FTC v. Wyndham Worldwide Corp., et al., FTC File No. X120032.",
+            "quoted_text": "C. Unless otherwise directed by a representative of the Commission in writing, all submissions to the Commission pursuant to this Order shall be emailed to Debrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, D.C. 20580. The subject line must begin; FTC v. Wyndham Worldwide Corp., et al., Fl'C File No. X120032.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 302,
+            "quote_end_line": 308
           }
         ]
       },
@@ -251,14 +251,16 @@
         "provision_number": "V",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Defendants must maintain and make available to the Commission all materials relied upon to prepare assessments for three years after preparation.",
+        "summary": "Wyndham Worldwide Corporation, Wyndham Hotel Group LLC, and Hotels and Resorts must maintain all materials relied upon to prepare each Assessment for three years after preparation of that Assessment and make them available to the Commission upon request.",
         "requirements": [
           {
-            "description": "Maintain all materials relied upon to prepare assessments for three years and make available to Commission upon request",
-            "quoted_text": "IT IS FURTHER ORDERED that Wyndham Worldwide Corporation, Wyndham Hotel Group, LLC, and Hotels and Resorts shall maintain and upon request make available to the Commission for inspection and copying, a print or electronic copy of: For a period of three (3) years after the date of preparation of each Assessment required under Part n of this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Hotels and Resorts, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials relied upon to prepare the Assessment.",
-            "deadline": null,
+            "description": "Maintain and make available to the Commission for inspection and copying, for three (3) years after the date of preparation of each Assessment required under Part II, all materials relied upon to prepare the Assessment, including plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments.",
+            "quoted_text": "IT IS FURTHER ORDERED that Wyndham Worldwide Corporation, Wyndham Hotel Group, LLC, and Hotels and Resorts shall maintain and upon request make available to the Commission for inspection and copying, a print or electronic copy of: A. For a period of three (3) years after the date of preparation of each Assessment required under Part n of this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Hotels and Resorts, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials relied upon to prepare the Assessment.",
+            "deadline": "Retain for 3 years after each Assessment",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 310,
+            "quote_end_line": 318
           }
         ]
       },
@@ -266,36 +268,51 @@
         "provision_number": "VI",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission is authorized to monitor Defendants' compliance through discovery and compulsory process.",
+        "summary": "The Commission is authorized to seek civil discovery using Federal Rules of Civil Procedure to monitor compliance, and may use compulsory process under the FTC Act; this Part applies as long as Defendants have obligations under Parts I or II, plus three years thereafter.",
         "requirements": [
           {
-            "description": "Commission is authorized to seek discovery without further leave of Court",
-            "quoted_text": "The Commission is authorized to seek discovery, without further leave of Court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69. Defendants may assert any and all objections, defenses, rights, or privileges in the Federal Rules of Civil Procedure, the Federal Rules of Evidence, or any other applicable law, as to any such discovery request.",
+            "description": "The Commission is authorized to seek discovery without further leave of Court using Federal Rules of Civil Procedure 29, 30, 31, 33, 34, 36, 45, and 69; Defendants may assert any available objections, defenses, rights, or privileges.",
+            "quoted_text": "A. The Commission is authorized to seek discovery, without further leave of Court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69. Defendants may assert any and all objections, defenses, rights, or privileges in the Federal Rules of Civil Procedure, the Federal Rules of Evidence, or any other applicable law, as to any such discovery request.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 327,
+            "quote_end_line": 332
           },
           {
-            "description": "Commission may use compulsory process pursuant to FTC Act Sections 9 and 20",
-            "quoted_text": "Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-l. Defendants may assert any and all objections, defenses, rights, or privileges available to them, as to any such process.",
+            "description": "Nothing in this Order limits the Commission's lawful use of compulsory process under Sections 9 and 20 of the FTC Act; Defendants may assert any available objections, defenses, rights, or privileges.",
+            "quoted_text": "B. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-l. Defendants may assert any and all objections, defenses, rights, or privileges available to them, as to any such process.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 333,
+            "quote_end_line": 336
+          },
+          {
+            "description": "This Part applies so long as Defendants are subject to any obligation in Part I or II of this Order, and for three years thereafter.",
+            "quoted_text": "C. This Part shall apply so long as Defendants are subject to any obligation in Part I or II of this Order, and for three years thereafter.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 337,
+            "quote_end_line": 338
           }
         ]
       },
       {
         "provision_number": "VII",
-        "title": "Wyndham Worldwide Corporation and Wyndham Hotel Group, LLC Oversight",
+        "title": "Wyndham Worldwide Corporation and Wyndham Hotel Group, LLC Parent Obligations",
         "category": "affirmative_obligation",
-        "summary": "Wyndham Worldwide Corporation and Wyndham Hotel Group, LLC must ensure Hotels and Resorts complies with the Order while they hold it as a subsidiary, for up to 20 years.",
+        "summary": "Wyndham Worldwide Corporation and Wyndham Hotel Group LLC must ensure Hotels and Resorts complies with this Order for as long as they hold Hotels and Resorts as a subsidiary, but no longer than 20 years; their obligations cease immediately if Hotels and Resorts is no longer their subsidiary.",
         "requirements": [
           {
-            "description": "Wyndham Worldwide Corporation and Wyndham Hotel Group, LLC must ensure Hotels and Resorts complies with Order while held as subsidiary, up to 20 years",
-            "quoted_text": "IT IS FURTHER ORDERED that, so long as Wyndham Worldwide Corporation or Wyndham Hotel Group, LLC directly or indirectly holds Hotels and Resorts as a subsidiary, but in any event no longer than 20 years after entry of this Order, it shall ensure that Hotels and Resorts complies with this Order.",
-            "deadline": null,
+            "description": "So long as Wyndham Worldwide Corporation or Wyndham Hotel Group LLC directly or indirectly holds Hotels and Resorts as a subsidiary, but in any event no longer than 20 years after entry, each must ensure that Hotels and Resorts complies with this Order. If Hotels and Resorts is no longer held as a subsidiary, their obligations under this Order cease immediately, but no later than 20 years after entry.",
+            "quoted_text": "IT IS FURTHER ORDERED that, so long as Wyndham Worldwide Corporation or Wyndham Hotel Group, LLC directly or indirectly holds Hotels and Resorts as a subsidiary, but in any event no longer than 20 years after entry of this Order, it shall ensure that Hotels and Resorts complies with this Order. In the event Wyndham Worldwide Corporation or Wyndham Hotel Group, LLC no longer directly or indirectly holds Hotels and Resorts as a subsidiary, but in any event no later than 20 years after entry of this Order, the obligations of Wyndham 13 Case 2:13-cv-01887 -ES-JAD Document 283 Filed 12/11115 Page 14 of 18 PageiD: 5033 Worldwide Corporation and Wyndham Hotel Group, LLC under this Order shall cease immediately.",
+            "deadline": "Duration of subsidiary relationship, up to 20 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 341,
+            "quote_end_line": 352
           }
         ]
       },
@@ -303,21 +320,23 @@
         "provision_number": "VIII",
         "title": "Retention of Jurisdiction",
         "category": "duration",
-        "summary": "The Court retains jurisdiction over this matter for purposes of modification and enforcement of the Order.",
+        "summary": "The Court retains and has exclusive jurisdiction over this matter for purposes of modification and enforcement of this Order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction for modification and enforcement",
+            "description": "The Court shall retain jurisdiction of this matter for purposes of, and shall have exclusive jurisdiction over, any matter or proceeding involving or relating to the modification and/or enforcement of this Order.",
             "quoted_text": "IT IS Fl.JRTHER ORDERED that this Court shall and does retain jurisdiction of this matter for purposes of, and shall have exclusive jurisdiction over, any matter or proceeding involving or relating to the modification and/or enforcement of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 354,
+            "quote_end_line": 356
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "IT IS ORDERED that Hotels and Resorts shall, no later than the date of entry of this Order, establish and implement, and thereafter maintain, for twenty (20) years after entry of this Order, a comprehensive information security program"
+      "termination_text": "Hotels and Resorts shall, no later than the date of entry of this Order, establish and implement, and thereafter maintain, for twenty (20) years after entry of this Order, a comprehensive information security program... so long as there is a Cardholder Data Environment within a network that, as to Hotels and Resorts, is not an untrusted network, but in any event, for no longer than a period of twenty (20) years after entry of this Order"
     }
   },
   "metadata": {
@@ -327,11 +346,32 @@
     },
     "extraction_stats": {
       "complaint_counts": 2,
-      "complaint_representations": 3,
+      "complaint_representations": 1,
       "order_provisions": 8,
       "order_definitions": 11,
-      "order_requirements": 26
+      "order_requirements": 23,
+      "provisions_per_section": {
+        "I": 6,
+        "II": 5,
+        "III": 3,
+        "IV": 3,
+        "V": 1,
+        "VI": 3,
+        "VII": 1,
+        "VIII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 1
+      },
+      "verification_details": {
+        "complaint_verified": 1,
+        "complaint_total": 1,
+        "order_verified": 23,
+        "order_total": 23
+      }
     },
-    "processing_time_seconds": 181.2
+    "processing_time_seconds": 148.0
   }
 }

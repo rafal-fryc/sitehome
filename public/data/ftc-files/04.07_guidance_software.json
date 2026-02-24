@@ -15,42 +15,43 @@
       "William E. Kovacic",
       "J. Thomas Rosch"
     ],
-    "date_issued": "2007-03-30",
-    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)",
+    "case_date": {
+      "month": 4,
+      "year": 2007
+    },
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45 et seq",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/062-3057-guidance-software-inc-matter"
   },
   "complaint": {
-    "factual_background": "Guidance Software, Inc., a company that sells digital forensics software and services, claimed to implement reasonable security measures to protect customer information. However, from September through December 2005, a hacker exploited basic security failures including SQL injection vulnerabilities to access thousands of customers' credit card numbers, expiration dates, and security codes. The company failed to implement simple defenses against commonly known attacks despite representing that it took \"every precaution\" and used \"the best encryption software in the industry.\"",
+    "factual_background": "Guidance Software, Inc. sold computer security software and services while collecting sensitive personal information—including credit card numbers, expiration dates, and security codes—from customers via its website and corporate network. Despite publishing privacy statements claiming strong security protections, the company failed to implement reasonable safeguards: it stored sensitive data in clear readable text, did not assess or defend against common SQL injection attacks, and failed to monitor network connections or detect unauthorized access. Beginning in September 2005, a hacker exploited these failures through SQL injection attacks, installing hacking programs on the corporate network that located and transmitted thousands of customers' credit card details to outside computers. The breach continued until December 7, 2005, when the company discovered it and took remedial action.",
     "representations_made": [
       {
-        "description": "Claimed the website takes every precaution to protect users' information and uses the best encryption software in the industry",
-        "quoted_text": "This website takes every precaution to protect our users' information. When users submit sensitive information via the website, your information is protected both online and off-line. When our registration/order form asks users to enter sensitive information (such as credit card number and/or social security number), that information is encrypted and is protected with the best encryption software in the industry - SSL.",
-        "source_paragraph": 7
+        "description": "Claimed the website takes every precaution to protect user information, that sensitive information is encrypted with the best SSL encryption software in the industry, and that the company does everything in its power to protect user information off-line",
+        "quoted_text": "Security This website takes every precaution to protect our users' information. When users submit sensitive information via the website, your information is protected both online and off-line. When our registration/order form asks users to enter sensitive information (such as credit card number and/or social security number), that information is encrypted and is protected with the best encryption software in the industry - SSL. While on a secure page, such as our order form, the lock icon on the bottom of Web browsers such as Netscape Navigator and Microsoft Internet Explorer becomes locked, as opposed to un-locked, or open, when you are just 'surfing'. . . . While we use SSL encryption to protect sensitive information online, we also do everything in our power to protect user-information off-line. . . . (Exhibit A, Guidance Software Privacy Statement accessible through respondent’s corporate website, January 1, 2004 (emphasis in original)).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 7,
+        "quote_start_line": 44,
+        "quote_end_line": 56
       },
       {
-        "description": "Claimed to protect user information offline and do everything in their power to protect it",
-        "quoted_text": "While we use SSL encryption to protect sensitive information online, we also do everything in our power to protect user-information off-line.",
-        "source_paragraph": 7
-      },
-      {
-        "description": "Claimed commitment to keeping data secure and taking reasonable precautions to protect information from loss, misuse or alteration",
-        "quoted_text": "Guidance Software is committed to keeping the data you provide us secure and will take reasonable precautions to protect your information from loss, misuse or alteration.",
-        "source_paragraph": 7
-      },
-      {
-        "description": "Represented that it implemented reasonable and appropriate measures to protect sensitive personal information against unauthorized access",
-        "quoted_text": "Through the means described in Paragraph 7, respondent represented, expressly or by implication, that it implemented reasonable and appropriate measures to protect sensitive personal information it obtained from customers against unauthorized access.",
-        "source_paragraph": 11
+        "description": "Claimed to be committed to keeping customer data secure and to taking reasonable precautions to protect information from loss, misuse, or alteration",
+        "quoted_text": "Guidance Software is committed to keeping the data you provide us secure and will take reasonable precautions to protect your information from loss, misuse or alteration. (Exhibit B, Guidance Software Privacy Policy accessible through respondent’s online store, July 19, 2003).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 7,
+        "quote_start_line": 57,
+        "quote_end_line": 60
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Deceptive Security Practices",
-        "representation": "Respondent represented that it implemented reasonable and appropriate measures to protect sensitive personal information it obtained from customers against unauthorized access",
-        "fact": "Respondent did not implement reasonable and appropriate measures to protect sensitive personal information it obtained from customers against unauthorized access. In particular, respondent failed to implement procedures that were reasonable and appropriate to: (1) detect reasonably foreseeable web application vulnerabilities, and (2) prevent attackers from exploiting such vulnerabilities and obtaining unauthorized access to sensitive personal information",
-        "conclusion": "Therefore, the representation set forth in Paragraph 7 was, and is, false or misleading."
+        "title": "Data Security Misrepresentation",
+        "representation": "Respondent represented, expressly or by implication, that it implemented reasonable and appropriate measures to protect sensitive personal information obtained from customers against unauthorized access.",
+        "fact": "Respondent did not implement reasonable and appropriate measures to protect sensitive personal information against unauthorized access. In particular, it failed to implement procedures to detect reasonably foreseeable web application vulnerabilities and to prevent attackers from exploiting such vulnerabilities.",
+        "conclusion": "Therefore, the representation set forth in Paragraph 7 was, and is, false or misleading, constituting deceptive acts or practices in violation of Section 5(a) of the Federal Trade Commission Act."
       }
     ]
   },
@@ -65,14 +66,16 @@
         "provision_number": "I",
         "title": "Prohibition Against Misrepresentations About Security",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent the extent to which it maintains and protects the privacy, confidentiality, security, or integrity of personal information collected from or about consumers.",
+        "summary": "Respondent must not misrepresent in any manner, expressly or by implication, the extent to which it maintains and protects the privacy, confidentiality, security, or integrity of personal information collected from consumers.",
         "requirements": [
           {
-            "description": "Must not misrepresent security practices for personal information",
+            "description": "Must not misrepresent the extent to which respondent maintains and protects the privacy, confidentiality, security, or integrity of any personal information collected from or about consumers, in connection with online advertising, marketing, promotion, offering for sale, or sale of any product or service in or affecting commerce",
             "quoted_text": "IT IS ORDERED that respondent, directly or through any corporation, subsidiary, division, or other device, in connection with the online advertising, marketing, promotion, offering for sale, or sale of any product or service, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication, the extent to which respondent maintains and protects the privacy, confidentiality, security, or integrity of any personal information collected from or about consumers.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 60,
+            "quote_end_line": 64
           }
         ]
       },
@@ -80,113 +83,141 @@
         "provision_number": "II",
         "title": "Comprehensive Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondent must establish, implement, and maintain a comprehensive written information security program with administrative, technical, and physical safeguards appropriate to its size, complexity, activities, and the sensitivity of personal information collected.",
+        "summary": "Respondent must establish, implement, and maintain a comprehensive information security program, fully documented in writing, with administrative, technical, and physical safeguards appropriate to the sensitivity of personal information collected.",
         "requirements": [
           {
-            "description": "Establish and implement comprehensive information security program",
-            "quoted_text": "IT IS ORDERED that respondent, directly or through any corporation, subsidiary, division, or other device, in connection with the advertising, marketing, promotion, offering for sale, or sale of any product or service, in or affecting commerce, shall, no later than the date of service of this order, establish and implement, and thereafter maintain, a comprehensive information security program that is reasonably designed to protect the security, confidentiality, and integrity of personal information collected from or about consumers. Such program, the content and implementation of which must be fully documented in writing, shall contain administrative, technical, and physical safeguards appropriate to respondent's size and complexity, the nature and scope of respondent's activities, and the sensitivity of the personal information collected from or about consumers",
-            "deadline": "no later than the date of service of this order",
+            "description": "Establish and implement a comprehensive information security program reasonably designed to protect the security, confidentiality, and integrity of personal information; the program must be fully documented in writing and contain appropriate administrative, technical, and physical safeguards",
+            "quoted_text": "IT IS ORDERED that respondent, directly or through any corporation, subsidiary, division, Page 2 of 6 or other device, in connection with the advertising, marketing, promotion, offering for sale, or sale of any product or service, in or affecting commerce, shall, no later than the date of service of this order, establish and implement, and thereafter maintain, a comprehensive information security program that is reasonably designed to protect the security, confidentiality, and integrity of personal information collected from or about consumers. Such program, the content and implementation of which must be fully documented in writing, shall contain administrative, technical, and physical safeguards appropriate to respondent’s size and complexity, the nature and scope of respondent’s activities, and the sensitivity of the personal information collected from or about consumers, including:",
+            "deadline": "date of service of this order",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 66,
+            "quote_end_line": 78
           },
           {
-            "description": "Designate employee(s) to coordinate and be accountable for the information security program",
-            "quoted_text": "the designation of an employee or employees to coordinate and be accountable for the information security program.",
+            "description": "Designate an employee or employees to coordinate and be accountable for the information security program",
+            "quoted_text": "A. the designation of an employee or employees to coordinate and be accountable for the information security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 79,
+            "quote_end_line": 80
           },
           {
-            "description": "Identify and assess material internal and external risks to personal information security",
-            "quoted_text": "the identification of material internal and external risks to the security, confidentiality, and integrity of personal information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management; (2) information systems, including network and software design, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, or other systems failures.",
+            "description": "Identify material internal and external risks to the security, confidentiality, and integrity of personal information, and assess sufficiency of safeguards in place to control those risks, including consideration of employee training and management, information systems, and prevention/detection/response to attacks",
+            "quoted_text": "B. the identification of material internal and external risks to the security, confidentiality, and integrity of personal information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management; (2) information systems, including network and software design, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, or other systems failures.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 81,
+            "quote_end_line": 89
           },
           {
-            "description": "Design and implement reasonable safeguards and regularly test or monitor their effectiveness",
-            "quoted_text": "the design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures.",
+            "description": "Design and implement reasonable safeguards to control identified risks, and regularly test or monitor the effectiveness of the safeguards' key controls, systems, and procedures",
+            "quoted_text": "C. the design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing or monitoring of the effectiveness of the safeguards’ key controls, systems, and procedures.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 90,
+            "quote_end_line": 92
           },
           {
-            "description": "Retain capable service providers, require them by contract to implement safeguards, and monitor their performance",
-            "quoted_text": "the development and use of reasonable steps to retain service providers capable of appropriately safeguarding personal information they receive from respondent, requiring service providers by contract to implement and maintain appropriate safeguards, and monitoring their safeguarding of personal information.",
+            "description": "Take reasonable steps to retain service providers capable of safeguarding personal information, require service providers by contract to implement and maintain appropriate safeguards, and monitor their safeguarding of personal information",
+            "quoted_text": "D. the development and use of reasonable steps to retain service providers capable of appropriately safeguarding personal information they receive from respondent, requiring service providers by contract to implement and maintain appropriate safeguards, and monitoring their safeguarding of personal information.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 93,
+            "quote_end_line": 96
           },
           {
-            "description": "Evaluate and adjust the information security program based on testing results, operational changes, and other material circumstances",
-            "quoted_text": "the evaluation and adjustment of respondent's information security program in light of the results of the testing and monitoring required by subparagraph C, any material changes to respondent's operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its information security program.",
+            "description": "Evaluate and adjust the information security program in light of testing and monitoring results, material changes to operations or business arrangements, or other circumstances that may have a material impact on the effectiveness of the program",
+            "quoted_text": "E. the evaluation and adjustment of respondent’s information security program in light of the results of the testing and monitoring required by subparagraph C, any material changes to respondent’s operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its information security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 97,
+            "quote_end_line": 101
           }
         ]
       },
       {
         "provision_number": "III",
-        "title": "Third-Party Assessments",
+        "title": "Third-Party Security Assessments",
         "category": "assessment",
-        "summary": "Respondent must obtain initial and biennial third-party assessments of its information security program from qualified professionals for ten years, with the initial assessment covering the first 180 days and subsequent assessments every two years.",
+        "summary": "Respondent must obtain initial and biennial third-party security assessments from a qualified, independent professional covering the first 180 days after service of the order and each two-year period thereafter for ten years.",
         "requirements": [
           {
-            "description": "Obtain initial assessment covering first 180 days after service of order",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Paragraph II of this order, respondent shall obtain initial and biennial assessments and reports (\"Assessments\") from a qualified, objective, independent third-party professional, using procedures and standards generally accepted in the profession. The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the order for the initial Assessment, and (2) each two (2) year period thereafter for ten (10) years after service of the order for the biennial Assessments.",
-            "deadline": "180 days",
+            "description": "Obtain an initial third-party Assessment covering the first 180 days after service of the order, using procedures and standards generally accepted in the profession, performed by a qualified, objective, independent third-party professional",
+            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Paragraph II of this order, respondent shall obtain initial and biennial assessments and reports (“Assessments”) from a qualified, objective, independent third-party professional, using procedures and standards generally Page 3 of 6 accepted in the profession. The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the order for the initial Assessment, and (2) each two (2) year period thereafter for ten (10) years after service of the order for the biennial Assessments.",
+            "deadline": "180 days after service of order (reporting period)",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 103,
+            "quote_end_line": 111
           },
           {
-            "description": "Each assessment must set forth implemented safeguards",
-            "quoted_text": "set forth the specific administrative, technical, and physical safeguards that respondent has implemented and maintained during the reporting period;",
+            "description": "Each Assessment must set forth specific administrative, technical, and physical safeguards implemented and maintained during the reporting period",
+            "quoted_text": "A. set forth the specific administrative, technical, and physical safeguards that respondent has implemented and maintained during the reporting period;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 113,
+            "quote_end_line": 114
           },
           {
-            "description": "Each assessment must explain appropriateness of safeguards",
-            "quoted_text": "explain how such safeguards are appropriate to respondent's size and complexity, the nature and scope of respondent's activities, and the sensitivity of the personal information collected from or about consumers;",
+            "description": "Each Assessment must explain how the safeguards are appropriate to respondent's size and complexity, nature and scope of activities, and sensitivity of personal information collected",
+            "quoted_text": "B. explain how such safeguards are appropriate to respondent’s size and complexity, the nature and scope of respondent’s activities, and the sensitivity of the personal information collected from or about consumers;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 115,
+            "quote_end_line": 117
           },
           {
-            "description": "Each assessment must explain how safeguards meet or exceed Paragraph II requirements",
-            "quoted_text": "explain how the safeguards that have been implemented meet or exceed the protections required by Paragraph II of this order; and",
+            "description": "Each Assessment must explain how the implemented safeguards meet or exceed the protections required by Paragraph II of the order",
+            "quoted_text": "C. explain how the safeguards that have been implemented meet or exceed the protections required by Paragraph II of this order; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 118,
+            "quote_end_line": 119
           },
           {
-            "description": "Each assessment must certify effectiveness of security program",
-            "quoted_text": "certify that respondent's security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of personal information is protected and has so operated throughout the reporting period.",
+            "description": "Each Assessment must certify that respondent's security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of personal information is protected throughout the reporting period",
+            "quoted_text": "D. certify that respondent’s security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of personal information is protected and has so operated throughout the reporting period.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 120,
+            "quote_end_line": 122
           },
           {
-            "description": "Each assessment must be prepared within 60 days after end of reporting period by qualified professional",
+            "description": "Each Assessment must be prepared and completed within sixty (60) days after the end of the reporting period by a person qualified as a CISSP or CISA, a GIAC-certified person, or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, FTC",
             "quoted_text": "Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies by a person qualified as a Certified Information System Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); a person holding Global Information Assurance Certification (GIAC) from the SysAdmin, Audit, Network, Security (SANS) Institute; or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580.",
-            "deadline": "60 days",
+            "deadline": "60 days after end of each reporting period",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 123,
+            "quote_end_line": 129
           },
           {
-            "description": "Provide initial assessment and supporting materials to FTC within 10 days after preparation",
-            "quoted_text": "Respondent shall provide the initial Assessment, as well as all: plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, whether prepared by or on behalf of respondent, relied upon to prepare such Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared.",
-            "deadline": "10 days",
+            "description": "Provide the initial Assessment along with all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments relied upon to prepare it to the Associate Director for Enforcement, FTC, within ten (10) days after the Assessment has been prepared",
+            "quoted_text": "Respondent shall provide the initial Assessment, as well as all: plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, whether prepared by or on behalf of respondent, relied upon to prepare such Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared. All subsequent biennial Assessments shall be",
+            "deadline": "10 days after Assessment is prepared",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 130,
+            "quote_end_line": 134
           },
           {
-            "description": "Retain subsequent biennial assessments until order terminates and provide to FTC within 10 days of request",
-            "quoted_text": "All subsequent biennial Assessments shall be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request.",
-            "deadline": "10 days",
+            "description": "Retain all subsequent biennial Assessments until the order is terminated and provide them to the Associate Director of Enforcement within ten (10) days of request",
+            "quoted_text": "(10) days after the Assessment has been prepared. All subsequent biennial Assessments shall be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request.",
+            "deadline": "10 days of request",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 134,
+            "quote_end_line": 136
           }
         ]
       },
@@ -194,43 +225,51 @@
         "provision_number": "IV",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must maintain and make available to the FTC documents relating to compliance, including documents that contradict compliance for five years and assessment-related materials for three years after each biennial assessment.",
+        "summary": "Respondent must maintain and make available to the FTC documents relating to compliance, including documents contradicting compliance for five years and all materials relating to biennial Assessments for three years after preparation of each Assessment.",
         "requirements": [
           {
-            "description": "Maintain for 5 years any documents that contradict, qualify, or call into question compliance with the order",
-            "quoted_text": "for a period of five (5) years: any documents, whether prepared by or on behalf of respondent, that contradict, qualify, or call into question respondent's compliance with this order; and",
-            "deadline": null,
+            "description": "Maintain and make available to the FTC for inspection and copying any documents that contradict, qualify, or call into question respondent's compliance with this order for a period of five (5) years",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall maintain, and upon request make available to the Federal Trade Commission for inspection and copying, a print or electronic copy of each document relating to compliance, including but not limited to: A. for a period of five (5) years: any documents, whether prepared by or on behalf of respondent, that contradict, qualify, or call into question respondent’s compliance with this Page 4 of 6 order; and",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 0.9917486338797814
+            "confidence": 0.85,
+            "quote_start_line": 138,
+            "quote_end_line": 146
           },
           {
-            "description": "Maintain for 3 years after each biennial assessment all plans, reports, studies, reviews, audits, policies, and training materials relating to compliance with Paragraphs II and III",
-            "quoted_text": "for a period of three (3) years after the date of preparation of each biennial Assessment required under Paragraph III of this order: all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, whether prepared by or on behalf of respondent, relating to respondent's compliance with Paragraphs II and III of this order for the compliance period covered by such biennial Assessment.",
-            "deadline": null,
+            "description": "Maintain and make available to the FTC all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments relating to compliance with Paragraphs II and III for a period of three (3) years after the date of preparation of each biennial Assessment",
+            "quoted_text": "B. for a period of three (3) years after the date of preparation of each biennial Assessment required under Paragraph III of this order: all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, whether prepared by or on behalf of respondent, relating to respondent’s compliance with Paragraphs II and III of this order for the compliance period covered by such biennial Assessment.",
+            "deadline": "3 years after date of preparation of each biennial Assessment",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 147,
+            "quote_end_line": 151
           }
         ]
       },
       {
         "provision_number": "V",
-        "title": "Order Distribution and Acknowledgment",
+        "title": "Order Delivery and Acknowledgment",
         "category": "acknowledgment",
-        "summary": "Respondent must deliver a copy of the order to all current and future principals, officers, directors, managers, and employees with managerial responsibilities relating to the subject matter of the order.",
+        "summary": "Respondent must deliver a copy of this order to all current and future principals, officers, directors, managers, and employees with managerial responsibilities related to the order's subject matter, within specified timeframes.",
         "requirements": [
           {
-            "description": "Deliver order to current personnel with managerial responsibilities within 30 days after service",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having managerial responsibilities relating to the subject matter of this order. Respondent shall deliver this order to such current personnel within thirty (30) days after service of this order",
-            "deadline": "30 days",
+            "description": "Deliver a copy of this order to all current principals, officers, directors, managers, and employees, agents, and representatives having managerial responsibilities relating to the subject matter of this order within thirty (30) days after service of this order",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having managerial responsibilities relating to the subject matter of this order. Respondent shall deliver this order to such current personnel within thirty (30) days after service of this order, and to such future personnel within thirty (30) days after the person assumes",
+            "deadline": "30 days after service of order",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 153,
+            "quote_end_line": 157
           },
           {
-            "description": "Deliver order to future personnel within 30 days after they assume relevant positions or responsibilities",
-            "quoted_text": "Respondent shall deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having managerial responsibilities relating to the subject matter of this order. and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
-            "deadline": "30 days",
+            "description": "Deliver a copy of this order to all future principals, officers, directors, managers, and employees, agents, and representatives having managerial responsibilities relating to the subject matter of this order within thirty (30) days after the person assumes such position or responsibilities",
+            "quoted_text": "service of this order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "deadline": "30 days after person assumes position",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 157,
+            "quote_end_line": 158
           }
         ]
       },
@@ -238,21 +277,25 @@
         "provision_number": "VI",
         "title": "Corporate Change Notification",
         "category": "compliance_reporting",
-        "summary": "Respondent must notify the Commission at least 30 days prior to any corporate changes that may affect compliance obligations, including dissolution, merger, bankruptcy, or name and address changes.",
+        "summary": "Respondent must notify the FTC at least 30 days prior to any corporate change that may affect compliance obligations under this order, such as dissolution, merger, sale, name change, or bankruptcy filing.",
         "requirements": [
           {
-            "description": "Notify Commission at least 30 days prior to any corporate change affecting compliance obligations",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in either corporate name or address.",
-            "deadline": "30 days",
+            "description": "Notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations, including dissolution, assignment, sale, merger, emergence of a successor corporation, creation or dissolution of a subsidiary/parent/affiliate, proposed bankruptcy filing, or change in corporate name or address",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in either corporate name or address. Provided, however, that, with respect to any proposed change in the corporation about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge. All notices required by this Paragraph shall be sent by certified mail to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580.",
+            "deadline": "30 days prior to corporate change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 160,
+            "quote_end_line": 170
           },
           {
-            "description": "If learning of corporate change less than 30 days before it occurs, notify Commission as soon as practicable",
-            "quoted_text": "Provided, however, that, with respect to any proposed change in the corporation about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
-            "deadline": null,
+            "description": "If respondent learns of a proposed corporate change less than thirty (30) days before it is to take place, notify the Commission as soon as practicable after obtaining such knowledge; all notices must be sent by certified mail to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, FTC",
+            "quoted_text": "a bankruptcy petition; or a change in either corporate name or address. Provided, however, that, with respect to any proposed change in the corporation about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge. All notices required by this Paragraph shall be sent by certified mail to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580.",
+            "deadline": "as soon as practicable",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 165,
+            "quote_end_line": 170
           }
         ]
       },
@@ -260,36 +303,40 @@
         "provision_number": "VII",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondent must file an initial written compliance report with the Commission within 180 days after service of the order and at such other times as the Commission may require.",
+        "summary": "Respondent must file an initial written compliance report with the FTC within 180 days after service of the order, and at such other times as the Commission may require.",
         "requirements": [
           {
-            "description": "File initial written compliance report within 180 days after service of order",
+            "description": "File an initial written report with the Commission within one hundred and eighty (180) days after service of this order, setting forth in detail the manner and form in which respondent has complied with this order; additional reports must be filed at such other times as the Commission may require",
             "quoted_text": "IT IS FURTHER ORDERED that respondent shall, within one hundred and eighty (180) days after service of this order, and at such other times as the Commission may require, file with the Commission an initial report, in writing, setting forth in detail the manner and form in which it has complied with this order.",
-            "deadline": "180 days",
+            "deadline": "180 days after service of order",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 172,
+            "quote_end_line": 175
           }
         ]
       },
       {
         "provision_number": "VIII",
-        "title": "Order Duration and Termination",
+        "title": "Order Duration",
         "category": "duration",
-        "summary": "The order will terminate on March 30, 2027, or 20 years from the most recent date the U.S. or FTC files a complaint alleging violation of the order, whichever comes later.",
+        "summary": "This order terminates on March 30, 2027, or twenty years from the most recent date the FTC files a complaint alleging any violation of the order in federal court, whichever is later.",
         "requirements": [
           {
-            "description": "Order terminates on March 30, 2027, or 20 years from most recent complaint filing, whichever is later",
-            "quoted_text": "This order will terminate on March 30th, 2027, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Paragraph in this order that terminates in less than twenty (20) years; B. this order's application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Paragraph.",
-            "deadline": null,
+            "description": "Order terminates on March 30th, 2027, or twenty (20) years from the most recent date that the United States or the FTC files a complaint in federal court alleging any violation of the order, whichever comes later; with specified exceptions for paragraphs terminating sooner, non-named respondents, and orders already terminated",
+            "quoted_text": "This order will terminate on March 30th, 2027, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes Page 5 of 6 later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Paragraph in this order that terminates in less than twenty (20) years; B. this order’s application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Paragraph. Provided, further, that if such complaint is dismissed or a federal court rules that respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Paragraph as though the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "deadline": "March 30, 2027 or 20 years from most recent complaint",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 177,
+            "quote_end_line": 194
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This order will terminate on March 30th, 2027, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Paragraph in this order that terminates in less than twenty (20) years; B. this order's application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Paragraph. Provided, further, that if such complaint is dismissed or a federal court rules that respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Paragraph as though the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal."
+      "termination_text": "This order will terminate on March 30th, 2027, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Paragraph in this order that terminates in less than twenty (20) years; B. this order's application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Paragraph."
     }
   },
   "metadata": {
@@ -299,11 +346,32 @@
     },
     "extraction_stats": {
       "complaint_counts": 1,
-      "complaint_representations": 4,
+      "complaint_representations": 2,
       "order_provisions": 8,
       "order_definitions": 3,
-      "order_requirements": 23
+      "order_requirements": 23,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 6,
+        "III": 8,
+        "IV": 2,
+        "V": 2,
+        "VI": 2,
+        "VII": 1,
+        "VIII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 2,
+        "complaint_total": 2,
+        "order_verified": 23,
+        "order_total": 23
+      }
     },
-    "processing_time_seconds": 114.5
+    "processing_time_seconds": 98.0
   }
 }

@@ -6,21 +6,124 @@
       "incorporation_state": "Illinois",
       "entity_type": "corporation",
       "address": "360 Shore Dr. Unit B, Burr Ridge, IL 60527",
-      "business_description": "Easy Healthcare developed and published Premom, an ovulation tracker, period tracker, and pregnancy resource app for those trying to conceive. The company also produces and sells ovulation test kits that rank as bestsellers on Amazon and encourage users to download the Premom app."
+      "business_description": "Easy Healthcare developed and published Premom, a mobile application that functions as an ovulation tracker, period tracker, and pregnancy resource for those trying to conceive. The app allows users to input and track personal and health information, upload pictures of ovulation test strips for analysis, and import health data from other devices or apps."
     },
     "commissioners": [],
     "case_date": {
       "month": 6,
       "year": 2023
     },
-    "legal_authority": "Sections 5(a)(1), 5(m)(1)(A), 13(b), 16(a)(1), and 19 of the Federal Trade Commission Act (FTC Act), 15 U.S.C. §§ 45(a)(1), 45(m)(1)(A), 53(b), 56(a)(1), 57b, and the Health Breach Notification Rule, 16 C.F.R. § 318",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a), and the Health Breach Notification Rule, 16 C.F.R. § 318",
     "violation_type": "both",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/202-3186-easy-healthcare-corporation-us-v"
   },
   "complaint": {
-    "factual_background": "",
-    "representations_made": [],
-    "counts": []
+    "factual_background": "Easy Healthcare Corporation developed and distributed the Premom Ovulation Tracker app, which collected extensive sensitive health information from hundreds of thousands of women, including menstrual cycle data, fertility status, pregnancy information, and hormone results. Between 2017 and 2020, Defendant repeatedly promised users in privacy policies that their health information would not be shared with third parties without their knowledge or consent, that only non-identifiable data would be shared, and that data would be used solely for Defendant's own analytics and advertising. In reality, Defendant shared users' identifiable health information with Google and AppsFlyer through descriptive Custom App Events sent in plain text, and also shared users' sensitive identifiable data—including non-resettable device identifiers, social media account information, and precise geolocation data—with Chinese analytics firms Umeng and Jiguang, which were contractually permitted to use the data for their own advertising purposes. Defendant failed to implement reasonable privacy and data security measures, including failing to assess SDK privacy risks, encrypt transferred data, or audit third-party data practices. Despite experiencing breaches of unsecured personal health record information since at least 2017, Defendant never provided the required notifications to affected consumers, the FTC, or the media as mandated by the Health Breach Notification Rule.",
+    "representations_made": [
+      {
+        "description": "Promised users it would never share their exact age or any health-related data with third parties without their consent or knowledge",
+        "quoted_text": "without user consent. For example, in a privacy policy dated July 7, 2020, Defendant stated in a paragraph set off from other paragraphs: “WE PROMISE WE WILL NEVER SHARE YOUR EXACT AGE OR ANY DATA RELATED TO YOUR HEALTH WITH ANY THIRD PARTIES WITHOUT YOUR CONSENT OR KNOWLEDGE.”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 19,
+        "quote_start_line": 153,
+        "quote_end_line": 156
+      },
+      {
+        "description": "Represented that AppsFlyer only handles non-health personal data and that third-party services do not have access to users' health information through the app's services",
+        "quoted_text": "20. Second, since at least December 13, 2021, Defendant has stated in their in-app and website privacy policy that “Premom uses AppsFlyer, a mobile marketing platform based in the United States, to handle non-health Personal Data” and that “third party services do not have 6 Case: 1:23-cv-03107 Document #: 1 Filed: 05/17/23 Page 7 of 29 PageID #:7 access to your health information through the Services unless you share that information directly with them.”",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 20,
+        "quote_start_line": 157,
+        "quote_end_line": 165
+      },
+      {
+        "description": "Represented that it shared only non-identifiable data with third parties and that its analytics software identifies users solely by IP address",
+        "quoted_text": "21. Third, Defendant also represented that it would share only “non-identifiable data” with third parties. Between May 2017 and July 2020, Premom’s privacy policy posted on its website represented that it collected and shared Premom users’ “nonidentifiable information for purposes of tracking analytics of the usage of [its] application.” Premom’s privacy policy represented that its use of third-party analytics software and software development kits “identifies a user solely by IP address.”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 21,
+        "quote_start_line": 166,
+        "quote_end_line": 171
+      },
+      {
+        "description": "When requesting location access to pair Bluetooth thermometers, prompted users to share location without disclosing that geolocation data would be shared with third parties",
+        "quoted_text": "22. Fourth, when a user wanted to connect a Bluetooth thermometer to Premom, Defendant prompted users with the following statement: “Please allow Premom to access your location and turn on the GPS for Bluetooth so it can find your thermometer” and asked users to “Allow Premom to access this device’s location?” However, Defendant did not disclose in this prompt that it shared Premom users’ location information with third parties.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 22,
+        "quote_start_line": 172,
+        "quote_end_line": 176
+      },
+      {
+        "description": "Represented that user data would be used only for Defendant's own analytics, advertising, and purposes outlined in its privacy policy, and not for any other purposes",
+        "quoted_text": "23. Finally, Defendant represented that Premom users’ data would be used only for Defendant’s own analytics and advertising. Between May 2017 and July 2020, the privacy policy posted on Premom’s website stated that it collected users’ data to “[c]ustomize, measure and improve our services, content and advertising,” and to “[e]valuate your use, preferences and trends for our own internal statistical and analytical purposes which we may use for marketing purposes. . . .” Defendant further represented that it “will not use your personal information for any purposes, other than those outlined in” Defendant’s privacy policy or terms of service.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 23,
+        "quote_start_line": 177,
+        "quote_end_line": 183
+      }
+    ],
+    "counts": [
+      {
+        "count_number": 1,
+        "title": "Privacy Misrepresentation – Disclosures of Health Information",
+        "representation": "Defendant represented that it would not disclose consumers' health information to third parties without their knowledge or consent, that AppsFlyer would not receive consumers' health information, and that third-party services would not receive consumers' health information unless the consumer shared it directly with them",
+        "fact": "Defendant did disclose consumers' health information to AppsFlyer and Google through Custom App Events that conveyed users' fertility, pregnancy, and other health data",
+        "conclusion": "Defendant's representations as set forth in Paragraph 67 are false or misleading and constitute a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)"
+      },
+      {
+        "count_number": 2,
+        "title": "Privacy Misrepresentation – Sharing Data with Third Parties",
+        "representation": "Defendant represented that it shared only non-identifiable information with third parties and that these third parties tracked users only by IP address",
+        "fact": "Defendant disclosed identifiable information to third parties—including social media account information via U-Share SDK, device identifiers that could identify users, and precise geolocation information—enabling tracking by means other than IP address",
+        "conclusion": "Defendant's representations as set forth in Paragraph 70 are false and misleading and constitute a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)"
+      },
+      {
+        "count_number": 3,
+        "title": "Deceptive Failure to Disclose – Sharing Geolocation Information with Third Parties",
+        "representation": "Defendant represented that consumers needed to turn on location sharing so that Premom could locate consumers' Bluetooth thermometers",
+        "fact": "Defendant failed to disclose that it conveyed users' geolocation information to Umeng and Jiguang, which could use and transfer that information for their own purposes including third-party advertising",
+        "conclusion": "In light of the representations made, Defendant's failure to disclose this material information constitutes a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)"
+      },
+      {
+        "count_number": 4,
+        "title": "Privacy Misrepresentation – Third Parties' Use of Shared Data",
+        "representation": "Defendant represented that it would not use Premom users' information for any purpose other than those outlined in its privacy policies and terms of service, and that data would be used and shared only for Defendant's own analytics and advertising",
+        "fact": "Defendant incorporated U-Share and JPush SDKs into Premom, thereby conveying users' personal information to Umeng and Jiguang, which could use the data for their own purposes such as third-party advertising",
+        "conclusion": "Defendant's representations as set forth in Paragraphs 76 and 77 are false and constitute a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)"
+      },
+      {
+        "count_number": 5,
+        "title": "Deceptive Failure to Disclose – Third Parties' Use of Shared Data",
+        "representation": "Defendant represented that user data would be used and shared for Defendant's own analytics and advertising",
+        "fact": "Defendant failed to disclose that by incorporating U-Share and JPush, it conveyed users' personal information to Umeng and Jiguang, which could use and transfer the data for their own purposes including third-party advertising",
+        "conclusion": "In light of the representations made, Defendant's failure to disclose this material information constitutes a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)"
+      },
+      {
+        "count_number": 6,
+        "title": "Unfair Privacy and Data Security Practices",
+        "representation": "Defendant incorporated third-party SDKs into Premom without taking reasonable measures to assess and address the associated privacy and data security risks",
+        "fact": "Defendant failed to assess SDK privacy risks prior to incorporation, failed to monitor changes in SDK publishers' privacy policies, failed to audit data collection practices, failed to enforce internal privacy compliance programs, failed to develop secure SDK implementation policies, and failed to provide adequate privacy training",
+        "conclusion": "Defendant's acts or practices constitute unfair acts or practices in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)"
+      },
+      {
+        "count_number": 7,
+        "title": "Unfair Sharing of Health Information for Advertising Purposes Without Affirmative Express Consent",
+        "representation": "Defendant failed to encrypt or label Premom users' Custom App Events, resulting in the transfer of users' personal health information to Google and AppsFlyer without users' knowledge, notice, or affirmative express consent",
+        "fact": "Because Defendant failed to encrypt or label Custom App Events, descriptive health-related event titles were transmitted in plain text to third parties, constituting unauthorized disclosure of users' sensitive health information",
+        "conclusion": "Defendant's acts or practices constitute an unfair act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)"
+      },
+      {
+        "count_number": 8,
+        "title": "Violation of the Health Breach Notification Rule",
+        "representation": "Defendant, as a vendor of personal health records, experienced breaches of security of more than 500 consumers' unsecured PHR identifiable health information through unauthorized disclosure of Custom App Event titles to third parties such as Google and AppsFlyer",
+        "fact": "Defendant failed to provide required notifications to: (1) individuals whose unsecured PHR identifiable health information was acquired by an unauthorized person; (2) the Federal Trade Commission; or (3) media outlets, as required by 16 C.F.R. §§ 318.3–6",
+        "conclusion": "Defendant's acts or practices constitute deceptive and unfair acts or practices that violate Section 5(a) of the FTC Act, 15 U.S.C. § 45(a), and violate the Health Breach Notification Rule, 16 C.F.R. § 318"
+      }
+    ]
   },
   "order": {
     "definitions": {
@@ -28,13 +131,13 @@
       "Affirmative Express Consent": "any freely given, specific, informed, and unambiguous indication of an individual's wishes demonstrating agreement by the individual, such as by a clear affirmative action, following a Clear and Conspicuous disclosure to the individual, apart from any \"privacy policy,\" \"terms of service,\" \"terms of use,\" or other similar document, of all information material to the provision of consent. Acceptance of a general or broad terms of use or similar document that contains descriptions of agreement by the individual along with other, unrelated information, does not constitute Affirmative Express Consent. Hovering over, muting, pausing, or closing a given piece of content does not constitute Affirmative Express Consent. Likewise, agreement obtained through use of a user interface designed or manipulated with the substantial effect of subverting or impairing user autonomy, decision-making, or choice, does not constitute Affirmative Express Consent.",
       "App Event": "any data disclosed to, or collected by, a third party via its Software Development Kit, application programing interface, pixel, or other method for tracking users' interactions with Defendant's services or products.",
       "Breach of Security": "with respect to Unsecured PHR Identifiable Health Information of an individual in a Personal Health Record, any acquisition of such information without the authorization of the individual. Unauthorized acquisition will be presumed to include unauthorized access to unsecured PHR identifiable health information unless the vendor of personal health records, PHR related entity, or third party service provider that experienced the breach has reliable evidence showing that there has not been, or could not reasonably have been, unauthorized acquisition of such information.",
-      "Clear and Conspicuous": "that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: (1) In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure is made in only one means. (2) A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. (3) An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. (4) In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. (5) The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the representation that requires the disclosure appears. (6) The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. (7) The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. (8) When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
+      "Clear and Conspicuous": "a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: (1) In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure is made in only one means. (2) A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. (3) An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. (4) In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. (5) The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the representation that requires the disclosure appears. (6) The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. (7) The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. (8) When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
       "Covered Business": "Defendant, any business that Defendant controls, directly or indirectly.",
       "Covered Incident": "any instance of a violation of Section I, II, or III of this Order.",
       "Covered Information": "information from or about an individual consumer including, but not limited to Personal Information, Health Information, or PHR Identifiable Health Information.",
       "Covered User": "any individual consumer who downloaded or used the Premom Ovulation Tracker mobile application.",
       "Defendant": "Easy Healthcare Corporation, a corporation, also doing business as Easy Healthcare, and its successors and assigns.",
-      "Delete": "to remove Covered Information such that it is not maintained in retrievable form and cannot be retrieved in the normal course of business.",
+      "Delete / Deleted / Deletion": "to remove Covered Information such that it is not maintained in retrievable form and cannot be retrieved in the normal course of business.",
       "Health Care Provider": "a provider of services (as defined in 42 U.S.C. § 1395x(u)), a provider of medical or other services (as defined in 42 U.S.C. § 1395x(s)), and any other person furnishing healthcare services or supplies.",
       "Health Information": "medical records and other individually identifiable information relating to the past, present, or future physical or mental health or conditions of an individual, the provision of health care to an individual, or the past, present, or future payment for the provision of health care to an individual. It includes, but is not limited to, information concerning fertility, menstruation, sexual activity, pregnancy, and childbirth. It also includes any individually identifiable information relating to health that is derived or extrapolated from non-health information (e.g., proxy, derivative, inferred, emergent, or algorithmic data). Health Information includes PHR Identifiable Health Information, as defined below, and Health Information associated with Personal Information, as defined below.",
       "Individually Identifiable Health Information": "any information, including demographic information, collected from an individual that: (1) is created or received by a Health Care Provider, health plan, employer, or health care clearinghouse; and (2) relates to the past, present, or future physical or mental health or condition of an individual, the provision of health care to an individual, or the past, present, or future payment for the provision of health care to an individual, and: (a) identifies the individual; or (b) with respect to which there is a reasonable basis to believe that the information can be used to identify the individual.",
@@ -43,7 +146,7 @@
       "Personal Information": "any individually identifiable information about an individual collected online, including: (1) a first and last name; (2) a home or physical address, including street name and name of city or town; (3) Location Information; (4) online contact information, meaning an email address or any other substantially similar identifier that permits direct contact with a person online, including but not limited to an instant messaging user identifier, a voice over internet protocol (VOIP) identifier, or a video chat identifier; (5) a screen or user name where it functions in the same manner as online contact information; (6) a telephone number; (7) a government-issued identification number, such as a driver's license, military identification, passport, Social Security number, or other personal identification number; (8) a credit card or other financial account information; (9) a persistent identifier, such as a customer number held in a \"cookie,\" a static Internet Protocol (\"IP\") address, a mobile device ID, a processor serial number, an advertising ID, a hardware ID, an international mobile equipment identity, a Wi-Fi media access control (\"MAC\") address, a Bluetooth name, a Bluetooth MAC address, a router service set identifier, or a router MAC address; or (10) any information combined with any of (1) through (9) above.",
       "PHR Identifiable Health Information": "Individually Identifiable Health Information, and, with respect to an individual, information: (1) That is provided by or on behalf of the individual; and (2) That identifies the individual or with respect to which there is a reasonable basis to believe that the information can be used to identify the individual.",
       "Software Development Kit": "the code necessary to integrate a Third Party's software—including advertisements—into an application, Web site, or other online service.",
-      "Third Party": "any individual or entity other than: (1) Defendant; (2) a service provider of Defendant that: (i) uses or receives Covered Information collected by or on behalf of Defendant for and at the direction of the Defendant and no other individual or entity, (ii) does not disclose the data, or any individually identifiable information derived from such data, to any individual or entity other than Defendant or a subcontractor to such service provider bound to data processing terms no less restrictive than terms to which the service provider is bound, and (iii) does not use the data for any other purpose; or (3) any entity that uses Covered Information only as reasonably necessary: (i) to comply with applicable law, regulation, or legal process, (ii) to enforce Defendant's terms of use, or (iii) to detect, prevent, or mitigate fraud or security vulnerabilities.",
+      "Third Party / Third Parties": "any individual or entity other than: (1) Defendant; (2) a service provider of Defendant that: (i) uses or receives Covered Information collected by or on behalf of Defendant for and at the direction of the Defendant and no other individual or entity, (ii) does not disclose the data, or any individually identifiable information derived from such data, to any individual or entity other than Defendant or a subcontractor to such service provider bound to data processing terms no less restrictive than terms to which the service provider is bound, and (iii) does not use the data for any other purpose; or (3) any entity that uses Covered Information only as reasonably necessary: (i) to comply with applicable law, regulation, or legal process, (ii) to enforce Defendant's terms of use, or (iii) to detect, prevent, or mitigate fraud or security vulnerabilities.",
       "Unsecured": "PHR Identifiable Health Information that is not protected through the use of a technology or methodology specified by the Secretary of Health and Human Services in the guidance issued under section 13402(h)(2) of the American Reinvestment and Recovery Act of 2009, 42 U.S.C. § 17932(h)(2)."
     },
     "provisions": [
@@ -51,14 +154,25 @@
         "provision_number": "I",
         "title": "Ban on Disclosure of Health Information for Advertising Purposes",
         "category": "prohibition",
-        "summary": "Defendant is permanently banned from disclosing Health Information to Third Parties for Advertising Purposes.",
+        "summary": "Defendant is permanently enjoined from disclosing Health Information to Third Parties for Advertising Purposes, with limited exceptions for analytics, direct consumer communications, and contextual advertising.",
         "requirements": [
           {
-            "description": "Must not disclose Health Information to Third Parties for Advertising Purposes",
-            "quoted_text": "Defendant; Defendant's officers, agents, employees, and attorneys; and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, are permanently restrained and enjoined from disclosing Health Information to Third Parties for Advertising Purposes.",
+            "description": "Permanently restrained and enjoined from disclosing Health Information to Third Parties for Advertising Purposes",
+            "quoted_text": "A. Defendant; Defendant’s officers, agents, employees, and attorneys; and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, are permanently restrained and enjoined from disclosing Health Information to Third Parties for Advertising Purposes.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 197,
+            "quote_end_line": 200
+          },
+          {
+            "description": "Advertising Purposes definition for this section, with carve-outs for reporting/analytics, direct consumer communications, and contextual advertising",
+            "quoted_text": "B. For purposes of this Section, Advertising Purposes means advertising, marketing promoting, offering, offering for sale, or selling any products or services on, by, or through Third Party websites, Third Party mobile applications, or Third Party services. Advertising Purposes shall not include: (i) reporting and analytics related to understanding advertising and advertising effectiveness, such as statistical reporting, traffic analysis, understanding the number of and type of ads served, or conversion measurement, provided that any Third Party reporting or analytics service is restricted from using any Covered Information received from or provided to Defendant for any purpose other than to provide the reporting and analytics services to Defendant; (ii) communications, services, or products requested by a consumer that are sent by Defendant directly to the consumer, such as Defendant texting, emailing, or mailing a consumer, or showing content on Defendant’s own properties to a consumer; or (iii) contextual advertising, meaning non-personalized advertising shown as part of a consumer’s current interaction with Defendant’s 8 Case: 1:23-cv-03107 Document #: 5 Filed: 06/22/23 Page 9 of 37 PageID #:81 websites or mobile applications, provided that the consumer’s Covered Information is not disclosed to a Third Party and is not used to build a profile about the consumer or otherwise alter the consumer’s experience outside the current interaction with Defendant’s websites or mobile applications.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 201,
+            "quote_end_line": 220
           }
         ]
       },
@@ -66,36 +180,87 @@
         "provision_number": "II",
         "title": "Prohibition Against Misrepresentations",
         "category": "prohibition",
-        "summary": "Defendant must not misrepresent the extent to which they collect, maintain, use, disclose, or protect Covered Information.",
+        "summary": "Defendant is permanently enjoined from misrepresenting the extent to which it collects, uses, discloses, or protects Covered Information, consumer privacy controls, or the purposes for which Covered Information is used.",
         "requirements": [
           {
-            "description": "Must not misrepresent data collection, use, disclosure, or protection practices",
-            "quoted_text": "Defendant; Defendant's officers, agents, employees, and attorneys; and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with advertising, marketing, promoting, offering, offering for sale, or selling any product or service are permanently restrained and enjoined from misrepresenting or assisting others, in any manner, expressly or by implication: A. the extent to which they collect, maintain, use, disclose, or permit access to any Covered Information, or protect the privacy, confidentiality, security, or integrity of any Covered Information",
+            "description": "Must not misrepresent the extent to which Defendant collects, maintains, uses, discloses, or permits access to any Covered Information, or protects its privacy, confidentiality, security, or integrity",
+            "quoted_text": "A. the extent to which they collect, maintain, use, disclose, or permit access to any Covered Information, or protect the privacy, confidentiality, security, or integrity of any Covered Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 228,
+            "quote_end_line": 230
+          },
+          {
+            "description": "Must not misrepresent the extent to which the Covered Business collects, maintains, uses, discloses, deletes, or permits or denies access to any Covered Information, or protects its availability, confidentiality, or integrity",
+            "quoted_text": "B. the extent to which the Covered Business collects, maintains, uses, discloses, deletes, or permits or denies access to any Covered Information, or the extent to the Covered Business protects the availability, confidentiality, or integrity of any Covered Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 231,
+            "quote_end_line": 233
+          },
+          {
+            "description": "Must not misrepresent the purposes for which the Covered Business or any entity to whom it discloses or permits access to Covered Information collects, maintains, uses, discloses, or permits access to Covered Information",
+            "quoted_text": "C. the purposes for which the Covered Business, or any entity to whom the Covered Business discloses or permits access to Covered Information, collects, maintains, uses, discloses, or permits access to any Covered Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 234,
+            "quote_end_line": 236
+          },
+          {
+            "description": "Must not misrepresent the extent to which a consumer can maintain privacy and anonymity associated with use of Covered Business products or services",
+            "quoted_text": "D. the extent to which a consumer can maintain privacy and anonymity associated with the consumer’s use of products or services offered by Covered Businesses;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 237,
+            "quote_end_line": 238
+          },
+          {
+            "description": "Must not misrepresent the extent to which consumers may exercise control over the Covered Business's collection, maintenance, use, deletion, or disclosure of Covered Information, and the steps a consumer must take to implement such controls",
+            "quoted_text": "E. the extent to which consumers may exercise control over the Covered Business’ collection of, maintenance of, use of, deletion of, disclosure of, or permission of access to Covered Information, and the steps a consumer must take to implement such controls; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 243,
+            "quote_end_line": 245
+          },
+          {
+            "description": "Must not misrepresent the extent to which the Covered Business otherwise protects the privacy, security, availability, confidentiality, or integrity of Covered Information",
+            "quoted_text": "F. the extent to which the Covered Business otherwise protects the privacy, security, availability, confidentiality, or integrity of Covered Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 246,
+            "quote_end_line": 247
           }
         ]
       },
       {
         "provision_number": "III",
-        "title": "Prohibition Against Disclosure of Health Information Without Affirmative Express Consent",
-        "category": "affirmative_obligation",
-        "summary": "Defendant must obtain Affirmative Express Consent before disclosing Health Information to Third Parties for non-Advertising Purposes and must provide clear notice of the disclosure.",
+        "title": "Prohibition Against Disclosure of Health Information Without Affirmative Express Consent and Notice",
+        "category": "prohibition",
+        "summary": "Defendant is permanently enjoined from disclosing Health Information to Third Parties for non-Advertising Purposes without first obtaining Affirmative Express Consent, and must provide Clear and Conspicuous notice of the categories of Health Information disclosed and the identities and purposes of Third Parties.",
         "requirements": [
           {
-            "description": "Must obtain Affirmative Express Consent before disclosing Health Information to Third Parties for non-Advertising Purposes",
-            "quoted_text": "Defendant; Defendant's officers, agents, employees, and attorneys; and all other persons in active concert or participation with any of them, who receive actual notice of this Order, in connection with any product or service, are permanently restrained and enjoined from disclosing Health Information to Third Parties for non-Advertising Purposes, without first obtaining Affirmative Express Consent.",
+            "description": "Permanently restrained from disclosing Health Information to Third Parties for non-Advertising Purposes without first obtaining Affirmative Express Consent",
+            "quoted_text": "A. Defendant; Defendant’s officers, agents, employees, and attorneys; and all other persons in active concert or participation with any of them, who receive actual notice of this Order, in connection with any product or service, are permanently restrained and enjoined from disclosing Health Information to Third Parties for non-Advertising Purposes, without first obtaining Affirmative Express Consent.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 251,
+            "quote_end_line": 255
           },
           {
-            "description": "Must provide Clear and Conspicuous notice when obtaining Affirmative Express Consent",
-            "quoted_text": "When obtaining Affirmative Express Consent required under this Section, Defendant must provide notice Clearly and Conspicuously that states the categories of Health Information that will be disclosed to Third Parties, the identities of such Third Parties, all purposes for Defendant's disclosures of such Health Information, what the Third Party is permitted to do with the Health Information, and whether or not any of the Health Information is protected under federal or state laws, including HIPAA or the California Consumer Privacy Act.",
+            "description": "When obtaining Affirmative Express Consent, must provide Clear and Conspicuous notice stating the categories of Health Information to be disclosed, identities of Third Parties, all purposes for disclosures, what Third Parties may do with the Health Information, and whether any Health Information is protected under federal or state laws",
+            "quoted_text": "C. When obtaining Affirmative Express Consent required under this Section, Defendant must provide notice Clearly and Conspicuously that states the categories of Health Information that will be disclosed to Third Parties, the identities of such Third Parties, all purposes for Defendant’s disclosures of such Health Information, what the Third Party is permitted to do with the Health Information, and whether or not any of the Health Information is protected under federal or state laws, including HIPAA or the California Consumer Privacy Act.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 276,
+            "quote_end_line": 281
           }
         ]
       },
@@ -103,28 +268,61 @@
         "provision_number": "IV",
         "title": "Health Breach Notifications",
         "category": "affirmative_obligation",
-        "summary": "Defendant must notify affected individuals, the FTC, and media (if 500+ residents affected) following discovery of a Breach of Security of Unsecured PHR Identifiable Health Information.",
+        "summary": "Following discovery of a Breach of Security of Unsecured PHR Identifiable Health Information, Defendant must notify affected individuals, the FTC, and prominent media outlets (if 500+ residents affected), within prescribed timeframes and with prescribed content and format.",
         "requirements": [
           {
-            "description": "Notify affected individuals of Breach of Security",
-            "quoted_text": "Defendant, for any Covered Business, following the discovery of a Breach of Security of Unsecured PHR Identifiable Health Information that is in a Personal Health Record maintained or offered by any Covered Business (including, but not limited to, the Premom Ovulation Tracker mobile application, shall: 1. notify each individual who is a citizen or resident of the United States whose Unsecured PHR Identifiable Health Information was acquired by an unauthorized person as a result of such Breach of Security",
-            "deadline": "60 calendar days",
+            "description": "Notify each affected U.S. individual whose Unsecured PHR Identifiable Health Information was acquired by an unauthorized person as a result of a Breach of Security",
+            "quoted_text": "1. notify each individual who is a citizen or resident of the United States whose Unsecured PHR Identifiable Health Information was acquired by an unauthorized person as a result of such Breach of Security;",
+            "deadline": "60 calendar days after discovery",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 288,
+            "quote_end_line": 290
           },
           {
-            "description": "Notify the Federal Trade Commission of Breach of Security",
-            "quoted_text": "Defendant, for any Covered Business, following the discovery of a Breach of Security of Unsecured PHR Identifiable Health Information that is in a Personal Health Record maintained or offered by any Covered Business (including, but not limited to, the Premom Ovulation Tracker mobile application, shall: 2. notify the Federal Trade Commission",
-            "deadline": "10 business days for 500+ individuals; 60 days annual log for fewer than 500",
+            "description": "Notify the Federal Trade Commission following discovery of a Breach of Security; if 500+ individuals affected, notify as soon as possible and no later than 10 business days after discovery; if fewer than 500, may maintain a log and submit annually no later than 60 calendar days after year-end",
+            "quoted_text": "E. Defendant shall, in accordance with Subsection IV.A.2, provide notice to the Federal Trade Commission following the discovery of a Breach of Security. If the Breach of Security involves the Unsecured PHR Identifiable Health Information of five hundred (500) or more individuals, then such notice shall be provided as soon as possible and in no case later than ten (10) business days following the date of discovery of the Breach of Security. If the Breach of Security involves the Unsecured PHR Identifiable Health Information of fewer than five hundred (500) individuals, Defendant may maintain a log of any such Breach of Security, and submit 13 Case: 1:23-cv-03107 Document #: 5 Filed: 06/22/23 Page 14 of 37 PageID #:86 such a log annually to the Federal Trade Commission no later than sixty (60) calendar days following the end of the calendar year, documenting Breaches of Security from the preceding calendar year. Unless otherwise directed by a Commission representative in writing, Defendant must submit all notices and logs required under this Subsection to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “U.S. v. Easy Healthcare Corporation.”",
+            "deadline": "10 business days (500+ individuals) or 60 days after year-end (fewer than 500)",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 341,
+            "quote_end_line": 358
           },
           {
-            "description": "Notify prominent media outlets if 500+ residents affected",
-            "quoted_text": "Defendant, for any Covered Business, following the discovery of a Breach of Security of Unsecured PHR Identifiable Health Information that is in a Personal Health Record maintained or offered by any Covered Business (including, but not limited to, the Premom Ovulation Tracker mobile application, shall: 3. notify prominent media outlets in a state or jurisdiction, if the Unsecured PHR Identifiable Health Information of five hundred (500) or more residents of such state or jurisdiction is, or is reasonably believed to have been, acquired during such Breach of Security.",
-            "deadline": "60 calendar days",
+            "description": "Notify prominent media outlets in a state or jurisdiction if 500 or more residents' Unsecured PHR Identifiable Health Information is or is reasonably believed to have been acquired during the Breach of Security",
+            "quoted_text": "3. notify prominent media outlets in a state or jurisdiction, if the Unsecured PHR Identifiable Health Information of five hundred (500) or more residents of such state or 11 Case: 1:23-cv-03107 Document #: 5 Filed: 06/22/23 Page 12 of 37 PageID #:84 jurisdiction is, or is reasonably believed to have been, acquired during such Breach of Security.",
+            "deadline": "60 calendar days after discovery",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 292,
+            "quote_end_line": 298
+          },
+          {
+            "description": "All notifications to individuals or media must be sent without unreasonable delay and no later than 60 calendar days after discovery, unless delayed at law enforcement direction",
+            "quoted_text": "C. Except as otherwise provided, all notifications to individuals or the media required under this Section shall be sent without unreasonable delay and in no case later than sixty (60) calendar days after the discovery. If a law enforcement official determines that a notification, notice, or posting required under this Section would impede a criminal investigation or cause damage to national security, such notification, notice, or posting shall be delayed. This Subsection shall be implemented in the same manner as provided under 45 CFR 164.528(a)(2), in the case of a disclosure covered under such section.",
+            "deadline": "60 calendar days after discovery",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 304,
+            "quote_end_line": 310
+          },
+          {
+            "description": "Notice to individuals must be provided by first-class mail, email, or within-application messaging; if contact information is insufficient for 10 or more individuals, provide substitute notice via conspicuous website posting for 90 days or major print/broadcast media",
+            "quoted_text": "D. Defendant providing notice under Subsection IV.A.1 shall do so by providing it in the following form: 1. Written notice, by first-class mail to the individual at the last known address of the individual, or by email or within-application messaging, if the individual is given a clear, conspicuous, and reasonable opportunity to receive notification by first-class mail, and the individual does not exercise that choice. If the individual is deceased, Defendant must provide such notice to the next of kin of the individual if the individual had provided contact information for his or her next of kin, along with authorization to contact them. The notice may be provided in one or more mailings as information is available. 2. If, after making reasonable efforts to contact all individuals to whom 12 Case: 1:23-cv-03107 Document #: 5 Filed: 06/22/23 Page 13 of 37 PageID #:85 notice is required under Subsection IV.A.1, through the means provided in Subsection IV.D.1, Defendant finds that contact information for ten (10) or more individuals is insufficient or out-of- date, Defendant shall provide substitute notice, which shall be reasonably calculated to reach the individuals affected by the Breach of Security, in the following form: a. Through a conspicuous posting for a period of ninety (90) days on the home page of its Web site; or b. In major print or broadcast media, including major media in geographic areas where the individuals affected by the Breach of Security likely reside. Such a notice in media or web posting shall include a toll-free phone number, which shall remain active for at least ninety (90) days, where an individual can learn whether or not the individual’s PHR Identifiable Health Information may be included in the Breach of Security.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 311,
+            "quote_end_line": 336
+          },
+          {
+            "description": "Notice of a Breach of Security must be in plain language and include: description of what happened and dates; types of PHR Identifiable Health Information involved; steps individuals should take to protect themselves; what Defendant is doing to investigate and mitigate; and contact procedures including a toll-free telephone number",
+            "quoted_text": "F. Regardless of the method by which notice is provided to individuals, the Federal Trade Commission, or the media under this Section, notice of a Breach of Security shall be in plain language and include, to the extent possible, the following: 1. A brief description of what happened, including the date of the Breach of Security and the date of the discovery of the Breach of Security, if known; 2. A description of the types of PHR Identifiable Health Information that were involved in the Breach of Security (such as full name, Social Security number, date of birth, home address, account number, or disability code); 3. Steps individuals should take to protect themselves from potential harm resulting from the Breach of Security; 4. A brief description of what the entity that suffered the Breach of Security is doing to investigate the breach, to mitigate harm, and to protect against any further breaches; and 5. Contact procedures for individuals to ask questions or learn additional information, which shall include a tollfree telephone number, an email address, Web site, or postal address.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 359,
+            "quote_end_line": 374
           }
         ]
       },
@@ -132,21 +330,25 @@
         "provision_number": "V",
         "title": "Notice to Users",
         "category": "affirmative_obligation",
-        "summary": "Defendant must post a notice on its website and mobile app and email Covered Users about the FTC settlement.",
+        "summary": "Within 28 days of Order entry, Defendant must post a mandated notice on its websites and mobile application home screen, leave it in place for 6 months, and email it to Covered Users who used Premom from November 2017 to August 2022.",
         "requirements": [
           {
-            "description": "Post notice on website and mobile app home pages",
-            "quoted_text": "within twenty-eight (28) days of entry of this Order, Defendant shall post Clearly and Conspicuously on the home page of Defendant's websites (https://healthcare-manager.com; http://premom.com) and the home screen of Defendant's mobile application (Premom Ovulation Tracker), a link to an exact copy of the notice attached hereto as Exhibit A (\"Notice\"). Defendant must leave this Notice in place for six (6) months after posting it.",
+            "description": "Within 28 days of entry of this Order, post Clearly and Conspicuously on the home page of Defendant's websites and the home screen of the Premom Ovulation Tracker app a link to the exact copy of the notice attached as Exhibit A, leave it in place for 6 months",
+            "quoted_text": "IT IS FURTHER ORDERED that, within twenty-eight (28) days of entry of this Order, Defendant shall post Clearly and Conspicuously on the home page of Defendant’s websites (https://healthcare-manager.com; http://premom.com) and the home screen of Defendant’s mobile application (Premom Ovulation Tracker), a link to an exact copy of the notice attached hereto as Exhibit A (“Notice”). Defendant must leave this Notice in place for six (6) months after posting it. Defendant must also email the Notice to Covered Users that downloaded and",
             "deadline": "28 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 380,
+            "quote_end_line": 385
           },
           {
-            "description": "Email notice to Covered Users",
-            "quoted_text": "Defendant must also email the Notice to Covered Users that downloaded and used Premom from November 2017 to August 2022, provided however, that if Defendant does not have email information for any such Covered User, Defendant must send the Notice to that Covered User through Defendant's primary means of communicating with that Covered User (such as a notification within Defendant's mobile application).",
+            "description": "Email the Notice to Covered Users that downloaded and used Premom from November 2017 to August 2022; if email is unavailable, use Defendant's primary means of communicating with that Covered User; must not include any other information, documents, or attachments with the Notice",
+            "quoted_text": "after posting it. Defendant must also email the Notice to Covered Users that downloaded and used Premom from November 2017 to August 2022, provided however, that if Defendant does not have email information for any such Covered User, Defendant must send the Notice to that Covered User through Defendant’s primary means of communicating with that Covered User (such as a notification within Defendant’s mobile application). Defendant shall not include with the Notice any other information, documents, or attachments.",
             "deadline": "28 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 385,
+            "quote_end_line": 390
           }
         ]
       },
@@ -154,28 +356,52 @@
         "provision_number": "VI",
         "title": "Deletion of Covered Information",
         "category": "affirmative_obligation",
-        "summary": "Defendant must identify all Third Parties that received Covered Information, notify them of the FTC's allegations, and instruct specific Third Parties to delete Covered Information.",
+        "summary": "Within 45 days of Order entry, Defendant must identify all Third Parties that received Covered Information, notify them of the FTC allegations, instruct specific Third Parties (Jiguang, Umeng, AppsFlyer, Google) to delete Covered Information and Health Information of Covered Users, and provide all related instructions and confirmations to the FTC.",
         "requirements": [
           {
-            "description": "Identify all Third Parties that received Covered Information and notify them",
-            "quoted_text": "Defendant must 1. identify all Third Parties that received Covered Information of Covered Users from Defendant in any form, including hashed or encrypted Covered Information, identify the Covered Information of Covered Users received, provide a copy of the Complaint and Order to all Third Parties that received Covered Information, and notify all such Third Parties in writing that the Federal Trade Commission alleged that Defendant disclosed Covered Information of Covered Users in a manner that was unfair or deceptive and in violation of the FTC Act",
+            "description": "Within 45 days, identify all Third Parties that received Covered Information of Covered Users, identify the Covered Information received, provide a copy of the Complaint and Order to all such Third Parties, and notify them in writing that the FTC alleged Defendant disclosed Covered Information in a manner that was unfair or deceptive",
+            "quoted_text": "A. Defendant must 1. identify all Third Parties that received Covered Information of Covered Users from Defendant in any form, including hashed or encrypted Covered Information, identify the Covered Information of Covered Users received, provide a copy of the Complaint and Order to all Third Parties that received Covered Information, and notify all such Third Parties in writing that the Federal Trade Commission alleged that Defendant disclosed Covered Information of Covered Users in a manner that was unfair or deceptive and in violation of the FTC Act; and",
             "deadline": "45 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 393,
+            "quote_end_line": 400
           },
           {
-            "description": "Instruct specific Third Parties to delete Covered Information and demand written confirmation",
-            "quoted_text": "instruct Jiguang and Umeng to Delete all Covered Information received from Defendant of Covered Users that downloaded and used the Premom Ovulation Tracker mobile application from November 2017 through August 2020 and demand written confirmation that all Covered Information has been deleted; and (ii) AppsFlyer, Inc. and Google, LLC, to Delete all Health Information collected respectively through the AppsFlyer SDK or the Google Analytics for Firebase SDK of Covered Users that downloaded and used Premom from November 2017 through August 2022 and demand written confirmation that all the Health Information of such Covered Users has been deleted.",
+            "description": "Within 45 days, instruct Jiguang and Umeng to Delete all Covered Information received from Defendant of Covered Users (November 2017–August 2020) and demand written confirmation; instruct AppsFlyer and Google to Delete all Health Information of Covered Users collected through their SDKs (November 2017–August 2022) and demand written confirmation",
+            "quoted_text": "2. instruct Jiguang and Umeng to Delete all Covered Information received from Defendant of Covered Users that downloaded and used the Premom Ovulation Tracker mobile application from November 2017 through August 2020 and demand written confirmation that all Covered Information has been deleted; and (ii) AppsFlyer, Inc. and Google, LLC, to Delete all Health Information collected respectively through the AppsFlyer SDK or the Google Analytics for Firebase SDK of Covered Users that downloaded and used Premom from November 2017 through August 2022 and demand written confirmation that all the Health Information of such Covered Users has been deleted.",
             "deadline": "45 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 405,
+            "quote_end_line": 412
           },
           {
-            "description": "Provide confirmation receipts to FTC within 5 days of receipt",
-            "quoted_text": "Defendant must provide all receipts of confirmation and any responses from Third Parties within five (5) days of receipt to: DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
-            "deadline": "5 days of receipt",
+            "description": "Provide all instructions sent to Third Parties to the FTC Associate Director for Enforcement",
+            "quoted_text": "B. Defendant’s instruction to each such Third Party under Subsection A shall include a description of the Covered Information or Health Information, as relevant, of Covered Users shared with the Third Party during the relevant time period. Defendant must provide all instructions sent to the Third Parties to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “United States v. Easy Healthcare Corporation.”",
+            "deadline": "45 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 413,
+            "quote_end_line": 418
+          },
+          {
+            "description": "Must not disclose any Covered Information in any form to any identified Third Party until Defendant confirms each Third Party's receipt of the required instructions; provide all receipts of confirmation and any responses from Third Parties within 5 days of receipt to the FTC",
+            "quoted_text": "C. Defendant shall not disclose any Covered Information in any form, including hashed or encrypted Covered Information, to any Third Party identified in Subsection A above until Defendant confirm each Third Party’s receipt of the instructions required by Subsection A above. Defendant must provide all receipts of confirmation and any responses from Third Parties within five (5) days of receipt to: DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “United States v. Easy Healthcare Corporation.”",
+            "deadline": "5 days of receipt of confirmation",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 419,
+            "quote_end_line": 426
+          },
+          {
+            "description": "Must not use any identified Third Party to advertise, market, promote, offer, offer for sale, or sell any product or service until Defendant confirms each Third Party's receipt of the required instructions",
+            "quoted_text": "D. Defendant shall not use any Third Party identified in Subsection A above to advertise, market, promote, offer, offer for sale, or sell any product or service until Defendant confirm each Third Party’s receipt of the instructions required by Subsection A above.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 431,
+            "quote_end_line": 433
           }
         ]
       },
@@ -183,70 +409,97 @@
         "provision_number": "VII",
         "title": "Mandated Privacy and Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Defendant must establish and maintain a comprehensive privacy and information security program that protects Covered Information.",
+        "summary": "Within 60 days of Order entry, Defendant must establish and maintain a comprehensive privacy and information security program covering documentation, governance, risk assessment, safeguards (including data inventory, access controls, training, data retention, and SDK audits), periodic evaluation, service provider oversight, and Clear and Conspicuous disclosures to consumers.",
         "requirements": [
           {
-            "description": "Establish and implement comprehensive privacy and information security program",
-            "quoted_text": "any Covered Business, in connection with the collection, maintenance, use, disclosure of, or provision of access to, Covered Information, must, within sixty (60) days of entry of this Order, establish and implement, and thereafter maintain, a comprehensive privacy and information security program (\"Program\") that protects the privacy, security, availability, confidentiality, and integrity of such Covered Information.",
+            "description": "Within 60 days, establish and implement, and thereafter maintain, a comprehensive privacy and information security program that protects the privacy, security, availability, confidentiality, and integrity of Covered Information",
+            "quoted_text": "IT IS FURTHER ORDERED that any Covered Business, in connection with the collection, maintenance, use, disclosure of, or provision of access to, Covered Information, must, within sixty (60) days of entry of this Order, establish and implement, and thereafter maintain, a comprehensive privacy and information security program (“Program”) that protects the privacy, security, availability, confidentiality, and integrity of such Covered Information. To satisfy this requirement, Defendant must, at a minimum:",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 435,
+            "quote_end_line": 440
           },
           {
-            "description": "Document the Program in writing",
-            "quoted_text": "Document in writing the content, implementation, and maintenance of the Program",
-            "deadline": "60 days",
+            "description": "Document in writing the content, implementation, and maintenance of the Program",
+            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Program;",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 441,
+            "quote_end_line": 442
           },
           {
-            "description": "Provide written program to board or senior officer at least annually",
-            "quoted_text": "Provide the written program and any evaluations thereof or updates thereto to each Covered Business's board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of the Covered Business responsible for the Covered Business's Program at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident",
-            "deadline": "12 months and 30 days after Covered Incident",
+            "description": "Provide the written program and any evaluations or updates to the board of directors or a senior officer at least once every 12 months and promptly (not to exceed 30 days) after a Covered Incident",
+            "quoted_text": "B. Provide the written program and any evaluations thereof or updates thereto to each Covered Business’s board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of the Covered Business responsible for the Covered Business’s Program at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident;",
+            "deadline": "annually and within 30 days of Covered Incident",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 443,
+            "quote_end_line": 447
           },
           {
-            "description": "Designate qualified employee to coordinate Program",
-            "quoted_text": "Designate a qualified employee or employees, who report(s) directly to the Chief Executive Officer(s) or, in the event a Chief Executive Officer role does not exist, a similarly-situated executive, to coordinate and be responsible for the Program; and keep the Chief Executive Officer(s) and Board of Directors informed of the Program, including all actions and procedures implemented to comply with the requirements of this Order, and any actions and procedures to be implemented to ensure continued compliance with this Order",
-            "deadline": "60 days",
+            "description": "Designate a qualified employee reporting directly to the CEO (or equivalent) to coordinate and be responsible for the Program, and keep the CEO and Board informed of all actions and procedures to comply with this Order",
+            "quoted_text": "C. Designate a qualified employee or employees, who report(s) directly to the Chief Executive Officer(s) or, in the event a Chief Executive Officer role does not exist, a similarly- situated executive, to coordinate and be responsible for the Program; and keep the Chief Executive Officer(s) and Board of Directors informed of the Program, including all actions and procedures implemented to comply with the requirements of this Order, and any actions and procedures to be implemented to ensure continued compliance with this Order;",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 448,
+            "quote_end_line": 453
           },
           {
-            "description": "Assess and document internal and external risks at least annually",
-            "quoted_text": "Assess and document, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, internal and external risks in each area of the Covered Business's operations to the privacy, security, availability, confidentiality, and integrity of Covered Information that could result in the unauthorized access, collection, use, destruction, or disclosure of, or provision of access to, Covered Information",
-            "deadline": "12 months and 30 days after Covered Incident",
+            "description": "Assess and document, at least once every 12 months and promptly (not to exceed 30 days) following a Covered Incident, internal and external risks to the privacy, security, availability, confidentiality, and integrity of Covered Information",
+            "quoted_text": "D. Assess and document, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, internal and external risks in each area of the Covered Business’s operations to the privacy, security, availability, confidentiality, and integrity of Covered Information that could result in the unauthorized access, collection, use, destruction, or disclosure of, or provision of access to, Covered Information;",
+            "deadline": "annually and within 30 days of Covered Incident",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 458,
+            "quote_end_line": 462
           },
           {
-            "description": "Design, implement, and maintain safeguards to control identified risks",
-            "quoted_text": "Design, implement, maintain, and document safeguards that control for the internal and external risks to the privacy, security, availability, confidentiality, and integrity of Covered Information identified by each Covered Business in response to Subsection VII.D. Each safeguard must be based on the volume and sensitivity of the Covered Information that is at risk, and the likelihood that the risk could be realized and result in the unauthorized access, collection, use, destruction, disclosure of, or provision of access to, the Covered Information.",
-            "deadline": "60 days",
+            "description": "Design, implement, maintain, and document safeguards that control for identified internal and external risks, including policies for data inventory and deletion, preventing inconsistent collection/disclosure, auditing Third Party contracts and terms, ensuring compliance with Sections I–IV, limiting employee access, mandatory annual privacy training, data retention policy with public retention schedule, SDK audits, and Clear and Conspicuous disclosures of Covered Information collected and transferred",
+            "quoted_text": "E. Design, implement, maintain, and document safeguards that control for the internal and external risks to the privacy, security, availability, confidentiality, and integrity of Covered Information identified by each Covered Business in response to Subsection VII.D. Each safeguard must be based on the volume and sensitivity of the Covered Information that is at risk, and the likelihood that the risk could be realized and result in the unauthorized access, collection, use, destruction, disclosure of, or provision of access to, the Covered Information. Such safeguards must also include: 1. policies, procedures, and technical measures to systematically inventory Covered Information in the Covered Business’s control and delete Covered Information that is no longer necessary to fulfill the purpose for which the Covered Information was collected; 2. policies, procedures, and technical measures to prevent the collection, maintenance, use, or disclosure of, or provision of access to, Covered Information inconsistent with the Covered Business’s representations to consumers; 3. audits, assessments, and reviews of the contracts, privacy policies, and terms of service associated with any Third Party to which each Covered Business discloses or provides access to Covered Information; 4. policies, procedures, and controls to ensure the Covered Business complies with Sections I-IV above; 18 Case: 1:23-cv-03107 Document #: 5 Filed: 06/22/23 Page 19 of 37 PageID #:91 5. policies and technical measures that limit employee and contractor access to Covered Information to only those employees and contractors with a legitimate business need to access such Covered Information; 6. mandatory privacy training programs for all employees on at least an annual basis, updated to address the collection, use, and disclosure of Covered Information; any internal or external risks identified by each Covered Business in Subsection VII.D and safeguards implemented pursuant to Subsection VII.E, that includes training on the requirements of this Order; 7. a data retention policy that, at a minimum, includes a. a retention schedule that limits the retention of Covered Information for only as long as is reasonably necessary to fulfill the purpose for which the Covered Information was collected; provided, however, that such Covered Information need not be destroyed, and may be disclosed, to the extent requested by a government agency or required by law, regulation, or court order; and b. a requirement that each Covered Business document, adhere to, and make publicly available in its privacy policy a retention schedule for Covered Information, setting forth: (1) the purposes for which such information is collected; (2) the specific business need for retaining each type of Covered Information; and (3) a set timeframe for deletion of each type of Covered Information 19 Case: 1:23-cv-03107 Document #: 5 Filed: 06/22/23 Page 20 of 37 PageID #:92 (absent any intervening deletion requests from consumers) that precludes indefinite retention of any such Covered Information; 8. audits, assessments, reviews, or testing of Software Development Kits, and their associated Third Parties, to which each Covered Business shares or provides access to Covered Information of any Covered User; and 9. For each product or service offered by any Covered Business, Clearly and Conspicuously disclose the categories of Covered Information collected from Covered Users, the purposes for the collection of each category of such Covered Information, and any transfers of such Covered Information to Third Parties. For each such transfer of Covered Information, such disclosure must, at a minimum, include a. the specific categories of Covered Information transferred; b. the identity and specific category of the recipient Third Party of each such transfer; c. the purposes for which the Covered Business transferred the Covered Information; and d. the purposes for which each recipient Third Party of Covered Information could use such Covered Information, including but not limited to the purposes for which each recipient reserves the right to use such Covered Information; and e. whether each recipient Third Party of such transfer of Covered Information reserves the right to transfer such Covered Information to other parties.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 463,
+            "quote_end_line": 532
           },
           {
-            "description": "Assess sufficiency of safeguards at least annually",
-            "quoted_text": "Assess, at least once every twelve (12) months and promptly (not to exceed thirty (30)days) following a Covered Incident, the sufficiency of any safeguards in place to address the internal and external risks to the privacy, security, availability, confidentiality, and integrity of Covered Information, and modify the Program based on the results",
-            "deadline": "12 months and 30 days after Covered Incident",
+            "description": "Assess at least once every 12 months and promptly (not to exceed 30 days) following a Covered Incident the sufficiency of safeguards in place, and modify the Program based on results",
+            "quoted_text": "F. Assess, at least once every twelve (12) months and promptly (not to exceed thirty (30)days) following a Covered Incident, the sufficiency of any safeguards in place to address the internal and external risks to the privacy, security, availability, confidentiality, and integrity of Covered Information, and modify the Program based on the results;",
+            "deadline": "annually and within 30 days of Covered Incident",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 537,
+            "quote_end_line": 540
           },
           {
-            "description": "Test and monitor safeguards effectiveness at least annually",
-            "quoted_text": "Test and monitor the effectiveness of the safeguards at least once every twelve (12)months and promptly (not to exceed thirty (30) days) following a Covered Incident, and modify the Program based on the results",
-            "deadline": "12 months and 30 days after Covered Incident",
+            "description": "Test and monitor the effectiveness of safeguards at least once every 12 months and promptly (not to exceed 30 days) following a Covered Incident, and modify the Program based on results",
+            "quoted_text": "G. Test and monitor the effectiveness of the safeguards at least once every twelve (12)months and promptly (not to exceed thirty (30) days) following a Covered Incident, and modify the Program based on the results;",
+            "deadline": "annually and within 30 days of Covered Incident",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 541,
+            "quote_end_line": 543
           },
           {
-            "description": "Evaluate and adjust Program at least annually",
-            "quoted_text": "The Covered Business may make this evaluation and adjustment to the Program at any time, but must, at a minimum, evaluate the Program at least once every twelve (12) months and modify the Program as necessary based on the results.",
-            "deadline": "12 months",
+            "description": "Select and retain service providers capable of safeguarding Covered Information and contractually require them to implement and maintain sufficient safeguards",
+            "quoted_text": "H. Select and retain service providers capable of safeguarding Covered Information it receives from the Covered Business, and contractually require service providers to implement and maintain safeguards sufficient to address the internal and external risks to the privacy, security, availability, confidentiality, or integrity of Covered Information;",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 544,
+            "quote_end_line": 547
+          },
+          {
+            "description": "Evaluate and adjust the Program in light of material changes, test results, Covered Incidents, new technologies, and other circumstances that may affect the Program's effectiveness, at least once every 12 months",
+            "quoted_text": "I. Evaluate and adjust the Program in light of any material changes to each Covered Business’s operations or business arrangements, the results of the testing and monitoring required by Subsection VII.F, a Covered Incident, new or more efficient technological or operational methods to control for the risks identified in Subsection VII.D, and any other circumstances that the Covered Business knows or has reason to believe may have a material impact on the effectiveness of the Program or any of its individual safeguards. The Covered Business may make this evaluation and adjustment to the Program at any time, but must, at a minimum, evaluate the Program at least once every twelve (12) months and modify the Program as necessary based on the results.",
+            "deadline": "annually",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 548,
+            "quote_end_line": 556
           }
         ]
       },
@@ -254,35 +507,52 @@
         "provision_number": "VIII",
         "title": "Privacy and Information Security Assessment by a Third Party",
         "category": "assessment",
-        "summary": "Defendant must obtain initial and biennial third-party assessments of the privacy and information security program for 20 years.",
+        "summary": "Defendant must obtain an initial third-party assessment and biennial assessments for 20 years from a qualified, independent Assessor with at least 3 years of experience, covering the effectiveness of the Program and any gaps; assessments must be completed within 90 days after each reporting period and submitted to the FTC.",
         "requirements": [
           {
-            "description": "Obtain initial and biennial third-party assessments",
-            "quoted_text": "in connection with compliance with Section VII, for any Covered Business that collects, maintains, uses, discloses, or provides access to Covered Information, Defendant must obtain initial and biennial assessments (\"Assessments\")",
-            "deadline": "Initial assessment covers first 180 days after Program established; biennial assessments for 20 years",
+            "description": "Obtain initial and biennial assessments from one or more qualified, objective, independent third-party professionals who use generally accepted procedures, conduct an independent review, retain documents for 5 years, and provide documents to the Commission within 10 days of a written request; Assessor(s) must have a minimum of 3 years of experience in privacy and data protection",
+            "quoted_text": "A. The Assessments must be obtained from one or more qualified, objective, independent third-party professionals (“Assessor(s)”) who: (1) uses procedures and standards generally accepted in the profession; (2) conducts an independent review of the Program; (3) retains all documents relevant to each Assessment for five (5) years after completion of such Assessment; and (4) will provide such documents to the Commission within ten (10) days of receipt of a written request from a representative of the Commission. No documents may be withheld on the basis of a claim of confidentiality, proprietary or trade secrets, work product protection, attorney client privilege, statutory exemption, or any similar claim. Defendant may obtain separate assessments for: (1) privacy and (2) information security from multiple Assessors, so long as each of the Assessors meets the qualifications set forth above. The Assessor(s) must have a minimum of three (3) years of experience in the field of privacy and data protection.",
+            "deadline": "Initial: 180 days after Program established; biennial thereafter for 20 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 566,
+            "quote_end_line": 577
           },
           {
-            "description": "Provide FTC with Assessor name, affiliation, and qualifications for approval",
-            "quoted_text": "For each Assessment, Defendant must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name, affiliation, and qualifications of the proposed Assessor, whom the Associate Director shall have the authority to approve in his or her sole discretion.",
+            "description": "For each Assessment, provide the FTC Associate Director for Enforcement with the name, affiliation, and qualifications of the proposed Assessor, who has sole discretion to approve",
+            "quoted_text": "B. For each Assessment, Defendant must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name, affiliation, and qualifications of the proposed Assessor, whom the Associate Director shall have the authority to approve in his or her sole discretion.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 578,
+            "quote_end_line": 581
           },
           {
-            "description": "Submit initial Assessment to FTC within 10 days of completion",
-            "quoted_text": "Unless otherwise directed by a Commission representative in writing, Defendant must submit the initial Assessment to the Commission within ten (10) days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
-            "deadline": "10 days after completion",
+            "description": "Each Assessment must cover the first 180 days after the Program is established (initial) and each two-year period thereafter for 20 years (biennial)",
+            "quoted_text": "C. The reporting period for the Assessments must cover: (1) the first one-hundred- and-eighty (180) days after the Privacy and Information Security Program required by Section 22 Case: 1:23-cv-03107 Document #: 5 Filed: 06/22/23 Page 23 of 37 PageID #:95 VII has been put in place for the initial Assessment; and (2) each two (2) year period thereafter for twenty (20) years after the entry of this Order for the biennial Assessment.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 582,
+            "quote_end_line": 589
           },
           {
-            "description": "Complete each Assessment within 90 days after end of reporting period",
-            "quoted_text": "Each Assessment must be completed within ninety (90) days after the end of the reporting period to which the Assessment applies.",
-            "deadline": "90 days",
+            "description": "Each Assessment must determine whether the Program is implemented and maintained, assess its effectiveness, identify gaps or weaknesses, address the status of prior gaps, and identify specific evidence examined; must be signed by the Assessor and state hours worked",
+            "quoted_text": "D. Each Assessment must, for the entire assessment period: 1. determine whether Defendant has implemented and maintained the Program required by Section VII; 2. assess the effectiveness of Defendant’s implementation and maintenance of Subsections VII.A-I; 3. identify any gaps or weaknesses in the Program or instances of material noncompliance with Subsections VII.A-I; 4. address the status of gaps or weaknesses in the Program, as well as any instances of material non-compliance with Subsections VII.A-I, that were identified in any prior Assessment required by this Order; and 5. identify specific evidence (including, but not limited to, documents reviewed, sampling and testing performed, and interviews conducted) examined to make such determinations, assessments, and identifications, and explain why the evidence that the Assessor examined is: (a) appropriate for assessing an enterprise of Defendant’s size, complexity, and risk profile; and (b) sufficient to justify the Assessor’s findings. No finding of any Assessment shall rely solely on assertions or attestations by Defendant, Defendant’s management, or a Covered Business’s management. The Assessment must be signed by the Assessor, state that the Assessor conducted an independent review of the Program and did not rely solely on assertions or attestations by Defendant, Defendant’s management or a Covered Business’s management and state the number of hours that each member of the Assessor’s assessment team worked on the Assessment. To the extent Defendant revises, updates, or adds one or more safeguards required 23 Case: 1:23-cv-03107 Document #: 5 Filed: 06/22/23 Page 24 of 37 PageID #:96 under Section VII.E in the middle of an Assessment period, the Assessment must assess the effectiveness of the revised, updated, or added safeguard(s) for the time period in which it was in effect, and provide a separate statement detailing the basis for each revised, updated, or additional safeguard.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 590,
+            "quote_end_line": 618
+          },
+          {
+            "description": "Each Assessment must be completed within 90 days after the end of the reporting period; initial Assessment must be submitted to the FTC within 10 days after completion; all subsequent biennial Assessments must be retained until the Order is terminated and provided to the FTC within 10 days of request",
+            "quoted_text": "E. Each Assessment must be completed within ninety (90) days after the end of the reporting period to which the Assessment applies. Unless otherwise directed by a Commission representative in writing, Defendant must submit the initial Assessment to the Commission within ten (10) days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “United States v. Easy Healthcare Corporation.” All subsequent biennial Assessments must be retained by Defendant until the Order is terminated and provided to the Associate Director for Enforcement within ten (10) days of request.",
+            "deadline": "90 days after reporting period ends; submit within 10 days of completion",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 619,
+            "quote_end_line": 628
           }
         ]
       },
@@ -290,21 +560,34 @@
         "provision_number": "IX",
         "title": "Cooperation with Assessor(s)",
         "category": "affirmative_obligation",
-        "summary": "Defendant must provide all relevant information to the Assessor and must not misrepresent any material facts.",
+        "summary": "Defendant must provide Assessors with all relevant information and materials, disclose all material facts, and not misrepresent any fact material to the Assessment.",
         "requirements": [
           {
-            "description": "Provide all relevant information to Assessor",
-            "quoted_text": "Defendant, whether acting directly or indirectly, in connection with the Assessments required by Section VIII, must: A. Provide or otherwise make available to the Assessor(s) all information and material in their possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege",
+            "description": "Provide or otherwise make available to the Assessor(s) all information and material in their possession, custody, or control relevant to the Assessment for which there is no reasonable claim of privilege",
+            "quoted_text": "A. Provide or otherwise make available to the Assessor(s) all information and material in their possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 632,
+            "quote_end_line": 634
           },
           {
-            "description": "Disclose all material facts to Assessor and not misrepresent",
-            "quoted_text": "Disclose all material facts to the Assessor(s), and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor's: (1) determination of whether Defendant has implemented and maintained the Program required by Section VII; (2) assessment of the effectiveness of the implementation and maintenance of Subsections VII.A-I; or (3) identification of any gaps or weaknesses in, or instances of material noncompliance with, the Program required by Section VII.",
+            "description": "Provide or otherwise make available to the Assessor(s) information about all Covered Information in Defendant's custody or control relevant to the Assessment, so that the Assessor(s) can determine the scope of the Assessment",
+            "quoted_text": "B. Provide or otherwise make available to the Assessor(s) information about all Covered Information in Defendant’s custody or control that is relevant to the Assessment, so that the Assessor(s) can determine the scope of the Assessment; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 635,
+            "quote_end_line": 637
+          },
+          {
+            "description": "Disclose all material facts to the Assessor(s) and not misrepresent, expressly or by implication, any fact material to the Assessor's determination, assessment, or identification tasks under Section VIII",
+            "quoted_text": "C. Disclose all material facts to the Assessor(s), and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor’s: (1) determination of whether Defendant has implemented and maintained the Program required by Section VII; (2) assessment of the effectiveness of the implementation and maintenance of Subsections VII.A-I; or (3) identification of any gaps or weaknesses in, or instances of material noncompliance with, the Program required by Section VII.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 642,
+            "quote_end_line": 647
           }
         ]
       },
@@ -312,14 +595,25 @@
         "provision_number": "X",
         "title": "Annual Certification",
         "category": "compliance_reporting",
-        "summary": "Defendant must provide annual certifications to the FTC for 20 years confirming compliance with the Order.",
+        "summary": "One year after Order entry and each year thereafter for 20 years, Defendant must provide the FTC with a sworn certification confirming compliance, disclosing any uncorrected material noncompliance, and describing any Covered Incidents.",
         "requirements": [
           {
-            "description": "Submit annual certification to FTC",
-            "quoted_text": "One (1) year after the entry of this Order, and each year thereafter for twenty (20) years, provide the Commission with a certification from Defendant, for each Covered Business, that: (1) the Covered Business has established, implemented, and maintained the requirements of this Order; (2) the Covered Business is not aware of any material noncompliance that has not been: (a) corrected, or (b) disclosed to the Commission; and (3) includes a brief description of any Covered Incident.",
-            "deadline": "1 year, then annually for 20 years",
+            "description": "One year after entry of this Order, and each year thereafter for 20 years, provide the Commission with a certification from Defendant for each Covered Business confirming: (1) requirements of this Order have been established, implemented, and maintained; (2) no material noncompliance that has not been corrected or disclosed; and (3) a brief description of any Covered Incident; certification must be based on personal knowledge of a senior corporate manager or senior officer",
+            "quoted_text": "A. One (1) year after the entry of this Order, and each year thereafter for twenty (20) years, provide the Commission with a certification from Defendant, for each Covered Business, that: (1) the Covered Business has established, implemented, and maintained the requirements of this Order; (2) the Covered Business is not aware of any material noncompliance that has not been: (a) corrected, or (b) disclosed to the Commission; and (3) includes a brief description of any Covered Incident. The certification must be based on the personal knowledge of the senior corporate manager, senior officer, or subject matter experts upon whom the senior corporate manager or senior officer reasonably relies in making the certification.",
+            "deadline": "annually for 20 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 650,
+            "quote_end_line": 657
+          },
+          {
+            "description": "Submit all annual certifications to the Commission via email to DEbrief@ftc.gov or by overnight courier to the FTC Associate Director for Enforcement; subject line must begin \"United States v. Easy Healthcare Corporation\"",
+            "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, D.C. 20580. The subject line must begin, “United States v. Easy Healthcare Corporation.”",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 658,
+            "quote_end_line": 663
           }
         ]
       },
@@ -327,14 +621,25 @@
         "provision_number": "XI",
         "title": "Covered Incident Reports",
         "category": "compliance_reporting",
-        "summary": "Defendant must submit reports to the FTC within 30 days of discovering a Covered Incident (unless it involves 500+ individuals and is reported under Section IV).",
+        "summary": "Within 30 days of discovering a Covered Incident, Defendant must submit a report to the FTC including date, description, number of affected consumers, remediation steps, and any notices sent (unless the incident is a Section IV Breach of Security requiring separate notification).",
         "requirements": [
           {
-            "description": "Submit Covered Incident report to FTC within 30 days of discovery",
-            "quoted_text": "Defendant, for any Covered Business, within thirty (30) days after Defendant's discovery of a Covered Incident, must submit a report to the Commission, unless the Covered Incident also constitutes a Breach of Security involving the Unsecured PHR Identifiable Health Information of 500 or more individuals and therefore requiring notice under Section IV of this Order.",
+            "description": "Within 30 days after discovery of a Covered Incident (unless also a Section IV Breach requiring notification), submit a report to the Commission including: date/date range of occurrence; description of facts, causes, and scope; number of affected consumers; acts taken to remediate and protect affected individuals; and a representative copy of any materially different notice sent to consumers or government entities",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant, for any Covered Business, within thirty (30) days after Defendant’s discovery of a Covered Incident, must submit a report to the Commission, unless the Covered Incident also constitutes a Breach of Security involving the Unsecured PHR Identifiable Health Information of 500 or more individuals and therefore requiring notice under Section IV of this Order. The report must include, to the extent possible: A. the date, estimated date, or estimated date range when the Covered Incident occurred; B. a description of the facts relating to the Covered Incident, including the causes and scope of the Covered Incident, if known; C. the number of consumers whose information was affected; D. the acts that Defendant has taken to date to remediate the Covered Incident; protect Covered Information from further disclosure, exposure, or access; and protect affected individuals from identity theft or other harm that may result from the Covered Incident; and E. a representative copy of any materially different notice sent by Defendant to consumers or to any U.S. federal, state, or local government entity.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 669,
+            "quote_end_line": 683
+          },
+          {
+            "description": "All Covered Incident reports must be emailed to DEbrief@ftc.gov or sent by overnight courier to the FTC Associate Director for Enforcement; subject line must begin \"United States v. Easy Healthcare Corporation\"",
+            "quoted_text": "Unless otherwise directed by a Commission representative in writing, all Covered Incident reports to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “United States v. Easy Healthcare Corporation.”",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 684,
+            "quote_end_line": 689
           }
         ]
       },
@@ -342,29 +647,60 @@
         "provision_number": "XII",
         "title": "Monetary Judgment for Civil Penalty",
         "category": "affirmative_obligation",
-        "summary": "Defendant must pay a $100,000 civil penalty to the United States.",
+        "summary": "A civil penalty judgment of $100,000 is entered against Defendant, payable to the U.S. Treasury within 7 days of Order entry by electronic fund transfer.",
         "requirements": [
           {
-            "description": "Pay $100,000 civil penalty",
-            "quoted_text": "Defendant is ordered to pay to Plaintiff, by making payment to the Treasurer of the United States, one hundred thousand Dollars ($100,000), which, as Defendant stipulates, its undersigned counsel holds in escrow for no purpose other than payment to Plaintiff. Such payment must be made within seven (7) days of entry of this Order by electronic fund transfer in accordance with instructions previously provided by a representative of Plaintiff.",
+            "description": "Judgment of $100,000 civil penalty entered in favor of Plaintiff against Defendant",
+            "quoted_text": "A. Judgment in the amount of one hundred thousand Dollars ($100,000) is entered in favor of Plaintiff against Defendant, jointly and severally, as a civil penalty.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 696,
+            "quote_end_line": 697
+          },
+          {
+            "description": "Defendant must pay $100,000 to the Treasurer of the United States within 7 days of entry of this Order by electronic fund transfer",
+            "quoted_text": "B. Defendant is ordered to pay to Plaintiff, by making payment to the Treasurer of the United States, one hundred thousand Dollars ($100,000), which, as Defendant stipulates, its undersigned counsel holds in escrow for no purpose other than payment to Plaintiff. Such payment must be made within seven (7) days of entry of this Order by electronic fund transfer in accordance with instructions previously provided by a representative of Plaintiff.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 698,
+            "quote_end_line": 702
           }
         ]
       },
       {
         "provision_number": "XIII",
         "title": "Additional Monetary Provisions",
-        "category": "acknowledgment",
-        "summary": "Defendant relinquishes all rights to assets transferred and acknowledges use of tax identification numbers for collection.",
+        "category": "affirmative_obligation",
+        "summary": "Defendant relinquishes all rights in transferred assets, facts from the Complaint may be used in future enforcement proceedings, and Defendant's tax identification numbers may be used for collecting delinquent amounts.",
         "requirements": [
           {
-            "description": "Relinquish rights to transferred assets",
-            "quoted_text": "Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets.",
+            "description": "Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets",
+            "quoted_text": "A. Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 705,
+            "quote_end_line": 706
+          },
+          {
+            "description": "The facts alleged in the Complaint will be taken as true, without further proof, in any subsequent civil litigation by or on behalf of the Commission to enforce its rights to any payment or monetary judgment",
+            "quoted_text": "B. The facts alleged in the Complaint will be taken as true, without further proof, in any subsequent civil litigation by or on behalf of the Commission in a proceeding to enforce its rights to any payment or monetary judgment pursuant to this Order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 707,
+            "quote_end_line": 709
+          },
+          {
+            "description": "Defendant acknowledges that its Taxpayer Identification Numbers, Social Security Numbers, or Employer Identification Numbers previously submitted to the Commission may be used for collecting and reporting on any delinquent amount arising out of this Order",
+            "quoted_text": "C. Defendant acknowledges that their Taxpayer Identification Numbers, Social Security Numbers, or Employer Identification Numbers, which Defendant previously submitted to the Commission, may be used for collecting and reporting on any delinquent amount arising out of this Order, in accordance with 31 U.S.C. §7701.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 710,
+            "quote_end_line": 713
           }
         ]
       },
@@ -372,28 +708,34 @@
         "provision_number": "XIV",
         "title": "Order Acknowledgements",
         "category": "acknowledgment",
-        "summary": "Defendant must submit acknowledgment of receipt of the Order and deliver copies to all relevant personnel for 20 years.",
+        "summary": "Defendant must submit a sworn acknowledgment of receipt of the Order within 7 days, deliver copies of the Order to all principals, officers, managers, and relevant employees within 14 days (and to future personnel before they assume responsibilities), and obtain signed acknowledgments from all recipients within 30 days.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt of Order",
-            "quoted_text": "Defendant, within seven (7) days after the entry of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Within 7 days after entry of this Order, submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury",
+            "quoted_text": "A. Defendant, within seven (7) days after the entry of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 721,
+            "quote_end_line": 722
           },
           {
-            "description": "Deliver copy of Order to principals, officers, directors, managers, and relevant personnel",
-            "quoted_text": "For twenty (20) years after entry of this Order, Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives having managerial responsibilities for conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within fourteen (14) days after entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "14 days for current personnel; before assumption of responsibilities for others",
+            "description": "For 20 years after entry of this Order, deliver a copy of this Order to all principals, officers, directors, LLC managers and members, employees and agents with managerial responsibilities related to the subject matter of the Order, and any business entity resulting from a change in structure; delivery must occur within 14 days for current personnel, and before they assume responsibilities for all others",
+            "quoted_text": "B. For twenty (20) years after entry of this Order, Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives having managerial responsibilities for conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within fourteen (14) days after entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "14 days for current personnel; before assuming responsibilities for new personnel",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 723,
+            "quote_end_line": 729
           },
           {
-            "description": "Obtain signed acknowledgments from recipients",
-            "quoted_text": "From each individual or entity to which Defendant delivered a copy of this Order, Defendant must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "From each individual or entity to which Defendant delivered a copy of this Order, obtain within 30 days a signed and dated acknowledgment of receipt",
+            "quoted_text": "C. From each individual or entity to which Defendant delivered a copy of this Order, Defendant must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 730,
+            "quote_end_line": 732
           }
         ]
       },
@@ -401,28 +743,52 @@
         "provision_number": "XV",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Defendant must submit compliance reports to the FTC one year after entry of the Order and notify the FTC of any changes for 20 years.",
+        "summary": "One year after Order entry, Defendant must submit a sworn compliance report identifying contacts, businesses, and activities, and describing compliance with each Section; for 20 years, must submit compliance notices within 14 days of structural or contact changes and notify the FTC within 14 days of any bankruptcy filing.",
         "requirements": [
           {
-            "description": "Submit compliance report one year after entry of Order",
-            "quoted_text": "One year after entry of this Order, Defendant must submit a compliance report, sworn under penalty of perjury.",
-            "deadline": "1 year",
+            "description": "One year after entry of this Order, submit a compliance report sworn under penalty of perjury identifying primary contacts, all businesses and their activities, a detailed description of compliance with each Section, and a copy of each Order Acknowledgment obtained",
+            "quoted_text": "A. One year after entry of this Order, Defendant must submit a compliance report, sworn under penalty of perjury. Defendant must: 1. identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission and Plaintiff may use to communicate with Defendant; 2. identify all of Defendant’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; 3. describe the activities of each business, including the products and services offered, the means of advertising, marketing, and sales, and the involvement of Defendant; 4. describe in detail whether and how Defendant is in compliance with each 28 Case: 1:23-cv-03107 Document #: 5 Filed: 06/22/23 Page 29 of 37 PageID #:101 Section of this Order; and 5. provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year after entry",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 736,
+            "quote_end_line": 753
           },
           {
-            "description": "Submit compliance notice within 14 days of any change in structure or contact information",
-            "quoted_text": "For twenty (20) years after entry of this Order, Defendant must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in the following: 1. Any designated point of contact; or 2. The structure of Defendant or any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order",
-            "deadline": "14 days",
+            "description": "For 20 years after entry, submit a compliance notice sworn under penalty of perjury within 14 days of any change in designated point of contact or in the structure of Defendant or any controlled entity that may affect compliance obligations (including creation, merger, sale, or dissolution)",
+            "quoted_text": "B. For twenty (20) years after entry of this Order, Defendant must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in the following: 1. Any designated point of contact; or 2. The structure of Defendant or any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days of change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 754,
+            "quote_end_line": 761
           },
           {
-            "description": "Notify FTC of bankruptcy or insolvency proceedings",
-            "quoted_text": "Defendant must submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Defendant within 14 days of its filing.",
+            "description": "Submit notice of filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Defendant within 14 days of its filing",
+            "quoted_text": "C. Defendant must submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Defendant within 14 days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 762,
+            "quote_end_line": 764
+          },
+          {
+            "description": "Any submission required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 765,
+            "quote_end_line": 769
+          },
+          {
+            "description": "All submissions to the Commission must be emailed to DEbrief@ftc.gov or sent by overnight courier to the FTC Associate Director for Enforcement; subject line must begin \"United States v. Easy Healthcare Corporation\"",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “United States v. Easy Healthcare Corporation.”",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 770,
+            "quote_end_line": 775
           }
         ]
       },
@@ -430,14 +796,106 @@
         "provision_number": "XVI",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Defendant must create and retain specific records for 20 years, with each record retained for 5 years.",
+        "summary": "Defendant must create and retain specified records for 20 years (with a 5-year retention period for each record), including accounting records, personnel records, consumer complaints, Health Information disclosures, App Event disclosures, marketing materials, Assessment-related materials, law enforcement communications, and all records demonstrating compliance.",
         "requirements": [
           {
-            "description": "Create and retain accounting, personnel, complaint, disclosure, and compliance records",
-            "quoted_text": "Defendant must create certain records for twenty (20) years after the entry of the Order, and retain each such record for five (5) years, unless otherwise specified below. Specifically, Defendant for any business that Defendant is a majority owner or controls directly or indirectly must create and retain the following records: A. accounting records showing the revenues from all products or services sold; B. personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination; C. copies or records of all consumer complaints and refund requests related to any mobile application or website offered by Defendant, concerning the collection, use, maintenance, disclosure, deletion, or permission of access to Covered Information, whether received directly or indirectly, such as through a third party, and any response; D. records of all disclosures of Health Information or PHR Identifiable Health Information to Third Parties showing, for each Third Party that received Health Information or PHR Identifiable Health Information, the name and address of the Third Party, the date(s) of such disclosures, the purpose(s) for which the Health Information or PHR Identifiable Health Information was transferred, and how and when Covered Users provided authorization for the disclosures; D. records of all disclosures of App Events to Third Parties; E. a copy of each unique advertisement, form advertisement (where an advertisement is generated based on a form advertisement), or other marketing material making a representation subject to this Order; G. a copy of each widely disseminated representation by Defendant that describes the extent to which Defendant maintains or protects the privacy, security, and confidentiality of any Covered Information, including any representation concerning a change in any website or other service controlled by Defendant that relates to the privacy, security, and confidentiality of Covered Information; H. for five (5) years after the date of preparation of each Assessment required by Section VIII, all materials provided to the Assessor(s) by the Respondent to prepare the Assessment, whether prepared by or on behalf of Defendant, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Defendant's compliance with related Sections of this Order, for the compliance period covered by such Assessment; I. for five (5) years from the date received, copies of all subpoenas and other communications with law enforcement, if such communication relate to Defendant's compliance with this Order; J. for five (5) years from the date created or received, all records, whether prepared by or on behalf of Defendant, that tend to show any lack of compliance by Defendant with this Order; and K. all records necessary to demonstrate full compliance with each section of this Order, including all submissions to the Commission.",
-            "deadline": "Create for 20 years; retain each for 5 years",
+            "description": "Create and retain for 5 years: accounting records showing revenues from all products or services sold",
+            "quoted_text": "A. accounting records showing the revenues from all products or services sold;",
+            "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 785,
+            "quote_end_line": 785
+          },
+          {
+            "description": "Create and retain for 5 years: personnel records showing name, address, telephone number, job title, dates of service, and reason for termination for each person providing services related to any aspect of the Order",
+            "quoted_text": "B. personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 786,
+            "quote_end_line": 789
+          },
+          {
+            "description": "Create and retain for 5 years: copies or records of all consumer complaints and refund requests related to any mobile application or website concerning the collection, use, maintenance, disclosure, deletion, or permission of access to Covered Information, and any response",
+            "quoted_text": "C. copies or records of all consumer complaints and refund requests related to any mobile application or website offered by Defendant, concerning the collection, use, maintenance, disclosure, deletion, or permission of access to Covered Information, whether received directly or indirectly, such as through a third party, and any response;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 790,
+            "quote_end_line": 793
+          },
+          {
+            "description": "Create and retain for 5 years: records of all disclosures of Health Information or PHR Identifiable Health Information to Third Parties, including Third Party name and address, dates of disclosures, purposes, and how and when Covered Users provided authorization",
+            "quoted_text": "D. records of all disclosures of Health Information or PHR Identifiable Health Information to Third Parties showing, for each Third Party that received Health Information or PHR Identifiable Health Information, the name and address of the Third Party, the date(s) of such disclosures, the purpose(s) for which the Health Information or PHR Identifiable Health Information was transferred, and how and when Covered Users provided authorization for the disclosures;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 794,
+            "quote_end_line": 799
+          },
+          {
+            "description": "Create and retain for 5 years: records of all disclosures of App Events to Third Parties",
+            "quoted_text": "D. records of all disclosures of App Events to Third Parties;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 800,
+            "quote_end_line": 800
+          },
+          {
+            "description": "Create and retain for 5 years: a copy of each unique advertisement, form advertisement, or other marketing material making a representation subject to this Order",
+            "quoted_text": "E. a copy of each unique advertisement, form advertisement (where an advertisement is generated based on a form advertisement), or other marketing material making a representation subject to this Order;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 801,
+            "quote_end_line": 803
+          },
+          {
+            "description": "Create and retain for 5 years: a copy of each widely disseminated representation by Defendant describing the extent to which it maintains or protects the privacy, security, and confidentiality of any Covered Information",
+            "quoted_text": "G. a copy of each widely disseminated representation by Defendant that describes 30 Case: 1:23-cv-03107 Document #: 5 Filed: 06/22/23 Page 31 of 37 PageID #:103 the extent to which Defendant maintains or protects the privacy, security, and confidentiality of any Covered Information, including any representation concerning a change in any website or other service controlled by Defendant that relates to the privacy, security, and confidentiality of Covered Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 804,
+            "quote_end_line": 812
+          },
+          {
+            "description": "Retain for 5 years after preparation: all materials provided to the Assessor(s) to prepare each Assessment required by Section VIII, including plans, reports, studies, reviews, audits, policies, training materials, and assessments",
+            "quoted_text": "H. for five (5) years after the date of preparation of each Assessment required by Section VIII, all materials provided to the Assessor(s) by the Respondent to prepare the Assessment, whether prepared by or on behalf of Defendant, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Defendant’s compliance with related Sections of this Order, for the compliance period covered by such Assessment;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 813,
+            "quote_end_line": 818
+          },
+          {
+            "description": "Retain for 5 years from date received: copies of all subpoenas and other communications with law enforcement if they relate to Defendant's compliance with this Order",
+            "quoted_text": "I. for five (5) years from the date received, copies of all subpoenas and other communications with law enforcement, if such communication relate to Defendant’s compliance with this Order;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 819,
+            "quote_end_line": 821
+          },
+          {
+            "description": "Retain for 5 years from date created or received: all records that tend to show any lack of compliance by Defendant with this Order",
+            "quoted_text": "J. for five (5) years from the date created or received, all records, whether prepared by or on behalf of Defendant, that tend to show any lack of compliance by Defendant with this Order; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 822,
+            "quote_end_line": 824
+          },
+          {
+            "description": "Retain all records necessary to demonstrate full compliance with each section of this Order, including all submissions to the Commission",
+            "quoted_text": "K. all records necessary to demonstrate full compliance with each section of this Order, including all submissions to the Commission.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 825,
+            "quote_end_line": 826
           }
         ]
       },
@@ -445,21 +903,34 @@
         "provision_number": "XVII",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The FTC and Plaintiff have the right to monitor Defendant's compliance through reports, inspections, interviews, and other lawful means.",
+        "summary": "The Commission and Plaintiff are authorized to monitor Defendant's compliance by requesting additional reports and records (within 14 days of written request), communicating directly with Defendant, interviewing affiliated persons, and using all other lawful means including undercover methods.",
         "requirements": [
           {
-            "description": "Submit additional compliance reports or produce records within 14 days of request",
-            "quoted_text": "Within fourteen (14) days of receipt of a written request from a representative of the Commission or Plaintiff, Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
-            "deadline": "14 days",
+            "description": "Within 14 days of receipt of a written request from the Commission or Plaintiff, submit additional compliance reports or other requested information sworn under penalty of perjury, and produce records for inspection and copying; the Commission and Plaintiff are also authorized to obtain discovery without further leave of court using specified Federal Rules of Civil Procedure",
+            "quoted_text": "A. Within fourteen (14) days of receipt of a written request from a representative of the Commission or Plaintiff, Defendant must: submit additional compliance reports or other 31 Case: 1:23-cv-03107 Document #: 5 Filed: 06/22/23 Page 32 of 37 PageID #:104 requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying. The Commission and Plaintiff are also authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
+            "deadline": "14 days of written request",
             "verified": true,
-            "confidence": 0.8515742128935532
+            "confidence": 0.85,
+            "quote_start_line": 830,
+            "quote_end_line": 839
           },
           {
-            "description": "Permit direct communication and interviews with personnel",
-            "quoted_text": "For matters concerning this Order, the Commission and Plaintiff are authorized to communicate directly with Defendant. Defendant must permit representatives of the Commission and Plaintiff to interview anyone affiliated with Defendant who has agreed to such an interview. The person interviewed may have counsel present.",
+            "description": "Defendant must permit representatives of the Commission and Plaintiff to interview anyone affiliated with Defendant who has agreed to such an interview; the person interviewed may have counsel present",
+            "quoted_text": "B. For matters concerning this Order, the Commission and Plaintiff are authorized to communicate directly with Defendant. Defendant must permit representatives of the Commission and Plaintiff to interview anyone affiliated with Defendant who has agreed to such an interview. The person interviewed may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 840,
+            "quote_end_line": 843
+          },
+          {
+            "description": "The Commission and Plaintiff may use all other lawful means, including posing as consumers, suppliers, or other individuals or entities, without the necessity of identification or prior notice; nothing in this Order limits the Commission's lawful use of compulsory process",
+            "quoted_text": "C. The Commission and Plaintiff may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Defendant or any individual or entity affiliated with Defendant, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 844,
+            "quote_end_line": 848
           }
         ]
       },
@@ -467,21 +938,23 @@
         "provision_number": "XVIII",
         "title": "Retention of Jurisdiction",
         "category": "duration",
-        "summary": "The Court retains jurisdiction for construction, modification, and enforcement of the Order.",
+        "summary": "The Court retains jurisdiction over this matter for purposes of construction, modification, and enforcement of the Order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction",
-            "quoted_text": "this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+            "description": "The Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order",
+            "quoted_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 850,
+            "quote_end_line": 851
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "For twenty (20) years after entry of this Order"
+      "termination_text": "For twenty (20) years after entry of this Order, Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives having managerial responsibilities for conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting."
     }
   },
   "metadata": {
@@ -490,12 +963,43 @@
       "order": "06.23, Easy Healthcare Corporation Order (Pending).pdf"
     },
     "extraction_stats": {
-      "complaint_counts": 0,
-      "complaint_representations": 0,
+      "complaint_counts": 8,
+      "complaint_representations": 5,
       "order_provisions": 18,
       "order_definitions": 21,
-      "order_requirements": 41
+      "order_requirements": 73,
+      "provisions_per_section": {
+        "I": 2,
+        "II": 6,
+        "III": 2,
+        "IV": 6,
+        "V": 2,
+        "VI": 5,
+        "VII": 10,
+        "VIII": 5,
+        "IX": 3,
+        "X": 2,
+        "XI": 2,
+        "XII": 2,
+        "XIII": 3,
+        "XIV": 3,
+        "XV": 5,
+        "XVI": 11,
+        "XVII": 3,
+        "XVIII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 1
+      },
+      "verification_details": {
+        "complaint_verified": 5,
+        "complaint_total": 5,
+        "order_verified": 73,
+        "order_total": 73
+      }
     },
-    "processing_time_seconds": 241.1
+    "processing_time_seconds": 289.9
   }
 }

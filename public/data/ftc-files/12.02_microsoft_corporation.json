@@ -2,11 +2,11 @@
   "case_info": {
     "docket_number": "C-4069",
     "company": {
-      "name": "MICROSOFT CORPORATION",
+      "name": "Microsoft Corporation",
       "incorporation_state": "Washington",
       "entity_type": "corporation",
       "address": "One Microsoft Way, Redmond, Washington 98052",
-      "business_description": "Microsoft is a software and technology company that develops and promotes online services including sign-on and online wallet services known as Passport and Passport Express Purchase (Passport Wallet) through its website and the Internet."
+      "business_description": "Microsoft is a software and technology company that advertised and promoted its sign-on and online wallet services, Passport and Passport Express Purchase (aka Passport Wallet), through the company's Web site and elsewhere on the Internet."
     },
     "commissioners": [
       "Timothy J. Muris, Chairman",
@@ -15,72 +15,126 @@
       "Orson Swindle",
       "Thomas B. Leary"
     ],
-    "date_issued": "",
+    "case_date": {
+      "month": 12,
+      "year": 2002
+    },
     "legal_authority": "Federal Trade Commission Act, 15 U.S.C. § 45 et seq",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/1923258-microsoft-corporation-us-v"
   },
   "complaint": {
-    "factual_background": "Microsoft made false and misleading claims about its Passport and Passport Wallet services between 1999 and 2002. The company claimed to maintain high-level security and provide parents control over children's information through Kids Passport, but failed to implement reasonable security measures, misrepresented the safety benefits of Passport Wallet, collected personally identifiable information beyond what was disclosed in its privacy policy, and failed to give parents adequate control over their children's information.",
+    "factual_background": "Microsoft operated its Passport and Passport Wallet services and made numerous security and privacy representations to consumers that proved to be false or misleading. Microsoft claimed Passport used strong security technologies and stored data on secure servers, but failed to implement reasonable safeguards against unauthorized access, detection of intrusions, vulnerability monitoring, and audit logging. Microsoft also falsely claimed Passport Wallet made purchases safer than purchasing without it, when in fact most consumers received identical security either way. Additionally, Microsoft's privacy policy misrepresented the data Passport collected, and its Kids Passport service falsely claimed to give parents control over their children's personal information when children could actually edit account settings established by parents.",
     "representations_made": [
       {
-        "description": "Claimed to maintain a high level of online security with reasonable measures to protect personal information",
-        "quoted_text": "Through the means described in Paragraphs 3-5, respondent represented, expressly or by implication, that it maintained a high level of online security by employing sufficient measures reasonable and appropriate under the circumstances to maintain and protect the privacy and confidentiality of personal information obtained from or about consumers in connection with the Passport and Passport Wallet services.",
-        "source_paragraph": 6
+        "description": "Claimed Passport achieved a high level of web security using technologies designed to prevent unauthorized access to personal information",
+        "quoted_text": "How secure is .NET Passport? .NET Passport achieves a high level of Web Security by using technologies and systems designed to prevent unauthorized access to your personal information. Exhibit A, Microsoft .NET Passport Q&A, http://www.passport.com/Consumer/ ConsumerQA.asp?lc.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 3,
+        "quote_start_line": 27,
+        "quote_end_line": 30
       },
       {
-        "description": "Claimed that purchases made with Passport Wallet are safer or more secure",
-        "quoted_text": "Through the means described in paragraphs 9 and 10, respondent represented, expressly or by implication, that purchases made at a Passport Express Purchase site with Passport Wallet are safer or more secure than purchases made at the same Passport Express Purchase site without using the Passport Wallet.",
-        "source_paragraph": 11
+        "description": "Claimed Passport was protected by powerful online security technology and a strict privacy policy",
+        "quoted_text": "Security Use .NET Passport from any computer on the Internet. Your .NET Passport is protected by powerful online security technology and a strict privacy policy.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 4,
+        "quote_start_line": 34,
+        "quote_end_line": 36
       },
       {
-        "description": "Claimed that Passport did not collect any personally identifiable information beyond what was described in its privacy policy",
-        "quoted_text": "Through the means described in paragraphs 13-14, respondent represented, expressly or by implication, that Passport did not collect any personally identifiable information other than that described in its privacy policy.",
-        "source_paragraph": 15
+        "description": "Claimed Passport personal information was stored on secure servers protected in controlled facilities",
+        "quoted_text": "SECURITY OF YOUR PERSONAL INFORMATION Your .NET Passport information is stored on secure .NET Passport servers that are protected in controlled facilities.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 5,
+        "quote_start_line": 43,
+        "quote_end_line": 45
       },
       {
-        "description": "Claimed that Kids Passport provided parents with control over children's information shared with participating sites",
-        "quoted_text": "Through the means described in Paragraph 18, respondent represented, expressly or by implication, that the Kids Passport service provided parents with control over the information their children could provide to participating Passport sites and the use of that information by such sites.",
-        "source_paragraph": 19
+        "description": "Claimed that storing information in Passport Wallet would result in faster, safer online purchases at Express Purchase sites",
+        "quoted_text": "Store information in .NET Passport wallet that will help you make faster safer online purchases at any .NET Passport express purchase site.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 68,
+        "quote_end_line": 69
+      },
+      {
+        "description": "Claimed consumers could make faster, more secure online purchases with Passport Express Purchase",
+        "quoted_text": "With a .NET Passport, you can: * * * Make faster, more secure online purchases with .NET Passport express purchase.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 10,
+        "quote_start_line": 79,
+        "quote_end_line": 81
+      },
+      {
+        "description": "Claimed Passport's privacy policy disclosed all personally identifiable information collected, in compliance with the TRUSTe Privacy Program",
+        "quoted_text": "This Privacy Statement discloses the privacy practices for the .NET Passport Web Site and .NET Passport Services in accordance with the requirements of the TRUSTe Privacy Program. When you visit a web site displaying the TRUSTe trademark, you can expect to be notified of [w]hat personally identifiable information of yours is collected. . . .",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 13,
+        "quote_start_line": 95,
+        "quote_end_line": 98
+      },
+      {
+        "description": "Claimed Kids Passport helped parents protect their children's privacy and allowed parents to grant or deny consent for personal information collection by participating websites",
+        "quoted_text": "A. Welcome to Kids Passport Helping parents protect their children’s privacy online . . . Learn about the Children’s Online Privacy Protection Act Discover how Passport Kids is helping parents to keep their children’s identity safe online. . . . Microsoft Kids Passport is a free service that helps you conveniently protect and control your children’s online privacy. . . With Kids Passport, you can grant or deny consent to participation (sic) web sites (including the Microsoft family of web sites) to collect personal information from your children. In addition, you can make specific choices for each child and for each site, all in one convenient, centralized location.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 18,
+        "quote_start_line": 126,
+        "quote_end_line": 136
+      },
+      {
+        "description": "Claimed Kids Passport did not share children's personal information with third parties except where parents consented, and allowed parents to limit the amount of information shared with participating sites",
+        "quoted_text": "USE OF CHILDREN’S PERSONAL INFORMATION BY PASSPORT . . . Passport does not share this information contained in your child’s Passport profile with third parties, except for Passport participating sites where you have consented to such sharing, or as otherwise disclosed in this statement. . . . CONTROL OF CHILDREN’S PERSONAL INFORMATION Kids Passport allow you to limit the amount of information shared with the sites and services participating in the Kids Passport program. You can choose to allow Passport to share all of the information in your child’s Passport profile with a participating site or service, or you can limit the information shared to just a unique identifier or age range.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 18,
+        "quote_start_line": 145,
+        "quote_end_line": 155
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "Passport Security Misrepresentation",
-        "representation": "Microsoft claimed it maintained a high level of online security by employing sufficient measures reasonable and appropriate under the circumstances to maintain and protect the privacy and confidentiality of personal information obtained from or about consumers in connection with the Passport and Passport Wallet services",
-        "fact": "Microsoft did not maintain a high level of online security by employing sufficient measures reasonable and appropriate under the circumstances. Microsoft failed to implement and document procedures that were reasonable and appropriate to: (1) prevent possible unauthorized access to the Passport system; (2) detect possible unauthorized access to the Passport system; (3) monitor the Passport system for potential vulnerabilities; and (4) record and retain system information sufficient to perform security audits and investigations",
+        "representation": "Microsoft represented that it maintained a high level of online security by employing sufficient measures reasonable and appropriate under the circumstances to maintain and protect the privacy and confidentiality of personal information obtained from or about consumers in connection with the Passport and Passport Wallet services.",
+        "fact": "Microsoft did not maintain a high level of online security. It failed to implement and document procedures reasonable and appropriate to prevent, detect, or monitor possible unauthorized access to the Passport system, or to record and retain system information sufficient to perform security audits and investigations.",
         "conclusion": "In light of these deficiencies, taken together, the representation set forth in Paragraph 6 was false or misleading."
       },
       {
         "count_number": 2,
-        "title": "Passport Wallet Security Misrepresentation",
-        "representation": "Microsoft claimed that purchases made at a Passport Express Purchase site with Passport Wallet are safer or more secure than purchases made at the same Passport Express Purchase site without using the Passport Wallet",
-        "fact": "Purchases made at a Passport Express Purchase site with Passport Wallet are not, for most consumers, safer or more secure than purchases made at the same Passport Express Purchase site without using the Passport Wallet. Most consumers making credit card purchases at a Passport Express Purchase site receive identical security whether they use Passport Wallet to complete a transaction or purchase directly from the Passport Express Purchase site without using a Passport Wallet",
-        "conclusion": "Therefore, the representations set forth in paragraph 11 were false or misleading."
+        "title": "Passport Wallet Safety Misrepresentation",
+        "representation": "Microsoft represented that purchases made at a Passport Express Purchase site with Passport Wallet are safer or more secure than purchases made at the same Passport Express Purchase site without using the Passport Wallet.",
+        "fact": "Purchases made at a Passport Express Purchase site with Passport Wallet are not, for most consumers, safer or more secure than purchases made without Passport Wallet. Most consumers receive identical security whether or not they use Passport Wallet.",
+        "conclusion": "Therefore, the representations set forth in Paragraph 11 were false or misleading."
       },
       {
         "count_number": 3,
-        "title": "Undisclosed Data Collection",
-        "representation": "Microsoft represented that Passport did not collect any personally identifiable information other than that described in its privacy policy",
-        "fact": "Passport did collect personally identifiable information other than that described in its privacy policy. In particular, Passport collected, and maintained for a limited period of time, a personally identifiable record of the sites to which a Passport user signed in, along with the dates and times of sign in, which customer service representatives linked to a user's name in order to respond to a user's request for service",
-        "conclusion": "Therefore, the representation set forth in paragraph 15 was false or misleading."
+        "title": "Passport Privacy Policy Data Collection Misrepresentation",
+        "representation": "Microsoft represented that Passport did not collect any personally identifiable information other than that described in its privacy policy.",
+        "fact": "Passport did collect personally identifiable information not described in its privacy policy — specifically, a personally identifiable record of the sites to which a Passport user signed in, along with the dates and times of sign-in, which customer service representatives linked to a user's name.",
+        "conclusion": "Therefore, the representation set forth in Paragraph 15 was false or misleading."
       },
       {
         "count_number": 4,
         "title": "Kids Passport Parental Control Misrepresentation",
-        "representation": "Microsoft represented that the Kids Passport service provided parents with control over the information their children could provide to participating Passport sites and the use of that information by such sites",
-        "fact": "The Kids Passport service did not provide parents with control over the information their children could provide to participating Passport sites and the use of that information by such sites. Once a parent set up a child's Passport account and provided consent for the collection and/or disclosure of the types of personal information listed in respondent's privacy policy, respondent permitted the child to edit or change certain fields of personal information and change account settings set by the parent. Respondent also failed to clearly inform parents that in some instances information would be disclosed to Passport Web sites that do not participate in the Kids Passport service",
-        "conclusion": "Therefore, the representations set forth in paragraph 19 were false or misleading."
+        "representation": "Microsoft represented that the Kids Passport service provided parents with control over the information their children could provide to participating Passport sites and the use of that information by such sites.",
+        "fact": "The Kids Passport service did not provide parents with the represented control. Children could edit or change certain fields of personal information and change account settings established by the parent. Microsoft also failed to clearly inform parents that in some instances information would be disclosed to Passport websites that do not participate in the Kids Passport service.",
+        "conclusion": "Therefore, the representations set forth in Paragraph 19 were false or misleading."
       }
     ]
   },
   "order": {
     "definitions": {
       "Personally identifiable information": "individually identifiable information from or about an individual including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name that reveals an individual's email address; (d) a telephone number; (e) a Social Security Number; (f) a persistent identifier, such as a customer number held in a \"cookie\" or processor serial number, that is combined with other available data that identifies an individual; or (g) any information that is combined with any of (a) through (f) above.",
-      "personal information": "individually identifiable information from or about an individual including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name that reveals an individual's email address; (d) a telephone number; (e) a Social Security Number; (f) a persistent identifier, such as a customer number held in a \"cookie\" or processor serial number, that is combined with other available data that identifies an individual; or (g) any information that is combined with any of (a) through (f) above.",
       "Covered online service": "Passport, Kids Passport, Passport Wallet, any substantially similar product or service, or any multisite online authentication service.",
-      "respondent": "Microsoft Corporation, its successors and assigns and its officers, agents, representatives, and employees acting within the scope of their authority on behalf of, or in active concert or participation with Microsoft Corporation.",
+      "Respondent": "Microsoft Corporation, its successors and assigns and its officers, agents, representatives, and employees acting within the scope of their authority on behalf of, or in active concert or participation with Microsoft Corporation.",
       "Commerce": "as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44."
     },
     "provisions": [
@@ -88,107 +142,77 @@
         "provision_number": "I",
         "title": "Prohibition Against Misrepresentations About Information Practices",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent its information practices, including what personal information is collected, security protections, privacy policy changes, parental controls, or any other matter regarding collection, use, or disclosure of personally identifiable information.",
+        "summary": "Respondent must not misrepresent in any manner its information practices in connection with any covered online service, including what personal information is collected, how it is protected, how it is handled upon policy changes, and parental controls for children's information.",
         "requirements": [
           {
             "description": "Must not misrepresent what personal information is collected from or about consumers",
-            "quoted_text": "IT IS ORDERED that respondent, directly or through any corporation, subsidiary, division, or other device, in connection with the advertising, marketing, promotion, offering for sale, or sale of a covered online service, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication, its information practices, including: A. what personal information is collected from or about consumers;",
+            "quoted_text": "I. IT IS ORDERED that respondent, directly or through any corporation, subsidiary, division, or other device, in connection with the advertising, marketing, promotion, offering for sale, or sale of a covered online service, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication, its information practices, including: A. what personal information is collected from or about consumers; B. the extent to which respondent’s product or service will maintain, protect or enhance the privacy, confidentiality, or security of any personally identifiable information collected from or about consumers; C. the steps respondent will take with respect to personal information it has collected in the event that it changes the terms of the privacy policy in effect at the time the information was collected; D. the extent to which the service allows parents to control what information their children can provide to participating sites or the use of that information by such sites; and E. any other matter regarding the collection, use, or disclosure of personally identifiable information.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must not misrepresent the extent to which it will maintain, protect or enhance privacy, confidentiality, or security of personally identifiable information",
-            "quoted_text": "B. the extent to which respondent's product or service will maintain, protect or enhance the privacy, confidentiality, or security of any personally identifiable information collected from or about consumers;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must not misrepresent the steps it will take with respect to personal information when privacy policy terms change",
-            "quoted_text": "C. the steps respondent will take with respect to personal information it has collected in the event that it changes the terms of the privacy policy in effect at the time the information was collected;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must not misrepresent the extent to which the service allows parents to control what information their children can provide or the use of that information",
-            "quoted_text": "D. the extent to which the service allows parents to control what information their children can provide to participating sites or the use of that information by such sites;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must not misrepresent any other matter regarding collection, use, or disclosure of personally identifiable information",
-            "quoted_text": "E. any other matter regarding the collection, use, or disclosure of personally identifiable information.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 59,
+            "quote_end_line": 74
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Information Security Program",
+        "title": "Comprehensive Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondent must establish and maintain a comprehensive written information security program with administrative, technical, and physical safeguards to protect the security, confidentiality, and integrity of personal information collected from consumers.",
+        "summary": "Respondent must establish and maintain a comprehensive written information security program with administrative, technical, and physical safeguards appropriate to its size, complexity, and the sensitivity of the personal information it collects.",
         "requirements": [
           {
-            "description": "Establish and maintain a comprehensive written information security program with appropriate safeguards",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent, and its successors and assigns, in connection with the advertising, marketing, promotion, offering for sale, or sale of a covered online service, in or affecting commerce, shall establish and maintain a comprehensive information security program in writing that is reasonably designed to protect the security, confidentiality, and integrity of personal information collected from or about consumers. Such program shall contain administrative, technical, and physical safeguards appropriate to respondent's size and complexity, the nature and scope of respondent's activities, and the sensitivity of the personal information collected from or about consumers",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Designate employee(s) to coordinate and be accountable for the information security program",
+            "description": "Designate an employee or employees to coordinate and be accountable for the information security program",
             "quoted_text": "A. The designation of an employee or employees to coordinate and be accountable for the information security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 86,
+            "quote_end_line": 87
           },
           {
-            "description": "Identify material internal and external risks and assess sufficiency of safeguards, including consideration of employee training, information systems, and prevention/detection/response to attacks",
+            "description": "Identify material internal and external risks to security, confidentiality, and integrity of customer information and assess adequacy of existing safeguards, covering employee training, information systems, and prevention/detection/response to attacks",
             "quoted_text": "B. The identification of material internal and external risks to the security, confidentiality, and integrity of customer information that could result in the unauthorized disclosure, misuse, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including: (1) employee training and management; (2) information systems, including network and software design, information processing, storage, transmission and disposal; and (3) prevention, detection, and response to attacks, intrusions, or other systems failures.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 88,
+            "quote_end_line": 95
           },
           {
-            "description": "Design and implement reasonable safeguards to control identified risks and regularly test or monitor their effectiveness",
-            "quoted_text": "C. Design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures.",
+            "description": "Design and implement reasonable safeguards to control identified risks, and regularly test or monitor effectiveness of key controls, systems, and procedures",
+            "quoted_text": "C. Design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing or monitoring of the effectiveness of the safeguards’ key controls, systems, and procedures.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 96,
+            "quote_end_line": 98
           },
           {
-            "description": "Evaluate and adjust the information security program based on testing results, material changes, or other circumstances",
-            "quoted_text": "D. Evaluation and adjustment of respondent's information security program in light of the results of the testing and monitoring required by paragraph C, any material changes to respondent's operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on its information security program.",
+            "description": "Evaluate and adjust the information security program based on testing/monitoring results, material operational changes, or any other circumstances that may have a material impact on the program",
+            "quoted_text": "D. Evaluation and adjustment of respondent’s information security program in light of the results of the testing and monitoring required by paragraph C, any material changes to respondent’s operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on its information security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 99,
+            "quote_end_line": 102
           }
         ]
       },
       {
         "provision_number": "III",
-        "title": "Third-Party Assessments",
+        "title": "Biannual Third-Party Security Assessment",
         "category": "assessment",
-        "summary": "Respondent must obtain independent third-party assessments from a qualified professional within one year and biennially thereafter, certifying that the security program meets the order's requirements and is operating effectively.",
+        "summary": "Respondent must obtain, within one year and biennially thereafter, an independent third-party assessment from a CISSP or FTC-approved professional certifying that the security program meets the requirements of Part II and is operating with sufficient effectiveness.",
         "requirements": [
           {
-            "description": "Obtain initial third-party assessment and report certifying security program meets order requirements and is operating effectively",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent obtain within one (1) year, and on a biannual basis thereafter, an assessment and report from a qualified, objective, independent third-party professional, using procedures and standards generally accepted in the profession, that certifies: A. that respondent has in place a security program that provides protections that meet or exceed the protections required by Part II of this order; and B. that respondent's security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of consumer's personal information has been protected.",
-            "deadline": "1 year",
+            "description": "Obtain a qualified, objective, independent third-party assessment and report certifying the security program meets or exceeds Part II protections and operates with sufficient effectiveness — initially within one year, then on a biannual basis; prepared by a CISSP or FTC-approved person",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent obtain within one (1) year, and on a biannual basis thereafter, an assessment and report from a qualified, objective, independent third-party professional, using procedures and standards generally accepted in the profession, that certifies: A. that respondent has in place a security program that provides protections that meet or exceed the protections required by Part II of this order; and B. that respondent’s security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of consumer’s personal information has been protected. The report required by this paragraph shall be prepared by a Certified Information System Security Professional (CISSP) or by a person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
+            "deadline": "1 year (initial), biannual thereafter",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Report must be prepared by a CISSP or person/organization approved by the Associate Director for Enforcement",
-            "quoted_text": "The report required by this paragraph shall be prepared by a Certified Information System Security Professional (CISSP) or by a person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 104,
+            "quote_end_line": 114
           }
         ]
       },
@@ -196,87 +220,94 @@
         "provision_number": "IV",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must maintain for five years and make available to the FTC upon request various documents relating to compliance, including advertisements, policies, training materials, and audit reports.",
+        "summary": "Respondent must maintain and make available to the FTC for five years all documents relating to compliance, including advertising materials, Web pages, plans, reports, audits, and any documents that contradict or qualify its compliance with the order.",
         "requirements": [
           {
-            "description": "Maintain for five years sample copies of advertisements and documents containing representations about collection, use, and security of personal information",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent, and its successors and assigns, shall for a period of five (5) years after the date of service of this order maintain and upon request make available to the Federal Trade Commission for inspection and copying a print or electronic copy of the following documents relating to compliance with this order: A. a sample copy of each different print, broadcast, cable, or Internet advertisement, promotion, information collection form, Web page, screen, email message, or other document containing any representation to consumers regarding respondent's collection, use, and security of personal information from or about consumers.",
-            "deadline": null,
+            "description": "Maintain and upon request make available to the FTC a sample copy of each different advertisement, promotion, information collection form, Web page, email, or other document containing representations about collection, use, and security of personal information",
+            "quoted_text": "A. a sample copy of each different print, broadcast, cable, or Internet advertisement, promotion, information collection form, Web page, screen, email message, or other document containing any representation to consumers regarding respondent’s collection, use, and security of personal information from or about consumers. Each Web page copy shall be dated and contain the full URL of the Web page where the material was posted online. Electronic copies shall include all text and graphics files, audio scripts, and other computer files used in presenting the information on the Web. Provided, however, that after creation of any Web page 3 or screen in compliance with this order, respondent shall not be required to retain a print or electronic copy of any amended Web page or screen to the extent that the amendment does not affect respondent’s compliance obligations under this order;",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 120,
+            "quote_end_line": 132
           },
           {
-            "description": "Maintain for five years all plans, reports, studies, reviews, audits, policies, and training materials relating to compliance with the order",
-            "quoted_text": "B. all plans, reports, studies, reviews, audits, audit trails, policies, and training materials, whether prepared by or on behalf of respondent, relating to respondent's compliance with this order;",
-            "deadline": null,
+            "description": "Maintain and upon request make available all plans, reports, studies, reviews, audits, audit trails, policies, and training materials relating to compliance with this order",
+            "quoted_text": "B. all plans, reports, studies, reviews, audits, audit trails, policies, and training materials, whether prepared by or on behalf of respondent, relating to respondent’s compliance with this order; and",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 133,
+            "quote_end_line": 135
           },
           {
-            "description": "Maintain for five years any documents that contradict, qualify, or call into question compliance with the order",
-            "quoted_text": "C. any documents, whether prepared by or on behalf of respondent, that contradict, qualify, or call into question respondent's compliance with this order.",
-            "deadline": null,
+            "description": "Maintain and upon request make available any documents that contradict, qualify, or call into question respondent's compliance with this order",
+            "quoted_text": "C. any documents, whether prepared by or on behalf of respondent, that contradict, qualify, or call into question respondent’s compliance with this order.",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 136,
+            "quote_end_line": 137
           }
         ]
       },
       {
         "provision_number": "V",
-        "title": "Acknowledgment of Order",
+        "title": "Order Acknowledgment and Delivery",
         "category": "acknowledgment",
-        "summary": "Respondent must deliver a copy of this order to all current and future principals, officers, directors, managers, and employees with managerial responsibilities relating to the subject matter of the order.",
+        "summary": "Respondent must deliver a copy of this order to all current and future principals, officers, directors, managers, and employees with managerial responsibilities related to the order's subject matter — within 30 days for current personnel and 30 days of assuming a position for future personnel.",
         "requirements": [
           {
-            "description": "Deliver copy of order to current personnel with managerial responsibilities",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent, and its successors and assigns, shall deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having managerial responsibilities relating to the subject matter of this order. Respondent shall deliver this order to such current personnel within thirty (30) days after the date of service of this order",
+            "description": "Deliver a copy of this order to all current principals, officers, directors, managers, and employees with managerial responsibilities relating to the subject matter of this order within 30 days of service",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent, and its successors and assigns, shall deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having managerial responsibilities relating to the subject matter of this order. Respondent shall deliver this order to such current personnel within thirty (30) days after the date of service of this order, and to such future personnel within thirty (30) days after the person assumes such position",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 139,
+            "quote_end_line": 143
           },
           {
-            "description": "Deliver copy of order to future personnel with managerial responsibilities within 30 days of assuming position",
-            "quoted_text": "and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
-            "deadline": "30 days",
+            "description": "Deliver a copy of this order to all future principals, officers, directors, managers, and employees with managerial responsibilities within 30 days after the person assumes such position or responsibilities",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent, and its successors and assigns, shall deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having managerial responsibilities relating to the subject matter of this order. Respondent shall deliver this order to such current personnel within thirty (30) days after the date of service of this order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "deadline": "30 days of assuming position",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 139,
+            "quote_end_line": 144
           }
         ]
       },
       {
         "provision_number": "VI",
-        "title": "Change in Corporate Structure Notification",
+        "title": "Notification of Corporate Changes",
         "category": "compliance_reporting",
-        "summary": "Respondent must notify the Commission at least 30 days prior to any corporate change that may affect compliance obligations, including dissolution, merger, bankruptcy, or change in name or address.",
+        "summary": "Respondent must notify the FTC at least 30 days prior to any corporate change (dissolution, merger, sale, bankruptcy filing, name/address change, or creation/dissolution of a subsidiary or affiliate) that may affect compliance obligations under this order.",
         "requirements": [
           {
-            "description": "Notify the Commission at least 30 days prior to any corporate change affecting compliance obligations",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent Microsoft Corporation, and its successors and assigns, shall notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address.",
-            "deadline": "30 days",
+            "description": "Notify the FTC at least 30 days prior to any dissolution, assignment, sale, merger, or other change that may affect compliance obligations, including subsidiary/parent/affiliate changes, bankruptcy petitions, or name/address changes; if fewer than 30 days notice is possible, notify as soon as practicable; all notices sent by certified mail to the FTC's Associate Director, Division of Enforcement",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent Microsoft Corporation, and its successors and assigns, shall notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address. Provided, however, that, with respect to any proposed change in the corporation about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge. All notices required by this Part shall be sent by certified mail to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580.",
+            "deadline": "30 days prior to change",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Notify the Commission as soon as practicable if change is learned about less than 30 days prior",
-            "quoted_text": "Provided, however, that, with respect to any proposed change in the corporation about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 146,
+            "quote_end_line": 156
           }
         ]
       },
       {
         "provision_number": "VII",
-        "title": "Compliance Reports",
+        "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondent must file with the Commission a written report detailing compliance with the order within 60 days after service and at such other times as the FTC may require.",
+        "summary": "Respondent must file a written compliance report with the FTC within 60 days of service of the order, and at such other times as the FTC may require, detailing the manner and form in which it has complied.",
         "requirements": [
           {
-            "description": "File initial compliance report with the Commission within 60 days after service of the order",
+            "description": "File a written report with the FTC setting forth in detail the manner and form in which respondent has complied with this order, within 60 days of service and at such other times as the FTC may require",
             "quoted_text": "IT IS FURTHER ORDERED that respondent Microsoft Corporation, and its successors and assigns, shall within sixty (60) days after service of this order, and at such other times as the Federal Trade Commission may require, file with the Commission a report, in writing, setting forth in detail the manner and form in which they have complied with this order.",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 158,
+            "quote_end_line": 161
           }
         ]
       },
@@ -284,14 +315,16 @@
         "provision_number": "VIII",
         "title": "Order Duration and Termination",
         "category": "duration",
-        "summary": "This order will terminate on December 20, 2022, or 20 years from the most recent date the FTC files a complaint alleging violation of the order, whichever comes later.",
+        "summary": "The order terminates on December 20, 2022, or twenty years from the most recent date the FTC or United States files a complaint in federal court alleging a violation, whichever is later, with specific exceptions for parts with shorter terms, non-defendant respondents, and complaints filed after termination.",
         "requirements": [
           {
-            "description": "Order terminates on December 20, 2022, or 20 years from most recent complaint filing, whichever is later",
-            "quoted_text": "This order will terminate on December 20, 2022, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later",
+            "description": "Order terminates on December 20, 2022, or 20 years from the most recent federal court complaint alleging a violation, whichever is later; with exceptions for provisions terminating earlier, non-defendant respondents, and post-termination complaints",
+            "quoted_text": "This order will terminate on December 20, 2022, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this order that terminates in less than twenty (20) years; 4 B. This order's application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that the respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Part as though the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 163,
+            "quote_end_line": 178
           }
         ]
       }
@@ -308,11 +341,32 @@
     },
     "extraction_stats": {
       "complaint_counts": 4,
-      "complaint_representations": 4,
+      "complaint_representations": 8,
       "order_provisions": 8,
-      "order_definitions": 5,
-      "order_requirements": 21
+      "order_definitions": 4,
+      "order_requirements": 14,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 4,
+        "III": 1,
+        "IV": 3,
+        "V": 2,
+        "VI": 1,
+        "VII": 1,
+        "VIII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 8,
+        "complaint_total": 8,
+        "order_verified": 14,
+        "order_total": 14
+      }
     },
-    "processing_time_seconds": 100.6
+    "processing_time_seconds": 95.2
   }
 }

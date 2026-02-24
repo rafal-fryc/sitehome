@@ -1,461 +1,568 @@
 {
   "case_info": {
-    "docket_number": "C-11-23643",
+    "docket_number": "11-23643-CV-GRAHAM",
     "company": {
       "name": "Frostwire LLC",
       "incorporation_state": "Florida",
-      "entity_type": "Limited Liability Company",
+      "entity_type": "limited liability company",
       "address": "1000 5th Street, Suite 200, Miami, Florida 33139",
-      "business_description": "Frostwire LLC designed and distributed file-sharing software applications for desktop and laptop computers, as well as mobile computing devices, including FrostWire Desktop and FrostWire for Android, which enabled peer-to-peer file sharing over the Gnutella network."
+      "business_description": "Frostwire LLC designed and distributed file-sharing software applications, including FrostWire Desktop for Windows computers and FrostWire for Android for mobile devices, that enable peer-to-peer file sharing through the Gnutella network protocol."
     },
     "commissioners": [],
     "case_date": {
       "month": 10,
       "year": 2011
     },
-    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a), and Section 13(b) of the Federal Trade Commission Act, 15 U.S.C. § 53(b)",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/112-3041-frostwire-llc-angel-leon"
   },
   "complaint": {
-    "factual_background": "FrostWire LLC and Angel Leon distributed file-sharing software applications for desktop and mobile devices that misrepresented file sharing behavior and caused consumers to unwittingly share private files publicly. The FrostWire Desktop application misled users into believing that downloaded files would not be shared when they actually were shared by default. The FrostWire for Android application was designed to automatically share most pre-existing files on users' mobile devices upon installation, exposing personal photos, videos, documents, and other private files to the public without adequate notice or user control.",
+    "factual_background": "FrostWire LLC distributed two file-sharing applications—FrostWire Desktop and FrostWire for Android—that deceived or harmed consumers regarding the sharing of their private files. FrostWire Desktop's installation wizard and settings interface falsely implied that files downloaded from the Gnutella network would not be publicly shared, when in fact they were automatically designated as 'Individually shared' and broadcast to the network. Even when users attempted to turn off sharing via the Options-Sharing box, previously downloaded files continued to be shared without disclosure. FrostWire for Android was configured by default to immediately share nearly all pre-existing personal files—including pictures, videos, music, and documents—upon installation, with no adequate warning and a burdensome, non-intuitive process required to unshare them.",
     "representations_made": [
       {
-        "description": "Claimed that files downloaded from the Gnutella network and stored in the 'Save' folder would not be shared with the file-sharing network",
-        "quoted_text": "Through the dialog box shown in Figure 1, the Defendants conveyed the impression that when FrostWire Desktop was installed with the default settings unchanged: a. the application created a 'Save' folder and a separate 'Shared' folder; b. files stored in the 'Shared' folder would be shared with the file-sharing network; c. files stored in the 'Save' folder would not be shared with the file-sharing network; and d. files the consumer downloaded from the file-sharing network would be stored in the 'Save' folder and, thus, would not be shared from the consumer's own computer with the file-sharing network.",
-        "source_paragraph": 15
+        "description": "Through the 'Save Folder and Shared Folders' dialog box during installation, FrostWire Desktop conveyed that files downloaded from the Gnutella network would be stored in the 'Save' folder and would NOT be shared with the network—only files in the 'Shared' folder would be shared.",
+        "quoted_text": "15. Through the dialog box shown in Figure 1, the Defendants conveyed the impression that when FrostWire Desktop was installed with the default settings unchanged: a. the application created a “Save” folder and a separate “Shared” folder; b. files stored in the “Shared” folder would be shared with the file-sharing network; c. files stored in the “Save” folder would not be shared with the file-sharing network; and d. files the consumer downloaded from the file-sharing network would be stored in the “Save” folder and, thus, would not be shared from the consumer’s own computer with the file-sharing network.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 15,
+        "quote_start_line": 129,
+        "quote_end_line": 138
       },
       {
-        "description": "Represented that consumers' computers would not publicly share files downloaded from the Gnutella network",
-        "quoted_text": "through the FrostWire Desktop application's installation and set-up process and through the application's user interface, Defendants represented, directly or indirectly, expressly or by implication, including through the Save Folder and Shared Folders dialog box and the Options-Sharing box, that consumers' computers would not publicly share files that consumers download from the Gnutella network.",
-        "source_paragraph": 35
+        "description": "The dialog box's specific elements—including the words 'saved' and 'shared,' the instruction about choosing a download folder vs. a shared folder, the green check mark on the 'Shared' folder, and the absence of a check mark on the 'Save' folder—collectively created the misleading impression that downloads would not be publicly shared.",
+        "quoted_text": "16. Multiple statements in the dialog box shown in Figure 1, alone and in combination, created the impression described in paragraph 15, above, including: a. the words “saved” and “shared,” as they would be commonly understood and understood in context; b. the instruction, “Please choose a folder where you would like your files to be downloaded. You can also choose folders you would like to share with other users running FrostWire.”; c. the green check mark indicating that the “Shared” folder is fully shared; d. the “Legend” describing the significance of the green check mark; and e. the absence of a checkmark by the pre-populated “Save” folder name field.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 16,
+        "quote_start_line": 143,
+        "quote_end_line": 153
       },
       {
-        "description": "Represented that files downloaded from the Gnutella network and stored in 'shared' folders would be publicly shared",
-        "quoted_text": "through the FrostWire Desktop application's installation and set-up process and through the application's user interface, Defendants represented, directly or indirectly, expressly or by implication, including through the Save Folder and Shared Folders dialog box and the Options-Sharing box, that files consumers downloaded from the Gnutella network and stored in 'shared' folders would be publicly shared.",
-        "source_paragraph": 38
+        "description": "The Options-Sharing box stated that unchecking 'Share Finished Downloads' would result in '[o]nly downloads in shared folders will be shared,' falsely implying that previously downloaded files would also stop being shared.",
+        "quoted_text": "20. The FrostWire Desktop application, by default, stated in the Options-Sharing box, under the “Download Sharing” heading, that the consumer “can share files that you download to unshared folders.” By default, the “Share Finished Downloads” box was pre-checked and stated correctly that “[a]ll downloads will be shared.” If a consumer unchecked the “Share Finished Downloads” box in the Options-Sharing box, the text below that box changed to state “[o]nly downloads in shared folders will be shared,” as shown here, in Figure 5: 10 Case 1:11-cv-23643-XXXX Document 1 Entered on FLSD Docket 10/07/2011 Page 11 of 21 Figure 5 If the consumer then clicked the “Apply” and “OK” buttons at the bottom of the Options-Sharing box, subsequently downloaded files would not be shared with the network. However, the application continued to share previously downloaded files with the network as “Individually shared” files even if those files were not saved to “shared” folders. Thus, although the statement “[o]nly downloads in shared folders will be shared” was true as to subsequently downloaded files, it was false as to previously downloaded files. No text in the Options-Sharing box disclosed to consumers that previously downloaded files would continue to be shared even if the files were not stored in “shared” folders.",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 20,
+        "quote_start_line": 202,
+        "quote_end_line": 220
       },
       {
-        "description": "Represented that after unchecking 'Share Finished Downloads', only downloads in shared folders would be shared",
-        "quoted_text": "If a consumer unchecked the 'Share Finished Downloads' box in the Options-Sharing box, the text below that box changed to state '[o]nly downloads in shared folders will be shared'... Thus, although the statement '[o]nly downloads in shared folders will be shared' was true as to subsequently downloaded files, it was false as to previously downloaded files.",
-        "source_paragraph": 20
+        "description": "In the Android Market, FrostWire for Android was marketed with a description claiming consumers could '[c]ontrol what's shared,' implying users had meaningful control over which files were publicly shared.",
+        "quoted_text": "Similar to the Description for earlier versions, the Description for version 0.5.3 stated, in pertinent part: NOW WITH 3G/4G SUPPORT You can: - Search & download files on up to MILLIONS of phones and tablets - Browse & download from the closest peers - Share files on Social Networks - Explore your own files - Chat - Send files - Control what’s shared",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 23,
+        "quote_start_line": 239,
+        "quote_end_line": 249
+      },
+      {
+        "description": "FrostWire Desktop's installation and user interface represented that consumers' computers would not publicly share files downloaded from the Gnutella network (as alleged across paragraphs 11–21).",
+        "quoted_text": "35. As described in Paragraphs 11-21, in numerous instances, through the FrostWire Desktop application’s installation and set-up process and through the application’s user interface, Defendants represented, directly or indirectly, expressly or by implication, including through the Save Folder and Shared Folders dialog box and the Options-Sharing box, that consumers’ computers would not publicly share files that consumers download from the Gnutella network.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 35,
+        "quote_start_line": 372,
+        "quote_end_line": 377
+      },
+      {
+        "description": "FrostWire Desktop represented that files downloaded and stored in 'shared' folders would be publicly shared, while omitting that files in 'unshared' folders would also be shared by default.",
+        "quoted_text": "38. As described in Paragraphs 11-21, in numerous instances, through the FrostWire Desktop application’s installation and set-up process and through the application’s user interface, Defendants represented, directly or indirectly, expressly or by implication, including through the Save Folder and Shared Folders dialog box and the Options-Sharing box, that files 18 Case 1:11-cv-23643-XXXX Document 1 Entered on FLSD Docket 10/07/2011 Page 19 of 21 consumers downloaded from the Gnutella network and stored in “shared” folders would be publicly shared.",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 38,
+        "quote_start_line": 388,
+        "quote_end_line": 397
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "False Representation About the Sharing of Downloads in FrostWire Desktop",
-        "representation": "Defendants represented that consumers' computers would not publicly share files that consumers download from the Gnutella network",
-        "fact": "Defendants' FrostWire Desktop application was configured to publicly share files that consumers download from the Gnutella network",
-        "conclusion": "Therefore, Defendants' representation set forth in Paragraph 35 of this Complaint was false and misleading and constitutes a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+        "representation": "Through the FrostWire Desktop installation and set-up process and user interface—including the Save Folder and Shared Folders dialog box and the Options-Sharing box—Defendants represented that consumers' computers would not publicly share files downloaded from the Gnutella network.",
+        "fact": "In truth, FrostWire Desktop was configured to publicly share files that consumers downloaded from the Gnutella network, automatically designating them as 'Individually shared' files regardless of which folder they were saved in.",
+        "conclusion": "Defendants' representation was false and misleading and constitutes a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 2,
         "title": "Failure to Disclose Material Information About the Sharing of Downloads in FrostWire Desktop",
-        "representation": "Defendants represented that files consumers downloaded from the Gnutella network and stored in 'shared' folders would be publicly shared",
-        "fact": "Defendants failed to disclose that the application: (a) by default, publicly shared files that consumers downloaded from the Gnutella network and saved to 'unshared' folders; and (b) would publicly share files that consumers previously downloaded from the Gnutella network and stored in 'unshared' folders even after consumers de-selected the Share Finished Downloads setting in the Options-Sharing dialog box",
-        "conclusion": "Therefore, Defendants' failure to disclose, or to disclose adequately, the material information set forth in Paragraph 39 above, in light of the representation set forth in Paragraph 38, constitutes a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+        "representation": "Through the FrostWire Desktop installation and user interface, Defendants represented that files downloaded from the Gnutella network and stored in 'shared' folders would be publicly shared, while failing to disclose that files in 'unshared' folders would also be shared by default, and that previously downloaded files would continue to be shared even after consumers de-selected the Share Finished Downloads setting.",
+        "fact": "By default, FrostWire Desktop publicly shared files downloaded to 'unshared' folders; and it continued to publicly share previously downloaded files stored in 'unshared' folders even after consumers turned off the Share Finished Downloads setting—neither fact was disclosed.",
+        "conclusion": "Defendants' failure to disclose, or to disclose adequately, this material information, in light of the representations made, constitutes a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 3,
         "title": "Unfair Design of FrostWire for Android",
-        "representation": "Defendants distributed versions of the FrostWire for Android application that, when installed on consumers' mobile devices, caused or were likely to cause consumers to unwittingly publicly share files of multiple types already present on, or subsequently saved on, those devices, including consumers' pictures, videos, unprotected applications, documents, music and audio files, and ringtones",
-        "fact": "Defendants' actions caused or were likely to cause substantial injury to consumers that was not reasonably avoidable by consumers and that was not outweighed by countervailing benefits to consumers or competition",
-        "conclusion": "Therefore, Defendants' practices as described in Paragraph 41, above, constitute unfair acts or practices in violation of Section 5 of the FTC Act, 15 U.S.C. §§ 45(a) and 45(n)."
+        "representation": "Defendants distributed FrostWire for Android to consumers with default settings that immediately caused or were likely to cause consumers to unwittingly publicly share personal files—including pictures, videos, applications, documents, music, audio files, and ringtones—already present on or subsequently saved to their mobile devices.",
+        "fact": "The application's default configuration shared nearly all pre-existing personal files upon installation, the installation process provided no adequate warning, the process for unsharing files was burdensome and unintuitive, and changing the design to protect consumers by default required only minor programming costs.",
+        "conclusion": "Defendants' practices caused or were likely to cause substantial injury to consumers that was not reasonably avoidable and was not outweighed by countervailing benefits, constituting unfair acts or practices in violation of Section 5 of the FTC Act, 15 U.S.C. §§ 45(a) and 45(n)."
       }
     ]
   },
   "order": {
     "definitions": {
-      "Actions substantially equivalent to": "means clicks, touches, or similar actions that are the same as, or highly similar to, and presented in the same location as, those the consumer previously took to change the software program setting; that are equal to or less in number than those previous actions; and that are explained and described to the consumer in a format and using terminology consistent with those used to explain how to make the previous change.",
-      "Affirmatively select": "means to choose by checking a box or touching a button or icon on a computer screen that is not pre-selected as the default option, or by taking a substantially similar action.",
-      "Clear(ly) and prominent(ly)": "means: a. In textual communications (e.g., words displayed on a computer screen), the required disclosures are of a type, size, and location sufficiently noticeable for an ordinary consumer to read and comprehend them, in print that contrasts highly with the background on which they appear; b. In communications disseminated orally or through audible means (e.g., streaming audio), the required disclosures are delivered in a volume and cadence sufficient for an ordinary consumer to hear and comprehend them; c. In communications disseminated through video means (e.g., streaming video), the required disclosures are in writing in a form consistent with subparagraph (a) of this definition and appear on the screen for a duration sufficient for an ordinary consumer to read and comprehend them, and in the same language as the predominant language that is used in the communication; d. In communications made through interactive media (e.g., online services and software), the required disclosures are unavoidable and presented in a form consistent with subparagraph (a) of this definition, in addition to any audio or video presentation of them; and e. In all instances, the required disclosures are: (1) presented in an understandable language and syntax; and (2) include nothing contrary to, inconsistent with, or in mitigation of any other statements or disclosures used in any communication with the consumer.",
-      "Computer": "means any desktop or laptop computer, handheld device, telephone, smartphone, tablet, or other electronic device that has a platform on which to download, install, or run any software program, code, script, or other content.",
-      "Corporate Defendant": "means Frostwire LLC and its successors and assigns.",
-      "Defendants": "means the Corporate Defendant and Individual Defendant, individually, collectively, or in any combination.",
-      "File-sharing application": "means any software program that, when installed and running on a computer, can enable the users of other computers running the same program or a compatible program (known as \"peer\" computers) to search for and copy files from that computer, and includes FrostWire Desktop and FrostWire for Android.",
-      "File-sharing network": "means a computer network formed when multiple, individual peer computers running file-sharing applications communicate with each other and enable peer computers to search for and copy files from each other, including the \"Gnutella\" file-sharing network and any networks formed when multiple computers communicate through one or more common wireless access devices.",
-      "FrostWire Desktop": "means any version of the software program Defendants have marketed and/or distributed to the public under the name \"FrostWire,\" including through www.frostwire.com and www.download.com, that can be installed on computers running various versions of the Microsoft Windows operating system and other operating systems, but not including FrostWire for Android.",
-      "FrostWire for Android": "means any version of the software program Defendants have marketed and/or distributed to the public under the name \"FrostWire for Android,\" including through www.frostwire.com, the Android Marketplace, and www.amazon.com, that can be installed on computers running various versions of the Android mobile operating system.",
-      "Including": "means including without limitation.",
-      "Individual Defendant": "means Angel Leon.",
-      "Legacy Version": "means any version of Frostwire Desktop distributed in commerce by Defendants prior to June 10, 2011, or any version of Frostwire for Android distributed in commerce by Defendants prior to May 6, 2011.",
-      "Person(s)": "means a natural person, an organization, or other legal entity, including a corporation, partnership, sole proprietorship, limited liability company, association, cooperative, or any other group or combination acting as an entity.",
-      "To \"share\" files": "means to make files available for searching, browsing, and/or copying by third parties, including through any file-sharing network.",
-      "User-originated files": "means any files stored on a computer prior to installation of a file-sharing application and any files subsequently stored on that computer that a user has not downloaded by means of that file-sharing application, including any files created, downloaded, or saved through the use of any other software program on the computer, and including any files copied to a computer running FrostWire for Android from a computer running FrostWire Desktop using those two programs."
+      "Actions substantially equivalent to": "clicks, touches, or similar actions that are the same as, or highly similar to, and presented in the same location as, those the consumer previously took to change the software program setting; that are equal to or less in number than those previous actions; and that are explained and described to the consumer in a format and using terminology consistent with those used to explain how to make the previous change.",
+      "Affirmatively select": "to choose by checking a box or touching a button or icon on a computer screen that is not pre-selected as the default option, or by taking a substantially similar action.",
+      "Clear(ly) and prominent(ly)": "a. In textual communications (e.g., words displayed on a computer screen), the required disclosures are of a type, size, and location sufficiently noticeable for an ordinary consumer to read and comprehend them, in print that contrasts highly with the background on which they appear; b. In communications disseminated orally or through audible means (e.g., streaming audio), the required disclosures are delivered in a volume and cadence sufficient for an ordinary consumer to hear and comprehend them; c. In communications disseminated through video means (e.g., streaming video), the required disclosures are in writing in a form consistent with subparagraph (a) of this definition and appear on the screen for a duration sufficient for an ordinary consumer to read and comprehend them, and in the same language as the predominant language that is used in the communication; d. In communications made through interactive media (e.g., online services and software), the required disclosures are unavoidable and presented in a form consistent with subparagraph (a) of this definition, in addition to any audio or video presentation of them; and e. In all instances, the required disclosures are: (1) presented in an understandable language and syntax; and (2) include nothing contrary to, inconsistent with, or in mitigation of any other statements or disclosures used in any communication with the consumer.",
+      "Computer": "any desktop or laptop computer, handheld device, telephone, smartphone, tablet, or other electronic device that has a platform on which to download, install, or run any software program, code, script, or other content.",
+      "Corporate Defendant": "Frostwire LLC and its successors and assigns.",
+      "Defendants": "the Corporate Defendant and Individual Defendant, individually, collectively, or in any combination.",
+      "File-sharing application": "any software program that, when installed and running on a computer, can enable the users of other computers running the same program or a compatible program (known as 'peer' computers) to search for and copy files from that computer, and includes FrostWire Desktop and FrostWire for Android.",
+      "File-sharing network": "a computer network formed when multiple, individual peer computers running file-sharing applications communicate with each other and enable peer computers to search for and copy files from each other, including the 'Gnutella' file-sharing network and any networks formed when multiple computers communicate through one or more common wireless access devices.",
+      "FrostWire Desktop": "any version of the software program Defendants have marketed and/or distributed to the public under the name 'FrostWire,' including through www.frostwire.com and www.download.com, that can be installed on computers running various versions of the Microsoft Windows operating system and other operating systems, but not including FrostWire for Android.",
+      "FrostWire for Android": "any version of the software program Defendants have marketed and/or distributed to the public under the name 'FrostWire for Android,' including through www.frostwire.com, the Android Marketplace, and www.amazon.com, that can be installed on computers running various versions of the Android mobile operating system.",
+      "Including": "including without limitation.",
+      "Individual Defendant": "Angel Leon.",
+      "Legacy Version": "any version of Frostwire Desktop distributed in commerce by Defendants prior to June 10, 2011, or any version of Frostwire for Android distributed in commerce by Defendants prior to May 6, 2011.",
+      "Person(s)": "a natural person, an organization, or other legal entity, including a corporation, partnership, sole proprietorship, limited liability company, association, cooperative, or any other group or combination acting as an entity.",
+      "To share files": "to make files available for searching, browsing, and/or copying by third parties, including through any file-sharing network.",
+      "User-originated files": "any files stored on a computer prior to installation of a file-sharing application and any files subsequently stored on that computer that a user has not downloaded by means of that file-sharing application, including any files created, downloaded, or saved through the use of any other software program on the computer, and including any files copied to a computer running FrostWire for Android from a computer running FrostWire Desktop using those two programs."
     },
     "provisions": [
       {
-        "provision_number": "I",
+        "provision_number": "1",
         "title": "Prohibition on Misrepresentations",
         "category": "prohibition",
-        "summary": "Defendants are permanently enjoined from misrepresenting how their file-sharing application operates, including what files will be shared, with whom, and how consumers can control sharing.",
+        "summary": "Defendants are permanently enjoined from misrepresenting any material facts about how their file-sharing application operates, including which files will be shared, with whom, and how consumers can control sharing.",
         "requirements": [
           {
-            "description": "Must not misrepresent that consumers' computers will not publicly share, or are not publicly sharing, files consumers download or have downloaded from the Gnutella network",
-            "quoted_text": "IT IS HEREBY ORDERED that Defendants, their officers, agents, servants, employees, and attorneys, and all other persons in active concert or participation with them who receive actual notice of this Order by personal service or otherwise, whether acting directly or indirectly, in connection with the advertising, distribution, downloading, installation, or operation of any file-sharing application in commerce, are hereby permanently restrained and enjoined from misrepresenting, or assisting others in misrepresenting, expressly or by implication: A. that consumers' computers will not publicly share, or are not publicly sharing, files consumers download or have downloaded from the Gnutella network, including through the FrostWire Desktop \"Save Folder and Shared Folders\" dialog box and \"Options-Sharing\" box",
+            "description": "Must not misrepresent that consumers' computers will not publicly share, or are not publicly sharing, files downloaded from the Gnutella network",
+            "quoted_text": "IT IS HEREBY ORDERED that Defendants, their officers, agents, servants, employees, and attorneys, and all other persons in active concert or participation with them who receive actual notice of this Order by personal service or otherwise, whether acting directly or indirectly, in connection with the advertising, distribution, downloading, installation, or operation of any tsle-sharing application in commerce, are hereby permanently restrained and enjoined from misrepresenting, or assisting others in misrepresenting, expressly or by implication: A. that consumers' computers will not publicly share, or are not publicly sharing, tsles consumers download or have downloaded from the Gnutella network, including through 5 Case 1:11-cv-23643-DLG Document 5 Entered on FLSD Docket 10/12/2011 Page 6 of 17 the FrostW ire Desktop çdsave Folder and Shared Folders'' dialog box and çloptions- Sharing'' box;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 122,
+            "quote_end_line": 136
           },
           {
             "description": "Must not misrepresent what files the file-sharing application will share or the audience with whom they will be shared",
-            "quoted_text": "B. what files the file-sharing application will share or the audience with whom they will be shared",
+            "quoted_text": "what files the file-sharing application will share or the audience with whom they will be shared;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 137,
+            "quote_end_line": 138
           },
           {
-            "description": "Must not misrepresent how consumers can initiate or stop sharing files when they install or run the file-sharing application on a computer",
-            "quoted_text": "C. how consumers can initiate or stop sharing files when they install or run the file-sharing application on a computer",
+            "description": "Must not misrepresent how consumers can initiate or stop sharing files when they install or run the file-sharing application",
+            "quoted_text": "how consumers can initiate or stop sharing files when they install or run the file-sharing application on a computer; or",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 139,
+            "quote_end_line": 140
           },
           {
             "description": "Must not misrepresent any other material fact about how the file-sharing application operates",
             "quoted_text": "D. any other material fact about how the file-sharing application operates.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 141,
+            "quote_end_line": 141
           }
         ]
       },
       {
-        "provision_number": "II",
+        "provision_number": "2",
         "title": "Required Disclosures and Defaults Relating to the Sharing of Downloaded Files",
         "category": "affirmative_obligation",
-        "summary": "Defendants must ensure their file-sharing application provides clear disclosures about file sharing before installation, requires affirmative consumer selection of files to share, and allows consumers to disable sharing.",
+        "summary": "Defendants may not distribute any file-sharing application unless it clearly discloses sharing behavior before installation, requires affirmative consumer selection of files to share, and provides easy mechanisms to disable sharing after installation.",
         "requirements": [
           {
-            "description": "Before installation or running, the application must clearly and prominently disclose to the consumer which files downloaded from a file-sharing network, if any, it will share and the audience with whom those files will be shared",
-            "quoted_text": "before the consumer installs or runs the application, the application: 1. clearly and prominently discloses to the consumer which files downloaded from a file-sharing network, if any, it will share and the audience with whom those files will be shared",
+            "description": "Before consumer installs or runs the application, clearly and prominently disclose which files downloaded from a file-sharing network it will share and the audience with whom those files will be shared",
+            "quoted_text": "A. before the consumer installs or runs the application, the application: clearly and prominently discloses to the ccmsumer which files downloaded from a file-sharing network, if any, it will share and the audience with whom those files will be shared;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 151,
+            "quote_end_line": 154
           },
           {
-            "description": "Before installation or running, the application must require the consumer first to affirmatively select which files downloaded from the network, if any, to share",
-            "quoted_text": "2. requires the consumer first to affirmatively select which files downloaded from the network, if any, to share",
+            "description": "Before consumer installs or runs the application, require the consumer to affirmatively select which files downloaded from the network, if any, to share",
+            "quoted_text": "2. requires the consumer first to aftsrmatively select which files downloaded from the network, if any, to share;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 155,
+            "quote_end_line": 156
           },
           {
-            "description": "Before installation or running, the application must clearly and prominently disclose how the consumer can stop sharing files the consumer downloads from the network",
-            "quoted_text": "3. clearly and prominently discloses how the consumer can stop sharing files the consumer downloads from the network",
+            "description": "Before consumer installs or runs the application, clearly and prominently disclose how the consumer can stop sharing files downloaded from the network",
+            "quoted_text": "clearly and prominently discloses how the consumer can stop sharing files the consumer downloads from the network; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 161,
+            "quote_end_line": 162
           },
           {
-            "description": "After installation and running, the application must allow the consumer to disable sharing of files previously and subsequently downloaded from the network immediately upon taking actions substantially equivalent to those required to affirmatively select such files for sharing after the application is installed",
-            "quoted_text": "B. after the application is installed and running, the application: 1. allows the consumer to disable sharing of files previously and subsequently downloaded from the network immediately upon taking actions substantially equivalent to those required to affirmatively select such files for sharing after the application is installed",
+            "description": "After installation, allow the consumer to disable sharing of previously and subsequently downloaded files immediately upon taking actions substantially equivalent to those required to affirmatively select such files for sharing",
+            "quoted_text": "after the application is installed and running, the application: allows the consumer to disable sharing of files previously and subsequently downloaded from the network immediately upon taking actions substantially equivalent to those required to affirmatively select such files for sharing after the application is installed; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 163,
+            "quote_end_line": 167
           },
           {
-            "description": "After installation and running, the application must provide a clearly labeled link or distinctive icon linking from the application's listings of shared files to clear and prominent written, graphical, and audiovisual instructions about how to disable sharing of files",
-            "quoted_text": "2. provides a clearly labeled link or distinctive icon linking from the application's listings of shared files to clear and prominent written, graphical, and audiovisual instructions about how to disable sharing of files.",
+            "description": "After installation, provide a clearly labeled link or distinctive icon linking from the application's listings of shared files to clear and prominent written, graphical, and audiovisual instructions about how to disable sharing of files",
+            "quoted_text": "provides a clearly labeled link or distinctive icon linking from the application's listings of shared files to clear and prominent written, graphical, and audiovisual instructions about how to disable sharing of files.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 168,
+            "quote_end_line": 170
           }
         ]
       },
       {
-        "provision_number": "III",
+        "provision_number": "3",
         "title": "Requirements Relating to User-Originated Files and Default Settings",
         "category": "affirmative_obligation",
-        "summary": "For file-sharing applications that can share user-originated files, Defendants must ensure sharing can only be enabled after installation, requires affirmative consumer selection of specific files, and provides clear disclosures and controls.",
+        "summary": "Defendants may not distribute any file-sharing application capable of sharing user-originated files unless sharing of such files can only be enabled after complete installation, with clear disclosures, affirmative consumer selection, and easy mechanisms to reverse sharing.",
         "requirements": [
           {
-            "description": "Must clearly and prominently disclose to the consumer which user-originated files, if any, the consumer can chooseto share using the application, and the audience with whom those files would be shared",
-            "quoted_text": "A. clearly and prominently discloses to the consumer which user-originated files, if any, the consumer can choose to share using the application, and the audience with whom those files would be shared",
+            "description": "Clearly and prominently disclose to the consumer which user-originated files, if any, the consumer can choose to share using the application, and the audience with whom those files would be shared",
+            "quoted_text": "A. clearly and prominently discloses to the consumer which user-originated files, if any, the consumer can choose to share using the application, and the audience with whom those files would be shared;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 181,
+            "quote_end_line": 183
           },
           {
-            "description": "Application must be set, by default, to require the consumer to affirmatively select the specific, individual files to be shared, and to confirm after clear and prominent disclosure that selected files will be shared",
-            "quoted_text": "B. is set, by default, to require the consumer to affirmatively select the specific, individual files to be shared, and to confirm after clear and prominent disclosure that selected files will be shared",
+            "description": "Be set, by default, to require the consumer to affirmatively select the specific, individual files to be shared, and to confirm after clear and prominent disclosure that selected files will be shared",
+            "quoted_text": "B. is set, by default, to require the consumer to affirmatively select the specific, individual Gles to be shared, and to confirm after clear and prominent disclosure that selected Gles will be shared-,",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 188,
+            "quote_end_line": 190
           },
           {
-            "description": "If consumers are enabled to change default settings, they must affirmatively select an option to do so after clear and prominent disclosure about the effect of the change and confirms the change through an affirmative selection",
-            "quoted_text": "C. enables consumers to change the default settings described in Subsection III.B, above, provided that the application does not prompt the consumer to change those default settings, and only if the consumer: 1. affirmatively selects an option to do so after clear and prominent disclosure about the effect of the change and confirms the change through an affirmative selection",
+            "description": "Enable consumers to change the default settings only if the consumer affirmatively selects an option after clear and prominent disclosure about the effect of the change, confirms through an affirmative selection, and must affirmatively select any groups of files to be shared",
+            "quoted_text": "enables consumers to change the default settings described in Subsection IIl.B, above, provided that the application does not prompt the consumer to change those default settings, and only if the consumer; affinnatively selects an option to do so after clear and prominent disclosure about the effect of the change and confirms the change through an affirmative selection; 2. must affirmatively select any groups of files to be shared;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.775811209439528
+            "confidence": 1.0,
+            "quote_start_line": 191,
+            "quote_end_line": 196
           },
           {
-            "description": "If consumers change default settings, they must affirmatively select any groups of files to be shared",
-            "quoted_text": "2. must affirmatively select any groups of files to be shared",
+            "description": "After making any change to a default setting, allow the consumer to re-enable the default setting immediately upon taking actions substantially equivalent to those required to change it",
+            "quoted_text": "after making any change to a default setting described in Subsection lll.B, above, can re-enable the default setting immediately upon taking actions substantially equivalent to those required to change it;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 197,
+            "quote_end_line": 199
           },
           {
-            "description": "After making any change to a default setting, consumers can re-enable the default setting immediately upon taking actions substantially equivalent to those required to change it",
-            "quoted_text": "3. after making any change to a default setting described in Subsection III.B, above, can re-enable the default setting immediately upon taking actions substantially equivalent to those required to change it",
+            "description": "Allow the consumer to disable sharing of any files or groups of files immediately upon taking actions substantially equivalent to those required to select them for sharing",
+            "quoted_text": "allows the consumer to disable sharing of any files or groups of files immediately upon taking actions substantially equivalent to those required to select them for sharing; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 200,
+            "quote_end_line": 201
           },
           {
-            "description": "Must allow the consumer to disable sharing of any files or groups of files immediately upon taking actions substantially equivalent to those required to select them for sharing",
-            "quoted_text": "D. allows the consumer to disable sharing of any files or groups of files immediately upon taking actions substantially equivalent to those required to select them for sharing",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must provide a clearly labeled link or distinctive icon linking from the application's listings of shared files to clear and prominent written, graphical, and audiovisual instructions about how to disable sharing of files",
+            "description": "Provide a clearly labeled link or distinctive icon linking from the application's listings of shared files to clear and prominent written, graphical, and audiovisual instructions about how to disable sharing of files",
             "quoted_text": "E. provides a clearly labeled link or distinctive icon linking from the application's listings of shared files to clear and prominent written, graphical, and audiovisual instructions about how to disable sharing of files.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 202,
+            "quote_end_line": 204
           }
         ]
       },
       {
-        "provision_number": "IV",
+        "provision_number": "4",
         "title": "Requirements Regarding Legacy Versions",
         "category": "affirmative_obligation",
-        "summary": "Defendants are enjoined from distributing legacy versions of FrostWire and must transmit code upgrades and notices to all computers running legacy versions within 10 business days.",
+        "summary": "Defendants are permanently enjoined from promoting, selling, or distributing any Legacy Version of FrostWire Desktop or FrostWire for Android, and must transmit update code and prominent notices to all computers running Legacy Versions within ten business days of the order's entry.",
         "requirements": [
           {
-            "description": "Defendants are permanently enjoined from promoting, selling, or distributing any Legacy Version of Frostwire Desktop or Frostwire for Android",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants, their officers, agents, servants, employees, and attorneys, and all other persons or entities in active concert or participation with them who receive actual notice of this Order by personal service or otherwise, whether acting directly or indirectly, are permanently restrained and enjoined from promoting, selling, or distributing, or assisting others in so doing, any Legacy Version of Frostwire Desktop or Frostwire for Android.",
+            "description": "Permanently cease promoting, selling, or distributing any Legacy Version of FrostWire Desktop or FrostWire for Android",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendants, their officers, agents, servants, employees, and attorneys, and all other persons or entities in active concert or participation with them who receive actual notice of this Order by personal service or otherwise, whether acting directly or indirectly, are permanently restrained and enjoined from promoting, selling, or 8 Case 1:11-cv-23643-DLG Document 5 Entered on FLSD Docket 10/12/2011 Page 9 of 17 distributing, or assisting others in so doing, any Legacy Version of Frostwire Desktop or",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 207,
+            "quote_end_line": 215
           },
           {
-            "description": "Within 10 business days, transmit to all computers running any Legacy Version of FrostWire Desktop code that designates all individually shared files not to be shared unless consumers affirmatively select them, and upgrades the application to comply with Sections I-III",
-            "quoted_text": "It is further ordered that, within ten (10) business days of the entry of this order, Defendants shall, to the extent that they have not done so previously, transmit or cause to be transmitted: A. to all computers running any Legacy Version of FrostWire Desktop: 1. code that, when installed, designates all \"individually shared\" files on those computers not to be shared by the application unless consumers using those computers affirmatively select them to be shared, and upgrades the application to comply with the requirements of Sections I-III of this Order",
+            "description": "Within ten (10) business days of entry of this order, transmit to all computers running any Legacy Version of FrostWire Desktop: code that designates all 'individually shared' files not to be shared unless consumers affirmatively select them, and upgrades the application to comply with Sections I-III of this Order",
+            "quoted_text": "Frostwire for Android. It is further ordered that, within ten (10) business days of the entry of this order, Defendants shall, to the extent that they have not done so previously, transmit or cause to be transmitted: A. to aIl computers running any Legacy Version of FrostW ire Desktop: code that, when installed, designates alI illndividually shared'' files on those computers not to be shared by the application unless consumers using those computers affirmatively select them to be shared, and upgrades the application to comply with the requirements of Sections 1-111 of this Order; and",
             "deadline": "10 business days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 216,
+            "quote_end_line": 223
           },
           {
-            "description": "Within 10 business days, transmit to all computers running any Legacy Version of FrostWire Desktop a clear and prominent notice to consumers advising them to install the upgrade code and including a clearly labeled command button or link enabling consumers to initiate that installation",
-            "quoted_text": "2. a clear and prominent notice to consumers using those computers that advises them to install the code described in Subsection IV.A.1 of this Order, and that includes a clearly labeled command button or link enabling consumers to initiate that installation",
+            "description": "Within ten (10) business days of entry of this order, transmit to all computers running any Legacy Version of FrostWire Desktop: a clear and prominent notice advising consumers to install the update code, including a clearly labeled command button or link enabling consumers to initiate installation",
+            "quoted_text": "2. a clear and prominent notice to consumers using those computers that advises them to install the code described in Subsection IV.A.I of this Order, and that includes a clearly labeled command button or link enabling consumers to initiate that installation; and",
             "deadline": "10 business days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 224,
+            "quote_end_line": 227
           },
           {
-            "description": "Within 10 business days, transmit to all computers running any Legacy Version of FrostWire for Android code that designates all previously shared files not to be shared unless consumers affirmatively select them, and upgrades the application to comply with Sections I-III",
-            "quoted_text": "B. to all computers running any Legacy Version of FrostWire for Android: 1. code that, when installed, designates all previously shared files on those computers not to be shared by the application unless consumers using those computers affirmatively select them to be shared, and upgrades the application to comply with the requirements of Sections I-III of this Order",
+            "description": "Within ten (10) business days of entry of this order, transmit to all computers running any Legacy Version of FrostWire for Android: code that designates all previously shared files not to be shared unless consumers affirmatively select them, and upgrades the application to comply with Sections I-III of this Order",
+            "quoted_text": "B. to all computers running any Legacy Version of FrostW ire for Android: code that, when installed, designates alI previously shared files on those computers not to be shared by the application unless consumers using those computers affirmatively select them to be shared, and upgrades the application to comply with the requirements of Sections 1-111 of this Order; and",
             "deadline": "10 business days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 228,
+            "quote_end_line": 232
           },
           {
-            "description": "Within 10 business days, transmit to all computers running any Legacy Version of FrostWire for Android a clear and prominent notice to consumers advising them to install the upgrade code and including a clearly labeled command button or link enabling consumers to initiate that installation",
-            "quoted_text": "2. a clear and prominent notice to consumers using those computers that advises them to install the code described in Subsection IV.B.1 of this Order, and that includes a clearly labeled command button or link enabling consumers to initiate that installation.",
+            "description": "Within ten (10) business days of entry of this order, transmit to all computers running any Legacy Version of FrostWire for Android: a clear and prominent notice advising consumers to install the update code, including a clearly labeled command button or link enabling consumers to initiate installation",
+            "quoted_text": "a clear and prominent notice to consumers using those computers that advises them to install the code described in Subsection IV.B.I of this Order, and that includes a clearly labeled command butlon or link enabling consumers to initiate that installation.",
             "deadline": "10 business days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 233,
+            "quote_end_line": 236
           }
         ]
       },
       {
-        "provision_number": "V",
+        "provision_number": "5",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The FTC is authorized to monitor and investigate compliance through written reports, document production, depositions, business location inspections, posing as consumers, and employee interviews.",
+        "summary": "The FTC is authorized to monitor Defendants' compliance through written reports, document production, depositions, facility inspections, undercover investigations, and employee interviews.",
         "requirements": [
           {
-            "description": "Within 10 days of receipt of written notice from the Commission, Defendants must submit additional written reports under penalty of perjury, produce documents for inspection and copying, appear for deposition, and provide entry during normal business hours to any business location to inspect the business operation",
-            "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, Defendants each shall submit additional written reports, which are true and accurate and sworn to under penalty of perjury; produce documents for inspection and copying; appear for deposition; and provide entry during normal business hours to any business location in each Defendant's possession or direct or indirect control to inspect the business operation",
+            "description": "Within ten (10) days of receipt of written notice from the Commission, each Defendant shall submit additional written reports sworn under penalty of perjury, produce documents for inspection and copying, appear for deposition, and provide entry during normal business hours to any business location in Defendant's possession or control",
+            "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, Defendants each shall submit additional written reports, which are true and accurate and sworn to under penalty of perjury; produce documents for inspection and copying; appear for deposition; and provide entry during normal business hours to any business location in each Defendant's possession or direct or indirect control to inspect the business operation;",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 245,
+            "quote_end_line": 250
           },
           {
-            "description": "The Commission is authorized to obtain discovery from any person without further leave of court using Fed. R. Civ. P. 30, 31, 33, 34, 36, 45 and 69",
-            "quoted_text": "B. In addition, the Commission is authorized to use all other lawful means, including but not limited to: 1. obtaining discovery from any person, without further leave of court, using the procedures prescribed by Fed. R. Civ. P. 30, 31, 33, 34, 36, 45 and 69",
+            "description": "The Commission is authorized to use all other lawful means including obtaining discovery from any person using Fed. R. Civ. P. procedures, and having its representatives pose as consumers and suppliers without identification or prior notice",
+            "quoted_text": "B . ln addition, the Commission is authorized to use all other lawful means, including but not limited to: obtaining discovery from any person, without further leave of court, using the procedures prescribed by Fed. R. Civ. P. 30, 31 , 33, 34, 36, 45 and 69; 2. having its representatives pose as consumers and suppliers to Defendants, their employees, or any other entity managed or controlled in whole or in part by any Defendant, without the necessity of identification or prior notice; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9606122448979592
+            "confidence": 1.0,
+            "quote_start_line": 251,
+            "quote_end_line": 257
           },
           {
-            "description": "The Commission's representatives may pose as consumers and suppliers to Defendants or their employees without the necessity of identification or prior notice",
-            "quoted_text": "2. having its representatives pose as consumers and suppliers to Defendants, their employees, or any other entity managed or controlled in whole or in part by any Defendant, without the necessity of identification or prior notice",
+            "description": "Each Defendant shall permit representatives of the Commission to interview any employer, consultant, independent contractor, representative, agent, or employee who has agreed to such an interview relating to any conduct subject to this Order",
+            "quoted_text": "Defendants each shall permit representatives of the Commission to interview any employer, consultant, independent contractor, representative, agent, or employee who has agreed to such an interview, relating in any way to any conduct subject to this Order. The person interviewed may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Defendants must permit Commission representatives to interview any employer, consultant, independent contractor, representative, agent, or employee who has agreed to such an interview, relating to any conduct subject to this Order",
-            "quoted_text": "C. Defendants each shall permit representatives of the Commission to interview any employer, consultant, independent contractor, representative, agent, or employee who has agreed to such an interview, relating in any way to any conduct subject to this Order.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 258,
+            "quote_end_line": 261
           }
         ]
       },
       {
-        "provision_number": "VI",
+        "provision_number": "6",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "For three years, Defendants must notify the Commission of changes in residence, employment, business structure, and file compliance reports within specified deadlines.",
+        "summary": "For three years, Individual Defendant must notify the FTC of changes in residence, employment, and name; all Defendants must notify the FTC of corporate structure changes; Defendants must file a sworn compliance report 60 days after entry; and Defendants must notify the FTC of any bankruptcy filing within 15 days.",
         "requirements": [
           {
-            "description": "Individual Defendant must notify the Commission of any changes in residence, mailing addresses, and telephone numbers within 10 days of the date of such change",
-            "quoted_text": "For a period of three (3) years from the date of entry of this Order, 1. Individual Defendant shall notify the Commission of the following: a. Any changes in his residence, mailing addresses, and telephone numbers, within ten (10) days of the date of such change",
-            "deadline": "10 days",
+            "description": "For a period of three (3) years from the date of entry, Individual Defendant shall notify the Commission within ten (10) days of any changes in his residence, mailing addresses, and telephone numbers",
+            "quoted_text": "For a period of three (3) years from the date of entry of this Order, 1. lndividual Defendant shall notify the Commission of the following: a. Any changes in his residence, mailing addresses, and telephone numbers, within ten (10) days of the date of such change;",
+            "deadline": "10 days of each change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 275,
+            "quote_end_line": 278
           },
           {
-            "description": "Individual Defendant must notify the Commission of any changes in employment status or ownership in any business entity within 10 days, including the name and address of each business, a detailed description of the nature of the business, and his duties and responsibilities",
-            "quoted_text": "b. Any changes in his employment status (including self-employment), and any change in his ownership in any business entity, within ten (10) days of the date of such change. Such notice shall include the name and address of each business that he is affiliated with, employed by, creates or forms, or performs services for; a detailed description of the nature of the business; and a detailed description of his duties and responsibilities in connection with the business or employment",
-            "deadline": "10 days",
+            "description": "For a period of three (3) years, Individual Defendant shall notify the Commission within ten (10) days of any changes in his employment status (including self-employment) or ownership in any business entity, including name, address, description of business, and his duties",
+            "quoted_text": "b. Any changes in his employment status (including self-employment), and any change in his ownership in any business entity, within ten (10) days of the date of such change. Such notice shall include the name and address of each business that he is affiliated with, employed by, creates or forms, or performs services for; a detailed description of the nature of the business', and a detailed description of his duties and responsibilities in connection with the business or employment; and",
+            "deadline": "10 days of each change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 279,
+            "quote_end_line": 285
           },
           {
-            "description": "Individual Defendant must notify the Commission of any changes in his name or use of any aliases or fictitious names within 10 days",
-            "quoted_text": "c. Any changes in his name or use of any aliases or fictitious names within ten (10) days of the date of such change",
-            "deadline": "10 days",
+            "description": "For a period of three (3) years, Individual Defendant shall notify the Commission within ten (10) days of any changes in his name or use of any aliases or fictitious names",
+            "quoted_text": "Any changes in his name or use of any aliases or fictitious names within C. ten (10) days of the date of such change;",
+            "deadline": "10 days of each change",
             "verified": true,
-            "confidence": 0.9999570815450644
+            "confidence": 1.0,
+            "quote_start_line": 286,
+            "quote_end_line": 288
           },
           {
-            "description": "Defendants must notify the Commission of any changes in structure of the Corporate Defendant or any business entity that may affect compliance obligations at least 30 days prior to such change, or as soon as practicable if learned less than 30 days prior",
-            "quoted_text": "2. Defendants shall notify the Commission of any changes in structure of the Corporate Defendant or any business entity that any Defendant directly or indirectly controls, or has an ownership interest in, that may affect compliance obligations arising under this Order, including but not limited to: incorporation or other organization; a dissolution, assignment, sale, merger, or other action; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order; or a change in the business name or address, at least thirty (30) days prior to such change, provided that, with respect to any such change in the business entity about which a Defendant learns less than thirty (30) days prior to the date such action is to take place, such Defendant shall notify the Commission as soon as is practicable after obtaining such knowledge.",
-            "deadline": "30 days",
+            "description": "Defendants shall notify the Commission of any changes in structure of the Corporate Defendant or any business entity that any Defendant directly or indirectly controls, at least thirty (30) days prior to such change (or as soon as practicable if learning of the change with less than 30 days' notice)",
+            "quoted_text": "Defendants shall notify the Commission of any changes in structure of the Corporate Defendant or any business entity that any Defendant directly or indirectly controls, or has an ownership interest in, that may affect compliance Case 1:11-cv-23643-DLG Document 5 Entered on FLSD Docket 10/12/2011 Page 12 of 17 obligations arising under this Order, including but not limited to: incorporation or other organization; a dissolution, assignment, sale, merger, or other action; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order; or a change in the business name or address, at least thirty (30) days prior to such change, provided that, with respect to any such change in the business entity about which a Defendant learns less than thirty (30) days prior to the date such action is to take place, such Defendant shall notify the Commission as soon as is practicable after obtaining such knowledge.",
+            "deadline": "30 days prior to change",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 289,
+            "quote_end_line": 302
           },
           {
-            "description": "60 days after entry of this Order, Defendants must provide a written report to the FTC under penalty of perjury setting forth in detail the manner and form in which they have complied and are complying with this Order",
-            "quoted_text": "B. Sixty (60) days after the date of entry of this Order, Defendants each shall provide a written report to the FTC, which is true and accurate and sworn to under penalty of perjury, setting forth in detail the manner and form in which they have complied and are complying with this Order.",
+            "description": "Sixty (60) days after the date of entry of this Order, each Defendant shall provide a written report to the FTC, sworn under penalty of perjury, setting forth in detail the manner and form in which they have complied and are complying with this Order, including current residence, employment, and any other reportable changes for Individual Defendant, and copies of acknowledgments of receipt of the Order for all Defendants",
+            "quoted_text": "B. Sixty (60) days after the date of entry of this Order, Defendants each shall provide a written report to the FTC, which is true and accurate and sworn to under penalty of perjury, setting forth in detail the manner and form in which they have complied and are complying with this Order.This report shall include, but not be limited to: For lndividual Defendant: a. his then-current residence address, mailing addresses, and telephone numbers; b. his then-current employment status (including self-employment), including the name, addresses, and telephone numbers of each business that he is affiliated with, employed by, or performs services for; a detailed description of the nature of the business; and a detailed description of his duties and responsibilities in connection with the business or employment; and Any other changes required to be reported under Subsection A of this Section. 1 2 Case 1:11-cv-23643-DLG Document 5 Entered on FLSD Docket 10/12/2011 Page 13 of 17 2. For all Defendants: a. A copy of each acknowledgment of receipt of this Order, obtained pursuant to the Section titled GtDistribution of Order''; b. Any other changes required to be reported under Subsection A of this Section.",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 303,
+            "quote_end_line": 326
           },
           {
-            "description": "Each Defendant must notify the Commission of the filing of a bankruptcy petition within 15 days of filing",
-            "quoted_text": "C. Each Defendant shall notify the Commission of the filing of a bankruptcy petition by such Defendant within fifteen (15) days of filing.",
+            "description": "Each Defendant shall notify the Commission of the filing of a bankruptcy petition within fifteen (15) days of filing",
+            "quoted_text": "Each Defendant shall notify the Commission of the filing of a bankruptcy petition by such Defendant within fifteen (1 5) days of filing.",
             "deadline": "15 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 327,
+            "quote_end_line": 328
+          },
+          {
+            "description": "Defendants shall send all required reports and notifications by overnight courier (or first-class mail with simultaneous email) to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC",
+            "quoted_text": "D. For the purposes of this Order, Defendants shall, unless otherwise directed by the Commission's authorized representatives, send by overnight courier (not the U.S. Postal Service) al1 reports and notifications to the Commission that are required by this Order to: Associate Director for Enforcement Bureau of Consumer Protection Federal Trade Commission 600 Pennsylvania Avenue, N.W . Washington, D.C. 20580 RE: FTC v. Frostwire LLC Provided that, in lieu of overnight courier, Defendants may send such reports or notifications by first-class mail, but only if Defendants contemporaneously send an electronic version of such report or notification to the Commission at DEbrief@ftc.gov.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 329,
+            "quote_end_line": 341
           }
         ]
       },
       {
-        "provision_number": "VII",
+        "provision_number": "7",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "For six years, Defendants must create and retain accounting records, personnel records, complaints, compliance records, and copies of all file-sharing application versions and associated documentation.",
+        "summary": "For six years from entry of this Order, each Defendant must create and retain specified business records, including accounting records, personnel records, complaints, compliance documents, and executable copies of all versions of any file-sharing application they distribute.",
         "requirements": [
           {
-            "description": "Must create and retain accounting records that reflect revenues generated relating to the downloading, installation, or use of file-sharing applications, the disbursement of such revenues, and the number of downloads and installations of file-sharing applications",
-            "quoted_text": "A. Accounting records that reflect revenues generated relating to the downloading, installation, or use of file-sharing applications, and the disbursement of such revenues; and, to the extent such information is obtained in the ordinary course of business, records that reflect the number of downloads and installations of file-sharing applications",
-            "deadline": null,
+            "description": "For a period of six (6) years, retain accounting records that reflect revenues generated relating to the downloading, installation, or use of file-sharing applications and the disbursement of such revenues, and records reflecting number of downloads and installations",
+            "quoted_text": "IT IS FURTHER ORDERED that, for a period of six (6) years from the date of entry of Case 1:11-cv-23643-DLG Document 5 Entered on FLSD Docket 10/12/2011 Page 14 of 17 this Order, each Defendant, in connection with any business where (1) such Defendant is the majority owner, or directly or indirectly manages or controls the business, and (2) the business is engaged in or assists others engaged in the development, marketing, sale, or distribution in commerce of any file-sharing application, and their agents, employees, officers, corporations, successors and assigns, are hereby restrained and enjoined from failing to create and/or retain the following records: A. Accounting records that retlect revenues generated relating to the downloading, installation, or use of file-sharing applications, and the disbursement of such revenues; and, to the extent such information is obtained in the ordinary course of business, records that retlect the number of downloads and installations of file-sharing applications;",
+            "deadline": "6 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 346,
+            "quote_end_line": 359
           },
           {
-            "description": "Must create and retain personnel records accurately reflecting the name, address, and telephone number of each person employed or working as an independent contractor who participates in the conduct specified in Sections I-IV, that person's job title or position, the date upon which the person commenced work, and the date and reason for termination if applicable",
-            "quoted_text": "B. Personnel records accurately reflecting: the name, address, and telephone number of each person who is employed in any capacity by such business, including as an independent contractor, and who participates in the conduct specified in Sections I-IV; that person's job title or position; the date upon which the person commenced work; and the date and reason for the person's termination, if applicable",
-            "deadline": null,
+            "description": "Retain personnel records accurately reflecting the name, address, telephone number, job title, start date, and termination date of each person employed in any capacity who participates in the conduct specified in Sections I-IV",
+            "quoted_text": "B. Personnel records accurately retlecting:the name, address, and telephone number of each person who is employed in any capacity by such business, including as an independent contractor, and who participates in the conduct specified in Sections l-lV; that person's job title or position; the date upon which the person commenced work; and the date and reason for the person's termination, if applicable;",
+            "deadline": "6 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 360,
+            "quote_end_line": 364
           },
           {
-            "description": "Must create and retain complaints and refund requests (whether received directly or indirectly) and any responses to those complaints or requests",
-            "quoted_text": "C. Complaints and refund requests (whether received directly or indirectly, such as through a third party) and any responses to those complaints or requests",
-            "deadline": null,
+            "description": "Retain all complaints and refund requests, whether received directly or indirectly, and any responses to those complaints or requests",
+            "quoted_text": "Complaints and refund requests (whether received directly or indirectly, such as through a third party) and any responses to those complaints or requests;",
+            "deadline": "6 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 365,
+            "quote_end_line": 366
           },
           {
-            "description": "Must retain all records and documents necessary to demonstrate full compliance with each provision of this Order, including copies of acknowledgments of receipt of this Order, all reports submitted to the FTC, and all records and documents that contradict, qualify, or call into question Defendants' compliance with this Order",
-            "quoted_text": "D. All records and documents necessary to demonstrate full compliance with each provision of this Order, including but not limited to: 1. copies of acknowledgments of receipt of this Order required by the Sections titled \"Distribution of Order\" and \"Acknowledgment of Receipt of Order\"; 2. all reports submitted to the FTC pursuant to the Section titled \"Compliance Reporting\"; and 3. all records and documents that contradict, qualify, or call into question Defendants' compliance with this Order",
-            "deadline": null,
+            "description": "Retain all records and documents necessary to demonstrate full compliance with each provision of this Order, including copies of acknowledgments of receipt of this Order, all reports submitted to the FTC, and all records that contradict, qualify, or call into question Defendants' compliance",
+            "quoted_text": "D. All records and documents necessary to demonstrate full compliance with each provision of this Order, including but not limited to: copies of acknowledgments of receipt of this Order required by the Sections titled diDistribution of Order'' and dçAcknowledgment of Receipt of Order''; 2. all reports submitted to the FTC pursuant to the Section titled 6scompliance Reportinf'' and 14 Case 1:11-cv-23643-DLG Document 5 Entered on FLSD Docket 10/12/2011 Page 15 of 17 all records and documents that contradict, qualify, or call into question Defendants' compliance with this Order; and",
+            "deadline": "6 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 367,
+            "quote_end_line": 378
           },
           {
-            "description": "Must retain an executable copy of each materially different version of each file-sharing application distributed, and any programmer documentation, developer guides, specification documents, version histories and change logs, application store documentation or submissions, application store descriptions and disclosures, terms of service, end user license agreements, frequently asked questions, instructional materials, privacy policies, domain name registrations, and online service agreements associated with those versions",
-            "quoted_text": "E. An executable copy of each materially different version of each file-sharing application that any Defendant, whether acting directly or indirectly, distributes or makes available for download, and any programmer documentation, developer guides, specification documents, version histories and change logs, application store documentation or submissions, application store descriptions and disclosures, terms of service, end user license agreements, frequently asked questions, instructional materials, privacy policies, domain name registrations, and online service agreements associated with those versions.",
-            "deadline": null,
+            "description": "Retain an executable copy of each materially different version of each file-sharing application distributed or made available for download, along with associated programmer documentation, developer guides, specification documents, version histories, change logs, application store submissions, terms of service, end user license agreements, frequently asked questions, instructional materials, privacy policies, domain name registrations, and online service agreements",
+            "quoted_text": "An executable copy of each materially different version of each file-sharing application that any Defendant, whether acting directly or indirectly, distributes or makes available for download, and any programmer documentation, developer guides, specification documents, version histories and change logs, application store documentation or submissions, application store descriptions and disclosures, terms of service, end user license agreements, frequently asked questions, instructional materials, privacy policies, domain name registrations, and online service agreements associated with those versions.",
+            "deadline": "6 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 379,
+            "quote_end_line": 385
           }
         ]
       },
       {
-        "provision_number": "VIII",
+        "provision_number": "8",
         "title": "Distribution of Order",
         "category": "acknowledgment",
-        "summary": "For three years, Defendants must deliver copies of the Order to all principals, officers, directors, managers, employees, agents, and representatives who engage in conduct related to the subject matter of the Order, and secure signed acknowledgments of receipt.",
+        "summary": "For three years from entry, Defendants must deliver copies of this Order to principals, officers, managers, employees, and agents, and obtain signed and dated acknowledgments of receipt within thirty days of delivery.",
         "requirements": [
           {
-            "description": "Corporate Defendant must deliver a copy of this Order to all of its principals, officers, directors, and managers; all employees, agents, and representatives who engage in conduct related to the subject matter of the Order; and any business entity resulting from any change in structure. For current personnel, delivery shall be within 5 days of service of this Order. For new personnel, delivery shall occur prior to their assuming their responsibilities. For any business entity resulting from change in structure, delivery shall be at least 10 days prior to the change.",
-            "quoted_text": "Corporate Defendant: The Corporate Defendant must deliver a copy of this Order to (1) all of its principals, officers, directors, and managers; (2) all of its employees, agents, and representatives who engage in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure set forth in Subsection A.2 of the Section titled \"Compliance Reporting.\" For current personnel, delivery shall be within five (5) days of service of this Order upon such Defendant. For new personnel, delivery shall occur prior to their assuming their responsibilities. For any business entity resulting from any change in structure set forth in Subsection A.2 of the Section titled \"Compliance Reporting,\" delivery shall be at least ten (10) days prior to the change in structure.",
-            "deadline": "5 days",
+            "description": "For three (3) years, Corporate Defendant must deliver a copy of this Order to all principals, officers, directors, managers, employees, agents, and representatives who engage in conduct related to the subject matter of the Order, and to any resulting business entity from a structural change; within five (5) days for current personnel, prior to assuming responsibilities for new personnel, and at least ten (10) days prior to any change in structure",
+            "quoted_text": "IT IS FURTHER ORDERED that, for a period of three (3) years from the date of entry of this Order, Defendants shall deliver copies of the Order as directed below: Corporate Defendant: The Corporate Defendant must deliver a copy of this Order to (1) all of its principals, officers, directors, and managers; (2) all of its employees, agents, and representatives who engage in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure set forth in Subsection A.2 of the Section titled ldcompliance Reporting.'' For current personnel, delivery shall be within five (5) days of service of this Order upon such Defendant. For new personnel, delivery shall occur prior to their assuming their responsibilities. For any business entity resulting from any change in structure set forth in Subsection A.2 of the Section titled Sûcompliance Reporting,'' delivery shall be at least ten (1 0) days prior to the change in structure.",
+            "deadline": "5 days for current personnel; prior to start for new personnel; 10 days prior for structural changes",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 388,
+            "quote_end_line": 399
           },
           {
-            "description": "Individual Defendant as control person must deliver a copy of this Order to all principals, officers, directors, and managers of any business he controls; all employees, agents, and representatives who engage in conduct related to the subject matter of the Order; and any business entity resulting from any change in structure. For current personnel, delivery shall be within 5 days of service. For new personnel, delivery shall occur prior to their assuming their responsibilities. For any business entity resulting from change in structure, delivery shall be at least 10 days prior to the change.",
-            "quoted_text": "B. Individual Defendant as control person: For any business that Individual Defendant controls, directly or indirectly, or in which he has a majority ownership interest, he must deliver a copy of this Order to (1) all principals, officers, directors, and managers of that business; (2) all employees, agents, and representatives of that business who engage in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure set forth in Subsection A.2 of the Section titled \"Compliance Reporting.\" For current personnel, delivery shall be within five (5) days of service of this Order upon Individual Defendant. For new personnel, delivery shall occur prior to their assuming their responsibilities. For any business entity resulting from any change in structure set forth in Subsection A.2 of the Section titled \"Compliance Reporting,\" delivery shall be at least ten (10) days prior to the change in structure.",
-            "deadline": "5 days",
+            "description": "For three (3) years, Individual Defendant must deliver a copy of this Order to all principals, officers, directors, managers, employees, agents, and representatives of any business he controls, and to any resulting business entity from a structural change; within five (5) days for currentpersonnel, prior to assuming responsibilities for new personnel, and at least ten (10) days prior to any change in structure",
+            "quoted_text": "B. Individual Defendant as control person: For any business that Individual Defendant controls, directly or indirectly, or in which he has a majority ownership interest, he must deliver a copy of this Order to (1) al1 principals, ofGcers, directors, and managers of that business; (2) al1 employees, agents, and representatives of that business who engage in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure set forth in Subsection A.2 of the Section titled (çcompliance Reporting.'' For current personnel, delivery shall be within five (5) days of service of this Order upon lndividual Defendant. For new personnel, delivery shall occur prior to their assuming their responsibilities. For any business entity resulting from any change in stnlcture set forth in Subsection A.2 of the Section titled çscompliance Reporting,'' delivery shall be at least ten (10) days prior to the change in structure.",
+            "deadline": "5 days for current personnel; prior to start for new personnel; 10 days prior for structural changes",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 403,
+            "quote_end_line": 413
           },
           {
-            "description": "Defendants must secure a signed and dated statement acknowledging receipt of the Order, within 30 days of delivery, from all persons receiving a copy of the Order pursuant to this Section",
-            "quoted_text": "C. Defendants must secure a signed and dated statement acknowledging receipt of the Order, within thirty (30) days of delivery, from all persons receiving a copy of the Order pursuant to this Section.",
-            "deadline": "30 days",
+            "description": "Defendants must secure a signed and dated statement acknowledging receipt of the Order within thirty (30) days of delivery from all persons receiving a copy of the Order",
+            "quoted_text": "Defendants must secure a signed and dated statement acknowledging receipt of the Order, within thirty (30) days of delivery, from a11 persons receiving a copy of the Order pursuant to this Section.",
+            "deadline": "30 days of delivery",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 414,
+            "quote_end_line": 416
           }
         ]
       },
       {
-        "provision_number": "IX",
+        "provision_number": "9",
         "title": "Acknowledgment of Receipt of Order",
         "category": "acknowledgment",
-        "summary": "Each Defendant must submit to the Commission a truthful sworn statement acknowledging receipt of this Order within five business days of receipt.",
+        "summary": "Each Defendant must submit to the Commission a truthful sworn statement acknowledging receipt of this Order within five business days of receipt of the Order as entered by the Court.",
         "requirements": [
           {
-            "description": "Each Defendant must submit to the Commission a truthful sworn statement acknowledging receipt of this Order within 5 business days of receipt of this Order as entered by the Court",
+            "description": "Within five (5) business days of receipt of this Order as entered by the Court, each Defendant must submit to the Commission a truthful sworn statement acknowledging receipt of this Order",
             "quoted_text": "IT IS FURTHER ORDERED that each Defendant, within five (5) business days of receipt of this Order as entered by the Court, must submit to the Commission a truthful sworn statement acknowledging receipt of this Order.",
             "deadline": "5 business days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 419,
+            "quote_end_line": 421
           }
         ]
       },
       {
-        "provision_number": "X",
+        "provision_number": "10",
         "title": "Retention of Jurisdiction",
         "category": "duration",
-        "summary": "The Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+        "summary": "The Court retains jurisdiction over this matter for purposes of construction, modification, and enforcement of this Order.",
         "requirements": [
           {
-            "description": "This Court shall retain jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order",
-            "quoted_text": "IT IS FURTHER ORDERED that this Court shall retain jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+            "description": "This Court shall retain jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order; the Clerk shall close the case for administrative purposes only",
+            "quoted_text": "IT IS FURTHER ORDERED that this Court shall retainjurisdiction of this matter for purposes of constnzction, modification, and enforcement of this Order. The Clerk shall CLOSE this case for adminiskative puzposes only.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9777124183006536
+            "confidence": 1.0,
+            "quote_start_line": 424,
+            "quote_end_line": 426
           }
         ]
       }
     ],
     "duration": {
       "duration_years": null,
-      "termination_text": "IT IS FURTHER ORDERED that this Court shall retain jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order."
+      "termination_text": "IT IS FURTHER ORDERED that this Court shall retain jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order. The Clerk shall CLOSE this case for administrative purposes only."
     }
   },
   "metadata": {
@@ -465,11 +572,34 @@
     },
     "extraction_stats": {
       "complaint_counts": 3,
-      "complaint_representations": 4,
+      "complaint_representations": 6,
       "order_provisions": 10,
       "order_definitions": 16,
-      "order_requirements": 41
+      "order_requirements": 40,
+      "provisions_per_section": {
+        "1": 4,
+        "2": 5,
+        "3": 6,
+        "4": 5,
+        "5": 3,
+        "6": 7,
+        "7": 5,
+        "8": 3,
+        "9": 1,
+        "10": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 6,
+        "complaint_total": 6,
+        "order_verified": 40,
+        "order_total": 40
+      }
     },
-    "processing_time_seconds": 305.1
+    "processing_time_seconds": 176.3
   }
 }

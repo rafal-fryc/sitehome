@@ -6,7 +6,7 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "512 7th Ave., 12th Floor, New York, NY 10018",
-      "business_description": "Epic Marketplace is an online behavioral advertising company that acts as an intermediary between website publishers and advertisers. It operates the Epic Marketplace Network of over 45,000 publishers and engages in targeted advertising by tracking consumers' online activities through cookies and behavioral data."
+      "business_description": "Epic is an advertising company that engages in online behavioral advertising and acts as an intermediary between website publishers and advertisers, operating the Epic Marketplace Network comprising over 45,000 publishers."
     },
     "commissioners": [
       "Edith Ramirez, Chairman",
@@ -18,22 +18,21 @@
       "month": 3,
       "year": 2013
     },
-    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45 et seq.",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/112-3182-epic-marketplace-inc"
   },
   "complaint": {
-    "factual_background": "Epic Marketplace, Inc. engaged in 'history sniffing,' a practice that exploited browser features to determine whether consumers had visited over 54,000 domains outside of Epic's advertising network, including sensitive health and financial websites. Epic used this data to assign consumers to sensitive interest segments for behavioral targeting purposes, circumventing standard privacy protections like cookie deletion. The company's privacy policy claimed it only collected information from websites within its own network and failed to disclose the history sniffing practice.",
+    "factual_background": "Epic Marketplace engaged in 'history sniffing' from March 2010 to August 2011, a practice that exploited browser features to determine whether consumers had visited specific webpages outside Epic's network. Epic used this technique to track visits to over 54,000 domains, including sensitive pages relating to fertility, impotence, menopause, incontinence, disability insurance, credit repair, debt relief, and personal bankruptcy. Epic then assigned consumers to interest segments based on this data and used it for behavioral targeting, while failing to disclose this practice in its privacy policy.",
     "representations_made": [
       {
-        "description": "Epic represented that it collected information only from websites within the Epic Marketplace Network",
+        "description": "Epic's privacy policy stated it automatically received and recorded anonymous information that browsers send when visiting websites in the Epic Marketplace Network, including IP addresses, browser type, ISP, referring/exit pages, platform type, date/time stamp, cookies, and responses to advertisements",
         "quoted_text": "Epic Marketplace automatically receives and records anonymous information that your browser sends whenever you visit a website which is part of the Epic Marketplace Network. We use log files to collect Internet protocol (IP) addresses, browser type, Internet service providers (ISP), referring/exit pages, platform type, date/time stamp, one or more cookies that may uniquely identify your browser, and responses by a web surfer to an advertisement delivered by us.",
-        "source_paragraph": 14
-      },
-      {
-        "description": "Epic failed to disclose that it was engaged in history sniffing",
-        "quoted_text": "Respondents' statement describing their privacy and online behavioral targeting practices did not disclose that Epic was engaged in history sniffing.",
-        "source_paragraph": 15
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 14,
+        "quote_start_line": 95,
+        "quote_end_line": 101
       }
     ],
     "counts": [
@@ -41,7 +40,7 @@
         "count_number": 1,
         "title": "Misrepresentation of Data Collection Scope",
         "representation": "Epic collected information on consumers' visits to websites only within the Epic Marketplace Network",
-        "fact": "Epic used history sniffing to collect information on whether consumers had visited websites outside of the Epic Marketplace Network",
+        "fact": "Epic did not collect only information on consumers' visits to websites within the Epic Marketplace Network. Epic used history sniffing to collect information on whether consumers had visited websites outside of the Epic Marketplace Network.",
         "conclusion": "Therefore, the representation made in paragraph 16 was false or misleading and constitutes a deceptive act or practice."
       },
       {
@@ -63,60 +62,70 @@
     "provisions": [
       {
         "provision_number": "I",
-        "title": "Prohibition Against Misrepresentations About Privacy and History Sniffing",
+        "title": "Prohibition Against Privacy Misrepresentations",
         "category": "prohibition",
-        "summary": "Respondents must not misrepresent the extent to which they maintain privacy or confidentiality of consumer data, or the extent to which software code determines whether a user has previously visited a webpage.",
+        "summary": "Respondents must not misrepresent the extent to which they maintain privacy or confidentiality of consumer data, including collection, use, disclosure, or sharing practices, or the extent to which software code determines whether a user has previously visited a webpage.",
         "requirements": [
           {
-            "description": "Must not misrepresent the extent to which they maintain privacy or confidentiality of consumer data",
+            "description": "Must not misrepresent the extent to which they maintain privacy or confidentiality of consumer data or the extent to which software code determines whether a user has previously visited a webpage",
             "quoted_text": "IT IS ORDERED that respondents and their officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, or other device, in connection with the online advertising, marketing, promotion, offering for sale, sale, or dissemination of any product or service, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication: (A) the extent to which they maintain the privacy or confidentiality of data from or about a particular consumer, computer, or device, including but not limited to the extent to which that data is collected, used, disclosed, or shared; or (B) the extent to which software code on a webpage determines whether a user has previously visited a webpage.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 61,
+            "quote_end_line": 69
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Prohibition on Collecting or Using Data Through History Sniffing",
+        "title": "Prohibition on History Sniffing",
         "category": "prohibition",
         "summary": "Respondents are prohibited from collecting any data through history sniffing or using any data obtained by history sniffing.",
         "requirements": [
           {
-            "description": "Must not collect any data through history sniffing or use any data obtained by history sniffing",
+            "description": "Prohibited from collecting any data through history sniffing or using any data obtained by history sniffing",
             "quoted_text": "IT IS FURTHER ORDERED that respondents and their officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, or other device, in connection with online advertising, marketing, promotion, offering for sale, sale, or dissemination of any product or service, in or affecting commerce, are prohibited from collecting any data through history sniffing or using any data obtained by history sniffing.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 74,
+            "quote_end_line": 78
           }
         ]
       },
       {
         "provision_number": "III",
-        "title": "Data Deletion and Reporting Requirements",
+        "title": "Data Deletion and Non-Use Requirements",
         "category": "affirmative_obligation",
-        "summary": "Respondents must not use, disclose, sell, rent, lease, or transfer information collected using history sniffing, and must permanently delete all such information within 5 days, providing written confirmation to the Commission.",
+        "summary": "Respondents must not use, disclose, sell, rent, lease, or transfer any information collected using history sniffing, and must permanently delete or destroy all such information within five days, providing written confirmation to the Commission.",
         "requirements": [
           {
             "description": "Must not use, disclose, sell, rent, lease, or transfer any information collected using history sniffing",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents and their officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, or other device, shall not use, disclose, sell, rent, lease, or transfer any information that was collected using history sniffing.",
+            "quoted_text": "other device, shall not use, disclose, sell, rent, lease, or transfer any information that was collected using history sniffing. Within five (5) days after the date of service of this order,",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 82,
+            "quote_end_line": 83
           },
           {
-            "description": "Must permanently delete or destroy all information collected using history sniffing and provide written confirmation to the Commission",
-            "quoted_text": "Within five (5) days after the date of service of this order, respondents shall permanently delete or destroy all information collected using history sniffing, and shall provide a written statement to the Commission, sworn under penalty of perjury, confirming that all such information has been deleted or destroyed.",
+            "description": "Permanently delete or destroy all information collected using history sniffing and provide written statement to the Commission confirming deletion",
+            "quoted_text": "collected using history sniffing. Within five (5) days after the date of service of this order, respondents shall permanently delete or destroy all information collected using history sniffing, and shall provide a written statement to the Commission, sworn under penalty of perjury, confirming that all such information has been deleted or destroyed. Provided that, if",
             "deadline": "5 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 83,
+            "quote_end_line": 86
           },
           {
-            "description": "If prohibited from deleting information by law, must provide written statement identifying such information and the legal basis for retention",
-            "quoted_text": "Provided that, if respondents are prohibited from deleting or destroying such information by law, regulation, or court order, respondents shall provide a written statement to the Commission, sworn under penalty of perjury, identifying any information that has not been deleted or destroyed and the specific law, regulation, or court order that prohibits respondents from deleting or destroying such information.",
-            "deadline": null,
+            "description": "If prohibited from deleting information by law, regulation, or court order, provide written statement to the Commission identifying such information and the specific prohibition",
+            "quoted_text": "confirming that all such information has been deleted or destroyed. Provided that, if respondents are prohibited from deleting or destroying such information by law, regulation, or court order, respondents shall provide a written statement to the Commission, sworn under penalty of perjury, identifying any information that has not been deleted or destroyed and the specific law, regulation, or court order that prohibits respondents from deleting or destroying such information. Unless otherwise directed by a representative of the Commission, all",
+            "deadline": "5 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 86,
+            "quote_end_line": 91
           }
         ]
       },
@@ -124,28 +133,34 @@
         "provision_number": "IV",
         "title": "Recordkeeping Requirements",
         "category": "recordkeeping",
-        "summary": "Respondents must maintain records including consumer complaints, compliance documents, and public-facing materials for specified periods and make them available to the FTC upon request.",
+        "summary": "Respondents must maintain and make available to the FTC records including consumer complaints, compliance records, and publicly disseminated documents related to data collection and privacy practices for specified retention periods.",
         "requirements": [
           {
-            "description": "Must maintain for 3 years consumer complaints or inquiries concerning data collection, use, disclosure, sharing, or opt-out practices, and responses thereto",
-            "quoted_text": "For a period of three (3) years from the date of service of this order or from the date of preparation, whichever is later: 1. Consumer complaints or inquiries directed to respondents or forwarded to respondents by a third party concerning: (a) any collection of data by respondents; (b) the use, disclosure, or sharing of such data by respondents; or (c) opt-out practices or any other mechanism to limit or prevent such collection of data or the use, disclosure, or sharing of data collected by respondents, as well as any responses to such complaints or inquiries;",
+            "description": "Maintain consumer complaints or inquiries concerning data collection, use, disclosure, sharing, or opt-out practices and responses thereto for three years",
+            "quoted_text": "1. Consumer complaints or inquiries directed to respondents or forwarded to respondents by a third party concerning: (a) any collection of data by respondents; (b) the use, disclosure, or sharing of such data by respondents; or (c) opt-out practices or any other mechanism to limit or prevent such collection of data or the use, disclosure, or sharing of data collected by respondents, as well as any responses to such complaints or inquiries;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 104,
+            "quote_end_line": 110
           },
           {
-            "description": "Must maintain for 3 years all records necessary to demonstrate full compliance with the order",
-            "quoted_text": "For a period of three (3) years from the date of service of this order or from the date of preparation, whichever is later: 2. All records necessary to demonstrate full compliance with each provision of this order, including all submissions to the Commission;",
+            "description": "Maintain all records necessary to demonstrate full compliance with each provision of this order, including all submissions to the Commission, for three years",
+            "quoted_text": "2. All records necessary to demonstrate full compliance with each provision of this order, including all submissions to the Commission; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 114,
+            "quote_end_line": 115
           },
           {
-            "description": "Must maintain for 3 years after last public dissemination all terms of use, privacy policies, marketing materials, and related documents",
-            "quoted_text": "For a period of three (3) years after the last public dissemination thereof by respondents, respondents' terms of use, form network contracts, marketing materials, frequently asked questions, privacy policies, and other documents publicly disseminated by respondents relating to: (a) collection of data by respondents; (b) the use, disclosure or sharing of such data by respondents; (c) opt-out practices and other mechanisms to limit or prevent such collection of data by respondents or the use, disclosure, or sharing of data collected by respondents; (d) respondents' membership in any self-regulatory body; and (e) respondents' participation in and compliance with any privacy, security, or other compliance program sponsored by the government or other third party.",
+            "description": "Maintain terms of use, contracts, marketing materials, privacy policies, and other publicly disseminated documents relating to data practices for three years after last public dissemination",
+            "quoted_text": "B. For a period of three (3) years after the last public dissemination thereof by respondents, respondents’ terms of use, form network contracts, marketing materials, frequently asked questions, privacy policies, and other documents publicly disseminated by respondents relating to: (a) collection of data by respondents; (b) the use, disclosure or sharing of such data by respondents; (c) opt-out practices and other mechanisms to limit or prevent such collection of data by respondents or the use, disclosure, or sharing of data collected by respondents; (d) respondents’ membership in any self-regulatory body; and (e) respondents’ participation in and compliance with any privacy, security, or other compliance program sponsored by the government or other third party.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 116,
+            "quote_end_line": 125
           }
         ]
       },
@@ -153,36 +168,60 @@
         "provision_number": "V",
         "title": "Order Acknowledgment Requirements",
         "category": "acknowledgment",
-        "summary": "Respondents must deliver copies of the order to current and future principals, officers, directors, managers, and relevant employees, and obtain signed acknowledgments.",
+        "summary": "Respondents must deliver a copy of this order to current and future principals, officers, directors, managers, and relevant personnel for three years, securing signed acknowledgments of receipt.",
         "requirements": [
           {
-            "description": "Must deliver order to current personnel within 30 days and obtain signed acknowledgments",
-            "quoted_text": "IT IS FURTHER ORDERED that, for three (3) years after the date of service of this order, respondents shall deliver a copy of this order to: (1) all current and future principals, officers, directors, and managers; and (2) all current and future managers, employees, agents and representatives who have responsibilities on behalf of respondents with respect to the subject matter of this order, and shall secure from each such person a signed and dated statement acknowledging receipt of the order, with any electronic signatures complying with the requirements of the E-Sign Act, 15 U.S.C. § 7001 et seq. Respondents shall deliver this order to current personnel within thirty (30) days after the date of service of the order, and to future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "description": "Deliver copy of order to all current and future principals, officers, directors, managers, and relevant personnel and secure signed acknowledgment statements",
+            "quoted_text": "order, respondents shall deliver a copy of this order to: (1) all current and future principals, officers, directors, and managers; and (2) all current and future managers, employees, agents and representatives who have responsibilities on behalf of respondents with respect to the subject matter of this order, and shall secure from each such person a signed and dated statement acknowledging receipt of the order, with any electronic signatures complying with the requirements of the E-Sign Act, 15 U.S.C. § 7001 et seq. Respondents shall deliver this order to",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 128,
+            "quote_end_line": 133
+          },
+          {
+            "description": "Deliver order to current personnel",
+            "quoted_text": "requirements of the E-Sign Act, 15 U.S.C. § 7001 et seq. Respondents shall deliver this order to current personnel within thirty (30) days after the date of service of the order, and to future personnel within thirty (30) days after the person assumes such position or responsibilities.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 133,
+            "quote_end_line": 135
+          },
+          {
+            "description": "Deliver order to future personnel within thirty days after person assumes position or responsibilities",
+            "quoted_text": "requirements of the E-Sign Act, 15 U.S.C. § 7001 et seq. Respondents shall deliver this order to current personnel within thirty (30) days after the date of service of the order, and to future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 133,
+            "quote_end_line": 135
           }
         ]
       },
       {
         "provision_number": "VI",
-        "title": "Corporate Change Notification Requirements",
+        "title": "Change in Corporate Status Notification",
         "category": "compliance_reporting",
-        "summary": "Respondents must notify the Commission at least 30 days prior to any corporate changes that may affect compliance obligations under the order.",
+        "summary": "Respondents must notify the Commission at least thirty days prior to any change in corporate structure or status that may affect compliance obligations, including dissolution, merger, sale, bankruptcy, or change of name or address.",
         "requirements": [
           {
-            "description": "Must notify the Commission at least 30 days prior to corporate changes affecting compliance obligations",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents shall notify the Commission at least thirty (30) days prior to any change in respondents that may affect compliance obligations arising under this order, including but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor company; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in respondents' name or address.",
+            "description": "Notify the Commission at least thirty days prior to any change in respondents that may affect compliance obligations, including dissolution, merger, sale, bankruptcy, or name/address changes",
+            "quoted_text": "IT IS FURTHER ORDERED that respondents shall notify the Commission at least thirty (30) days prior to any change in respondents that may affect compliance obligations arising under this order, including but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor company; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in respondents’ name or address.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 137,
+            "quote_end_line": 142
           },
           {
-            "description": "If learning of corporate change less than 30 days before it occurs, must notify Commission as soon as practicable",
-            "quoted_text": "Provided, however, that with respect to any proposed change about which respondents learn less than thirty (30) days prior to the date such action is to take place, respondents shall notify the Commission as soon as is practicable after obtaining such knowledge.",
-            "deadline": null,
+            "description": "If learning of proposed change less than thirty days before it occurs, notify the Commission as soon as practicable after obtaining such knowledge",
+            "quoted_text": "Provided, however, that with respect to any proposed change about which respondents learn less than thirty (30) days prior to the date such action is to take place, respondents shall notify the Commission as soon as is practicable after obtaining such knowledge. Unless otherwise directed",
+            "deadline": "as soon as practicable",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 143,
+            "quote_end_line": 145
           }
         ]
       },
@@ -190,21 +229,25 @@
         "provision_number": "VII",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondents must file a compliance report with the Commission within 90 days and submit additional reports within 10 days of written notice from the Commission.",
+        "summary": "Respondents must file a true and accurate compliance report with the Commission within ninety days after service of the order and submit additional reports upon request within ten days.",
         "requirements": [
           {
-            "description": "Must file initial compliance report within 90 days detailing manner and form of compliance with the order",
+            "description": "File with the Commission a true and accurate report setting forth in detail the manner and form in which respondents have complied with this order",
             "quoted_text": "IT IS FURTHER ORDERED that respondents shall, within ninety (90) days after the date of service of this order, file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form in which respondents have complied with this order.",
             "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 157,
+            "quote_end_line": 159
           },
           {
-            "description": "Must submit additional compliance reports within 10 days of written notice from the Commission",
+            "description": "Submit additional true and accurate written reports upon receipt of written notice from a representative of the Commission",
             "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, respondents shall submit additional true and accurate written reports.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 160,
+            "quote_end_line": 161
           }
         ]
       },
@@ -212,21 +255,23 @@
         "provision_number": "VIII",
         "title": "Order Duration and Termination",
         "category": "duration",
-        "summary": "The order will terminate on March 13, 2033, or 20 years from the most recent date that a federal complaint alleging violation of the order is filed, whichever comes later.",
+        "summary": "This order terminates on March 13, 2033, or twenty years from the most recent date a complaint alleging violation is filed in federal court, whichever comes later, subject to specified exceptions and conditions.",
         "requirements": [
           {
-            "description": "Order terminates on specified date or 20 years from most recent federal complaint, whichever is later",
-            "quoted_text": "This order will terminate on March 13, 2033, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part of this order that terminates in less than twenty (20) years; B. This order's application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part.",
+            "description": "Order terminates on specified date or twenty years from most recent complaint filing, whichever is later, subject to exceptions",
+            "quoted_text": "This order will terminate on March 13, 2033, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part of this order that terminates in less than twenty (20) years; B. This order’s application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that the respondents did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Part as though the complaint had never been filed, except that this order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 163,
+            "quote_end_line": 177
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This order will terminate on March 13, 2033, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part of this order that terminates in less than twenty (20) years; B. This order's application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that the respondents did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Part as though the complaint had never been filed, except that this order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal."
+      "termination_text": "This order will terminate on March 13, 2033, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later"
     }
   },
   "metadata": {
@@ -236,11 +281,32 @@
     },
     "extraction_stats": {
       "complaint_counts": 2,
-      "complaint_representations": 2,
+      "complaint_representations": 1,
       "order_provisions": 8,
       "order_definitions": 4,
-      "order_requirements": 14
+      "order_requirements": 16,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 1,
+        "III": 3,
+        "IV": 3,
+        "V": 3,
+        "VI": 2,
+        "VII": 2,
+        "VIII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 1,
+        "complaint_total": 1,
+        "order_verified": 16,
+        "order_total": 16
+      }
     },
-    "processing_time_seconds": 86.6
+    "processing_time_seconds": 91.3
   }
 }

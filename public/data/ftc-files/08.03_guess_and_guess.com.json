@@ -6,7 +6,7 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "1444 S. Alameda Street, Los Angeles, California 90021",
-      "business_description": "Guess?, Inc. designs and produces, or licenses others to produce, men's, women's, and children's clothing and accessory products. These products are marketed, distributed and sold under various Guess? brand names through its own stores, independent retailers, and www.guess.com."
+      "business_description": "GUESS?, Inc. designs and produces, or licenses others to produce, men's, women's, and children's clothing and accessory products. These products are marketed, distributed and sold under various Guess? brand names through its own stores, independent retailers, and www.guess.com, a website owned and operated by its subsidiary Guess.com, Inc."
     },
     "commissioners": [
       "Timothy J. Muris, Chairman",
@@ -19,42 +19,45 @@
       "month": 8,
       "year": 2003
     },
-    "legal_authority": "Federal Trade Commission Act, 15 U.S.C. § 45 et seq",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/022-3260-guess-inc-guesscom-inc-matter"
   },
   "complaint": {
-    "factual_background": "Guess?, Inc. and Guess.com, Inc. operated an e-commerce website where they collected consumers' personal information including credit card numbers. They promised to store all personal information in an encrypted, unreadable format and to implement reasonable security measures. However, they failed to implement basic security protections against web-based attacks, leaving their databases vulnerable to SQL injection attacks. In February 2002, an attacker successfully exploited this vulnerability to access credit card numbers in clear text.",
+    "factual_background": "Guess?, Inc. and its subsidiary Guess.com, inc. operated an e-commerce website at www.guess.com that collected sensitive consumer information, including credit card numbers, names, and addresses. Despite publishing a privacy policy and FAQ claiming that personal information was stored in an encrypted, unreadable format and protected by robust security measures, Respondents failed to implement basic security safeguards. Their web application was vulnerable to well-known SQL injection attacks—publicly warned about since 1997—which could expose all database tables in clear text. In February 2002, a website visitor exploited this vulnerability and read stored credit card numbers in plain text, confirming the falsity of Respondents' security representations.",
     "representations_made": [
       {
-        "description": "Claimed that all personal information including credit card information was stored in an unreadable, encrypted format at all times",
-        "quoted_text": "All of your personal information including your credit card information and sign-in password are stored in an unreadable, encrypted format at all times.",
-        "source_paragraph": 6
+        "description": "Claimed that all personal information, including credit card information and sign-in passwords, is stored in an unreadable, encrypted format at all times, and that the website is protected by a multi-layer firewall-based security system",
+        "quoted_text": "Privacy Policy At GUESS.com, we are committed to protecting your privacy. We firmly believe that electronic security and privacy are necessary for the continued success of the Internet. In support of this, we only use the personal information that you provide to create a more personalized and entertaining experience for you, in accordance with the terms outlined below. * * * Security This site has security measures in place to protect the loss, misuse and alteration of the information under our control. All orders are transmitted over secure Internet connections using SSL (Secure Sockets Layer) encryption technology. All of your personal information including your credit card information and sign-in password are stored in an unreadable, encrypted format at all times. This Website and more importantly all user information, is further protected by a multi-layer firewall based security system.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 6,
+        "quote_start_line": 52,
+        "quote_end_line": 64
       },
       {
-        "description": "Claimed the site had security measures in place to protect against loss, misuse and alteration of information under their control",
-        "quoted_text": "This site has security measures in place to protect the loss, misuse and alteration of the information under our control.",
-        "source_paragraph": 6
-      },
-      {
-        "description": "Claimed SSL technology encrypts files allowing only GUESS? to decode customer information",
-        "quoted_text": "SSL technology encrypts files allowing only GUESS? to decode your information.",
-        "source_paragraph": 7
+        "description": "Claimed in the FAQ that providing a safe and secure environment is the top priority, using SSL encryption technology (the industry standard) to create a secure transaction environment, with only Guess? able to decode customer information",
+        "quoted_text": "Q: What is the Information Security Policy for GUESS? Online? A: Providing a safe and secure environment for your order information is our top priority. Taking advantage of Secure Sockets Layer (SSL) technology, GUESS? ensures the security of your online transaction. The GUESS? Online Store is powered by Microsoft and Verisign and uses Cybersource SSL technology - the industry standard for encryption technology to create a secure transaction environment for commerce on the Internet. SSL technology encrypts files allowing only GUESS? to decode your information.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 7,
+        "quote_start_line": 73,
+        "quote_end_line": 79
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Misrepresentation of Data Encryption",
-        "representation": "Respondents represented that personal information obtained from consumers was stored in an unreadable, encrypted format at all times",
-        "fact": "The personal information was not stored in an unreadable, encrypted format at all times. Using a standard web browser, a commonly known attack could be employed to manipulate the web application and gain access, in clear readable text, to sensitive personal information including consumer names and credit card numbers and expiration dates",
+        "title": "False Representation: Encrypted Storage of Personal Information",
+        "representation": "Respondents represented, expressly or by implication, that the personal information they obtained from consumers through www.guess.com was stored in an unreadable, encrypted format at all times.",
+        "fact": "The personal information was not stored in an unreadable, encrypted format at all times. Using a standard web browser, a commonly known SQL injection attack could be employed to manipulate the web application and gain access, in clear readable text, to sensitive personal information about consumers, including names, credit card numbers, and expiration dates.",
         "conclusion": "Therefore, the representation set forth in Paragraph 12 was false or misleading."
       },
       {
         "count_number": 2,
-        "title": "Misrepresentation of Security Measures",
-        "representation": "Respondents represented that they implemented reasonable and appropriate measures to protect the personal information they obtained from consumers against loss, misuse, or alteration",
-        "fact": "Respondents did not implement reasonable and appropriate measures to protect the personal information obtained from consumers against loss, misuse, or alteration. In particular, Respondents failed to implement procedures that were reasonable and appropriate to: (1) detect reasonably foreseeable vulnerabilities of their website and application and (2) prevent visitors to the website from exploiting such vulnerabilities and gaining access to sensitive consumer data",
+        "title": "False Representation: Reasonable and Appropriate Security Measures",
+        "representation": "Respondents represented, expressly or by implication, that they implemented reasonable and appropriate measures to protect the personal information they obtained from consumers through www.guess.com against loss, misuse, or alteration.",
+        "fact": "Respondents did not implement reasonable and appropriate measures to protect consumer personal information. They failed to implement procedures to detect reasonably foreseeable vulnerabilities of their website and application, and failed to prevent visitors from exploiting such vulnerabilities to gain access to sensitive consumer data.",
         "conclusion": "Therefore, the representation set forth in Paragraph 14 was false or misleading."
       }
     ]
@@ -70,57 +73,69 @@
         "provision_number": "I",
         "title": "Prohibition Against Misrepresentations About Security",
         "category": "prohibition",
-        "summary": "Respondents must not misrepresent the extent to which they maintain and protect the security, confidentiality, or integrity of personal information collected from or about consumers.",
+        "summary": "Respondents must not misrepresent in any manner the extent to which they maintain and protect the security, confidentiality, or integrity of personal information collected from or about consumers in connection with online advertising, marketing, or sales.",
         "requirements": [
           {
-            "description": "Must not misrepresent security, confidentiality, or integrity of personal information",
-            "quoted_text": "IT IS ORDERED that Respondents, directly or through any corporation, subsidiary, division, or other device, in connection with the online advertising, marketing, promotion, offering for sale, or sale of any product or service, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication, the extent to which Respondents maintain and protect the security, confidentiality, or integrity of any personal information collected from or about consumers.",
+            "description": "Must not misrepresent the extent to which Respondents maintain and protect the security, confidentiality, or integrity of any personal information collected from or about consumers, in connection with online advertising, marketing, promotion, offering for sale, or sale of any product or service in or affecting commerce",
+            "quoted_text": "IT IS ORDERED that Respondents, directly or through any corporation, subsidiary, division, or other device, in connection with the online advertising, marketing, promotion, offering for sale, or sale of 2 any product or service, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication, the extent to which Respondents maintain and protect the security, confidentiality, or integrity of any personal information collected from or about consumers.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 67,
+            "quote_end_line": 74
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Information Security Program",
+        "title": "Comprehensive Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondents must establish and maintain a comprehensive written information security program with administrative, technical, and physical safeguards to protect personal information.",
+        "summary": "Respondents must establish and maintain a comprehensive written information security program with administrative, technical, and physical safeguards appropriate to their size, complexity, and the sensitivity of personal information collected.",
         "requirements": [
           {
-            "description": "Establish and maintain comprehensive written information security program",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents, directly or through any corporation, subsidiary, division, or other device, in connection with the online advertising, marketing, promotion, offering for sale, or sale of any product or service, in or affecting commerce, shall establish and maintain a comprehensive information security program in writing that is reasonably designed to protect the security, confidentiality, and integrity of personal information collected from or about consumers.",
+            "description": "Establish and maintain a comprehensive written information security program reasonably designed to protect the security, confidentiality, and integrity of personal information, including appropriate administrative, technical, and physical safeguards",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents, directly or through any corporation, subsidiary, division, or other device, in connection with the online advertising, marketing, promotion, offering for sale, or sale of any product or service, in or affecting commerce, shall establish and maintain a comprehensive information security program in writing that is reasonably designed to protect the security, confidentiality, and integrity of personal information collected from or about consumers. Such program shall contain administrative, technical, and physical safeguards appropriate to Respondents’ size and complexity, the nature and scope of Respondents’ activities, and the sensitivity of the personal information collected from or about consumers, including:",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 76,
+            "quote_end_line": 83
           },
           {
-            "description": "Designate employee(s) to coordinate and be accountable for the information security program",
-            "quoted_text": "the designation of an employee or employees to coordinate and be accountable for the information security program.",
+            "description": "Designate an employee or employees to coordinate and be accountable for the information security program",
+            "quoted_text": "A. the designation of an employee or employees to coordinate and be accountable for the information security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 84,
+            "quote_end_line": 85
           },
           {
-            "description": "Identify material internal and external risks to personal information and assess sufficiency of safeguards",
-            "quoted_text": "the identification of material internal and external risks to the security, confidentiality, and integrity of personal information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management; (2) information systems, including network and software design, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, or other systems failures.",
+            "description": "Identify material internal and external risks to the security, confidentiality, and integrity of personal information and assess the sufficiency of existing safeguards, covering employee training and management, information systems, and prevention/detection/response to attacks",
+            "quoted_text": "B. the identification of material internal and external risks to the security, confidentiality, and integrity of personal information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management; (2) information systems, including network and software design, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, or other systems failures.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 86,
+            "quote_end_line": 95
           },
           {
-            "description": "Design and implement reasonable safeguards and regularly test or monitor their effectiveness",
-            "quoted_text": "the design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures.",
+            "description": "Design and implement reasonable safeguards to control identified risks, and regularly test or monitor the effectiveness of key controls, systems, and procedures",
+            "quoted_text": "C. the design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing or monitoring of the effectiveness of the safeguards’ key controls, systems, and procedures.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 96,
+            "quote_end_line": 98
           },
           {
-            "description": "Evaluate and adjust information security program based on testing results and material changes",
-            "quoted_text": "the evaluation and adjustment of Respondents' information security program in light of the results of the testing and monitoring required by subparagraph C, any material changes to Respondents' operations or business arrangements, or any other circumstances that Respondents know or have reason to know may have a material impact on the effectiveness of their information security program.",
+            "description": "Evaluate and adjust the information security program in light of testing and monitoring results, material changes to operations or business arrangements, or other circumstances that may have a material impact on program effectiveness",
+            "quoted_text": "D. the evaluation and adjustment of Respondents’ information security program in light of the results of the testing and monitoring required by subparagraph C, any material changes to Respondents’ operations or business arrangements, or any other circumstances that Respondents know or have reason to know may have a material impact on the effectiveness of their information security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 99,
+            "quote_end_line": 103
           }
         ]
       },
@@ -128,79 +143,95 @@
         "provision_number": "III",
         "title": "Third-Party Security Assessments",
         "category": "assessment",
-        "summary": "Respondents must obtain independent third-party security assessments within one year and biannually thereafter, prepared by qualified professionals, certifying the effectiveness of their security program.",
+        "summary": "Respondents must obtain biannual assessments from a qualified, independent third-party professional certifying that their security program is operating with sufficient effectiveness to protect personal information.",
         "requirements": [
           {
-            "description": "Obtain initial third-party assessment and report",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents obtain an assessment and report from a qualified, objective, independent third-party professional, using procedures and standards generally accepted in the profession, within one (1) year after service of the order, and biannually thereafter",
-            "deadline": "1 year",
+            "description": "Obtain an assessment and report from a qualified, objective, independent third-party professional within one (1) year after service of the order, and biannually thereafter, covering safeguards implemented, their appropriateness, how they meet Paragraph II requirements, and certifying the security program's operating effectiveness",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents obtain an assessment and report from a qualified, objective, independent third-party professional, using procedures and standards generally accepted in the profession, within one (1) year after service of the order, and biannually thereafter, that: A. sets forth the specific administrative, technical, and physical safeguards that Respondents have implemented and maintained during the reporting period; B. explains how such safeguards are appropriate to Respondents’ size and complexity, the nature and scope of Respondents’ activities, and the sensitivity of the personal information collected from or about consumers; C. explains how the safeguards that have been implemented meet or exceed the protections required by Paragraph II of this order; and D. certifies that Respondents’ security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of personal information is protected and, for biannual reports, has so operated throughout the reporting period.",
+            "deadline": "1 year (initial); biannually thereafter",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 108,
+            "quote_end_line": 121
           },
           {
-            "description": "Provide first assessment to FTC within 10 days after preparation",
-            "quoted_text": "Respondents shall provide the first assessment and report to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after it is prepared.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Retain all subsequent biannual reports and provide to FTC upon request",
-            "quoted_text": "All subsequent biannual reports shall be retained in accordance with Paragraph IV. B. of this order and provided to the Associate Director of Enforcement upon request.",
+            "description": "Assessment must be prepared by a person qualified as a CISSP or holding Global Information Assurance Certification from SANS Institute, or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, FTC",
+            "quoted_text": "Each assessment and report required by this Paragraph shall be prepared by a person qualified as a Certified Information System Security Professional (CISSP) or holding Global Information Assurance Certification from the SysAdmin, Audit, Network, Security Institute; or by a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 122,
+            "quote_end_line": 125
+          },
+          {
+            "description": "Provide the first assessment and report to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC, Washington, D.C. 20580, within ten (10) days after it is prepared",
+            "quoted_text": "Trade Commission. Respondents shall provide the first assessment and report to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after it is prepared. All subsequent biannual reports shall be retained in accordance",
+            "deadline": "10 days after preparation",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 126,
+            "quote_end_line": 128
+          },
+          {
+            "description": "Retain all subsequent biannual reports in accordance with Paragraph IV.B and provide them to the Associate Director of Enforcement upon request",
+            "quoted_text": "within ten (10) days after it is prepared. All subsequent biannual reports shall be retained in accordance with Paragraph IV. B. of this order and provided to the Associate Director of Enforcement upon request.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 128,
+            "quote_end_line": 129
           }
         ]
       },
       {
         "provision_number": "IV",
-        "title": "Recordkeeping Requirements",
+        "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondents must maintain and make available to the FTC documents relating to compliance, including advertisements and security-related materials, for specified retention periods.",
+        "summary": "Respondents must maintain and make available to the FTC for inspection copies of compliance-related documents, including advertisements and security assessments, for specified retention periods.",
         "requirements": [
           {
-            "description": "Maintain for 5 years sample copies of advertisements and documents containing representations about online collection, use, and security of personal information",
-            "quoted_text": "for a period of five (5) years: a sample copy of each different print, broadcast, cable, or Internet advertisement, promotion, information collection form, Web page, screen, email message, or other document containing any representation regarding Respondents' online collection, use, and security of personal information from or about consumers.",
-            "deadline": null,
+            "description": "For five (5) years: maintain a sample copy of each different advertisement, promotion, information collection form, web page, screen, email, or other document containing representations about Respondents' online collection, use, and security of personal information",
+            "quoted_text": "A. for a period of five (5) years: 1. a sample copy of each different print, broadcast, cable, or Internet advertisement, promotion, information collection form, Web page, screen, email message, or 4 other document containing any representation regarding Respondents’ online collection, use, and security of personal information from or about consumers. Each Web page copy shall be dated and contain the full URL of the Web page where the material was posted online. Electronic copies shall include all text and graphics files, audio scripts, and other computer files used in presenting the information on the Web. Provided, however, that after creation of any Web page or screen in compliance with this order, Respondents shall not be required to retain a print or electronic copy of any amended Web page or screen to the extent that the amendment does not affect Respondents’ compliance obligations under this order, and 2. any documents, whether prepared by or on behalf of Respondents, that contradict, qualify, or call into question Respondents’ compliance with this order; and",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 134,
+            "quote_end_line": 151
           },
           {
-            "description": "Maintain for 5 years any documents that contradict, qualify, or call into question compliance with the order",
-            "quoted_text": "any documents, whether prepared by or on behalf of Respondents, that contradict, qualify, or call into question Respondents' compliance with this order",
-            "deadline": null,
+            "description": "For three (3) years after preparation of each assessment/report (and for the initial assessment/report, from order entry until two years after preparation): retain all reports, studies, reviews, audits, audit trails, security assessments, risk assessments, policies, training materials, logs, and plans relating to compliance with Paragraphs II and III",
+            "quoted_text": "B. for a period of three (3) years after the date of preparation of each previous assessment and report required under Paragraph III of this order, and for the initial assessment and report, from the date the order is entered until two years following preparation of the assessment and report: all reports, studies, reviews, audits, audit trails, security assessments, risk assessments, policies, training materials, logs (from devices that detect or prevent attacks such as firewalls and intrusion detection systems), and plans (including the assessments and reports required under Paragraph III), whether prepared by or on behalf of Respondents, relating to Respondents’ compliance with Paragraphs II and III of this order.",
+            "deadline": "3 years after each assessment/report",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Maintain for 3 years after preparation all security-related reports, assessments, and materials",
-            "quoted_text": "for a period of three (3) years after the date of preparation of each previous assessment and report required under Paragraph III of this order, and for the initial assessment and report, from the date the order is entered until two years following preparation of the assessment and report: all reports, studies, reviews, audits, audit trails, security assessments, risk assessments, policies, training materials, logs (from devices that detect or prevent attacks such as firewalls and intrusion detection systems), and plans (including the assessments and reports required under Paragraph III), whether prepared by or on behalf of Respondents, relating to Respondents' compliance with Paragraphs II and III of this order.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 152,
+            "quote_end_line": 160
           }
         ]
       },
       {
         "provision_number": "V",
-        "title": "Order Acknowledgment and Distribution",
+        "title": "Order Distribution and Acknowledgment",
         "category": "acknowledgment",
-        "summary": "Respondents must deliver a copy of the order to all current and future personnel with managerial responsibilities relating to the subject matter of the order.",
+        "summary": "Respondents must deliver a copy of the order to all current and future principals, officers, directors, managers, and employees with managerial responsibilities relating to the subject matter of the order.",
         "requirements": [
           {
-            "description": "Deliver order to current personnel with managerial responsibilities",
-            "quoted_text": "Respondents shall deliver this order to such current personnel within thirty (30) days after service of this order",
+            "description": "Deliver a copy of the order to all current principals, officers, directors, managers, and employees, agents, and representatives having managerial responsibilities relating to the subject matter of the order within thirty (30) days after service of this order",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents shall deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having managerial responsibilities relating to the subject matter of this order. Respondents shall deliver this order to such current personnel within thirty (30) days after service of this order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 162,
+            "quote_end_line": 166
           },
           {
-            "description": "Deliver order to future personnel with managerial responsibilities",
-            "quoted_text": "to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
-            "deadline": "30 days",
+            "description": "Deliver a copy of the order to all future such personnel within thirty (30) days after the person assumes such position or responsibilities",
+            "quoted_text": "shall deliver this order to such current personnel within thirty (30) days after service of this order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "deadline": "30 days of assuming position",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 165,
+            "quote_end_line": 166
           }
         ]
       },
@@ -208,21 +239,25 @@
         "provision_number": "VI",
         "title": "Corporate Change Notification",
         "category": "compliance_reporting",
-        "summary": "Respondents must notify the FTC at least 30 days prior to any corporate changes that may affect compliance obligations under the order.",
+        "summary": "Respondents must notify the FTC at least thirty days prior to any corporate change that may affect compliance obligations under the order, including dissolution, sale, merger, bankruptcy, or name/address change.",
         "requirements": [
           {
-            "description": "Notify FTC at least 30 days prior to corporate changes affecting compliance",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents shall notify the Commission at least thirty (30) days prior to any change in either corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in either corporate name or address.",
-            "deadline": "30 days",
+            "description": "Notify the Commission at least thirty (30) days prior to any change in either corporation that may affect compliance obligations, including dissolution, assignment, sale, merger, emergence of a successor, creation or dissolution of a subsidiary/parent/affiliate, proposed bankruptcy filing, or change in corporate name or address",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents shall notify the Commission at least thirty (30) days prior to any change in either corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in either corporate name or address. Provided, however, that, with respect to any proposed change in either corporation about which either Respondent learns less than thirty (30) days prior to the 5 date such action is to take place, Respondents shall notify the Commission as soon as is practicable after obtaining such knowledge. All notices required by this Paragraph shall be sent by certified mail to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580.",
+            "deadline": "30 days prior to corporate change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 168,
+            "quote_end_line": 181
           },
           {
-            "description": "Notify FTC as soon as practicable if learning of change less than 30 days before it occurs",
-            "quoted_text": "Provided, however, that, with respect to any proposed change in either corporation about which either Respondent learns less than thirty (30) days prior to the date such action is to take place, Respondents shall notify the Commission as soon as is practicable after obtaining such knowledge.",
-            "deadline": null,
+            "description": "If Respondents learn of such a change less than thirty (30) days before it occurs, notify the Commission as soon as practicable; all notices to be sent by certified mail to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, FTC, Washington, D.C. 20580",
+            "quoted_text": "change in either corporate name or address. Provided, however, that, with respect to any proposed change in either corporation about which either Respondent learns less than thirty (30) days prior to the 5 date such action is to take place, Respondents shall notify the Commission as soon as is practicable after obtaining such knowledge. All notices required by this Paragraph shall be sent by certified mail to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580.",
+            "deadline": "As soon as practicable",
             "verified": true,
-            "confidence": 0.9761663947797716
+            "confidence": 0.85,
+            "quote_start_line": 173,
+            "quote_end_line": 181
           }
         ]
       },
@@ -230,29 +265,33 @@
         "provision_number": "VII",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondents must file an initial compliance report with the FTC within 120 days and additional reports as required by the Commission.",
+        "summary": "Respondents must file an initial written compliance report with the FTC within 120 days after service of the order, and at such other times as the Commission may require.",
         "requirements": [
           {
-            "description": "File initial written compliance report with the FTC",
+            "description": "File an initial written compliance report with the Commission within one hundred and twenty (120) days after service of this order, setting forth in detail the manner and form in which Respondents have complied with this order",
             "quoted_text": "IT IS FURTHER ORDERED that Respondents shall, within one hundred and twenty (120) days after service of this order, and at such other times as the Commission may require, file with the Commission an initial report, in writing, setting forth in detail the manner and form in which they have complied with this order.",
             "deadline": "120 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 183,
+            "quote_end_line": 186
           }
         ]
       },
       {
         "provision_number": "VIII",
-        "title": "Order Duration and Termination",
+        "title": "Order Duration",
         "category": "duration",
-        "summary": "The order will terminate on July 30, 2023, or 20 years from the most recent date the FTC files a complaint alleging violation of the order, whichever comes later.",
+        "summary": "The order terminates on July 30, 2023, or twenty years from the most recent date the FTC files a complaint alleging a violation of the order in federal court, whichever is later.",
         "requirements": [
           {
-            "description": "Order remains in effect until termination date",
-            "quoted_text": "This order will terminate on July 30, 2023, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later",
+            "description": "Order terminates on July 30, 2023, or twenty (20) years from the most recent date that the United States or FTC files a complaint in federal court alleging any violation of the order, whichever comes later, subject to specified exceptions for individual paragraphs, non-named respondents, and post-termination filings",
+            "quoted_text": "This order will terminate on July 30, 2023, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Paragraph in this order that terminates in less than twenty (20) years; B. this order’s application to any Respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Paragraph. Provided, further, that if such complaint is dismissed or a federal court rules that the Respondents did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Paragraph as though the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 188,
+            "quote_end_line": 201
           }
         ]
       }
@@ -269,11 +308,32 @@
     },
     "extraction_stats": {
       "complaint_counts": 2,
-      "complaint_representations": 3,
+      "complaint_representations": 2,
       "order_provisions": 8,
       "order_definitions": 3,
-      "order_requirements": 18
+      "order_requirements": 18,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 5,
+        "III": 4,
+        "IV": 2,
+        "V": 2,
+        "VI": 2,
+        "VII": 1,
+        "VIII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 2,
+        "complaint_total": 2,
+        "order_verified": 18,
+        "order_total": 18
+      }
     },
-    "processing_time_seconds": 101.6
+    "processing_time_seconds": 72.8
   }
 }

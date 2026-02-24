@@ -5,34 +5,74 @@
       "name": "Google LLC and YouTube, LLC",
       "incorporation_state": "Delaware",
       "entity_type": "limited liability company",
-      "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043 (Google LLC); 901 Cherry Ave., San Bruno, CA 94066 (YouTube, LLC)",
-      "business_description": "Google LLC and YouTube, LLC operate the YouTube video sharing platform and related online services that collect personal information from users, including children under 13 years of age."
+      "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043 (Google LLC) and 901 Cherry Ave., San Bruno, CA 94066 (YouTube, LLC)",
+      "business_description": "Google LLC and YouTube, LLC operate the YouTube video sharing platform, which is a commercial online service used by consumers throughout the United States to upload, view, and share videos."
     },
     "commissioners": [],
     "case_date": {
       "month": 9,
       "year": 2019
     },
-    "legal_authority": "Sections 5(a)(1), 5(m)(1)(A), 13(b), and 16(a)(1) of the Federal Trade Commission Act, 15 U.S.C. §§ 45(a)(1), 45(m)(1)(A), 53(b), and 56(a)(1); Sections 1303(c), 1305(a)(1), and 1306(d) of the Children's Online Privacy Protection Act of 1998 (COPPA), 15 U.S.C. §§ 6502(c), 6504(a)(1), and 6505(d); Children's Online Privacy Protection Rule, 16 C.F.R. Part 312",
+    "legal_authority": "Sections 5(a)(1), 5(m)(1)(A), 13(b), and 16(a)(1) of the Federal Trade Commission Act, 15 U.S.C. §§ 45(a)(1), 45(m)(1)(A), 53(b), and 56(a)(1), and Sections 1303(c), 1305(a)(1), and 1306(d) of the Children's Online Privacy Protection Act of 1998, 15 U.S.C. §§ 6502(c), 6504(a)(1), and 6505(d)",
     "violation_type": "both",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/172-3083-google-llc-youtube-llc"
   },
   "complaint": {
-    "factual_background": "Google and YouTube collected personal information from children under 13 through behavioral advertising on child-directed YouTube channels without providing required COPPA notices to parents or obtaining verifiable parental consent. Despite marketing YouTube as the top destination for children and knowing that numerous channels were directed to children, Defendants enabled behavioral advertising by default on monetized channels and earned millions from tracking children's online activities to serve targeted ads.",
+    "factual_background": "Google LLC and YouTube, LLC operated YouTube, a video-sharing platform that hosted numerous channels directed to children under 13 years of age. Defendants had actual knowledge—through direct communications with channel owners, their manual curation of content for the YouTube Kids app, and their own content rating system—that they were collecting personal information, including persistent identifiers used for behavioral advertising, from child viewers of these channels. Despite marketing YouTube as the 'favorite website for kids 2-12' and earning close to $50 million from behavioral advertising on child-directed channels, Defendants never provided COPPA-required notices to parents nor obtained verifiable parental consent before collecting children's personal information. This violated the Children's Online Privacy Protection Rule by failing to post adequate privacy notices, failing to provide direct notice to parents, and failing to obtain verifiable parental consent.",
     "representations_made": [
       {
-        "description": "YouTube is a general audience platform with no users below 13 and no COPPA compliance needed",
-        "quoted_text": "we don't have users that are below 13 on YouTube and platform/site is general audience, so there is no channel/content that is child-directed and no COPPA compliance is needed.",
-        "source_paragraph": 24
+        "description": "Defendants marketed YouTube to children's brands as the leading platform for reaching children ages 6–11, claiming it outperformed top TV channels in that demographic",
+        "quoted_text": "of Barbie and Monster High, entitled “Insights on Families Online,” Defendants stated, “YouTube is today’s leader in reaching children age 6-11 against top TV channels.” See Exhibit A (Google Presentation to Mattel, Insights on Families Online (partial)). In a presentation",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 23,
+        "quote_start_line": 199,
+        "quote_end_line": 201
+      },
+      {
+        "description": "Defendants claimed to Hasbro that YouTube was unanimously voted the favorite website for kids ages 2–12 and that 93% of tweens visit YouTube to watch videos",
+        "quoted_text": "provided to toy brand, Hasbro, maker of My Little Pony and Play-Doh, Defendants claimed that “YouTube was unanimously voted as the favorite website for kids 2-12,” and that “93% of tweens visit YouTube to watch videos.” See Exhibit B (Google Presentation to Hasbro, Stat Pack: Additional insight into mobile usage among parents + children (partial)). In another",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 23,
+        "quote_start_line": 202,
+        "quote_end_line": 205
+      },
+      {
+        "description": "Defendants referred to YouTube as 'The new Saturday Morning Cartoons,' the #1 website regularly visited by kids, and the #1 source where children discover new toys and games",
+        "quoted_text": "presentation to Hasbro, Defendants referred to YouTube as “[t]he new ‘Saturday Morning Cartoons.’” See Exhibit C (Google Presentation to Hasbro, 2016 Kids + Family Digital Trends (partial)). That presentation also claimed that YouTube was the “#1 website regularly visited by kids” and “the #1 source where children discover new toys + games.” Id.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 23,
+        "quote_start_line": 206,
+        "quote_end_line": 209
+      },
+      {
+        "description": "Despite marketing YouTube as a top destination for kids, Defendants asserted in internal email exchanges that YouTube channels did not need to comply with COPPA, claiming there were no users under 13 on the platform and no child-directed content",
+        "quoted_text": "Google’s employee responded, “we don’t have users that are below 13 on YouTube and platform/site is general audience, so there is no channel/content that is child-directed and no COPPA compliance is needed.”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 24,
+        "quote_start_line": 216,
+        "quote_end_line": 219
+      },
+      {
+        "description": "Defendants enabled behavioral advertising by default on monetized channels—including child-directed ones—collecting persistent identifiers to track viewers and serve tailored ads without parental notice or consent",
+        "quoted_text": "20. Eligible channel owners, which include commercial entities, can “monetize” their channel by allowing Defendants to serve advertisements to viewers, for which the channel owners and the Defendants earn revenue. Defendants enable behavioral advertising by default on monetized channels. When a channel owner monetizes a channel, Defendants collect information associated with a viewer’s cookie or mobile advertising identifier in order to track the viewer’s online activities and serve advertising that is specifically tailored to the viewer’s inferred interests.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 20,
+        "quote_start_line": 173,
+        "quote_end_line": 179
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "COPPA Rule Violations",
-        "representation": "Defendants are operators of a child-directed website or online service who collected personal information from children under 13 through YouTube channels directed to children",
-        "fact": "Defendants failed to provide sufficient notice on their website of the information they collect from children, failed to provide direct notice to parents of their information collection practices, and failed to obtain verifiable parental consent before collecting or using personal information from children",
-        "conclusion": "Defendants violated Sections 312.4(d), 312.4(b)-(c), and 312.5 of the COPPA Rule, which constitutes an unfair or deceptive act or practice in or affecting commerce in violation of Section 5(a) of the FTC Act"
+        "title": "Violations of the Children's Online Privacy Protection Rule",
+        "representation": "Defendants collected, used, and/or disclosed personal information (including persistent identifiers for behavioral advertising) from children under 13 through child-directed YouTube channels, while having actual knowledge they were doing so",
+        "fact": "Defendants failed to: (a) provide sufficient notice on their website or online service of the information collected from children and their disclosure practices (violating 16 C.F.R. § 312.4(d)); (b) provide direct notice to parents of information collected from children (violating 16 C.F.R. § 312.4(b)-(c)); and (c) obtain verifiable parental consent before collecting or using personal information from children (violating 16 C.F.R. § 312.5)",
+        "conclusion": "Defendants violated the COPPA Rule, and each collection, use, or disclosure of a child's personal information in violation of the Rule constitutes a separate violation. Pursuant to Section 1303(c) of COPPA and Section 18(d)(3) of the FTC Act, these violations constitute unfair or deceptive acts or practices in or affecting commerce in violation of Section 5(a) of the FTC Act."
       }
     ]
   },
@@ -40,97 +80,111 @@
     "definitions": {
       "Channel Owner": "individuals or entities who upload videos onto the YouTube Service.",
       "Child": "an individual or individuals under the age of 13.",
-      "Clear and Conspicuous": "means that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: 1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure is made in only one means. 2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. 3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. 4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. 5. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the representation that requires the disclosure appears. 6. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. 7. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. 8. When the representation or sales practice targets a specific audience, such as Children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
-      "Collects": "the gathering of any Personal Information from a Child by any means, including but not limited to: 1. Requesting, prompting, or encouraging a Child to submit Personal Information online; 2. Enabling a Child to make Personal Information publicly available in identifiable form. An Operator shall not be considered to have Collected Personal Information if it takes reasonable measures to Delete all or virtually all Personal Information from a Child's postings before they are made public and also to Delete such Personal Information from its records; or 3. Passive tracking of a Child online.",
+      "Clear and Conspicuous": "means that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways:\n1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any co~1munication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure is made in only one means.\n2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood.\n3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it.\n4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable.\n5. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the representation that requires the disclosure appears.\n6. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications.\n7. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication.\n8. When the representation or sales practice targets a specific audience, such as Children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
+      "Collects or Collection": "means the gathering of any Personal Information from a Child by any means, including but not limited to:\n1. Requesting, prompting, or encouraging a Child to submit Personal Information online;\n2. Enabling a Child to make Personal Infom1ation publicly available in identifiable form. An Operator shall not be considered to have Collected Personal Information if it takes reasonable measures to Delete all or virtually all Personal Information from a Child's postings before they are made public and also to Delete such Personal Information from its records; or\n3. Passive tracking of a Child online.",
       "Compliance Date": "four months after entry of this Order.",
       "Content": "any video or channel page found on the YouTube Service.",
       "Defendants": "Google LLC, a Delaware limited liability company, and YouTube, LLC, a Delaware limited liability company, and their successors and assigns.",
       "Delete": "to remove Personal Information such that it is not maintained in retrievable form and cannot be retrieved in the normal course of business.",
-      "Disclose": "with respect to Personal Information: 1. The Release of Personal Information Collected by an Operator from a Child in identifiable form for any purpose, except where an Operator provides such information to a Person who provides Support for the Internal Operations of the Website or Online Service; and 2. Making Personal Information Collected by an Operator from a Child publicly available in identifiable form by any means, including but not limited to a public posting through the Internet, or through a personal home page or screen posted on a website or online service; a pen pal service; an electronic mail service; a message board; or a chat room.",
+      "Disclose or Disclosure": "means, with respect to Personal Information:\n1. The Release of Personal Information Collected by an Operator from a Child in identifiable form for any purpose, except where an Operator provides such information to a Person who provides Support for the Internal Operations of the Website or Online Service; and\n2. Making Personal Information Collected by an Operator from a Child publicly available in identifiable form by any means, including but not limited to a public posting through the Internet, or through a personal home page or screen posted on a website or online service; a pen pal service; an electronic mail service; a message board; or a chat room.",
       "Internet": "collectively the myriad of computer and telecommunications facilities, including equipment and operating software, which comprise the interconnected world wide network of networks that employ the Transmission Control Protocol/Internet Protocol, or any predecessor or successor protocols to such protocol, to communicate information of all kinds by wire, radio, or other methods of transmission.",
-      "Obtaining Verifiable Parental Consent": "making any reasonable effort (taking into consideration available technology) to ensure that before Personal Information is Collected from a Child, a Parent of the Child: 1. Receives notice of the Operator's Personal Information Collection, use, and Disclosure practices; and 2. Authorizes any Collection, use, and/or Disclosure of the Personal Information, using a method reasonably calculated, in light of available technology, to ensure that the Person providing consent is the Child's Parent.",
+      "Obtaining Verifiable Parental Consent": "means making any reasonable effort (taking into consideration available technology) to ensure that before Personal Information is Collected from a Child, a Parent of the Child:\n1. Receives notice of the Operator's Personal Information Collection, use, and Disclosure practices; and\n2. Authorizes any Collection, use, and/or Disclosure of the Personal Infonnation, using a method reasonably calculated, in light of available technology, to ensure that the Person providing consent is the Child's Parent.",
       "Online Contact Information": "an email address or any other substantially similar identifier that permits direct contact with a Person online, including but not limited to, an instant messaging user identifier, a voice over internet protocol (VOIP) identifier, or a video chat user identifier.",
-      "Operator": "any Person who operates a website located on the Internet or an online service and who Collects or maintains Personal Information from or about the users of or visitors to such website or online service, or on whose behalf such information is Collected or maintained, or offers products or services for sale through that website or online service, where such website or online service is operated for commercial purposes involving commerce among the several States or with one or more foreign nations; in any territory of the United States or in the District of Columbia, or between any such territory and another such territory or any State or foreign nation; or between the District of Columbia and any State, territory, or foreign nation. This definition does not include any nonprofit entity that would otherwise be exempt from coverage under Section 5 of the Federal Trade Commission Act (15 U.S.C. § 45). Personal Information is Collected or maintained on behalf of an Operator when: 1. It is Collected or maintained by an agent or service provider of the Operator; or 2. The Operator benefits by allowing another Person to Collect Personal Information directly from users of such website or online service.",
+      "Operator": "means any Person who operates a website located on the Internet or an online service and who Collects or maintains Personal Information from or about the users of or visitors to such website or online service, or on whose behalf such information is Collected or maintained, or offers products or services for sale through that website or online service, where such website or online service is operated for commercial purposes involving commerce among the several States or with one or more foreign nations; in any territory of the United States or in the District of Columbia, or between any such territory and another such territory or any State or foreign nation; or between the District of Columbia and any State, territory, or foreign nation. This definition does not include any nonprofit entity that would otherwise be exempt from coverage under Section 5 of the Federal Trade Commission Act (15 U.S.C. § 45). Personal Infonnation is Collected or maintained on behalf of an Operator when:\n1. It is Collected or maintained by an agent or service provider of the Operator; or\n2. The Operator benefits by allowing another Person to Collect Personal Information directly from users of such website or online service.",
       "Parent": "includes a legal guardian.",
       "Person": "any individual, partnership, corporation, trust, estate, cooperative, association, or other entity.",
-      "Personal Information": "individually identifiable information about an individual Collected online, including: 1. A first and last name; 2. A home or other physical address including street name and name of a city or town; 3. Online Contact Information; 4. A screen or user name where it functions in the same manner as Online Contact Information; 5. A telephone number; 6. A Social Security number; 7. A persistent identifier that can be used to recognize a user over time and across different websites or online services, where such persistent identifier is used for functions other than or in addition to Support for the Internal Operations of the Website or Online Service. Such persistent identifier includes, but is not limited to, a customer number held in a cookie, an Internet Protocol (IP) address, a processor or device serial number, or unique device identifier; 8. A photograph, video, or audio file where such file contains a Child's image or voice; 9. Geolocation information sufficient to identify street name and name of a city or town; or 10. Information concerning the Child or the Parents of that Child that the Operator Collects online from the Child and combines with an identifier described in this definition.",
+      "Personal Information": "means individually identifiable information about an individual Collected online, including:\n1. A first and last name;\n2. A home or other physical address including street name and name of a city or town;\n3. Online Contact Infonnation;\n4. A screen or user name where it functions in the same manner as Online Contact Infom1ation;\n5. A telephone number;\n6. A Social Security number;\n7. A persistent identifier that can be used to recognize a user over time and across different websites or online services, where such persistent identifier is used for functions other than or in addition to Support for the Internal Operations of the Website or Online Service. Such persistent identifier includes, but is not limited to, a customer number held in a cookie, an Internet Protocol (IP) address, a processor or device serial number, or unique device identifier;\n8. A photograph, video, or audio file where such file contains a Child's image or voice;\n9. Geolocation information sufficient to identify street name and name of a city or town; or\n10. Information concerning the Child or the Parents of that Child that the Operator Collects online from the Child and combines with an identifier described in this definition.",
       "Release of Personal Information": "the sharing, selling, renting, or transfer of Personal Information to any Third Party.",
-      "Support for the Internal Operations of the Website or Online Service": "1. Those activities necessary to: a) Maintain or analyze the functioning of the website or online service; b) Perform network communications; c) Authenticate users of, or personalize the content on, the website or online service; d) Serve contextual advertising on the website or online service or cap the frequency of advertising; e) Protect the security or integrity of the user, website, or online service; f) Ensure legal or regulatory compliance; or g) Fulfill a request of a Child as permitted by Section 312.5(c)(3) and (4) of the COPPA Rule (attached as Appendix A); 2. So long as the information Collected for these activities listed in 1(a)-(g) is not used or Disclosed to contact a specific individual, including through behavioral advertising, to amass a profile on a specific individual, or for any other purpose.",
-      "Third Party": "any Person who is not: 1. An Operator with respect to the Collection or maintenance of Personal Information on the website or online service; or 2. A Person who provides Support for the Internal Operations of the Website or Online Service and who does not use or Disclose information protected under the COPPA Rule (attached as Appendix A).",
-      "Website or Online Service Directed to Children": "a commercial website or online service, or portion thereof, that is targeted to Children. 1. In determining whether a website or online service, or a portion thereof, is directed to Children, the Commission will consider its subject matter, visual content, use of animated characters or child-oriented activities and incentives, music or other audio content, age of models, presence of child celebrities or celebrities who appeal to Children, language or other characteristics of the website or online service, as well as whether advertising promoting or appearing on the website or online service is directed to Children. The Commission will also consider competent and reliable empirical evidence regarding audience composition, and evidence regarding the intended audience. 2. A website or online service shall be deemed directed to Children when it has actual knowledge that it is Collecting Personal Information directly from users of another Website or Online Service Directed to Children. 3. A website or online service that is directed to Children under the criteria set forth in paragraph (1) of this definition, but that does not target Children as its primary audience, shall not be deemed directed to Children if it: a) Does not Collect Personal Information from any visitor prior to Collecting age information; and b) Prevents the Collection, use, or Disclosure of Personal Information from visitors who identify themselves as under age 13 without first complying with the notice and parental consent provisions of the COPPA Rule (attached as Appendix A). 4. A website or online service shall not be deemed directed to Children solely because it refers or links to a commercial Website or Online Service Directed to Children by using information location tools, including a directory, index, reference, pointer, or hypertext link.",
+      "Support for the Internal Operations of the Website or Online Service": "means\n1. Those activities necessary to:\na) Maintain or analyze the functioning of the website or online service;\nb) Perform network communications;\nc) Authenticate users of, or personalize the content on, the website or online service;\nd) Serve contextual advertising on the website or online service or cap the frequency of advertising;\ne) Protect the security or integrity of the user, website, or online service;\nf) Ensure legal or regulatory compliance; or\ng) Fulfill a request ofa Child as permitted by Section 312.5(c)(3) and (4) of the COPPA Rule (attached as Appendix A);\n2. So long as the information Collected for these activities listed in l(a)-(g) is not used or Disclosed to contact a specific individual, including through behavioral advertising, to amass a profile on a specific individual, or for any other purpose.",
+      "Third Party": "means any Person who is not:\n1. An Operator with respect to the Collection or maintenance of Personal Information on the website or online service; or\n2. A Person who provides Support for the Internal Operations of the Website or Online Service and who does not use or Disclose information protected under the COPPA Rule (attached as Appendix A).",
+      "Website or Online Service Directed to Children": "means a commercial website or online service, or portion thereof, that is targeted to Children.\n1. In determining whether a website or online service, or a portion thereof, is directed to Children, the Commission will consider its subject matter, visual content, use of animated characters or child-oriented activities and incentives, music or other audio content, age of models, presence of child celebrities or celebrities who appeal to Children, language or other characteristics of the website or online service, as well as whether advertising promoting or appearing on the website or online service is directed to Children. The Commission will also consider competent and reliable empirical evidence regarding audience composition, and evidence regarding the intended audience.\n2. A website or online service shall be deemed directed to Children when it has actual knowledge that it is Collecting Personal Information directly from users of another Website or Online Service Directed to Children.\n3. A website or online service that is directed to Children under the criteria set forth in paragraph (1) of this definition, but that does not target Children as its primary audience, shall not be deemed directed to Children if it:\na) Does not Collect Personal Information from any visitor prior to Collecting age information; and\nb) Prevents the Collection, use, or Disclosure of Personal Information from visitors who identify themselves as under age 13 without first complying with the notice and parental consent provisions of the COPPA Rule (attached as Appendix A).\n4. A website or online service shall not be deemed directed to Children solely because it refers or links to a commercial Website or Online Service Directed to Children by using information location tools, including a directory, index, reference, pointer, or hypertext link.",
       "YouTube Service": "the general audience YouTube user-generated video sharing platform(s), currently at www.youtube.com and on YouTube mobile application(s), on which, among other things, consumers can view videos or upload videos to share."
     },
     "provisions": [
       {
         "provision_number": "I",
-        "title": "Designating Content as Directed to Children",
+        "title": "Injunction Concerning Designating Content on the YouTube Service as Directed to Children",
         "category": "affirmative_obligation",
-        "summary": "Defendants must develop and maintain a system for Channel Owners to designate whether their Content is directed to Children, and provide annual COPPA training for personnel managing Channel Owner relationships.",
+        "summary": "Defendants are permanently enjoined from failing to develop and maintain a system for Channel Owners to designate content as directed to Children, and from failing to provide annual COPPA training for personnel managing Channel Owner relationships.",
         "requirements": [
           {
-            "description": "Develop, implement, and maintain a system for Channel Owners to designate whether their Content is directed to Children, with clear and conspicuous notice about COPPA obligations",
-            "quoted_text": "IT IS ORDERED that, no later than the Compliance Date, Defendants and Defendants' officers, agents, employees, and attorneys, and all other Persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with operating the YouTube Service, are permanently restrained and enjoined from: A. Failing to develop, implement, and maintain a system for Channel Owners to designate whether their Content on the YouTube Service is directed to Children. Such system shall include a Clear and Conspicuous notice that Content made available on the YouTube Service that is directed to Children may be subject to the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312 (attached as Appendix A) and that Channel Owners are obligated to designate such Content as directed to Children",
-            "deadline": "4 months",
+            "description": "Develop, implement, and maintain a system for Channel Owners to designate whether their Content on the YouTube Service is directed to Children, including a Clear and Conspicuous notice that such content may be subject to the COPPA Rule and that Channel Owners are obligated to make such designations",
+            "quoted_text": "A. Failing to develop, implement, and maintain a system for Channel Owners to designate whether their Content on the YouTube Service is directed to Children. Such system 10 Case 1:19-cv-02642-BAH Document 5 Filed 09/10/19 Page 11 of 32 shall include a Clear and Conspicuous notice that Content made available on the Y ouTube Service that is directed to Children may be subject to the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312 (attached as Appendix A) and that Channel Owners are obligated to designate such Content as directed to Children; and",
+            "deadline": "Compliance Date (4 months after entry)",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 263,
+            "quote_end_line": 272
           },
           {
-            "description": "Provide annual training regarding COPPA compliance for each person responsible for managing relationships with Channel Owners",
-            "quoted_text": "B. Failing to provide annual training regarding complying with the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312 (attached as Appendix A), for each Person responsible for managing Defendants' relationships with Channel Owners on the YouTube Service.",
-            "deadline": "4 months",
+            "description": "Provide annual training regarding COPPA compliance for each Person responsible for managing Defendants' relationships with Channel Owners on the YouTube Service",
+            "quoted_text": "B. Failing to provide annual training regarding complying with the Children's Online Privacy Protection Rule, 16 C.F .R. Part 312 ( attached as Appendix A), for each Person responsible for managing Defendants' relationships with Channel Owners on the You Tube Service.",
+            "deadline": "Compliance Date (4 months after entry)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 273,
+            "quote_end_line": 276
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Collection of Personal Information from Children",
+        "title": "Injunction Concerning Collection of Personal Information from Children",
         "category": "prohibition",
-        "summary": "Defendants are permanently enjoined from operating a Website or Online Service Directed to Children without providing direct notice to parents, posting prominent privacy notices, obtaining verifiable parental consent, and complying with COPPA.",
+        "summary": "Defendants are permanently enjoined from failing to provide direct notice to parents, failing to post a prominent privacy notice link, failing to obtain verifiable parental consent, and from violating the COPPA Rule, in connection with operating a Website or Online Service Directed to Children on the YouTube Service.",
         "requirements": [
           {
-            "description": "Must not fail to make reasonable efforts to ensure parents receive direct notice of collection, use, or disclosure practices regarding children's personal information",
-            "quoted_text": "IT IS ORDERED that, no later than the Compliance Date, Defendants and Defendants' officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with operating a Website or Online Service Directed to Children on the YouTube Service are hereby permanently restrained and enjoined from: A. Failing to make reasonable efforts, taking into account available technology, to ensure that a Parent of a Child receives direct notice of Defendants' practices with regard to the Collection, use, or Disclosure of Personal Information from Children, including notice of any material change in the Collection, use, or Disclosure practices to which the Parent has previously consented, unless the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312 (attached as Appendix A), provides an exception to providing such notice",
-            "deadline": "4 months",
+            "description": "Must not fail to make reasonable efforts to ensure that a Parent of a Child receives direct notice of Defendants' practices with regard to the Collection, use, or Disclosure of Personal Information from Children, including notice of any material change in such practices",
+            "quoted_text": "A. Failing to make reasonable efforts, taking into account available technology, to ensure that a Parent of a Child receives direct notice of Defendants' practices with regard to the Collection, use, or Disclosure of Personal Information from Children, including notice of any material change in the Collection, use, or Disclosure practices to which the Parent has previously consented, unless the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312 (attached as Appendix A), provides an exception to providing such notice;",
+            "deadline": "Compliance Date (4 months after entry)",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 284,
+            "quote_end_line": 289
           },
           {
-            "description": "Must not fail to post a prominent and clearly labeled link to an online notice of information practices regarding children on the home or landing page and at each area where Personal Information is collected from children",
-            "quoted_text": "B. Failing to post a prominent and clearly labeled link to an online notice of its information practices with regard to Children on the home or landing page or screen of its website or online service, and at each area of the website or online service where Personal Information is Collected from Children, unless the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312 (attached as Appendix A), provides an exception to providing such notice",
-            "deadline": "4 months",
+            "description": "Must not fail to post a prominent and clearly labeled link to an online notice of information practices with regard to Children on the home or landing page of the website or online service, and at each area where Personal Information is Collected from Children",
+            "quoted_text": "B. Failing to post a prominent and clearly labeled link to an online notice of its infonnation practices with regard to Children on the home or landing page or screen of its 11 Case 1:19-cv-02642-BAH Document 5 Filed 09/10/19 Page 12 of 32 website or online service, and at each area of the website or online service where Personal Info1mation is Collected from Children, unless the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312 (attached as Appendix A), provides an exception to providing such notice;",
+            "deadline": "Compliance Date (4 months after entry)",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 290,
+            "quote_end_line": 298
           },
           {
-            "description": "Must not fail to obtain verifiable parental consent before any collection, use, or disclosure of Personal Information from Children",
-            "quoted_text": "C. Failing to Obtain Verifiable Parental Consent before any Collection, use, or Disclosure of Personal Information from Children, including consent to any material change in the Collection, use, or Disclosure practices to which the Parent has previously consented, unless the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312 (attached as Appendix A), provides an exception to Obtaining Verifiable Parental Consent",
-            "deadline": "4 months",
+            "description": "Must not fail to Obtain Verifiable Parental Consent before any Collection, use, or Disclosure of Personal Information from Children, including consent to any material change in Collection, use, or Disclosure practices",
+            "quoted_text": "C. Failing to Obtain Verifiable Parental Consent before any Collection, use, or Disclosure of Personal Information from Children, including consent to any material change in the Collection, use, or Disclosure practices to which the Parent has previously consented, unless the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312 (attached as Appendix A), provides an exception to Obtaining Verifiable Parental Consent; and",
+            "deadline": "Compliance Date (4 months after entry)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 299,
+            "quote_end_line": 303
           },
           {
-            "description": "Must not violate the Children's Online Privacy Protection Rule",
+            "description": "Must not violate the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312",
             "quoted_text": "D. Violating the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312 (attached as Appendix A).",
-            "deadline": "4 months",
+            "deadline": "Compliance Date (4 months after entry)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 304,
+            "quote_end_line": 305
           }
         ]
       },
       {
         "provision_number": "III",
-        "title": "Use of Previously Collected Personal Information",
+        "title": "Injunction Concerning Use of Previously Collected Personal Information",
         "category": "prohibition",
-        "summary": "Defendants must refrain from disclosing, using, or benefitting from Personal Information previously collected from users of Content designated as directed to Children, with limited exceptions.",
+        "summary": "Defendants must refrain from disclosing, using, or benefitting from Personal Information previously collected from users of Content designated as directed to Children, within 90 days of the Compliance Date, with an exception for government-required disclosures.",
         "requirements": [
           {
-            "description": "Refrain from disclosing, using, or benefitting from Personal Information previously collected from users of Content designated as directed to Children by a Channel Owner (if designated within 60 days of Compliance Date)",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants, Defendants' officers, agents, employees, and attorneys, and all other Persons in active concert or participation with any of them, who receive actual notice of this Order, are ordered to refrain, within ninety (90) days of the Compliance Date, from Disclosing, using, or benefitting from Personal Information previously Collected from users of Content that is designated as directed to Children by a Channel Owner under the system required under Section I.A. above, as long as such designation occurs within sixty (60) days of the Compliance Date. Provided, however, that such Personal Information may be Disclosed to the extent requested by a government agency or required by law, regulation, or court order.",
-            "deadline": "90 days",
+            "description": "Refrain, within ninety (90) days of the Compliance Date, from Disclosing, using, or benefitting from Personal Information previously Collected from users of Content designated as directed to Children by a Channel Owner under the Section I.A. system, as long as such designation occurs within sixty (60) days of the Compliance Date; disclosure is permitted only to the extent required by government agency, law, regulation, or court order",
+            "quoted_text": "TT IS FURTHER ORDERED that Defendants, Defendants' officers, agents, employees, and attorneys, and all other Persons in active concert or participation with any of them, who receive actual notice of this Order, are ordered to refrain, within ninety (90) days of the Compliance Date, from Disclosing, using, or benefitting from Personal Information previously Collected from users of Content that is designated as directed to Children by a Channel Owner under the system required under Section I.A. above, as long as such designation occurs within sixty (60) days of the Compliance Date. Provided, however, that such Personal lnfonnation may be Disclosed to the extent requested by a government agency or required by law, regulation, or court order.",
+            "deadline": "90 days after Compliance Date",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 308,
+            "quote_end_line": 316
           }
         ]
       },
@@ -138,36 +192,87 @@
         "provision_number": "IV",
         "title": "Civil Penalty and Other Monetary Relief",
         "category": "affirmative_obligation",
-        "summary": "Judgment of $136 million to the FTC and $34 million to the State of New York is entered against Defendants, to be paid within 30 days.",
+        "summary": "Defendants are ordered to pay $136,000,000 to the FTC and $34,000,000 to the State of New York as civil penalties and damages, both within 30 days of entry of this Order.",
         "requirements": [
           {
-            "description": "Pay $136,000,000 civil penalty to the FTC",
-            "quoted_text": "A. Judgment in the amount of one hundred and thirty six million dollars ($136,000,000) is entered in favor of Plaintiff FTC against Defendants, jointly and severally, as a civil penalty. B. Defendants are ordered to pay to Plaintiff FTC one hundred thirty six million dollars ($136,000,000), which, as Defendants stipulate, their undersigned counsel holds in escrow for no purpose other than payment to the Commission. Such payment must be made within thirty (30) days of entry of this Order by electronic fund transfer in accordance with instructions previously provided by a representative of the Commission.",
-            "deadline": "30 days",
+            "description": "Judgment of $136,000,000 entered in favor of Plaintiff FTC against Defendants jointly and severally as a civil penalty",
+            "quoted_text": "A. Judgment in the amount of one hundred and thirty six million dollars ($136,000,000) is entered in favor of Plaintiff FTC against Defendants, jointly and severally, as a civil penalty.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 323,
+            "quote_end_line": 325
           },
           {
-            "description": "Pay $34,000,000 to the State of New York",
-            "quoted_text": "C. Judgment in the amount of thirty four million dollars ($34,000,000) is entered in favor of Plaintiff State of New York against Defendants, jointly and severally, as damages, restitution, or other compensation to its residents. D. Defendants are ordered to pay to Plaintiff State of New York, by making payment to State of New York Department of Law, thirty four million dollars ($34,000,000). Such payment must be made within thirty (30) days of entry of this Order by wire transfer in accordance with instructions provided by a representative of Plaintiff State of New York.",
+            "description": "Defendants must pay $136,000,000 to the FTC within thirty (30) days of entry of this Order by electronic fund transfer in accordance with Commission instructions",
+            "quoted_text": "B. Defendants are ordered to pay to Plaintiff FTC one hundred thirty six million dollars ($136,000,000), which, as Defendants stipulate, their undersigned counsel holds in escrow for no purpose other than payment to the Commission. Such payment must be made within thirty (30) days of entry of this Order by electronic fund transfer in accordance with instructions previously provided by a representative of the Commission.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 326,
+            "quote_end_line": 330
+          },
+          {
+            "description": "Judgment of $34,000,000 entered in favor of Plaintiff State of New York against Defendants jointly and severally as damages, restitution, or other compensation",
+            "quoted_text": "C. Judgment in the amount of thirty four million dollars ($34,000,000) is entered in favor of Plaintiff State of New York against Defendants,jointly and severally, as damages, restitution, or other compensation to its residents.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 331,
+            "quote_end_line": 333
+          },
+          {
+            "description": "Defendants must pay $34,000,000 to the State of New York Department of Law within thirty (30) days of entry of this Order by wire transfer in accordance with State of New York instructions",
+            "quoted_text": "D. Defendants are ordered to pay to Plaintiff State ofNew York, by making payment to State of New York Department of Law, thirty four million dollars ($34,000,000). Such payment must be made within thirty (30) days of entry of this Order by wire transfer in accordance with instructions provided by a representative of Plaintiff State of New York.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 334,
+            "quote_end_line": 337
           }
         ]
       },
       {
         "provision_number": "V",
         "title": "Additional Monetary Provisions",
-        "category": "acknowledgment",
-        "summary": "Defendants relinquish all rights to assets transferred pursuant to this Order, and the facts alleged in the Complaint establish elements necessary for certain legal proceedings.",
+        "category": "affirmative_obligation",
+        "summary": "Defendants relinquish all rights to transferred assets, agree that Complaint facts may be used in future proceedings, and must submit their Taxpayer Identification Numbers to the Commission.",
         "requirements": [
           {
-            "description": "Relinquish dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order",
+            "description": "Defendants relinquish dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets",
             "quoted_text": "A. Defendants relinquish dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 340,
+            "quote_end_line": 341
+          },
+          {
+            "description": "The facts alleged in the Complaint will be taken as true, without further proof, in any subsequent civil litigation by or on behalf of the Commission or the State of New York to enforce payment or monetary judgment pursuant to this Order",
+            "quoted_text": "B. The facts alleged in the Complaint will be taken as true, without further proof, in any subsequent civil litigation by or on behalf of the Commission or the State of New York in a proceeding to enforce its rights to any payment or monetary judgment pursuant to this Order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 346,
+            "quote_end_line": 348
+          },
+          {
+            "description": "The facts alleged in the Complaint establish all elements necessary to sustain an action pursuant to Section 523(a)(2)(A) of the Bankruptcy Code, and this Order will have collateral estoppel effect for such purposes",
+            "quoted_text": "C. The facts alleged in the Complaint establish all elements necessary to sustain an action by the Commission or the State of New York pursuant to Section 523(a)(2)(A) of the Banlauptcy Code, 11 U.S.C. § 523(a)(2)(A), and this Order will have collateral estoppel effect for such purposes.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 349,
+            "quote_end_line": 352
+          },
+          {
+            "description": "Defendants must submit their Taxpayer Identification Numbers to the Commission, which may be used for collecting and reporting on any delinquent amount arising out of this Order",
+            "quoted_text": "D. Defendants acknowledge that their Taxpayer Identification Numbers, which Defendants must submit to the Commission, may be used for collecting and reporting on any delinquent amount arising out of this Order, in accordance with 31 U.S.C. § 7701.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 353,
+            "quote_end_line": 355
           }
         ]
       },
@@ -175,28 +280,34 @@
         "provision_number": "VI",
         "title": "Order Acknowledgments",
         "category": "acknowledgment",
-        "summary": "Defendants must submit acknowledgments of receipt of this Order and deliver copies to principals, officers, directors, managers, employees, and agents with supervisory responsibilities.",
+        "summary": "Defendants must submit sworn acknowledgments of receipt of the Order, deliver copies to key personnel, and obtain signed acknowledgments within specified timeframes.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt of this Order to the Commission and State of New York",
-            "quoted_text": "A. Each Defendant, within seven (7) days of entry of this Order, must submit to the Commission and the State of New York an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Each Defendant must submit to the Commission and the State of New York an acknowledgment of receipt of this Order sworn under penalty of perjury within seven (7) days of entry of this Order",
+            "quoted_text": "A. Each Defendant, within seven (7) days of entry of this Order, must submit to the Commission and the State of New York an acknowledgment ofreceipt of this Order sworn under penalty of perjury.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 359,
+            "quote_end_line": 361
           },
           {
-            "description": "For five years, deliver a copy of this Order to all principals, officers, directors, LLC managers and members, employees/agents with supervisory responsibilities, and any business entity resulting from structural changes",
-            "quoted_text": "B. For five (5) years after entry of this Order, each Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives who have supervisory responsibilities relating to the subject matter of Sections I and II of this Order; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within seven (7) days of entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "7 days",
+            "description": "For five (5) years after entry of this Order, each Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives with supervisory responsibilities relating to Sections I and II; and (3) any business entity resulting from a change in structure. Delivery must occur within seven (7) days for current personnel and before others assume their responsibilities",
+            "quoted_text": "B. For five (5) years after entry of this Order, each Defendant must deliver a copy of this Order to: ( 1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives who have supervisory responsibilities relating to the subject matter of Sections I and II of this Order; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within seven (7) days of entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "7 days for current personnel; before assumption of responsibilities for all others",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 362,
+            "quote_end_line": 368
           },
           {
-            "description": "Obtain signed and dated acknowledgment of receipt from each individual or entity to which the Order was delivered",
+            "description": "From each individual or entity to which a Defendant delivered a copy of this Order, that Defendant must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order",
             "quoted_text": "C. From each individual or entity to which a Defendant delivered a copy of this Order, that Defendant must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 373,
+            "quote_end_line": 375
           }
         ]
       },
@@ -204,28 +315,61 @@
         "provision_number": "VII",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Defendants must submit compliance reports to the Commission and State of New York one year after the Compliance Date and provide compliance notices for ten years upon certain changes.",
+        "summary": "Defendants must submit an annual compliance report one year after the Compliance Date, timely notices of structural or contact changes for 10 years, bankruptcy notices within 14 days, and all sworn submissions must comply with specific formatting and delivery requirements.",
         "requirements": [
           {
-            "description": "Submit a compliance report one year after the Compliance Date detailing business information, compliance with each section, privacy notices, tracking methods, parental consent methods, and Order acknowledgments",
-            "quoted_text": "A. One year after the Compliance Date, each Defendant must submit a compliance report, sworn under penalty of perjury. In such report, each Defendant must: 1. Identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission and the State of New York may use to communicate with that Defendant; 2. Identify all of Defendant's businesses involved in operating the YouTube Service or in Collecting, using, or Disclosing Personal Information from Children on or from the YouTube Service by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; 3. Describe the activities of each such business directly involved with operating the YouTube Service, including the goods and services offered and the means of advertising, marketing, and sales; 4. Describe in detail whether and how Defendants are in compliance with each Section of this Order; 5. Provide a copy of each materially different version of any privacy notice posted on or otherwise applicable to the YouTube Service or sent to users of the YouTube Service; 6. Describe in detail the methods used, if any, to track Child users of the YouTube Service (including methods used for passive tracking and means for users to control or opt out of tracking), and the measures taken to avoid tracking Children; 7. Describe in detail the methods used to Obtain Verifiable Parental Consent prior to any Collection, use, and/or Disclosure of Personal Information from Children through the YouTube Service; 8. Describe in detail the means provided for Parents to review the Personal Information Collected from their Children through the YouTube Service and to refuse to permit its further use or maintenance; and 9. Provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "description": "One year after the Compliance Date, each Defendant must submit a compliance report sworn under penalty of perjury, identifying contact information, all businesses involved in operating the YouTube Service, describing activities, compliance with each Order section, privacy notices, methods used to track or avoid tracking Child users, methods to Obtain Verifiable Parental Consent, means for Parents to review Personal Information, and copies of Order Acknowledgments",
+            "quoted_text": "A. One year after the Compliance Date, each Defendant must submit a compliance report, sworn under penalty of perjury. In such report, each Defendant must: 1. Identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission and the State of New York may use to communicate with that Defendant; 2. Identify all of Defendant's businesses involved in operating the YouTube Service or in Collecting, using, or Disclosing Personal Information from Children on or from the Y ouTube Service by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; 3. Describe the activities of each such business directly involved with operating the Y ouTube Service, including the goods and services offered and the means of advertising, marketing, and sales; 4. Describe in detail whether and how Defendants are in compliance with each Section of this Order; 5. Provide a copy of each materially different version of any privacy notice posted on or otherwise applicable to the Y ouTube Service or sent to users of the Y ouTube Service; 15 Case 1:19-cv-02642-BAH Document 5 Filed 09/10/19 Page 16 of 32 6. Describe in detail the methods used, if any, to track Child users.of the YouTube Service (including methods used for passive tracking and means for users to control or opt out of tracking), and the measures taken to avoid tracking Children; 7. Describe in detail the methods used to Obtain Verifiable Parental Consent prior to any Collection, use, and/or Disclosure of Personal Information from Children through the Y ouTube Service; 8. Describe in detail the means provided for Parents to review the Personal Information Collected from their Children through the YouTube Service and to refuse to permit its furthe1; use or maintenance; and 9. Provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission.",
             "deadline": "1 year after Compliance Date",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 379,
+            "quote_end_line": 411
           },
           {
-            "description": "For ten years, submit a compliance notice within fourteen days of any change in designated point of contact or structure of Defendant or any entity it has ownership or control over",
-            "quoted_text": "B. For ten (10) years after entry of this Order, each Defendant must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in: (1) any designated point of contact; or (2) the structure of that Defendant or any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
-            "deadline": "14 days",
+            "description": "For ten (10) years after entry of this Order, each Defendant must submit a compliance notice sworn under penalty of perjury within fourteen (14) days of any change in: (1) any designated point of contact; or (2) the structure of that Defendant or any entity it has an ownership interest in or controls that may affect compliance obligations under this Order",
+            "quoted_text": "B. For ten (10) years after entry of this Order, each Defendant must submit a compliance notice, sworn under penalty of perjury, within fourteen ( 14) days of any change in: ( 1) any designated point of contact; or (2) the structure of that Defendant or any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days of any qualifying change, for 10 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 412,
+            "quote_end_line": 418
           },
           {
-            "description": "Submit notice of filing of any bankruptcy petition, insolvency proceeding, or similar proceeding within fourteen days of its filing",
-            "quoted_text": "C. Each Defendant must submit to the Commission and the State of New York notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Defendant within fourteen (14) days of its filing.",
+            "description": "Each Defendant must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Defendant within fourteen (14) days of its filing",
+            "quoted_text": "C. Each Defendant must submit to the Commission and the State of New York notice of the filing of any banlauptcy petition, insolvency proceeding, or similar proceeding by or against such Defendant within fourteen (14) days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 419,
+            "quote_end_line": 421
+          },
+          {
+            "description": "Any submission required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, concluding with the prescribed declaration language and supplying the date, signatory's full name, title, and signature",
+            "quoted_text": "D. Any submission to the Commission and the State of New York required by this Order to be sworn under penalty of pe1jury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: \"I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: __\" and supplying the date, signatory's full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 426,
+            "quote_end_line": 430
+          },
+          {
+            "description": "Unless otherwise directed in writing, all submissions to the Commission must be emailed to DEbrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC, 600 Pennsylvania Avenue NW, Washington, DC 20580, with subject line beginning: FTC v. Google LLC and YouTube, LLC, FTC File No. 1723083",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania A venue NW, Washington, DC 20580. The subject line must begin: FTC v. Google LLC and YouTube, LLC, FTC File No. I 723083.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 431,
+            "quote_end_line": 436
+          },
+          {
+            "description": "Unless otherwise directed in writing, all submissions to the State of New York must be emailed to ifraud@ag.ny.gov and sent by overnight courier to the Bureau Chief, Bureau of Internet and Technology, New York State Attorney General's Office, 28 Liberty Street, New York, New York 10005, with subject line beginning: FTC v. Google LLC and YouTube, LLC, FTC File No. 1723083",
+            "quoted_text": "F. Unless otherwise directed by a State of New York representative in writing, all submissions to the State of New York pursuant to this Order must be emailed to ifraud@ag.ny.gov and sent by overnight courier (not the U.S. Postal Service) to: Bureau Chief, Bureau oflnternet and Technology, New York State Attorney General's Office, 28 Liberty Street, New York, New York 10005. The subject line must begin: FTC v. Google LLC and YouTube, LLC, FTC File No. 1723083.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 437,
+            "quote_end_line": 442
           }
         ]
       },
@@ -233,49 +377,61 @@
         "provision_number": "VIII",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Defendants must create certain records for ten years after entry of the Order and retain each such record for five years.",
+        "summary": "Defendants must create specified records for ten years after entry of the Order and retain each record for five years, covering accounting, personnel, compliance, consumer complaints, privacy forms, and advertising materials related to the YouTube Service.",
         "requirements": [
           {
-            "description": "Create and retain for five years accounting records showing revenues of all goods and services sold",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants must create certain records for ten (10) years after entry of the Order, and retain each such record for five (5) years. Specifically, each Defendant in connection with operating the YouTube Service must create and retain the following records: A. Accounting records showing the revenues of all goods and services sold",
-            "deadline": null,
+            "description": "Create and retain accounting records showing the revenues of all goods and services sold for ten (10) years after entry of the Order (retain each record for five (5) years)",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendants must create certain records for ten (10) years after entry of the Order, and retain each such record for five (5) years. Specifically, each Defendant in connection with operating the YouTube Service must create and retain the following records: A. Accounting records showing the revenues of all goods and services sold;",
+            "deadline": "10 years (creation); 5 years (retention)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 444,
+            "quote_end_line": 448
           },
           {
-            "description": "Create and retain for five years personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination",
-            "quoted_text": "B. Personnel records showing, for each Person providing services, whether as an employee or otherwise, that Person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination",
-            "deadline": null,
+            "description": "Create and retain personnel records showing, for each Person providing services, that Person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination",
+            "quoted_text": "B. Personnel records showing, for each Person providing services, whether as an employee or otherwise, that Person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "deadline": "10 years (creation); 5 years (retention)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 453,
+            "quote_end_line": 455
           },
           {
-            "description": "Create and retain for five years all records necessary to demonstrate full compliance with each provision of this Order",
-            "quoted_text": "C. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission and the State of New York",
-            "deadline": null,
+            "description": "Create and retain all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission and the State of New York",
+            "quoted_text": "C. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission and the State of New York;",
+            "deadline": "10 years (creation); 5 years (retention)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 456,
+            "quote_end_line": 457
           },
           {
-            "description": "Create and retain for five years records of all consumer complaints relating to unauthorized collection, use or disclosure of Personal Information of Children, and any response",
-            "quoted_text": "D. Records of all consumer complaints relating to the unauthorized Collection, use or Disclosure of Personal Information of Children interacting with the YouTube Service, and any response",
-            "deadline": null,
+            "description": "Create and retain records of all consumer complaints relating to the unauthorized Collection, use or Disclosure of Personal Information of Children interacting with the YouTube Service, and any response",
+            "quoted_text": "D. Records of all consumer complaints relating to the unauthorized Collection, use or Disclosure of Personal Information of Children interacting with the You Tube Service, and any response;",
+            "deadline": "10 years (creation); 5 years (retention)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 458,
+            "quote_end_line": 460
           },
           {
-            "description": "Create and retain for five years copies of each materially different form, page, or screen through which Personal Information of Children is collected, and copies of each materially different document containing representations regarding collection, use, and disclosure practices",
-            "quoted_text": "E. A copy of each materially different form, page, or screen created, maintained, or otherwise provided by each Defendant through which Personal Information of Children is Collected through the YouTube Service, and a copy of each materially different document containing any representation regarding Collection, use, and Disclosure practices pertaining to Personal Information from Children Collected through the YouTube Service. Each webpage copy shall be accompanied by the URL of the web page where the material was posted online. Electronic copies shall include all text and graphics files, audio scripts, and other computer files used in presenting information on the Internet",
-            "deadline": null,
+            "description": "Create and retain a copy of each materially different form, page, or screen through which Personal Information of Children is Collected through the YouTube Service, and each materially different document containing representations regarding Collection, use, and Disclosure practices pertaining to such Personal Information, with URLs and all electronic files",
+            "quoted_text": "E. A copy of each materially different form, page, or screen created, maintained, or otherwise provided by each Defendant through which Personal Information of Children is Collected through the YouTube Service, and a copy of each materially different document containing any representation regarding Collection, use, and Disclosure practices pertaining to Personal Information from Children Collected through the YouTube Service. Each webpage copy shall be accompanied by the URL of the web page where the material was posted online. Electronic copies shall include all text and graphics files, audio scripts, and other computer files used in presenting infonnation on the Internet; and",
+            "deadline": "10 years (creation); 5 years (retention)",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 461,
+            "quote_end_line": 468
           },
           {
-            "description": "Create and retain for five years copies of each unique advertisement, marketing material, telemarketing script, or other representation related to collection of Personal Information of Children",
-            "quoted_text": "F. A copy of each unique advertisement, other marketing material, telemarketing script, or other representation related to the Collection of Personal Information of Children that is made in connection with promoting or offering for sale the YouTube Service.",
-            "deadline": null,
+            "description": "Create and retain a copy of each unique advertisement, other marketing material, telemarketing script, or other representation related to the Collection of Personal Information of Children made in connection with promoting or offering for sale the YouTube Service",
+            "quoted_text": "F. A copy of each unique advertisement, other marketing material, telemarketing script, or other representation related to the Collection of Personal Information of Children that is made in connection with promoting or offering for sale the Y ouTube Service.",
+            "deadline": "10 years (creation); 5 years (retention)",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 469,
+            "quote_end_line": 471
           }
         ]
       },
@@ -283,28 +439,34 @@
         "provision_number": "IX",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission and State of New York may monitor Defendants' compliance through various means including requesting reports, depositions, document production, employee interviews, and posing as consumers.",
+        "summary": "The Commission and State of New York are authorized to monitor Defendants' compliance through document requests, depositions, discovery, direct communications, employee interviews, and undercover investigation, with Defendants required to respond within 14 days of written requests.",
         "requirements": [
           {
-            "description": "Within fourteen days of a written request, Defendants must submit additional compliance reports, appear for depositions, and produce documents for inspection",
-            "quoted_text": "A. Within fourteen (14) days of receipt of a written request from a representative of the Commission or the State of New York, each Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying. The Commission and the State of New York are also authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
-            "deadline": "14 days",
+            "description": "Within fourteen (14) days of receipt of a written request from a representative of the Commission or the State of New York, each Defendant must: submit additional compliance reports or other requested information (sworn under penalty of perjury); appear for depositions; and produce documents for inspection and copying. The Commission and State of New York are also authorized to obtain discovery without further leave of court using Federal Rules of Civil Procedure 29, 30, 31, 33, 34, 36, 45, and 69",
+            "quoted_text": "A. Within fourteen (14) days ofreceipt of a written request from a representative of the Commission or the State of New York, each Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying. The Commission and the State of New York are also authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
+            "deadline": "14 days of written request",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 479,
+            "quote_end_line": 485
           },
           {
-            "description": "Permit the Commission and State of New York to communicate directly with Defendants and to interview any employee or other person affiliated with Defendants who has agreed to such an interview",
-            "quoted_text": "B. For matters concerning this Order, the Commission and the State of New York are authorized to communicate directly with each Defendant. Each Defendant must permit representatives of the Commission and the State of New York to interview any employee or other Person affiliated with Defendant who has agreed to such an interview. The Person interviewed may have counsel present.",
+            "description": "Each Defendant must permit representatives of the Commission and the State of New York to interview any employee or other Person affiliated with Defendant who has agreed to such an interview; the Person interviewed may have counsel present",
+            "quoted_text": "B. For matters concerning this Order, the Commission and the State of New York are authorized to communicate directly with each Defendant. Each Defendant must pern1it representatives of the Commission and the State of New York to interview any employee or other Person affiliated with Defendant who has agreed to such an interview. The Person interviewed may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 486,
+            "quote_end_line": 490
           },
           {
-            "description": "Allow the Commission and State of New York to use all other lawful means to monitor compliance, including posing as consumers, suppliers, or other individuals or entities without identification or prior notice",
-            "quoted_text": "C. The Commission and the State of New York may use all other lawful means, including posing, through its representatives as consumers, suppliers, or other individuals or entities, to Defendants or any individual or entity affiliated with Defendants, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Commission and the State of New York may use all other lawful means, including posing through representatives as consumers, suppliers, or other individuals or entities, without necessity of identification or prior notice; nothing in this Order limits the Commission's lawful use of compulsory process pursuant to Sections 9 and 20 of the FTC Act",
+            "quoted_text": "C. The Commission and the State of New York may use all other lawful means, including posing, through its representatives as consumers, suppliers, or other individuals or entities, to Defendants or any individual or entity affiliated with Defendants, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b- 1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 491,
+            "quote_end_line": 496
           }
         ]
       },
@@ -312,14 +474,16 @@
         "provision_number": "X",
         "title": "Retention of Jurisdiction",
         "category": "duration",
-        "summary": "The Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+        "summary": "The Court retains jurisdiction over this matter for purposes of construction, modification, and enforcement of the Order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction for construction, modification, and enforcement of this Order",
+            "description": "This Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order",
             "quoted_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 502,
+            "quote_end_line": 503
           }
         ]
       }
@@ -336,11 +500,34 @@
     },
     "extraction_stats": {
       "complaint_counts": 1,
-      "complaint_representations": 1,
+      "complaint_representations": 5,
       "order_provisions": 10,
       "order_definitions": 21,
-      "order_requirements": 26
+      "order_requirements": 34,
+      "provisions_per_section": {
+        "I": 2,
+        "II": 4,
+        "III": 1,
+        "IV": 4,
+        "V": 4,
+        "VI": 3,
+        "VII": 6,
+        "VIII": 6,
+        "IX": 3,
+        "X": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 9
+      },
+      "verification_details": {
+        "complaint_verified": 5,
+        "complaint_total": 5,
+        "order_verified": 34,
+        "order_total": 34
+      }
     },
-    "processing_time_seconds": 271.2
+    "processing_time_seconds": 23426.1
   }
 }

@@ -6,7 +6,7 @@
       "incorporation_state": "Virginia",
       "entity_type": "corporation",
       "address": "938 Park Ave, Herndon, VA 20170",
-      "business_description": "X-Mode is a location data broker that sells consumer location data to hundreds of clients in industries ranging from real estate to finance, as well as private government contractors. The company licenses raw location data tied to unique persistent identifiers and audience segments to third parties, and collects location data predominantly through third-party apps that incorporate its SDK."
+      "business_description": "X-Mode is a location data broker that sells consumer location data to hundreds of clients in industries ranging from real estate to finance, as well as private government contractors. X-Mode collects location data through third-party apps that incorporate its software development kit (SDK) and through purchases from other data brokers. X-Mode aggregates and sells this location data to advertisers, software as a service companies, analytics firms, consulting firms, commercial and educational research organizations, and private government contractors."
     },
     "commissioners": [
       "Lina M. Khan, Chair",
@@ -24,85 +24,101 @@
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/2123038-x-mode-social-inc"
   },
   "complaint": {
-    "factual_background": "X-Mode Social and Outlogic are location data brokers that collected and sold precise consumer location data revealing visits to sensitive locations including medical facilities, places of worship, and reproductive health clinics. The companies failed to obtain informed consent from consumers, did not honor Android users' privacy choices to opt-out of personalized advertising, provided misleading disclosures that failed to inform consumers their data would be sold to government contractors for national security purposes, and created audience segments categorizing consumers based on visits to medical facilities for marketing purposes.",
+    "factual_background": "X-Mode Social, Inc. (later Outlogic) is a location data broker that collected precise consumer location data through SDKs embedded in over 300 mobile apps and sold it to hundreds of clients, including private government contractors. X-Mode sold raw location data and audience segments without removing sensitive location information such as visits to medical facilities, houses of worship, and domestic abuse shelters. From June 2018 to July 2020, X-Mode collected and sold data from consumers who had opted out of personalized advertising on Android devices, directly ignoring their privacy choices. X-Mode's own apps (Drunk Mode and Walk Against Humanity) and the sample disclosures it provided to third-party app publishers failed to inform consumers that their location data would be sold to government contractors for national security purposes. X-Mode also created and sold custom audience segments categorizing consumers based on sensitive health-related characteristics such as visits to cardiology, endocrinology, and gastroenterology offices.",
     "representations_made": [
       {
-        "description": "Claimed location data would be used for ad personalization and location-based analytics including ad performance, market research, and traffic and health research",
-        "quoted_text": "a notice displayed in X-Mode's \"Drunk Mode\" app used language suggesting that consumers' location data would be used solely for \"ad personalization and location-based analytics including ad performance, market research, and traffic and health research\"",
-        "source_paragraph": 25
+        "description": "X-Mode's Drunk Mode app represented to consumers that their location data would be used solely for ad personalization and location-based analytics including ad performance, market research, and traffic and health research",
+        "quoted_text": "used. For example, a notice displayed in X-Mode’s “Drunk Mode” app used language suggesting that consumers’ location data would be used solely for “ad personalization and location-based analytics including ad performance, market research, and traffic and health research”:",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 25,
+        "quote_start_line": 147,
+        "quote_end_line": 150
       },
       {
-        "description": "Disclosed sharing information with customers including brands, data platforms, advertising networks, and research companies",
-        "quoted_text": "With Our Customers: We share information, including Advertising IDs, Location Information, Usage Data, and interest segments createdu sing that information, with our customers. Our customersm ay includeb rands, data platforms, onlinea dver ising networks, and companies that performr esearcha bout consumer behavior, targeted or customizeda dvertising, or human traffic pa terns.",
-        "source_paragraph": 26
+        "description": "X-Mode's privacy policy disclosed that it shares consumer location data with customers such as brands, data platforms, advertising networks, and companies performing consumer behavior research — but omitted disclosure of government contractor use",
+        "quoted_text": "With Our Customers: We share information, including Advertising IDs, Location Information, Usage Data, and interest segments createdu sing that information, with our customers. Our customersm ay includeb rands, data platforms, onlinea dver ising networks, and companies that performr esearcha bout consumer behavior, targeted or customizeda dvertising, or human traffic pa terns. You can learn morea bout our customers here.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 26,
+        "quote_start_line": 156,
+        "quote_end_line": 158
       },
       {
-        "description": "Provided third-party app publishers with notices stating location data would be shared with third parties for ad personalization and location-based analytics",
-        "quoted_text": "one consumer consent notice that X-Mode provided to third-party app publishers stated that consumers' location data would be shared \"with third parties to help them conduct ad personalization and location-based analytics:\"",
-        "source_paragraph": 34
+        "description": "X-Mode provided third-party app publishers with sample consumer consent notices stating that location data would be shared with third parties to help them conduct ad personalization and location-based analytics",
+        "quoted_text": "34. For example, one consumer consent notice that X-Mode provided to third-party app publishers stated that consumers’ location data would be shared “with third parties to help them conduct ad personalization and location-based analytics:”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 34,
+        "quote_start_line": 192,
+        "quote_end_line": 194
       },
       {
-        "description": "Represented through Drunk Mode and Walk Against Humanity apps that location data would be used for ad personalization and location based analytics",
-        "quoted_text": "Respondents have represented, directly or indirectly, expressly or by implication, that Drunk Mode and Walk Against Humanity app users' location data would be used by third parties for ad personalization and location based analytics including ad performance, market research, and traffic and health research purposes.",
-        "source_paragraph": 62
+        "description": "X-Mode contractually restricted customers from using location data to associate users with sensitive venues such as healthcare, addiction, pregnancy, or sexual orientation facilities",
+        "quoted_text": "tbc X-Modc Data (alone or combined with other data) to associate any user, device or individual with any venue that is related to healthcare, addiction, pregnancy or pregnancy termination, or sexual oricntatioD, or to otherwise infer an interest or characteristic related to any of the foregoing;",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 15,
+        "quote_start_line": 87,
+        "quote_end_line": 90
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Unfair Sale of Sensitive Data",
-        "representation": "Respondents sell, license, or otherwise transfer precise location data associated with unique persistent identifiers that reveal consumers' visits to sensitive locations, including locations associated with medical care, reproductive health, religious worship, mental health, temporary shelters, and addiction recovery.",
-        "fact": "This practice causes or is likely to cause substantial injury to consumers through loss of privacy, exposure to discrimination, physical violence, emotional distress, and other harms that is not reasonably avoidable by consumers.",
-        "conclusion": "This practice has caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves. Consequently, this practice is an unfair act or practice."
+        "title": "Unfair Sale of Sensitive Location Data",
+        "representation": "Respondents sold, licensed, or otherwise transferred precise location data associated with unique persistent identifiers that reveal consumers' visits to sensitive locations including medical care, reproductive health, religious worship, mental health, temporary shelters, and addiction recovery facilities.",
+        "fact": "X-Mode's data was not anonymized and could be used to identify individual consumers and track them to sensitive locations, posing risks of discrimination, physical violence, emotional distress, and other serious harms.",
+        "conclusion": "This practice has caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits and is not reasonably avoidable by consumers themselves. Consequently, this practice is an unfair act or practice."
       },
       {
         "count_number": 2,
         "title": "Unfair Failure to Honor Consumer Privacy Choices",
-        "representation": "Respondents collected and sold location data for the purposes of developing consumer profiles, surveilling consumers and targeting consumers with advertising even if consumers had opted-out of having their location data used for such purposes through Android's \"Opt out of Ads Personalization\" control.",
-        "fact": "From at least June 2018 to July 2020, X-Mode failed to employ the necessary technical safeguards and oversight to ensure that consumers' privacy choices enabled on their Android phones were honored, and continued to provide this data to marketers and customers for personalized advertising purposes.",
-        "conclusion": "This practice caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves. Consequently, this practice is an unfair act or practice."
+        "representation": "Respondents collected and sold location data for developing consumer profiles, surveilling consumers, and targeting them with advertising.",
+        "fact": "From at least June 2018 to July 2020, X-Mode ingested and sold location data and flags of consumers who had enabled the Android 'Opt out of Ads Personalization' control, directly contrary to those consumers' expressed privacy choices.",
+        "conclusion": "This practice caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits and is not reasonably avoidable by consumers themselves. Consequently, this practice is an unfair act or practice."
       },
       {
         "count_number": 3,
-        "title": "Unfair Collection and Use of Consumer Location Data",
-        "representation": "Respondents collected consumers' location data from apps that Respondents owned without obtaining consumers' informed consent to the collection, use, or sale of their data.",
-        "fact": "The notices provided by X-Mode directly to consumers failed to fully disclose the purposes for which consumers' location data would be used, including that data would be sold to government contractors for national security purposes.",
-        "conclusion": "This practice has caused or is likely to cause substantial injury to consumers in the form of loss of privacy about the day-to-day movements of millions of consumers and an increased risk of disclosure of such sensitive information. This injury is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves. Consequently, this practice is an unfair act or practice."
+        "title": "Unfair Collection and Use of Consumer Location Data Without Informed Consent",
+        "representation": "Respondents collected consumers' location data from their own apps (Drunk Mode and Walk Against Humanity) while providing notices purporting to describe how the data would be used.",
+        "fact": "Until at least August 2020, the notices provided by X-Mode directly to consumers through its own apps failed to fully disclose the purposes for which location data would be used, specifically omitting disclosure of sales to government contractors for national security purposes.",
+        "conclusion": "This practice has caused or is likely to cause substantial injury to consumers in the form of loss of privacy and increased risk of disclosure of sensitive information. This injury is not outweighed by countervailing benefits and is not reasonably avoidable by consumers. Consequently, this practice is an unfair act or practice."
       },
       {
         "count_number": 4,
         "title": "Unfair Collection and Use of Consumer Location Data Without Consent Verification",
-        "representation": "Respondents collect consumers' location data through third-party apps that incorporate Respondents SDK without taking reasonable steps to verify that those consumers provide informed consent to the collection, use, or sale of their data.",
-        "fact": "Although X-Mode tracked the language used by third party apps in consumer notices, X-Mode in many cases has not taken corrective actions based on any review of this language. X-Mode was aware that apps provided consumers with deficient notices that did not adequately inform consumers how their data would be used and that their location would be provided to government contractors for national security purposes, but failed to instruct the third party apps to correct the notices and continued to use the data.",
-        "conclusion": "This practice has caused or is likely to cause substantial injury to consumers in the form of loss of privacy about the day-to-day movements of millions of consumers and an increased risk of disclosure of such sensitive information. This injury is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves. Consequently, this practice is an unfair act or practice."
+        "representation": "Respondents collected consumers' location data through third-party apps incorporating their SDK.",
+        "fact": "X-Mode failed to take reasonable steps to verify that consumers provided informed consent to the collection, use, or sale of their data through those third-party apps. X-Mode was aware that many apps provided deficient notices but failed to require corrections, suspend, or terminate those relationships.",
+        "conclusion": "This practice has caused or is likely to cause substantial injury to consumers in the form of loss of privacy about the day-to-day movements of millions of consumers and an increased risk of disclosure of sensitive information. Consequently, this practice is an unfair act or practice."
       },
       {
         "count_number": 5,
-        "title": "Unfair Categorization of Consumers Based on Sensitive Characteristics for Marketing Purposes",
-        "representation": "Respondents categorized consumers into audience segments based on sensitive characteristics, such as visits to medical offices derived from location data, and sold these audience segments to a third party for marketing purposes.",
-        "fact": "X-Mode entered into an agreement with a privately held clinical research company to license custom audience segments of consumers who had visited Cardiology, Endocrinology, or Gastroenterology offices and visited a pharmacy or drugstore in the Columbus, Ohio area and consumers that had visited a specialty infusion center, for the purpose of targeting ads.",
-        "conclusion": "This practice has caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves. Consequently, this practice is an unfair act or practice."
+        "title": "Unfair Categorization of Consumers Based on Sensitive Characteristics for Marketing",
+        "representation": "Respondents created and licensed audience segments — categories of MAIDs based on shared characteristics derived from location data — to third parties.",
+        "fact": "X-Mode created custom audience segments based on sensitive consumer health characteristics (e.g., visits to cardiology, endocrinology, gastroenterology offices, and specialty infusion centers) and sold these segments to a clinical research company for advertising and marketing purposes.",
+        "conclusion": "This practice has caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits and is not reasonably avoidable by consumers themselves. Consequently, this practice is an unfair act or practice."
       },
       {
         "count_number": 6,
-        "title": "Deceptive Failure to Disclose Use of Location Data",
-        "representation": "Respondents represented that Drunk Mode and Walk Against Humanity app users' location data would be used by third parties for ad personalization and location based analytics including ad performance, market research, and traffic and health research purposes.",
-        "fact": "Respondents have provided location data collected from Drunk Mode and Walk Against Humanity to government contractors for national security purposes. This fact would be material to consumers in deciding whether to use or grant location permissions to Respondents' apps.",
-        "conclusion": "Respondents' failure to disclose material information described in Paragraph 63, in light of the representation set forth in Paragraph 62, is a deceptive act or practice."
+        "title": "Deceptive Failure to Disclose Use of Location Data for Government/National Security Purposes",
+        "representation": "In numerous instances, Respondents represented, directly or indirectly, that Drunk Mode and Walk Against Humanity app users' location data would be used by third parties for ad personalization and location-based analytics including ad performance, market research, and traffic and health research purposes.",
+        "fact": "Respondents provided location data collected from those apps to government contractors for national security purposes — a material fact not disclosed to consumers and which would affect their decision to use the apps or grant location permissions.",
+        "conclusion": "Respondents' failure to disclose this material information, in light of the representations made, is a deceptive act or practice."
       },
       {
         "count_number": 7,
         "title": "Means and Instrumentalities to Engage in Deception",
-        "representation": "Respondents furnished third party app publishers with language for consumer disclosures in both apps and privacy policies that misleads consumers about the purposes for which their location may be used, such as by failing to disclose that consumer's location would be provided to government contractors for national security purposes.",
-        "fact": "Respondents provided sample consumer notices to third-party app publishers that failed to fully inform consumers how their data would be used and that their geolocation data would be provided to government contractors for national security purposes.",
-        "conclusion": "By furnishing others with such materials, Respondents have provided the means and instrumentalities for the commission of deceptive acts and practices. Consequently, this practice is a deceptive act or practice."
+        "representation": "Respondents furnished third-party app publishers with recommended language for consumer disclosures in apps and privacy policies describing how consumers' location data would be used.",
+        "fact": "The sample disclosures provided by X-Mode to third-party app publishers misled consumers about the purposes for which their location data would be used by failing to disclose that consumer location data would be provided to government contractors for national security purposes.",
+        "conclusion": "By furnishing others with such deceptive materials, Respondents provided the means and instrumentalities for the commission of deceptive acts and practices. Consequently, this practice is a deceptive act or practice."
       }
     ]
   },
   "order": {
     "definitions": {
-      "Affirmative Express Consent": "any freely given, specific, informed, and unambiguous indication of an individual consumer's wishes demonstrating agreement by the individual, such as by an affirmative action, following a Clear and Conspicuous Disclosure to the individual of: (1) the categories of information that will be collected; (2) the purpose(s) for which the information is being collected, used, or disclosed; (3) the hyperlink to a document that describes the types of entities to whom the Covered Information is disclosed; and (4) the hyperlink to a simple, easily-located means by which the consumer can withdraw consent and that Clearly and Conspicuously describes any limitations on the consumer's ability to withdraw consent. The Clear and Conspicuous Disclosure must be separate from any \"privacy policy,\" \"terms of service,\" \"terms of use,\" or other similar document. The following does not constitute Affirmative Express Consent: 1. Inferring consent from the hovering over, muting, pausing, or closing of a given piece of content by the consumer; or 2. Obtaining consent through a user interface that has the effect of subverting or impairing user autonomy, decision-making, or choice.",
-      "Clear(ly) and Conspicuous(ly)": "that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: 1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure (\"triggering representation\") is made through only one means. 2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. 3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. 4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. 5. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the triggering representation appears. 6. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. 7. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. 8. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
+      "Affirmative Express Consent": "any freely given, specific, informed, and unambiguous indication of an individual consumer's wishes demonstrating agreement by the individual, such as by an affirmative action, following a Clear and Conspicuous Disclosure to the individual of: (1) the categories of information that will be collected; (2) the purpose(s) for which the information is being collected, used, or disclosed; (3) the hyperlink to a document that describes the types of entities to whom the Covered Information is disclosed; and (4) the hyperlink to a simple, easily-located means by which the consumer can withdraw consent and that Clearly and Conspicuously describes any limitations on the consumer's ability to withdraw consent. The Clear and Conspicuous Disclosure must be separate from any \"privacy policy,\" \"terms of service,\" \"terms of use,\" or other similar document.\n\nThe following does not constitute Affirmative Express Consent:\n1. Inferring consent from the hovering over, muting, pausing, or closing of a given piece of content by the consumer; or\n2. Obtaining consent through a user interface that has the effect of subverting or impairing user autonomy, decision-making, or choice.",
+      "Clear(ly) and Conspicuous(ly)": "that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways:\n1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure (\"triggering representation\") is made through only one means.\n2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood.\n3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it.\n4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable.\n5. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the triggering representation appears.\n6. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications.\n7. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication.\n8. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
       "Covered Information": "information from or about an individual consumer including, but not limited to: (1) a first and last name; (2) Location Data; (3) an email address or other online contact information; (4) a telephone number; (5) a Social Security number; (6) a driver's license or other government-issued identification number; (7) a financial institution account number; (8) credit or debit card information; (9) a persistent identifier, such as a customer number held in a \"cookie,\" a static Internet Protocol (\"IP\") address, a mobile device ID, or processor serial number; or (10) socio-economic or demographic data. Deidentified information is not Covered Information.",
       "Data Product": "any model, algorithm or derived data, in Respondents' custody or control developed, in whole or part, using Historic Location Data. Data Product includes but is not limited to any derived data produced via inference (manual or automated) or predictions such as audience segments.",
       "Deidentified or Deidentifiable": "information that cannot reasonably identify, relate to, describe, be capable of being associated with, or be linked, directly or indirectly, to a particular person, in that Respondents must, at a minimum: 1. Have implemented technical safeguards that prohibit reidentification of the person to whom the information may pertain; 2. Have implemented business processes that specifically prohibit reidentification of the information, including by buyers, customers, or other entities to whom Respondents provide the information; 3. Have implemented business processes to prevent inadvertent release of Deidentified information; and 4. Make no attempt to reidentify the information.",
@@ -123,21 +139,25 @@
         "provision_number": "I",
         "title": "Prohibition Against Misrepresentations",
         "category": "prohibition",
-        "summary": "Respondents must not misrepresent the extent to which they collect, use, maintain, disclose, or delete Covered Information, or misrepresent the extent to which Location Data is deidentified.",
+        "summary": "Respondents must not misrepresent in any manner the extent to which they collect, use, maintain, disclose, or delete Covered Information, or the extent to which their Location Data is Deidentified.",
         "requirements": [
           {
             "description": "Must not misrepresent the extent to which Respondents collect, use, maintain, disclose, or delete any Covered Information",
-            "quoted_text": "IT IS ORDERED that Respondents and Respondents' officers, agents, employees, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with the advertising, promotion, offering for sale, sale, or distribution of any product or service, must not misrepresent, in any manner, expressly or by implication: A. The extent to which Respondents collect, use, maintain, disclose, or delete any Covered Information",
+            "quoted_text": "IT IS ORDERED that Respondents and Respondents' officers, agents, employees, and all other persons in active conceit or paiiicipation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with the adve1iising, promotion, offering for sale, sale, or distribution of any product or service, must not misrepresent, in any manner, expressly or by implication: A. The extent to which Respondents collect, use, maintain, disclose, or delete any Covered Info1mation; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 172,
+            "quote_end_line": 178
           },
           {
             "description": "Must not misrepresent the extent to which the Location Data that Respondents collect, use, maintain, or disclose is Deidentified",
             "quoted_text": "B. The extent to which the Location Data that Respondents collect, use, maintain, or disclose is Deidentified.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 179,
+            "quote_end_line": 180
           }
         ]
       },
@@ -145,14 +165,16 @@
         "provision_number": "II",
         "title": "Prohibitions on the Use, Sale, or Disclosure of Sensitive Location Data",
         "category": "prohibition",
-        "summary": "Respondents must not sell, license, transfer, share, disclose, or otherwise use Sensitive Location Data associated with identified Sensitive Locations, subject to certain exceptions.",
+        "summary": "Respondents must not sell, license, transfer, share, disclose, or otherwise use Sensitive Location Data associated with identified Sensitive Locations, subject to narrow exceptions for data conversion or direct consumer relationships with Affirmative Express Consent.",
         "requirements": [
           {
-            "description": "Must not sell, license, transfer, share, disclose, or otherwise use in any products or services Sensitive Location Data associated with Sensitive Locations identified within 180 days of order issuance",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents and Respondents' officers, agents, employees, whether acting directly or indirectly, must not sell, license, transfer, share, disclose, or otherwise use in any products or services Sensitive Location Data associated with the Sensitive Locations that Respondents have identified within 180 days of the issuance of this Order as part of the Sensitive Locations Data Program established and maintained pursuant to Provision III below.",
-            "deadline": null,
+            "description": "Must not sell, license, transfer, share, disclose, or otherwise use Sensitive Location Data associated with identified Sensitive Locations (with exceptions for data conversion or consumer-direct use with Affirmative Express Consent)",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents and Respondents' officers, agents, employees, whether acting directly or indirectly, must not sell, license, transfer, share, disclose, or othe1wise use in any products or services Sensitive Location Data associated with the Sensitive Locations that Respondents have identified within 180 days of the issuance of this Order as paii of the Sensitive Locations Data Program established and maintained pmsuant to Provision III below. Provided, however, that the prohibitions in this Provision II do not apply if Respondents: (i) use Sensitive Location Data to conve1i such data into data that (a) is not Sensitive Location Data or (b) is not Location Data; or (ii) have a direct relationship with the consumer related to the Sensitive Location Data, the consumer has provided Affnmative Express Consent, and the Sensitive Location Data is used to provide a service directly requested by the consumer.",
+            "deadline": "180 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 182,
+            "quote_end_line": 192
           }
         ]
       },
@@ -160,70 +182,88 @@
         "provision_number": "III",
         "title": "Sensitive Location Data Program",
         "category": "affirmative_obligation",
-        "summary": "Respondents must establish and maintain a comprehensive Sensitive Location Data Program to identify Sensitive Locations and prevent the use, sale, or disclosure of Sensitive Location Data.",
+        "summary": "Respondents must establish and maintain a Sensitive Location Data Program within 180 days, including documented policies, a senior officer responsible, biannual assessments, technical controls, and timely deletion of Sensitive Location Data.",
         "requirements": [
           {
-            "description": "Establish and implement a Sensitive Location Data Program to develop a comprehensive list of Sensitive Locations and prevent use, sale, or disclosure of Sensitive Location Data",
-            "quoted_text": "IT IS FURTHER ORDERED thatRespondents, within 180 days of the issuance of this Order, must establish and implement, and thereafter maintain, a Sensitive Location Data Program to develop a comprehensive list of Sensitive Locations and to prevent the use, sale, licensing, transfer, or disclosure of Sensitive Location Data as provided in Provision II above.",
+            "description": "Establish and implement a Sensitive Location Data Program within 180 days of order issuance",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents, within 180 days of the issuance of this Order, must establish and implement, and thereafter maintain, a Sensitive Location Data Program to develop a comprehensive list of Sensitive Locations and to prevent the use, sale, licensing, transfer, or disclosme of Sensitive Location Data as provided in Provision II above. To satisfy this requirement, Respondents must, at a minimum:",
             "deadline": "180 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 197,
+            "quote_end_line": 201
           },
           {
-            "description": "Document in writing the components of the Sensitive Location Data Program as well as the plan for implementing and maintaining the program",
-            "quoted_text": "A. Document in writing the components of the Sensitive Location Data Program as well as the plan for implementing and maintaining the Sensitive Location Data Program",
-            "deadline": null,
+            "description": "Document in writing the components of the Sensitive Location Data Program and its implementation plan",
+            "quoted_text": "A. Document in writing the components of the Sensitive Location Data Program as well as the plan for implementing and maintaining the Sensitive Location Data Program;",
+            "deadline": "180 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 202,
+            "quote_end_line": 203
           },
           {
-            "description": "Identify a senior officer responsible for the Sensitive Location Data Program, approved by and reporting to the board of directors or principal executive officer",
-            "quoted_text": "B. Identify a senior officer, such as a Chief Privacy Officer or Chief Compliance Officer, to be responsible for the Sensitive Location Data Program. The senior officer will be approved by and report directly to the board of directors or a committee thereof or, if no such board or equivalent body exists, to the principal executive officer of Respondents",
-            "deadline": null,
+            "description": "Identify a senior officer (e.g., Chief Privacy Officer) responsible for the Sensitive Location Data Program, reporting to the board of directors or principal executive officer",
+            "quoted_text": "B. Identify a senior officer, such as a Chief Privacy Officer or Chief Compliance Officer, to be responsible for the Sensitive Location Data Program. The senior officer will be approved by and repo1i directly to the board of directors or a committee thereof or, if no such board or equivalent body exists, to the principal executive officer of Respondents;",
+            "deadline": "180 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 204,
+            "quote_end_line": 207
           },
           {
-            "description": "Provide the written program and evaluations or updates to the board of directors or principal executive officer at least every twelve months",
-            "quoted_text": "C. Provide the written program and any evaluations thereof or updates thereto to Respondents' board of directors or governing body or, if no such board or equivalent body exists, to the principal executive officer of Respondents at least every twelve months",
-            "deadline": null,
+            "description": "Provide the written Sensitive Location Data Program and evaluations/updates to the board of directors or principal executive officer at least every twelve months",
+            "quoted_text": "C. Provide the written program and any evaluations thereof or updates thereto to Respondents' board of directors or governing body or, if no such board or equivalent body exists, to the principal executive officer of Respondents at least eve1y twelve months;",
+            "deadline": "Annual",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 208,
+            "quote_end_line": 211
           },
           {
-            "description": "Develop and implement procedures to identify Sensitive Locations to prevent sale, license, transfer, use, or disclosure of Sensitive Location Data",
-            "quoted_text": "D. Develop and implement procedures to identify Sensitive Locations to be used by Respondent in preventing the sale, license, transfer, use, or other sharing or disclosure of Sensitive Location Data as provided in Provision II above.",
-            "deadline": null,
+            "description": "Develop and implement procedures to identify Sensitive Locations to prevent prohibited sale, license, transfer, use, or disclosure of Sensitive Location Data",
+            "quoted_text": "D. Develop and implement procedmes to identify Sensitive Locations to be used by Respondent in preventing the sale, license, transfer, use, or other sharing or disclosme of Sensitive Location Data as provided in Provision II above. If a building or place is identified as including both a Sensitive Location and a non-Sensitive Location, Respondent may associate Location Data with the non-Sensitive Location only;",
+            "deadline": "180 days",
             "verified": true,
-            "confidence": 0.9956652360515021
+            "confidence": 1.0,
+            "quote_start_line": 212,
+            "quote_end_line": 216
           },
           {
-            "description": "Assess, update and document at least once every six months the accuracy and completeness of the list of Sensitive Locations",
-            "quoted_text": "E. Assess, update and document, at least once every six months, the accuracy and completeness of Respondents' list of Sensitive Locations.",
-            "deadline": null,
+            "description": "Assess, update, and document the accuracy and completeness of the Sensitive Locations list at least once every six months, including verification, identifying new methods, updating the list, considering new categories, and documenting each step",
+            "quoted_text": "E. Assess, update and document, at least once eve1y six months, the accmacy and completeness of Respondents' list of Sensitive Locations. Respondents' assessments must include: 1. Verifying that Respondents' list includes Sensitive Locations known to Respondent; 2. Identifying and assessing methods, somces, products, and services developed by Respondents or offered by third paiiies that identify Sensitive Locations; 3. Updating its list of Sensitive Locations by selecting and using the methods, somces, products, or services developed by Respondents or offered by third paiiies that are accmate and comprehensive in identifying Sensitive Locations; 4. Considering new categories of Sensitive Locations, not enumerated in the definition of Sensitive Locations, such as those based on an announcement by a self-regulato1y association. Respondents must detennine whether to add the newly identified categories to Respondents' list of Sensitive Locations and, as applicable, complete these additions within the time frames specified in Section III.G; and 6 5. Documenting each step of this assessment, including the reasons Respondents selected the methods, sources, products, or services used in updating Respondent's list of Sensitive Locations.",
+            "deadline": "Every 6 months",
             "verified": true,
-            "confidence": 0.9792753623188406
+            "confidence": 0.85,
+            "quote_start_line": 217,
+            "quote_end_line": 239
           },
           {
-            "description": "Implement policies, procedures, and technical measures to prevent using, selling, licensing, or sharing Sensitive Location Data, and test effectiveness at least every six months",
-            "quoted_text": "F. Implement policies, procedures, and technical measures designed to prevent Respondents from using, selling, licensing, transferring, or otherwise sharing or disclosing Sensitive Location Data as provided in Provision II above, and monitor and test the effectiveness of these policies, procedures, and technical measures at least once every six months.",
-            "deadline": null,
+            "description": "Implement policies, procedures, and technical measures to prevent use/sale/disclosure of Sensitive Location Data, and monitor and test their effectiveness at least once every six months",
+            "quoted_text": "F. Implement policies, procedures, and technical measures designed to prevent Respondents from using, selling, licensing, transfening, or othe1wise sharing or disclosing Sensitive Location Data as provided in Provision II above, and monitor and test the effectiveness of these policies, procedures, and technical measures at least once eve1y six months. Such testing must be designed to verify that Respondents are not using, selling, licensing, transfening, or othe1wise sharing or disclosing Sensitive Location Data.",
+            "deadline": "Every 6 months",
             "verified": true,
-            "confidence": 0.9819774011299436
+            "confidence": 1.0,
+            "quote_start_line": 240,
+            "quote_end_line": 245
           },
           {
-            "description": "Initiate deletion or rendering non-sensitive of Sensitive Location Data within 5 days of adding location to the list, and complete within 90 days (extendable to 180 days total)",
-            "quoted_text": "G. Initiate the process of deleting or rendering non-sensitive, Sensitive Location Data associated with locations included in the list developed pursuant to Subparts D and E, within 5 days of adding the location to the list of Sensitive Locations, and complete the process within 90 days of initiation, except where retention is needed to fulfill an allowed purpose as provided in Provision II above. The time period to complete this process may be extended by additional 45 days periods (not to exceed 180 total days) when reasonably necessary, provided the Respondents document at each interval, the reasons for the extension and the progress made",
-            "deadline": "5 days to initiate, 90 days to complete",
+            "description": "Initiate deletion or rendering non-sensitive of Sensitive Location Data within 5 days of adding a location to the list, and complete the process within 90 days (extendable by 45-day periods not to exceed 180 total days)",
+            "quoted_text": "G. Initiate the process of deleting or rendering non-sensitive, Sensitive Location Data associated with locations included in the list developed pursuant to Subpaiis D and E, within 5 days of adding the location to the list of Sensitive Locations, and complete the process within 90 days of initiation, except where retention is needed to fulfill an allowed purpose as provided in Provision II above. The time period to complete this process may be extended by additional 45 days periods (not to exceed 180 total days) when reasonably necessa1y, provided the Respondents document at each interval, the reasons for the extension and the progress made, and Respondents must not use, provide access to, or disclose Sensitive Location Data during the process of deleting or rendering non sensitive, for any other purpose; and",
+            "deadline": "5 days to initiate; 90 days to complete",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 246,
+            "quote_end_line": 255
           },
           {
-            "description": "Evaluate and adjust the Sensitive Location Data Program at least every twelve months in light of operational or business changes",
-            "quoted_text": "H. Evaluate and adjust the Sensitive Location Data Program in light of any changes to Respondents' operations or business arrangements, or any other circumstance that Respondents know or have reason to know may have an impact on the Sensitive Location Data Program's effectiveness. At a minimum, Respondents must evaluate the Sensitive Location Data Program every twelve months and implement modifications based on the results.",
-            "deadline": null,
+            "description": "Evaluate and adjust the Sensitive Location Data Program at least every twelve months based on changes to operations, business arrangements, or other circumstances affecting its effectiveness",
+            "quoted_text": "H. Evaluate and adjust the Sensitive Location Data Program in light of any changes to Respondents' operations or business anangements, or any other circumstance that Respondents know or have reason to know may have an impact on the Sensitive Location Data Program's effectiveness. At a minimum, Respondents must evaluate the Sensitive Location Data Program eve1y twelve months and implement modifications based on the results.",
+            "deadline": "Annual",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 256,
+            "quote_end_line": 261
           }
         ]
       },
@@ -231,49 +271,52 @@
         "provision_number": "IV",
         "title": "Other Location Data Obligations",
         "category": "affirmative_obligation",
-        "summary": "Respondents must establish policies, procedures, and technical measures to prevent recipients of Location Data from associating it with LGBTQ+ locations, political/social demonstrations, or individual home addresses.",
+        "summary": "Respondents must establish within 180 days policies, procedures, and technical measures to prevent recipients of their Location Data from associating it with LGBTQ+ service locations, political/social demonstrations, or individuals' private residences, including contractual prohibitions, marking techniques, compliance assessments, and termination of non-compliant relationships.",
         "requirements": [
           {
-            "description": "Establish and maintain policies, procedures, and technical measures to prevent recipients from associating Location Data with LGBTQ+ locations, political/social demonstrations, or individual home addresses",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents, within 180 days of the issuance of this Order, must establish and implement, and thereafter maintain policies, procedures, and technical measures designed to prevent recipients of Respondents' Location Data, for any such Location Data received after the issuance of this Order, from (i) associating such data with (a) locations held out to the public as predominantly providing services to LGBTQ+ individuals such as service organizations, bars and nightlife, (b) locations of public gatherings of individuals during political or social demonstrations, marches and protests, or (ii) using such Location Data to determine the identity or the location of an individual's home, i.e., the location of any individual's private residences (e.g., single family homes, apartments, condominiums, townhomes)",
+            "description": "Establish and implement policies, procedures, and technical measures within 180 days to prevent recipients from associating Location Data with LGBTQ+ service locations, public demonstration locations, or using it to determine individuals' home addresses",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents, within 180 days of the issuance of this Order, must establish and implement, and thereafter maintain policies, procedures, and technical measures designed to prevent recipients of Respondents' Location Data, for any such Location Data received after the issuance of this Order, from (i) associating such data with (a ) locations held out to the public as predominantly providing services to LGBTQ+ individuals such as service organizations, bars and nightlife, (b) locations of public gatherings of individuals during political or social demonstrations, mai·ches and protests, or (ii) using such Location Data to dete1mine the identity or the location of an individual's home, i.e., the location of any individual's private residences (e.g., single family homes, apa1iments, condominiums, townhomes) (together, \"Prohibited Uses\"). Respondents must identify a senior officer, such as a Chief Privacy Officer or Chief Compliance Officer, to be responsible for these policies, procedures, and technical measures. Such policies, procedures, and technical measures shall include:",
             "deadline": "180 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 263,
+            "quote_end_line": 274
           },
           {
-            "description": "Identify a senior officer responsible for these policies, procedures, and technical measures",
-            "quoted_text": "Respondents must identify a senior officer, such as a Chief Privacy Officer or Chief Compliance Officer, to be responsible for these policies, procedures, and technical measures.",
-            "deadline": null,
+            "description": "Include contractual prohibitions against recipients reselling Location Data in Raw Format and using it to associate individuals with prohibited locations",
+            "quoted_text": "1. contractual prohibitions against recipients of Respondents' Location Data from reselling, transfening, or disclosing Respondents' Location Data in its Raw Fo1mat to a third party (\"Reselling\"), and from using Respondents' Location Data in whole or in paii to associate a specific individual with the locations identified above.",
+            "deadline": "180 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 278,
+            "quote_end_line": 282
           },
           {
-            "description": "Implement contractual prohibitions against recipients reselling, transferring, or disclosing Location Data in Raw Format to third parties",
-            "quoted_text": "1. contractual prohibitions against recipients of Respondents' Location Data from reselling, transferring, or disclosing Respondents' Location Data in its Raw Format to a third party (\"Reselling\"), and from using Respondents' Location Data in whole or in part to associate a specific individual with the locations identified above.",
-            "deadline": null,
+            "description": "Implement marking techniques (e.g., seeding, salting) to detect recipients' non-compliance with contractual prohibitions against resale or re-license of Location Data",
+            "quoted_text": "2. marking techniques, such as seeding, or salting, designed to detect recipients' non-compliance with contractual prohibitions against resale or re-license of Respondents' Location Data;",
+            "deadline": "180 days",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Use marking techniques such as seeding or salting designed to detect recipients' non-compliance with contractual prohibitions",
-            "quoted_text": "2. marking techniques, such as seeding, or salting, designed to detect recipients' non-compliance with contractual prohibitions against resale or re-license of Respondents' Location Data",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 288,
+            "quote_end_line": 290
           },
           {
             "description": "Assess and document recipients' compliance at least once every twelve months",
-            "quoted_text": "3. assessing and documenting recipients' compliance at least once every twelve months",
-            "deadline": null,
+            "quoted_text": "3. assessing and documenting recipients' compliance at least once eve1y twelve months; and",
+            "deadline": "Annual",
             "verified": true,
-            "confidence": 0.99
+            "confidence": 1.0,
+            "quote_start_line": 291,
+            "quote_end_line": 292
           },
           {
             "description": "Terminate relationships with recipients for non-compliance",
-            "quoted_text": "4. terminating relationships with recipients for non-compliance.",
+            "quoted_text": "4. te1minating relationships with recipients for non-compliance.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9721487603305785
+            "confidence": 1.0,
+            "quote_start_line": 293,
+            "quote_end_line": 293
           }
         ]
       },
@@ -281,14 +324,16 @@
         "provision_number": "V",
         "title": "Third-Party Incident Reports",
         "category": "compliance_reporting",
-        "summary": "Respondents must submit a report to the Commission within 30 days of determining that a Third-Party Incident has occurred.",
+        "summary": "Within 30 days of determining a Third-Party Incident has occurred, Respondents must submit a report to the Commission including details about the incident, affected data, number of consumers affected, and remediation steps taken.",
         "requirements": [
           {
-            "description": "Submit a report to the Commission within 30 days of determining that a Third-Party Incident has occurred, including specified details",
-            "quoted_text": "IT IS FURTHER ORDERED that within 30 days of Respondents' determination that a Third-Party Incident has occurred, Respondents must submit a report to the Commission.",
+            "description": "Submit a report to the Commission within 30 days of determining a Third-Party Incident occurred, including estimated date range, description of facts and causes, types of information affected, number of affected consumers, and remediation steps taken",
+            "quoted_text": "IT IS FURTHER ORDERED that within 30 days of Respondents' dete1mination that a Third-Pa1iy Incident has occmTed, Respondents must submit a repo1i to the Commission. The repo1i must include, to the extent possible: A. The estimated date range when the Third-Paiiy Incident occmTed; B. A description of the facts relating to the Third-Party Incident, including the causes of the Third-Pa1iy Incident, if known, and paiiicipants; C. A description of each type of info1mation that was affected by the Third-Paiiy Incident; D. The numbers of consumers whose info1mation was affected by the Third-Paiiy Incident; E. The acts Respondents has taken to date to remediate the Third-Pa1iy Incident and protect Covered Info1mation from further exposme or access; and F. Unless othe1wise directed by a Commission representative in writing, Respondents must submit all Third-Paiiy Incident repo1is to the Commission under penalty of pe1jmy as specified in the Section of this Order titled \"Compliance Report and Notices.\"",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.9729429429429429
+            "confidence": 1.0,
+            "quote_start_line": 295,
+            "quote_end_line": 307
           }
         ]
       },
@@ -296,28 +341,34 @@
         "provision_number": "VI",
         "title": "Limitations on Collection, Use, Maintenance, and Disclosure of Location Data",
         "category": "prohibition",
-        "summary": "Respondents must not collect, use, maintain, or disclose Location Data from devices where consumers have opted out of tracking, or without documented consent, and must provide quarterly reminders to app users.",
+        "summary": "Respondents must not collect or use Location Data where a consumer has opted out via OS privacy settings without documented consent, must not collect Location Data without documented prior consent within 90 days, and must provide Clear and Conspicuous quarterly reminders via Respondents' App.",
         "requirements": [
           {
-            "description": "Must not collect, use, maintain, or disclose Location Data from devices where a consumer has enabled privacy settings to opt out of targeted advertising or tracking, without documented consent",
-            "quoted_text": "A. Collect, use, maintain, or disclose Location Data from devices where a consumer has enabled the mobile operating system privacy settings to opt out of, limit, or otherwise decline targeted advertising or tracking, without a record satisfying the requirements in Provision VII.B, documenting the consumer's consent.",
+            "description": "Must not collect, use, maintain, or disclose Location Data from devices where a consumer has enabled OS privacy settings to opt out of targeted advertising or tracking, without a record documenting the consumer's consent",
+            "quoted_text": "A. Collect, use, maintain, or disclose Location Data from devices where a consumer has enabled the mobile operating system privacy settings to opt out of, limit, or othe1wise decline targeted adve1iising or tracking, without a record satisfying the requirements in Provision VII.B, documenting the consumer's consent.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 315,
+            "quote_end_line": 318
           },
           {
-            "description": "Within 90 days, must not collect, use, maintain or disclose Location Data without documented consumer consent obtained prior to collection or use",
+            "description": "Within 90 days of the effective date, must not collect, use, maintain, or disclose an individual's Location Data without a record documenting consumer consent obtained prior to collection or use",
             "quoted_text": "B. Within 90 days of the effective date of this Order, collect, use, maintain or disclose an individual's Location Data without a record satisfying the requirements in Provision VII.B, documenting the consumer's consent obtained prior to Respondents' collection or use of Location Data.",
             "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 319,
+            "quote_end_line": 322
           },
           {
-            "description": "For Respondents' Apps, must not collect, use, maintain, or disclose Location Data unless consumer receives a Clear and Conspicuous quarterly reminder with instructions to turn off collection",
-            "quoted_text": "C. In connection with any Respondents' App, collect, use, maintain, or disclose a consumer's Location Data, unless the consumer receives a Clear and Conspicuous reminder, at least quarterly, that the consumer's Location Data is being collected and, if applicable, disclosed, along with instructions for a simple control to turn off Location Data collection.",
-            "deadline": null,
+            "description": "In connection with Respondents' App, must not collect, use, maintain, or disclose a consumer's Location Data unless the consumer receives a Clear and Conspicuous reminder at least quarterly that their Location Data is being collected and disclosed, along with instructions for a simple control to turn off collection",
+            "quoted_text": "C. In connection with any Respondents' App, collect, use, maintain, or disclose a consumer's Location Data, unless the consumer receives a Clear and Conspicuous reminder, at least quaiierly, that the consumer's Location Data is being collected and, if applicable, disclosed, along with instructions for a simple conti-ol to tum off Location Data collection. Any such reminder must be done through a consumer-enabled push notification or to an e-mail address provided by the consumer or, if the consumer has not opted into push notifications and an email address is unavailable, through a notice in the application. Provided, however, that reminders mandated by Provision VI.C are not required when Respondents confnm that a consumer's device is utilizing an operating system version that reminds consumers that their Location Data is being collected or that limits Location Data collection by default for infrequently used apps.",
+            "deadline": "Quarterly",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 323,
+            "quote_end_line": 333
           }
         ]
       },
@@ -325,42 +376,52 @@
         "provision_number": "VII",
         "title": "Supplier Assessment Program",
         "category": "affirmative_obligation",
-        "summary": "Respondents must implement a Supplier Assessment Program to ensure consumers have provided consent for the collection and use of Location Data obtained from third-party suppliers.",
+        "summary": "Respondents must implement a Supplier Assessment Program within 90 days to ensure consumer consent for Location Data collection, including documented procedures, initial and annual assessments of third-party suppliers, consent records, and ceasing use of non-consented Location Data.",
         "requirements": [
           {
-            "description": "Implement a Supplier Assessment Program to ensure consumers have provided consent for collection and use of Location Data",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents, within 90 days of the effective date of this Order, must implement a program designed to ensure that consumers have provided consent for the collection and use of Location Data obtained by Respondents, including by implementing and maintaining a \"Supplier Assessment Program.\"",
+            "description": "Implement a Supplier Assessment Program within 90 days to ensure consumers have provided consent for Location Data collection",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents, within 90 days of the effective date of this Order, must implement a program designed to ensme that consumers have provided consent for the collection and use of Location Data obtained by Respondents, including by implementing and maintaining a \"Supplier Assessment Program.\" In connection with the Supplier Assessment Program, Respondents must, at a minimum:",
             "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 335,
+            "quote_end_line": 339
           },
           {
             "description": "Document in writing the content, implementation, and maintenance of the Supplier Assessment Program",
-            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Supplier Assessment Program",
-            "deadline": null,
+            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Supplier Assessment Program; and",
+            "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 340,
+            "quote_end_line": 341
           },
           {
-            "description": "Conduct initial assessment within 30 days of third party entering data sharing agreements or initial data collection, and thereafter annually, to confirm consumer consent",
-            "quoted_text": "B. Conduct an initial assessment either within 30 days of a third party entering into data sharing agreements with Respondents (or, for parties with existing data-sharing agreements, within 30 days of the effective date of this Order) or within 30 days of the initial date of data collection from such a third party, and thereafter annually, designed to confirm that consumers provide Affirmative Express Consent if feasible, or to confirm that consumers specifically consent to the collection, use, and sale of their Location Data.",
-            "deadline": "30 days",
+            "description": "Conduct an initial assessment within 30 days of a third party entering into data-sharing agreements (or within 30 days of the effective date for existing parties), and annually thereafter, to confirm consumers provide Affirmative Express Consent or specifically consent to Location Data collection, use, and sale",
+            "quoted_text": "B. Conduct an initial assessment either within 30 days of a third party entering into data shai·ing agreements with Respondents (o r, for paiiies with existing data-shai·ing agreements, within 30 days of the effective date of this Order) or within 30 days of the initial date of data collection from such a third paiiy, and thereafter annually, designed to confnm that consumers provide Affnmative Express Consent if feasible, or to confnm that consumers specifically consent to the collection, use, and sale of their Location Data.",
+            "deadline": "30 days; annually thereafter",
             "verified": true,
-            "confidence": 0.9905263157894737
+            "confidence": 1.0,
+            "quote_start_line": 342,
+            "quote_end_line": 347
           },
           {
-            "description": "Create and maintain records of the suppliers' responses obtained under the Supplier Assessment Program",
-            "quoted_text": "C. Create and maintain records of the suppliers' responses obtained by Respondents under the Supplier Assessment Program",
+            "description": "Create and maintain records of suppliers' responses obtained under the Supplier Assessment Program",
+            "quoted_text": "C. Create and maintain records of the suppliers' responses obtained by Respondents under the Supplier Assessment Program; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 348,
+            "quote_end_line": 349
           },
           {
-            "description": "Cease from using, selling, licensing, transferring, or sharing Location Data for which consumers have not provided consent",
-            "quoted_text": "D. Cease from using, selling, licensing, transferring, or otherwise sharing or disclosing Location Data for which consumers have not provided consent, as provided in Provision VII.B above.",
+            "description": "Cease using, selling, licensing, transferring, or otherwise sharing or disclosing Location Data for which consumers have not provided consent",
+            "quoted_text": "D. Cease from using, selling, licensing, ti-ansfening, or othe1wise shai·ing or disclosing Location Data for which consumers have not provided consent, as provided in Provision VII.B above.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 350,
+            "quote_end_line": 352
           }
         ]
       },
@@ -368,14 +429,25 @@
         "provision_number": "VIII",
         "title": "Disclosures to Consumers",
         "category": "affirmative_obligation",
-        "summary": "Respondents must provide a Clear and Conspicuous means for consumers to request the identity of entities to whom their Location Data has been disclosed, or alternatively, provide a deletion mechanism across all recipients.",
+        "summary": "Respondents must provide consumers a Clear and Conspicuous means to request the identity of entities to whom their Location Data has been disclosed, or alternatively offer a deletion mechanism with confirmation to recipients within 90 days.",
         "requirements": [
           {
-            "description": "Provide a Clear and Conspicuous means for consumers to request the identity of entities to whom their Location Data has been sold, transferred, licensed, or disclosed",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents and Respondents' officers, agents, employees, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, must provide a Clear and Conspicuous means for consumers to request the identity of any entity, business, or individual to whom their Location Data has been sold, transferred, licensed, or otherwise disclosed.",
+            "description": "Provide a Clear and Conspicuous means for consumers to request the identity of any entity to whom their Location Data has been sold, transferred, licensed, or otherwise disclosed; must not use information collected for such requests for any other purpose",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents and Respondents' officers, agents, employees, and all other persons in active conceit or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, must provide a Clear and Conspicuous means for consumers to request the identity of any entity, business, or individual to whom their Location Data has been sold, transfe1Ted, licensed, or otheiwise disclosed. Respondents may require consumers to provide Respondents with infonnation reasonably necessaiy to complete such requests and to verify their identity, but must not use, provide access to, or disclose any infoimation collected for such a request for any other pmpose.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 357,
+            "quote_end_line": 364
+          },
+          {
+            "description": "Alternative to disclosure: provide a Clear and Conspicuous method for consumers to delete their Location Data from all recipients' commercial databases, instruct recipients to honor deletion requests, request written confirmation of deletion, and provide written confirmation to consumers no later than 90 days after receipt of consumer requests",
+            "quoted_text": "Provided however, that the Disclosme requirements in this Provision VIII do not apply if Respondents provide consumers with a Clear and Conspicuous method to delete their Location Data from the commercial databases of all recipients of such Location Data, expressly instruct (o r conn-actually require) such recipients to honor such requests sent or made available to them by Respondents, expressly request ( or contr·actually demand) written confnmation of deletion of the identified Location Data, and provide consumers with written confnmation of such deletion requests or instructions sent to recipients and written confnmation of deletion from recipients (where confnmed), no later than 90 days of the receipt of consumers requests.",
+            "deadline": "90 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 365,
+            "quote_end_line": 372
           }
         ]
       },
@@ -383,21 +455,25 @@
         "provision_number": "IX",
         "title": "Withholding and Withdrawing Consent",
         "category": "affirmative_obligation",
-        "summary": "Respondents must provide a simple means for consumers to withdraw consent for Location Data collection and must not unreasonably limit consumers' ability to withhold or withdraw consent.",
+        "summary": "Respondents must provide a simple, easily-located means for consumers to withdraw consent for Location Data collection and must not unreasonably limit consumers' ability to withhold or withdraw consent through degradation of product quality or functionality.",
         "requirements": [
           {
-            "description": "Provide a simple, easily-located means for consumers to withdraw any consent provided for Location Data collection",
-            "quoted_text": "A. Provide a simple, easily-located means for consumers to withdraw any consent provided in accordance with Provision VII.B (including Affirmative Express Consent) in connection with Location Data.",
+            "description": "Provide a simple, easily-located means for consumers to withdraw consent for Location Data collection; must not use, provide access to, or disclose information collected for such a request for any other purpose (except short-term retention for security/anti-fraud purposes)",
+            "quoted_text": "A. Provide a simple, easily-located means for consumers to withdraw any consent provided in accordance with Provision VII.B (including Affnmative Express Consent) in connection with Location Data. Such means may include a Clear and Conspicuous notice or link to an applicable operating system, device, app peimission or setting, or a consumer app made publicly available (including through the app stores, where peimissible) that automatically opts out mobile device infoimation from use but Respondents must not use, provide access to, or disclose any infoimation collected for such a request for any other pmpose. Provided however, that Respondent may retain such Location Data to prevent, detect, or investigate data secmity incidents, or to protect against malicious, deceptive, fraudulent, or illegal activity directed at the Respondents, for the shortest time reasonably necessaiy to fulfill this pmpose, but Respondents must not use, provide access to, or disclose such Location Data retained for secmity and anti-fraud pmposes, for any other pmpose; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 377,
+            "quote_end_line": 388
           },
           {
-            "description": "For Respondents' App, must not unreasonably limit a consumer's ability to withhold or withdraw consent, such as by degrading quality or functionality as a penalty",
-            "quoted_text": "B. As to Respondents' App, not unreasonably limit a consumer's ability to withhold or withdraw Affirmative Express Consent, such as by degrading the quality or functionality of a product or service as a penalty for withholding or withdrawing consent provided in accordance with Provision VII.B (including Affirmative Express Consent), unless the collection and use of Location Data is technically necessary to provide the quality or functionality of the product or service without such degradation.",
+            "description": "As to Respondents' App, must not unreasonably limit a consumer's ability to withhold or withdraw Affirmative Express Consent, such as by degrading product quality or functionality as a penalty, unless Location Data collection is technically necessary for the quality or functionality",
+            "quoted_text": "B. As to Respondents' App, not unreasonably limit a consumer's ability to withhold or withdraw Affnmative Express Consent, such as by degrading the quality or functionality of a product or service as a penalty for withholding or withdrawing consent provided in accordance with Provision VII.B (including Affnmative Express Consent), unless the collection and use of Location Data is technically necessa1y to provide the quality or functionality of the product or service without such degradation.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9385487077534792
+            "confidence": 0.85,
+            "quote_start_line": 389,
+            "quote_end_line": 396
           }
         ]
       },
@@ -405,14 +481,16 @@
         "provision_number": "X",
         "title": "Obligations When Consent is Withdrawn",
         "category": "affirmative_obligation",
-        "summary": "Respondents must cease collecting Location Data associated with a specific app and device within 15 days after receiving notice that the consumer withdraws consent.",
+        "summary": "Respondents must cease collecting Location Data associated with a specific app and device within 15 days after receiving notice that a consumer has withdrawn their consent.",
         "requirements": [
           {
-            "description": "Cease collecting all Location Data associated with a specific app and device within 15 days after receiving notice that the consumer withdraws consent",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents, and Respondents' officers, agents, employees, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, must cease collecting all Location Data associated with a specific app and device within 15 days after Respondents receive notice that the consumer withdraws their consent provided in accordance with Provision VII.B (including Affirmative Express Consent) for such collection from that app and device.",
+            "description": "Cease collecting all Location Data associated with a specific app and device within 15 days after receiving notice that the consumer withdraws their consent",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents, and Respondents' officers, agents, employees, and all other persons in active conceit or pa1ticipation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, must cease collecting all Location Data associated with a specific app and device within 15 days after Respondents receive notice that the consumer withdraws their consent provided in accordance with Provision VII.B (including Affnmative Express Consent) for such collection from that app and device.",
             "deadline": "15 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 398,
+            "quote_end_line": 403
           }
         ]
       },
@@ -420,21 +498,16 @@
         "provision_number": "XI",
         "title": "Location Data Deletion Requests",
         "category": "affirmative_obligation",
-        "summary": "Respondents must implement and maintain a simple means for consumers to request deletion of their Location Data and must delete such data within 30 days of receipt of the request.",
+        "summary": "Respondents must implement and maintain a simple, easily-located means for consumers to request deletion of their Location Data and must delete such data within 30 days of receiving a request.",
         "requirements": [
           {
-            "description": "Implement and maintain a simple, easily-located means for consumers to request deletion of Location Data previously collected from a specific mobile device",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents and Respondents' officers, agents, employees, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, must implement and maintain a simple, easily-located means for consumers to request that Respondents delete Location Data that Respondents previously collected from a specific mobile device",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Delete Location Data within 30 days of receipt of consumer deletion request unless a shorter period is required by law",
-            "quoted_text": "and delete Location Data within 30 daysof receipt of such request unless a shorter period for deletion is required by law.",
+            "description": "Implement and maintain a simple, easily-located means for consumers to request deletion of Location Data previously collected from a specific mobile device, and delete Location Data within 30 days of receipt of such request (unless a shorter period is required by law)",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents and Respondents' officers, agents, employees, and all other persons in active conceit or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, must implement and maintain a simple, easily-located means for consumers to request that Respondents delete Location Data that Respondents previously collected from a specific mobile device, and delete Location Data within 30 days of receipt of such request unless a shoiter period for deletion is required by law. Respondents may require consumers to provide Respondents with infonnation necessaiy to complete such requests, but must not use, provide access to, or disclose any infoimation collected for a deletion request for any other pmpose.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 405,
+            "quote_end_line": 413
           }
         ]
       },
@@ -442,28 +515,34 @@
         "provision_number": "XII",
         "title": "Data Retention Limits",
         "category": "affirmative_obligation",
-        "summary": "Respondents must document, adhere to, and publicly post a retention schedule for Covered Information that precludes indefinite retention.",
+        "summary": "Respondents must publish a Clear and Conspicuous data retention schedule on their website within 60 days, submit it to the Commission, and update it prior to collecting any new types of consumer information.",
         "requirements": [
           {
-            "description": "Within 60 days, document, adhere to, and publicly post a retention schedule for Covered Information on the home page of their website(s)",
-            "quoted_text": "A. Within 60 days of the effective date of this Order, document, adhere to, and make publicly available through a link on the home page of their website(s), in a manner that is Clear and Conspicuous, a retention schedule for Covered Information, setting forth: (1) the purpose or purposes for which each type of Covered Information is collected or used; (2) the specific business needs for retaining each type of Covered Information; and (3) an established timeframe for deletion of each type of Covered Information limited to the time reasonably necessary to fulfill the purpose for which the Covered Information was collected, and in no instance providing for the indefinite retention of any Covered Information",
+            "description": "Within 60 days, document, adhere to, and make publicly available a retention schedule for Covered Information on the home page of their website(s), setting forth the purpose for collection, specific business needs, and an established deletion timeframe (no indefinite retention)",
+            "quoted_text": "A. Within 60 days of the effective date of this Order, document, adhere to, and make publicly available through a link on the home page of their website(s), in a manner that is Cleai· and Conspicuous, a retention schedule for Covered Infoimation, setting foith: (1) the purpose or pmposes for which each type of Covered Infoimation is collected or used; (2) the specific business needs for retaining each type of Covered Infoimation; and (3) an established timeframe for deletion of each type of Covered Infoimation limited to the time reasonably necessa1y to fulfill the purpose for which the Covered Inf01mation was collected, and in no instance providing for the indefinite retention of any Covered Infonnation; and",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 422,
+            "quote_end_line": 429
           },
           {
-            "description": "Within 60 days, provide a written statement to the Commission describing the retention schedule made publicly available",
-            "quoted_text": "B. Within 60 days of the effective date of this Order, Respondents shall provide a written statement to the Commission, pursuant to the Provision entitled Compliance Report and Notices, describing the retention schedule for Covered Information made publicly available on its website(s)",
+            "description": "Within 60 days, provide a written statement to the Commission describing the publicly available retention schedule for Covered Information",
+            "quoted_text": "B. Within 60 days of the effective date of this Order, Respondents shall provide a written statement to the Commission, pursuant to the Provision entitled Compliance Repoit and Notices, describing the retention schedule for Covered Infoimation made publicly available on its website(s); and",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 430,
+            "quote_end_line": 433
           },
           {
-            "description": "Prior to collecting any new type of consumer information, update the retention schedule to include purpose, business needs, and deletion timeframe",
-            "quoted_text": "C. Prior to collecting or using any new type of information related to consumers that was not being collected as of the issuance date of this Order, and is not described in retention schedules published in accordance with sub-Provision A of this Provision entitled Limitation on Retention of Location Data, Respondents must update its retention schedule setting forth: (1) the purpose or purposes for which the new information is collected; (2) the specific business needs for retaining the new information; and (3) a set timeframe for deletion of the new information that precludes indefinite retention.",
-            "deadline": null,
+            "description": "Prior to collecting any new type of consumer information not covered by existing retention schedules, update the retention schedule with the purpose for collection, specific business needs, and a set deletion timeframe precluding indefinite retention",
+            "quoted_text": "C. Prior to collecting or using any new type of info1mation related to consumers that was not being collected as of the issuance date of this Order, and is not described in retention schedules published in accordance with sub-Provision A of this Provision entitled Limitation on Retention of Location Data, Respondents must update its retention schedule setting forth: (1) the pmpose or pmposes for which the new info1mation is collected; (2) the specific business needs for retaining the new info1mation; and (3) a set timeframe for deletion of the new info1mation that precludes indefinite retention.",
+            "deadline": "Prior to collection",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 437,
+            "quote_end_line": 443
           }
         ]
       },
@@ -471,28 +550,34 @@
         "provision_number": "XIII",
         "title": "Deletion",
         "category": "affirmative_obligation",
-        "summary": "Respondents must delete or destroy all Historic Location Data and Data Products within specified timeframes, with limited exceptions, and must inform customers of the FTC's deletion requirement.",
+        "summary": "Respondents must delete Historic Location Data collected through their apps and SDK within 60 days (or obtain Affirmative Express Consent or Deidentify within 90 days), notify customers who received such data, and delete all Data Products within 90 days.",
         "requirements": [
           {
-            "description": "Within 60 days, delete or destroy all Historic Location Data collected through apps or SDK, and provide written confirmation to the Commission",
-            "quoted_text": "A. Within 60 days after the effective date of this Order, delete or destroy all Historic Location Data that Respondents collected through apps that it operates or collected through Respondents' SDK, and provide a written statement to the Commission, pursuant to Provision XVII, confirming that all such information has been deleted or destroyed.",
-            "deadline": "60 days",
+            "description": "Within 60 days, delete or destroy all Historic Location Data collected through apps Respondents operate or through Respondents' SDK, and provide written confirmation to the Commission; with an option to retain if Affirmative Express Consent is obtained or data is Deidentified within 90 days",
+            "quoted_text": "A. Within 60 days after the effective date of this Order, delete or destroy all Historic Location Data that Respondents collected through apps that it operates or collected through Respondents' SDK, and provide a written statement to the Commission, pmsuant to Provision XVII, confnming that all such info1mation has been deleted or destroyed. Provided however, Respondents shall have the option to retain Historic Location Data if it has obtained Affnmative Express Consent from the relevant consumer for the retention of Historic Location Data within 90 days after the effective date of this Order, or if within such time period it ensmes such Historic Location Data is Deidentified or rendered non-sensitive in accordance with Provision III above, and provided that the Historic Location Data is subject to the obligations in Provision IV above. Providedf urther, that such Historic Location Data may be retained to prevent, detect, or investigate data secmity incidents, or to protect against malicious, deceptive, fraudulent, or illegal activity directed at the Respondents, for the sho1iest time reasonably necessa1y to fulfill this pmpose, but Respondents must not use, provide access to, or disclose such Historic Location Data retained for secmity and anti-fraud pmposes, for any other pmpose. Respondents will in any event delete such Historic Location Data for any consumer who selects the deletion option;",
+            "deadline": "60 days (deletion); 90 days (consent/deidentification option)",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 448,
+            "quote_end_line": 462
           },
           {
-            "description": "Within 90 days, inform customers that received Historic Location Data within 3 years prior to order issuance of the FTC's deletion requirement",
-            "quoted_text": "B. Within 90 days after the effective date of this Order, (i) inform Respondents' customers that received Historic Location Data within 3 years prior to the issuance date of this Order, of the FTC's requirement in Provision XIII.A that the FTC requires such data to be deleted, Deidentified, or rendered non-sensitive, and (ii) Respondents shall promptly submit, within 10 days of sending to its customers, all such notices to the Commission under penalty of perjury as specified in the Section of this Order titled \"Compliance Report and Notices\"",
-            "deadline": "90 days",
+            "description": "Within 90 days, inform customers who received Historic Location Data within the prior 3 years of the FTC's deletion/deidentification requirement, and submit all such notices to the Commission within 10 days of sending them to customers",
+            "quoted_text": "B. Within 90 days after the effective date of this Order, (i) info1m Respondents' customers that received Historic Location Data within 3 years prior to the issuance date of this Order, of the FTC's requirement in Provision XIII.A that the FTC requires such data to be deleted, Deidentified, or rendered non-sensitive, and (ii) Respondents shall promptly submit, within 10 days of sending to its customers, all such notices to the Commission under penalty of pe1jmy as specified in the Section of this Order titled \"Compliance Repo1i and Notices\"; and",
+            "deadline": "90 days (notice to customers); 10 days (submission to Commission)",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 464,
+            "quote_end_line": 469
           },
           {
             "description": "Within 90 days, delete or destroy all Data Products and provide written confirmation to the Commission",
-            "quoted_text": "C. Within 90 days after the effective date of this Order, delete or destroy all Data Products, and provide a written statement to the Commission, pursuant to Provision XVII, confirming such deletion or destruction.",
+            "quoted_text": "C. Within 90 days after the effective date of this Order, delete or destroy all Data Products, and provide a written statement to the Commission, pmsuant to Provision XVII, confnming such deletion or destruction.",
             "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 470,
+            "quote_end_line": 472
           }
         ]
       },
@@ -500,70 +585,88 @@
         "provision_number": "XIV",
         "title": "Mandated Privacy Program",
         "category": "affirmative_obligation",
-        "summary": "Respondents must establish and maintain a comprehensive privacy program to protect Covered Information, including risk assessments, safeguards, employee training, and regular testing and evaluation.",
+        "summary": "Respondents must establish and maintain a comprehensive privacy program within 60 days, including written documentation, board reporting, a designated coordinator, annual risk assessments, safeguards, annual employee training, and regular program evaluation.",
         "requirements": [
           {
-            "description": "Within 60 days, establish, implement, and maintain a comprehensive privacy program to protect Covered Information",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents, and any business that Respondents control directly or indirectly, in connection with the collection, maintenance, use, disclosure of, or provision of access to Covered Information, must, within 60 days of the effective date of this Order, establish and implement, and thereafter maintain, a comprehensive privacy program (the \"Program\") that protects the privacy of such Covered Information.",
+            "description": "Within 60 days, establish and implement a comprehensive privacy program protecting the privacy of Covered Information",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents, and any business that Respondents control directly or indirectly, in connection with the collection, maintenance, use, disclosme of, or provision of access to Covered Info1mation, must, within 60 days of the effective date of this 12 Order, establish and implement, and thereafter maintain, a comprehensive privacy program (the \"Program\") that protects the privacy of such Covered Info1mation. To satisfy this requirement, Respondents must at a minimum do the following:",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 0.8838283062645012
+            "confidence": 0.85,
+            "quote_start_line": 474,
+            "quote_end_line": 482
           },
           {
-            "description": "Document in writing the content, implementation, and maintenance of the Program",
-            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Program",
-            "deadline": null,
+            "description": "Document in writing the content, implementation, and maintenance of the privacy program",
+            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Program;",
+            "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 483,
+            "quote_end_line": 483
           },
           {
-            "description": "Provide the written program and evaluations or updates to the board of directors or senior officer at least once every 12 months",
-            "quoted_text": "B. Provide the written program, and any evaluations thereof or updates thereto to Respondents' board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Respondents responsible for the Program at least once every 12 months",
-            "deadline": null,
+            "description": "Provide the written privacy program and any evaluations or updates to the board of directors or senior officer responsible for the program at least once every 12 months",
+            "quoted_text": "B. Provide the written program, and any evaluations thereof or updates thereto to Respondents' board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Respondents responsible for the Program at least once eve1y 12 months;",
+            "deadline": "Annual",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 484,
+            "quote_end_line": 487
           },
           {
-            "description": "Designate a qualified employee or employees to coordinate and be responsible for the Program",
-            "quoted_text": "C. Designate a qualified employee or employees to coordinate and be responsible for the Program",
-            "deadline": null,
+            "description": "Designate a qualified employee or employees to coordinate and be responsible for the privacy program",
+            "quoted_text": "C. Designate a qualified employee or employees to coordinate and be responsible for the Program;",
+            "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 488,
+            "quote_end_line": 489
           },
           {
-            "description": "Assess and document at least once every 12 months internal and external risks to the privacy of Covered Information",
-            "quoted_text": "D. Assess and document, at least once every 12 months, internal and external risks to the privacy of Covered Information that could result in the: unauthorized collection, maintenance, use, disclosure of, or provision of access to, Covered Information.",
-            "deadline": null,
+            "description": "Assess and document at least once every 12 months internal and external risks to the privacy of Covered Information that could result in unauthorized collection, maintenance, use, disclosure of, or provision of access to Covered Information",
+            "quoted_text": "D. Assess and document, at least once eve1y 12 months, internal and external risks to the privacy of Covered Info1mation that could result in the: unauthorized collection, maintenance, use, disclosure of, or provision of access to, Covered Info1mation.",
+            "deadline": "Annual",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 490,
+            "quote_end_line": 492
           },
           {
-            "description": "Design, implement, maintain, and document safeguards that control for material privacy risks identified",
-            "quoted_text": "E. Design, implement, maintain, and document safeguards that control for the material internal and external risks Respondents identify to the privacy of Covered Information identified in response to Provision XIV.D.",
-            "deadline": null,
+            "description": "Design, implement, maintain, and document safeguards that control for material internal and external risks identified to the privacy of Covered Information, based on volume, sensitivity, and likelihood of risk",
+            "quoted_text": "E. Design, implement, maintain, and document safeguards that control for the material internal and external risks Respondents identify to the privacy of Covered Info1mation identified in response to Provision XIV.D. Each safeguard must be based on the volume and sensitivity of Covered Info1mation that is at risk, and the likelihood that the risk could be realized and result in the unauthorized collection, maintenance, use, disclosure of, or provision of access to Covered Info1mation.",
+            "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 493,
+            "quote_end_line": 498
           },
           {
-            "description": "Provide privacy training programs on at least an annual basis for all employees and contractors with access to Covered Information",
-            "quoted_text": "F. On at least an annual basis, provide privacy training programs for all employees and independent contractors responsible for handling or who have access to Covered Information, updated to address any identified material internal or external risks and safeguards implemented pursuant to this Order",
-            "deadline": null,
+            "description": "Provide annual privacy training programs for all employees and independent contractors responsible for handling or who have access to Covered Information, updated to address identified material risks and implemented safeguards",
+            "quoted_text": "F. On at least an annual basis, provide privacy training programs for all employees and independent contractors responsible for handling or who have access to Covered Info1mation, updated to address any identified material internal or external risks and safeguards implemented pursuant to this Order;",
+            "deadline": "Annual",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 499,
+            "quote_end_line": 502
           },
           {
-            "description": "Test and monitor the effectiveness of safeguards at least once every 12 months and modify the Program based on results",
-            "quoted_text": "E. Test and monitor the effectiveness of the safeguards at least once every 12 months, and modify the Program based on the results",
-            "deadline": null,
+            "description": "Test and monitor the effectiveness of the privacy safeguards at least once every 12 months, and modify the Program based on the results",
+            "quoted_text": "E. Test and monitor the effectiveness of the safeguards at least once eve1y 12 months, and modify the Program based on the results; and",
+            "deadline": "Annual",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 503,
+            "quote_end_line": 504
           },
           {
-            "description": "Evaluate and adjust the Program at least once every 12 months in light of operational or business changes and modify based on results",
-            "quoted_text": "F. Evaluate and adjust the Program in light of any changes to Respondents' operations or business arrangements, new or more efficient technological or operational methods to control for the risks identified in Provision XIV.D of this Order, or any other circumstances that Respondents know or have reason to believe may have an impact on the effectiveness of the Program or any of their individual safeguards. At a minimum, Respondents must evaluate the Program at least once every 12 months and modify the Program based on the results.",
-            "deadline": null,
+            "description": "Evaluate and adjust the privacy program at least once every 12 months in light of changes to operations, business arrangements, new technological methods, or other circumstances that may affect the program's effectiveness, and modify the program based on the results",
+            "quoted_text": "F. Evaluate and adjust the Program in light of any changes to Respondents' operations or business airnngements, new or more efficient technological or operational methods to control for the risks identified in Provision XIV.D of this Order, or any other circumstances that Respondents know or have reason to believe may have an impact on the effectiveness of the Program or any of their individual safeguai·ds. At a minimum, Respondents must evaluate the Program at least once eve1y 12 months and modify the Program based on the results.",
+            "deadline": "Annual",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 505,
+            "quote_end_line": 510
           }
         ]
       },
@@ -571,28 +674,34 @@
         "provision_number": "XV",
         "title": "Acknowledgments of the Order",
         "category": "acknowledgment",
-        "summary": "Respondents must obtain acknowledgments of receipt of this Order from themselves, all personnel with managerial responsibilities, and any business entities resulting from structural changes.",
+        "summary": "Respondents must submit sworn acknowledgments of receipt of this Order within 10 days, deliver copies to key personnel within 10 days (and to future personnel before they assume responsibilities) for 5 years, and obtain signed acknowledgments from each recipient within 30 days.",
         "requirements": [
           {
             "description": "Within 10 days after the effective date, submit to the Commission acknowledgments of receipt of this Order sworn under penalty of perjury",
-            "quoted_text": "A. Respondents, within 10 days after the effective date of this Order, must submit to the Commission acknowledgments of receipt of this Order sworn under penalty of perjury.",
+            "quoted_text": "A. Respondents, within 10 days after the effective date of this Order, must submit to the Commission acknowledgments of receipt of this Order sworn under penalty of pe1jmy.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 514,
+            "quote_end_line": 515
           },
           {
-            "description": "For 5 years after issuance, deliver a copy of this Order to all principals, officers, directors, managers, employees and agents with managerial responsibilities, and any business entity resulting from structural changes, within 10 days for current personnel and before assumption of responsibilities for others",
-            "quoted_text": "B. For 5 years after the issuance date of this Order, Respondents must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees having managerial responsibilities for conduct related to the subject matter of this Order, and all agents and representatives having managerial responsibilities for the conduct related to the subject matter of this Order; and (3) any business entity resulting from any change in structure as set forth in Provision XVI titled Compliance Report and Notices. Delivery must occur within 10 days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "10 days",
+            "description": "For 5 years after the issuance date, deliver a copy of this Order to all principals, officers, directors, LLC managers and members, employees and agents with managerial responsibilities related to the Order's subject matter, and any business entity resulting from structural changes; delivery within 10 days for current personnel and before assuming responsibilities for all others",
+            "quoted_text": "B. For 5 years after the issuance date of this Order, Respondents must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees having managerial responsibilities for conduct related to the subject matter of this Order, and all agents and representatives having managerial responsibilities for the conduct related to the subject matter of this Order; and (3) any business entity resulting from any change in strncture as set forth in Provision XVI titled Compliance Report and Notices. Delive1y must occur within 10 days after the effective date of this Order for cunent personnel. For all others, delive1y must occur before they assume their responsibilities.",
+            "deadline": "10 days for current personnel; before assuming responsibilities for future personnel",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 519,
+            "quote_end_line": 526
           },
           {
-            "description": "Obtain within 30 days from each individual or entity to which Respondents delivered a copy of this Order a signed and dated acknowledgment of receipt",
+            "description": "From each individual or entity that received a copy of the Order, obtain a signed and dated acknowledgment of receipt within 30 days of delivery",
             "quoted_text": "C. From each individual or entity to which Respondents delivered a copy of this Order, Respondents must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 527,
+            "quote_end_line": 529
           }
         ]
       },
@@ -600,28 +709,52 @@
         "provision_number": "XVI",
         "title": "Compliance Report and Notices",
         "category": "compliance_reporting",
-        "summary": "Respondents must submit compliance reports and notices to the Commission, including an annual compliance report one year after issuance and notices within 14 days of designated changes.",
+        "summary": "Respondents must submit an annual compliance report one year after the issuance date, provide notices within 14 days of any changes to contact points or corporate structure, and submit notice within 14 days of any bankruptcy filing.",
         "requirements": [
           {
-            "description": "One year after issuance, submit a compliance report sworn under penalty of perjury with specified information about business activities and compliance",
-            "quoted_text": "A. One year after the issuance date of this Order, each of the Respondents must submit a compliance report, sworn under penalty of perjury, in which the Respondents must: (1) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondents; (2) identify all of the Respondents' businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (3) describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales; (4) describe in detail whether and how the Respondents are in compliance with each Provision of this Order, including a discussion of all of the changes the Respondents made to comply with the Order; and (5) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
-            "deadline": "One year",
+            "description": "One year after the issuance date, submit a sworn compliance report identifying contact information, business names and activities, compliance status for each Provision, and copies of Order acknowledgments",
+            "quoted_text": "A. One year after the issuance date of this Order, each of the Respondents must submit a compliance report, sworn under penalty of pe1jmy, in which the Respondents must: (1) identify the prima1y physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondents; (2) identify all of the Respondents' businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (3) describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales; (4 ) describe in detail whether and how the Respondents are in compliance with each Provision of this Order, including a discussion of all of the changes the Respondents made to comply with the Order; and (5) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 533,
+            "quote_end_line": 543
           },
           {
-            "description": "Submit a compliance notice within 14 days of any change in designated point of contact or structure of Respondents or any entity Respondents have ownership or control of",
-            "quoted_text": "B. The Respondents must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (1) any designated point of contact; or (2) the structure of the Respondents or any entity that Respondents have any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "description": "Submit a sworn compliance notice within 14 days of any change in designated point of contact or Respondents' corporate structure (including mergers, sales, or dissolution of subsidiaries, parents, or affiliates subject to this Order)",
+            "quoted_text": "B. The Respondents must submit a compliance notice, sworn under penalty of pe1jmy, within 14 days of any change in the following: (1) any designated point of contact; or (2) the structure of the Respondents or any entity that Respondents have any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidia1y, parent, or affiliate that engages in any acts or practices subject to this Order.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 544,
+            "quote_end_line": 549
           },
           {
-            "description": "Submit notice of bankruptcy petition, insolvency proceeding, or similar proceeding within 14 days of its filing",
-            "quoted_text": "C. The Respondents must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against either Respondent within 14 days of its filing.",
+            "description": "Submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding within 14 days of its filing",
+            "quoted_text": "C. The Respondents must submit notice of the filing of any bankrnptcy petition, insolvency proceeding, or similar proceeding by or against either Respondent within 14 days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 550,
+            "quote_end_line": 551
+          },
+          {
+            "description": "All submissions sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of pe1jmy must be hue and accurate and comply with 28 U.S.C. § 1746, such as by concluding: \"I declare under penalty of pe1jmy under the laws of the United States of America that the foregoing is hue and conect. Executed on: __\" and supplying the date, signato1y's full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 552,
+            "quote_end_line": 556
+          },
+          {
+            "description": "Unless otherwise directed, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the FTC's Associate Director for Enforcement, with a subject line beginning: In re X-Mode Social, Inc. & Outlogic, LLC., FTC File No. 212-3038",
+            "quoted_text": "E. Unless othe1wise directed by a Commission representative in writing, all submissions to 14 the Commission pmsuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight comier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bmeau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: In re X-Mode Social, Inc. & Outlogic, LLC., FTC File No. 212-3038.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 557,
+            "quote_end_line": 565
           }
         ]
       },
@@ -629,91 +762,106 @@
         "provision_number": "XVII",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondents must create and retain for 5 years specific records including accounting records, personnel records, consumer complaints, compliance-related communications, and records demonstrating full compliance with each provision of the Order.",
+        "summary": "Respondents must create and retain specified records for 5 years after the issuance date, including accounting records, personnel records, consumer complaints, law enforcement communications, representations about data practices, consent records, reminder records, supplier assessment records, sensitive location program records, deletion request records, and all records necessary to demonstrate full compliance.",
         "requirements": [
           {
-            "description": "Create certain records for 5 years after the issuance date and retain each such record for 5 years",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents must create certain records for 5 years after the issuance date of the Order, and retain each such record for 5 years.",
-            "deadline": null,
+            "description": "Create and retain accounting records showing revenues, costs, and net profit or loss from all goods or services sold for 5 years",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents must create ce1tain records for 5 years after the issuance date of the Order, and retain each such record for 5 years. Specifically, Respondents must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold, the costs incuned in generating those revenues, and resulting net profit or loss;",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 0.9812195121951219
+            "confidence": 1.0,
+            "quote_start_line": 567,
+            "quote_end_line": 571
           },
           {
-            "description": "Create and retain accounting records showing revenues, costs, and net profit or loss",
-            "quoted_text": "A. Accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss",
-            "deadline": null,
+            "description": "Create and retain personnel records for each person providing services showing name, addresses, telephone numbers, job title, dates of service, and reason for termination",
+            "quoted_text": "B. Personnel records showing, for each person providing services, whether as an employee or othe1wise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 572,
+            "quote_end_line": 574
           },
           {
-            "description": "Create and retain personnel records for each person providing services",
-            "quoted_text": "B. Personnel records showing, for each person providing services, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination",
-            "deadline": null,
+            "description": "Create and retain copies of all consumer complaints related to collection, use, maintenance, or disclosure of Covered Information and any responses",
+            "quoted_text": "C. Copies of all consumer complaints that relate to the collection, use, maintenance, or disclosme of Covered Infonnation, whether received directly or indirectly, such as through a third paity, and any response;",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 575,
+            "quote_end_line": 577
           },
           {
-            "description": "Create and retain copies of all consumer complaints related to collection, use, maintenance, or disclosure of Covered Information and any response",
-            "quoted_text": "C. Copies of all consumer complaints that relate to the collection, use, maintenance, or disclosure of Covered Information, whether received directly or indirectly, such as through a third party, and any response",
-            "deadline": null,
+            "description": "For 5 years from date received, retain copies of communications from law enforcement requesting information or documents relating to compliance with this Order",
+            "quoted_text": "D. For 5 years from the date received, copies of communications from law enforcement, if such communications request infonnation or documents relating to Respondents' compliance with this Order;",
+            "deadline": "5 years from date received",
             "verified": true,
-            "confidence": 0.9553731343283582
+            "confidence": 1.0,
+            "quote_start_line": 578,
+            "quote_end_line": 580
           },
           {
-            "description": "Retain for 5 years from date received copies of communications from law enforcement requesting information or documents relating to compliance with this Order",
-            "quoted_text": "D. For 5 years from the date received, copies of communications from law enforcement, if such communications request information or documents relating to Respondents' compliance with this Order",
-            "deadline": null,
+            "description": "Retain a copy of each widely disseminated representation describing Respondents' data supplier review practices, collection/use/disclosure of Covered Information, and Deidentification of Location Data",
+            "quoted_text": "E. A copy of each widely disseminated representation by either of the Respondents that describes the extent to which Respondents (i) review data suppliers' compliance and consent frameworks, consumer disclosmes, sample notices, and opt-in controls; (ii) the extent to which Respondents collect, use, maintain, disclose, or delete any Covered Infonnation; and (iii) the extent to which the Location Data that Respondents collect, use, maintain, or disclose is Deidentified;",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 581,
+            "quote_end_line": 586
           },
           {
-            "description": "Create and retain copies of each widely disseminated representation describing review of data suppliers, collection/use of Covered Information, or deidentification of Location Data",
-            "quoted_text": "E. A copy of each widely disseminated representation by either of the Respondents that describes the extent to which Respondents (i) review data suppliers' compliance and consent frameworks, consumer disclosures, sample notices, and opt-in controls; (ii) the extent to which Respondents collect, use, maintain, disclose, or delete any Covered Information; and (iii) the extent to which the Location Data that Respondents collect, use, maintain, or disclose is Deidentified",
-            "deadline": null,
+            "description": "Retain records showing Affirmative Express Consent for consumers or devices from which Location Data was collected through a Respondent App, including the specific notice viewed, and the time and date of consent",
+            "quoted_text": "F. Records showing Affnmative Express Consent for any individual consumers or device from which Respondents have collected Location Data through a Respondent App, the specific notice that individual consumers viewed and consented to, and the time and date of consent;",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 587,
+            "quote_end_line": 589
           },
           {
-            "description": "Create and retain records showing Affirmative Express Consent for individual consumers or devices from which Location Data was collected through a Respondent App",
-            "quoted_text": "F. Records showing Affirmative Express Consent for any individual consumers or device from which Respondents have collected Location Data through a Respondent App, the specific notice that individual consumers viewed and consented to, and the time and date of consent",
-            "deadline": null,
+            "description": "Retain records showing the content and verifying the distribution of Clear and Conspicuous reminders to consumers under Provision VI.C",
+            "quoted_text": "G. Records showing the content and verifying the distribution of Clear and Conspicuous reminders to individual consumers under Provision VI.C;",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 590,
+            "quote_end_line": 591
           },
           {
-            "description": "Create and retain records showing content and distribution of quarterly reminders to consumers",
-            "quoted_text": "G. Records showing the content and verifying the distribution of Clear and Conspicuous reminders to individual consumers under Provision VI.C",
-            "deadline": null,
+            "description": "Retain records showing Respondents' implementation of the Supplier Assessment Program required by Provision VII",
+            "quoted_text": "H. Records showing the Respondents' implementation of Supplier Assessment Program required by Provision VII;",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 592,
+            "quote_end_line": 593
           },
           {
-            "description": "Create and retain records showing implementation of Supplier Assessment Program",
-            "quoted_text": "H. Records showing the Respondents' implementation of Supplier Assessment Program required by Provision VII",
-            "deadline": null,
+            "description": "Retain records showing Respondents' implementation of the Sensitive Location Data Program required by Provision III",
+            "quoted_text": "I. Records showing Respondents' implementation of the Sensitive Location Data Program required by Provision III;",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 594,
+            "quote_end_line": 595
           },
           {
-            "description": "Create and retain records showing implementation of Sensitive Location Data Program",
-            "quoted_text": "I. Records showing Respondents' implementation of the Sensitive Location Data Program required by Provision III",
-            "deadline": null,
+            "description": "Retain records showing Respondents' processing of consumer deletion requests as provided in Provision VIII",
+            "quoted_text": "J. Records showing Respondent's processing of consumer deletion requests as provided in 15 Provision VIII; and",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 596,
+            "quote_end_line": 600
           },
           {
-            "description": "Create and retain records showing processing of consumer deletion requests",
-            "quoted_text": "J. Records showing Respondent's processing of consumer deletion requests as provided in Provision VIII",
-            "deadline": null,
+            "description": "Retain all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
+            "quoted_text": "K. All records necessaiy to demonstrate full compliance with each provision of this Order, including all submissions to the Commission.",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 0.9466666666666667
-          },
-          {
-            "description": "Create and retain all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
-            "quoted_text": "K. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 601,
+            "quote_end_line": 602
           }
         ]
       },
@@ -721,28 +869,34 @@
         "provision_number": "XVIII",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission has the right to monitor compliance by requesting additional reports and information, interviewing personnel, and using other lawful investigative means including posing as consumers or suppliers.",
+        "summary": "The FTC may monitor Respondents' compliance by requesting additional reports and records within 14 days, communicating directly with and interviewing affiliated individuals, and using other lawful means including undercover methods.",
         "requirements": [
           {
-            "description": "Within 14 days of written request from Commission representative, submit additional compliance reports or other requested information sworn under penalty of perjury and produce records for inspection",
-            "quoted_text": "A. Within 14 days of receipt of a written request from a representative of the Commission, the Respondents must submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
+            "description": "Within 14 days of receipt of a written request from a Commission representative, submit additional compliance reports, sworn information, and produce records for inspection and copying",
+            "quoted_text": "A. Within 14 days of receipt of a written request from a representative of the Commission, the Respondents must submit additional compliance reports or other requested info1mation, which must be sworn under penalty of pe1jmy, and produce records for inspection and copying.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 606,
+            "quote_end_line": 608
           },
           {
-            "description": "Commission representatives are authorized to communicate directly with Respondents and Respondents must permit interviews of anyone affiliated with Respondents who has agreed",
-            "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondents. Respondents must permit representatives of the Commission to interview anyone affiliated with Respondents who has agreed to such an interview.",
+            "description": "Permit Commission representatives to communicate directly with Respondents and interview anyone affiliated with Respondents who has agreed to such an interview (interviewee may have counsel present)",
+            "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondents. Respondents must pe1mit representatives of the Commission to interview anyone affiliated with Respondents who has agreed to such an interview. The interviewee may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 609,
+            "quote_end_line": 612
           },
           {
-            "description": "Commission may use all lawful means including posing as consumers, suppliers, or other entities without identification or prior notice",
-            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondents or any individual or entity affiliated with Respondents, without the necessity of identification or prior notice.",
+            "description": "The Commission may use all other lawful means, including posing as consumers, suppliers, or other individuals/entities, without identification or prior notice, and may use compulsory process under Sections 9 and 20 of the FTC Act",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondents or any individual or entity affiliated with Respondents, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulso1y process, pmsuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 613,
+            "quote_end_line": 617
           }
         ]
       },
@@ -750,21 +904,25 @@
         "provision_number": "XIX",
         "title": "Order Effective Dates",
         "category": "duration",
-        "summary": "The Order is final and effective upon publication on the FTC website and will terminate 20 years from the date of issuance, with specified exceptions and extension provisions.",
+        "summary": "This Order is final and effective upon publication on ftc.gov and terminates 20 years from issuance or 20 years from the most recent date the Commission files a complaint alleging a violation, whichever is later.",
         "requirements": [
           {
-            "description": "Order is final and effective upon date of publication on ftc.gov as a final order",
-            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order.",
+            "description": "Order is final and effective upon publication on the Commission's website as a final order",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order. This Order will te1minate 20",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 619,
+            "quote_end_line": 620
           },
           {
-            "description": "Order will terminate 20 years from issuance date or 20 years from most recent date of federal complaint alleging violation, whichever comes later",
-            "quoted_text": "This Order will terminate 20 years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later",
-            "deadline": null,
+            "description": "Order terminates 20 years from the date of issuance or 20 years from the most recent date the Commission files a complaint alleging a violation, whichever comes later; with exceptions for provisions that terminate sooner, non-defendant Respondents, and complaints filed after Order termination",
+            "quoted_text": "publication on the Commission's website (ftc.gov) as a final order. This Order will te1minate 20 years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal comi alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the dmation of: A. Any Provision in this Order that te1minates in less than 20 yeai·s; B. This Order's application to any Respondents that are not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has te1minated pmsuant to this Provision. Provided, further, that if such complaint is dismissed or a federal comi rnles that the Respondents did not violate any provision of the Order, and the dismissal or rnling is either not appealed or upheld on appeal, then the Order will tenninate according to this Provision as though the complaint had never been filed, except that the Order will not te1minate between the date such complaint is filed and the later of the deadline for appealing such dismissal or rnling and the 16 date such dismissal or mling is upheld on appeal.",
+            "deadline": "20 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 620,
+            "quote_end_line": 639
           }
         ]
       }
@@ -784,8 +942,40 @@
       "complaint_representations": 4,
       "order_provisions": 19,
       "order_definitions": 16,
-      "order_requirements": 71
+      "order_requirements": 71,
+      "provisions_per_section": {
+        "I": 2,
+        "II": 1,
+        "III": 9,
+        "IV": 5,
+        "V": 1,
+        "VI": 3,
+        "VII": 5,
+        "VIII": 2,
+        "IX": 2,
+        "X": 1,
+        "XI": 1,
+        "XII": 3,
+        "XIII": 3,
+        "XIV": 9,
+        "XV": 3,
+        "XVI": 5,
+        "XVII": 11,
+        "XVIII": 3,
+        "XIX": 2
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 2
+      },
+      "verification_details": {
+        "complaint_verified": 4,
+        "complaint_total": 4,
+        "order_verified": 71,
+        "order_total": 71
+      }
     },
-    "processing_time_seconds": 564.4
+    "processing_time_seconds": 12288.9
   }
 }

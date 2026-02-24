@@ -6,7 +6,7 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "501 Boylston Street, Suite 6101, Boston, Massachusetts",
-      "business_description": "Compete is a market research company that collects data from consumers to develop and sell analytical reports about consumer behavior on the Internet. It operated the Compete Toolbar and Consumer Input Panel to gather consumer browsing data and opinions."
+      "business_description": "Compete is a market research company that collects data from consumers to develop and sell analytical reports about consumer behavior on the Internet. The company distributed data collection software through products such as the Compete Toolbar and Consumer Input Panel, and licensed its data collection software to third parties."
     },
     "commissioners": [
       "Jon Leibowitz, Chairman",
@@ -15,67 +15,99 @@
       "Maureen K. Ohlhausen",
       "Joshua D. Wright"
     ],
-    "date_issued": "2012-12-20",
+    "case_date": {
+      "month": 2,
+      "year": 2013
+    },
     "legal_authority": "Section 5 of the Federal Trade Commission Act, 15 U.S.C. § 45 et seq.",
-    "violation_type": "both",
+    "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/102-3155-compete-inc"
   },
   "complaint": {
-    "factual_background": "Compete, Inc., a market research company, collected extensive consumer data through toolbars and rewards programs while misleading consumers about what information was being collected and how it was protected. The company captured sensitive information including credit card numbers, Social Security numbers, passwords, and financial account data from secure web pages, transmitted this data in clear readable text over the Internet, and failed to implement adequate filters to remove personally identifiable information despite promising to do so.",
+    "factual_background": "Compete, Inc., a market research company, collected data from over 4 million consumers through toolbars and rewards programs while misrepresenting the scope and security of its data collection. The company claimed it would only collect website addresses and would strip all personal information before transmission, but it actually captured extensive sensitive data including credit card numbers, financial account information, Social Security numbers, and passwords from secure sessions. Compete transmitted this sensitive information in clear readable text over the Internet without reasonable security measures, creating unnecessary risks of unauthorized access and potential identity theft.",
     "representations_made": [
       {
-        "description": "Claimed to collect only web page addresses that consumers visit",
-        "quoted_text": "When you download Compete software, including the Compete Toolbar, you will be given the option of enabling click-sharing. Should you opt-in to click-sharing you will begin to anonymously share the addresses of the web pages you visit online.",
-        "source_paragraph": 9
+        "description": "Claimed that enabling Community Share would allow web pages visited to be anonymously pooled to provide site trust rankings and analytics",
+        "quoted_text": "By joining Community Share, the web pages you visit will be anonymously pooled with the Compete community to provide site trust rankings and analytics.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 7,
+        "quote_start_line": 51,
+        "quote_end_line": 53
       },
       {
-        "description": "Claimed to anonymously transmit only aspects of Internet browsing behavior",
+        "description": "Stated that the software would anonymously transmit aspects of Internet browsing behavior",
         "quoted_text": "[W]e measure your behavior as well as your opinions. Consumer Input utilizes a piece of software stored on your computer that anonymously transmits aspects of your Internet browsing behavior so that we can understand the sites, products and services you interact with.",
-        "source_paragraph": 8
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 8,
+        "quote_start_line": 59,
+        "quote_end_line": 63
+      },
+      {
+        "description": "Represented that users would anonymously share the addresses of web pages visited online if they opted in to click-sharing",
+        "quoted_text": "When you download Compete software, including the Compete Toolbar, you will be given the option of enabling click-sharing. Should you opt-in to click-sharing you will begin to anonymously share the addresses of the web pages you visit online.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 72,
+        "quote_end_line": 75
       },
       {
         "description": "Claimed that all data is stripped of personally identifiable information before transmission to servers",
         "quoted_text": "All data is stripped of personally identifiable information before it is transmitted to our servers. Our data collection techniques have been designed to purge personally identifiable information wherever we find it. In addition, as a member of Compete you are assigned a randomly generated user ID ensuring your anonymity.",
-        "source_paragraph": 13
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 13,
+        "quote_start_line": 95,
+        "quote_end_line": 99
       },
       {
-        "description": "Claimed to use a proprietary rules engine to strip out personally identifiable information before transmission",
-        "quoted_text": "The data collection software uses a proprietary rules engine to search through all URLs, before transmitting them to its database, to strip out any such personally identifiable information. We do not disclose the contents of individual URLs stored in our databases so we will not release or use this information.",
-        "source_paragraph": 14
+        "description": "Represented that the data collection software uses a proprietary rules engine to strip out personally identifiable information before transmitting to the database",
+        "quoted_text": "The data collection software uses a proprietary rules engine to search through all URLs, before transmitting them to its database, to strip out any such personally identifiable information. We do not disclose the contents of individual URLs stored in our databases so we will not release or use this information. Further, we aggregate data on hundreds of thousands of users before supplying data to our clients, thereby ensuring that an individual’s privacy remains intact at all times.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 14,
+        "quote_start_line": 114,
+        "quote_end_line": 121
       },
       {
-        "description": "Claimed to take reasonable security measures to protect against unauthorized access to personal information",
+        "description": "Claimed to take reasonable security measures to protect against unauthorized access to or unauthorized alteration, disclosure or destruction of personal information",
         "quoted_text": "We take reasonable security measures to protect against unauthorized access to or unauthorized alteration, disclosure or destruction of personal information. These measures include internal reviews of our data collection, storage and processing practices and security practices.",
-        "source_paragraph": 16
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 16,
+        "quote_start_line": 141,
+        "quote_end_line": 145
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Deceptive Omission About Data Collection Scope",
-        "representation": "Compete represented that its products would collect and transmit information about the websites consumers visited",
-        "fact": "Compete failed to disclose that its products would also collect and transmit much more extensive information about Internet behavior including information consumers provided in secure sessions such as credit card and financial account numbers, security codes and expiration dates, and Social Security numbers",
-        "conclusion": "Respondent's failure to disclose these facts, in light of the representations made, was, and is, a deceptive act or practice."
+        "title": "Failure to Disclose Extent of Data Collection",
+        "representation": "Represented that its products would collect and transmit information about the websites consumers visited",
+        "fact": "Products collected and transmitted much more extensive information including Internet behavior, information from secure sessions, credit card and financial account numbers, security codes, expiration dates, and Social Security numbers. Respondent failed to disclose this extensive data collection.",
+        "conclusion": "Respondent's failure to disclose these material facts, in light of the representations made, was, and is, a deceptive act or practice."
       },
       {
         "count_number": 2,
-        "title": "False Representation About Data Filtering",
-        "representation": "Compete represented that it stripped all personal information out of the data it collected before transmitting it from consumers' computers",
-        "fact": "Compete did not strip all personal information out of the data before transmitting it from consumers' computers. The consumer-side filters were too narrow and improperly structured to effectively scrub personal data before transmission to Compete's servers",
+        "title": "False Claims About Data Filtering",
+        "representation": "Represented that it stripped all personal information out of the data it collected before transmitting it from consumers' computers",
+        "fact": "Compete did not strip all personal information out of the data before transmission. The consumer-side filters were too narrow and improperly structured to effectively scrub personal data before transmission to Compete's servers.",
         "conclusion": "Therefore, the representation set forth in Paragraph 22 was, and is, false or misleading and constitutes a deceptive act or practice."
       },
       {
         "count_number": 3,
-        "title": "False Representation About Data Security",
-        "representation": "Compete represented that it employs reasonable and appropriate measures to protect data obtained from consumers from unauthorized access",
-        "fact": "Compete did not implement reasonable and appropriate measures to protect data obtained from consumers from unauthorized access, including transmitting sensitive information in clear readable text, failing to design and implement reasonable safeguards, and failing to use readily available low-cost measures to prevent collection of sensitive data",
+        "title": "False Security Claims",
+        "representation": "Represented that it employs reasonable and appropriate measures to protect data obtained from consumers from unauthorized access",
+        "fact": "Respondent did not implement reasonable and appropriate measures to protect data. It transmitted sensitive information in clear readable text, failed to design reasonable information safeguards, and failed to use readily available measures to prevent collection of unauthorized sensitive information.",
         "conclusion": "Therefore, the representation set forth in Paragraph 24 was, and is, false or misleading and constitutes a deceptive act or practice."
       },
       {
         "count_number": 4,
         "title": "Unfair Data Security Practices",
-        "representation": "Not applicable - this count alleges unfair practices rather than false representations",
-        "fact": "Respondent's failure to employ reasonable and appropriate measures to protect consumer information including credit card and financial account numbers, security codes and expiration dates, and Social Security numbers caused or was likely to cause substantial injury to consumers that was not offset by countervailing benefits to consumers or competition and was not reasonably avoidable by consumers",
+        "representation": "Respondent's failure to employ reasonable and appropriate measures to protect consumer information including credit card numbers, financial account numbers, security codes, expiration dates, and Social Security numbers",
+        "fact": "This failure caused or was likely to cause substantial injury to consumers that was not offset by countervailing benefits to consumers or competition and was not reasonably avoidable by consumers",
         "conclusion": "This practice was, and is, an unfair act or practice."
       }
     ]
@@ -83,92 +115,110 @@
   "order": {
     "definitions": {
       "Affected Consumers": "persons who, prior to the date of issuance of this order, downloaded and installed any Data Collection Agent, including but not limited to the Compete Toolbar and Consumer Input Panel software.",
-      "Clearly and prominently": "A. In textual communications (e.g., printed publications or words displayed on the screen of a computer or a mobile device), the required disclosures are of a type, size, and location sufficiently noticeable for an ordinary consumer to read and comprehend them, in print that contrasts highly with the background on which they appear; B. In communications disseminated orally or through audible means (e.g., radio or streaming audio), the required disclosures are delivered in a volume and cadence sufficient for an ordinary consumer to hear and comprehend them; C. In communications disseminated through video means (e.g., television or streaming video), the required disclosures are in writing in a form consistent with subparagraph (A) of this definition and shall appear on the screen for a duration sufficient for an ordinary consumer to read and comprehend them; D. In communications made through interactive media, such as the Internet, online services, and software, the required disclosures are unavoidable and presented in a form consistent with subparagraph (A) of this definition, in addition to any audio or video presentation of them; and E. In all instances, the required disclosures are presented in an understandable language and syntax; in the same language as the predominant language that is used in the communication; and with nothing contrary to, inconsistent with, or in mitigation of the disclosures used in any communication of them.",
+      "Clearly and prominently": "as follows: A. In textual communications (e.g., printed publications or words displayed on the screen of a computer or a mobile device), the required disclosures are of a type, size, and location sufficiently noticeable for an ordinary consumer to read and comprehend them, in print that contrasts highly with the background on which they appear; B. In communications disseminated orally or through audible means (e.g., radio or streaming audio), the required disclosures are delivered in a volume and cadence sufficient for an ordinary consumer to hear and comprehend them; C. In communications disseminated through video means (e.g., television or streaming video), the required disclosures are in writing in a form consistent with subparagraph (A) of this definition and shall appear on the screen for a duration sufficient for an ordinary consumer to read and comprehend them; D. In communications made through interactive media, such as the Internet, online services, and software, the required disclosures are unavoidable and presented in a form consistent with subparagraph (A) of this definition, in addition to any audio or video presentation of them; and E. In all instances, the required disclosures are presented in an understandable language and syntax; in the same language as the predominant language that is used in the communication; and with nothing contrary to, inconsistent with, or in mitigation of the disclosures used in any communication of them.",
       "Collected Information": "any information transmitted, on or before the date of issuance of this order, from a computer by a Data Collection Agent to any computer server owned by, operated by, or operated for the benefit of respondent.",
       "Commerce": "as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44.",
       "Computer": "any desktop, laptop computer, tablet, handheld device, telephone, or other electronic product or device that has a platform on which to download, install, or run any software program, code, script, or other content and to play any digital audio, visual, or audiovisual content.",
       "Data Collection Agent": "any software program, including any application; created, licensed or distributed, directly or through a Third Party, by respondent; installed on consumers' computers, whether as a standalone product or as a feature of another product; and used to record, or transmit information about any activity occurring on that computer, unless: (a) the activity involves transmission of information related to the configuration of the software program or application itself; (b) the transmission is limited to information about whether the program is functioning as intended; or (c) the activity involves a consumer's interactions with respondent's websites and/or forms. The Compete Toolbar and the Consumer Input Panel software, for example, are both Data Collection Agents.",
       "Personal Information": "individually identifiable information from or about an individual consumer including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) a telephone number; (e) a Social Security number; (f) a driver's license number or other government-issued identification number; (g) a bank account, debit card, or credit card account number; (h) a persistent identifier, such as a customer number held in a \"cookie\" or static IP address; or (i) a biometric record.",
       "Third Party": "any individual or entity other than respondent, except that a third party shall not include a service provider of respondent that: A. Only uses or receives information collected by or on behalf of respondent for and at the direction of the respondent and no other individual or entity; B. Does not disclose the information, or any individually identifiable information derived from it, to any individual or entity other than respondent; and C. Does not use the information for any other purpose.",
-      "respondent": "Compete, Inc., and its successors and assigns, and its officers, agents, representatives, and employees."
+      "Respondent": "Compete, Inc., and its successors and assigns, and its officers, agents, representatives, and employees."
     },
     "provisions": [
       {
         "provision_number": "I",
         "title": "Prohibition on Data Collection Without Consent",
         "category": "prohibition",
-        "summary": "Respondent is prohibited from collecting information from Data Collection Agents without prior clear and prominent disclosure and express affirmative consent from consumers.",
+        "summary": "Respondent is prohibited from collecting information from Data Collection Agents unless specific disclosures are made and express affirmative consent is obtained from consumers.",
         "requirements": [
           {
-            "description": "Must not collect information from new Data Collection Agents without disclosure and consent",
-            "quoted_text": "IT IS ORDERED that respondent, directly or indirectly, including through any contract, agreement, license, sale, or arrangement with any Third Party, is prohibited from: A. Collecting any information from any Data Collection Agent made available to consumers directly by respondent after the date of service of this order, unless prior to such collection respondent has: 1. Disclosed to the consumer clearly and prominently, and prior to the display of and on a separate screen from, any \"end user license agreement,\" \"privacy policy,\" \"terms of use\" page, or similar document: a) all the types of information that will be collected, including, but not limited to, if applicable, a statement that the information includes consumer transactions (both completed and incomplete) or communications in forms, online accounts, web-based email accounts, or search engine pages, and whether the information includes personal, financial or health information; and b) how the information is to be used, including if it is shared with any Third Party; and 2. Obtained express affirmative consent from the consumer to the collection, use or sharing of the information.",
+            "description": "Must not collect information from Data Collection Agents made available directly to consumers after the order date unless prior disclosures are made clearly and prominently on a separate screen from any EULA, privacy policy, or terms of use, including all types of information to be collected and how it will be used, and express affirmative consent is obtained",
+            "quoted_text": "A. Collecting any information from any Data Collection Agent made available to consumers directly by respondent after the date of service of this order, unless prior to such collection respondent has: 1. Disclosed to the consumer clearly and prominently, and prior to the display of and on a separate screen from, any “end user license agreement,” “privacy policy,” “terms of use” page, or similar document: a) all the types of information that will be collected, including, but not limited to, if applicable, a statement that the information includes consumer transactions (both completed and incomplete) or communications in forms, online accounts, web-based email accounts, or search engine pages, and whether the information includes personal, financial or health information; and b) how the information is to be used, including if it is shared with any Third Party; and 2. Obtained express affirmative consent from the consumer to the collection, use or sharing of the information.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 118,
+            "quote_end_line": 133
           },
           {
-            "description": "Must not collect information from Third Party Data Collection Agents without disclosure and consent",
+            "description": "Must not collect information from Data Collection Agents made available by Third Parties unless prior disclosures are provided and consent obtained, or respondent has required the Third Party by contract to do so and monitored compliance",
             "quoted_text": "B. Collecting any information from any Data Collection Agent made available to consumers by a Third Party after the date of service of this order, unless prior to such collection respondent has provided the disclosures and obtained the consent described in subpart A(1-2), or has both required the Third Party by contract to do so, and monitored compliance with such contractual provisions.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 134,
+            "quote_end_line": 138
           },
           {
-            "description": "Must not collect information from pre-existing Data Collection Agents without consent or aggregate/anonymous use only",
-            "quoted_text": "C. Collecting any information from any Data Collection Agent that was made available to consumers before the date of service of this order, unless it has made the disclosures and obtained the express affirmative consent described in subpart A(1-2) or: 1. It has made the disclosure required by Part II(A)(3); and 2. It does not use information collected from an Affected Consumer by a Data Collection Agent, except in an aggregate and/or anonymous form that does not disclose, report, or otherwise share any individually identifiable information.",
+            "description": "Must not collect information from Data Collection Agents made available before the order date unless disclosures and consent are obtained, or the Part II(A)(3) disclosure is made and information is only used in aggregate/anonymous form",
+            "quoted_text": "C. Collecting any information from any Data Collection Agent that was made available to consumers before the date of service of this order, unless it has made the disclosures and obtained the express affirmative consent described in subpart A(1-2) or: 1. It has made the disclosure required by Part II(A)(3); and 2. It does not use information collected from an Affected Consumer by a Data Collection Agent, except in an aggregate and/or anonymous form Page 4 of 11 that does not disclose, report, or otherwise share any individually identifiable information.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 139,
+            "quote_end_line": 150
           },
           {
-            "description": "Must not use Collected Information gathered on or after February 1, 2010 without consent or in aggregate/anonymous form only",
-            "quoted_text": "D. Using any Collected Information gathered on or after February 1, 2010, unless it has obtained express affirmative consent from the consumer to the use of the Collected Information, or 1. It does not use the Collected Information, except in an aggregate and/or anonymous form that does not disclose, report, or otherwise share any individually identifiable information; and 2. It does not otherwise access any Affected Consumer's personal information that was collected by a Data Collection Agent.",
+            "description": "Must not use Collected Information gathered on or after February 1, 2010, unless express affirmative consent is obtained or the information is used only in aggregate/anonymous form and no Affected Consumer's personal information is accessed",
+            "quoted_text": "D. Using any Collected Information gathered on or after February 1, 2010, unless it has obtained express affirmative consent from the consumer to the use of the Collected Information, or 1. It does not use the Collected Information, except in an aggregate and/or anonymous form that does not disclose, report, or otherwise share any individually identifiable information; and 2. It does not otherwise access any Affected Consumer’s personal information that was collected by a Data Collection Agent.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 151,
+            "quote_end_line": 158
           },
           {
-            "description": "Must not make material changes to stated practices without consent",
+            "description": "Must not make any material change from stated practices about collection, use, or sharing of information unless express affirmative consent is obtained",
             "quoted_text": "E. Making any material change from stated practices about collection, use or sharing of such information, unless it has obtained express affirmative consent from the consumer.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 159,
+            "quote_end_line": 161
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Notification to Affected Consumers",
+        "title": "Consumer Notification and Support",
         "category": "affirmative_obligation",
-        "summary": "Respondent must notify Affected Consumers that a Data Collection Agent was installed and how to disable/uninstall it, through website notices, consumer inquiries, and direct computer notifications.",
+        "summary": "Respondent must notify Affected Consumers that Data Collection Agents were installed and transmitted information, and provide instructions and support for disabling/uninstalling the software.",
         "requirements": [
           {
-            "description": "Post notice on website for two years",
-            "quoted_text": "IT IS FURTHER ORDERED that Compete, Inc., and its successors and assigns, shall: A. Notify Affected Consumers: 1) that they have or had a Data Collection Agent installed on their Computers, and that this software collected and transmitted information to or on behalf of respondent, listing the categories of personal information that were, or could have been, transmitted by a Data Collection Agent; and 2) how to permanently disable and/or uninstall the Data Collection Agent. Notification shall be by each of the following means: 1. On or before thirty (30) days after the date of service of this order and for two (2) years after the date of service of this order, posting of a clear and prominent notice on the websites of Compete, Inc., and its successors and assigns;",
+            "description": "Post a clear and prominent notice on respondent's websites notifying Affected Consumers about the Data Collection Agent and how to disable/uninstall it",
+            "quoted_text": "1. On or before thirty (30) days after the date of service of this order and for two (2) years after the date of service of this order, posting of a clear and prominent notice on the websites of Compete, Inc., and its successors and assigns;",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 175,
+            "quote_end_line": 178
           },
           {
-            "description": "Inform consumers who complain or inquire for three years",
-            "quoted_text": "2. On or before thirty (30) days after the date of service of this order and for three (3) years after the date of service of this order, informing Affected Consumers who complain or inquire about the privacy or security of a Data Collection Agent;",
+            "description": "Inform Affected Consumers who complain or inquire about privacy or security of a Data Collection Agent",
+            "quoted_text": "2. On or before thirty (30) days after the date of service of this order and for three (3) years after the date of service of this order, informing Affected Consumers who complain or inquire about the privacy or security of a Data Collection Agent; and",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 179,
+            "quote_end_line": 182
           },
           {
-            "description": "Provide direct notice to Affected Consumers' computers",
-            "quoted_text": "3. Beginning only once notification described in both subparts II(A)(1) and (2) above have commenced, and completed on or before sixty (60) days after the date of service of this order, providing clear and prominent notice to consumers via Affected Consumers' computers on which a Data Collection Agent is operating, through the browser, software upgrade or similar technology, that: a) is visible until the consumer has taken action in response to the notice; b) includes a hyperlink and/or the address for a website of Compete, Inc., and its successors or assigns; and c) includes the name of the company from whom the consumer obtained the Data Collection Agent, or the brand name (as marketed to the consumer) of the software or application containing the Data Collection Agent, and an explanation that Compete provides technology for the specific Data Collection Agent.",
+            "description": "Provide clear and prominent notice to Affected Consumers via their computers where Data Collection Agent is operating, through browser, software upgrade or similar technology, that is visible until consumer takes action, includes hyperlink/address to respondent's website, and identifies the company/brand from whom consumer obtained the agent",
+            "quoted_text": "3. Beginning only once notification described in both subparts II(A)(1) and (2) above have commenced, and completed on or before sixty (60) days after the date of service of this order, providing clear and prominent notice to consumers via Affected Consumers’ computers on which a Data Collection Agent is operating, through the browser, software upgrade or similar technology, that: a) is visible until the consumer has taken action in response to the notice; b) includes a hyperlink and/or the address for a website of Compete, Inc., and its successors or assigns; and c) includes the name of the company from whom the consumer obtained the Data Collection Agent, or the brand name (as marketed to the consumer) of the software or application containing the Data Collection Agent, and an explanation that Compete provides technology for the specific Data Collection Agent.",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 186,
+            "quote_end_line": 201
           },
           {
-            "description": "Provide free support to help consumers disable/uninstall for two years",
+            "description": "Provide prompt and free support with clear and prominent contact information to help consumers disable/uninstall Data Collection Agent, including toll-free telephonic and email support for two years",
             "quoted_text": "B. Provide prompt and free support with clear and prominent contact information to help consumers disable and/or uninstall a Data Collection Agent. For two (2) years after the date of service of this order, this support shall include toll-free, telephonic and electronic mail support.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 202,
+            "quote_end_line": 205
           }
         ]
       },
@@ -176,36 +226,42 @@
         "provision_number": "III",
         "title": "Service of Order on Third Parties",
         "category": "acknowledgment",
-        "summary": "Respondent must serve a copy of the order to Third Parties involved with Data Collection Agents.",
+        "summary": "Respondent must serve Third Parties with a copy of this order before entering into or for existing contracts related to Data Collection Agents.",
         "requirements": [
           {
-            "description": "Serve order on Third Parties before entering new contracts",
-            "quoted_text": "IT IS FURTHER ORDERED that before entering into any contract, agreement, license, sale, or arrangement with any Third Party in connection with any Data Collection Agent made available to consumers by such Third Party, Compete, Inc., and its successors and assigns, shall serve the Third Party with a copy of this order.",
+            "description": "Serve Third Parties with a copy of this order before entering into any contract, agreement, license, sale, or arrangement related to Data Collection Agents made available by such Third Party",
+            "quoted_text": "IT IS FURTHER ORDERED that before entering into any contract, agreement, license, sale, or arrangement with any Third Party in connection with any Data Collection Agent made available to consumers by such Third Party, Compete, Inc., and its successors and assigns, shall serve the Third Party with a copy of this order. For any existing contract, agreement, license, sale, or arrangement with any Third Party in connection with any Data Collection Agent made available to consumers by such Third Party, respondent shall serve the Third Party with a copy",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 207,
+            "quote_end_line": 212
           },
           {
-            "description": "Serve order on Third Parties with existing contracts",
-            "quoted_text": "For any existing contract, agreement, license, sale, or arrangement with any Third Party in connection with any Data Collection Agent made available to consumers by such Third Party, respondent shall serve the Third Party with a copy of this order within 30 days of service of this order.",
+            "description": "Serve Third Parties with a copy of this order for any existing contracts related to Data Collection Agents made available by such Third Party",
+            "quoted_text": "sale, or arrangement with any Third Party in connection with any Data Collection Agent made available to consumers by such Third Party, respondent shall serve the Third Party with a copy of this order within 30 days of service of this order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 211,
+            "quote_end_line": 213
           }
         ]
       },
       {
         "provision_number": "IV",
-        "title": "Prohibition Against Misrepresentations About Security and Privacy",
+        "title": "Prohibition Against Misrepresentations About Data Security and Privacy",
         "category": "prohibition",
         "summary": "Respondent must not misrepresent the extent to which it collects, maintains, and protects the security, privacy, confidentiality, or integrity of consumer information.",
         "requirements": [
           {
-            "description": "Must not misrepresent security, privacy, confidentiality, or integrity of consumer information",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent, directly or through any corporation, subsidiary, division, website, or other device, in connection with the offering of any service or product in or affecting commerce, shall not make any representation, in any manner, expressly or by implication, about the extent to which respondent collects, maintains and protects the security, privacy, confidentiality, or integrity of any information collected from or about consumers, unless the representation is true, and non-misleading.",
+            "description": "Must not make any representation about the extent to which respondent collects, maintains and protects the security, privacy, confidentiality, or integrity of any information collected from or about consumers, unless the representation is true and non-misleading",
+            "quoted_text": "product in or affecting commerce, shall not make any representation, in any manner, expressly or by implication, about the extent to which respondent collects, maintains and protects the security, privacy, confidentiality, or integrity of any information collected from or about consumers, unless the representation is true, and non-misleading.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 217,
+            "quote_end_line": 220
           }
         ]
       },
@@ -213,49 +269,61 @@
         "provision_number": "V",
         "title": "Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondent must establish and maintain a comprehensive information security program to protect the security, privacy, confidentiality, and integrity of personal information.",
+        "summary": "Respondent must establish, implement, and maintain a comprehensive information security program with administrative, technical, and physical safeguards to protect personal information.",
         "requirements": [
           {
-            "description": "Establish and maintain comprehensive information security program",
-            "quoted_text": "IT IS FURTHER ORDERED that Compete, Inc., and its successors and assigns; directly or through any corporation, subsidiary, division, website, or other device; in connection with its advertising, marketing, promotion, or offering of any product or service, in or affecting commerce; shall no later than the date of service of this order, establish and implement, and thereafter maintain a comprehensive information security program that is reasonably designed to protect the security, privacy, confidentiality, and integrity of personal information collected from or about consumers. Such program, the content and implementation of which must be fully documented in writing, shall contain administrative, technical, and physical safeguards appropriate to respondent's size and complexity and the nature and scope of respondent's activities, and the sensitivity of the personal information collected from or about consumers",
-            "deadline": "date of service",
+            "description": "Establish and implement a comprehensive information security program that is reasonably designed to protect the security, privacy, confidentiality, and integrity of personal information, fully documented in writing, with administrative, technical, and physical safeguards appropriate to respondent's size, complexity, and the sensitivity of personal information",
+            "quoted_text": "commerce; shall no later than the date of service of this order, establish and implement, and thereafter maintain a comprehensive information security program that is reasonably designed to protect the security, privacy, confidentiality, and integrity of personal information collected from or about consumers. Such program, the content and implementation of which must be fully documented in writing, shall contain administrative, technical, and physical safeguards appropriate to respondent’s size and complexity and the nature and scope of respondent's activities, and the sensitivity of the personal information collected from or about consumers, including:",
+            "deadline": "upon service",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 228,
+            "quote_end_line": 235
           },
           {
-            "description": "Designate employee(s) to coordinate security program",
+            "description": "Designate an employee or employees to coordinate and be accountable for the information security program",
             "quoted_text": "A. The designation of an employee or employees to coordinate and be accountable for the information security program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 236,
+            "quote_end_line": 237
           },
           {
-            "description": "Identify and assess internal and external risks",
+            "description": "Identify material internal and external risks to personal information and assess the sufficiency of safeguards, including consideration of risks in employee training and management, information systems, and prevention/detection/response to attacks",
             "quoted_text": "B. The identification of material internal and external risks that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of personal information and an assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management; (2) information systems, including network and software design, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, account takeovers, or other systems failures;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 238,
+            "quote_end_line": 246
           },
           {
-            "description": "Design and implement safeguards and regularly test them",
+            "description": "Design and implement reasonable safeguards to control identified risks and regularly test or monitor the effectiveness of the safeguards' key controls, systems, and procedures",
             "quoted_text": "C. The design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 247,
+            "quote_end_line": 249
           },
           {
-            "description": "Select and retain service providers with appropriate safeguards",
-            "quoted_text": "D. The development and use of reasonable steps to select and retain service providers capable of appropriately safeguarding personal information such service providers receive from respondent or obtain on respondent's behalf, and the requirement, by contract, that such service providers implement and maintain appropriate safeguards;",
+            "description": "Develop and use reasonable steps to select and retain service providers capable of safeguarding personal information and require by contract that such service providers implement and maintain appropriate safeguards",
+            "quoted_text": "D. The development and use of reasonable steps to select and retain service providers capable of appropriately safeguarding personal information such service providers receive from respondent or obtain on respondent's behalf, and the requirement, by contract, that such service providers implement and maintain appropriate safeguards; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 250,
+            "quote_end_line": 254
           },
           {
-            "description": "Evaluate and adjust security program based on testing and changes",
-            "quoted_text": "E. The evaluation and adjustment of respondent's information security program in light of the results of the testing and monitoring required by subpart C, any material changes to respondent's operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its information security program.",
+            "description": "Evaluate and adjust the information security program in light of testing and monitoring results, material changes to operations or business arrangements, or other circumstances that may impact program effectiveness",
+            "quoted_text": "E. The evaluation and adjustment of respondent’s information security program in light of the results of the testing and monitoring required by subpart C, any material changes to respondent's operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its information security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 255,
+            "quote_end_line": 259
           }
         ]
       },
@@ -263,116 +331,156 @@
         "provision_number": "VI",
         "title": "Third-Party Security Assessments",
         "category": "assessment",
-        "summary": "Respondent must obtain initial and biennial third-party security assessments for twenty years.",
+        "summary": "Respondent must obtain initial and biennial third-party security assessments from qualified professionals for twenty years.",
         "requirements": [
           {
-            "description": "Obtain initial third-party security assessment covering first 180 days",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Part V of this order, Compete, Inc., and its successors and assigns, shall obtain initial and biennial assessments and reports (\"Assessments\") from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. Professionals qualified to prepare such Assessments shall be: a person qualified as a Certified Information System Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); a person holding Global Information Assurance Certification (GIAC) from the SysAdmin, Audit, Network, Security (SANS) Institute; or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580. The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the order for the initial Assessment",
-            "deadline": "180 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Obtain biennial assessments for twenty years",
-            "quoted_text": "and (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments.",
+            "description": "Obtain initial and biennial assessments from a qualified, objective, independent third-party professional (CISSP, CISA, GIAC, or similarly qualified) covering the first 180 days after service for the initial assessment and each two-year period thereafter for twenty years",
+            "quoted_text": "this order, Compete, Inc., and its successors and assigns, shall obtain initial and biennial assessments and reports (“Assessments”) from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. Professionals qualified to prepare such Assessments shall be: a person qualified as a Certified Information System Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); a person holding Global Information Assurance Certification (GIAC) from the SysAdmin, Audit, Network, Security (SANS) Institute; or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580. The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the order for the initial Assessment, and (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments. Each Assessment shall:",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 265,
+            "quote_end_line": 276
           },
           {
-            "description": "Complete each assessment within 60 days of reporting period end",
-            "quoted_text": "Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
+            "description": "Each assessment shall set forth the safeguards implemented, explain their appropriateness, explain how they meet or exceed Part V requirements, and certify that the security program is operating effectively",
+            "quoted_text": "A. Set forth the specific administrative, technical, and physical safeguards that respondent has implemented and maintained during the reporting period; B. Explain how such safeguards are appropriate to respondent's size and complexity, and the nature and scope of respondent's activities, and the sensitivity of the personal information collected from or about consumers; C. Explain how the safeguards that have been implemented meet or exceed the protections required by Part V of this order; and D. Certify that respondent's security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of personal information is protected and has so operated throughout the reporting period.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 277,
+            "quote_end_line": 287
+          },
+          {
+            "description": "Complete each assessment within 60 days after the end of the reporting period",
+            "quoted_text": "Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies. Respondent shall provide the initial",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 288,
+            "quote_end_line": 289
           },
           {
-            "description": "Provide initial assessment to FTC within 10 days of completion",
-            "quoted_text": "Respondent shall provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared.",
+            "description": "Provide the initial assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC",
+            "quoted_text": "reporting period to which the Assessment applies. Respondent shall provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared. All subsequent biennial Assessments shall be retained by respondent until the order is",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 289,
+            "quote_end_line": 292
           },
           {
-            "description": "Retain biennial assessments and provide within 10 days upon request",
-            "quoted_text": "All subsequent biennial Assessments shall be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request.",
+            "description": "Retain all subsequent biennial assessments until the order is terminated and provide to the Associate Director of Enforcement within 10 days of request",
+            "quoted_text": "prepared. All subsequent biennial Assessments shall be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 292,
+            "quote_end_line": 294
           }
         ]
       },
       {
         "provision_number": "VII",
-        "title": "Deletion of Pre-February 2010 Collected Information",
+        "title": "Deletion of Collected Information",
         "category": "affirmative_obligation",
-        "summary": "Respondent must delete or destroy Collected Information gathered before February 1, 2010.",
+        "summary": "Respondent must delete or destroy Collected Information in its custody or control that was collected prior to February 1, 2010.",
         "requirements": [
           {
-            "description": "Delete or destroy Collected Information from before February 1, 2010",
-            "quoted_text": "IT IS FURTHER ORDERED that Compete, Inc., and its successors and assigns, shall, within fourteen (14) days after the date of service of this order, delete or destroy, Collected Information in respondent's custody or control that was collected prior to February 1, 2010, unless otherwise directed by a representative of the Commission.",
+            "description": "Delete or destroy Collected Information in respondent's custody or control that was collected prior to February 1, 2010, unless otherwise directed by a Commission representative",
+            "quoted_text": "within fourteen (14) days after the date of service of this order, delete or destroy, Collected Information in respondent’s custody or control that was collected prior to February 1, 2010, unless otherwise directed by a representative of the Commission.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 300,
+            "quote_end_line": 302
           }
         ]
       },
       {
         "provision_number": "VIII",
-        "title": "Recordkeeping",
+        "title": "Recordkeeping Requirements",
         "category": "recordkeeping",
-        "summary": "Respondent must maintain records related to representations covered by the order for five years and assessment materials for three years.",
+        "summary": "Respondent must maintain and make available to the Commission various records, including advertisements, materials relied upon, contradictory evidence, acknowledgments, notices, and assessment-related materials.",
         "requirements": [
           {
-            "description": "Maintain records for five years after last dissemination of representation",
-            "quoted_text": "IT IS FURTHER ORDERED that Compete, Inc., and its successors and assigns, shall, for a period of five (5) years after the last date of dissemination of any representation covered by this order, maintain and upon request make available to the Commission for inspection and copying: A. All advertisements, labeling, packaging and promotional material containing the representation; B. All materials relied upon in disseminating the representation; C. All tests, reports, studies, surveys, demonstrations, or other evidence in its possession or control that contradict, qualify, or call into question the representation, or the basis relied upon for the representation, including complaints and other communications with consumers or with governmental or consumer protection organizations; and D. All acknowledgments of receipt of this order, obtained pursuant to Part IX. E. All notices related to service of the order on Third Parties, pursuant to Part III. F. All materials demonstrating compliance with Part I(B), including all contracts and measures to monitor compliance.",
+            "description": "Maintain for five years after last dissemination all advertisements, labeling, packaging and promotional material; all materials relied upon; all contradictory evidence including complaints; acknowledgments of order receipt; notices of service on Third Parties; and compliance materials for Part I(B)",
+            "quoted_text": "for a period of five (5) years after the last date of dissemination of any representation covered by this order, maintain and upon request make available to the Commission for inspection and copying: A. All advertisements, labeling, packaging and promotional material containing the representation; B. All materials relied upon in disseminating the representation; C. All tests, reports, studies, surveys, demonstrations, or other evidence in its possession or control that contradict, qualify, or call into question the representation, or the basis relied upon for the representation, including complaints and other communications with consumers or with governmental or consumer protection organizations; and D. All acknowledgments of receipt of this order, obtained pursuant to Part IX. E. All notices related to service of the order on Third Parties, pursuant to Part III. F. All materials demonstrating compliance with Part I(B), including all contracts and measures to monitor compliance.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 305,
+            "quote_end_line": 319
           },
           {
-            "description": "Maintain assessment materials for three years after each assessment",
+            "description": "Maintain for three years after preparation of each assessment all materials relied upon to prepare the assessment, including plans, reports, studies, reviews, audits, policies, training materials, and assessments",
             "quoted_text": "Moreover, for a period of three (3) years after the date of preparation of each Assessment required under Part VI of this order, respondent shall maintain and upon request make available to the Commission for inspection and copying all materials relied upon to prepare the Assessment, whether prepared by or on behalf of the respondent, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, for the compliance period covered by such Assessment.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 320,
+            "quote_end_line": 325
           }
         ]
       },
       {
         "provision_number": "IX",
-        "title": "Acknowledgment of Receipt of Order",
+        "title": "Acknowledgment of Order by Personnel",
         "category": "acknowledgment",
-        "summary": "Respondent must deliver the order to current and future personnel and obtain signed acknowledgments of receipt.",
+        "summary": "Respondent must deliver a copy of this order to current and future principals, officers, directors, and managers with relevant responsibilities, and secure signed acknowledgments.",
         "requirements": [
           {
-            "description": "Deliver order to current personnel and obtain signed acknowledgments",
-            "quoted_text": "IT IS FURTHER ORDERED that Compete, Inc., and its successors and assigns, shall deliver a copy of this order to: (1) all current and future principals, officers, and directors; and (2) all current and future managers who have responsibilities with respect to the subject matter of this order, and shall secure from each such person a signed and dated statement acknowledging receipt of the order, with any electronic signatures complying with the requirements of the E-Sign Act, 15 U.S.C. § 7001 et seq. Respondent shall deliver this order to current personnel within thirty (30) days after the date of service of the order",
-            "deadline": "30 days",
+            "description": "Deliver a copy of this order to all current and future principals, officers, directors, and managers with responsibilities related to the subject matter, and secure signed and dated acknowledgment statements",
+            "quoted_text": "deliver a copy of this order to: (1) all current and future principals, officers, and directors; and (2) all current and future managers who have responsibilities with respect to the subject matter of this order, and shall secure from each such person a signed and dated statement acknowledging receipt of the order, with any electronic signatures complying with the requirements of the E-",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 331,
+            "quote_end_line": 334
           },
           {
-            "description": "Deliver order to future personnel within 30 days of assuming position",
-            "quoted_text": "and to future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "description": "Deliver this order to current personnel",
+            "quoted_text": "Sign Act, 15 U.S.C. § 7001 et seq. Respondent shall deliver this order to current personnel within thirty (30) days after the date of service of the order, and to future personnel within thirty",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 335,
+            "quote_end_line": 336
+          },
+          {
+            "description": "Deliver this order to future personnel within 30 days after the person assumes such position or responsibilities",
+            "quoted_text": "within thirty (30) days after the date of service of the order, and to future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 336,
+            "quote_end_line": 337
           }
         ]
       },
       {
         "provision_number": "X",
-        "title": "Notification of Changes to Respondent",
+        "title": "Notice of Corporate Changes",
         "category": "compliance_reporting",
-        "summary": "Respondent must notify the FTC at least 30 days prior to any corporate changes that may affect compliance.",
+        "summary": "Respondent must notify the Commission of any change in the company that may affect compliance obligations, including dissolution, assignment, sale, merger, bankruptcy, or name/address changes.",
         "requirements": [
           {
-            "description": "Notify FTC 30 days prior to corporate changes affecting compliance",
-            "quoted_text": "IT IS FURTHER ORDERED that Compete, Inc., and its successors and assigns, shall notify the Commission at least thirty (30) days prior to any change in respondent that may affect compliance obligations arising under this order, including but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor company; the creation or dissolution of a subsidiary (including an LLC), parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in respondent's name or address. Provided, however, that with respect to any proposed change about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
+            "description": "Notify the Commission at least 30 days prior to any change that may affect compliance obligations, including dissolution, assignment, sale, merger, creation/dissolution of subsidiary, bankruptcy filing, or name/address change",
+            "quoted_text": "notify the Commission at least thirty (30) days prior to any change in respondent that may affect compliance obligations arising under this order, including but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor company; the creation or dissolution of a subsidiary (including an LLC), parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in respondent’s name or address. Provided, however, that with respect to any proposed change about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 340,
+            "quote_end_line": 348
+          },
+          {
+            "description": "For proposed changes learned less than 30 days prior, notify the Commission as soon as practicable after obtaining such knowledge",
+            "quoted_text": "petition; or a change in respondent’s name or address. Provided, however, that with respect to any proposed change about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 345,
+            "quote_end_line": 348
           }
         ]
       },
@@ -380,36 +488,42 @@
         "provision_number": "XI",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondent must file compliance reports with the FTC within 60 days and as requested thereafter.",
+        "summary": "Respondent must file compliance reports with the Commission detailing how it has complied with the order.",
         "requirements": [
           {
-            "description": "File initial compliance report within 60 days",
-            "quoted_text": "IT IS FURTHER ORDERED that Compete, Inc., and its successors and assigns, shall, within sixty (60) days after service of this order, and at such other times as the FTC may require, file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form in which respondent has complied with this order.",
+            "description": "File with the Commission a true and accurate report in writing setting forth in detail the manner and form in which respondent has complied with this order",
+            "quoted_text": "within sixty (60) days after service of this order, and at such other times as the FTC may require, file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form in which respondent has complied with this order. Within ten (10) days of receipt of",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 358,
+            "quote_end_line": 360
           },
           {
-            "description": "Submit additional reports within 10 days of FTC request",
-            "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, respondent shall submit additional true and accurate written reports.",
+            "description": "Submit additional true and accurate written reports within 10 days of receipt of written notice from a Commission representative",
+            "quoted_text": "and form in which respondent has complied with this order. Within ten (10) days of receipt of written notice from a representative of the Commission, respondent shall submit additional true and accurate written reports.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 360,
+            "quote_end_line": 362
           }
         ]
       },
       {
         "provision_number": "XII",
-        "title": "Order Termination",
+        "title": "Order Duration and Termination",
         "category": "duration",
-        "summary": "The order will terminate on February 20, 2033, or twenty years from the most recent complaint filing, whichever is later.",
+        "summary": "This order will terminate on February 20, 2033, or twenty years from the most recent date that the United States or FTC files a complaint in federal court alleging violation of the order, whichever comes later.",
         "requirements": [
           {
-            "description": "Order terminates after 20 years or from most recent complaint filing",
-            "quoted_text": "This order will terminate on February 20, 2033, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part of this order that terminates in less than twenty (20) years; B. This order's application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that the respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Part as though the complaint had never been filed, except that this order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "description": "Order terminates on February 20, 2033, or twenty years from the most recent federal court complaint filing alleging order violation, whichever comes later, with specified exceptions",
+            "quoted_text": "This order will terminate on February 20, 2033, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part of this order that terminates in less than twenty (20) years; B. This order’s application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that the respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Part as though the complaint had never been filed, except that this order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 367,
+            "quote_end_line": 381
           }
         ]
       }
@@ -426,11 +540,36 @@
     },
     "extraction_stats": {
       "complaint_counts": 4,
-      "complaint_representations": 5,
+      "complaint_representations": 6,
       "order_provisions": 12,
       "order_definitions": 9,
-      "order_requirements": 32
+      "order_requirements": 34,
+      "provisions_per_section": {
+        "I": 5,
+        "II": 4,
+        "III": 2,
+        "IV": 1,
+        "V": 6,
+        "VI": 5,
+        "VII": 1,
+        "VIII": 2,
+        "IX": 3,
+        "X": 2,
+        "XI": 2,
+        "XII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 6,
+        "complaint_total": 6,
+        "order_verified": 34,
+        "order_total": 34
+      }
     },
-    "processing_time_seconds": 194.3
+    "processing_time_seconds": 131.2
   }
 }

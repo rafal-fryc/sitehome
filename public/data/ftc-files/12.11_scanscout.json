@@ -6,7 +6,7 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "295 Devonshire Street, Boston, MA 02110",
-      "business_description": "ScanScout is a video advertising network that acts as an intermediary between website publishers and advertisers. The company purchases advertising space on websites and contracts with advertisers to place their video advertisements, and works with third parties including ad servers to deliver advertising campaigns."
+      "business_description": "ScanScout is a video advertising network that acts as an intermediary between website publishers and advertisers. The company purchases advertising space on websites and contracts with advertisers to place their video advertisements, working with third parties including ad servers to deliver advertising campaigns. ScanScout engages in online behavioral advertising by collecting and storing information about users' online activities to deliver targeted advertisements."
     },
     "commissioners": [
       "Jon Leibowitz, Chairman",
@@ -18,53 +18,59 @@
       "month": 12,
       "year": 2011
     },
-    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45 et seq",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/102-3185-scanscout-inc-matter"
   },
   "complaint": {
-    "factual_background": "ScanScout, a video advertising network, engaged in online behavioral advertising using Flash cookies (local shared objects) to collect user data and deliver targeted advertisements. From April 2007 to September 2009, the company told consumers they could opt out of data collection by changing their browser settings, but browser settings did not control Flash cookies. This deprived consumers of the ability to prevent tracking as promised.",
+    "factual_background": "ScanScout, Inc. was a video advertising network that used Flash cookies (Flash local shared objects) to collect user data and deliver behaviorally targeted video advertisements from April 2007 until September 2009. Unlike standard HTTP cookies, Flash cookies were stored in a different location and were not controlled through browser privacy settings. ScanScout's privacy policy falsely told consumers they could opt out of cookie-based data collection by changing their browser settings. In reality, changing browser settings had no effect on ScanScout's Flash cookies, meaning users could not actually prevent ScanScout from tracking their online activities during this period.",
     "representations_made": [
       {
-        "description": "Claimed consumers could prevent data collection by changing browser settings to block cookies",
-        "quoted_text": "Through the means described in Paragraph 8, ScanScout represented, expressly or by implication, that consumers could prevent ScanScout from collecting data about their online activities by changing their browser settings to prevent the receipt of cookies.",
-        "source_paragraph": 9
+        "description": "Claimed that consumers could prevent ScanScout from collecting data about their online activities by changing their browser settings to prevent the receipt of cookies",
+        "quoted_text": "General user data, such as your computer’s Internet Protocol (IP) address, operating system and browser type, pages you visited, and the date and time of your visit, is automatically collected through the use of “cookies”. Cookies are small files that are stored on your computer by a website to give you a unique identification. Cookies also keep track of services you have used, record registration information regarding your login name and password, record your preferences and keep you logged into the Site. You can opt out of receiving a cookie by changing your browser settings to prevent the receipt of cookies. Since each web browser is different, we recommend that you please look through your browser “Help” file to Page 2 of 3 learn the correct way to modify your cookies set-up. . . We may use automatically collected information and cookies information for a number of purposes, including but not limited to. . . provide custom, personalized content, and information; monitor the effectiveness of our marketing campaigns. . . (emphasis added)",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 8,
+        "quote_start_line": 66,
+        "quote_end_line": 84
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "False Opt-Out Mechanism",
-        "representation": "Consumers could prevent ScanScout from collecting data about their online activities by changing their browser settings to prevent the receipt of cookies",
-        "fact": "Consumers could not prevent ScanScout from collecting data about their online activities by changing their browser settings to prevent the receipt of cookies because ScanScout used Flash cookies, which were not controlled through browser settings",
-        "conclusion": "Therefore, the representation set forth in Paragraph 9 was false or misleading."
+        "title": "False Opt-Out Representation Regarding Cookie Data Collection",
+        "representation": "ScanScout represented, expressly or by implication, that consumers could prevent ScanScout from collecting data about their online activities by changing their browser settings to prevent the receipt of cookies.",
+        "fact": "Consumers could not prevent ScanScout from collecting data about their online activities by changing their browser settings, because ScanScout used Flash cookies which were unaffected by browser privacy settings.",
+        "conclusion": "Therefore, the representation set forth in Paragraph 9 was false or misleading, constituting deceptive acts or practices in or affecting commerce in violation of Section 5(a) of the Federal Trade Commission Act."
       }
     ]
   },
   "order": {
     "definitions": {
-      "respondent": "Unless otherwise specified, \"respondent\" shall mean ScanScout, Inc., a corporation, and its parent, Tremor Video, Inc., and each of their subsidiaries, successors or assigns.",
+      "respondent": "ScanScout, Inc., a corporation, and its parent, Tremor Video, Inc., and each of their subsidiaries, successors or assigns.",
       "Clear(ly) and prominent(ly)": "A. In textual communications (e.g., printed publications or words displayed on the screen of a computer or device), the required disclosures are of a type, size, and location sufficiently noticeable for an ordinary consumer to read and comprehend them, in print that contrasts highly with the background on which they appear; B. In communications disseminated orally or through audible means (e.g., radio or streaming audio), the required disclosures are delivered in a volume and cadence sufficient for an ordinary consumer to hear and comprehend them; C. In communications disseminated through video means (e.g., television or streaming video), the required disclosures are in writing in a form consistent with subparagraph (A) of this definition and shall appear on the screen for a duration sufficient for an ordinary consumer to read and comprehend them, and in the same language as the predominant language that is used in the communication; and D. In all instances, the required disclosures: (1) are presented in an understandable language and syntax; and (2) include nothing contrary to, inconsistent with, or in mitigation of any other statements or disclosures provided by respondent.",
-      "Commerce": "\"Commerce\" shall mean as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44.",
-      "Computer or device": "\"Computer\" or \"device\" shall mean any desktop or laptop computer, handheld device, telephone, or other product or device, through which a consumer can access the Internet.",
+      "Commerce": "as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44.",
+      "Computer or device": "any desktop or laptop computer, handheld device, telephone, or other product or device, through which a consumer can access the Internet.",
       "Collection of data or collecting data": "\"Collection of data\" or \"collecting data\" shall mean the practice of receiving any information or data from a computer or device, whether transmitted by a web browser or otherwise, and retaining that information, whether on the user's computer or on a server. \"Data collected\" shall mean any information or data received from a computer or device, whether transmitted by a web browser or otherwise, and retained, whether on the user's computer or respondent's server(s).",
-      "User": "\"User\" shall mean any consumer, computer, or device that respondent has uniquely identified.",
-      "Online behavioral advertising": "\"Online behavioral advertising\" shall mean the practice of collecting data about a user's online activities in order to deliver advertising targeted to the user's interests.",
-      "Permissible uses": "\"Permissible uses\" shall mean uses of collected data that can be associated with a particular user, or that contains any unique identifier, including user ID or Internet Protocol (IP) address, for the following purposes and no other, provided that such data shall be retained by respondent no longer than reasonably necessary for such purpose and is not used for online behavioral advertising: (a) determining the number of times a specific user has been served or has responded to a specific advertisement within a period of time; (b) fraud prevention; (c) providing a service requested by a user; or (d) verifying a user's age before serving an age-restricted advertisement. For purposes of (d), such data shall be retained by respondent no longer than the duration of the applicable browsing session, and in no instance no longer than twenty-four (24) hours."
+      "User": "any consumer, computer, or device that respondent has uniquely identified.",
+      "Online behavioral advertising": "the practice of collecting data about a user's online activities in order to deliver advertising targeted to the user's interests.",
+      "Permissible uses": "uses of collected data that can be associated with a particular user, or that contains any unique identifier, including user ID or Internet Protocol (IP) address, for the following purposes and no other, provided that such data shall be retained by respondent no longer than reasonably necessary for such purpose and is not used for online behavioral advertising: (a) determining the number of times a specific user has been served or has responded to a specific advertisement within a period of time; (b) fraud prevention; (c) providing a service requested by a user; or (d) verifying a user's age before serving an age-restricted advertisement. For purposes of (d), such data shall be retained by respondent no longer than the duration of the applicable browsing session, and in no instance no longer than twenty-four (24) hours."
     },
     "provisions": [
       {
         "provision_number": "I",
         "title": "Prohibition Against Misrepresentations About Data Collection and User Control",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent the extent to which data is collected, used, disclosed, or shared, or the extent to which users may exercise control over their data.",
+        "summary": "Respondent must not misrepresent the extent to which user data is collected, used, disclosed, or shared, or the extent to which users can control such collection and use.",
         "requirements": [
           {
-            "description": "Must not misrepresent the extent to which data from or about a user is collected, used, disclosed, or shared",
-            "quoted_text": "IT IS ORDERED that respondent and its officers, agents, representatives, and employees and all other persons in active concert or participation with any of them, who receive actual notice of this Order by personal service or otherwise, whether acting directly or through any entity, in connection with the online advertising, marketing, promotion, offering for sale, sale, or dissemination of any product or service, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication: (A) the extent to which data from or about a particular user or the user's online activities is collected, used, disclosed, or shared; or (B) the extent to which users may exercise control over the collection, use, disclosure, or sharing of data collected from or about them, their computers or devices, or their online activities.",
+            "description": "Must not misrepresent the extent to which data from or about a user is collected, used, disclosed, or shared, or the extent to which users may exercise control over such data practices",
+            "quoted_text": "IT IS ORDERED that respondent and its officers, agents, representatives, and employees and all other persons in active concert or participation with any of them, who receive actual notice of this Order by personal service or otherwise, whether acting directly or through any entity, in connection with the online advertising, marketing, promotion, offering for sale, sale, or dissemination of any product or service, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication: (A) the extent to which data from or about a particular user or the user’s online activities is collected, used, disclosed, or shared; or (B) the extent to which users may exercise control over the collection, use, disclosure, or sharing of data collected from or about them, their computers or devices, or their online activities.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 89,
+            "quote_end_line": 97
           }
         ]
       },
@@ -72,115 +78,139 @@
         "provision_number": "II",
         "title": "Notice and Opt-Out Mechanism for Online Behavioral Advertising",
         "category": "affirmative_obligation",
-        "summary": "Respondent must provide clear notice of data collection practices and implement opt-out mechanisms for users to prevent behavioral advertising data collection.",
+        "summary": "While engaging in online behavioral advertising, respondent must provide clear notice on its homepage, a one-click opt-out mechanism, and hyperlinks in display and video ads directing users to the opt-out mechanism.",
         "requirements": [
           {
-            "description": "Place clear and prominent notice with hyperlink on homepage stating data collection practices and opt-out option",
-            "quoted_text": "Within thirty (30) days after the date of service of this order, place a clear and prominent notice, including a hyperlink, on the homepage(s) of its website(s), which states, \"We collect information about your activities on certain websites to send you targeted ads. To opt out of our targeted advertisements click here.\" When selected, the hyperlink shall take consumers directly to the mechanism required by Part II.B of the order;",
+            "description": "Within 30 days, place a clear and prominent notice with hyperlink on respondent's homepage stating that it collects information about users' online activities to send targeted ads and offering an opt-out link",
+            "quoted_text": "A. Within thirty (30) days after the date of service of this order, place a clear and prominent notice, including a hyperlink, on the homepage(s) of its website(s), which states, “We collect information about your activities on certain websites to Page 3 of 7 send you targeted ads. To opt out of our targeted advertisements click here.” When selected, the hyperlink shall take consumers directly to the mechanism required by Part II.B of the order;",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 103,
+            "quote_end_line": 111
           },
           {
-            "description": "Provide clearly and prominently disclosed opt-out mechanism to prevent data collection and association",
-            "quoted_text": "Within thirty (30) days after the date of service of this order, provide a clearly and prominently disclosed mechanism that enables users to prevent respondent: from collecting data that can be associated with a particular user, or that contains any unique identifier, including user ID or Internet Protocol (IP) address; from redirecting users' browsers to third parties that collect data, absent a click or other affirmative action by such user; and from associating any previously collected data with the user. Provided, however, respondent may collect data that can be associated with a particular user, or that contains a unique identifier: (1) to implement the user's choice to prevent respondent from collecting such data; and (2) for permissible uses;",
+            "description": "Within 30 days, provide a clearly and prominently disclosed opt-out mechanism that prevents respondent from collecting associated user data, redirecting browsers to third-party data collectors, and associating previously collected data with the user; respondent may still collect data to implement the opt-out choice and for permissible uses",
+            "quoted_text": "B. Within thirty (30) days after the date of service of this order, provide a clearly and prominently disclosed mechanism that enables users to prevent respondent: from collecting data that can be associated with a particular user, or that contains any unique identifier, including user ID or Internet Protocol (IP) address; from redirecting users’ browsers to third parties that collect data, absent a click or other affirmative action by such user; and from associating any previously collected data with the user. Provided, however, respondent may collect data that can be associated with a particular user, or that contains a unique identifier: (1) to implement the user’s choice to prevent respondent from collecting such data; and (2) for permissible uses;",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 112,
+            "quote_end_line": 121
           },
           {
-            "description": "Ensure opt-out mechanism requires no more than one user action and remains effective for minimum five years with required disclosures",
-            "quoted_text": "The mechanism set forth in Part II.B shall require no more than one action by the user (e.g., one click or one change to a browser setting) after the user is directed to such mechanism. The user's choice shall remain in effect for a minimum time period of five (5) years, unless the user disables the mechanism. Within close proximity to the mechanism, respondent shall clearly and prominently disclose: (1) that respondent collects information about users' activities on certain websites in order to deliver advertising targeted to users' interests; (2) that if the user implements the mechanism, respondent will not collect this information for the purpose of delivering advertising targeted to the user's interests; (3) the current status of the user's choice (e.g., \"not opted out\" or \"opted out\"); and (4) any circumstances that, if initiated by the user, would disable the mechanism or require the user to implement the mechanism again in order to maintain the user's choice (e.g., use of a different browser, use of a different device, or deletion of cookies);",
+            "description": "The opt-out mechanism must require no more than one action by the user, remain in effect for a minimum of five years unless disabled by the user, and include prominent disclosures about data collection practices, the effect of opting out, the user's current opt-out status, and any circumstances that would disable the mechanism",
+            "quoted_text": "C. The mechanism set forth in Part II.B shall require no more than one action by the user (e.g., one click or one change to a browser setting) after the user is directed to such mechanism. The user’s choice shall remain in effect for a minimum time period of five (5) years, unless the user disables the mechanism. Within close proximity to the mechanism, respondent shall clearly and prominently disclose: (1) that respondent collects information about users’ activities on certain websites in order to deliver advertising targeted to users’ interests; (2) that if the user implements the mechanism, respondent will not collect this information for the purpose of delivering advertising targeted to the user’s interests; (3) the current status of the user’s choice (e.g., “not opted out” or “opted out”); and (4) any circumstances that, if initiated by the user, would disable the mechanism or require the user to implement the mechanism again in order to maintain the user’s choice (e.g., use of a different browser, use of a different device, or deletion of cookies);",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 122,
+            "quote_end_line": 135
           },
           {
-            "description": "Include hyperlink in or adjacent to display advertisements that directs consumers to opt-out mechanism",
-            "quoted_text": "Within ninety (90) days after the date of service of the order, within or immediately adjacent to any display advertisement that respondent serves as part of online behavioral advertising, include a hyperlink that takes consumers directly to the mechanism required by Part II.B of this order. The hyperlink text shall clearly and prominently disclose to consumers that selecting the hyperlink will give them choices about receiving advertising targeted to their interests.",
+            "description": "Within 90 days, include a hyperlink within or immediately adjacent to every display advertisement served as part of online behavioral advertising, directing consumers to the opt-out mechanism and clearly disclosing that selecting it gives choices about targeted advertising",
+            "quoted_text": "D. Within ninety (90) days after the date of service of the order, within or immediately adjacent to any display advertisement that respondent serves as part of online behavioral advertising, include a hyperlink that takes consumers directly to the mechanism required by Part II.B of this order. The hyperlink text shall clearly and prominently disclose to consumers that selecting the hyperlink will give them choices about receiving advertising targeted to their interests.",
             "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 136,
+            "quote_end_line": 141
           },
           {
-            "description": "Undertake reasonable efforts to develop and implement hyperlink for video advertisements directing to opt-out mechanism",
-            "quoted_text": "Undertake reasonable efforts to develop and implement, within or immediately adjacent to any video advertisement that respondent serves as part of online behavioral advertising, a clear and prominent hyperlink that directs consumers to the mechanism required by Part II.B of this order, and discloses to consumers that they can opt out of receiving advertising targeted to their interests, and report on such efforts as set forth in Part VI of this order.",
+            "description": "Undertake reasonable efforts to develop and implement a clear and prominent opt-out hyperlink within or immediately adjacent to every video advertisement served as part of online behavioral advertising, and report on such efforts as required by Part VI",
+            "quoted_text": "E. Undertake reasonable efforts to develop and implement, within or immediately adjacent to any video advertisement that respondent serves as part of online behavioral advertising, a clear and prominent hyperlink that directs consumers to the mechanism required by Part II.B of this order, and discloses to consumers that they can opt out of receiving advertising targeted to their interests, and report on such efforts as set forth in Part VI of this order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 142,
+            "quote_end_line": 147
           }
         ]
       },
       {
         "provision_number": "III",
-        "title": "Recordkeeping Requirements",
+        "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must maintain and make available to the FTC consumer complaints, compliance documents, and publicly disseminated documents related to data collection and opt-out practices.",
+        "summary": "Respondent must maintain and make available to the FTC records including consumer complaints, compliance documents, and publicly disseminated privacy-related materials for specified periods.",
         "requirements": [
           {
-            "description": "Maintain for five years consumer complaints/inquiries concerning data collection, use, disclosure, sharing, and opt-out practices with responses",
-            "quoted_text": "For a period of five (5) years from the entry of this order or from the date of preparation, whichever is later: 1. Consumer complaints or inquiries directed to respondent or forwarded to respondent by a third party concerning: (a) any collection of data by respondent; (b) the use, disclosure, or sharing of such data by respondent; or (c) opt-out practices or any other mechanism to limit or prevent such collection of data or the use, disclosure, or sharing of data collected by respondent, as well as any responses to such complaints or inquiries;",
+            "description": "For five years from order entry or document preparation (whichever is later), maintain consumer complaints or inquiries regarding data collection, use, disclosure, sharing, or opt-out practices, along with any responses",
+            "quoted_text": "A. For a period of five (5) years from the entry of this order or from the date of preparation, whichever is later: 1. Consumer complaints or inquiries directed to respondent or forwarded to respondent by a third party concerning: (a) any collection of data by respondent; (b) the use, disclosure, or sharing of such data by respondent; or (c) opt-out practices or any other mechanism to limit or prevent such collection of data or the use, disclosure, or sharing of data collected by respondent, as well as any responses to such complaints or inquiries;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 155,
+            "quote_end_line": 162
           },
           {
-            "description": "Maintain for five years documents demonstrating compliance with order provisions including policies, procedures, and reports",
-            "quoted_text": "For a period of five (5) years from the entry of this order or from the date of preparation, whichever is later: 2. Documents that are sufficient to demonstrate compliance with each provision of this order, including, but not limited to, relevant policies and procedures, documents demonstrating respondent's efforts to develop and implement a clear and prominent hyperlink for video advertisements pursuant to Part II.E, and all reports submitted to the Commission pursuant to this order;",
+            "description": "For five years from order entry or document preparation (whichever is later), maintain documents sufficient to demonstrate compliance with each provision of this order, including relevant policies, procedures, efforts to develop video ad hyperlinks per Part II.E, and all reports submitted to the Commission",
+            "quoted_text": "2. Documents that are sufficient to demonstrate compliance with each provision of this order, including, but not limited to, relevant policies and procedures, documents demonstrating respondent’s efforts to develop and implement a clear and prominent hyperlink for video advertisements pursuant to Part II.E, and all reports submitted to the Commission pursuant to this order;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 163,
+            "quote_end_line": 168
           },
           {
-            "description": "Maintain for five years documents that contradict, qualify, or call into question compliance with order",
-            "quoted_text": "For a period of five (5) years from the entry of this order or from the date of preparation, whichever is later: 3. Documents that contradict, qualify, or call into question respondent's compliance with this order;",
+            "description": "For five years from order entry or document preparation (whichever is later), maintain documents that contradict, qualify, or call into question respondent's compliance with this order",
+            "quoted_text": "3. Documents that contradict, qualify, or call into question respondent’s compliance with this order; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.7272727272727273
+            "confidence": 1.0,
+            "quote_start_line": 169,
+            "quote_end_line": 170
           },
           {
-            "description": "Maintain for five years after public dissemination terms of use, privacy policies, and other documents relating to data practices",
-            "quoted_text": "For a period of five (5) years after the last public dissemination thereof by respondent, respondent's terms of use, form end-user license agreements, frequently asked questions, privacy policies, and other documents publicly disseminated by respondent relating to: (a) collection of data by respondent; (b) the use, disclosure or sharing of such data by respondent; or (c) opt-out practices and other mechanisms to limit or prevent such collection of data or the use, disclosure, or sharing of data collected by respondent.",
+            "description": "For five years after last public dissemination, maintain respondent's terms of use, end-user license agreements, FAQs, privacy policies, and other publicly disseminated documents relating to data collection, use, disclosure, sharing, or opt-out practices",
+            "quoted_text": "B. For a period of five (5) years after the last public dissemination thereof by respondent, respondent’s terms of use, form end-user license agreements, frequently asked questions, privacy policies, and other documents publicly disseminated by respondent relating to: (a) collection of data by respondent; (b) the use, disclosure or sharing of such data by respondent; or (c) opt-out practices and other mechanisms to limit or prevent such collection of data or the use, disclosure, or sharing of data collected by respondent.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 171,
+            "quote_end_line": 177
           }
         ]
       },
       {
         "provision_number": "IV",
-        "title": "Order Acknowledgment and Distribution",
+        "title": "Order Distribution and Acknowledgment",
         "category": "acknowledgment",
-        "summary": "Respondent must deliver a copy of the order to all principals, officers, directors, managers, and supervisory employees.",
+        "summary": "Respondent must deliver a copy of this order to all principals, officers, directors, managers, and employees with supervisory responsibilities over the subject matter, within 30 days for current personnel and 30 days of assumption of role for future personnel.",
         "requirements": [
           {
-            "description": "Deliver order to current personnel with supervisory responsibilities",
+            "description": "Deliver a copy of the order to all principals, officers, directors, managers, and employees or agents with supervisory responsibilities over the subject matter within 30 days of service of the order for current personnel, and within 30 days of assuming the position for future personnel",
             "quoted_text": "IT IS FURTHER ORDERED that respondent shall deliver a copy of this order to all principals, officers, directors, and managers, and to all employees, agents, and representatives having supervisory responsibilities with respect to the subject matter of this order. Respondent shall deliver this order to such current personnel within thirty (30) days after the date of service of the order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Deliver order to future personnel with supervisory responsibilities within 30 days of assuming position",
-            "quoted_text": "Respondent shall deliver this order to such current personnel within thirty (30) days after the date of service of the order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
-            "deadline": "30 days",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 179,
+            "quote_end_line": 184
           }
         ]
       },
       {
         "provision_number": "V",
-        "title": "Notice of Corporate Changes",
+        "title": "Notification of Corporate Changes",
         "category": "compliance_reporting",
-        "summary": "Respondent must notify the Commission at least 30 days prior to any corporate change that may affect compliance obligations.",
+        "summary": "Respondent must notify the FTC at least 30 days prior to any corporate change that may affect compliance obligations, including dissolution, sale, merger, bankruptcy filing, or change of name or address.",
         "requirements": [
           {
-            "description": "Notify Commission at least 30 days prior to corporate changes affecting compliance obligations",
+            "description": "Notify the Commission at least 30 days prior to any corporate change affecting compliance obligations, including dissolution, assignment, sale, merger, creation or dissolution of a subsidiary/parent/affiliate, proposed bankruptcy filing, or change of corporate name or address; if respondent learns of a change less than 30 days in advance, notify the Commission as soon as practicable",
             "quoted_text": "IT IS FURTHER ORDERED that respondent shall notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address. Provided, however, that with respect to any proposed change in the corporation about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
-            "deadline": "30 days",
+            "deadline": "30 days prior to change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 189,
+            "quote_end_line": 197
+          },
+          {
+            "description": "Send all required notices by hand delivery or overnight courier to the Associate Director of Enforcement, Bureau of Consumer Protection, FTC, 600 Pennsylvania Avenue NW, Washington, DC 20580; alternatively, first-class mail is permitted if an electronic copy is contemporaneously sent to DEbrief@ftc.gov",
+            "quoted_text": "Unless otherwise directed by a representative of the Commission in writing, all notices required by this order shall be sent by hand delivery or overnight courier (not the U.S. Postal Service) to the Associate Director of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580, with the subject line In the Matter of ScanScout, Inc. FTC File No. 1023185. Provided, however, that, in lieu of hand delivery or overnight courier, a notice may be sent by first-class mail, but only if an electronic version of such notice is contemporaneously sent to the Commission by e-mail to DEbrief@ftc.gov.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 198,
+            "quote_end_line": 205
           }
         ]
       },
@@ -188,50 +218,58 @@
         "provision_number": "VI",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondent must file initial compliance report within 90 days and subsequent reports every six months regarding video advertisement hyperlink implementation until fully implemented.",
+        "summary": "Respondent must file an initial compliance report within 90 days of service, then semi-annual reports until full implementation of the video ad hyperlink (Part II.E), and additional reports upon FTC request within 10 business days.",
         "requirements": [
           {
-            "description": "File initial compliance report within 90 days setting forth manner and form of compliance including Part II.E efforts",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall, within ninety (90) days after service of the order, file with the Commission a true and accurate report, in writing, setting forth the manner and form in which respondent has complied with this order, including but not limited to compliance with the requirements of Part II.E of this order.",
+            "description": "Within 90 days of service of the order, file a true and accurate written report with the Commission describing the manner and form of compliance, including compliance with the video ad hyperlink requirement of Part II.E",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall, within ninety (90) days after service of the order, file with the Commission a true and accurate report, in writing, setting forth the manner and form in which respondent has complied with this order, including but not limited to compliance with the requirements of Part II.E of this order. Every six (6) months thereafter,",
             "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 207,
+            "quote_end_line": 210
           },
           {
-            "description": "Submit additional compliance reports every six months regarding Part II.E implementation until fully implemented",
-            "quoted_text": "Every six (6) months thereafter, and continuing until respondent reports it has implemented the hyperlink set forth in Part II.E of this order for every different format of video advertisement that respondent serves as part of online behavioral advertising, respondent shall submit an additional true and accurate report, in writing, setting forth the manner and form in which respondent has complied with the requirements of Part II.E of this order.",
-            "deadline": null,
+            "description": "Every six months thereafter, until respondent reports full implementation of the Part II.E video ad hyperlink across all video advertisement formats, submit additional true and accurate written reports on compliance with Part II.E",
+            "quoted_text": "to compliance with the requirements of Part II.E of this order. Every six (6) months thereafter, and continuing until respondent reports it has implemented the hyperlink set forth in Part II.E of this order for every different format of video advertisement that respondent serves as part of online behavioral advertising, respondent shall submit an additional true and accurate report, in writing, setting forth the manner and form in which respondent has complied with the requirements of Part II.E of this order. Within ten (10) business days of receipt of written notice",
+            "deadline": "Every 6 months",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 210,
+            "quote_end_line": 215
           },
           {
-            "description": "Submit additional reports within 10 business days when requested by FTC representative",
-            "quoted_text": "Within ten (10) business days of receipt of written notice from a representative of the Federal Trade Commission at such other times as the Federal Trade Commission may require, respondent shall submit additional true and accurate written reports.",
+            "description": "Within 10 business days of receipt of written notice from the FTC, submit additional true and accurate written reports as required by the Commission",
+            "quoted_text": "requirements of Part II.E of this order. Within ten (10) business days of receipt of written notice from a representative of the Federal Trade Commission at such other times as the Federal Trade Commission may require, respondent shall submit additional true and accurate written reports.",
             "deadline": "10 business days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 215,
+            "quote_end_line": 217
           }
         ]
       },
       {
         "provision_number": "VII",
-        "title": "Order Duration and Termination",
+        "title": "Order Duration",
         "category": "duration",
-        "summary": "The order will terminate on December 14, 2031, or 20 years from the most recent date the U.S. or FTC files a complaint alleging violation of the order, whichever comes later.",
+        "summary": "The order terminates on December 14, 2031, or 20 years from the most recent date the FTC files a complaint alleging a violation of the order in federal court, whichever is later.",
         "requirements": [
           {
-            "description": "Order remains in effect until specified termination date or conditions",
-            "quoted_text": "This order will terminate on December 14, 2031, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part of this order that terminates in less than twenty (20) years; and B. This order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that the respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Part as though the complaint had never been filed, except that this order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "description": "Order terminates on December 14, 2031, or 20 years from the most recent date the FTC files a federal court complaint alleging a violation of the order, whichever is later; complaint filing does not affect any order part that terminates in less than 20 years, nor an order that has already terminated; if such complaint is dismissed or ruled in respondent's favor and not successfully appealed, the order terminates as if the complaint had never been filed",
+            "quoted_text": "This order will terminate on December 14, 2031, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part of this order that terminates in less than twenty (20) years; and Page 6 of 7 B. This order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that the respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Part as though the complaint had never been filed, except that this order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 219,
+            "quote_end_line": 235
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This order will terminate on December 14, 2031, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part of this order that terminates in less than twenty (20) years; and B. This order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that the respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Part as though the complaint had never been filed, except that this order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal."
+      "termination_text": "This order will terminate on December 14, 2031, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part of this order that terminates in less than twenty (20) years; and B. This order if such complaint is filed after the order has terminated pursuant to this Part."
     }
   },
   "metadata": {
@@ -244,8 +282,28 @@
       "complaint_representations": 1,
       "order_provisions": 7,
       "order_definitions": 8,
-      "order_requirements": 17
+      "order_requirements": 17,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 5,
+        "III": 4,
+        "IV": 1,
+        "V": 2,
+        "VI": 3,
+        "VII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 1
+      },
+      "verification_details": {
+        "complaint_verified": 1,
+        "complaint_total": 1,
+        "order_verified": 17,
+        "order_total": 17
+      }
     },
-    "processing_time_seconds": 140.2
+    "processing_time_seconds": 125.4
   }
 }

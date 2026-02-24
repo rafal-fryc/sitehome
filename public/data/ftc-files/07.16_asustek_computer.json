@@ -6,7 +6,7 @@
       "incorporation_state": "Taiwan",
       "entity_type": "corporation",
       "address": "15, Li-Te Rd., Peitou, Taipei 11259, Taiwan",
-      "business_description": "ASUSTeK Computer, Inc. is a hardware manufacturer that designs and sells routers and related software and services for consumer use. ASUS controls U.S. marketing and advertising for its routers and is responsible for developing and distributing software updates to remediate security vulnerabilities. The company sells its routers in the United States through a wholly owned U.S. subsidiary."
+      "business_description": "ASUSTeK Computer, Inc. is a hardware manufacturer that designs and sells routers and related software and services for consumer use. The company controls U.S. marketing and advertising for its routers, develops and distributes software updates, and sells routers through a wholly owned U.S. subsidiary via third-party retailers."
     },
     "commissioners": [
       "Edith Ramirez, Chairwoman",
@@ -17,122 +17,132 @@
       "month": 7,
       "year": 2016
     },
-    "legal_authority": "Federal Trade Commission Act",
+    "legal_authority": "Section 5 of the Federal Trade Commission Act",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/142-3156-asustek-computer-inc-matter"
   },
   "complaint": {
-    "factual_background": "ASUS sold routers with cloud features (AiCloud and AiDisk) that it marketed as secure, but failed to implement basic security measures. The routers contained multiple critical vulnerabilities including authentication bypass, password disclosure, and cross-site request forgery flaws. In February 2014, hackers exploited these vulnerabilities to compromise 12,937 routers, accessing consumers' sensitive personal information including financial records, social security numbers, and tax returns, leading to identity theft.",
+    "factual_background": "ASUSTeK Computer, Inc. (ASUS), a Taiwanese hardware manufacturer, sold consumer routers with cloud features (AiCloud and AiDisk) while marketing them as secure platforms for storing and accessing sensitive personal information. ASUS failed to implement basic security measures, leaving routers vulnerable to authentication bypass, password disclosure, and cross-site request forgery attacks. The company also deployed default settings that exposed consumers' USB storage devices to unauthenticated internet access, and provided a firmware upgrade tool that falsely indicated routers were running the latest firmware when they were not. Despite receiving multiple reports from security researchers about these vulnerabilities beginning in mid-2013, ASUS delayed notifying consumers and taking corrective action for months. By early 2014, hackers had exploited these flaws to access the USB storage devices of thousands of consumers and publicly posted login credentials for over 3,000 AiCloud accounts.",
     "representations_made": [
       {
-        "description": "Represented that routers could protect local networks from unauthorized access and attacks",
-        "quoted_text": "Respondent marketed its routers as including security features such as \"SPI intrusion detection\" and \"DoS protection,\" advertised that its routers could \"protect computers from any unauthorized access, hacking, and virus attacks\" (see Exh. A, p. 1 of 2), and instructed consumers to \"enable the [router's] firewall to protect your local network against attacks from hackers\" (see Exh. A, p. 2 of 2).",
-        "source_paragraph": 4
+        "description": "Claimed that its routers include security features (such as SPI intrusion detection and DoS protection) and can protect computers from unauthorized access, hacking, and virus attacks, and instructed consumers to enable the firewall to protect against hackers",
+        "quoted_text": "appliances, against malicious incoming traffic from the internet. Respondent marketed its routers as including security features such as “SPI intrusion detection” and “DoS protection,” advertised that its routers could “protect computers from any unauthorized access, hacking, and virus attacks” (see Exh. A, p. 1 of 2), and instructed consumers to “enable the [router’s] firewall to protect your local network against attacks from hackers” (see Exh. A, p. 2 of 2).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 4,
+        "quote_start_line": 39,
+        "quote_end_line": 44
       },
       {
-        "description": "Represented AiCloud as the most complete, accessible, and secure cloud platform",
-        "quoted_text": "In August 2012, ASUS introduced and began marketing a feature known as AiCloud on its routers. Respondent publicized AiCloud as a \"private personal cloud for selective file sharing\" that featured \"indefinite storage and increased privacy\" (see Exh. C, p. 1 of 6). In the following months, ASUS provided software updates for certain older router models to add the AiCloud feature, which respondent touted as \"the most complete, accessible, and secure cloud platform\" (see Exh. C, p. 2 of 6).",
-        "source_paragraph": 7
+        "description": "Marketed AiCloud as a 'private personal cloud' with 'indefinite storage and increased privacy,' and as 'the most complete, accessible, and secure cloud platform,' and described it as 'your secure space'",
+        "quoted_text": "7. In August 2012, ASUS introduced and began marketing a feature known as AiCloud on its routers. Respondent publicized AiCloud as a “private personal cloud for selective file sharing” that featured “indefinite storage and increased privacy” (see Exh. C, p. 1 of 6). In the following months, ASUS provided software updates for certain older router models to add the AiCloud feature, which respondent touted as “the most complete, accessible, and secure cloud platform” (see Exh. C, p. 2 of 6). 8. Described as “your secure space,” AiCloud allows consumers to plug a USB storage",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 7,
+        "quote_start_line": 58,
+        "quote_end_line": 64
       },
       {
-        "description": "Represented AiCloud as a secure space for accessing files",
-        "quoted_text": "Described as \"your secure space,\" AiCloud allows consumers to plug a USB storage device, such as an external hard drive, into the router, and then use web and mobile applications to access files on the storage device (see Exh. C, p. 3 of 6).",
-        "source_paragraph": 8
+        "description": "Promoted AiDisk as a way to 'safely secure and access your treasured data through your router'",
+        "quoted_text": "(“FTP”) server. Despite the fact that FTP does not support transit encryption, since at least 2012 respondent has promoted AiDisk as a way to “safely secure and access your treasured data through your router” (see Exh. E). In addition to transferring files unencrypted, the AiDisk software included a number of other design flaws that placed consumers’ sensitive personal information at risk.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 14,
+        "quote_start_line": 116,
+        "quote_end_line": 120
       },
       {
-        "description": "Represented AiDisk as a way to safely secure and access data",
-        "quoted_text": "Despite the fact that FTP does not support transit encryption, since at least 2012 respondent has promoted AiDisk as a way to \"safely secure and access your treasured data through your router\" (see Exh. E).",
-        "source_paragraph": 14
-      },
-      {
-        "description": "Represented that the firmware upgrade tool could check whether router is using latest firmware",
-        "quoted_text": "The admin console includes a tool that ostensibly allows consumers to check whether their router is using the most current firmware (\"firmware upgrade tool\"). When consumers click on the \"Check\" button, the tool indicates that the \"router is checking the ASUS server for the firmware update\" (see Exh. H).",
-        "source_paragraph": 27
+        "description": "Represented through the firmware upgrade tool that consumers could rely on it to accurately indicate whether their router is using the most current firmware, displaying a message that the router is checking for updates",
+        "quoted_text": "27. The admin console includes a tool that ostensibly allows consumers to check whether their router is using the most current firmware (“firmware upgrade tool”). When consumers click on the “Check” button, the tool indicates that the “router is checking the ASUS server for the firmware update” (see Exh. H).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 27,
+        "quote_start_line": 228,
+        "quote_end_line": 231
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "Router Security Misrepresentations",
-        "representation": "Respondent represented that it took reasonable steps to ensure that its routers could protect consumers' local networks from attack",
-        "fact": "Respondent did not take reasonable steps to ensure that its routers could protect consumers' local networks from attack, including failing to protect against password disclosure and cross-site request forgery vulnerabilities",
-        "conclusion": "Therefore, the representation set forth in Paragraph 37 is false or misleading."
+        "representation": "Respondent represented, expressly or by implication, that it took reasonable steps to ensure that its routers could protect consumers' local networks from attack, including by marketing security features such as SPI intrusion detection, DoS protection, and firewall capabilities.",
+        "fact": "Respondent did not take reasonable steps to ensure that its routers could protect consumers' local networks from attack, as it failed to perform pre-release testing, implement protections against known vulnerabilities such as CSRF, and maintain adequate processes for addressing reported security issues.",
+        "conclusion": "The representation set forth in Paragraph 37 is false or misleading."
       },
       {
         "count_number": 2,
         "title": "AiCloud Security Misrepresentations",
-        "representation": "Respondent represented that it took reasonable steps to ensure that its AiCloud feature is a secure means for a consumer to access sensitive personal information",
-        "fact": "Respondent did not take reasonable steps to ensure that its AiCloud feature is a secure means for a consumer to access sensitive personal information, as AiCloud contained authentication bypass and password disclosure vulnerabilities",
-        "conclusion": "Therefore, the representation set forth in Paragraph 39 is false or misleading."
+        "representation": "Respondent represented, expressly or by implication, that it took reasonable steps to ensure that its AiCloud feature is a secure means for a consumer to access sensitive personal information, marketing it as a 'private personal cloud' with 'increased privacy' and 'the most complete, accessible, and secure cloud platform.'",
+        "fact": "Respondent did not take reasonable steps to ensure that its AiCloud feature is a secure means for a consumer to access sensitive personal information, as AiCloud contained authentication bypass and password disclosure vulnerabilities, and respondent failed to timely notify consumers or provide fixes despite knowing of the vulnerabilities.",
+        "conclusion": "The representation set forth in Paragraph 39 is false or misleading."
       },
       {
         "count_number": 3,
         "title": "AiDisk Security Misrepresentations",
-        "representation": "Respondent represented that it took reasonable steps to ensure that its AiDisk feature is a secure means for a consumer to access sensitive personal information",
-        "fact": "Respondent did not take reasonable steps to ensure that its AiDisk feature is a secure means for a consumer to access sensitive personal information, as AiDisk used insecure FTP without encryption, had insecure default settings allowing unauthenticated access, and recommended weak login credentials",
-        "conclusion": "Therefore, the representation set forth in Paragraph 41 is false or misleading."
+        "representation": "Respondent represented, expressly or by implication, that it took reasonable steps to ensure that its AiDisk feature is a secure means for a consumer to access sensitive personal information, promoting it as a way to 'safely secure and access your treasured data through your router.'",
+        "fact": "Respondent did not take reasonable steps to ensure that its AiDisk feature is a secure means for a consumer to access sensitive personal information, as AiDisk used unencrypted FTP, had insecure default settings that allowed unauthenticated internet access to consumers' USB storage devices, and respondent failed to act on multiple security researcher warnings for months.",
+        "conclusion": "The representation set forth in Paragraph 41 is false or misleading."
       },
       {
         "count_number": 4,
         "title": "Firmware Upgrade Tool Misrepresentations",
-        "representation": "Respondent represented that consumers can rely upon the firmware upgrade tool to indicate accurately whether their router is using the most current firmware",
-        "fact": "Consumers cannot rely upon the firmware upgrade tool to indicate accurately whether their router is using the most current firmware, as the tool frequently failed to recognize the latest available firmware due to ASUS not updating the server-side list",
-        "conclusion": "Therefore, the representation set forth in Paragraph 43 is false or misleading."
+        "representation": "Respondent represented, expressly or by implication, that consumers can rely upon the firmware upgrade tool to accurately indicate whether their router is using the most current firmware.",
+        "fact": "Consumers cannot rely upon the firmware upgrade tool to accurately indicate whether their router is using the most current firmware, because ASUS repeatedly failed to update the firmware list on its server, causing the tool to falsely report that the router's firmware was already up to date when newer, security-critical updates were available.",
+        "conclusion": "The representation set forth in Paragraph 43 is false or misleading."
       },
       {
         "count_number": 5,
         "title": "Unfair Security Practices",
-        "representation": "Respondent failed to take reasonable steps to secure the software for its routers, which respondent offered to consumers for the purpose of protecting their local networks and accessing sensitive personal information",
-        "fact": "Respondent's actions caused or are likely to cause substantial injury to consumers in the United States that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves",
-        "conclusion": "This practice is an unfair act or practice."
+        "representation": "Respondent offered routers to consumers for the purpose of protecting their local networks and accessing sensitive personal information, while failing to take reasonable steps to secure the router software.",
+        "fact": "Respondent's failure to take reasonable steps to secure the software for its routers caused or was likely to cause substantial injury to consumers that was not outweighed by countervailing benefits to consumers or competition and was not reasonably avoidable by consumers themselves.",
+        "conclusion": "Respondent's actions constitute an unfair act or practice in violation of Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)."
       }
     ]
   },
   "order": {
     "definitions": {
-      "respondent": "Unless otherwise specified, \"respondent\" shall mean ASUSTeK Computer, Inc., corporation, and its subsidiaries and divisions in the United States, and successors and assigns.",
-      "Clear(ly) and conspicuous(ly)": "\"Clear(ly) and conspicuous(ly)\" means that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: A. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication, even if the representation requiring the disclosure is made in only one means. B. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. C. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. D. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. E. The disclosure must use diction and syntax understandable to ordinary consumers. F. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. G. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication.",
-      "Commerce": "\"Commerce\" shall mean commerce among the several States or with foreign nations, or in any Territory of the United States or in the District of Columbia, or between any such Territory and another, or between any such Territory and any State or foreign nation, or between the District of Columbia and any State or Territory or foreign nation, as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44.",
-      "Covered Device": "\"Covered Device\" shall mean (a) any router, or device for which the primary purpose is connecting other client devices to a network, developed by respondent, directly or indirectly, that is marketed to consumers in the United States and (b) the software used to access, operate, manage, or configure such router or other device subject to part (a) of this definition, including, but not limited to, the firmware, web or mobile applications, and any related online services, that are advertised, developed, branded, or provided by respondent, directly or indirectly, for use with, or as compatible with, the router or other device.",
-      "Covered Information": "\"Covered Information\" shall mean any individually-identifiable information from or about an individual consumer collected by respondent through a Covered Device or input into, stored on, captured with, accessed, or transmitted through a Covered Device, including but not limited to (a) a first and last name; (b) a home or other physical address; (c) an email address or other online contact information; (d) a telephone number; (e) a Social Security number; (f) financial information; (g) an authentication credential, such as a username or password; (h) photo, video, or audio files; (i) the contents of any communication, the names of any websites sought, or the information entered into any website.",
-      "Default Settings": "\"Default Settings\" shall mean any configuration option on a Covered Device that respondent preselects, presets, or prefills for the consumer.",
-      "Software Update": "\"Software Update\" shall mean any update designed to address a Security Flaw.",
-      "Security Flaw": "\"Security Flaw\" is a software vulnerability or design flaw in a Covered Device that creates a material risk of (a) unauthorized access to or modification of any Covered Device, (b) the unintentional exposure by a consumer of Covered Information, or (c) the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of Covered Information."
+      "respondent": "ASUSTeK Computer, Inc., corporation, and its subsidiaries and divisions in the United States, and successors and assigns.",
+      "Clear(ly) and conspicuous(ly)": "means that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: A. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication, even if the representation requiring the disclosure is made in only one means. B. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. C. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. D. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. E. The disclosure must use diction and syntax understandable to ordinary consumers. F. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. G. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication.",
+      "Commerce": "shall mean commerce among the several States or with foreign nations, or in any Territory of the United States or in the District of Columbia, or between any such Territory and another, or between any such Territory and any State or foreign nation, or between the District of Columbia and any State or Territory or foreign nation, as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44.",
+      "Covered Device": "shall mean (a) any router, or device for which the primary purpose is connecting other client devices to a network, developed by respondent, directly or indirectly, that is marketed to consumers in the United States and (b) the software used to access, operate, manage, or configure such router or other device subject to part (a) of this definition, including, but not limited to, the firmware, web or mobile applications, and any related online services, that are advertised, developed, branded, or provided by respondent, directly or indirectly, for use with, or as compatible with, the router or other device.",
+      "Covered Information": "shall mean any individually-identifiable information from or about an individual consumer collected by respondent through a Covered Device or input into, stored on, captured with, accessed, or transmitted through a Covered Device, including but not limited to (a) a first and last name; (b) a home or other physical address; (c) an email address or other online contact information; (d) a telephone number; (e) a Social Security number; (f) financial information; (g) an authentication credential, such as a username or password; (h) photo, video, or audio files; (i) the contents of any communication, the names of any websites sought, or the information entered into any website.",
+      "Default Settings": "shall mean any configuration option on a Covered Device that respondent preselects, presets, or prefills for the consumer.",
+      "Software Update": "shall mean any update designed to address a Security Flaw.",
+      "Security Flaw": "is a software vulnerability or design flaw in a Covered Device that creates a material risk of (a) unauthorized access to or modification of any Covered Device, (b) the unintentional exposure by a consumer of Covered Information, or (c) the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of Covered Information."
     },
     "provisions": [
       {
         "provision_number": "I",
         "title": "Prohibition Against Misrepresentations About Security",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent the extent to which it protects the security of Covered Devices, the security or privacy of Covered Information, the ability to secure a network, or whether devices use up-to-date software.",
+        "summary": "Respondent must not misrepresent, expressly or by implication, the security of its Covered Devices, the protection of Covered Information, the ability to use a Covered Device to secure a network, or the up-to-date status of a Covered Device's software.",
         "requirements": [
           {
-            "description": "Must not misrepresent the extent to which respondent or its products or services maintain and protect the security of any Covered Device",
-            "quoted_text": "IT IS ORDERED that respondent and its officers, agents, representatives, and employees, directly or indirectly, in or affecting commerce, must not misrepresent in any manner, expressly or by implication: A. The extent to which respondent or its products or services maintain and protect: 1. The security of any Covered Device;",
+            "description": "Must not misrepresent the extent to which respondent or its products or services maintain and protect the security of any Covered Device or the security, privacy, confidentiality, or integrity of any Covered Information",
+            "quoted_text": "IT IS ORDERED that respondent and its officers, agents, representatives, and employees, directly or indirectly, in or affecting commerce, must not misrepresent in any manner, expressly or by implication: Page 3 of 9 A. The extent to which respondent or its products or services maintain and protect: 1. The security of any Covered Device; 2. The security, privacy, confidentiality, or integrity of any Covered Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Must not misrepresent the extent to which respondent or its products or services maintain and protect the security, privacy, confidentiality, or integrity of any Covered Information",
-            "quoted_text": "IT IS ORDERED that respondent and its officers, agents, representatives, and employees, directly or indirectly, in or affecting commerce, must not misrepresent in any manner, expressly or by implication: A. The extent to which respondent or its products or services maintain and protect: ... 2. The security, privacy, confidentiality, or integrity of any Covered Information;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 103,
+            "quote_end_line": 112
           },
           {
             "description": "Must not misrepresent the extent to which a consumer can use a Covered Device to secure a network",
-            "quoted_text": "IT IS ORDERED that respondent and its officers, agents, representatives, and employees, directly or indirectly, in or affecting commerce, must not misrepresent in any manner, expressly or by implication: ... B. The extent to which a consumer can use a Covered Device to secure a network;",
+            "quoted_text": "B. The extent to which a consumer can use a Covered Device to secure a network; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 113,
+            "quote_end_line": 114
           },
           {
             "description": "Must not misrepresent the extent to which a Covered Device is using up-to-date software",
-            "quoted_text": "IT IS ORDERED that respondent and its officers, agents, representatives, and employees, directly or indirectly, in or affecting commerce, must not misrepresent in any manner, expressly or by implication: ... C. The extent to which a Covered Device is using up-to-date software.",
+            "quoted_text": "C. The extent to which a Covered Device is using up-to-date software.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 115,
+            "quote_end_line": 115
           }
         ]
       },
@@ -140,70 +150,88 @@
         "provision_number": "II",
         "title": "Comprehensive Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondent must establish and maintain a comprehensive written security program to address security risks related to Covered Devices and protect the privacy, security, confidentiality, and integrity of Covered Information.",
+        "summary": "Respondent must establish, implement, and maintain a comprehensive, fully documented security program reasonably designed to address security risks for Covered Devices and protect Covered Information, including specific administrative, technical, and physical safeguards.",
         "requirements": [
           {
-            "description": "Establish and implement, and thereafter maintain, a comprehensive security program that is reasonably designed to address security risks and protect Covered Information, no later than the date of service of this order",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent must, no later than the date of service of this order, establish and implement, and thereafter maintain, a comprehensive security program that is reasonably designed to (1) address security risks related to the development and management of new and existing Covered Devices, and (2) protect the privacy, security, confidentiality, and integrity of Covered Information. Such program, the content and implementation of which must be fully documented in writing, must contain administrative, technical, and physical safeguards appropriate to respondent's size and complexity, the nature and scope of respondent's activities, and the sensitivity of the Covered Device's function or the Covered Information",
-            "deadline": "no later than the date of service of this order",
+            "description": "Establish and implement, no later than the date of service of this order, and thereafter maintain, a comprehensive security program reasonably designed to address security risks related to Covered Devices and protect Covered Information, fully documented in writing",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent must, no later than the date of service of this order, establish and implement, and thereafter maintain, a comprehensive security program that is reasonably designed to (1) address security risks related to the development and management of new and existing Covered Devices, and (2) protect the privacy, security, confidentiality, and integrity of Covered Information. Such program, the content and implementation of which must be fully documented in writing, must contain administrative, technical, and physical safeguards appropriate to respondent’s size and complexity, the nature and scope of respondent’s activities, and the sensitivity of the Covered Device’s function or the Covered Information, including:",
+            "deadline": "date of service of this order",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 117,
+            "quote_end_line": 125
           },
           {
             "description": "Designate an employee or employees to coordinate and be accountable for the security program",
             "quoted_text": "A. The designation of an employee or employees to coordinate and be accountable for the security program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 126,
+            "quote_end_line": 127
           },
           {
-            "description": "Identify material internal and external risks to the security of Covered Devices and assess the sufficiency of safeguards",
+            "description": "Identify material internal and external risks to the security of Covered Devices that could result in unauthorized access or modification, and assess the sufficiency of safeguards in place to control these risks",
             "quoted_text": "B. The identification of material internal and external risks to the security of Covered Devices that could result in unauthorized access to or unauthorized modification of a Covered Device, and assessment of the sufficiency of any safeguards in place to control these risks;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 128,
+            "quote_end_line": 131
           },
           {
-            "description": "Identify material internal and external risks to the privacy, security, confidentiality, and integrity of Covered Information and assess the sufficiency of safeguards",
+            "description": "Identify material internal and external risks to the privacy, security, confidentiality, and integrity of Covered Information that could result in unintentional exposure or unauthorized disclosure/misuse/loss/compromise, and assess the sufficiency of safeguards in place",
             "quoted_text": "C. The identification of material internal and external risks to the privacy, security, confidentiality, and integrity of Covered Information that could result in the unintentional exposure of such information by consumers or the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 132,
+            "quote_end_line": 137
           },
           {
-            "description": "Risk assessments must include consideration of risks in each area of relevant operation, including employee training, product design, secure software development, third-party vulnerability response, and prevention and detection of attacks",
+            "description": "Risk assessments must at minimum consider risks in: employee training and management (including secure engineering and defensive programming); product design, development, and research; secure software design, development, and testing including Default Settings; review and response to third-party security vulnerability reports; and prevention, detection, and response to attacks, intrusions, or system failures",
             "quoted_text": "D. At a minimum, the risk assessments required by Subparts B and C must include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management, including in secure engineering and defensive programming; (2) product design, development, and research; (3) secure software design, development, and testing, including for Default Settings; (4) review, assessment, and response to third-party security vulnerability reports, and (5) prevention, detection, and response to attacks, intrusions, or systems failures;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 138,
+            "quote_end_line": 145
           },
           {
-            "description": "Design and implement reasonable safeguards to control identified risks, including through reasonable and appropriate software security testing techniques",
-            "quoted_text": "E. The design and implementation of reasonable safeguards to control the risks identified through risk assessment, including through reasonable and appropriate software security testing techniques, such as (1) vulnerability and penetration testing; (2) security architecture reviews; (3) code reviews; and (4) other reasonable and appropriate assessments, audits, reviews, or other tests to identify potential security failures and verify that access to Covered Devices and Covered Information is restricted consistent with a user's security settings;",
+            "description": "Design and implement reasonable safeguards to control identified risks, including through reasonable and appropriate software security testing techniques such as vulnerability and penetration testing, security architecture reviews, code reviews, and other tests to verify access to Covered Devices and Covered Information is restricted consistent with a user's security settings",
+            "quoted_text": "E. The design and implementation of reasonable safeguards to control the risks identified through risk assessment, including through reasonable and appropriate software security testing techniques, such as (1) vulnerability and penetration testing; (2) security architecture reviews; (3) code reviews; and (4) other reasonable and appropriate assessments, audits, reviews, or other tests to identify potential security failures and verify that access to Covered Devices and Covered Information is restricted consistent with a user’s security settings;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 149,
+            "quote_end_line": 155
           },
           {
-            "description": "Regularly test or monitor the effectiveness of the safeguards' key controls, systems, and procedures",
-            "quoted_text": "F. Regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures;",
+            "description": "Regularly test or monitor the effectiveness of safeguards' key controls, systems, and procedures",
+            "quoted_text": "F. Regular testing or monitoring of the effectiveness of the safeguards’ key controls, systems, and procedures;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 156,
+            "quote_end_line": 157
           },
           {
-            "description": "Develop and use reasonable steps to select and retain service providers capable of maintaining security practices consistent with this order, and require service providers by contract to implement and maintain appropriate safeguards",
-            "quoted_text": "G. The development and use of reasonable steps to select and retain service providers capable of maintaining security practices consistent with this order, and requiring service providers by contract to implement and maintain appropriate safeguards consistent with this order;",
+            "description": "Develop and use reasonable steps to select and retain service providers capable of maintaining security practices consistent with this order, and require service providers by contract to implement and maintain appropriate safeguards consistent with this order",
+            "quoted_text": "G. The development and use of reasonable steps to select and retain service providers capable of maintaining security practices consistent with this order, and requiring service providers by contract to implement and maintain appropriate safeguards consistent with this order; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 158,
+            "quote_end_line": 161
           },
           {
-            "description": "Evaluate and adjust respondent's security program in light of testing results, material changes to operations, or other circumstances that may impact program effectiveness",
-            "quoted_text": "H. The evaluation and adjustment of respondent's security program in light of the results of the testing and monitoring required by Subpart F, any material changes to respondent's operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of the security program.",
+            "description": "Evaluate and adjust the security program in light of testing and monitoring results, any material changes to respondent's operations or business arrangements, or any other circumstances that may have a material impact on the effectiveness of the security program",
+            "quoted_text": "H. The evaluation and adjustment of respondent’s security program in light of the results of the testing and monitoring required by Subpart F, any material changes to respondent’s operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of the security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 162,
+            "quote_end_line": 166
           }
         ]
       },
@@ -211,149 +239,167 @@
         "provision_number": "III",
         "title": "Third-Party Security Assessments",
         "category": "assessment",
-        "summary": "Respondent must obtain initial and biennial third-party security assessments from qualified professionals for twenty years, covering the security program's implementation and effectiveness.",
+        "summary": "Respondent must obtain initial and biennial third-party security assessments from a qualified, objective, independent professional (CSSLP or CISSP-credentialed), covering the first 180 days and each two-year period thereafter for 20 years, with each assessment certifying the effectiveness of the security program.",
         "requirements": [
           {
-            "description": "Obtain initial Assessment covering the first 180 days after service of the order from a qualified third-party professional",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Part II of this order, respondent must obtain initial and biennial assessments and reports (\"Assessments\") from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. ... The reporting period for the Assessments must cover: (1) the first one hundred eighty (180) days after service of the order for the initial Assessment;",
-            "deadline": "180 days",
+            "description": "Obtain an initial third-party Assessment covering the first 180 days after service of the order, prepared by a qualified, objective, independent professional (CSSLP or CISSP with relevant experience, or similarly qualified person approved by FTC)",
+            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Part II of this order, respondent must obtain initial and biennial assessments and reports (“Assessments”) from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. Professionals qualified to prepare such Assessments must be: a person qualified as a Certified Secure Software Lifecycle Professional (CSSLP) with experience programming secure Internet-accessible consumer-grade devices; or as a Certified Information System Security Professional (CISSP) with professional experience in the Software Development Security domain and in programming secure Internet-accessible consumer-grade devices; or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue, NW, Washington, D.C. 20580. The reporting period for the Assessments must cover: (1) the first one hundred eighty (180) days after service of the order for the initial Assessment; and (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments. Each Assessment must:",
+            "deadline": "180 days after service of the order (reporting period)",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 168,
+            "quote_end_line": 181
           },
           {
-            "description": "Obtain biennial Assessments for each two-year period for twenty years after service of the order",
-            "quoted_text": "The reporting period for the Assessments must cover: ... (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments.",
+            "description": "Obtain biennial Assessments covering each two-year period thereafter for twenty (20) years after service of the order",
+            "quoted_text": "(1) the first one hundred eighty (180) days after service of the order for the initial Assessment; and (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments. Each Assessment must:",
+            "deadline": "every 2 years for 20 years",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 179,
+            "quote_end_line": 181
+          },
+          {
+            "description": "Each Assessment must set forth the specific controls and procedures respondent has implemented and maintained during the reporting period",
+            "quoted_text": "A. Set forth the specific controls and procedures that respondent has implemented and maintained during the reporting period;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.8974698795180723
+            "confidence": 1.0,
+            "quote_start_line": 182,
+            "quote_end_line": 183
           },
           {
-            "description": "Each Assessment must set forth the specific controls and procedures implemented and maintained during the reporting period",
-            "quoted_text": "Each Assessment must: A. Set forth the specific controls and procedures that respondent has implemented and maintained during the reporting period;",
+            "description": "Each Assessment must explain how the safeguards are appropriate to respondent's size and complexity, the nature and scope of its activities, and the sensitivity of the Covered Device's function or the Covered Information",
+            "quoted_text": "B. Explain how such safeguards are appropriate to respondent’s size and complexity, the nature and scope of respondent’s activities, and the sensitivity of the Covered Device’s function or the Covered Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 184,
+            "quote_end_line": 186
           },
           {
-            "description": "Each Assessment must explain how safeguards are appropriate to respondent's size, complexity, activities, and sensitivity of Covered Device function or Covered Information",
-            "quoted_text": "Each Assessment must: ... B. Explain how such safeguards are appropriate to respondent's size and complexity, the nature and scope of respondent's activities, and the sensitivity of the Covered Device's function or the Covered Information;",
+            "description": "Each Assessment must explain how the implemented safeguards meet or exceed the protections required by Part II of this order",
+            "quoted_text": "C. Explain how the safeguards that have been implemented meet or exceed the protections required by Part II of this order; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 190,
+            "quote_end_line": 191
           },
           {
-            "description": "Each Assessment must explain how the safeguards meet or exceed the protections required by Part II of this order",
-            "quoted_text": "Each Assessment must: ... C. Explain how the safeguards that have been implemented meet or exceed the protections required by Part II of this order;",
+            "description": "Each Assessment must certify that respondent's security program is operating with sufficient effectiveness to provide reasonable assurance that the security of Covered Devices and the privacy, security, confidentiality, and integrity of Covered Information is protected and has so operated throughout the reporting period",
+            "quoted_text": "D. Certify that respondent’s security program is operating with sufficient effectiveness to provide reasonable assurance that the security of Covered Devices and the privacy, security, confidentiality, and integrity of Covered Information is protected and has so operated throughout the reporting period.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9205109489051095
+            "confidence": 1.0,
+            "quote_start_line": 192,
+            "quote_end_line": 195
           },
           {
-            "description": "Each Assessment must certify that respondent's security program is operating with sufficient effectiveness to provide reasonable assurance throughout the reporting period",
-            "quoted_text": "Each Assessment must: ... D. Certify that respondent's security program is operating with sufficient effectiveness to provide reasonable assurance that the security of Covered Devices and the privacy, security, confidentiality, and integrity of Covered Information is protected and has so operated throughout the reporting period.",
-            "deadline": null,
+            "description": "Each Assessment must be prepared and completed within sixty (60) days after the end of the reporting period to which it applies",
+            "quoted_text": "Each Assessment must be prepared and completed within sixty (60) days after the end of the",
+            "deadline": "60 days after end of reporting period",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 196,
+            "quote_end_line": 196
           },
           {
-            "description": "Each Assessment must be prepared and completed within sixty days after the end of the reporting period",
-            "quoted_text": "Each Assessment must be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
-            "deadline": "60 days",
+            "description": "Provide the initial Assessment to the FTC Associate Director for Enforcement within ten (10) days after the Assessment has been prepared, by email to Debrief@ftc.gov or overnight courier",
+            "quoted_text": "reporting period to which the Assessment applies. Respondent must provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared. All subsequent biennial Assessments must be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request. Unless otherwise directed by a representative of the Commission, the initial Assessment, and any subsequent Assessments requested, must be emailed to Debrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, D.C. 20580. The subject line must begin: In re ASUSTek Computer Inc., FTC File No. 142 3156.",
+            "deadline": "10 days after Assessment is prepared",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 197,
+            "quote_end_line": 207
           },
           {
-            "description": "Provide the initial Assessment to the Associate Director for Enforcement within ten days after the Assessment has been prepared",
-            "quoted_text": "Respondent must provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared.",
-            "deadline": "10 days",
+            "description": "Retain all subsequent biennial Assessments until the order is terminated and provide them to the Associate Director of Enforcement within ten (10) days of request",
+            "quoted_text": "prepared. All subsequent biennial Assessments must be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of",
+            "deadline": "10 days of request",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Retain all subsequent biennial Assessments until the order is terminated and provide to the Associate Director of Enforcement within ten days of request",
-            "quoted_text": "All subsequent biennial Assessments must be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 200,
+            "quote_end_line": 201
           }
         ]
       },
       {
         "provision_number": "IV",
-        "title": "Consumer Notification of Security Flaws and Software Updates",
+        "title": "Security Flaw Notification and Consumer Registration",
         "category": "affirmative_obligation",
-        "summary": "Respondent must notify consumers clearly and conspicuously when a Software Update is available or when reasonable steps can be taken to mitigate a Security Flaw, and must provide consumers an opportunity to register for security notifications.",
+        "summary": "Respondent must clearly and conspicuously notify consumers when a Software Update is available or when mitigation steps exist for a Security Flaw, through multiple channels, and must provide consumers an opportunity to register contact information to receive such notifications during initial device setup.",
         "requirements": [
           {
-            "description": "Notify consumers, Clearly and Conspicuously, when a Software Update is available or when respondent is aware of reasonable steps to mitigate a Security Flaw, explaining how to install the update or mitigate the flaw and the risks if the consumer chooses not to act",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent must: A. Notify consumers, Clearly and Conspicuously, when a Software Update is available, or when respondent is aware of reasonable steps that a consumer could take to mitigate a Security Flaw. The notice must explain how to install the Software Update, or otherwise mitigate the Security Flaw, and the risks to the consumer's Covered Device or Covered Information if the consumer chooses not to install the available Software Update or take the recommended steps to mitigate the Security Flaw.",
+            "description": "Notify consumers Clearly and Conspicuously when a Software Update is available or when respondent is aware of reasonable mitigation steps for a Security Flaw, explaining how to install the update or mitigate the flaw and the risks of not doing so",
+            "quoted_text": "A. Notify consumers, Clearly and Conspicuously, when a Software Update is available, or when respondent is aware of reasonable steps that a consumer could take to mitigate a Security Flaw. The notice must explain how to install the Software Update, or otherwise mitigate the Security Flaw, and the risks to the consumer’s Covered Device or Covered Information if the consumer chooses not to install the available Software Update or take the recommended steps to mitigate the Security Flaw. Notice must be provided through at least each of the following",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 210,
+            "quote_end_line": 216
           },
           {
-            "description": "Post a Clear and Conspicuous notice on at least the primary, consumer-facing website of respondent and, to the extent feasible, on the user interface of any affected Covered Device",
-            "quoted_text": "Notice must be provided through at least each of the following means: 1. Posting of a Clear and Conspicuous notice on at least the primary, consumer-facing website of respondent and, to the extent feasible, on the user interface of any Covered Device that is affected;",
+            "description": "Post a Clear and Conspicuous notice on at least the primary consumer-facing website and, to the extent feasible, on the user interface of any affected Covered Device",
+            "quoted_text": "1. Posting of a Clear and Conspicuous notice on at least the primary, consumer-facing website of respondent and, to the extent feasible, on the user interface of any Covered Device that is affected;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 218,
+            "quote_end_line": 220
           },
           {
-            "description": "Directly inform consumers who register or have registered a Covered Device with respondent by email, text message, push notification, or another similar method",
-            "quoted_text": "Notice must be provided through at least each of the following means: ... 2. Directly informing consumers who register, or who have registered, a Covered Device with respondent, by email, text message, push notification, or another similar method of providing notifications directly to consumers;",
+            "description": "Directly inform consumers who register (or have registered) a Covered Device with respondent by email, text message, push notification, or another similar direct notification method",
+            "quoted_text": "2. Directly informing consumers who register, or who have registered, a Covered Device with respondent, by email, text message, push notification, or another similar method of providing notifications directly to consumers; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 221,
+            "quote_end_line": 224
           },
           {
-            "description": "Inform consumers who contact respondent to complain or inquire about any aspect of the Covered Device they have purchased",
-            "quoted_text": "Notice must be provided through at least each of the following means: ... 3. Informing consumers who contact respondent to complain or inquire about any aspect of the Covered Device they have purchased.",
+            "description": "Inform consumers who contact respondent to complain or inquire about any aspect of their purchased Covered Device",
+            "quoted_text": "3. Informing consumers who contact respondent to complain or inquire about any aspect of the Covered Device they have purchased.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 225,
+            "quote_end_line": 226
           },
           {
-            "description": "Provide consumers with an opportunity to register an email address, phone number, device, or other information during initial setup to receive security notifications, without requiring agreement to receive non-security communications",
-            "quoted_text": "B. Provide consumers with an opportunity to register an email address, phone number, device, or other information during the initial setup or configuration of a Covered Device, in order to receive the security notifications required by this Part. The consumer's registration of such information must not be dependent upon or defaulted to an agreement to receive non-security related notifications or any other communications, such as advertising. Notwithstanding this requirement, respondent may provide an option for consumers to opt-out of receiving such security-related notifications.",
+            "description": "Provide consumers an opportunity to register an email address, phone number, device, or other information during initial setup or configuration of a Covered Device to receive security notifications; registration must not be dependent upon or defaulted to agreeing to receive non-security notifications or advertising; respondent may provide an opt-out option",
+            "quoted_text": "B. Provide consumers with an opportunity to register an email address, phone number, device, or other information during the initial setup or configuration of a Covered Device, in order to receive the security notifications required by this Part. The consumer’s registration of such information must not be dependent upon or defaulted to an agreement to receive non-security related notifications or any other communications, such as advertising. Notwithstanding this requirement, respondent may provide an option for consumers to opt-out of receiving such security-related notifications.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 230,
+            "quote_end_line": 237
           }
         ]
       },
       {
         "provision_number": "V",
-        "title": "Recordkeeping Requirements",
+        "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must maintain and make available to the FTC for inspection all materials related to Assessments for three years and all other compliance documents for five years.",
+        "summary": "Respondent must maintain and make available to the FTC for inspection all materials relied upon for Part III Assessments for three years, and all other compliance-related documents (including advertisements, notifications, and any documents contradicting compliance) for five years.",
         "requirements": [
           {
-            "description": "Maintain and make available for FTC inspection all materials relied upon to prepare each Assessment for a period of three years after the date of preparation of each Assessment",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent must maintain and upon request make available to the Federal Trade Commission for inspection and copying, a print or electronic copy of: A. For a period of three (3) years after the date of preparation of each Assessment required under Part III of this order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of the respondent, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials relating to respondent's compliance with Part III of this order, for the compliance period covered by such Assessment;",
-            "deadline": null,
+            "description": "Maintain and upon request make available to the FTC for inspection and copying all materials relied upon to prepare each Assessment required under Part III, for a period of three (3) years after the date of preparation of each such Assessment, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent must maintain and upon request make available to the Federal Trade Commission for inspection and copying, a print or electronic copy of: A. For a period of three (3) years after the date of preparation of each Assessment required under Part III of this order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of the respondent, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials relating to respondent’s compliance with Part III of this order, for the compliance period covered by such Assessment;",
+            "deadline": "3 years after date of preparation of each Assessment",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 239,
+            "quote_end_line": 248
           },
           {
-            "description": "Maintain for five years all advertisements, promotional materials, installation and user guides, and packaging containing any representations covered by this order, as well as all materials used or relied upon in making or disseminating the representation",
-            "quoted_text": "B. Unless covered by V.A, for a period of five (5) years from the date of preparation or dissemination, whichever is later, all other documents relating to compliance with this order, including but not limited to: 1. All advertisements, promotional materials, installation and user guides, and packaging containing any representations covered by this order, as well as all materials used or relied upon in making or disseminating the representation;",
-            "deadline": null,
+            "description": "Maintain and make available to the FTC for five (5) years from the date of preparation or dissemination (whichever is later) all other compliance documents, including: all advertisements, promotional materials, installation and user guides, and packaging containing representations covered by this order; all notifications required by Part IV; and any documents that contradict, qualify, or call into question respondent's compliance with this order",
+            "quoted_text": "B. Unless covered by V.A, for a period of five (5) years from the date of preparation or dissemination, whichever is later, all other documents relating to compliance with this order, including but not limited to: 1. All advertisements, promotional materials, installation and user guides, and packaging containing any representations covered by this order, as well as all materials used or relied upon in making or disseminating the representation; 2. All notifications required by Part IV of this order; and 3. Any documents, whether prepared by or on behalf of respondent, that contradict, qualify, or call into question respondent’s compliance with this order.",
+            "deadline": "5 years from date of preparation or dissemination",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Maintain for five years all notifications required by Part IV of this order",
-            "quoted_text": "B. Unless covered by V.A, for a period of five (5) years from the date of preparation or dissemination, whichever is later, all other documents relating to compliance with this order, including but not limited to: ... 2. All notifications required by Part IV of this order;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Maintain for five years any documents that contradict, qualify, or call into question respondent's compliance with this order",
-            "quoted_text": "B. Unless covered by V.A, for a period of five (5) years from the date of preparation or dissemination, whichever is later, all other documents relating to compliance with this order, including but not limited to: ... 3. Any documents, whether prepared by or on behalf of respondent, that contradict, qualify, or call into question respondent's compliance with this order.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 249,
+            "quote_end_line": 259
           }
         ]
       },
@@ -361,72 +407,104 @@
         "provision_number": "VI",
         "title": "Order Acknowledgment and Delivery",
         "category": "acknowledgment",
-        "summary": "Respondent must deliver a copy of this order to all current and future subsidiaries and personnel with supervisory responsibilities relating to the subject matter of the order.",
+        "summary": "Respondent must deliver a copy of this order to all current and future subsidiaries, principals, officers, directors, managers, and employees or agents with supervisory responsibilities relating to the subject matter of the order, within specified timeframes.",
         "requirements": [
           {
-            "description": "Deliver a copy of this order to all current subsidiaries, principals, officers, directors, managers, employees, agents, and representatives having supervisory responsibilities relating to the subject matter of this order within thirty days after service of this order",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent must deliver a copy of this order to all current and future subsidiaries, current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having supervisory responsibilities relating to the subject matter of this order. Respondent must deliver this order to such current subsidiaries and personnel within thirty (30) days after service of this order",
-            "deadline": "30 days",
+            "description": "Deliver a copy of this order to all current and future subsidiaries, principals, officers, directors, managers, and all current and future employees, agents, and representatives having supervisory responsibilities relating to the subject matter of this order",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent must deliver a copy of this order to all current and future subsidiaries, current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having supervisory responsibilities relating to the subject matter of this order. Respondent must deliver this order to",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 261,
+            "quote_end_line": 264
           },
           {
-            "description": "Deliver a copy of this order to future subsidiaries and personnel within thirty days after the person assumes such position or responsibilities",
-            "quoted_text": "Respondent must deliver a copy of this order to all current and future subsidiaries, current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having supervisory responsibilities relating to the subject matter of this order. ... and to such future subsidiaries and personnel within thirty (30) days after the person assumes such position or responsibilities.",
-            "deadline": "30 days",
+            "description": "Deliver this order to current subsidiaries and personnel within thirty (30) days after service of this order",
+            "quoted_text": "responsibilities relating to the subject matter of this order. Respondent must deliver this order to such current subsidiaries and personnel within thirty (30) days after service of this order, and to",
+            "deadline": "30 days after service of this order",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 264,
+            "quote_end_line": 265
           },
           {
-            "description": "For any business entity resulting from any change in structure, deliver the order at least ten days prior to the change in structure",
-            "quoted_text": "For any business entity resulting from any change in structure set forth in Part VII, delivery must be at least ten (10) days prior to the change in structure.",
-            "deadline": "10 days",
+            "description": "Deliver this order to future subsidiaries and personnel within thirty (30) days after the person assumes such position or responsibilities",
+            "quoted_text": "such current subsidiaries and personnel within thirty (30) days after service of this order, and to such future subsidiaries and personnel within thirty (30) days after the person assumes such Page 7 of 9",
+            "deadline": "30 days after assumption of position",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 265,
+            "quote_end_line": 267
+          },
+          {
+            "description": "For any business entity resulting from any change in structure set forth in Part VII, deliver the order at least ten (10) days prior to the change in structure",
+            "quoted_text": "position or responsibilities. For any business entity resulting from any change in structure set forth in Part VII, delivery must be at least ten (10) days prior to the change in structure.",
+            "deadline": "10 days prior to change in structure",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 270,
+            "quote_end_line": 271
           }
         ]
       },
       {
         "provision_number": "VII",
-        "title": "Corporate Change Notification",
+        "title": "Notification of Corporate Changes",
         "category": "compliance_reporting",
-        "summary": "Respondent must notify the Commission at least thirty days prior to any corporate change that may affect compliance obligations, including dissolution, merger, bankruptcy, or name changes.",
+        "summary": "Respondent must notify the FTC at least 30 days prior to any corporate change that may affect compliance obligations under this order, including dissolution, merger, sale, creation or dissolution of subsidiaries, bankruptcy filings, or changes in corporate name or address.",
         "requirements": [
           {
-            "description": "Notify the Commission at least thirty days prior to any change in the corporation that may affect compliance obligations, including dissolution, assignment, sale, merger, creation or dissolution of subsidiaries, bankruptcy filing, or change in corporate name or address",
+            "description": "Notify the Commission at least thirty (30) days prior to any change in the corporation(s) that may affect compliance obligations, including dissolution, assignment, sale, merger, or other action resulting in a successor corporation; creation or dissolution of a subsidiary, parent, or affiliate engaging in acts subject to this order; proposed bankruptcy petition filing; or change in corporate name or address",
             "quoted_text": "IT IS FURTHER ORDERED that respondent must notify the Commission at least thirty (30) days prior to any change in the corporation(s) that may affect compliance obligations arising under this order, including, but not limited to: a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address.",
-            "deadline": "30 days",
+            "deadline": "30 days prior to corporate change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 273,
+            "quote_end_line": 278
           },
           {
-            "description": "If respondent learns of a proposed corporate change fewer than thirty days prior to the date such action is to take place, notify the Commission as soon as is practicable after obtaining such knowledge",
+            "description": "If respondent learns of a proposed corporate change fewer than thirty (30) days before it is to occur, notify the Commission as soon as practicable after obtaining such knowledge",
             "quoted_text": "Provided, however, that, with respect to any proposed change in the corporation(s) about which respondent learns fewer than thirty (30) days prior to the date such action is to take place, respondent must notify the Commission as soon as is practicable after obtaining such knowledge.",
-            "deadline": "as soon as is practicable",
+            "deadline": "as soon as practicable",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 279,
+            "quote_end_line": 281
+          },
+          {
+            "description": "All notices required by this Part must be emailed to Debrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director of Enforcement, Bureau of Consumer Protection, FTC, 600 Pennsylvania Avenue NW, Washington, D.C. 20580, with subject line beginning: In re ASUSTek Computer Inc., FTC File No. 142 3156",
+            "quoted_text": "Unless otherwise directed by a representative of the Commission, all notices required by this Part must be emailed to Debrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, D.C. 20580. The subject line must begin: In re ASUSTek Computer Inc., FTC File No. 142 3156.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 282,
+            "quote_end_line": 286
           }
         ]
       },
       {
         "provision_number": "VIII",
-        "title": "Initial and Ongoing Compliance Reporting",
+        "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondent must file an initial compliance report with the Commission within sixty days after service of the order and submit additional reports upon request.",
+        "summary": "Respondent must file an initial written compliance report with the FTC within 60 days of service of this order and submit additional written reports within 10 days of receiving written notice from a Commission representative.",
         "requirements": [
           {
-            "description": "File with the Commission a true and accurate report setting forth in detail the manner and form of compliance with this order within sixty days after the date of service of this order",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent, within sixty (60) days after the date of service of this order, must file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of its compliance with this order.",
-            "deadline": "60 days",
+            "description": "Within sixty (60) days after the date of service of this order, file with the Commission a true and accurate written report setting forth in detail the manner and form of its compliance with this order",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent, within sixty (60) days after the date of service of this order, must file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of its compliance with this order. Within ten (10) days of",
+            "deadline": "60 days after service of this order",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 288,
+            "quote_end_line": 290
           },
           {
-            "description": "Submit additional true and accurate written reports within ten days of receipt of written notice from a representative of the Commission",
-            "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, it must submit additional true and accurate written reports.",
-            "deadline": "10 days",
+            "description": "Within ten (10) days of receipt of written notice from a representative of the Commission, submit additional true and accurate written reports",
+            "quoted_text": "forth in detail the manner and form of its compliance with this order. Within ten (10) days of receipt of written notice from a representative of the Commission, it must submit additional true and accurate written reports.",
+            "deadline": "10 days of receipt of written notice",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 290,
+            "quote_end_line": 292
           }
         ]
       },
@@ -434,21 +512,23 @@
         "provision_number": "IX",
         "title": "Order Duration and Termination",
         "category": "duration",
-        "summary": "This order will terminate on July 18, 2036, or twenty years from the most recent date that the United States or the Commission files a complaint in federal court alleging any violation of the order, whichever comes later.",
+        "summary": "The order terminates on July 18, 2036, or twenty years from the most recent date the U.S. or the Commission files a complaint in federal court alleging any violation of the order, whichever is later, subject to specified exceptions.",
         "requirements": [
           {
-            "description": "Order will remain in effect for twenty years from issuance or twenty years from the most recent complaint filing, whichever comes later",
-            "quoted_text": "This order will terminate on July 18, 2036, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this order that terminates in fewer than twenty (20) years; B. This order's application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order as to such respondent will terminate according to this Part as though the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
-            "deadline": null,
+            "description": "Order terminates on July 18, 2036, or twenty (20) years from the most recent date the United States or the Commission files a complaint in federal court alleging any violation of the order, whichever comes later, subject to exceptions for parts terminating in fewer than twenty years, respondents not named in such complaint, and orders that have already terminated",
+            "quoted_text": "This order will terminate on July 18, 2036, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this order that terminates in fewer than twenty (20) years; B. This order’s application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part. Page 8 of 9 Provided, further, that if such complaint is dismissed or a federal court rules that respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order as to such respondent will terminate according to this Part as though the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "deadline": "July 18, 2036 or 20 years from most recent federal court complaint, whichever is later",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 294,
+            "quote_end_line": 311
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This order will terminate on July 18, 2036, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later"
+      "termination_text": "This order will terminate on July 18, 2036, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this order that terminates in fewer than twenty (20) years; B. This order's application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part."
     }
   },
   "metadata": {
@@ -458,11 +538,33 @@
     },
     "extraction_stats": {
       "complaint_counts": 5,
-      "complaint_representations": 5,
+      "complaint_representations": 4,
       "order_provisions": 9,
       "order_definitions": 8,
-      "order_requirements": 39
+      "order_requirements": 38,
+      "provisions_per_section": {
+        "I": 3,
+        "II": 9,
+        "III": 9,
+        "IV": 5,
+        "V": 2,
+        "VI": 4,
+        "VII": 3,
+        "VIII": 2,
+        "IX": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 4,
+        "complaint_total": 4,
+        "order_verified": 38,
+        "order_total": 38
+      }
     },
-    "processing_time_seconds": 193.0
+    "processing_time_seconds": 126.9
   }
 }

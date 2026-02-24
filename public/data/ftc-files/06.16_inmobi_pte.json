@@ -6,93 +6,585 @@
       "incorporation_state": "Singapore",
       "entity_type": "private limited company",
       "address": "30 Cecil Street, #19-08, Prudential Tower, Singapore 049712",
-      "business_description": "InMobi operates a mobile advertising network and provides an advertising platform for mobile application developers and advertisers. By integrating their software development kit (InMobi SDK), developers can monetize applications through various ad formats including banner ads, interstitial ads, and native ads."
+      "business_description": "InMobi operates a mobile advertising network providing an advertising platform for mobile application developers and advertisers. By integrating InMobi's software development kit (SDK), developers can monetize applications by allowing third-party advertisers to advertise to consumers. The company describes itself as the world's largest independent mobile advertising company with over one billion unique mobile devices reached."
     },
-    "commissioners": [
-      "Maneesha Mithal, Associate Director",
-      "Mark Eichorn, Assistant Director",
-      "Nithan Sannappa, Attorney",
-      "Jacqueline Connor, Attorney"
-    ],
+    "commissioners": [],
     "case_date": {
       "month": 6,
       "year": 2016
     },
-    "legal_authority": "Sections 5(a)(1), 5(m)(1)(A), 13(b), and 16(a) of the Federal Trade Commission Act, 15 U.S.C. §§ 45(a)(1), 45(m)(1)(A), 53(b), and 56(a), and Sections 1303(c) and 1306(d) of the Children's Online Privacy Protection Act of 1998, 15 U.S.C. §§ 6502(c) and 6505(d)",
-    "violation_type": "both",
+    "legal_authority": "Sections 5(a)(1), 5(m)(1)(A), 13(b), and 16(a) of the Federal Trade Commission Act, 15 U.S.C. §§ 45(a)(1), 45(m)(1)(A), 53(b), and 56(a); Sections 1303(c) and 1306(d) of the Children's Online Privacy Protection Act of 1998, 15 U.S.C. §§ 6502(c) and 6505(d); Children's Online Privacy Protection Rule, 16 C.F.R. Part 312",
+    "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/152-3203-inmobi-pte-ltd"
   },
   "complaint": {
-    "factual_background": "InMobi, a mobile advertising network, misrepresented its location tracking practices and violated children's privacy protections. The company told app developers it would only track users' locations with permission, but it secretly collected WiFi network information to track location even when users denied permission. InMobi also collected personal information from thousands of child-directed apps for behavioral advertising without parental consent, despite claiming it did not collect information from children.",
+    "factual_background": "InMobi, a mobile advertising network company, misrepresented its location tracking practices to app developers and consumers. The company claimed it would only track users' locations and serve geo-targeted ads when consumers granted permission through device location settings. However, InMobi secretly tracked users' locations by collecting WiFi network information (BSSIDs) even when consumers had explicitly disabled location permissions. Additionally, InMobi violated COPPA by collecting personal information from thousands of child-directed apps without parental consent, despite representing that it did not collect data from children.",
     "representations_made": [
       {
-        "description": "Claimed to track location and serve geo-targeted ads only if Android location API permissions were granted",
-        "quoted_text": "To allow InMobi to show Geo targeted ads, you need to add the ACCESS_COURSE_LOCATION [sic] and ACCESS_FINE_LOCATION permissions.",
-        "source_paragraph": 28
+        "description": "Represented to Android developers that geo-targeted ads require location permissions ACCESS_COARSE_LOCATION and ACCESS_FINE_LOCATION",
+        "quoted_text": "13 To allow InMobi to show Geo targeted ads, you need to add the 14 ACCESS_COURSE_LOCATION [sic] and ACCESS_FINE_LOCATION 15 permissions.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 28,
+        "quote_start_line": 225,
+        "quote_end_line": 227
       },
       {
-        "description": "Claimed to track location and serve geo-targeted ads only if iOS location API access was provided",
-        "quoted_text": "You can set the user location by using the location methods in the ad request. . . Passing the location object allows for better targeting, and potentially higher eCPMs [effective cost per thousand impressions].",
-        "source_paragraph": 30
+        "description": "Represented to iOS developers that passing location object allows for better targeting and higher eCPMs",
+        "quoted_text": "28 You can set the user location by using the location methods in the ad request. . . COMPLAINT 7 Case No. 3:16-cv-3474 Case 3:16-cv-03474 Document 1 Filed 06/22/16 Page 8 of 17 1 Passing the location object allows for better targeting, and potentially higher 2 eCPMs [effective cost per thousand impressions].",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 30,
+        "quote_start_line": 240,
+        "quote_end_line": 246
       },
       {
-        "description": "Claimed location parameter was required for geo-targeting to be considered",
-        "quoted_text": "This [location] parameter is passed to InMobi provided that the user allows it. It should contain the latitude, longitude, and accuracy, separated by commas. This parameter is required if the request is needed to be considered for geo-targeting.",
-        "source_paragraph": 32
+        "description": "Represented that location parameter is required if the request is to be considered for geo-targeting",
+        "quoted_text": "13 This [location] parameter is passed to InMobi provided that the user allows it. It 14 should contain the latitude, longitude, and accuracy, separated by commas. This 15 parameter is required if the request is needed to be considered for geo-targeting.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 32,
+        "quote_start_line": 257,
+        "quote_end_line": 259
       },
       {
-        "description": "Claimed to track location and serve geo-targeted ads only with user opt-in consent",
-        "quoted_text": "First, we take in location data on each user, in the form of user opt-in lat/long signals. Then we add real world context to these signals to figure out what places or businesses the user has visited. Our machine learning algorithms mine for patterns in this location history to identify what these trends mean about the user, from which we can infer what kind of consumer the user is.",
-        "source_paragraph": 34
+        "description": "Represented that the company takes in location data in the form of user opt-in lat/long signals",
+        "quoted_text": "26 First, we take in location data on each user, in the form of user opt-in lat/long 27 signals. Then we add real world context to these signals to figure out what places 28 or businesses the user has visited. Our machine learning algorithms mine for COMPLAINT 8 Case No. 3:16-cv-3474 Case 3:16-cv-03474 Document 1 Filed 06/22/16 Page 9 of 17 1 patterns in this location history to identify what these trends mean about the user, 2 from which we can infer what kind of consumer the user is. (Emphasis added.)",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 34,
+        "quote_start_line": 270,
+        "quote_end_line": 278
       },
       {
-        "description": "Claimed not to knowingly collect personal information from children under 13 in Privacy Policy",
-        "quoted_text": "We do not knowingly collect any personal information about children under the age of 13. If we become aware that we have collected personal information about a child under the age of 13, that information will be immediately deleted from our database.",
-        "source_paragraph": 42
+        "description": "Represented in privacy policy that they do not knowingly collect personal information about children under 13",
+        "quoted_text": "8 WHAT ABOUT CHILDREN? 9 We do not knowingly collect any personal information about children under the 10 age of 13. If we become aware that we have collected personal information about 11 a child under the age of 13, that information will be immediately deleted from our 12 database.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 42,
+        "quote_start_line": 348,
+        "quote_end_line": 352
       },
       {
-        "description": "Claimed not to collect information from children's sites for behavioral advertising in COPPA Policy",
-        "quoted_text": "In response to the new COPPA rules effective on July 1, 2013 InMobi is continuing to ensure that we do not collect and use information from children's sites for behavioral advertising (often referred to as interest based advertising). We will continue to only use any data in the manner that COPPA prescribes.",
-        "source_paragraph": 43
+        "description": "Represented in COPPA policy that they do not collect information from children's sites for behavioral advertising and comply with COPPA rules",
+        "quoted_text": "1 In response to the new COPPA rules effective on July 1, 2013 InMobi is 2 continuing to ensure that we do not collect and use information from children’s 3 sites for behavioral advertising (often referred to as interest based advertising). 4 We will continue to only use any data in the manner that COPPA prescribes. We 5 have identified all existing publisher sites and apps directed to children to ensure 6 we are in full compliance with the new COPPA rules and from 30 June, 2013 shall 7 ensure that new and existing publishers are required to notify InMobi of any new 8 sites or app accounts that are directed at children to ensure we continue to comply 9 with the COPPA rules.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 43,
+        "quote_start_line": 373,
+        "quote_end_line": 381
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Misrepresentation About Location API Requirements",
-        "representation": "Defendant represented it tracked the consumer's location and served geo-targeted ads only if the application developer and consumer had provided access to the Android and iOS location APIs",
-        "fact": "Defendant tracked the consumer's location and served geo-targeted ads by collecting BSSID and other information related to the WiFi network to which a consumer's device was connected or in-range, even if the consumer had not provided access to the location APIs",
+        "title": "Location Tracking Without API Permission",
+        "representation": "InMobi represented that it tracked consumers' location and served geo-targeted ads only if the application developer and consumer had provided access to the Android and iOS location APIs",
+        "fact": "InMobi tracked consumers' location and served geo-targeted ads by collecting BSSID and other WiFi network information even when consumers had not provided access to the location APIs",
         "conclusion": "Therefore, the representation set forth in Paragraph 51 was false or misleading and constituted a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 2,
-        "title": "Misrepresentation About Opt-In Consent",
-        "representation": "Defendant represented it tracked the consumer's location and served geo-targeted ads only if the consumer had provided opt-in consent",
-        "fact": "Defendant tracked the consumer's location and served geo-targeted ads by collecting BSSID and other information related to the WiFi network to which a consumer's device was connected or in-range, even if the consumer had not provided opt-in consent",
+        "title": "Location Tracking Without Opt-In Consent",
+        "representation": "InMobi represented that it tracked consumers' location and served geo-targeted ads only if the consumer had provided opt-in consent",
+        "fact": "InMobi tracked consumers' location and served geo-targeted ads by collecting BSSID and other WiFi network information even when consumers had not provided opt-in consent",
         "conclusion": "Therefore, the representation set forth in Paragraph 53 was false or misleading and constituted a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 3,
-        "title": "Misrepresentation About Children's Data Collection",
-        "representation": "Defendant represented that it did not collect or use personal information from applications directed to children",
-        "fact": "Defendant collected and used personal information from applications directed to children",
+        "title": "Collection of Children'sPersonal Information",
+        "representation": "InMobi represented that it did not collect or use personal information from applications directed to children",
+        "fact": "InMobi collected and used personal information from thousands of applications directed to children",
         "conclusion": "Therefore, the representation set forth in Paragraph 55 was false or misleading and constituted a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 4,
         "title": "COPPA Rule Violations",
-        "representation": "Defendant operated a Web site or online service directed to children and collected and used personal information from children with actual knowledge",
-        "fact": "Defendant failed to: (1) provide sufficient notice on its Web site or online services of the information it collects online from children and how it uses such information; (2) provide direct notice to parents of the information Defendant collects online from children and how it uses such information; and (3) obtain verifiable parental consent before any collection or use of personal information from children",
+        "representation": "InMobi operated a mobile advertising network that collected and used personal information from websites or online services directed to children with actual knowledge",
+        "fact": "InMobi failed to: (1) provide sufficient notice on its website of the information it collects from children and how it uses such information; (2) provide direct notice to parents of the information collected from children and how it uses such information; and (3) obtain verifiable parental consent before collection or use of personal information from children",
         "conclusion": "Defendant's acts or practices violated the COPPA Rule, 16 C.F.R. Part 312, which constitutes an unfair or deceptive act or practice in or affecting commerce, in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       }
     ]
   },
   "order": {
-    "definitions": {},
-    "provisions": [],
+    "definitions": {
+      "Child": "an individual under the age of 13.",
+      "Collects or collection": "for the purposes of Parts I and II of this Order only, the gathering of any personal information from a child by any means, including but not limited to: 1. Requesting, prompting, or encouraging a child to submit personal information online; 2. Enabling a child to make personal information publicly available in identifiable form; or 3. Passive tracking of a child online.",
+      "Covered information": "information from or about an individual consumer including, but not limited to: 1. Personal information; and 2. Location information.",
+      "Defendant": "InMobi Pte Ltd., and its subsidiaries and divisions in the United States, and successors and assigns.",
+      "Delete": "for purposes of Parts I and II of this Order only, to remove personal information such that it is not maintained in retrievable form and cannot be retrieved in the normal course of business.",
+      "Disclose or disclosure": "with respect to personal information: 1. The release of personal information collected by an operator from a child in identifiable form for any purpose, except where an operator provides such information to a person who provides support for the internal operations of the Web site or online service; and 2. Making personal information collected by an operator from a child publicly available in identifiable form by any means, including but not limited to a public posting through the Internet, or through a personal home page or screen posted on a Web site or online service; a pen pal service; an electronic mail service; a message board; or a chat room.",
+      "Internet": "collectively the myriad of computer and telecommunications facilities, including equipment and operating software, which comprise the interconnected world-wide network of networks that employ the Transmission Control Protocol/Internet Protocol, or any predecessor or successor protocols to such protocol, to communicate information of all kinds by wire, radio, or other methods of transmission.",
+      "Location information": "1. Information about a consumer's location that is collected through an application programming interface; or 2. Information about a consumer's location that is inferred from any other data collected through an application programming interface, including but not limited to Basic Service Set Identifiers (BSSIDs), with the limited exception of Internet Protocol (IP) addresses used to infer location at no greater accuracy than city-level.",
+      "Obtaining verifiable consent": "making any reasonable effort (taking into consideration available technology) to ensure that before personal information is collected from a child, a parent of the child: 1. Receives notice of the operator's personal information collection, use, and disclosure practices; and 2. Authorizes any collection, use, and/or disclosure of the personal information.",
+      "Online contact information": "an e-mail address or any other substantially similar identifier that permits direct contact with a person online, including but not limited to, an instant messaging user identifier, a voice over internet protocol (VOIP) identifier, or a video chat user identifier.",
+      "Operator": "any person who operates a Web site located on the Internet or an online service and who collects or maintains personal information from or about the users of or visitors to such Web site or online service, or on whose behalf such information is collected or maintained, or offers products or services for sale through that Web site or online service, where such Web site or online service is operated for commercial purposes involving commerce among the several States, or with one or more foreign nations; in any territory of the United States or in the District of Columbia, or between any such territory and another such territory or any State or foreign nation; or between the District of Columbia and any State, territory, or foreign nation.",
+      "Parent": "includes a legal guardian.",
+      "Person": "any individual, partnership, corporation, trust, estate, cooperative, association, or other entity.",
+      "Personal information": "individually identifiable information about an individual collected online, including: 1. A first and last name; 2. A home or other physical address including street name and name of a city or town; 3. Online contact information; 4. A screen or user name where it functions in the same manner as online contact information; 5. A telephone number; 6. A Social Security number; 7. A persistent identifier that can be used to recognize a user over time and across different Web sites or online services. Such persistent identifier includes, but is not limited to, a customer number held in a cookie, an Internet Protocol (IP) address, a processor or device serial number, or a unique device identifier. 8. A photograph, video, or audio file where such file contains a child's image or voice; 9. Geolocation information sufficient to identify street name and name of a city or town; or 10. Information concerning the child or the parents of that child that the operator collects online from the child and combines with an identifier described in this definition.",
+      "Software development kit": "the code necessary to integrate Defendant's advertisements in an application, Web site, or other online service.",
+      "Third party": "any person who is not: 1. An operator with respect to the collection or maintenance of personal information on the Web site or online service; or 2. A person who provides support for the internal operations of the Web site or online service and who does not use or disclose information protected under 16 C.F.R. Part 312 for any other purpose.",
+      "Web site or online service directed to children": "a commercial Web site or online service, or portion thereof, that is targeted to children."
+    },
+    "provisions": [
+      {
+        "provision_number": "I",
+        "title": "Injunction Concerning Collection of Personal Information from Children",
+        "category": "prohibition",
+        "summary": "Defendant is permanently restrained from violating the Children's Online Privacy Protection Rule (COPPA), including requirements for parental notice, posting privacy notices, and obtaining verifiable parental consent before collecting personal information from children.",
+        "requirements": [
+          {
+            "description": "Must make reasonable efforts to ensure parents receive direct notice of practices regarding collection, use, or disclosure of personal information from children, including material changes",
+            "quoted_text": "A. failing to make reasonable efforts, taking into account available technology, to ensure that 25 a parent of a child receives direct notice of Defendant’s practices with regard to the collection, 26 use, or disclosure of personal information from children, including notice of any material change 27 in the collection, use, or disclosure practices to which the parent has previously consented; 28",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 261,
+            "quote_end_line": 268
+          },
+          {
+            "description": "Must post a prominent and clearly labeled link to online notice of information practices regarding children on home/landing page and at each area where personal information is collected from children",
+            "quoted_text": "1 B. failing to post a prominent and clearly labeled link to an online notice of its information 2 practices with regard to children, if any, on the home or landing page or screen of its Web site or 3 online service, and at each area of the Web site or online service where personal information is 4 collected from children; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 273,
+            "quote_end_line": 276
+          },
+          {
+            "description": "Must obtain verifiable parental consent before any collection, use, or disclosure of personal information from children, including consent to material changes",
+            "quoted_text": "5 C. failing to obtain verifiable parental consent before any collection, use, or disclosure of 6 personal information from children, including consent to any material change in the collection, 7 use, or disclosure practices to which the parent has previously consented.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 277,
+            "quote_end_line": 279
+          }
+        ]
+      },
+      {
+        "provision_number": "II",
+        "title": "Injunction Concerning Deletion of Children's Personal Information",
+        "category": "affirmative_obligation",
+        "summary": "Defendant is permanently restrained from using or disclosing personal information collected from children prior to the order and must destroy such information within 10 days, except as required by law.",
+        "requirements": [
+          {
+            "description": "Prohibited from disclosing, using, or benefitting from personal information collected from children obtained prior to entry of this Order",
+            "quoted_text": "15 A. disclosing, using, or benefitting from personal information collected from children which 16 Defendant obtained prior to entry of this Order; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 287,
+            "quote_end_line": 288
+          },
+          {
+            "description": "Must destroy personal information collected from children in possession, custody, or control within ten days after entry of this Order (except as required by government agency, law, regulation, or court order)",
+            "quoted_text": "17 B. failing to destroy personal information collected from children that is in their possession, 18 custody, or control within ten (10) days after entry of this Order. Provided, however, that such 19 personal information need not be disposed of, and may be disclosed, to the extent requested by a 20 government agency or required by law, regulation, or court order.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 289,
+            "quote_end_line": 292
+          }
+        ]
+      },
+      {
+        "provision_number": "III",
+        "title": "Monetary Judgment for Civil Penalty",
+        "category": "affirmative_obligation",
+        "summary": "A civil penalty judgment of $4 million is entered against Defendant, with $950,000 to be paid in installments and the remainder suspended subject to truthfulness of financial representations.",
+        "requirements": [
+          {
+            "description": "Pay $300,000 to the Treasurer of the United States within seven days of entry of this Order",
+            "quoted_text": "25 B. Defendant is ordered to pay to Plaintiff, by making payment to the Treasurer of the United 26 States, three hundred thousand dollars ($300,000), within seven (7) days of entry of this Order, 27 followed by payment of six hundred fifty thousand dollars ($650,000) in two (2) equal 28 installments of three hundred twenty five thousand dollars ($325,000), plus interest computed STIPULATED ORDER 8 Case No. 3:16-cv-3474",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 297,
+            "quote_end_line": 301
+          },
+          {
+            "description": "Pay $325,000 plus interest within six months of entry of this Order",
+            "quoted_text": "27 followed by payment of six hundred fifty thousand dollars ($650,000) in two (2) equal 28 installments of three hundred twenty five thousand dollars ($325,000), plus interest computed STIPULATED ORDER 8 Case No. 3:16-cv-3474 Case 3:16-cv-03474 Document 2-1 Filed 06/22/16 Page 9 of 20 1 from the date of entry of this Order, due within six (6) months and twelve (12) months,",
+            "deadline": "6 months",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 299,
+            "quote_end_line": 305
+          },
+          {
+            "description": "Pay $325,000 plus interest within twelve months of entry of this Order",
+            "quoted_text": "27 followed by payment of six hundred fifty thousand dollars ($650,000) in two (2) equal 28 installments of three hundred twenty five thousand dollars ($325,000), plus interest computed STIPULATED ORDER 8 Case No. 3:16-cv-3474 Case 3:16-cv-03474 Document 2-1 Filed 06/22/16 Page 9 of 20 1 from the date of entry of this Order, due within six (6) months and twelve (12) months,",
+            "deadline": "12 months",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 299,
+            "quote_end_line": 305
+          }
+        ]
+      },
+      {
+        "provision_number": "IV",
+        "title": "Additional Monetary Provisions",
+        "category": "acknowledgment",
+        "summary": "Defendant relinquishes rights to assets transferred, facts in Complaint will be taken as true in subsequent litigation, and Defendant acknowledges Taxpayer Identification Number may be used for collection.",
+        "requirements": [
+          {
+            "description": "Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order",
+            "quoted_text": "21 A. Defendant relinquishes dominion and all legal and equitable right, title, and interest in all 22 assets transferred pursuant to this Order and may not seek the return of any assets.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 325,
+            "quote_end_line": 326
+          },
+          {
+            "description": "Defendant acknowledges Taxpayer Identification Number may be used for collecting and reporting on delinquent amounts",
+            "quoted_text": "26 C. Defendant acknowledges that its Taxpayer Identification Number, which Defendant must 27 submit to the Commission, may be used for collecting and reporting on any delinquent amount 28 arising out of this Order, in accordance with 31 U.S.C. § 7701.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 330,
+            "quote_end_line": 332
+          }
+        ]
+      },
+      {
+        "provision_number": "V",
+        "title": "Injunction Regarding Misrepresenting Practices Relating to Information Privacy",
+        "category": "prohibition",
+        "summary": "Defendant is permanently restrained from misrepresenting the extent to which they maintain and protect privacy, confidentiality, security, or integrity of covered information.",
+        "requirements": [
+          {
+            "description": "Prohibited from misrepresenting practices with respect to personal information collected from children, including collection, use, disclosure, and deletion practices",
+            "quoted_text": "9 A. Defendant’s practices with respect to personal information collected from children, 10 including Defendant’s collection, use, disclosure, and deletion practices;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 345,
+            "quote_end_line": 346
+          },
+          {
+            "description": "Prohibited from misrepresenting the extent to which Defendant collects or infers consumers' location information",
+            "quoted_text": "11 B. the extent to which Defendant collects or infers consumers’ location information; or",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 347,
+            "quote_end_line": 347
+          },
+          {
+            "description": "Prohibited from misrepresenting the extent to which Defendant obtains consumers' consent for collection of covered information, including opt-in consent",
+            "quoted_text": "12 C. the extent to which Defendant obtains consumers’ consent for the collection of covered 13 information, including opt-in consent.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 348,
+            "quote_end_line": 349
+          }
+        ]
+      },
+      {
+        "provision_number": "VI",
+        "title": "Injunction Regarding Consent for Collection or Inference of Location Information",
+        "category": "prohibition",
+        "summary": "Defendant is permanently restrained from collecting or inferring location information without confirming consumer has provided affirmative express consent and has not revoked consent through device settings.",
+        "requirements": [
+          {
+            "description": "Must confirm consumer has provided affirmative express consent for collection of location information to the application, website, or online service that has integrated Defendant's software development kit",
+            "quoted_text": "21 A. the consumer has provided affirmative express consent for the collection of location 22 information to the application, Web site, or other online service that has integrated Defendant’s 23 software development kit;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 357,
+            "quote_end_line": 359
+          },
+          {
+            "description": "Must confirm consumer has not expressed through any operating system, device, browser, or application permission or setting that consumer does not consent to or revokes consent to collection of location information",
+            "quoted_text": "24 B. the consumer has not expressed, through any operating system, device, browser, or 25 application permission or setting, that the consumer does not consent to, or revokes consent to, 26 the collection of location information; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 360,
+            "quote_end_line": 362
+          },
+          {
+            "description": "Must confirm consumer has not expressed through any operating system, device, browser, or application permission or setting that consent to collection of location information is limited to a level of accuracy less precise than the location information to be collected or inferred",
+            "quoted_text": "27 C. the consumer has not expressed, through any operating system, device, browser, or 28 application permission or setting, that the consumer’s consent to the collection of location STIPULATED ORDER 10 Case No. 3:16-cv-3474 Case 3:16-cv-03474 Document 2-1 Filed 06/22/16 Page 11 of 20 1 information is limited to a level of accuracy that is less precise than the location information that 2 is to be collected or inferred by Defendant.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 363,
+            "quote_end_line": 370
+          }
+        ]
+      },
+      {
+        "provision_number": "VII",
+        "title": "Injunction Regarding Deletion of Location Information",
+        "category": "affirmative_obligation",
+        "summary": "Defendant is permanently restrained from using or disclosing location information collected without meeting Part VI requirements and must destroy such information within 10 days, except as required by law.",
+        "requirements": [
+          {
+            "description": "Prohibited from disclosing, using, or benefitting from location information collected or inferred prior to entry of this Order without meeting requirements of Part VI",
+            "quoted_text": "7 A. disclosing, using, or benefitting from location information that was collected or inferred 8 prior to entry of this Order without meeting the requirements of Part VI of this Order; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 375,
+            "quote_end_line": 376
+          },
+          {
+            "description": "Must destroy location information collected or inferred prior to entry of this Order without meeting Part VI requirements that is in possession, custody, or control within ten days after entry of this Order (except as required by government agency, law, regulation, or court order)",
+            "quoted_text": "9 B. failing to destroy location information that was collected or inferred prior to entry of this 10 Order without meeting the requirements of Part VI of this Order that is in their possession, 11 custody, or control within ten (10) days after entry of this Order. Provided, however, that such 12 location information need not be disposed of, and may be disclosed, to the extent requested by a 13 government agency or required by law, regulation, or court order. 14 VIII. COMPREHENSIVE PRIVACY PROGRAM REQUIREMENT",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 377,
+            "quote_end_line": 382
+          }
+        ]
+      },
+      {
+        "provision_number": "VIII",
+        "title": "Comprehensive Privacy Program Requirement",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must establish, implement, and maintain a comprehensive written privacy program no later than the date of service of this Order, designed to address privacy risks and protect covered information.",
+        "requirements": [
+          {
+            "description": "Establish and implement, and thereafter maintain, a comprehensive privacy program reasonably designed to address privacy risks and protect privacy and confidentiality of covered information, no later than date of service of this Order",
+            "quoted_text": "17 service, in or affecting commerce, shall, no later than the date of service of this Order, establish 18 and implement, and thereafter maintain, a comprehensive privacy program that is reasonably 19 designed to: (1) address privacy risks related to the development and management of new and 20 existing products and services and (2) protect the privacy and confidentiality of covered 21 information. Such program, the content and implementation of which must be fully documented 22 in writing, shall contain privacy controls and procedures appropriate to Defendant’s size and 23 complexity, the nature and scope of Defendant’s activities, and the sensitivity of the covered 24 information, including: 25 A. the designation of an employee or employees to coordinate and be responsible for the",
+            "deadline": "date of service",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 385,
+            "quote_end_line": 393
+          },
+          {
+            "description": "Designate employee(s) to coordinate and be responsible for the privacy program",
+            "quoted_text": "25 A. the designation of an employee or employees to coordinate and be responsible for the 26 privacy program; 27 B. the identification of reasonably foreseeable, material risks, both internal and external, that",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 393,
+            "quote_end_line": 395
+          },
+          {
+            "description": "Identify reasonably foreseeable, material privacy risks and assess sufficiency of safeguards, including consideration of employee training and product design",
+            "quoted_text": "27 B. the identification of reasonably foreseeable, material risks, both internal and external, that 28 could result in the Defendant’s unauthorized collection, use, or disclosure of covered information, STIPULATED ORDER 11 Case No. 3:16-cv-3474 Case 3:16-cv-03474 Document 2-1 Filed 06/22/16 Page 12 of 20 1 and assessment of the sufficiency of any safeguards in place to control these risks. At a 2 minimum, this privacy risk assessment should include consideration of risks in each area of 3 relevant operation, including, but not limited to: (1) employee training and management, 4 including training on the requirements of this Order; and (2) product design, development, and 5 research;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 395,
+            "quote_end_line": 405
+          },
+          {
+            "description": "Design and implement reasonable privacy controls and procedures to address identified risks, and regularly test or monitor effectiveness",
+            "quoted_text": "6 C. the design and implementation of reasonable privacy controls and procedures to address 7 the risks identified through the privacy risk assessment, and regular testing or monitoring of the 8 effectiveness of those privacy controls and procedures;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 406,
+            "quote_end_line": 408
+          },
+          {
+            "description": "Take reasonable steps to select and retain service providers capable of protecting privacy of covered information and require service providers by contract to implement and maintain appropriate privacy protections",
+            "quoted_text": "9 D. the development and use of reasonable steps to select and retain service providers capable 10 of appropriately protecting the privacy of covered information they receive from Defendant, and 11 requiring service providers by contract to implement and maintain appropriate privacy 12 protections; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 409,
+            "quote_end_line": 412
+          },
+          {
+            "description": "Evaluate and adjust privacy program in light of testing and monitoring results, material changes to operations or business arrangements, or other circumstances that may impact effectiveness",
+            "quoted_text": "13 E. the evaluation and adjustment of Defendant’s privacy program in light of the results of the 14 testing and monitoring required by Subpart C, any material changes to Defendant’s operations or 15 business arrangements, or any other circumstances that Defendant knows or has reason to know 16 may have a material impact on the effectiveness of its privacy program.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 413,
+            "quote_end_line": 416
+          }
+        ]
+      },
+      {
+        "provision_number": "IX",
+        "title": "Privacy Program Assessment Requirement",
+        "category": "assessment",
+        "summary": "Defendant must obtain initial and biennial third-party assessments of its privacy program for 20 years, with initial assessment covering first year and biennial assessments covering each two-year period thereafter.",
+        "requirements": [
+          {
+            "description": "Obtain initial assessment from qualified, objective, independent third-party professional covering first year after service of Order",
+            "quoted_text": "19 Order, Defendant shall obtain initial and biennial assessments and reports (“Assessments”) from a 20 qualified, objective, independent third-party professional, who uses procedures and standards 21 generally accepted in the profession. The reporting period for the Assessments shall cover: (1) 22 the first year after service of the Order for the initial Assessment; and (2) each two (2) year period 23 thereafter for twenty (20) years after service of the order for biennial Assessments.",
+            "deadline": "within 60 days after end of first year",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 419,
+            "quote_end_line": 423
+          },
+          {
+            "description": "Obtain biennial assessments from qualified, objective, independent third-party professional for each two-year period thereafter for twenty years after service of order",
+            "quoted_text": "19 Order, Defendant shall obtain initial and biennial assessments and reports (“Assessments”) from a 20 qualified, objective, independent third-party professional, who uses procedures and standards 21 generally accepted in the profession. The reporting period for the Assessments shall cover: (1) 22 the first year after service of the Order for the initial Assessment; and (2) each two (2) year period 23 thereafter for twenty (20) years after service of the order for biennial Assessments.",
+            "deadline": "within 60 days after end of each reporting period",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 419,
+            "quote_end_line": 423
+          },
+          {
+            "description": "Provide initial Assessment by overnight courier or email to Associate Director for Enforcement within ten days after Assessment has been prepared",
+            "quoted_text": "13 C. Defendant shall provide the initial Assessment by overnight courier (not the U.S. Postal 14 Service) to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal 15 Trade Commission, 600 Pennsylvania Ave. NW, Washington D.C. 20580, or by email to 16 Debrief@ftc.gov, within ten (10) days after the Assessment has been prepared. All subsequent 17 biennial Assessments shall be retained by Defendant until the Order is terminated and provided to 18 the Associate Director for Enforcement within ten (10) days of request. The subject line must 19 begin: United States v. InMobi Pte Ltd.",
+            "deadline": "10 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 445,
+            "quote_end_line": 451
+          },
+          {
+            "description": "Retain all subsequent biennial Assessments until Order is terminated and provide to Associate Director for Enforcement within ten days of request",
+            "quoted_text": "17 biennial Assessments shall be retained by Defendant until the Order is terminated and provided to 18 the Associate Director for Enforcement within ten (10) days of request. The subject line must 19 begin: United States v. InMobi Pte Ltd.",
+            "deadline": "10 days of request",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 449,
+            "quote_end_line": 451
+          }
+        ]
+      },
+      {
+        "provision_number": "X",
+        "title": "Order Acknowledgments",
+        "category": "acknowledgment",
+        "summary": "Defendant must submit acknowledgment of receipt of Order and deliver copies to specified personnel for 20 years, obtaining signed acknowledgments from recipients.",
+        "requirements": [
+          {
+            "description": "Submit to Commission acknowledgment of receipt of this Order sworn under penalty of perjury within seven days of entry of this Order",
+            "quoted_text": "23 A. Defendant, within seven (7) days of entry of this Order, must submit to the Commission 24 an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 455,
+            "quote_end_line": 456
+          },
+          {
+            "description": "For twenty years after entry, deliver copy of Order to all principals, officers, directors, managers, employees/agents with covered information or website responsibilities, and business entities resulting from structural changes; delivery within seven days of entry for current personnel and before assumption of responsibilities for others",
+            "quoted_text": "25 B. For twenty (20) years after entry of this Order, Defendant must deliver a copy of this 26 Order to: (1) all principals, officers, and directors, and managers of Defendant and of its 27 subsidiaries and divisions in the United States; (2) all employees, agents, and representatives 28 having responsibilities relating to the collection, retention, storage, or security of covered STIPULATED ORDER 13 Case No. 3:16-cv-3474 Case 3:16-cv-03474 Document 2-1 Filed 06/22/16 Page 14 of 20 1 information and all employees, agents, and representatives having responsibilities related to the 2 operation of any website or online service subject to this Order; and (3) any business entity 3 resulting from any change in structure as set forth in the Part titled Compliance Reporting. 4 Delivery must occur within seven (7) days of entry of this Order for current personnel. For all 5 others, delivery must occur before they assume their responsibilities.",
+            "deadline": "7 days for current personnel",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 457,
+            "quote_end_line": 469
+          },
+          {
+            "description": "Obtain signed and dated acknowledgment of receipt of this Order from each individual or entity to which Order is delivered, within thirty days",
+            "quoted_text": "6 C. From each individual or entity to which Defendant delivers a copy of this Order, 7 Defendant must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of 8 this Order.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 470,
+            "quote_end_line": 472
+          }
+        ]
+      },
+      {
+        "provision_number": "XI",
+        "title": "Compliance Reporting",
+        "category": "compliance_reporting",
+        "summary": "Defendant must submit detailed compliance reports to the Commission at 180 days after entry and provide notices of changes for 20 years.",
+        "requirements": [
+          {
+            "description": "Submit compliance report sworn under penalty of perjury one hundred eighty days after entry of Order, including contact information, business details, compliance status, privacy notices, parental consent methods, and Order Acknowledgments",
+            "quoted_text": "12 A. One hundred eighty (180) days after entry of this Order, Defendant must submit a 13 compliance report, sworn under penalty of perjury. In such report, Defendant must: 14 1. identify the primary physical, postal, and email address and telephone number, as 15 designated points of contact, which representatives of the Commission and 16 Plaintiff may use to communicate with Defendant; 17 2. identify all of Defendant’s businesses by all of their names, telephone numbers, 18 and physical, postal, email, and Internet addresses; 19 3. describe the activities of each such business, including the goods and services 20 offered, the means of advertising, marketing, and sales; 21 4. describe in detail whether and how Defendant is in compliance with each Part of 22 this Order; 23 5. provide a copy of each different version of any privacy notice posted on each Web 24 site or online service operated by Defendant or otherwise communicated to parents of children 25 from whom Defendant collects personal information; 26 6. provide a statement setting forth in detail any methods used to obtain verifiable 27 parental consent prior to any collection, use, and/or disclosure of personal information from 28 children or the methods used to avoid collecting, using, and/or disclosing personal information STIPULATED ORDER 14 Case No. 3:16-cv-3474 Case 3:16-cv-03474 Document 2-1 Filed 06/22/16 Page 15 of 20 1 from children; 2 7. provide a statement setting forth in detail the means provided for parents to review 3 any personal information collected from their children and to refuse to permit its further use or 4 maintenance; 5 8. provide a statement setting forth in detail why each type of information collected 6 from a child is reasonably necessary for the provision of the particular related activity; 7 9. provide a statement setting forth in detail the procedures used to protect the 8 confidentiality, security, and integrity of personal information collected from children; and 9 10. provide a copy of each Order Acknowledgment obtained pursuant to this Order, 10 unless previously submitted to the Commission.",
+            "deadline": "180 days",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 476,
+            "quote_end_line": 506
+          },
+          {
+            "description": "For twenty years after entry, submit compliance notice sworn under penalty of perjury within fourteen days of any change in designated point of contact or structure of Defendant",
+            "quoted_text": "11 B. For twenty (20) years after entry of this Order, Defendant must submit a compliance 12 notice, sworn under penalty of perjury, within fourteen (14) days of any change in: (a) any 13 designated point of contact; or (b) the structure of Defendant or any entity that Defendant has any 14 ownership interest in or control directly or indirectly that may affect compliance obligations 15 arising under this Order, including: creation, merger, sale, or dissolution of the entity or any 16 subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order. 17 C. Defendant must submit to the Commission notice of the filing of any bankruptcy petition, 18 insolvency proceeding, or similar proceeding by or against Defendant within fourteen (14) days 19 of its filing. 20 D. Any submission to the Commission required by this Order to be sworn under penalty of",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 507,
+            "quote_end_line": 516
+          },
+          {
+            "description": "Submit notice of filing of bankruptcy petition, insolvency proceeding, or similar proceeding within fourteen days of its filing",
+            "quoted_text": "21 perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I 22 declare under penalty of perjury under the laws of the United States of America that the foregoing 23 is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 517,
+            "quote_end_line": 519
+          }
+        ]
+      },
+      {
+        "provision_number": "XII",
+        "title": "Recordkeeping",
+        "category": "recordkeeping",
+        "summary": "Defendant must create and retain records for 20 years demonstrating compliance, including all submissions to Commission, consumer complaints, and versions of software development kits.",
+        "requirements": [
+          {
+            "description": "Create records for twenty years after entry of Order and retain each such record for five years, including all records necessary to demonstrate full compliance, copies of consumer complaints relating to covered information collection, and copies of each materially different version of software development kit",
+            "quoted_text": "4 years after entry of the Order, and retain each such record for five (5) years. Specifically, 5 Defendant must create and retain the following records: 6 A. all records necessary to demonstrate full compliance with each provision of this Order, 7 including all submissions to the Commission; 8 B. copies of all consumer complaints relating to Defendant’s collection of covered 9 information or personal information, and any response; and 10 C. a copy of each materially different version of any software development kit Defendant 11 makes available to developers, and any associated documentation or instructions. 12 XIII. COMPLIANCE MONITORING",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 532,
+            "quote_end_line": 540
+          }
+        ]
+      },
+      {
+        "provision_number": "XIII",
+        "title": "Compliance Monitoring",
+        "category": "monitoring",
+        "summary": "Commission and Plaintiff are authorized to monitor compliance through requests for additional reports, depositions, document production, interviews, and other lawful means including posing as consumers.",
+        "requirements": [
+          {
+            "description": "Within fourteen days of written request from Commission or Plaintiff representative, must submit additional compliance reports or requested information sworn under penalty of perjury, appear for depositions, and produce documents for inspection and copying",
+            "quoted_text": "15 A. Within fourteen (14) days of receipt of a written request from a representative of the 16 Commission or Plaintiff, Defendant must: submit additional compliance reports or other 17 requested information, which must be sworn under penalty of perjury; appear for depositions; and 18 produce documents for inspection and copying. The Commission and Plaintiff are also 19 authorized to obtain discovery, without further leave of court, using any of the procedures 20 prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 21 34, 36, 45, and 69.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 543,
+            "quote_end_line": 549
+          },
+          {
+            "description": "Must permit Commission and Plaintiff representatives to communicate directly with Defendant and interview any employee or affiliated person who has agreed to such interview",
+            "quoted_text": "22 B. For matters concerning this Order, the Commission and Plaintiff are authorized to 23 communicate directly with Defendant. Defendant must permit representatives of the Commission 24 and Plaintiff to interview any employee or other person affiliated with Defendant who has agreed 25 to such an interview. The person interviewed may have counsel present. 26 C. The Commission and Plaintiff may use all other lawful means, including posing, through",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 550,
+            "quote_end_line": 554
+          }
+        ]
+      },
+      {
+        "provision_number": "XIV",
+        "title": "Retention of Jurisdiction",
+        "category": "duration",
+        "summary": "The Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+        "requirements": [
+          {
+            "description": "Court retains jurisdiction for purposes of construction, modification, and enforcement of this Order",
+            "quoted_text": "4 IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for 5 purposes of construction, modification, and enforcement of this Order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 564,
+            "quote_end_line": 565
+          }
+        ]
+      }
+    ],
     "duration": {
-      "duration_years": null,
-      "termination_text": ""
+      "duration_years": 20,
+      "termination_text": "For twenty (20) years after entry of this Order"
     }
   },
   "metadata": {
@@ -103,10 +595,37 @@
     "extraction_stats": {
       "complaint_counts": 4,
       "complaint_representations": 6,
-      "order_provisions": 0,
-      "order_definitions": 0,
-      "order_requirements": 0
+      "order_provisions": 14,
+      "order_definitions": 17,
+      "order_requirements": 38,
+      "provisions_per_section": {
+        "I": 3,
+        "II": 2,
+        "III": 3,
+        "IV": 2,
+        "V": 3,
+        "VI": 3,
+        "VII": 2,
+        "VIII": 6,
+        "IX": 4,
+        "X": 3,
+        "XI": 3,
+        "XII": 1,
+        "XIII": 2,
+        "XIV": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 6,
+        "complaint_total": 6,
+        "order_verified": 38,
+        "order_total": 38
+      }
     },
-    "processing_time_seconds": 310.7
+    "processing_time_seconds": 2072.2
   }
 }

@@ -6,7 +6,7 @@
       "incorporation_state": "Nevada",
       "entity_type": "corporation",
       "address": "9089 E. Bahia Drive, Suite 100, Scottsdale, Arizona 85260",
-      "business_description": "SkyMed International advertises, offers for sale, and sells nationwide a wide array of emergency travel membership plans that cover up to eighteen different emergency travel and medical evacuation services for members who sustain serious illnesses or injuries during travel in certain geographic areas. These services include hospital-to-hospital air transportation, vehicle return, visitor transportation, repatriation for recuperation near home, medical escort flights, and transportation of children."
+      "business_description": "SkyMed International provides emergency travel membership plans that cover up to eighteen different emergency travel and medical evacuation services for members who sustain serious illnesses or injuries during travel in certain geographic areas. Services include hospital-to-hospital air transportation, vehicle return, visitor transportation, repatriation for recuperation near home, medical escort flights, and transportation of children."
     },
     "commissioners": [
       "Joseph J. Simons, Chairman",
@@ -15,46 +15,57 @@
       "Rebecca Kelly Slaughter",
       "Christine S. Wilson"
     ],
-    "date_issued": "",
-    "legal_authority": "Federal Trade Commission Act, 15 U.S.C. § 45(a)(1)",
-    "violation_type": "both",
+    "case_date": {
+      "month": 2,
+      "year": 2021
+    },
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)(1)",
+    "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/1923140-skymed-international-inc-matter"
   },
   "complaint": {
-    "factual_background": "SkyMed International, Inc. sold emergency travel membership plans and collected sensitive personal and health information from thousands of consumers. The company displayed a fake HIPAA compliance seal on its website suggesting third-party verification when none existed, failed to implement basic data security measures, and left an unsecured cloud database containing approximately 130,000 consumer records publicly accessible on the internet for over five months. When notified of the breach, the company misrepresented the scope of its investigation to consumers.",
+    "factual_background": "SkyMed International, Inc. sold emergency travel membership plans and collected extensive personal information from consumers, including sensitive health data such as medical conditions, prescriptions, and hospitalization history. From 2014 to April 2019, the company displayed a self-created 'HIPAA Compliance' seal on every page of its website, falsely implying that a government agency or third party had verified its compliance with HIPAA. In reality, no such review had ever taken place. The company also failed to implement basic data security measures, resulting in approximately 130,000 consumer records—including health information—being left publicly accessible in an unsecured cloud database for over five months. When notifying consumers of the breach, SkyMed falsely claimed its investigation had determined that no health information was exposed, when in fact it had simply deleted the database without ever examining its contents.",
     "representations_made": [
       {
-        "description": "Claimed that a government agency or third party had reviewed and verified HIPAA compliance",
-        "quoted_text": "Through the means described in Paragraphs 9 and 10, Respondent represented, expressly or by implication, directly or indirectly, that a government agency or other third party had reviewed Respondent's information practices and determined that they met HIPAA's requirements.",
-        "source_paragraph": 24
+        "description": "Claimed that a government agency or other third party had reviewed its information practices and determined they met HIPAA's requirements, by displaying a 'HIPAA Compliance' seal on every page of its website",
+        "quoted_text": "10. By displaying the “HIPAA Compliance” seal on every page of its website, Respondent signaled to consumers that a government agency or other third party had reviewed Respondent’s information practices and determined that they met HIPAA’s requirements.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 10,
+        "quote_start_line": 65,
+        "quote_end_line": 67
       },
       {
-        "description": "Claimed investigation determined health information was not stored on the database or improperly accessed",
-        "quoted_text": "Through the means described in Paragraph 17, Respondent has represented, directly or indirectly, expressly or by implication, that its investigation into a security researcher's report about an unsecured cloud database determined that consumers' health information was neither stored on the database, nor improperly accessed by an unauthorized third party other than the researcher who reported its exposure.",
-        "source_paragraph": 26
+        "description": "Claimed its investigation into the security researcher's report determined that consumers' health information was neither stored on the cloud database nor improperly accessed by an unauthorized third party",
+        "quoted_text": "Our investigation learned that some old data may have been exposed temporarily as we migrated data from an old system to a new system. At this time, the exposed data has been removed and appears to be limited to only a portion of our information and was restricted to names, street and email addresses, phone and membership ID numbers. There was no medical or payment-related 4 information visible and no indication that the information has been misused.",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 17,
+        "quote_start_line": 127,
+        "quote_end_line": 135
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "HIPAA Seal Misrepresentation",
-        "representation": "A government agency or other third party had reviewed Respondent's information practices and determined that they met HIPAA's requirements",
-        "fact": "No government agency or other third party had ever reviewed Respondent's information practices and determined that Respondent's practices met HIPAA's requirements",
+        "representation": "By displaying the 'HIPAA Compliance' seal on every page of its website, Respondent represented that a government agency or other third party had reviewed its information practices and determined that they met HIPAA's requirements.",
+        "fact": "No government agency or other third party had ever reviewed Respondent's information practices and determined that Respondent's practices met HIPAA's requirements.",
         "conclusion": "Therefore, the representation set forth in Paragraph 24 is false or misleading."
       },
       {
         "count_number": 2,
         "title": "Security Incident Response Misrepresentation",
-        "representation": "Its investigation into a security researcher's report about an unsecured cloud database determined that consumers' health information was neither stored on the database, nor improperly accessed by an unauthorized third party",
-        "fact": "Respondent's investigation did not determine whether consumers' health information was stored on the cloud database or improperly accessed by an unauthorized third party",
+        "representation": "Respondent represented that its investigation into a security researcher's report about an unsecured cloud database determined that consumers' health information was neither stored on the database, nor improperly accessed by an unauthorized third party other than the researcher who reported its exposure.",
+        "fact": "Respondent's investigation did not determine whether consumers' health information was stored on the cloud database or improperly accessed by an unauthorized third party. Respondent merely confirmed the database was publicly accessible, then deleted it without ever examining the actual information stored therein.",
         "conclusion": "Therefore, the representation set forth in Paragraph 26 is false or misleading."
       },
       {
         "count_number": 3,
         "title": "Unfair Information Security Practices",
-        "representation": "Respondent failed to employ reasonable measures to protect consumers' personal information",
-        "fact": "Respondent failed to develop security policies, provide employee training, encrypt data, conduct risk assessments, implement access controls, inventory and delete unnecessary data, or use data loss prevention tools",
-        "conclusion": "This practice is an unfair act or practice."
+        "representation": "Respondent failed to employ reasonable measures to protect consumers' personal information, including by failing to develop written security policies, provide employee training, store data securely, conduct risk assessments, inventory and delete unnecessary data, or use data loss prevention tools.",
+        "fact": "These failures caused or are likely to cause substantial injury to consumers that is not outweighed by countervailing benefits and is not reasonably avoidable by consumers themselves, as the harms were not foreseeable to consumers and could have been prevented through readily available, low-cost measures.",
+        "conclusion": "This practice is an unfair act or practice in violation of Section 5(a) of the Federal Trade Commission Act."
       }
     ]
   },
@@ -71,57 +82,69 @@
         "provision_number": "I",
         "title": "Prohibition Against Misrepresentations",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent privacy or security practices, including participation in privacy programs, the extent of data incidents, investigations, data handling practices, or data protection measures.",
+        "summary": "Respondent must not misrepresent in any manner its participation in privacy or security programs, the extent of any data incident, investigation results, data collection/use practices, or its overall protection of Personal Information.",
         "requirements": [
           {
-            "description": "Must not misrepresent membership in or compliance with privacy or security programs",
-            "quoted_text": "IT IS ORDERED that Respondent; Respondent's officers, agents, employees, and attorneys; and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service, must not misrepresent in any manner, expressly or by implication: A. The extent to which Respondent is a member of, adheres to, complies with, is certified by, is endorsed by, or otherwise participates in any privacy or security program sponsored by a government or any third party, including any self-regulatory or standard-setting organization;",
+            "description": "Must not misrepresent participation in any privacy or security program sponsored by a government or third party",
+            "quoted_text": "A. The extent to which Respondent is a member of, adheres to, complies with, is certified by, is endorsed by, or otherwise participates in any privacy or security program sponsored by a government or any third party, including any self-regulatory or standard- setting organization;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 81,
+            "quote_end_line": 84
           },
           {
-            "description": "Must not misrepresent the extent of any Covered Incident or unauthorized disclosure of Personal Information",
+            "description": "Must not misrepresent the extent of any Covered Incident or unauthorized disclosure, misuse, loss, theft, alteration, destruction, or other compromise of Personal Information",
             "quoted_text": "B. The extent of any Covered Incident or unauthorized disclosure, misuse, loss, theft, alteration, destruction, or other compromise of Personal Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 85,
+            "quote_end_line": 86
           },
           {
-            "description": "Must not misrepresent the extent of any investigation into a Covered Incident or data compromise",
+            "description": "Must not misrepresent the extent of any investigation and its results into any Covered Incident or unauthorized compromise of Personal Information",
             "quoted_text": "C. The extent of any investigation and the results thereof, whether conducted by Respondent, a governmental agency, or a third party, into any Covered Incident or unauthorized disclosure, misuse, loss, theft, alteration, destruction, or other compromise of Personal Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 87,
+            "quote_end_line": 90
           },
           {
-            "description": "Must not misrepresent how Personal Information is collected, maintained, used, disclosed, deleted, or accessed",
-            "quoted_text": "D. The extent to which Respondent collects, maintains, uses, discloses, deletes, or permits or denies access to any Personal Information;",
+            "description": "Must not misrepresent the extent to which Respondent collects, maintains, uses, discloses, deletes, or permits or denies access to any Personal Information",
+            "quoted_text": "D. The extent to which Respondent collects, maintains, uses, discloses, deletes, or permits or denies access to any Personal Information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 91,
+            "quote_end_line": 92
           },
           {
-            "description": "Must not misrepresent the extent to which Personal Information is protected",
-            "quoted_text": "E. The extent to which Respondent otherwise protects the privacy, security, availability, confidentiality, or integrity of any Personal Information.",
+            "description": "Must not misrepresent the extent to which Respondent protects the privacy, security, availability, confidentiality, or integrity of any Personal Information",
+            "quoted_text": "E. The extent to which Respondent otherwise protects the privacy, security, availability, confidentiality, orintegrity of any Personal Information.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 93,
+            "quote_end_line": 94
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Required Notice to Consumers About Security Incident Response",
+        "title": "Required Notice to Consumers About Respondent's Security Incident Response",
         "category": "affirmative_obligation",
-        "summary": "Respondent must send an exact copy of the prescribed notice (Exhibit A) to all Affected Consumers within 14 days of the Order's effective date.",
+        "summary": "Within 14 days of the Order's effective date, Respondent must email all Affected Consumers an exact copy of the attached Exhibit A notice, with no additional information included.",
         "requirements": [
           {
-            "description": "Send email notice to all Affected Consumers with exact copy of Exhibit A",
-            "quoted_text": "IT IS FURTHER ORDERED that, within fourteen (14) days after the effective date of this Order, Respondent must directly notify all Affected Consumers by sending an email, consisting solely of an exact copy of the notice attached hereto as Exhibit A (\"Notice\"), with the subject line \"Update: May 2019 Data Exposure.\" Respondent shall not include with the Notice any other information, documents, or attachments.",
+            "description": "Within 14 days after the effective date of the Order, directly notify all Affected Consumers by sending an email consisting solely of an exact copy of Exhibit A with the subject line \"Update: May 2019 Data Exposure,\" with no other information, documents, or attachments",
+            "quoted_text": "IT IS FURTHER ORDERED that,within fourteen (14) days after theeffective dateof this Order,Respondent must directly notify all Affected Consumers by sending an email, consisting solely of an exact copy of the notice attached hereto as Exhibit A(“Notice”), with the subject line“Update: May 2019 Data Exposure.” Respondent shall not include with the Notice any other information, documents, or attachments.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 0.9882309582309583
+            "confidence": 1.0,
+            "quote_start_line": 96,
+            "quote_end_line": 100
           }
         ]
       },
@@ -129,119 +152,97 @@
         "provision_number": "III",
         "title": "Mandated Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondent must establish and maintain a comprehensive Information Security Program within 30 days, including documentation, risk assessments, safeguards, testing, and regular evaluations.",
+        "summary": "Within 30 days of Order issuance, Respondent must establish and maintain a comprehensive Information Security Program with specific safeguards including documentation, risk assessment, encryption, employee training, network monitoring, and service provider oversight.",
         "requirements": [
           {
-            "description": "Establish and implement comprehensive Information Security Program",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent, in connection with the collection, maintenance, use, disclosure, or provision of access to Personal Information, must, within thirty (30) days of issuance of this Order, establish and implement, and thereafter maintain, a comprehensive Information Security Program (\"Information Security Program\") that protects the security, confidentiality, and integrity of Personal Information.",
+            "description": "Establish and implement a comprehensive Information Security Program within 30 days of Order issuance that protects the security, confidentiality, and integrity of Personal Information",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent,in connection with the collection, maintenance, use,disclosure, or provision of access to Personal Information, must, within thirty (30) days of issuance of this Order, establish and implement, and thereafter maintain, a comprehensive Information Security Program (“Information Security Program”) that protects the security, confidentiality, and integrity ofPersonal Information. To satisfy this requirement, Respondent must, at a minimum:",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 102,
+            "quote_end_line": 107
           },
           {
-            "description": "Document the Information Security Program in writing",
+            "description": "Document in writing the content, implementation, and maintenance of the Information Security Program",
             "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Information Security Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 111,
+            "quote_end_line": 112
           },
           {
-            "description": "Provide written program to board or senior officer at least annually and within 30 days after a Covered Incident",
-            "quoted_text": "B. Provide the written program and any evaluations thereof or updates thereto to Respondent's board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Respondent responsible for Respondent's Information Security Program at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident;",
-            "deadline": "30 days",
+            "description": "Provide the written program and any evaluations or updates to Respondent's board of directors or governing body (or senior officer) at least once every 12 months and promptly (within 30 days) after a Covered Incident",
+            "quoted_text": "B. Providethe written program and any evaluations thereof or updates thereto to Respondent’s board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Respondent responsible for Respondent’s Information Security Program at least once every twelve (12)months and promptly(not to exceedthirty(30)days)after aCovered Incident;",
+            "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 113,
+            "quote_end_line": 117
           },
           {
-            "description": "Designate qualified employee(s) to coordinate the Information Security Program",
+            "description": "Designate a qualified employee or employees to coordinate and be responsible for the Information Security Program",
             "quoted_text": "C. Designate a qualified employee or employees to coordinate and be responsible for the Information Security Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 118,
+            "quote_end_line": 119
           },
           {
-            "description": "Assess and document risks at least annually and within 30 days after a Covered Incident",
-            "quoted_text": "D. Assess and document, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, internal and external risks to the security, confidentiality, or integrity of Personal Information that could result in the (1) unauthorized collection, maintenance, use, disclosure of, or provision of access to, Personal Information; or the (2) misuse, loss, theft, alteration, destruction, or other compromise of such information;",
-            "deadline": "30 days",
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Design, implement, maintain, and document safeguards to control identified risks",
-            "quoted_text": "E. Design, implement, maintain, and document safeguards that control for the internal and external risks Respondent identifies to the security, confidentiality, or integrity of Personal Information identified in response to sub-Provision III.D. Each safeguard must be based on the volume and sensitivity of the Personal Information that is at risk, and the likelihood that the risk could be realized and result in the (1) unauthorized collection, maintenance, use, disclosure of, or provision of access to, Personal Information; or the (2) misuse, loss, theft, alteration, destruction, or other compromise of such information.",
+            "description": "Assess and document internal and external risks to Personal Information at least once every 12 months and promptly (within 30 days) following a Covered Incident",
+            "quoted_text": "D. Assess and document, at least once every twelve (12)months and promptly (not to exceed thirty (30)days) following a Covered Incident, internal and external risks to the security, confidentiality, or integrity of Personal Information that could result in the (1) unauthorized collection, maintenance, use,disclosureof, or provision of access to, Personal Information; or the (2) misuse, loss, theft, alteration, destruction, or other compromise of such information;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 120,
+            "quote_end_line": 125
           },
           {
-            "description": "Implement policies and technical measures to inventory and delete unnecessary Personal Information",
-            "quoted_text": "1. Policies, procedures, and technical measures to systematically inventory Personal Information in Respondent's control and delete Personal Information that is no longer necessary;",
+            "description": "Design, implement, maintain, and document safeguards controlling internal and external risks to Personal Information, including policies to inventory and delete unneeded Personal Information, log and monitor access to repositories, encrypt passport numbers/financial account information/Health Information, train employees annually, monitor networks for security events, and implement data access controls",
+            "quoted_text": "E. Design, implement, maintain, and document safeguards that control for the internal and external risks Respondent identifies to the security, confidentiality, or integrityof Personal Information identified in response to sub-Provision III.D. Each safeguard must be based on the volume and sensitivity of the Personal Information that is at risk, and the likelihood that the risk could be realized and result in the (1) unauthorized collection, maintenance, use, disclosure of, or provision of access to, Personal Information; or the (2) misuse, loss, theft, alteration, destruction, or other compromise of such information. Such safeguards must also include: 1. Policies, procedures, and technical measures to systematically inventory Personal Information in Respondent’s control and delete Personal Information that is no longer necessary; 2. Policies, procedures, and technical measures to log and monitor access to repositories of Personal Information in Respondent’s control; 3. Encryptionof, at a minimum,all passport numbers, financial account information, and Health Information in Respondent’s control. 4. Training of all of Respondent’s employees, at least once every twelve (12) months, on how to safeguard Personal Information; 5. Technical measures to monitor all of Respondent’s networks, includingall systems and assets within those networks,to identify data security events, including unauthorized attempts to exfiltrate Personal Information from those networks; and Page 4 of 12 6. Data access controls for all repositories of Personal Informationin Respondent’s control,such as (a) restricting inbound connections to approved IP addresses, (b) requiring authentication to access them, and (c) limiting employee access to what is needed to perform that employee’s job function.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 126,
+            "quote_end_line": 152
           },
           {
-            "description": "Implement policies and technical measures to log and monitor access to Personal Information repositories",
-            "quoted_text": "2. Policies, procedures, and technical measures to log and monitor access to repositories of Personal Information in Respondent's control;",
+            "description": "Assess at least once every 12 months and promptly (within 30 days) following a Covered Incident the sufficiency of safeguards in place, and modify the Information Security Program based on results",
+            "quoted_text": "F. Assess, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, the sufficiency of anysafeguards in place to address the risks to the security, confidentiality, or integrity of Personal Information, and modify the Information SecurityProgram based on the results;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 153,
+            "quote_end_line": 156
           },
           {
-            "description": "Encrypt all passport numbers, financial account information, and Health Information",
-            "quoted_text": "3. Encryption of, at a minimum, all passport numbers, financial account information, and Health Information in Respondent's control.",
+            "description": "Test and monitor the effectiveness of safeguards at least once every 12 months and promptly (within 30 days) following a Covered Incident, including vulnerability testing every 4 months and periodic penetration testing, and modify the program based on results",
+            "quoted_text": "G. Test and monitor the effectiveness of thesafeguards in placeat least once every twelve (12)months and promptly (not to exceedthirty(30)days) following a Covered Incident, and modifythe Information Security Program based on the results. Such testingand monitoringmust include: (1)vulnerability testing of Respondent’s network once every four (4) months and promptly (not to exceed thirty (30)days) after aCovered Incident, and(2) periodic penetration testing of Respondent’s network and promptly (not to exceed thirty (30)days) after aCovered Incident;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 157,
+            "quote_end_line": 163
           },
           {
-            "description": "Train all employees annually on safeguarding Personal Information",
-            "quoted_text": "4. Training of all of Respondent's employees, at least once every twelve (12) months, on how to safeguard Personal Information;",
+            "description": "Select and retain service providers capable of safeguarding Personal Information and contractually require them to implement and maintain appropriate safeguards",
+            "quoted_text": "H. Select and retain service providers capable of safeguarding Personal Information they access through or receive from Respondent, and contractually require service providers to implement and maintain safeguards for Personal Information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 164,
+            "quote_end_line": 166
           },
           {
-            "description": "Implement technical measures to monitor networks and detect unauthorized data exfiltration",
-            "quoted_text": "5. Technical measures to monitor all of Respondent's networks, including all systems and assets within those networks, to identify data security events, including unauthorized attempts to exfiltrate Personal Information from those networks;",
+            "description": "Evaluate and adjust the Information Security Program in light of changes to operations, a Covered Incident, or other relevant circumstances, at least once every 12 months",
+            "quoted_text": "I. Evaluate and adjust the Information Security Program in light of any changes to Respondent’s operations or business arrangements, a Covered Incident, or any other circumstances that Respondent knows or has reason to knowmay have an impact on the effectiveness of the Information Security Program. At a minimum, Respondent must evaluate the Information Security Program at least once every twelve (12) months and modify the Information Security Program based on the results.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Implement data access controls for all Personal Information repositories",
-            "quoted_text": "6. Data access controls for all repositories of Personal Information in Respondent's control, such as (a) restricting inbound connections to approved IP addresses, (b) requiring authentication to access them, and (c) limiting employee access to what is needed to perform that employee's job function.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Assess safeguards at least annually and within 30 days after a Covered Incident, and modify program based on results",
-            "quoted_text": "F. Assess, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, the sufficiency of any safeguards in place to address the risks to the security, confidentiality, or integrity of Personal Information, and modify the Information Security Program based on the results;",
-            "deadline": "30 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Test and monitor safeguards at least annually and within 30 days after a Covered Incident, including vulnerability testing every 4 months",
-            "quoted_text": "G. Test and monitor the effectiveness of the safeguards in place at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, and modify the Information Security Program based on the results. Such testing and monitoring must include: (1) vulnerability testing of Respondent's network once every four (4) months and promptly (not to exceed thirty (30) days) after a Covered Incident, and (2) periodic penetration testing of Respondent's network and promptly (not to exceed thirty (30) days) after a Covered Incident;",
-            "deadline": "30 days",
-            "verified": true,
-            "confidence": 0.9008815672306323
-          },
-          {
-            "description": "Select capable service providers and contractually require them to safeguard Personal Information",
-            "quoted_text": "H. Select and retain service providers capable of safeguarding Personal Information they access through or receive from Respondent, and contractually require service providers to implement and maintain safeguards for Personal Information;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Evaluate and adjust the Information Security Program at least annually based on operational changes or incidents",
-            "quoted_text": "I. Evaluate and adjust the Information Security Program in light of any changes to Respondent's operations or business arrangements, a Covered Incident, or any other circumstances that Respondent knows or has reason to know may have an impact on the effectiveness of the Information Security Program. At a minimum, Respondent must evaluate the Information Security Program at least once every twelve (12) months and modify the Information Security Program based on the results.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 167,
+            "quote_end_line": 172
           }
         ]
       },
@@ -249,42 +250,52 @@
         "provision_number": "IV",
         "title": "Information Security Assessments by a Third Party",
         "category": "assessment",
-        "summary": "Respondent must obtain initial and biennial third-party assessments of its Information Security Program for 20 years, with the initial assessment covering the first 180 days.",
+        "summary": "Respondent must obtain initial and biennial third-party information security assessments covering compliance with the Information Security Program, conducted by a qualified independent assessor, with the initial assessment submitted to the FTC within 10 days of completion.",
         "requirements": [
           {
-            "description": "Obtain assessments from qualified, objective, independent third-party professional",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with compliance with Provision III of this Order, titled Mandated Information Security Program, Respondent must obtain initial and biennial assessments (\"Assessments\"): A. The Assessments must be obtained from a qualified, objective, independent third-party professional (\"Assessor\"), who: (1) uses procedures and standards generally accepted in the profession; (2) conducts an independent review of the Information Security Program; and (3) retains all documents relevant to each Assessment for five (5) years after completion of such Assessment and will provide such documents to the Commission within ten (10) days of receipt of a written request from a representative of the Commission.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Provide FTC Associate Director with proposed Assessor's name, affiliation, and qualifications for approval",
-            "quoted_text": "B. For each Assessment, Respondent must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name, affiliation, and qualifications of the proposed Assessor, who the Associate Director shall have the authority to approve in his sole discretion.",
+            "description": "Obtain assessments from a qualified, objective, independent third-party professional who uses generally accepted procedures, conducts an independent review, and retains all documents for 5 years, providing them to the Commission within 10 days of request",
+            "quoted_text": "A. The Assessments must be obtained from a qualified, objective, independent third-party professional (“Assessor”), who: (1) uses procedures and standards generally accepted in the profession; (2) conducts an independent review of the Information Security Program; and (3)retains all documents relevant to each Assessment for five (5) years after completion of such Assessment and will provide such documents to the Commission within ten (10) days of receipt of a written request from a representative of the Commission. No documents may be withheld on the basis of a claim of confidentiality, proprietary or trade secrets, work product protection, attorney client privilege, statutory exemption, or any similar claim.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 177,
+            "quote_end_line": 185
           },
           {
-            "description": "Assessment must cover first 180 days for initial assessment, then biennial periods for 20 years",
+            "description": "For each Assessment, provide the FTC's Associate Director for Enforcement with the name, affiliation, and qualifications of the proposed Assessor for approval",
+            "quoted_text": "B. For each Assessment, Respondent must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name, affiliation, and qualifications of the proposed Assessor, whothe Associate Director shall have the authority to approve in his sole discretion.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 189,
+            "quote_end_line": 192
+          },
+          {
+            "description": "Assessment reporting periods must cover the first 180 days after Order issuance for the initial Assessment, and each two-year period thereafter for 20 years for biennial Assessments",
             "quoted_text": "C. The reporting period for the Assessments must cover: (1) the first 180 days after the issuance date of the Order for the initial Assessment; and (2) each two-year period thereafter for twenty (20) years after issuance of the Order for the biennial Assessments.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 193,
+            "quote_end_line": 195
           },
           {
-            "description": "Each Assessment must determine implementation, assess effectiveness, identify gaps, address prior gaps, and identify evidence examined",
-            "quoted_text": "D. Each Assessment must, for the entire assessment period: 1. determine whether Respondent has implemented and maintained the Information Security Program required by Provision III; 2. assess the effectiveness of Respondent's implementation and maintenance of sub-Provisions III.A-I; 3. identify any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program; 4. address the status of gaps or weaknesses in, or instances of material non-compliance with, the Information Security Program that were identified in any prior Assessment required by this Order; and 5. identify specific evidence (including, but not limited to, documents reviewed, sampling and testing performed, and interviews conducted) examined to make such determinations, assessments, and identifications, and explain why the evidence that the Assessor examined is (a) appropriate for assessing an enterprise of Respondent's size, complexity, and risk profile; and (b) sufficient to justify the Assessor's findings.",
+            "description": "Each Assessment must determine whether the Information Security Program is implemented and maintained, assess its effectiveness, identify gaps or weaknesses, address status of prior gaps, and identify specific evidence examined",
+            "quoted_text": "D. Each Assessment must,for the entire assessment period: 1. determine whether Respondent has implemented and maintained the Information Security Program required by Provision III; 2. assess the effectiveness of Respondent’s implementation and maintenance of sub- Provisions III.A-I; 3. identify any gaps or weaknesses in, or instances of material noncompliance with,the Information Security Program; 4. address the status of gaps or weaknesses in, or instances of material non-compliance with, the Information Security Program that were identified in any prior Assessment required by this Order; and 5. identify specific evidence (including, but not limited to,documents reviewed, sampling and testing performed, and interviews conducted) examined to make such determinations, assessments, and identifications, and explain why the evidence that the Assessor examined is (a) appropriate for assessing an enterprise of Respondent’s size, complexity, and risk profile; and (b) sufficient to justify the Assessor’s findings. No finding of any Assessment shall rely solely on assertions or attestations by Respondent’s management. The Assessment must be signed by the Assessor, state that the Assessor conducted an independent review of the Information Security Program and did not rely solely on assertions or attestations by Respondent’s management, and state the number of hours that each member of the assessment team worked on the Assessment. To the extent Respondent revises, updates, or adds one or more safeguards required under Provision III in the middle of an Assessment period, the Assessment must assess the effectiveness of the revised, updated, or added safeguard(s) for the time period in which it was in effect, and provide a separate statement detailing the basis for each revised, updated, or additional safeguard.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 196,
+            "quote_end_line": 220
           },
           {
-            "description": "Complete each Assessment within 60 days after end of reporting period and submit initial Assessment within 10 days of completion",
-            "quoted_text": "E. Each Assessment must be completed within sixty (60) days after the end of the reporting period to which the Assessment applies. Unless otherwise directed by a Commission representative in writing, Respondent must submit the initial Assessment to the Commission within ten (10) days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
-            "deadline": "10 days",
+            "description": "Each Assessment must be completed within 60 days after the end of the reporting period; the initial Assessment must be submitted to the Commission within 10 days of completion; all subsequent biennial Assessments must be retained and provided to the Associate Director within 10 days of request",
+            "quoted_text": "E. Each Assessment must be completed withinsixty(60)days after the end of the reporting period to which the Assessment applies. Unless otherwise directed by a Commission representative in writing, Respondent must submit theinitial Assessment to the Commission within ten(10)days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to: Associate Director forEnforcement, Bureau of Consumer Protection, Federal Trade Commission, Page 6 of 12 600 Pennsylvania AvenueNW,Washington, DC 20580. The subject line must begin, “In re SkyMed International,FTC File No.1923140.” All subsequent biennial Assessments must be retained by Respondent until the Order is terminated and provided to the Associate Director for Enforcement within ten(10)days ofrequest.",
+            "deadline": "60 days after reporting period; 10 days to submit initial",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 221,
+            "quote_end_line": 233
           }
         ]
       },
@@ -292,28 +303,34 @@
         "provision_number": "V",
         "title": "Cooperation with Third-Party Information Security Assessor",
         "category": "affirmative_obligation",
-        "summary": "Respondent must provide the Assessor with all relevant information and materials, network visibility, and must not misrepresent any material facts to the Assessor.",
+        "summary": "Respondent must fully cooperate with the Assessor by providing all relevant information, network and IT asset visibility, and disclosing all material facts without misrepresentation.",
         "requirements": [
           {
-            "description": "Provide Assessor with all relevant information and material without privilege claims",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent, whether acting directly or indirectly, in connection with any Assessment required by Provision IV must: A. Provide or otherwise make available to the Assessor all information and material in its possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege;",
+            "description": "Provide or make available to the Assessor all information and material in Respondent's possession, custody, or control relevant to the Assessment for which there is no reasonable claim of privilege",
+            "quoted_text": "A. Provide or otherwise make available to the Assessor all information and material in its possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 237,
+            "quote_end_line": 239
           },
           {
-            "description": "Provide Assessor with information about networks and IT assets and visibility to them",
-            "quoted_text": "B. Provide or otherwise make available to the Assessor information about Respondent's networks and all of Respondent's IT assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the networks and IT assets deemed in scope;",
+            "description": "Provide or make available to the Assessor information about Respondent's networks and all IT assets so the Assessor can determine the scope and have visibility to those portions deemed in scope",
+            "quoted_text": "B. Provide orotherwise make available to the Assessor information about Respondent’s networks and all of Respondent’s IT assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the networks and IT assets deemed in scope; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 240,
+            "quote_end_line": 243
           },
           {
-            "description": "Disclose all material facts to Assessor and not misrepresent any facts material to the Assessment",
-            "quoted_text": "C. Disclose all material facts to the Assessor, and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor's: (1) determination of whether Respondent has implemented and maintained the Information Security Program required by Provision III; (2) assessment of the effectiveness of the implementation and maintenance of sub-Provisions III.A-I; or (3) identification of any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program.",
+            "description": "Disclose all material facts to the Assessor and not misrepresent any fact material to the Assessor's determination of compliance, effectiveness of the Information Security Program, or identification of gaps",
+            "quoted_text": "C. Disclose all material facts to the Assessor, and not misrepresent in any manner, expressly or by implication,any fact material to the Assessor’s: (1) determination of whether Respondent has implementedand maintainedthe Information Security Program required by Provision III; (2) assessment of the effectiveness of theimplementationand maintenance of sub-Provisions III.A-I; or (3) identification of any gaps or weaknesses in, or instances of material noncompliance with,the Information Security Program.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9690962671905697
+            "confidence": 1.0,
+            "quote_start_line": 244,
+            "quote_end_line": 249
           }
         ]
       },
@@ -321,21 +338,25 @@
         "provision_number": "VI",
         "title": "Annual Certification",
         "category": "compliance_reporting",
-        "summary": "Respondent must provide annual certifications from a senior corporate manager that the Order requirements have been established and maintained, and disclose any material noncompliance or Covered Incidents.",
+        "summary": "Each year after Order issuance, Respondent must provide the FTC with a sworn certification from a senior corporate manager or officer confirming compliance with the Order, disclosing any uncorrected noncompliance, and describing all Covered Incidents during the period.",
         "requirements": [
           {
-            "description": "Provide annual certification one year after issuance and each year thereafter",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must: A. One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from a senior corporate manager, or, if no such senior corporate manager exists, a senior officer of Respondent responsible for Respondent's Information Security Program that: (1) Respondent has established, implemented, and maintained the requirements of this Order; (2) Respondent is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission; and (3) includes a brief description of all Covered Incidents that Respondent verified or confirmed during the certified period.",
-            "deadline": null,
+            "description": "One year after Order issuance and each year thereafter, provide the Commission with a certification from a senior corporate manager or senior officer confirming: (1) compliance with Order requirements; (2) no material noncompliance that has not been corrected or disclosed; and (3) a description of all Covered Incidents during the certified period",
+            "quoted_text": "A. One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from a senior corporate manager, or, if no such senior corporate manager exists, a senior officer of Respondent responsiblefor Respondent’s Information Security Program that: (1) Respondent has established,implemented, and maintainedthe requirements of this Order; (2) Respondent is not aware of any material noncompliance that has not been (a) correctedor (b) disclosed to the Commission; and (3) includes a brief description of all Covered Incidents that Respondent verified or confirmed during the certified period. The certification must be based on the personal knowledge of the senior corporate manager, senior officer, or subject matter experts upon whom the senior corporate manager or senior officerreasonably relies in making the certification.",
+            "deadline": "1 year after issuance, then annually",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 252,
+            "quote_end_line": 262
           },
           {
-            "description": "Submit all annual certifications to the Commission via email or overnight courier",
-            "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
+            "description": "Submit all annual certifications to the Commission via email to DEbrief@ftc.gov or by overnight courier to the specified FTC address, with subject line beginning \"In re SkyMed International, FTC File No. 1923140\"",
+            "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Page 7 of 12 Pennsylvania Avenue NW,Washington, DC 20580. The subject line must begin, “In re SkyMed International, FTC File No.1923140.”",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 263,
+            "quote_end_line": 271
           }
         ]
       },
@@ -343,14 +364,25 @@
         "provision_number": "VII",
         "title": "Covered Incident Reports",
         "category": "compliance_reporting",
-        "summary": "Respondent must submit a report to the Commission within 30 days of discovering a Covered Incident, including details about the incident, affected information, consumer count, remediation steps, and notices sent.",
+        "summary": "Within 30 days of discovering a Covered Incident, Respondent must submit a detailed report to the FTC covering the incident's date, facts, types of information affected, number of consumers affected, remediation steps taken, and copies of consumer notices sent.",
         "requirements": [
           {
-            "description": "Submit Covered Incident report within 30 days of discovery",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent, within thirty (30) days after Respondent's discovery of a Covered Incident, must submit a report to the Commission. The report must include, to the extent possible: A. The date, estimated date, or estimated date range when the Covered Incident occurred; B. A description of the facts relating to the Covered Incident, including the causes and scope of the Covered Incident, if known; C. A description of each type of information that was affected or triggered any notification obligation to the U.S. federal, state, or local government entity; D. The number of consumers whose information triggered any notification obligation to the U.S. federal, state, or local government entity; E. The acts that Respondent has taken to date to remediate the Covered Incident and protect Personal Information from further exposure or access, and protect affected individuals from identity theft or other harm that may result from the Covered Incident; and F. A representative copy of each materially different notice sent by Respondent to consumers or to any U.S. federal, state, or local government entity.",
+            "description": "Within 30 days after discovery of a Covered Incident, submit a report to the Commission including the incident date/range, description of facts and causes, types of information affected, number of consumers whose information triggered notification obligations, remediation actions taken, and copies of each materially different notice sent",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent, within thirty (30) days after Respondent’s discovery of a Covered Incident, must submit a report to the Commission. The report must include, to the extent possible: A. Thedate, estimated date, or estimated date range when the Covered Incident occurred; B. A description of the facts relating to the Covered Incident, including the causes and scope of the Covered Incident, if known; C. A description of each type of information that was affected or triggered any notification obligation to the U.S. federal, state, or local government entity; D. The number of consumers whose information triggered any notification obligation to the U.S. federal, state, or local government entity; E. The acts that Respondent has taken to date to remediate the Covered Incident and protect Personal Information from further exposure or access, and protect affected individuals from identity theft or other harm that may result from the Covered Incident; and F. A representative copy of each materially different notice sent by Respondent to consumers or to any U.S. federal, state, or local government entity.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 273,
+            "quote_end_line": 287
+          },
+          {
+            "description": "Submit all Covered Incident reports to the Commission via email to DEbrief@ftc.gov or by overnight courier, with subject line beginning \"In re SkyMed International, FTC File No. 1923140\"",
+            "quoted_text": "Unless otherwise directed by a Commission representative in writing, all Covered Incident reports to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “In re SkyMed International, FTC File No.1923140.”",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 288,
+            "quote_end_line": 293
           }
         ]
       },
@@ -358,28 +390,34 @@
         "provision_number": "VIII",
         "title": "Acknowledgments of the Order",
         "category": "acknowledgment",
-        "summary": "Respondent must submit acknowledgment of receipt within 10 days, deliver the Order to all relevant personnel for 20 years, and obtain signed acknowledgments from recipients within 30 days.",
+        "summary": "Respondent must submit a sworn acknowledgment of receipt to the FTC within 10 days, deliver copies of the Order to all principals, officers, employees, and agents within required timeframes, and obtain signed acknowledgments from each within 30 days.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt within 10 days of effective date",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent obtain acknowledgments of receipt of this Order: A. Respondent, within ten (10) days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Within 10 days after the effective date of the Order, submit to the Commission an acknowledgment of receipt of the Order sworn under penalty of perjury",
+            "quoted_text": "A. Respondent, within ten (10)days after theeffective dateof this Order, must submit to the Commission an acknowledgment of receipt of this Ordersworn under penalty of perjury.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 297,
+            "quote_end_line": 298
           },
           {
-            "description": "Deliver Order to all principals, officers, directors, managers, employees, agents, and representatives for 20 years",
-            "quoted_text": "B. For twenty (20) years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees having managerial responsibilities for conduct related to the subject matter of the Order, and all agents, and representatives who participate in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in Provision IX. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "10 days",
+            "description": "For 20 years after Order issuance, deliver a copy of the Order to all principals, officers, directors, LLC managers and members, employees with managerial responsibilities related to the Order, agents and representatives, and any resulting business entity from a structural change — within 10 days of effective date for current personnel, and before assuming responsibilities for all others",
+            "quoted_text": "B. For twenty (20) years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees having managerial responsibilities for conduct related to the subject matter of the Order,and all agents,and representatives whoparticipate in conduct Page 8 of 12 related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in Provision IX. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "10 days for current personnel; before assuming responsibilities for others",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 299,
+            "quote_end_line": 309
           },
           {
-            "description": "Obtain signed and dated acknowledgment from each recipient within 30 days",
-            "quoted_text": "C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "From each individual or entity to which a copy of the Order was delivered, obtain within 30 days a signed and dated acknowledgment of receipt",
+            "quoted_text": "C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within thirty (30)days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 310,
+            "quote_end_line": 312
           }
         ]
       },
@@ -387,28 +425,52 @@
         "provision_number": "IX",
         "title": "Compliance Report and Notices",
         "category": "compliance_reporting",
-        "summary": "Respondent must submit annual compliance reports, compliance notices for structural changes within 14 days, and bankruptcy notices within 14 days.",
+        "summary": "Respondent must file a sworn compliance report one year after Order issuance, submit sworn notices within 14 days of any change in contact information or corporate structure, notify the FTC within 14 days of any bankruptcy filing, and ensure all sworn submissions are accurate and comply with 28 U.S.C. § 1746.",
         "requirements": [
           {
-            "description": "Submit compliance report one year after issuance date with business details and Order compliance status",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent make timely submissions to the Commission: A. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (1) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (2) identify all of Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (3) describe the activities of each business, including the goods and services offered, what Personal Information is collected, and the means of advertising, marketing, and sales; (4) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes that Respondent made to comply with the Order; and (5) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "description": "One year after Order issuance, submit a sworn compliance report identifying contact information, all business names and addresses, describing activities and goods/services offered, detailing compliance with each Order provision, and providing copies of all Order acknowledgments",
+            "quoted_text": "A. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in whichRespondent must: (1) identifythe primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (2) identify all ofRespondent’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (3) describe the activities of each business, including the goods and services offered, what Personal Information is collected,andthe means of advertising, marketing, and sales; (4) describein detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes that Respondent made to comply with the Order; and (5) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year after issuance",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 315,
+            "quote_end_line": 326
+          },
+          {
+            "description": "Submit a sworn compliance notice within 14 days of any change in designated contact information or in the structure of Respondent or any controlled entity that may affect compliance obligations under the Order",
+            "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within fourteen (14)days of any change in the following: (1) any designated point of contact; or (2) the structure of Respondent orany entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 327,
+            "quote_end_line": 332
+          },
+          {
+            "description": "Submit notice of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing",
+            "quoted_text": "C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within fourteen (14)days of its filing.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 333,
+            "quote_end_line": 335
+          },
+          {
+            "description": "Any submission required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, including the prescribed declaration language",
+            "quoted_text": "D. Anysubmission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of Americathat the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 336,
+            "quote_end_line": 340
           },
           {
-            "description": "Submit compliance notice within 14 days of any change in contact information or corporate structure",
-            "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in the following: (1) any designated point of contact; or (2) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
-            "deadline": "14 days",
+            "description": "Unless otherwise directed, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the specified FTC address with subject line beginning \"In re SkyMed International, FTC File No. 1923140\"",
+            "quoted_text": "E. Unless otherwise directed by a Commission representativein writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by Page 9 of 12 overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin,“In re SkyMed International, FTC File No.1923140.”",
+            "deadline": null,
             "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Submit notice of bankruptcy or insolvency proceeding within 14 days of filing",
-            "quoted_text": "C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within fourteen (14) days of its filing.",
-            "deadline": "14 days",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 341,
+            "quote_end_line": 349
           }
         ]
       },
@@ -416,77 +478,88 @@
         "provision_number": "X",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must create and retain specified records for 20 years, including accounting records, personnel records, complaints, marketing materials, privacy representations, assessment materials, and compliance documentation.",
+        "summary": "Respondent must create and retain specified records for 20 years after Order issuance (with a 5-year retention period per record), including accounting records, personnel records, consumer complaints, marketing materials, privacy representations, Assessment materials, law enforcement communications, and all compliance records.",
         "requirements": [
           {
-            "description": "Create records for 20 years and retain each for 5 years",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for twenty (20) years after the issuance date of the Order, and retain each such record for five (5) years, unless otherwise specified below.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.9765648854961833
-          },
-          {
-            "description": "Create and retain accounting records showing revenues, costs, and net profit or loss",
+            "description": "Create and retain accounting records showing revenues, costs, and net profit or loss from all goods or services sold",
             "quoted_text": "A. Accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 355,
+            "quote_end_line": 356
           },
           {
-            "description": "Create and retain personnel records for each person providing services",
-            "quoted_text": "B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person's: name, addresses, telephone numbers, job title or position, dates of service, and (if applicable) the reason for termination;",
+            "description": "Create and retain personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination for each person providing services related to the Order",
+            "quoted_text": "B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person’s: name, addresses, telephone numbers,job title or position,dates of service, and (if applicable) the reason for termination;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 357,
+            "quote_end_line": 360
           },
           {
-            "description": "Create and retain copies of all consumer complaints, refund requests, and responses",
+            "description": "Create and retain copies or records of all consumer complaints and refund requests, whether received directly or through a third party, and any response",
             "quoted_text": "C. Copies or records of all consumer complaints and refund requests, whether received directly or indirectly, such as through a third party, and any response;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 361,
+            "quote_end_line": 362
           },
           {
-            "description": "Create and retain copies of each unique advertisement or marketing material subject to Order",
+            "description": "Create and retain a copy of each unique advertisement or other marketing material making a representation subject to this Order",
             "quoted_text": "D. A copy of each unique advertisement or other marketing material making a representation subject to this Order;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 363,
+            "quote_end_line": 364
           },
           {
-            "description": "Create and retain copies of widely disseminated privacy and security representations",
-            "quoted_text": "E. A copy of each widely disseminated representation by Respondent that describes the extent to which Respondent maintains or protects the privacy, security, availability, confidentiality, or integrity of any Personal Information, including any representation concerning a change in any website or other service controlled by Respondent that relates to privacy, security, availability, confidentiality, or integrity of Personal Information;",
+            "description": "Create and retain a copy of each widely disseminated representation describing the extent to which Respondent maintains or protects the privacy, security, availability, confidentiality, or integrity of Personal Information, including representations about website changes related to those topics",
+            "quoted_text": "E. Acopy of each widely disseminated representation by Respondent that describes the extent to which Respondent maintains or protects the privacy, security, availability, confidentiality, or integrity ofany Personal Information, including any representation concerning a change in any website or other service controlled by Respondent that relates to privacy, security, availability, confidentiality, or integrity of Personal Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 365,
+            "quote_end_line": 369
           },
           {
-            "description": "Retain for 5 years all materials and evidence examined by Assessor for each Assessment",
-            "quoted_text": "F. For five (5) years after the date of preparation of each Assessment required by this Order, all materials and evidence that the Assessor considered, reviewed, relied upon or examined to prepare the Assessment, whether prepared by or on behalf of Respondent, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Respondent's compliance with related Provisions of this Order, for the compliance period covered by such Assessment;",
+            "description": "For 5 years after preparation of each Assessment, retain all materials and evidence that the Assessor considered, reviewed, relied upon, or examined, including plans, reports, audits, policies, training materials, and other compliance-related materials",
+            "quoted_text": "F. For five (5) years after the date of preparation of each Assessment required by this Order, all materials and evidence that the Assessor considered, reviewed, relied upon or examined toprepare the Assessment, whether prepared by or on behalf of Respondent, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Respondent’s compliance with related Provisions of this Order, for the compliance period covered by such Assessment;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 370,
+            "quote_end_line": 376
           },
           {
-            "description": "Retain for 5 years all subpoenas and law enforcement communications related to Order compliance",
-            "quoted_text": "G. For five (5) years from the date received, copies of all subpoenas and other communications with law enforcement, if such communications relate to Respondent's compliance with this Order;",
+            "description": "For 5 years from date received, retain copies of all subpoenas and other communications with law enforcement that relate to Respondent's compliance with this Order",
+            "quoted_text": "G. For five (5) years from the date received, copies of all subpoenas and other communications with law enforcement, if such communications relate to Respondent’s compliance with this Order;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 377,
+            "quote_end_line": 379
           },
           {
-            "description": "Retain for 5 years all records showing any lack of compliance with Order",
-            "quoted_text": "H. For five (5) years from the date created or received, all records, whether prepared by or on behalf of Respondent, that tend to show any lack of compliance by Respondent with this Order;",
+            "description": "For 5 years from date created or received, retain all records that tend to show any lack of compliance by Respondent with this Order",
+            "quoted_text": "H. For five (5) years from the date created or received, all records, whether prepared by or on behalf of Respondent, that tend to show any lack of compliance by Respondent with this Order; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 383,
+            "quote_end_line": 385
           },
           {
-            "description": "Retain all records necessary to demonstrate full compliance with each Order provision",
+            "description": "Retain all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
             "quoted_text": "I. All records necessary to demonstrate full compliance with each Provision of this Order, including all submissions to the Commission.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 386,
+            "quote_end_line": 387
           }
         ]
       },
@@ -494,28 +567,34 @@
         "provision_number": "XI",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The FTC may request additional compliance reports and records within 10 days, interview personnel, and use other lawful investigative means including undercover methods.",
+        "summary": "The FTC may monitor Respondent's compliance by requesting additional reports and records, communicating directly with and interviewing Respondent's personnel, and using any other lawful investigative means including undercover contacts.",
         "requirements": [
           {
-            "description": "Submit additional compliance reports or records within 10 days of written request from FTC",
-            "quoted_text": "IT IS FURTHER ORDERED that, for the purpose of monitoring Respondent's compliance with this Order: A. Within ten (10) days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
+            "description": "Within 10 days of receipt of a written request from a Commission representative, submit additional compliance reports or other requested information (sworn under penalty of perjury) and produce records for inspection and copying",
+            "quoted_text": "A. Within ten(10)days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 391,
+            "quote_end_line": 394
           },
           {
-            "description": "Permit FTC representatives to communicate directly with Respondent and interview affiliated persons",
+            "description": "Permit Commission representatives to communicate directly with Respondent and to interview anyone affiliated with Respondent who has agreed to such an interview (with counsel present if desired)",
             "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 395,
+            "quote_end_line": 398
           },
           {
-            "description": "Allow FTC to use all lawful investigative means including posing as consumers or other entities",
-            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Commission may use all other lawful means, including posing as consumers, suppliers, or other entities, without prior notice or identification, and may use compulsory process under Sections 9 and 20 of the FTC Act",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 399,
+            "quote_end_line": 403
           }
         ]
       },
@@ -523,14 +602,16 @@
         "provision_number": "XII",
         "title": "Order Effective Dates",
         "category": "duration",
-        "summary": "The Order is final and effective upon publication on ftc.gov and will terminate 20 years from issuance date, subject to certain conditions related to federal complaints.",
+        "summary": "The Order is effective upon publication on the FTC website and terminates 20 years from issuance, or 20 years from the most recent date a complaint alleging a violation is filed in federal court, whichever is later, subject to specified exceptions.",
         "requirements": [
           {
-            "description": "Order becomes final and effective upon publication on ftc.gov",
-            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order.",
+            "description": "The Order is final and effective upon the date of its publication on the Commission's website as a final order, and will terminate 20 years from issuance or 20 years from the most recent federal court complaint alleging a violation, whichever is later",
+            "quoted_text": "IT IS FURTHER ORDEREDthat this Order is final and effective upon the date of its publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate twenty (20) years from the date of its issuance, (which date may bestated at the end of this Order, nearthe Commission’s seal), or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation ofthis Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than twenty (20) years; B. This Order’s application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 405,
+            "quote_end_line": 416
           }
         ]
       }
@@ -550,8 +631,33 @@
       "complaint_representations": 2,
       "order_provisions": 12,
       "order_definitions": 5,
-      "order_requirements": 53
+      "order_requirements": 49,
+      "provisions_per_section": {
+        "I": 5,
+        "II": 1,
+        "III": 10,
+        "IV": 5,
+        "V": 3,
+        "VI": 2,
+        "VII": 2,
+        "VIII": 3,
+        "IX": 5,
+        "X": 9,
+        "XI": 3,
+        "XII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 2,
+        "complaint_total": 2,
+        "order_verified": 49,
+        "order_total": 49
+      }
     },
-    "processing_time_seconds": 277.2
+    "processing_time_seconds": 165.2
   }
 }

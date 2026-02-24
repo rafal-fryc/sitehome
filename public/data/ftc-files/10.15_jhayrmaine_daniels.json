@@ -23,19 +23,32 @@
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/152-3198-jhayrmaine-daniels-california-skate-line-matter"
   },
   "complaint": {
-    "factual_background": "California Skate-Line, operated by Jhayrmaine Daniels, falsely claimed on its website that it participated in and adhered to the U.S.-EU Safe Harbor Privacy Framework. In reality, the company was never a participant in the Safe Harbor Framework at any time. This false representation about data privacy practices constitutes deceptive conduct in violation of the FTC Act.",
+    "factual_background": "California Skate-Line, operated by Jhayrmaine Daniels, falsely claimed on its website that it adhered to the U.S.-EU Safe Harbor Privacy Principles and was a participant in the U.S.-EU Safe Harbor Framework. In reality, the company was never a participant in the Safe Harbor Framework at any time. This misrepresentation violated Section 5(a) of the Federal Trade Commission Act.",
     "representations_made": [
       {
-        "description": "Claimed to be a current participant in the U.S.-EU Safe Harbor Framework",
-        "quoted_text": "We adhere to the US-EU Safe Harbor Privacy Principles (\"EU Safe Harbor\") with respect to certain personally identifiable information that we receive from customers and employees in the European Union.",
-        "source_paragraph": 9
+        "description": "Claimed to adhere to the US-EU Safe Harbor Privacy Principles with respect to personally identifiable information received from customers and employees in the European Union",
+        "quoted_text": "We adhere to the US-EU Safe Harbor Privacy Principles (“EU Safe Harbor”) with respect to certain personally identifiable information that we receive from customers and employees in the European Union. DC Shoes has various other business units, service offerings and data collections which are not covered by this Privacy Policy, nor by California Skate-Line participation in the EU Safe Harbor, and California Skate-Line makes no EU Safe Harbor representations with respect to any data collected or used in these business units, service offerings or data collections. For further background about the EU Safe Harbor, please refer to the U.S. Department of Commerce’s Website at http://www.export.gov/safeharbor. (emphasis added)",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 66,
+        "quote_end_line": 77
+      },
+      {
+        "description": "Represented that it is a current participant in the U.S.-EU Safe Harbor Framework",
+        "quoted_text": "10. Through the means described in Paragraph 9, respondent has represented, expressly or by implication, that it is a “current” participant in the U.S.-EU Safe Harbor Framework.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 10,
+        "quote_start_line": 81,
+        "quote_end_line": 82
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "False Safe Harbor Participation Claim",
-        "representation": "Respondent represented that it is a 'current' participant in the U.S.-EU Safe Harbor Framework",
+        "representation": "Respondent represented that it is a current participant in the U.S.-EU Safe Harbor Framework",
         "fact": "Respondent is not and never has been a participant in the U.S.-EU Safe Harbor Framework",
         "conclusion": "Therefore, the representation set forth in Paragraph 10 was, and is, false and misleading."
       }
@@ -49,16 +62,18 @@
     "provisions": [
       {
         "provision_number": "I",
-        "title": "Prohibition Against Misrepresentations About Privacy or Security Program Participation",
+        "title": "Prohibition Against Misrepresentations About Privacy or Security Programs",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent its membership in, adherence to, or participation in any privacy or security program, including the U.S.-EU Safe Harbor Framework and U.S.-Swiss Safe Harbor Framework.",
+        "summary": "Respondent must not misrepresent its membership in, adherence to, or participation in any privacy or security program sponsored by the government or any self-regulatory organization, including the U.S.-EU Safe Harbor Framework and U.S.-Swiss Safe Harbor Framework.",
         "requirements": [
           {
-            "description": "Must not misrepresent participation in privacy or security programs",
+            "description": "Must not misrepresent membership in, adherence to, compliance with, certification by, endorsement by, or participation in any privacy or security program sponsored by government or self-regulatory organizations",
             "quoted_text": "IT IS ORDERED that respondent and its officers, agents, representatives, and employees, whether acting directly or indirectly, in connection with the advertising, marketing, promotion, offering for sale, or sale of any product or service, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication, the extent to which respondent is a member of, adheres to, complies with, is certified by, is endorsed by, or otherwise participates in any privacy or security program sponsored by the government or any other self-regulatory or standard-setting organization, including, but not limited to, the U.S.-EU Safe Harbor Framework and the U.S.-Swiss Safe Harbor Framework.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 52,
+            "quote_end_line": 59
           }
         ]
       },
@@ -66,72 +81,113 @@
         "provision_number": "II",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must maintain and make available to the Commission all documents relating to compliance with the order for five years.",
+        "summary": "Respondent must maintain and make available to the Commission for five years all documents relating to compliance with this order, including advertisements, promotional materials, and documents that question compliance.",
         "requirements": [
           {
-            "description": "Maintain compliance-related documents for five years",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall maintain and upon request make available to the Commission for inspection and copying, a print or electronic copy of, for a period of five (5) years from the date of preparation or dissemination, whichever is later, all documents relating to compliance with this order, including but not limited to: A. all advertisements, promotional materials, and any other statements containing any representations covered by this order, with all materials relied upon in disseminating the representation; and B. any documents, whether prepared by or on behalf of respondent, that call into question respondent's compliance with this order.",
+            "description": "Maintain and make available to the Commission all documents relating to compliance with this order for five years from date of preparation or dissemination",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall maintain and upon request make available to the Commission for inspection and copying, a print or electronic copy of, for a period of five (5) years from the date of preparation or dissemination, whichever is later, all",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 61,
+            "quote_end_line": 63
+          },
+          {
+            "description": "Maintain all advertisements, promotional materials, and statements containing representations covered by this order, with materials relied upon",
+            "quoted_text": "A. all advertisements, promotional materials, and any other statements containing any representations covered by this order, with all materials relied upon in disseminating the representation; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 65,
+            "quote_end_line": 67
+          },
+          {
+            "description": "Maintain any documents that call into question respondent's compliance with this order",
+            "quoted_text": "B. any documents, whether prepared by or on behalf of respondent, that call into question respondent’s compliance with this order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 68,
+            "quote_end_line": 69
           }
         ]
       },
       {
         "provision_number": "III",
-        "title": "Order Acknowledgment and Distribution",
+        "title": "Order Acknowledgment",
         "category": "acknowledgment",
-        "summary": "Respondent must deliver copies of the order to current and future personnel and obtain signed acknowledgments of receipt within specified timeframes.",
+        "summary": "Respondent must deliver a copy of this order to all current and future personnel with responsibilities relating to the subject matter and obtain signed acknowledgments of receipt.",
         "requirements": [
           {
-            "description": "Deliver order to current personnel",
-            "quoted_text": "Respondent shall deliver this order to such current personnel within thirty (30) days after service of this order",
+            "description": "Deliver copy of order to all current principals, officers, directors, managers, employees, agents, and representatives with responsibilities relating to the subject matter",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having responsibilities relating to the subject matter of this order. Respondent shall deliver this order to such current personnel within thirty (30) days",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 73,
+            "quote_end_line": 76
           },
           {
-            "description": "Deliver order to future personnel",
-            "quoted_text": "to such future personnel within thirty (30) days after the person assumes such position or responsibilities",
+            "description": "Deliver order to current personnel within thirty days after service of this order",
+            "quoted_text": "this order. Respondent shall deliver this order to such current personnel within thirty (30) days after service of this order, and to such future personnel within thirty (30) days after the person",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 76,
+            "quote_end_line": 77
           },
           {
-            "description": "Deliver order prior to change in business structure",
-            "quoted_text": "For any business entity resulting from any change in structure set forth in Part IV, delivery shall be at least ten (10) days prior to the change in structure.",
+            "description": "Deliver order to future personnel within thirty days after the person assumes position or responsibilities",
+            "quoted_text": "after service of this order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities. For any business entity resulting from any change in",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 77,
+            "quote_end_line": 78
+          },
+          {
+            "description": "For any business entity resulting from change in structure, deliver order at least ten days prior to the change",
+            "quoted_text": "assumes such position or responsibilities. For any business entity resulting from any change in structure set forth in Part IV, delivery shall be at least ten (10) days prior to the change in structure. Respondent must secure a signed and dated statement acknowledging receipt of this",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 78,
+            "quote_end_line": 80
           },
           {
-            "description": "Obtain signed acknowledgments of receipt",
-            "quoted_text": "Respondent must secure a signed and dated statement acknowledging receipt of this order, within thirty (30) days of delivery, from all persons receiving a copy of the order pursuant to this section.",
+            "description": "Secure signed and dated statement acknowledging receipt of order from all persons receiving a copy",
+            "quoted_text": "structure. Respondent must secure a signed and dated statement acknowledging receipt of this order, within thirty (30) days of delivery, from all persons receiving a copy of the order pursuant to this section.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 80,
+            "quote_end_line": 82
           }
         ]
       },
       {
         "provision_number": "IV",
-        "title": "Notification of Corporate Changes",
+        "title": "Change in Corporate Structure Notification",
         "category": "compliance_reporting",
-        "summary": "Respondent must notify the Commission at least 30 days prior to any change in the corporation that may affect compliance obligations.",
+        "summary": "Respondent must notify the Commission at least thirty days prior to any change in the corporation that may affect compliance obligations, including dissolution, merger, sale, or change in corporate name or address.",
         "requirements": [
           {
-            "description": "Notify Commission of corporate changes at least 30 days in advance",
+            "description": "Notify the Commission at least thirty days prior to any change in the corporation that may affect compliance obligations, including dissolution, assignment, sale, merger, creation or dissolution of subsidiary, bankruptcy filing, or change in corporate name or address",
             "quoted_text": "IT IS FURTHER ORDERED that respondent shall notify the Commission at least thirty (30) days prior to any change in the corporation(s) that may affect compliance obligations arising under this order, including, but not limited to: a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 84,
+            "quote_end_line": 89
           },
           {
-            "description": "Notify Commission as soon as practicable if learned fewer than 30 days prior",
+            "description": "If learning of proposed change fewer than thirty days prior, notify the Commission as soon as practicable after obtaining such knowledge",
             "quoted_text": "Provided, however, that, with respect to any proposed change in the corporation(s) about which respondent learns fewer than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 90,
+            "quote_end_line": 92
           }
         ]
       },
@@ -139,21 +195,25 @@
         "provision_number": "V",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondent must file a compliance report with the Commission within 60 days and submit additional reports upon request within 10 days.",
+        "summary": "Respondent must file a true and accurate compliance report with the Commission within sixty days of service of the order, and submit additional reports within ten days of written notice from the Commission.",
         "requirements": [
           {
-            "description": "File initial compliance report",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent, within sixty (60) days after the date of service of this order, shall file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of its compliance with this order.",
+            "description": "File with the Commission a true and accurate report setting forth in detail the manner and form of compliance with this order",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent, within sixty (60) days after the date of service of this order, shall file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of its compliance with this order. Within ten (10) days of",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 99,
+            "quote_end_line": 101
           },
           {
-            "description": "Submit additional compliance reports upon request",
-            "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, it shall submit an additional true and accurate written report.",
+            "description": "Submit additional true and accurate written report within ten days of receipt of written notice from a representative of the Commission",
+            "quoted_text": "forth in detail the manner and form of its compliance with this order. Within ten (10) days of receipt of written notice from a representative of the Commission, it shall submit an additional true and accurate written report.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 101,
+            "quote_end_line": 103
           }
         ]
       },
@@ -161,14 +221,16 @@
         "provision_number": "VI",
         "title": "Order Duration and Termination",
         "category": "duration",
-        "summary": "The order will terminate on September 29, 2035, or 20 years from the most recent date the United States or Commission files a complaint alleging any violation of the order, whichever comes later.",
+        "summary": "This order will terminate on September 29, 2035, or twenty years from the most recent date that the United States or Commission files a complaint in federal court alleging any violation of the order, whichever comes later.",
         "requirements": [
           {
-            "description": "Order remains in effect until termination date",
-            "quoted_text": "This order will terminate on September 29, 2035, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Part in this order that terminates in fewer than twenty (20) years; B. this order's application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Part.",
+            "description": "Order terminates on September 29, 2035, or twenty years from the most recent date of federal court complaint filing alleging violation, whichever comes later",
+            "quoted_text": "This order will terminate on September 29, 2035, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of:",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 105,
+            "quote_end_line": 108
           }
         ]
       }
@@ -185,11 +247,30 @@
     },
     "extraction_stats": {
       "complaint_counts": 1,
-      "complaint_representations": 1,
+      "complaint_representations": 2,
       "order_provisions": 6,
       "order_definitions": 2,
-      "order_requirements": 11
+      "order_requirements": 14,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 3,
+        "III": 5,
+        "IV": 2,
+        "V": 2,
+        "VI": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 2,
+        "complaint_total": 2,
+        "order_verified": 14,
+        "order_total": 14
+      }
     },
-    "processing_time_seconds": 60.1
+    "processing_time_seconds": 58.0
   }
 }

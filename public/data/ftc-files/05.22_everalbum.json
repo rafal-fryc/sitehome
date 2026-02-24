@@ -6,7 +6,7 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "1160 Gorgas Ave., San Francisco, California 94129",
-      "business_description": "Everalbum operates Ever, a photo storage and organization application available on iOS, Android, web, and desktop platforms. Since 2015, Ever has allowed consumers to upload and store photos and videos to cloud servers, free up device storage, and automatically organize content by location and date. The application includes facial recognition technology to group photos by faces of people appearing in images."
+      "business_description": "Everalbum provides Ever, a photo storage and organization application available on iOS, Android, web, and desktop platforms. The application allows consumers to upload photos and videos to cloud servers and uses automated features to organize users' photos and videos into albums by location and date. Globally, approximately 12 million consumers have installed Ever."
     },
     "commissioners": [
       "Rebecca Kelly Slaughter, Acting Chair",
@@ -14,47 +14,66 @@
       "Rohit Chopra",
       "Christine S. Wilson"
     ],
-    "date_issued": "",
+    "case_date": {
+      "month": 5,
+      "year": 2022
+    },
     "legal_authority": "Federal Trade Commission Act",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/192-3172-everalbum-inc-matter"
   },
   "complaint": {
-    "factual_background": "Everalbum operated a photo storage app called Ever that used face recognition technology. The company misled users about their ability to control face recognition, enabling it by default without user consent for most users until April 2019. Everalbum also used millions of facial images extracted from users' photos to develop its own face recognition technology without proper consent. Additionally, contrary to its promises, the company did not delete users' photos and videos upon account deactivation, instead retaining them indefinitely until at least October 2019.",
+    "factual_background": "Everalbum, Inc. operated the Ever photo storage app and enabled face recognition by default for all mobile users without offering an opt-out, contrary to representations implying users had to affirmatively enable the feature. Everalbum also used facial images extracted from Ever users' photos — sometimes without express consent — to train and develop its own proprietary face recognition technology, later commercialized under its Paravision brand. When users deactivated their Ever accounts, Everalbum represented through on-screen messages, customer support responses, and its Privacy Policy that photos and videos would be permanently deleted. In fact, until at least October 2019, Everalbum retained the photos and videos of deactivated users indefinitely, never deleting them.",
     "representations_made": [
       {
-        "description": "Claimed face recognition was only enabled when users turned it on",
-        "quoted_text": "When face recognition is turned on, you are letting us know that it's ok for us to use the face embeddings of the people in your photos and videos, including you, and that you have the approval of everyone featured in your photos and videos",
-        "source_paragraph": 9
+        "description": "Claimed that face recognition was only applied when the user enabled or turned it on, implying users had affirmative control over the feature",
+        "quoted_text": "When face recognition is enabled, the technology analyzes the photos and videos that you upload to create a string of numbers that we call a “face embedding” (emphasis added). *** When face recognition is turned on, you are letting us know that it’s ok for us to use the face embeddings of the people in your photos and videos, including you, and that you have the approval of everyone featured in your photos and videos (emphasis added).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 76,
+        "quote_end_line": 83
       },
       {
-        "description": "Claimed users would permanently lose access to photos and albums upon deactivation",
-        "quoted_text": "We're sorry to see you go! If you choose to deactivate your account, you will permanently lose access to [##] photos and [##] albums.",
-        "source_paragraph": 18
+        "description": "Represented that deactivating an account would cause users to permanently lose access to and lose their photos and albums",
+        "quoted_text": "displays a message that tells the user: “We’re sorry to see you go! If you choose to deactivate your account, you will permanently lose access to [##] photos and [##] albums.” (The message specifies the numbers of photos and albums stored in the user’s Ever account.) The message includes a button for the user to click to deactivate their account.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 18,
+        "quote_start_line": 138,
+        "quote_end_line": 141
       },
       {
-        "description": "Claimed account deactivation would permanently delete all photos and videos",
-        "quoted_text": "[Y]ou can deactivate your account at any time by signing into our app, going to 'Settings' > 'General Settings' > 'Deactivate'. Please note that this will permanently delete all photos and videos stored on your account as well",
-        "source_paragraph": 20
+        "description": "Stated in customer support responses that deactivating an account would permanently delete all photos and videos stored on the account",
+        "quoted_text": "Everalbum has stated: “[Y]ou can deactivate your account at any time by signing into our app, going to ‘Settings’ > ‘General Settings’ > ‘Deactivate’. Please note that this will permanently delete all photos and videos stored on your account as well” (emphasis added).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 20,
+        "quote_start_line": 159,
+        "quote_end_line": 161
       },
       {
-        "description": "Claimed in privacy policy that information would be deleted upon request as soon as possible",
-        "quoted_text": "Consistent with these requirements, we will try to delete your information as soon as possible upon request.",
-        "source_paragraph": 21
+        "description": "Stated in the Privacy Policy that Everalbum would try to delete user information as soon as possible upon request following account deactivation",
+        "quoted_text": "If you wish to deactivate your account or request that we no longer use your information to provide you any services or certain services, such as our Friends feature or our face recognition services, you can do that via your account settings, or you can email us at privacy@everalbum.com. Please understand that we may need to retain and use your information for a certain period of time to comply with our legal obligations, resolve disputes, and enforce our agreements. Consistent with these requirements, we will try to delete your information as soon as possible upon request. Please note, however, that there might be latency in deleting information from our servers and backed-up versions might exist after deletion (emphasis added).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 21,
+        "quote_start_line": 166,
+        "quote_end_line": 175
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "Misrepresentation Regarding Ever Users' Ability to Control the Ever App's Face Recognition Feature",
-        "representation": "Everalbum was not using face recognition unless the user enabled it or turned it on",
-        "fact": "Until April 2019, Everalbum was using face recognition by default for all Ever mobile app users who were located anywhere other than Texas, Illinois, Washington, and the European Union and did not provide those users with a setting to use the app and turn off face recognition",
+        "representation": "Everalbum represented that it was not using face recognition unless the user enabled it or turned it on",
+        "fact": "Until April 2019, Everalbum was using face recognition by default for all Ever mobile app users located anywhere other than Texas, Illinois, Washington, and the European Union, and did not provide those users with a setting to turn off face recognition",
         "conclusion": "Therefore, the representation set forth in Paragraph 9 is false or misleading."
       },
       {
         "count_number": 2,
         "title": "Misrepresentation Regarding Deletion of Ever Users' Photos Upon Account Deactivation",
-        "representation": "Everalbum would delete Ever users' photos and videos upon users' deactivation of their accounts",
+        "representation": "Everalbum represented that it would delete Ever users' photos and videos upon users' deactivation of their accounts",
         "fact": "Until October 2019, Everalbum did not delete any Ever users' photos and videos upon account deactivation and instead stored them indefinitely",
         "conclusion": "Therefore, the representation set forth in Paragraphs 18-21 is false or misleading."
       }
@@ -64,7 +83,7 @@
     "definitions": {
       "Affected Work Product": "any models or algorithms developed in whole or in part using Biometric Information Respondent collected from Users of the \"Ever\" mobile application.",
       "Biometric Information": "data that depicts or describes the physical or biological traits of an identified or identifiable person, including depictions (including images), descriptions, recordings, or copies of an individual's facial or other physical features (e.g., iris/retina scans), finger or handprints, voice, genetics, or characteristic movements or gestures (e.g., gait or typing pattern).",
-      "Clearly and Conspicuously": "that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: 1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure (\"triggering representation\") is made through only one means. 2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. 3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. 4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. 5. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the triggering representation appears. 6. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. 7. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. 8. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
+      "Clearly and Conspicuously": "means that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways:\n1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure (\"triggering representation\") is made through only one means.\n2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood.\n3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it.\n4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable.\n5. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the triggering representation appears.\n6. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications.\n7. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication.\n8. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
       "Covered Information": "information from or about an individual consumer, including: (1) a first and last name; (2) a physical address; (3) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (4) a telephone number; (5) a Social Security number; (6) a driver's license or other government-issued identification number; (7) a financial account number; (8) credit or debit card information; (9) photos and videos; (10) Biometric Information; (11) descriptive information derived from Biometric Information, including a Face Embedding; (12) a persistent identifier, such as a customer number held in a \"cookie,\" a static Internet Protocol (\"IP\") address, a mobile device ID, processor serial number, user ID, or any other persistent identifier that can be used to recognize a user over time and/or across different devices, websites or online services; or (13) any information combined with any of (1) through (12) above.",
       "Face Embedding": "data, such as a numeric vector, derived in whole or in part from an image of an individual's face.",
       "Respondent": "Everalbum, Inc., also doing business as Ever and Paravision, and its successors and assigns.",
@@ -75,42 +94,52 @@
         "provision_number": "I",
         "title": "Prohibition against Misrepresentations",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent the extent to which it collects, uses, discloses, maintains, deletes, or protects Covered Information, or how consumers can control such information.",
+        "summary": "Respondent must not misrepresent in any manner how it collects, uses, discloses, maintains, or deletes Covered Information, or how it protects the privacy, security, and integrity of that information.",
         "requirements": [
           {
             "description": "Must not misrepresent the extent to which Respondent collects, uses, discloses, maintains, or deletes any Covered Information",
-            "quoted_text": "IT IS ORDERED that Respondent; and Respondent's officers, agents, and employees; and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service must not misrepresent in any manner, expressly or by implication: A. The extent to which Respondent collects, uses, discloses, maintains, or deletes any Covered Information",
+            "quoted_text": "A. The extent to which Respondent collects, uses, discloses, maintains, or deletes any Covered Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 112,
+            "quote_end_line": 113
           },
           {
             "description": "Must not misrepresent the extent to which consumers can control the collection, use, disclosure, maintenance, or deletion of Covered Information",
-            "quoted_text": "B. The extent to which consumers can control the collection, use, disclosure, maintenance, or deletion of Covered Information",
+            "quoted_text": "B. The extent to which consumers can control the collection, use, disclosure, maintenance, or deletion of Covered Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 114,
+            "quote_end_line": 115
           },
           {
             "description": "Must not misrepresent the extent to which Respondent accesses or permits access to Covered Information",
-            "quoted_text": "C. The extent to which Respondent accesses or permits access to Covered Information",
+            "quoted_text": "C. The extent to which Respondent accesses or permits access to Covered Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 116,
+            "quote_end_line": 116
           },
           {
             "description": "Must not misrepresent the extent to which, purposes for which, or duration of time during which Respondent retains any Covered Information following a consumer's deletion or deactivation of a user account",
-            "quoted_text": "D. The extent to which, purposes for which, or duration of time during which Respondent retains any Covered Information following a consumer's deletion or deactivation of a user account with Respondent",
+            "quoted_text": "D. The extent to which, purposes for which, or duration of time during which Respondent retains any Covered Information following a consumer’s deletion or deactivation of a user account with Respondent; or",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 117,
+            "quote_end_line": 119
           },
           {
             "description": "Must not misrepresent the extent to which Respondent otherwise protects the privacy, security, availability, confidentiality, or integrity of any Covered Information",
             "quoted_text": "E. The extent to which Respondent otherwise protects the privacy, security, availability, confidentiality, or integrity of any Covered Information.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 120,
+            "quote_end_line": 121
           }
         ]
       },
@@ -118,21 +147,25 @@
         "provision_number": "II",
         "title": "Notice and Affirmative Express Consent Provision",
         "category": "affirmative_obligation",
-        "summary": "Before using Biometric Information from a User to create Face Embeddings or train face recognition models, Respondent must clearly and conspicuously disclose all purposes for such use and obtain affirmative express consent from the User.",
+        "summary": "Before using Biometric Information collected from a User to create a Face Embedding or train/develop/alter any face recognition model or algorithm, Respondent must clearly disclose all purposes for which it will use the information and obtain affirmative express consent from the User.",
         "requirements": [
           {
-            "description": "Clearly and conspicuously disclose to the User all purposes for which Respondent will use and share Biometric Information, separate from any privacy policy or terms of use",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent; and Respondent's officers, agents, and employees; and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service, prior to using Biometric Information collected from a User to (1) create a Face Embedding or (2) train, develop, or alter any face recognition model or algorithm, must: A. Clearly and Conspicuously disclose to the User from whom Respondent has collected the Biometric Information, separate and apart from any \"privacy policy,\" \"terms of use\" page, or other similar document, all purposes for which Respondent will use, and to the extent applicable, share, the Biometric Information",
+            "description": "Clearly and Conspicuously disclose to the User all purposes for which Respondent will use (and, where applicable, share) Biometric Information, separate from any privacy policy or terms of use, prior to using that information to create a Face Embedding or train/develop/alter face recognition models",
+            "quoted_text": "A. Clearly and Conspicuously disclose to the User from whom Respondent has collected the Biometric Information, separate and apart from any “privacy policy,” “terms of use” page, or other similar document, all purposes for which Respondent will use, and to the extent applicable, share, the Biometric Information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 128,
+            "quote_end_line": 131
           },
           {
-            "description": "Obtain the affirmative express consent of the User from whom Respondent collected the Biometric Information",
+            "description": "Obtain the affirmative express consent of the User from whom Respondent collected the Biometric Information prior to using it to create a Face Embedding or train/develop/alter face recognition models",
             "quoted_text": "B. Obtain the affirmative express consent of the User from whom Respondent collected the Biometric Information.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 132,
+            "quote_end_line": 133
           }
         ]
       },
@@ -140,35 +173,52 @@
         "provision_number": "III",
         "title": "Deletion",
         "category": "affirmative_obligation",
-        "summary": "Respondent must delete photos and videos from deactivated accounts within 30 days, delete Face Embeddings from unconsented Users within 90 days, and delete all Affected Work Product within 90 days.",
+        "summary": "Respondent must delete or destroy photos, videos, Face Embeddings, and Affected Work Product collected from certain Users within specified timeframes after the Order's issuance, and provide sworn written statements to the Commission confirming such deletion.",
         "requirements": [
           {
-            "description": "Delete or destroy all photos and videos collected from Users who requested deactivation of their Ever accounts on or before the issuance date, and provide written confirmation to the Commission",
-            "quoted_text": "A. Within thirty (30) days after the issuance date of this Order, delete or destroy all photos and videos that Respondent collected from Users who requested deactivation of their Ever accounts on or before the issuance date of this Order, and provide a written statement to the Commission, sworn under penalty of perjury, confirming that all such information has been deleted or destroyed",
+            "description": "Within 30 days after the issuance date of this Order, delete or destroy all photos and videos collected from Users who requested deactivation of their Ever accounts on or before the issuance date, and provide a sworn written statement to the Commission confirming deletion",
+            "quoted_text": "A. Within thirty (30) days after the issuance date of this Order, delete or destroy all photos and videos that Respondent collected from Users who requested deactivation of their Ever accounts on or before the issuance date of this Order, and provide a written statement to the Commission, sworn under penalty of perjury, confirming that all such information has been deleted or destroyed;",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 140,
+            "quote_end_line": 144
           },
           {
-            "description": "Delete or destroy all Face Embeddings derived from Biometric Information from Users who have not provided express affirmative consent, and provide written confirmation to the Commission",
-            "quoted_text": "B. Within ninety (90) days after the issuance of this Order, delete or destroy all Face Embeddings derived from Biometric Information Respondent collected from Users who have not, by that date, provided express affirmative consent for the creation of the Face Embeddings, and provide a written statement to the Commission, sworn under penalty of perjury, confirming that all such information has been deleted or destroyed",
+            "description": "Within 90 days after the issuance of this Order, delete or destroy all Face Embeddings derived from Biometric Information collected from Users who have not by that date provided express affirmative consent for their creation, and provide a sworn written statement to the Commission confirming deletion",
+            "quoted_text": "B. Within ninety (90) days after the issuance of this Order, delete or destroy all Face Embeddings derived from Biometric Information Respondent collected from Users who have not, by that date, provided express affirmative consent for the creation of the Face Embeddings, and provide a written statement to the Commission, sworn under penalty of perjury, confirming that all such information has been deleted or destroyed; and",
             "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 148,
+            "quote_end_line": 152
           },
           {
-            "description": "Delete or destroy any Affected Work Product and provide written confirmation to the Commission",
+            "description": "Within 90 days after the issuance of this Order, delete or destroy any Affected Work Product, and provide a sworn written statement to the Commission confirming such deletion or destruction",
             "quoted_text": "C. Within ninety (90) days after the issuance of this Order, delete or destroy any Affected Work Product, and provide a written statement to the Commission, sworn under penalty of perjury, confirming such deletion or destruction.",
             "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 153,
+            "quote_end_line": 155
           },
           {
-            "description": "If information is retained due to legal obligations, describe in detail the retained information and the legal basis, and confirm deletion within 30 days after the obligation ends",
-            "quoted_text": "In each written statement to the Commission required by this provision, Respondent shall describe in detail any relevant information that Respondent retains on any of these bases and the specific government agency, law, regulation, court order, or other legal obligation that prohibits Respondent from deleting or destroying such information. Within thirty (30) days after the obligation to retain the information has ended, Respondent shall provide an additional written statement to the Commission, sworn under penalty of perjury, confirming that Respondent has deleted or destroyed such information.",
-            "deadline": "30 days",
+            "description": "For any retained information excepted from deletion by law, describe in detail in each written statement to the Commission the information retained and the specific legal obligation prohibiting deletion",
+            "quoted_text": "applicable to the safeguarding of evidence in pending litigation. In each written statement to the Commission required by this provision, Respondent shall describe in detail any relevant information that Respondent retains on any of these bases and the specific government agency, law, regulation, court order, or other legal obligation that prohibits Respondent from deleting or",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 160,
+            "quote_end_line": 163
+          },
+          {
+            "description": "Within 30 days after the obligation to retain any excepted information has ended, provide an additional sworn written statement to the Commission confirming deletion or destruction of such information",
+            "quoted_text": "destroying such information. Within thirty (30) days after the obligation to retain the information has ended, Respondent shall provide an additional written statement to the Commission, sworn under penalty of perjury, confirming that Respondent has deleted or destroyed such information.",
+            "deadline": "30 days after retention obligation ends",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 164,
+            "quote_end_line": 167
           }
         ]
       },
@@ -176,28 +226,34 @@
         "provision_number": "IV",
         "title": "Acknowledgments of the Order",
         "category": "acknowledgment",
-        "summary": "Respondent must submit an acknowledgment of receipt of the Order to the Commission, deliver copies to key personnel for 10 years, and obtain signed acknowledgments from those who receive it.",
+        "summary": "Respondent must acknowledge receipt of this Order, deliver copies to relevant personnel and successors, and collect signed acknowledgments from each recipient.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt of this Order to the Commission sworn under penalty of perjury",
+            "description": "Within 10 days after the issuance date of this Order, submit to the Commission a sworn acknowledgment of receipt of this Order",
             "quoted_text": "A. Respondent, within ten (10) days after the issuance date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 171,
+            "quote_end_line": 172
           },
           {
-            "description": "Deliver a copy of this Order to all principals, officers, directors, LLC managers and members, employees with managerial responsibilities, and any successor business entities",
+            "description": "For 10 years after the issuance date, deliver a copy of this Order to all principals, officers, directors, LLC managers and members, employees/agents/representatives with managerial responsibilities related to the Order's subject matter, and any successor business entities; delivery for current personnel must occur within 10 days of the Order's effective date, and for all others before they assume their responsibilities",
             "quoted_text": "B. For ten (10) years after the issuance date of this Order Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives having managerial responsibilities for conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Reports and Notices. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "10 days",
+            "deadline": "10 days for current personnel; before assuming responsibilities for others",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 173,
+            "quote_end_line": 179
           },
           {
-            "description": "Obtain signed and dated acknowledgment of receipt of this Order from each individual or entity to which it was delivered",
+            "description": "From each individual or entity to whom a copy of this Order was delivered, obtain a signed and dated acknowledgment of receipt within 30 days",
             "quoted_text": "C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 180,
+            "quote_end_line": 182
           }
         ]
       },
@@ -205,28 +261,52 @@
         "provision_number": "V",
         "title": "Compliance Reports and Notices",
         "category": "compliance_reporting",
-        "summary": "Respondent must submit annual compliance reports to the Commission and provide notices of changes in structure, contact information, or bankruptcy proceedings within 14 days.",
+        "summary": "Respondent must submit a sworn compliance report one year after the Order's issuance, provide timely notices of changes in contact information or business structure, and notify the Commission of any bankruptcy filings.",
         "requirements": [
           {
-            "description": "Submit a compliance report one year after issuance, identifying contact information, business activities, Covered Information collected, and compliance with each provision",
-            "quoted_text": "A. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission may use to communicate with Respondent; (b) identify all of the Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered, what Covered Information is collected, and the means of advertising, marketing, and sales; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes the Respondent made to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "description": "One year after the issuance date, submit a sworn compliance report identifying contact information, all business names and addresses, business activities, compliance with each provision, and copies of all Order acknowledgments",
+            "quoted_text": "A. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission may use to communicate with Respondent; (b) identify all of the Respondent’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered, what Covered Information is collected, and the means of advertising, marketing, and sales; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes the Respondent made to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
             "deadline": "1 year",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 189,
+            "quote_end_line": 200
           },
           {
-            "description": "Submit compliance notice within 14 days of any change in designated point of contact or structure of Respondent",
+            "description": "Submit a sworn compliance notice within 14 days of any change in designated points of contact or in the structure of Respondent or any controlled entity that may affect compliance obligations under this Order",
             "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in the following: (a) any designated point of contact or (b) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 201,
+            "quote_end_line": 206
           },
           {
-            "description": "Submit notice of any bankruptcy petition, insolvency proceeding, or similar proceeding within 14 days of its filing",
+            "description": "Submit notice of any bankruptcy, insolvency, or similar proceeding filed by or against Respondent within 14 days of its filing",
             "quoted_text": "C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within fourteen (14) days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 207,
+            "quote_end_line": 209
+          },
+          {
+            "description": "All sworn submissions must be true and accurate and comply with 28 U.S.C. § 1746, including the required declaration language, date, signatory's full name, title, and signature",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 210,
+            "quote_end_line": 214
+          },
+          {
+            "description": "Unless otherwise directed in writing, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC, with the subject line beginning \"In re Everalbum, Inc., FTC File No. 1923172\"",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “In re Everalbum, Inc., FTC File No. 1923172.”",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 215,
+            "quote_end_line": 220
           }
         ]
       },
@@ -234,42 +314,52 @@
         "provision_number": "VI",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must create and retain for 5 years various records including accounting records, personnel records, consumer complaints, privacy representations, and compliance documentation for a period of 10 years after issuance.",
+        "summary": "Respondent must create and retain specified categories of records for 10 years after the Order's issuance, retaining each record for at least 5 years.",
         "requirements": [
           {
-            "description": "Create accounting records showing revenues, costs, and net profit or loss for 10 years and retain each for 5 years",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for ten (10) years after the issuance date of the Order, and retain each such record for five (5) years, unless otherwise specified below. Specifically, Respondent must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss",
+            "description": "Create and retain for 5 years accounting records showing revenues from all goods or services sold, costs incurred, and resulting net profit or loss",
+            "quoted_text": "A. Accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 229,
+            "quote_end_line": 230
           },
           {
-            "description": "Create personnel records showing name, address, telephone, job title, dates of service, and reason for termination",
-            "quoted_text": "B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination",
+            "description": "Create and retain for 5 years personnel records showing each service provider's name, addresses, telephone numbers, job title or position, dates of service, and (if applicable) reason for termination",
+            "quoted_text": "B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 231,
+            "quote_end_line": 234
           },
           {
-            "description": "Create copies or records of all consumer complaints and refund requests and any responses",
-            "quoted_text": "C. Copies or records of all consumer complaints and refund requests, whether received directly or indirectly, such as through a third party, and any response",
+            "description": "Create and retain for 5 years copies or records of all consumer complaints and refund requests and any responses, whether received directly or through a third party",
+            "quoted_text": "C. Copies or records of all consumer complaints and refund requests, whether received directly or indirectly, such as through a third party, and any response;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 235,
+            "quote_end_line": 236
           },
           {
-            "description": "Create a copy of each widely disseminated representation describing privacy, security, availability, confidentiality, or integrity of Covered Information",
-            "quoted_text": "D. A copy of each widely disseminated representation by Respondent that describes the extent to which Respondent maintains or protects the privacy, security, availability, confidentiality, or integrity of any Covered Information, including any representation concerning a change in any website, mobile app, or other service controlled by Respondent that relates to privacy, security, availability, confidentiality, or integrity of Covered Information",
+            "description": "Create and retain for 5 years a copy of each widely disseminated representation by Respondent describing the extent to which it maintains or protects the privacy, security, availability, confidentiality, or integrity of any Covered Information, including representations about changes to any website, mobile app, or other service",
+            "quoted_text": "D. A copy of each widely disseminated representation by Respondent that describes the extent to which Respondent maintains or protects the privacy, security, availability, confidentiality, or integrity of any Covered Information, including any representation concerning a change in any website, mobile app, or other service controlled by Respondent that relates to privacy, security, availability, confidentiality, or integrity of Covered Information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 237,
+            "quote_end_line": 242
           },
           {
-            "description": "Create all records necessary to demonstrate full compliance with each provision of this Order",
+            "description": "Create and retain for 5 years all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
             "quoted_text": "E. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 243,
+            "quote_end_line": 244
           }
         ]
       },
@@ -277,28 +367,34 @@
         "provision_number": "VII",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission has the right to request additional compliance reports, inspect records, interview personnel, and use other lawful means to monitor compliance with the Order.",
+        "summary": "The FTC is authorized to monitor Respondent's compliance by requesting reports and records, communicating directly with and interviewing Respondent's personnel, and using other lawful means including undercover methods.",
         "requirements": [
           {
-            "description": "Submit additional compliance reports or other requested information and produce records for inspection within 10 days of written request from the Commission",
+            "description": "Within 10 days of receipt of a written request from a Commission representative, submit additional compliance reports or other requested information (sworn under penalty of perjury) and produce records for inspection and copying",
             "quoted_text": "A. Within ten (10) days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
-            "deadline": "10 days",
+            "deadline": "10 days of written request",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 248,
+            "quote_end_line": 251
           },
           {
-            "description": "Permit Commission representatives to communicate directly with Respondent and interview affiliated individuals",
+            "description": "Permit Commission representatives to communicate directly with Respondent and to interview anyone affiliated with Respondent who has agreed to such an interview, with counsel present if desired",
             "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 252,
+            "quote_end_line": 255
           },
           {
-            "description": "Allow the Commission to use all lawful means to monitor compliance, including posing as consumers or other entities",
-            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Commission may use all other lawful means, including posing as consumers, suppliers, or other individuals, without identification or prior notice, and may use compulsory process under Sections 9 and 20 of the FTC Act",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 256,
+            "quote_end_line": 260
           }
         ]
       },
@@ -306,14 +402,16 @@
         "provision_number": "VIII",
         "title": "Order Effective Dates",
         "category": "duration",
-        "summary": "The Order is effective upon publication and terminates 20 years from issuance or 20 years from the most recent date of filing a federal court complaint alleging violation, whichever is later.",
+        "summary": "This Order is effective upon publication on ftc.gov and terminates 20 years from its issuance date, or 20 years from the most recent date the Commission files a complaint alleging a violation, whichever is later.",
         "requirements": [
           {
-            "description": "Order becomes final and effective upon publication on the Commission's website",
-            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order.",
+            "description": "Order is final and effective upon publication on ftc.gov as a final order and terminates 20 years from the issuance date or 20 years from the most recent date a complaint alleging a violation is filed in federal court, whichever is later, subject to specified exceptions",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its 7 publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate twenty (20) years from the date of its issuance (which date may be stated at the end of this Order, near the Commission’s seal), or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than twenty (20) years; B. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. Provided, further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9594871794871795
+            "confidence": 0.85,
+            "quote_start_line": 262,
+            "quote_end_line": 280
           }
         ]
       }
@@ -333,8 +431,29 @@
       "complaint_representations": 4,
       "order_provisions": 8,
       "order_definitions": 7,
-      "order_requirements": 26
+      "order_requirements": 29,
+      "provisions_per_section": {
+        "I": 5,
+        "II": 2,
+        "III": 5,
+        "IV": 3,
+        "V": 5,
+        "VI": 5,
+        "VII": 3,
+        "VIII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 1
+      },
+      "verification_details": {
+        "complaint_verified": 4,
+        "complaint_total": 4,
+        "order_verified": 29,
+        "order_total": 29
+      }
     },
-    "processing_time_seconds": 168.9
+    "processing_time_seconds": 124.3
   }
 }

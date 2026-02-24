@@ -6,57 +6,63 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "901 Marshall Street, Ste. 200, Redwood City, CA 94063",
-      "business_description": "Turn Inc. is a digital advertising company that enables commercial brands and ad agencies to engage in targeted advertising. The company uses data about users' interests to deliver online advertising targeted to those interests and claims to reach over 1.3 billion unique users per month via mobile."
+      "business_description": "Turn Inc. is a digital advertising company that enables commercial brands and ad agencies to engage in targeted advertising. Respondent advertises itself as the largest independent company in the advertising technology sector, reaching over 1.3 billion unique users per month via mobile and maintaining rich profile data on more than 99 percent of North American consumers."
     },
     "commissioners": [
       "Maureen K. Ohlhausen, Acting Chairman",
       "Terrell McSweeny"
     ],
-    "date_issued": "",
+    "case_date": {
+      "month": 4,
+      "year": 2017
+    },
     "legal_authority": "Federal Trade Commission Act",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/152-3099-turn-inc-matter"
   },
   "complaint": {
-    "factual_background": "Turn Inc., a digital advertising company, synchronized Verizon's unique tracking headers (X-UIDH) with cookies and device advertising identifiers to track over 100 million Verizon Wireless consumers between February 2013 and January 2015. This practice allowed Turn to continue tracking consumers even after they deleted cookies or reset their device advertising identifiers, directly contradicting Turn's privacy policy statements that consumers could prevent tracking by blocking cookies. Turn's opt-out mechanism also failed to work on mobile applications despite representing that it would.",
+    "factual_background": "Turn Inc., a digital advertising company, tracked consumers across the web and mobile apps using cookies, web beacons, and device advertising identifiers. Beginning in 2013, Turn participated in a Verizon Wireless program that used unique tracking headers (X-UIDH) injected into all unencrypted mobile web traffic, which consumers could not opt out of. Turn secretly synced these X-UIDH headers with cookies and device advertising identifiers, enabling it to continue tracking consumers even after they deleted their cookies or reset their device advertising IDs. Despite this practice, Turn's privacy policy told consumers they could stop being tracked by blocking or limiting cookies, which was false. Additionally, Turn's opt-out mechanism for tailored advertising only applied to mobile browsers and did not actually block tailored ads within mobile applications, contrary to what was represented.",
     "representations_made": [
       {
-        "description": "Claimed consumers could prevent tracking by blocking or limiting cookies",
-        "quoted_text": "Most internet browsers automatically accept cookies. You can instruct your browser, by editing in options, to stop accepting cookies or prompt you before accepting a cookie from the websites you visit.",
-        "source_paragraph": 12
+        "description": "Claimed that consumers could prevent Turn's tracking by instructing their browser to stop accepting cookies, while omitting that Turn also tracked consumers via Verizon's X-UIDH headers which bypassed cookie controls",
+        "quoted_text": "Cookies and web beacons Turn uses cookies in connection with our technology. Cookies help Turn better understand the effectiveness of a Turn Ad (for example, by tracking the way in which you may respond to, select and interact with a Turn Ad or any content provided therein, or the site placement and context in which you view a Turn Ad). Turn’s cookies also help control the number of times you view a Turn ad. Most internet browsers automatically accept cookies. You can instruct your browser, by editing in options, to stop accepting cookies or prompt you before accepting a cookie from the websites you visit. If you do not accept cookies, however, you may not be able to enjoy the full functionality of many of the websites you visit. Turn also uses web beacons, in combination with cookies, to analyze usage patterns. The use of a web beacon allows Turn to record that a particular browser has visited a particular webpage, along with additional Non-PII that the website may choose to include with the beacon. Opt out from Tailored but Anonymous Advertising (Turn’s choice mechanism) If you’d like to opt out of tailored advertising from Turn, please click here to be taken to our opt out page. (Exhibit A, Turn Privacy Guidelines).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 12,
+        "quote_start_line": 92,
+        "quote_end_line": 109
       },
       {
-        "description": "Claimed to use only cookies and web beacons as tracking technologies",
-        "quoted_text": "Cookies and web beacons Turn uses cookies in connection with our technology. Cookies help Turn better understand the effectiveness of a Turn Ad... Turn also uses web beacons, in combination with cookies, to analyze usage patterns.",
-        "source_paragraph": 12
-      },
-      {
-        "description": "Claimed consumers could opt out of tailored advertising through the opt-out page",
-        "quoted_text": "Turn will place an opt-out cookie on your browser. The opt-out cookie tells our servers not to deliver tailored, anonymous ads to you that deliver high value to the sites and apps you love.",
-        "source_paragraph": 14
+        "description": "Claimed that consumers could opt out of tailored advertising on mobile applications (websites and apps) through Turn's opt-out page",
+        "quoted_text": "Opting out may hurt the sites and apps you love! Also, if you opt out, you may be making it harder for your favorite websites or apps to survive. This is because advertisers pay more money to deliver a tailored ad, and your favorite website/app makes more money when they show a tailored ad on their properties. Studies have shown that a significant portion of a 3 publisher’s revenue can come from tailored advertising, and this is particularly true for smaller websites. See 2014 DAA Study and 2010 NAI Study. SO — if you still want to get ads, but prefer irrelevant ads over tailored ads based on anonymous information and you don’t value the free content you enjoy, Turn will place an opt-out cookie on your browser. The opt-out cookie tells our servers not to deliver tailored, anonymous ads to you that deliver high value to the sites and apps you love. If you delete, block, or restrict cookies, or if you use a different computer or Internet browser, you may need to renew your opt-out choice. (Exhibit A, Turn Privacy Guidelines).",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 14,
+        "quote_start_line": 115,
+        "quote_end_line": 132
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "Misrepresentations about Deleting Cookies",
-        "representation": "Respondent represented that blocking or limiting cookies would restrict Respondent's ability to track consumers",
-        "fact": "Blocking or limiting cookies did not restrict Respondent's ability to track consumers. Respondent continued to track Verizon Wireless customers who had deleted or blocked cookies through the X-UIDH header",
-        "conclusion": "Therefore, the representation set forth in paragraph 16 is false or misleading."
+        "representation": "Blocking or limiting cookies would restrict Respondent's ability to track consumers",
+        "fact": "In many instances, blocking or limiting cookies did not restrict Turn's ability to track consumers — Turn continued to track Verizon Wireless customers who had deleted or blocked cookies through the X-UIDH header",
+        "conclusion": "The representation set forth in paragraph 16 is false or misleading."
       },
       {
         "count_number": 2,
         "title": "Misrepresentations About Effectiveness of Opt-Out Mechanism",
-        "representation": "Respondent represented that consumers could opt out of tailored advertising on mobile applications through Respondent's opt-out page",
-        "fact": "Consumers could not opt out of tailored advertising on mobile applications through Respondent's opt-out page",
-        "conclusion": "Therefore, the representation set forth in paragraph 18 is false or misleading."
+        "representation": "Consumers could opt out of tailored advertising on mobile applications through Respondent's opt-out page",
+        "fact": "Consumers could not opt out of tailored advertising on mobile applications through Respondent's opt-out page — the opt-out cookie applied only to mobile browsers and was not effective in blocking tailored, anonymous ads on mobile applications",
+        "conclusion": "The representation set forth in paragraph 18 is false or misleading."
       }
     ]
   },
   "order": {
     "definitions": {
       "Clear[ly] and Conspicuous[ly]": "means that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: a. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. b. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure is made through only one means. c. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. d. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. e. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. f. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the representation that requires the disclosure appears. g. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. h. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. i. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
-      "Computer\" or \"Device": "means any desktop or laptop computer, handheld device, telephone, tablet, or other product or device, through which consumers access the Internet.",
+      "Computer or Device": "means any desktop or laptop computer, handheld device, telephone, tablet, or other product or device, through which consumers access the Internet.",
       "Covered Information": "means information from or about an individual consumer, Computer, or Device, including, but not limited to, (a) an email address or other online contact information, such as a user name; (b) a persistent identifier, such as a unique ID held in an HTTP cookie, an Internet Protocol (\"IP\") address, a Device Advertising Identifier, a mobile device ID, a MAC address, processor serial number, or Verizon Wireless's X-UIDH header; (c) browsing history or other data about websites and applications that a device has accessed; (d) precise geolocation data of an individual or mobile device, including GPS-based, WiFi-based, or cell-based location information; or (e) an authentication credential such as a login ID or password.",
       "Device Advertising Identifier": "means a persistent identifier created by a Mobile Operating System to uniquely identify a device user for purposes of advertising, such as the iOS Identifier for Advertisers or Google advertising ID.",
       "Mobile Operating System": "means an operating system designed to run a mobile device such as a smartphone or tablet. A web browser shall not be considered a Mobile Operating System.",
@@ -69,21 +75,25 @@
         "provision_number": "I",
         "title": "Prohibition Against Misrepresentations about Privacy of Covered Information",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent the extent to which it collects, uses, discloses, retains, or shares Covered Information, or the extent to which consumers can control such practices.",
+        "summary": "Respondent must not misrepresent, expressly or by implication, the extent to which it collects, uses, discloses, retains, or shares Covered Information, or the extent to which consumers can limit or control such practices.",
         "requirements": [
           {
             "description": "Must not misrepresent the extent to which Respondent collects, uses, discloses, retains, or shares Covered Information",
-            "quoted_text": "IT IS ORDERED that Respondent, and Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with the online advertising, marketing, promotion, offering for sale, sale, or dissemination of any product or service, must not misrepresent, in any manner, expressly or by implication: A. The extent to which Respondent collects, uses, discloses, retains, or shares Covered Information",
+            "quoted_text": "IT IS ORDERED that Respondent, and Respondent’s officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with the online advertising, marketing, promotion, offering for sale, sale, or dissemination of any product or service, must not misrepresent, in any manner, expressly or by implication: 3 A. The extent to which Respondent collects, uses, discloses, retains, or shares Covered Information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 109,
+            "quote_end_line": 118
           },
           {
             "description": "Must not misrepresent the extent to which consumers can limit, control, or prevent Respondent's collection, use, disclosure, retention, or sharing of Covered Information",
-            "quoted_text": "IT IS ORDERED that Respondent, and Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with the online advertising, marketing, promotion, offering for sale, sale, or dissemination of any product or service, must not misrepresent, in any manner, expressly or by implication: B. The extent to which consumers can limit, control, or prevent Respondent's collection, use, disclosure, retention, or sharing of Covered Information.",
+            "quoted_text": "B. The extent to which consumers can limit, control, or prevent Respondent’s collection, use, disclosure, retention, or sharing of Covered Information.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 119,
+            "quote_end_line": 120
           }
         ]
       },
@@ -91,28 +101,34 @@
         "provision_number": "II",
         "title": "Required Disclosure and Opt-Out Mechanism",
         "category": "affirmative_obligation",
-        "summary": "Respondent must provide clear disclosures about targeted advertising and an opt-out mechanism on its website for consumers to control such advertising.",
+        "summary": "While Respondent engages in Targeted Advertising, it must place a clear opt-out hyperlink on its homepage, provide a disclosure and opt-out mechanism on the linked page, and describe the technologies used for Targeted Advertising — all within 30 days of service of the order.",
         "requirements": [
           {
-            "description": "Place a clear and conspicuous hyperlink on homepage stating 'Consumer Opt Out of Targeted Advertising'",
-            "quoted_text": "IT IS FURTHER ORDERED that, for so long as Respondent engages in Targeted Advertising, Respondent, directly or through any entity, in connection with the online advertising, marketing, promotion, offering for sale, sale, or dissemination of any product or service on websites and in mobile applications other than Respondent's, shall, within 30 days after the date of service of this order: A. Place a Clear and Conspicuous hyperlink on the homepage of the Turn website that states \"Consumer Opt Out of Targeted Advertising.\" When selected, the hyperlink shall take consumers directly to the mechanism required by Part II.B of the order",
+            "description": "Place a Clear and Conspicuous hyperlink on the Turn website homepage stating 'Consumer Opt Out of Targeted Advertising' that links directly to the opt-out mechanism",
+            "quoted_text": "A. Place a Clear and Conspicuous hyperlink on the homepage of the Turn website that states “Consumer Opt Out of Targeted Advertising.” When selected, the hyperlink shall take consumers directly to the mechanism required by Part II.B of the order;",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 127,
+            "quote_end_line": 129
           },
           {
-            "description": "Provide clear disclosure explaining what information is collected and used for Targeted Advertising, with opt-out mechanism",
-            "quoted_text": "IT IS FURTHER ORDERED that, for so long as Respondent engages in Targeted Advertising, Respondent, directly or through any entity, in connection with the online advertising, marketing, promotion, offering for sale, sale, or dissemination of any product or service on websites and in mobile applications other than Respondent's, shall, within 30 days after the date of service of this order: B. On the webpage linked from the hyperlink described in II.A, provide a Clear and Conspicuous disclosure that explains what information is collected and used for Targeted Advertising, accompanied by a Clear and Conspicuous mechanism that enables users to opt out of such Targeted Advertising",
+            "description": "On the linked webpage, provide a Clear and Conspicuous disclosure explaining what information is collected and used for Targeted Advertising, accompanied by a Clear and Conspicuous opt-out mechanism",
+            "quoted_text": "B. On the webpage linked from the hyperlink described in II.A, provide a Clear and Conspicuous disclosure that explains what information is collected and used for Targeted Advertising, accompanied by a Clear and Conspicuous mechanism that enables users to opt out of such Targeted Advertising; and",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 130,
+            "quote_end_line": 133
           },
           {
             "description": "Describe the technologies and methods used for Targeted Advertising on its website",
-            "quoted_text": "IT IS FURTHER ORDERED that, for so long as Respondent engages in Targeted Advertising, Respondent, directly or through any entity, in connection with the online advertising, marketing, promotion, offering for sale, sale, or dissemination of any product or service on websites and in mobile applications other than Respondent's, shall, within 30 days after the date of service of this order: C. Describe the technologies and methods used for Targeted Advertising on its website.",
+            "quoted_text": "C. Describe the technologies and methods used for Targeted Advertising on its website.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 134,
+            "quote_end_line": 134
           }
         ]
       },
@@ -120,14 +136,16 @@
         "provision_number": "III",
         "title": "Requirement to Honor Consumer Controls",
         "category": "affirmative_obligation",
-        "summary": "Respondent must honor Mobile Operating System signals that indicate a user's choice to opt out of or control Targeted Advertising.",
+        "summary": "Respondent must honor signals indicating activation of a Mobile Operating System control to opt out of or limit Targeted Advertising when Respondent knows or reasonably should know it is receiving such a signal.",
         "requirements": [
           {
-            "description": "Must honor signals indicating activation of Mobile Operating System controls to opt out of or limit Targeted Advertising when Respondent knows or should know it is receiving such a signal",
+            "description": "Must honor a Mobile Operating System opt-out or limit signal when Respondent knows or reasonably should know that the signal is received and that it indicates activation of a Mobile Operating System control to opt out of or otherwise control or limit Targeted Advertising",
             "quoted_text": "IT IS FURTHER ORDERED that Respondent, whether acting directly or indirectly, in connection with the online advertising, marketing, promotion, offering for sale, sale, or dissemination of any product or service, must honor a signal it receives that indicates the activation of a Mobile Operating System control to opt out of or otherwise control or limit Targeted Advertising when: A. Respondent knows or reasonably should know that it is receiving such a signal; and B. Respondent knows or reasonably should know that such signal indicates the activation of a Mobile Operating System control to opt out of or otherwise control or limit Targeted Advertising.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 136,
+            "quote_end_line": 144
           }
         ]
       },
@@ -135,28 +153,34 @@
         "provision_number": "IV",
         "title": "Acknowledgments of the Order",
         "category": "acknowledgment",
-        "summary": "Respondent must submit acknowledgment of receipt to the Commission and deliver copies of the Order to key personnel, obtaining signed acknowledgments from each.",
+        "summary": "Respondent must acknowledge receipt of the Order to the Commission within 10 days, deliver copies to relevant personnel, and obtain signed acknowledgments from recipients within 30 days.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt of Order to the Commission sworn under penalty of perjury",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent obtains acknowledgments of receipt of this Order: A. Respondent, within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Within 10 days after the effective date, submit to the Commission a sworn acknowledgment of receipt of the Order",
+            "quoted_text": "A. Respondent, within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 151,
+            "quote_end_line": 152
           },
           {
-            "description": "Deliver copy of Order to all principals, officers, directors, LLC managers and members, employees with managerial responsibilities, and business entities resulting from structural changes",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent obtains acknowledgments of receipt of this Order: B. For 10 years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives having managerial responsibilities for conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titledCompliance Reporting. Delivery must occur within 10 days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "10 days",
+            "description": "For 10 years after issuance, deliver a copy of the Order to all principals, officers, directors, LLC managers and members, employees and agents with managerial responsibilities related to the Order, and any resulting business entities; delivery for current personnel within 10 days, for all others before they assume responsibilities",
+            "quoted_text": "B. For 10 years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives having managerial responsibilities for conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Reporting. Delivery must occur within 10 days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "10 days for current personnel; before assuming responsibilities for all others",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 153,
+            "quote_end_line": 159
           },
           {
-            "description": "Obtain signed and dated acknowledgment of receipt from each individual or entity to which Order was delivered",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent obtains acknowledgments of receipt of this Order: C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "Obtain a signed and dated acknowledgment of receipt of the Order from each individual or entity to whom a copy was delivered, within 30 days of delivery",
+            "quoted_text": "C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 160,
+            "quote_end_line": 162
           }
         ]
       },
@@ -164,42 +188,52 @@
         "provision_number": "V",
         "title": "Compliance Reporting and Notices",
         "category": "compliance_reporting",
-        "summary": "Respondent must submit compliance reports and notices to the Commission regarding business structure, bankruptcy filings, and adherence to Order provisions.",
+        "summary": "Respondent must submit a sworn compliance report one year after issuance, notify the Commission within 14 days of structural or contact changes or bankruptcy filings, ensure all sworn submissions comply with 28 U.S.C. § 1746, and submit all filings via the specified email or courier.",
         "requirements": [
           {
-            "description": "Submit annual compliance report sworn under penalty of perjury identifying contact information, business details, activities, and compliance status",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent make timely submissions to the Commission: A. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (1) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (2) identify all of Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (3) describe the activities of each business; (4) describe in detail whether and how Respondent is in compliance with each Provision of this Order; and (5) provide a copy of each Acknowledgments of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "description": "One year after issuance, submit a sworn compliance report identifying contact information, all businesses, their activities, compliance status for each provision, and copies of acknowledgments obtained",
+            "quoted_text": "A. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (1) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (2) identify all of Respondent’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (3) describe the activities of each business; (4) describe in detail whether and how Respondent is in compliance with each Provision of this Order; and (5) provide a copy of each Acknowledgments of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
             "deadline": "1 year",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 166,
+            "quote_end_line": 174
           },
           {
-            "description": "Submit compliance notice within 14 days of changes to designated contact points or business structure",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent make timely submissions to the Commission: B. Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (1) any designated point of contact; or (2) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "description": "Within 14 days of any change in designated points of contact or Respondent's structure (including creation, merger, sale, or dissolution of any relevant entity), submit a sworn compliance notice",
+            "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (1) any designated point of contact; or (2) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 175,
+            "quote_end_line": 180
           },
           {
-            "description": "Submit notice of bankruptcy petition, insolvency proceeding, or similar proceeding",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent make timely submissions to the Commission: C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing.",
+            "description": "Submit notice of any bankruptcy, insolvency, or similar proceeding filing within 14 days of its filing",
+            "quoted_text": "C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 181,
+            "quote_end_line": 182
           },
           {
-            "description": "All submissions sworn under penalty of perjury must comply with 28 U.S.C. § 1746 formatting requirements",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent make timely submissions to the Commission: D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: \"I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____\" and supplying the date, signatory's full name, title (if applicable), and signature.",
+            "description": "All submissions sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, including the specified declaration language",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 186,
+            "quote_end_line": 190
           },
           {
-            "description": "Submit all Order-related materials to designated Commission email or courier address with proper subject line",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent make timely submissions to the Commission: E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: In re Turn Inc., FTC File No. 1523099.",
+            "description": "Unless otherwise directed in writing, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, with the subject line beginning 'In re Turn Inc., FTC File No. 1523099'",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: In re Turn Inc., FTC File No. 1523099.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 191,
+            "quote_end_line": 196
           }
         ]
       },
@@ -207,42 +241,52 @@
         "provision_number": "VI",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must create and retain specified records for 10 years creation period and 5 years retention period, including accounting records, personnel records, consumer complaints, and compliance documentation.",
+        "summary": "Respondent must create and retain specified categories of records for 10 years after issuance (retaining each for 5 years), including accounting records, personnel records, consumer complaints, public representations about data practices, and all compliance records.",
         "requirements": [
           {
-            "description": "Create and retain accounting records showing revenues from all goods or services sold",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for 10 years after the issuance date of the Order, and retain each such record for 5 years. Specifically, Respondent must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold",
+            "description": "Create accounting records showing revenues from all goods or services sold, for 10 years after issuance, retaining each record for 5 years",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for 10 years after the issuance date of the Order, and retain each such record for 5 years. Specifically, Respondent must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 198,
+            "quote_end_line": 201
           },
           {
-            "description": "Create and retain personnel records showing name, addresses, telephone numbers, job title, dates of service, and termination reason",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for 10 years after the issuance date of the Order, and retain each such record for 5 years. Specifically, Respondent must create and retain the following records: B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination",
+            "description": "Create and retain personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination for each person providing services related to any aspect of the Order",
+            "quoted_text": "B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 202,
+            "quote_end_line": 205
           },
           {
-            "description": "Create and retain copies of all consumer complaints or inquiries concerning Covered Information collection, use, disclosure, sharing, and opt-out practices, along with responses",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for 10 years after the issuance date of the Order, and retain each such record for 5 years. Specifically, Respondent must create and retain the following records: C. Copies or records of all consumer complaints or inquiries, whether received directly or indirectly, such as through a third party, concerning: (1) any collection of Covered Information by Respondent; (2) the use, disclosure, or sharing of such Covered Information by Respondent; or (3) opt-out practices or any other mechanism to limit or prevent such collection of Covered Information or the use, disclosure, or sharing of Covered Information collected by Respondent, as well as any responses to such complaints or inquiries",
+            "description": "Create and retain copies or records of all consumer complaints or inquiries concerning Covered Information collection, use, disclosure, sharing, or opt-out practices, and any responses thereto",
+            "quoted_text": "C. Copies or records of all consumer complaints or inquiries, whether received directly or indirectly, such as through a third party, concerning: (1) any collection of Covered Information by Respondent; (2) the use, disclosure, or sharing of such Covered Information by Respondent; or (3) opt-out practices or any other mechanism to limit or prevent such collection of Covered Information or the use, disclosure, or sharing of Covered Information collected by Respondent, as well as any responses to such complaints or inquiries;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 206,
+            "quote_end_line": 212
           },
           {
-            "description": "Create and retain copy of each publicly disseminated representation describing Respondent's collection, use, disclosure, retention, or sharing of Covered Information",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for 10 years after the issuance date of the Order, and retain each such record for 5 years. Specifically, Respondent must create and retain the following records: D. A copy of each publicly disseminated representation by Respondent that describes the extent to which Respondent collects, uses, discloses, retains, or shares Covered Information, including any representation concerning a change in any website or other service controlled by Respondent that relates Respondent's collection, use, disclosure, retention, or sharing of Covered Information",
+            "description": "Retain a copy of each publicly disseminated representation describing the extent to which Respondent collects, uses, discloses, retains, or shares Covered Information, including representations about changes to websites or services",
+            "quoted_text": "D. A copy of each publicly disseminated representation by Respondent that describes the extent to which Respondent collects, uses, discloses, retains, or shares Covered Information, including any representation concerning a change in any website or other service controlled by Respondent that relates Respondent’s collection, use, disclosure, retention, or sharing of Covered Information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 213,
+            "quote_end_line": 217
           },
           {
-            "description": "Create and retain all records necessary to demonstrate full compliance with each provision of Order, including all Commission submissions",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for 10 years after the issuance date of the Order, and retain each such record for 5 years. Specifically, Respondent must create and retain the following records: E. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission.",
+            "description": "Retain all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
+            "quoted_text": "E. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 218,
+            "quote_end_line": 219
           }
         ]
       },
@@ -250,50 +294,67 @@
         "provision_number": "VII",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The FTC has authority to monitor compliance through requests for reports, records inspection, interviews, and other lawful investigative means including undercover operations.",
+        "summary": "The Commission may monitor Respondent's compliance by requesting additional reports, records, and interviews; communicating directly with Respondent; and using any other lawful means including undercover methods.",
         "requirements": [
           {
-            "description": "Must submit additional compliance reports or requested information and produce records for inspection within 10 days of written request from Commission representative",
-            "quoted_text": "IT IS FURTHER ORDERED that, for the purpose of monitoring Respondent's compliance with this Order: A. Within 10 days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying",
-            "deadline": "10 days",
+            "description": "Within 10 days of a written Commission request, submit additional sworn compliance reports or other requested information, and produce records for inspection and copying",
+            "quoted_text": "A. Within 10 days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying;",
+            "deadline": "10 days of Commission request",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 226,
+            "quote_end_line": 229
           },
           {
-            "description": "Must permit Commission representatives to communicate directly with Respondent and interview affiliated persons who agree to interviews",
-            "quoted_text": "IT IS FURTHER ORDERED that, for the purpose of monitoring Respondent's compliance with this Order: B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present",
+            "description": "Permit Commission representatives to communicate directly with Respondent and to interview anyone affiliated with Respondent who has agreed to such an interview (interviewee may have counsel present)",
+            "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 230,
+            "quote_end_line": 233
           },
           {
-            "description": "Commission may use lawful investigative means including undercover operations without prior notice",
-            "quoted_text": "IT IS FURTHER ORDERED that, for the purpose of monitoring Respondent's compliance with this Order: C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Commission may use all other lawful means, including posing as consumers, suppliers, or other entities, without identification or prior notice, and may use compulsory process under FTC Act Sections 9 and 20",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 234,
+            "quote_end_line": 238
           }
         ]
       },
       {
         "provision_number": "VIII",
-        "title": "Order Effective Dates",
+        "title": "Order Effective Dates and Duration",
         "category": "duration",
-        "summary": "The Order becomes effective upon publication on the FTC website and terminates on April 6, 2037, or 20 years from the most recent date of filing a complaint alleging violation, whichever is later.",
+        "summary": "The Order is effective upon publication on the FTC website and terminates on April 6, 2037, or 20 years from the most recent date a complaint alleging a violation is filed in federal court, whichever is later, subject to specified exceptions.",
         "requirements": [
           {
-            "description": "Order is final and effective upon publication on FTC website and terminates on specified date or 20 years after most recent complaint filing",
-            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order. This Order will terminate on April 6, 2037, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than 20 years; B. This Order's application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. If such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "description": "Order is final and effective upon publication on the Commission's website (ftc.gov) as a final order",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate on",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 240,
+            "quote_end_line": 241
+          },
+          {
+            "description": "Order terminates April 6, 2037, or 20 years from the most recent date a federal court complaint alleging a violation is filed, whichever is later; exceptions apply for provisions terminating earlier, non-named respondents, and complaints filed after termination",
+            "quoted_text": "publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate on April 6, 2037, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than 20 years; B. This Order’s application to any Respondent that is not named as a defendant in such complaint; and 7 C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. If such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 241,
+            "quote_end_line": 258
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This Order will terminate on April 6, 2037, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later"
+      "termination_text": "This Order will terminate on April 6, 2037, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than 20 years; B. This Order's application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. If such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal."
     }
   },
   "metadata": {
@@ -303,11 +364,32 @@
     },
     "extraction_stats": {
       "complaint_counts": 2,
-      "complaint_representations": 3,
+      "complaint_representations": 2,
       "order_provisions": 8,
       "order_definitions": 8,
-      "order_requirements": 23
+      "order_requirements": 24,
+      "provisions_per_section": {
+        "I": 2,
+        "II": 3,
+        "III": 1,
+        "IV": 3,
+        "V": 5,
+        "VI": 5,
+        "VII": 3,
+        "VIII": 2
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 2,
+        "complaint_total": 2,
+        "order_verified": 24,
+        "order_total": 24
+      }
     },
-    "processing_time_seconds": 146.4
+    "processing_time_seconds": 100.9
   }
 }

@@ -6,7 +6,7 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "650 Townsend Street, Suite 500, San Francisco, California 94103",
-      "business_description": "Practice Fusion provides cloud-based electronic health record (EHR) services for healthcare providers in the ambulatory/out-patient setting, allowing them to store and utilize health information. The company also operates Patient Fusion, an online portal that allows patients to view and download their health information and communicate with their providers."
+      "business_description": "Practice Fusion provides cloud-based electronic health record (EHR) services for healthcare providers in the ambulatory/out-patient setting, allowing providers to store and utilize health information. The company also operates Patient Fusion, an online portal that enables patients to view, download, and transmit health information to other providers and communicate securely with their healthcare providers."
     },
     "commissioners": [
       "Edith Ramirez, Chairwoman",
@@ -17,26 +17,48 @@
       "month": 8,
       "year": 2016
     },
-    "legal_authority": "Section 5 of the Federal Trade Commission Act, 15 U.S.C. § 45 et seq.",
+    "legal_authority": "Federal Trade Commission Act, 15 U.S.C. § 45 et seq.",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/142-3039-practice-fusion-inc-matter"
   },
   "complaint": {
-    "factual_background": "Practice Fusion sent patient satisfaction surveys that appeared to be private communications with healthcare providers, but secretly published the responses publicly on a healthcare provider directory website. From April 2012 through April 2013, the company collected approximately 613,000 reviews without disclosing they would be made public. Hundreds of consumers included sensitive health information and personal identifiers in their responses, believing the feedback was private communication with their doctors.",
+    "factual_background": "Practice Fusion, Inc. operated a cloud-based electronic health record service and, starting in April 2012, emailed patients post-visit satisfaction surveys on behalf of their healthcare providers. The survey emails were framed as tools to 'help improve your service in the future' and were signed in the provider's name, leading patients to believe their responses would go privately to their doctors. A 'Keep this review anonymous' checkbox on the survey form falsely implied that checking it would anonymize the consumer's identity, when in fact it only affected the display name shown publicly. Practice Fusion collected approximately 613,000 such reviews over a year and then, in April 2013, publicly posted them all on its patient-facing provider directory without having adequately disclosed this intent beforehand. As a result, sensitive health information—including patients' names, phone numbers, medications, diagnoses, and treatment details—was exposed publicly on the Patient Fusion website.",
     "representations_made": [
       {
-        "description": "Represented that survey responses would be communicated to the consumer's healthcare provider",
-        "quoted_text": "from April 5, 2012 through April 8, 2013, Respondent represented, directly or indirectly, expressly or by implication, that responses to a healthcare provider satisfaction survey would be communicated to the consumer's healthcare provider.",
-        "source_paragraph": 15
+        "description": "Survey emails were framed as a tool to 'help improve your service in the future,' sent on behalf of and signed by the patient's own healthcare provider, implying responses would be communicated privately to that provider",
+        "quoted_text": "seeking reviews of the providers’ service. Practice Fusion described these surveys as a tool to “help improve your service in the future,” (as depicted below). The emails asked the patient to “please let us know how your visit went,” with a closing stating “Thank you, [Healthcare Provider’s Name]” at the end of the email. A disclosure at the bottom stated that the “email was sent to you by Patient Fusion®, a tool Doctor [Healthcare Provider’s Name] uses to deliver the highest quality of care to patients.” The email also indicated that it was “Sent on behalf of Doctor [Healthcare Provider’s Name]’s office” by Practice Fusion.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 5,
+        "quote_start_line": 42,
+        "quote_end_line": 49
+      },
+      {
+        "description": "The 'Keep this review anonymous' pre-checked checkbox implied that checking it would anonymize the consumer's submitted information, including any personal details written in the free text box",
+        "quoted_text": "include any personal information.” Below the free text box was a pre-checked box next to the phrase “Keep this review anonymous.” Leaving this box checked did not anonymize anything a consumer wrote in the free text box, including a consumer’s identifying information. Instead, the “Keep this review anonymous” selection only affected whether a review was posted on the Patient Fusion website under the handle “Anonymous” or under a patient’s first name. A button at the bottom of the survey",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 7,
+        "quote_start_line": 63,
+        "quote_end_line": 68
+      },
+      {
+        "description": "The privacy policy section on 'Surveys, questionnaires, and polls' did not indicate that patient responses would be publicly posted, further implying responses would remain private or be used only by providers",
+        "quoted_text": "Practice Fusion’s Privacy Policy. The Privacy Policy included a section titled “Surveys, questionnaires, and polls.” Until April 8, 2013, Respondent did not indicate in this Page 2 of 6 142-3039 section or elsewhere in its privacy policy that it would publicly post reviews by patients of their providers.",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 6,
+        "quote_start_line": 51,
+        "quote_end_line": 58
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Deceptive Failure to Disclose Public Posting",
-        "representation": "Survey responses would be communicated to the consumer's healthcare provider",
-        "fact": "Respondent failed to disclose adequately that it would also publish the responses on its public healthcare provider review website. This fact would be material to consumers in deciding whether or how to respond to the survey, including what type of information to include in their responses.",
-        "conclusion": "Respondent's failure to disclose adequately the material information described in Paragraph 16, in light of the representation set forth in Paragraph 15, is a deceptive act or practice."
+        "title": "Deceptive Failure to Disclose Public Posting of Survey Responses",
+        "representation": "From April 5, 2012 through April 8, 2013, Practice Fusion represented, directly or indirectly, expressly or by implication, that responses to a healthcare provider satisfaction survey would be communicated to the consumer's healthcare provider.",
+        "fact": "Respondent failed to disclose adequately that, if consumers provided responses to the satisfaction survey, Respondent would also publish the responses on its public healthcare provider review website. This fact would be material to consumers in deciding whether or how to respond to the survey, including what type of information to include in their responses.",
+        "conclusion": "Respondent's failure to disclose adequately the material information, in light of the representation that survey responses would go to the consumer's healthcare provider, is a deceptive act or practice in violation of Section 5(a) of the Federal Trade Commission Act."
       }
     ]
   },
@@ -47,21 +69,23 @@
       "Publicly available": "widely disseminated to the general public through a broadly accessible medium, such as wide dissemination on the Internet or in other printed, audio, visual, or digital media.",
       "Respondent": "Practice Fusion, Inc. and its successors and assigns.",
       "Commerce": "as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44.",
-      "Clearly and conspicuously": "that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: 1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure is made in only one means. 2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. 3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. 4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. 5. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the representation that requires the disclosure appears. 6. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. 7. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. 8. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group."
+      "Clearly and conspicuously": "means that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways:\n1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure is made in only one means.\n2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood.\n3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it.\n4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable.\n5. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the representation that requires the disclosure appears.\n6. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications.\n7. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication.\n8. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group."
     },
     "provisions": [
       {
         "provision_number": "I",
         "title": "Prohibition against Misrepresentations",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent the extent to which it uses, maintains, and protects the privacy and confidentiality of covered information, including whether such information will be made publicly available.",
+        "summary": "Respondent must not misrepresent in any manner the extent to which it uses, maintains, and protects the privacy and confidentiality of any covered information, including whether covered information will be made publicly available.",
         "requirements": [
           {
-            "description": "Must not misrepresent privacy and confidentiality practices regarding covered information",
-            "quoted_text": "IT IS ORDERED that Respondent and Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service must not misrepresent in any manner, expressly or by implication: A. the extent to which Respondent uses, maintains, and protects the privacy and confidentiality of any covered information, including: the extent to which covered information shall be made publicly available, including by posting on the Internet.",
+            "description": "Must not misrepresent the extent to which Respondent uses, maintains, and protects the privacy and confidentiality of any covered information, including the extent to which covered information shall be made publicly available, including by posting on the Internet",
+            "quoted_text": "IT IS ORDERED that Respondent and Respondent’s officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service must not misrepresent in any manner, expressly or by implication: A. the extent to which Respondent uses, maintains, and protects the privacy and confidentiality of any covered information, including: the extent to which covered information shall be made publicly available, including by posting on the Internet.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 101,
+            "quote_end_line": 107
           }
         ]
       },
@@ -69,21 +93,25 @@
         "provision_number": "II",
         "title": "Notice and Affirmative Express Consent Provision",
         "category": "affirmative_obligation",
-        "summary": "Before making any consumer's covered information publicly available, Respondent must clearly and conspicuously disclose this to the consumer and obtain affirmative express consent.",
+        "summary": "Before making any consumer's covered information publicly available, Respondent must clearly and conspicuously disclose this fact to the consumer and obtain their affirmative express consent.",
         "requirements": [
           {
-            "description": "Must clearly and conspicuously disclose when making covered information publicly available",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent and Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive notice of this Order, whether acting directly or indirectly, prior to making any consumer's covered information publicly available, including by posting on the Internet, must: A. clearly and conspicuously disclose to the consumer, separate and apart from \"privacy policy,\" \"terms of use\" page, or similar document, that such information is being made publicly available, including by posting on the Internet",
+            "description": "Prior to making any consumer's covered information publicly available (including by posting on the Internet), must clearly and conspicuously disclose to the consumer — separate and apart from a privacy policy, terms of use, or similar document — that such information is being made publicly available",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent and Respondent’s officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive notice of this Order, whether acting directly or indirectly, prior to making any consumer’s covered information publicly available, including by posting on the Internet, must: A. clearly and conspicuously disclose to the consumer, separate and apart from “privacy policy,” “terms of use” page, or similar document, that such information is being made publicly available, including by posting on the Internet; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 112,
+            "quote_end_line": 118
           },
           {
-            "description": "Must obtain affirmative express consent before making covered information publicly available",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent and Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive notice of this Order, whether acting directly or indirectly, prior to making any consumer's covered information publicly available, including by posting on the Internet, must: B. obtain the consumer's affirmative express consent.",
+            "description": "Must obtain the consumer's affirmative express consent before making covered information publicly available",
+            "quoted_text": "B. obtain the consumer’s affirmative express consent.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 119,
+            "quote_end_line": 119
           }
         ]
       },
@@ -91,28 +119,25 @@
         "provision_number": "III",
         "title": "Disposition of Healthcare Provider Review Information",
         "category": "affirmative_obligation",
-        "summary": "Respondent must not publicly display healthcare provider review information and must not maintain it except for review by healthcare provider customers or as required by law. Must provide written confirmation to the Commission within 60 days.",
+        "summary": "Respondent must not publicly display or maintain any healthcare provider review information (except for retrieval by its healthcare provider customers or as required by law), and must submit a sworn written statement to the Commission confirming compliance within 60 days.",
         "requirements": [
           {
-            "description": "Must not publicly display healthcare provider review information",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent and its officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, website, or other device or affiliate owned or controlled by Respondent, in or affecting commerce, must not publicly display any healthcare provider review information",
+            "description": "Must not publicly display any healthcare provider review information, and must not maintain any healthcare provider review information except for review and retrieval by its healthcare provider customers, their agents, contractors, or assigns, or as permitted to comply with applicable law, regulation, or legal process",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent and its officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, website, or other device or affiliate owned or controlled by Respondent, in or affecting commerce, must not publicly display any healthcare provider review information, and must not maintain any healthcare provider review information, except for review and retrieval by its healthcare provider customers, or their respective agents, contractors, assigns, or as permitted to comply with applicable law, regulation, or legal process. Within sixty (60) days after the effective date of the",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 121,
+            "quote_end_line": 127
           },
           {
-            "description": "Must not maintain healthcare provider review information except for limited purposes",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent and its officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, website, or other device or affiliate owned or controlled by Respondent, in or affecting commerce, must not publicly display any healthcare provider review information, and must not maintain any healthcare provider review information, except for review and retrieval by its healthcare provider customers, or their respective agents, contractors, assigns, or as permitted to comply with applicable law, regulation, or legal process.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must provide written statement to Commission confirming compliance",
-            "quoted_text": "Within sixty (60) days after the effective date of the Order, Respondent must provide a written statement to the Commission, sworn under penalty of perjury, confirming the foregoing.",
+            "description": "Within 60 days after the effective date of the Order, must provide a written statement to the Commission, sworn under penalty of perjury, confirming compliance with the healthcare provider review information requirements",
+            "quoted_text": "applicable law, regulation, or legal process. Within sixty (60) days after the effective date of the Order, Respondent must provide a written statement to the Commission, sworn under penalty of perjury, confirming the foregoing.",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 127,
+            "quote_end_line": 129
           }
         ]
       },
@@ -120,28 +145,34 @@
         "provision_number": "IV",
         "title": "Acknowledgements of the Order",
         "category": "acknowledgment",
-        "summary": "Respondent must submit acknowledgment of receipt of the Order to the Commission, deliver copies to specified personnel, and obtain signed acknowledgments from recipients.",
+        "summary": "Respondent must submit a sworn acknowledgment of receipt of this Order within 10 days, deliver copies of the Order to key personnel and new hires, and obtain signed acknowledgments from each recipient within 30 days.",
         "requirements": [
           {
-            "description": "Must submit acknowledgment of receipt of Order to Commission",
+            "description": "Within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury",
             "quoted_text": "A. Respondent, within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 133,
+            "quote_end_line": 134
           },
           {
-            "description": "Must deliver copy of Order to principals, officers, directors, managers, and specified employees",
+            "description": "Must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives with direct supervisory responsibilities over conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure. Delivery must occur within 10 days for current personnel, and before they assume responsibilities for all others",
             "quoted_text": "B. Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives having direct supervisory responsibilities over the conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Reports and Notices. Delivery must occur within 10 days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 135,
+            "quote_end_line": 141
           },
           {
-            "description": "Must obtain signed and dated acknowledgments from Order recipients",
+            "description": "From each individual or entity to which a copy of the Order was delivered, must obtain within 30 days a signed and dated acknowledgment of receipt of this Order",
             "quoted_text": "C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 142,
+            "quote_end_line": 144
           }
         ]
       },
@@ -149,28 +180,52 @@
         "provision_number": "V",
         "title": "Compliance Reports and Notices",
         "category": "compliance_reporting",
-        "summary": "Respondent must submit compliance reports and notices to the Commission at specified intervals and upon certain events occurring.",
+        "summary": "Respondent must file an initial sworn compliance report 90 days after the Order's effective date, and must submit sworn notices within 14 days of changes to contact information, organizational structure, or any bankruptcy filing.",
         "requirements": [
           {
-            "description": "Must submit initial compliance report",
-            "quoted_text": "A. Ninety (90) days after the effective date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which: 1. Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of that Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales, and the extent to which covered information is made publicly available; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes the Respondent made to comply with the Order; and (e) provide a copy of each Acknowledgments of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "description": "Ninety (90) days after the effective date of this Order, must submit a compliance report, sworn under penalty of perjury, identifying contact information, describing all businesses and activities, detailing compliance with each Order provision, and providing copies of acknowledgments obtained",
+            "quoted_text": "A. Ninety (90) days after the effective date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which: 1. Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of that Respondent’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales, and the extent to which covered information is made publicly available; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes the Respondent made to comply with the Order; and (e) provide a copy of each Acknowledgments of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
             "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 151,
+            "quote_end_line": 164
           },
           {
-            "description": "Must submit compliance notice upon changes to designated contact or entity structure",
+            "description": "Must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in any designated point of contact or in the structure of any entity Respondent owns or controls that may affect compliance obligations under this Order",
             "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: 1. (a) any designated point of contact; or (b) the structure of any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 165,
+            "quote_end_line": 171
           },
           {
-            "description": "Must submit notice of bankruptcy or insolvency proceedings",
+            "description": "Must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing",
             "quoted_text": "C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Respondent within 14 days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 172,
+            "quote_end_line": 174
+          },
+          {
+            "description": "Any submission required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 175,
+            "quote_end_line": 179
+          },
+          {
+            "description": "Unless otherwise directed in writing, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC, 600 Pennsylvania Avenue NW, Washington, DC 20580, with subject line beginning: In re Practice Fusion, Inc.",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: In re Practice Fusion, Inc.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 180,
+            "quote_end_line": 184
           }
         ]
       },
@@ -178,56 +233,70 @@
         "provision_number": "VI",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must create and retain specified records for 5 years, including accounting records, personnel records, consumer complaints, compliance documentation, and privacy-related representations.",
+        "summary": "Respondent must create and retain specified records for 5 years, including accounting records, personnel records, consumer complaints, compliance records, consumer feedback forms, and privacy-related representations.",
         "requirements": [
           {
-            "description": "Must create and retain accounting records for 5 years",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records and retain each such record for 5 years. Specifically, Respondent must create and retain the following records: A. accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss",
+            "description": "Must create and retain for 5 years accounting records showing revenues, costs, and net profit or loss from all goods or services sold",
+            "quoted_text": "A. accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 191,
+            "quote_end_line": 192
           },
           {
-            "description": "Must create and retain personnel records for 5 years",
-            "quoted_text": "B. personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination",
+            "description": "Must create and retain for 5 years personnel records showing, for each person providing services in relation to any aspect of the Order, that person's name, addresses, telephone numbers, job title or position, dates of service, and (if applicable) reason for termination",
+            "quoted_text": "B. personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 193,
+            "quote_end_line": 196
           },
           {
-            "description": "Must create and retain records of consumer complaints for 5 years",
-            "quoted_text": "C. copies or records of all consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, such as through a third party, and any response",
+            "description": "Must create and retain for 5 years copies or records of all consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, and any responses",
+            "quoted_text": "C. copies or records of all consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, such as through a third party, and any response;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 197,
+            "quote_end_line": 198
           },
           {
-            "description": "Must retain all records demonstrating compliance with the Order for 5 years",
-            "quoted_text": "D. all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
+            "description": "Must create and retain for 5 years all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
+            "quoted_text": "D. all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 199,
+            "quote_end_line": 200
           },
           {
-            "description": "Must retain all forms and methods used to obtain consumer feedback for 5 years",
-            "quoted_text": "E. all forms, websites, and other methods used by Respondent to obtain feedback from consumers on Respondent's own behalf or on behalf of Respondent's healthcare provider customers regarding healthcare services provided by said healthcare provider customer (or their agents, contractors, or assigns)",
+            "description": "Must create and retain for 5 years all forms, websites, and other methods used by Respondent to obtain feedback from consumers on its own behalf or on behalf of healthcare provider customers regarding healthcare services",
+            "quoted_text": "E. all forms, websites, and other methods used by Respondent to obtain feedback from consumers on Respondent’s own behalf or on behalf of Respondent’s healthcare provider customers regarding healthcare services provided by said healthcare provider customer (or their agents, contractors, or assigns);",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 201,
+            "quote_end_line": 204
           },
           {
-            "description": "Must retain copies of privacy and confidentiality representations for 5 years",
-            "quoted_text": "F. a copy of each widely disseminated representation by Respondent that describes the extent to which Respondent maintains or protects the privacy and confidentiality of any covered information, including any representation concerning a change in any website or other service controlled by Respondent that relates to the privacy and confidentiality of covered information",
+            "description": "Must create and retain for 5 years a copy of each widely disseminated representation by Respondent describing the extent to which it maintains or protects the privacy and confidentiality of any covered information, including representations concerning changes to any website or service relating to privacy and confidentiality",
+            "quoted_text": "F. a copy of each widely disseminated representation by Respondent that describes the extent to which Respondent maintains or protects the privacy and confidentiality of any covered information, including any representation concerning a change in any website or other service controlled by Respondent that relates to the privacy and confidentiality of covered information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 205,
+            "quote_end_line": 209
           },
           {
-            "description": "Must retain all records showing non-compliance for 5 years",
+            "description": "Must retain for 5 years from the date created or received all records that tend to show any lack of compliance by Respondent with this Order",
             "quoted_text": "G. for 5 years from the date created or received, all records, whether prepared by or on behalf of Respondent, that tend to show any lack of compliance by Respondent with this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 210,
+            "quote_end_line": 212
           }
         ]
       },
@@ -235,28 +304,34 @@
         "provision_number": "VII",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission has the right to monitor Respondent's compliance by requesting reports, inspecting records, interviewing personnel, and using other lawful investigative means.",
+        "summary": "The FTC may monitor Respondent's compliance by requesting reports and records, communicating directly with Respondent, interviewing affiliated persons, and using other lawful means including undercover methods.",
         "requirements": [
           {
-            "description": "Must submit additional compliance reports or information upon Commission request",
+            "description": "Within 10 days of receipt of a written request from a Commission representative, must submit additional compliance reports or other requested information (sworn under penalty of perjury) and produce records for inspection and copying",
             "quoted_text": "A. Within 10 days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 216,
+            "quote_end_line": 219
           },
           {
-            "description": "Must permit Commission representatives to communicate directly and interview affiliated persons",
+            "description": "Must permit Commission representatives to communicate directly with Respondent and to interview anyone affiliated with Respondent who has agreed to such an interview; interviewee may have counsel present",
             "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with any Respondent who has agreed to such an interview. The interviewee may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 223,
+            "quote_end_line": 226
           },
           {
-            "description": "Commission may use undercover methods to monitor compliance",
-            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Commission may use all other lawful means, including posing as consumers, suppliers, or other individuals or entities, without necessity of identification or prior notice; nothing in this Order limits the Commission's lawful use of compulsory process under Sections 9 and 20 of the FTC Act",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 227,
+            "quote_end_line": 231
           }
         ]
       },
@@ -264,28 +339,32 @@
         "provision_number": "VIII",
         "title": "Order Effective Dates",
         "category": "duration",
-        "summary": "The Order becomes effective upon publication on the FTC website and terminates on August 15, 2036, or 20 years from the most recent date the U.S. or Commission files a complaint alleging violation of the Order, whichever is later.",
+        "summary": "The Order is effective upon publication on the FTC's website and will terminate on August 15, 2036, or 20 years from the most recent date the Commission files a complaint alleging a violation, whichever is later.",
         "requirements": [
           {
-            "description": "Order becomes final and effective upon publication on FTC website",
-            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order.",
+            "description": "This Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate on",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 233,
+            "quote_end_line": 234
           },
           {
-            "description": "Order terminates on specified date or 20 years from complaint filing",
-            "quoted_text": "This Order will terminate on August 15, 2036, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than 20 years; B. This Order's application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. If such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "description": "Order terminates on August 15, 2036, or 20 years from the most recent date the United States or the Commission files a complaint in federal court alleging any violation of this Order, whichever comes later, subject to specified exceptions",
+            "quoted_text": "publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate on August 15, 2036, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than 20 years; B. This Order’s application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. If such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 234,
+            "quote_end_line": 248
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This Order will terminate on August 15, 2036, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later"
+      "termination_text": "This Order will terminate on August 15, 2036, or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than 20 years; B. This Order's application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. If such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal."
     }
   },
   "metadata": {
@@ -295,11 +374,32 @@
     },
     "extraction_stats": {
       "complaint_counts": 1,
-      "complaint_representations": 1,
+      "complaint_representations": 3,
       "order_provisions": 8,
       "order_definitions": 6,
-      "order_requirements": 24
+      "order_requirements": 25,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 2,
+        "III": 2,
+        "IV": 3,
+        "V": 5,
+        "VI": 7,
+        "VII": 3,
+        "VIII": 2
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 1
+      },
+      "verification_details": {
+        "complaint_verified": 3,
+        "complaint_total": 3,
+        "order_verified": 25,
+        "order_total": 25
+      }
     },
-    "processing_time_seconds": 118.8
+    "processing_time_seconds": 120.1
   }
 }

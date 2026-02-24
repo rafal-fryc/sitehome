@@ -6,338 +6,724 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "Pasadena, California",
-      "business_description": "OpenX operates a programmatic advertising exchange that helps publishers of Web sites and mobile applications monetize their properties through advertising. The company provides a real-time bidding platform for conducting auctions for ad space and contracts with publishers and advertising technology companies to aggregate and sell advertising inventory."
+      "business_description": "OpenX operates a programmatic advertising exchange that helps publishers of Web sites and mobile applications monetize their properties through advertising. It provides a real-time bidding platform for ad space and contracts with publishers and advertising technology companies to aggregate and sell advertising inventory."
     },
-    "commissioners": [
-      "Alden F. Abbott, General Counsel",
-      "Kristin Cohen, Acting Associate Director, Division of Privacy & Identity Protection",
-      "Mark Eichorn, Assistant Director, Division of Privacy and Identity Protection",
-      "Sarah Choi, Attorney, Division of Privacy & Identity Protection",
-      "Kevin Moriarty, Attorney, Division of Privacy & Identity Protection"
-    ],
+    "commissioners": [],
     "case_date": {
       "month": 12,
       "year": 2021
     },
-    "legal_authority": "Sections 5(a)(1), 5(m)(1)(A), 13(b), and 16(a) of the Federal Trade Commission Act, 15 U.S.C. §§ 45(a)(1), 45(m)(1)(A), 53(b), and 56(a); and Sections 1303(c) and 1306(d) of the Children's Online Privacy Protection Act of 1998, 15 U.S.C. §§ 6502(c) and 6505(d)",
-    "violation_type": "deceptive",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a); Sections 1303(c) and 1306(d) of the Children's Online Privacy Protection Act of 1998, 15 U.S.C. §§ 6502(c) and 6505(d)",
+    "violation_type": "both",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/1923019-openx-technologies-inc"
   },
   "complaint": {
-    "factual_background": "OpenX Technologies, Inc. operated a programmatic advertising exchange that collected precise location data (BSSIDs) from consumers who had denied or not granted location permissions, using a backdoor method to access this data from the ARP cache instead of the sanctioned location API. Additionally, OpenX collected personal information including location data and persistent identifiers from hundreds of child-directed mobile apps without obtaining parental consent or providing required COPPA notices, despite having actual knowledge through its human review process that these apps were directed to children under 13.",
+    "factual_background": "OpenX Technologies, Inc. operates a programmatic advertising exchange that violated consumer privacy by collecting precise location data (BSSIDs) from consumers who had denied or not granted location permissions using a backdoor method to access the ARP cache instead of using sanctioned APIs. Additionally, OpenX collected personal information from hundreds of child-directed mobile applications without obtaining verifiable parental consent or providing proper COPPA notices, processing millions or billions of ad requests containing children's personal information and transmitting it to advertisers for behavioral advertising purposes.",
     "representations_made": [
       {
-        "description": "Consumers can opt out of OpenX's collection, use, and transfer of precise location data by using location services controls in mobile device settings",
-        "quoted_text": "Opting Out for Location Data: You may opt out of our collection, use, and transfer of precise location data by using the location services controls in your mobile device's settings.",
-        "source_paragraph": 34
+        "description": "Consumers can opt out of OpenX's collection, use, and transfer of precise location data by using location services controls in their mobile device settings",
+        "quoted_text": "Opting Out for Location Data: You may opt out of our 26 collection, use, and transfer of precise location data by using the location services controls in your mobile device’s settings.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 34,
+        "quote_start_line": 242,
+        "quote_end_line": 244
       },
       {
         "description": "OpenX does not engage in activities that require parental notice or consent under COPPA",
-        "quoted_text": "Children's Online Privacy Protection Act Notice. OpenX does not engage in activities that require parental notice or consent under the Children's Online Privacy Protection Act (COPPA). If you believe that OpenX has inadvertently collected information from a child under 13 that is subject to parental notice and consent under COPPA, please contact OpenX using the contact information below to request deletion of the information.",
-        "source_paragraph": 54
+        "quoted_text": "12 OpenX does not engage in activities that require parental notice or consent under the Children’s Online Privacy Protection Act 13 (COPPA). If you believe that OpenX has inadvertently collected information from a child under 13 that is subject to 14 parental notice and consent under COPPA, please contact OpenX using the contact information below to request deletion 15 of the information.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 54,
+        "quote_start_line": 359,
+        "quote_end_line": 365
       },
       {
         "description": "OpenX has an internal COPPA policy that identifies child-directed properties and places a COPPA flag for inventory from those properties",
-        "quoted_text": "In its Data Privacy and Information Security Frequently Asked Questions, OpenX also stated that it has an internal COPPA policy that identifies child-directed properties and places a COPPA flag for inventory from those properties.",
-        "source_paragraph": 55
+        "quoted_text": "17 Questions, OpenX also stated that it has an internal COPPA policy that identifies 18 child-directed properties and places a COPPA flag for inventory from those 19 properties.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 55,
+        "quote_start_line": 367,
+        "quote_end_line": 369
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Deception – Location Data Collection Misrepresentation",
+        "title": "Deception - Location Data Collection Misrepresentation",
         "representation": "OpenX represented that consumers can opt out of OpenX's collection, use, and transfer of precise location data by using the location services controls in their mobile device settings or by denying consent when prompted by a permission dialog box",
         "fact": "Consumers could not opt out of OpenX's collection, use, and transfer of precise location data by using the location services controls in their mobile device settings or by using the permission dialog box within the App. OpenX collected and transferred the BSSID even if the consumer had not provided consent or had expressly denied permission to collect location data",
         "conclusion": "Therefore, the representations referred to in Paragraph 57 were false or misleading, and constitute a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 2,
-        "title": "Deception – COPPA Activities and Practices Misrepresentation",
+        "title": "Deception - COPPA Activities Misrepresentation",
         "representation": "OpenX represented that it does not engage in activities that require parental notice or consent under COPPA, and that it identifies all child-directed properties and includes a COPPA flag to identify inventory from those properties",
         "fact": "OpenX does engage in activities that require parental notice and consent under COPPA. Moreover, OpenX does not identify all child-directed properties, nor does it include a COPPA flag in bid requests to identify all child-directed inventory",
         "conclusion": "Therefore, the representations referred to in Paragraph 60 were false or misleading, and constitute a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 3,
-        "title": "COPPA – Collection of Personal Information from Child-Directed Properties Without Consent and Proper Notice",
-        "representation": "OpenX is an operator of an online service with actual knowledge that it is collecting personal information directly from users of Web sites or online services directed to children. OpenX collected, used, and disclosed personal information including location information and persistent identifiers from users of child-directed Web sites and Apps",
-        "fact": "OpenX failed to: (a) provide sufficient notice on its Web site or online service of the information it collects from children, how it uses such information, its disclosure practices, and all other required content, in violation of Section 312.4(d) of the Rule; (b) provide direct notice to parents of the information it collects from children, how it uses such information, its disclosure practices, and all other required content, in violation of Sections 312.4(b) and (c) of the Rule; and (c) obtain verifiable parental consent before any collection or use of personal information from children, in violation of Section 312.5 of the Rule",
-        "conclusion": "Pursuant to Section 1303(c) of COPPA, 15 U.S.C. § 6502(c), and Section 18(d)(3) of the FTC Act, 15 U.S.C. § 57(a)(d)(3), a violation of the Rule constitutes an unfair or deceptive act or practice in or affecting commerce, in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+        "title": "COPPA - Collection from Child-Directed Properties Without Consent",
+        "representation": "OpenX collected personal information from users of child-directed properties without providing proper notice and obtaining parental consent",
+        "fact": "OpenX violated the COPPA Rule by: (a) Failing to provide sufficient notice on its Web site or online service of the information it collects from children, how it uses such information, its disclosure practices, and all other required content, in violation of Section 312.4(d); (b) Failing to provide direct notice to parents of the information it collects from children, how it uses such information, its disclosure practices, and all other required content, in violation of Sections 312.4(b) and (c); and (c) Failing to obtain verifiable parental consent before any collection or use of personal information from children, in violation of Section 312.5",
+        "conclusion": "A violation of the Rule constitutes an unfair or deceptive act or practice in or affecting commerce, in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       }
     ]
   },
   "order": {
     "definitions": {
-      "Rule": "the Federal Trade Commission's Children's Online Privacy Protection Rule, 16 C.F.R. Part 312, or as the Rule may hereafter be amended.",
-      "child": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "collects": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "collection": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "Commission": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "delete": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "disclosure": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "Internet": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "online contact information": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "operator": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "parent": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "person": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "personal information": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "third party": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "verifiable consent": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "website or online service directed to children": "as defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
-      "defendants": "Bigmailbox.com, Inc. and its officers; Nolan Quan, individually and as an officer of the corporation; and each of the above's successors and assigns, agents, representatives, and employees."
+      "Ad Tech Service": "any of Defendant's products or services that enable or facilitate the marketing, sale, or purchase of digital or mobile advertising.",
+      "Ad Request Data": "data that Defendant collects or receives from any entity to prompt the service of an advertisement, to the extent that the data includes information capable of identifying a specific individual or individual's device.",
+      "Affirmative Express Consent": "that, prior to the collection of any Location Information, the consumer has made an affirmative action to assent to the collection of that data. Provided, however, that an affirmative action does not include obtaining a consumer's approval for a preselected default option.",
+      "Child": "an individual under the age of 13.",
+      "Collects or Collection": "with respect to Personal Information, the gathering of any Personal Information from a Child by any means, including but not limited to: 1. Requesting, prompting, or encouraging a Child to submit Personal Information online; 2. Enabling a Child to make Personal Information publicly available in identifiable form; or 3. Passive tracking of a Child online.",
+      "Covered Information": "information linkable to a specific consumer, computer, or device, including the following when linkable to a specific consumer, computer or device: (a) Personal Information; (b) Location Information; (c) behavioral data (e.g., videos viewed, ads viewed, pages clicked, etc.); and (d) profile data (e.g., age, gender, ethnicity, income net worth, political affiliation, etc.).",
+      "Defendant": "OpenX Technologies, Inc. (\"OpenX\"), a corporation, and its successors and assigns.",
+      "Disclose or Disclosure": "with respect to Personal Information: 1. The Release of Personal Information Collected by an Operator from a Child in identifiable form for any purpose, except where an Operator provides such information to a person who provides Support for the Internal Operations of the Web site or Online Service; and 2. Making Personal Information Collected by an Operator from a Child publicly available in identifiable form by any means, including but not limited to a public posting through the Internet, or through a personal home page or screen posted on a Web site or online service; a pen pal service; an electronic mail service; a message board; or a chat room.",
+      "Internet": "collectively the myriad of computer and telecommunications facilities, including equipment and operating software, which comprise the interconnected world-wide network of networks that employ the Transmission Control Protocol/Internet Protocol, or any predecessor or successor protocols to such protocol, to communicate information of all kinds by wire, radio, or other methods of transmission.",
+      "Location Information": "the following information, when linkable to a specific consumer, computer, or device: (a) information about a consumer's location that is collected through an application programming interface; or (b) information about a consumer's location that is inferred from basic service set identifiers (BSSIDs).",
+      "Obtaining Verifiable Parental Consent": "making any reasonable effort (taking into consideration available technology) to ensure that before Personal Information is Collected from a Child, a Parent of the Child: 1. Receives notice of the Operator's Personal Information Collection, use, and Disclosure practices; and 2. Authorizes any Collection, use, and/or Disclosure of the Personal Information.",
+      "Online Contact Information": "an e-mail address or any other substantially similar identifier that permits direct contact with a person online, including but not limited to an instant messaging user identifier, a voice over internet protocol (VOIP) identifier, or a video chat user identifier.",
+      "Operator": "any person who operates a Web site located on the Internet or an online service and who Collects or maintains Personal Information from or about the users of or visitors to such Web site or online service, or on whose behalf such information is Collected or maintained, or offers products or services for sale through that Web site or online service, where such Web site or online service is operated for commercial purposes involving commerce among the several States or with one or more foreign nations; in any territory of the United States or in the District of Columbia, or between any such territory and another such territory or any State or foreign nation; or between the District of Columbia and any State, territory, or foreign nation. Personal Information is Collected or maintained on behalf of an Operator when: 1. It is Collected or maintained by an agent or service provider of the Operator; or 2. The Operator benefits by allowing another Person to Collect Personal Information directly from users of such Web site or online service.",
+      "Parent": "includes a legal guardian.",
+      "Person": "any individual, partnership, corporation, trust, estate, cooperative, association, or other entity.",
+      "Personal Information": "individually identifiable information about an individual Collected online, including: 1. A first and last name; 2. A home or other physical address including street name and name of a city or town; 3. Online Contact Information; 4. A screen or user name where it functions in the same manner as Online Contact Information; 5. A telephone number; 6. A Social Security number; 7. A persistent identifier that can be used to recognize a user over time and across different Web sites or online services. Such persistent identifier includes but is not limited to a customer number held in a cookie, an IP address, a processor or device serial number, or unique device identifier; 8. A photograph, video, or audio file where such file contains a Child's image or voice; 9. Geolocation information sufficient to identify street name and name of a city or town; or 10. Information concerning the Child or the Parents of that Child that the Operator Collects online from the Child and combines with an identifier described in this definition.",
+      "Release of Personal Information": "the sharing, selling, renting, or transfer of Personal Information to any Third Party.",
+      "Service Provider": "an entity that performs services for and at the direction of Defendant. Provided, however, that an entity does not become a Service Provider solely because of that entity's marketing, purchase, or sale of digital advertisements in an Ad Tech Service operated by Defendant.",
+      "Support for the Internal Operations of the Web site or Online Service": "1. Those activities necessary to: a. Maintain or analyze the functioning of the Web site or online service; b. Perform network communications; c. Authenticate users of, or personalize the content on, the Web site or online service; d. Serve contextual advertising on the Web site or online service or cap the frequency of advertising; e. Protect the security or integrity of the user, Web site, or online service; f. Ensure legal or regulatory compliance; or g. Fulfill a request of a Child as permitted by § 312.5(c)(3) and (4) of the COPPA Rule; 2. So long as the information Collected for the activities listed in (1)(a) – (g) of this definition is not used or Disclosed to contact a specific individual, including through behavioral advertising, to amass a profile on a specific individual, or for any other purpose.",
+      "Third Party": "any Person who is not: 1. An Operator with respect to the Collection or maintenance of Personal Information on the Web site or online service; or 2. A Person who provides Support for the Internal Operations of the Web site or Online Service and who does not use or Disclose information protected under this part for any other purpose.",
+      "Web site or Online Service Directed to Children": "a commercial Web site or online service, or portion thereof that is targeted to Children."
     },
     "provisions": [
       {
-        "provision_number": "6",
-        "title": "Prohibition Against COPPA Rule Violations",
+        "provision_number": "I",
+        "title": "Injunction Concerning Collection of Personal Information from Children",
         "category": "prohibition",
-        "summary": "Defendants are permanently enjoined from violating any provision of the COPPA Rule as promulgated or as it may be modified in the future.",
+        "summary": "Defendant is permanently restrained from collecting, using, and disclosing personal information from child-directed properties without verifiable parental consent, and from violating COPPA.",
         "requirements": [
           {
-            "description": "Must not violate any provision of the COPPA Rule",
-            "quoted_text": "Defendants, their successors and assigns, and their officers, agents, servants, employees and attorneys, and all persons in active concert or participation with any one or more of them who receive actual notice of this Consent Decree by personal service or otherwise, are hereby enjoined from violating, directly or through any corporation, subsidiary, division, website, or other device, any provision of the Rule as promulgated and as it may be modified in the future.",
+            "description": "Must not collect, use, and disclose personal information from child-directed properties without verifiable parental consent unless COPPA provides an exception",
+            "quoted_text": "13 employees, and attorneys who receive actual notice of this Order, whether acting 14 directly or indirectly, in connection with Defendant operating a Web site or Online 15 Service Directed to Children or operating a Web site or online service that has 16 actual knowledge that it is Collecting or maintaining Personal Information from a 17 Child, are hereby permanently restrained and enjoined from (A) Collecting, using, 18 and Disclosing Personal Information from Child-directed properties without 19 Verifiable Parental Consent unless the Children's Online Privacy Protection Rule, 20 16 C.F.R. Part 312 (attached as Appendix A), provides an exception to Obtaining 21 Verifiable Parental Consent, or (B) violating the Children’s Online Privacy 22 Protection Rule, 16 C.F.R. Part 312 (attached as Appendix A). 23 II. INJUNCTION PROHIBITING MISREPRESENTATIONS",
             "deadline": null,
-            "verified": false,
-            "confidence": 0.26666666666666666
-          }
-        ]
-      },
-      {
-        "provision_number": "7",
-        "title": "Prohibition Against Misrepresentations About Privacy Practices",
-        "category": "prohibition",
-        "summary": "Defendants are permanently enjoined from making any misrepresentation about the website's collection, use, or disclosure of children's personal information or security procedures.",
-        "requirements": [
-          {
-            "description": "Must not misrepresent privacy practices concerning children's information",
-            "quoted_text": "Defendants, their successors and assigns, and their officers, agents, servants, employees and attorneys, and all persons in active concert or participation with any one or more of them who receive actual notice of this Consent Decree by personal service or otherwise, are hereby enjoined, in connection with the operation of any website or other online service, from making any misrepresentation in the website's privacy policy or elsewhere about the website's collection, use or disclosure of children's personal information, or about the website's procedures to maintain the confidentiality, security, or integrity of children's personal information.",
-            "deadline": null,
-            "verified": false,
-            "confidence": 0.0
-          }
-        ]
-      },
-      {
-        "provision_number": "8",
-        "title": "Consumer Education Notice Requirement",
-        "category": "affirmative_obligation",
-        "summary": "For five years, defendants must place a clear notice linking to the FTC's children's privacy resources in privacy policies, parent notices, and at information collection points.",
-        "requirements": [
-          {
-            "description": "Place FTC notice in privacy policy, parent notices, and at collection points",
-            "quoted_text": "For a period of five (5) years from the date of entry of this Consent Decree, defendants, and their successors and assigns, in connection with the operation of any website or online service directed in whole or in part to children, shall place a clear and conspicuous notice (1) within the privacy policy required to be posted on their website(s) by Section 312.4(b) of the Rule, 16 C.F.R. § 312.4(b); (2) within the direct notice required to be sent to parents by Section 312.4(c) of the Rule, 16 C.F.R. § 312.4(c); and (3) at each location on their website(s) where personal information is collected, which states as follows in bold typeface: NOTICE: Visit www.ftc.gov/kidzprivacy for information from the Federal Trade Commission about protecting children's privacy online.",
-            "deadline": "5 years",
-            "verified": false,
-            "confidence": 0.0
-          }
-        ]
-      },
-      {
-        "provision_number": "9",
-        "title": "Civil Penalty Payment",
-        "category": "affirmative_obligation",
-        "summary": "Defendants must pay a civil penalty of $35,000 to the United States.",
-        "requirements": [
-          {
-            "description": "Pay civil penalty of $35,000",
-            "quoted_text": "Defendants Bigmailbox.com, Inc. and Nolan Quan, and their successors and assigns, shall pay to plaintiff a civil penalty, pursuant to Section 5(m)(1)(A) of the Federal Trade Commission Act, 15 U.S.C. § 45(m)(1)(A), in the amount of thirty-five thousand dollars ($35,000). Defendants are jointly and severally responsible for paying the penalty.",
-            "deadline": null,
-            "verified": false,
-            "confidence": 0.2998102466793169
-          }
-        ]
-      },
-      {
-        "provision_number": "10",
-        "title": "Payment Timing and Method",
-        "category": "affirmative_obligation",
-        "summary": "Defendants must make payment on the date of entry of the Consent Decree by certified or cashier's check.",
-        "requirements": [
-          {
-            "description": "Submit payment on date of entry by certified or cashier's check",
-            "quoted_text": "Defendants shall make the payment required by Paragraph 9 on the date of entry of this Consent Decree by certified or cashier's check made payable to the Treasurer of the United States and delivered to: the Office of Consumer Litigation, Civil Division, U.S. Department of Justice, Washington, D.C. 20530, for appropriate disposition.",
-            "deadline": "on the date of entry",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 262,
+            "quote_end_line": 272
           }
         ]
       },
       {
-        "provision_number": "11",
-        "title": "Default Payment Penalty",
-        "category": "affirmative_obligation",
-        "summary": "If payment defaults for more than 10 days, the entire unpaid penalty plus interest becomes immediately due.",
+        "provision_number": "II",
+        "title": "Injunction Prohibiting Misrepresentations",
+        "category": "prohibition",
+        "summary": "Defendant must not materially misrepresent consumers' opt-out abilities, data collection practices, COPPA compliance, or privacy protections.",
         "requirements": [
           {
-            "description": "Pay unpaid penalty with interest if default continues beyond 10 days",
-            "quoted_text": "In the event of any default in payment, which default continues for ten (10) days beyond the due date of payment, the entire unpaid penalty, together with interest, as computed pursuant to 28 U.S.C. § 1961, from the date of default to the date of payment, shall immediately become due and payable.",
-            "deadline": "10 days",
-            "verified": false,
-            "confidence": 0.3101851851851852
-          }
-        ]
-      },
-      {
-        "provision_number": "12",
-        "title": "Data Deletion Requirement",
-        "category": "affirmative_obligation",
-        "summary": "Defendants must delete all personal information collected from children through their website prior to entry of the decree.",
-        "requirements": [
-          {
-            "description": "Delete all personal information collected from children",
-            "quoted_text": "Defendants, and their successors and assigns, shall delete all personal information collected from children through www.bigmailbox.com prior to the date of entry of this Consent Decree.",
+            "description": "Must not misrepresent consumers' ability to opt out of data collection, maintenance, use, disclosure, or access",
+            "quoted_text": "1 A. Consumers’ ability to opt out of Defendant’s Collection, maintenance, 2 use, Disclosure of, or provision of access to Covered Information;",
             "deadline": null,
-            "verified": false,
-            "confidence": 0.39660056657223797
-          }
-        ]
-      },
-      {
-        "provision_number": "13",
-        "title": "Order Distribution to Current Personnel",
-        "category": "acknowledgment",
-        "summary": "Defendants must provide the Consent Decree and compliance guide to current personnel with relevant responsibilities and obtain signed acknowledgments within 30 days.",
-        "requirements": [
-          {
-            "description": "Distribute decree and compliance guide to current personnel and obtain acknowledgments",
-            "quoted_text": "Defendants, and their successors and assigns, within thirty days from the date of entry of this Consent decree, shall provide a copy of this Consent Decree and the Federal Trade Commission compliance guide entitled How to Comply with the Children's Online Privacy Protection Rule (Nov. 1999) (\"compliance guide\") (attached hereto as \"Appendix B\") to each of their current principals, officers, directors, and managers, and to all current employees, agents, representatives, and attorneys having responsibilities related to the operation of any website or online service subject to the Rule, and secure from each such person a signed statement acknowledging receipt of a copy of this Consent Decree and the compliance guide",
-            "deadline": "30 days",
-            "verified": false,
-            "confidence": 0.0
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 283,
+            "quote_end_line": 284
           },
           {
-            "description": "Submit signed statement to Commission confirming compliance",
-            "quoted_text": "and shall, within ten (10) days of complying with this paragraph, submit to the Commission a signed statement setting forth the fact and manner of defendants' compliance, including the name and title of each person to whom a copy of the Consent Decree and compliance guide has been provided.",
-            "deadline": "10 days",
-            "verified": false,
-            "confidence": 0.31718061674008813
+            "description": "Must not misrepresent the extent to which Defendant collects, maintains, uses, discloses, or provides access to Covered Information",
+            "quoted_text": "3 B. The extent to which Defendant Collects, maintains, uses, Discloses, or 4 provides access to Covered Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 285,
+            "quote_end_line": 286
+          },
+          {
+            "description": "Must not misrepresent the extent to which Defendant complies with COPPA Rule or measures taken to comply",
+            "quoted_text": "5 C. The extent to which Defendant complies with the COPPA Rule and the 6 measures Defendant takes to comply with the COPPA Rule; or",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 287,
+            "quote_end_line": 288
+          },
+          {
+            "description": "Must not misrepresent the extent to which Defendant protects privacy, security, availability, confidentiality, or integrity of Covered Information",
+            "quoted_text": "7 D. The extent to which Defendant otherwise protects the privacy, security, 8 availability, confidentiality, or integrity of Covered Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 289,
+            "quote_end_line": 290
           }
         ]
       },
       {
-        "provision_number": "14",
-        "title": "Order Distribution to Future Personnel",
-        "category": "acknowledgment",
-        "summary": "Defendants must provide the Consent Decree and compliance guide to future personnel with relevant responsibilities and obtain signed acknowledgments within 30 days of hire.",
+        "provision_number": "III",
+        "title": "Injunction Requiring Consent for Collection of Location Information",
+        "category": "prohibition",
+        "summary": "Defendant is permanently restrained from collecting location information through SDKs without confirming consumer has provided affirmative express consent and has not revoked it through device settings.",
         "requirements": [
           {
-            "description": "Distribute decree and compliance guide to future personnel and obtain acknowledgments",
-            "quoted_text": "Defendants, and their successors and assigns, shall provide a copy of this Consent Decree and the compliance guide to each of their future principals, officers, directors, and managers, and to all future employees, agents, representatives, and attorneys having responsibilities related to the operation of any website or online service subject to the Rule, and secure from each such person a signed and dated statement acknowledging receipt of a copy of this Consent Decree and the compliance guide, within thirty (30) days after the person assumes such position or responsibilities.",
-            "deadline": "30 days",
-            "verified": false,
-            "confidence": 0.0
+            "description": "Must not collect location information through SDKs without confirming consumer provided affirmative express consent to the mobile application",
+            "quoted_text": "14 collecting Location Information through Defendant’s software development kit(s) 15 for mobile applications without first confirming that: 16 A. The consumer has provided Affirmative Express Consent for the 17 collection of Location Information to the mobile application that has 18 integrated Defendant's software development kit(s);",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 296,
+            "quote_end_line": 300
+          },
+          {
+            "description": "Must confirm consumer has not expressed through device or app settings that they do not consent or revoke consent to location information collection",
+            "quoted_text": "19 B. The consumer has not expressed, through any applicable operating 20 system, device, or mobile application permission or setting, that the 21 consumer does not consent to, or revokes consent to, the collection of 22 Location Information from such mobile application; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 301,
+            "quote_end_line": 304
+          },
+          {
+            "description": "Must confirm consumer has not limited consent to location information collection to a less precise level than what will be collected",
+            "quoted_text": "23 C. The consumer has not expressed through any applicable operating 24 system, device, or mobile application permission or setting, that the 25 consumer’s consent to the collection of Location Information from such 26 mobile application is limited to a level of accuracy that is less precise 27 than the Location Information that is to be collected or inferred by 28 Defendant.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 305,
+            "quote_end_line": 310
           }
         ]
       },
       {
-        "provision_number": "15",
-        "title": "Initial Compliance Report",
-        "category": "compliance_reporting",
-        "summary": "Defendants must file a detailed written compliance report with the Commission within 60 days covering registration processes, privacy notices, parental consent methods, and security procedures.",
+        "provision_number": "IV",
+        "title": "Mandated Privacy Program",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must establish and maintain a comprehensive privacy program that protects covered information collected through ad tech services.",
         "requirements": [
           {
-            "description": "File detailed compliance report with the Commission",
-            "quoted_text": "Within sixty (60) days after entry of this Consent Decree, defendants, and their successors and assigns, shall file with the Commission a written report setting forth in detail the manner and form in which they have complied and are complying with this Consent Decree.",
+            "description": "Establish and implement comprehensive privacy program for covered information",
+            "quoted_text": "2 IT IS FURTHER ORDERED that Defendant, and any business that 3 Defendant controls directly, or indirectly, in connection with the Collection, 4 maintenance, use, or Disclosure of, or provision of access to, Covered Information 5 through an Ad Tech Service operated by Defendant, must, within sixty (60) days of 6 issuance of this Order, establish and implement, and thereafter maintain, a 7 comprehensive privacy program (“Privacy Program”) that protects the privacy of 8 such Covered Information. To satisfy this requirement, Defendant must, at a",
             "deadline": "60 days",
-            "verified": false,
-            "confidence": 0.3433874709976798
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 317,
+            "quote_end_line": 323
+          },
+          {
+            "description": "Document in writing the content, implementation, and maintenance of the privacy program",
+            "quoted_text": "10 A. Document in writing the content, implementation, and maintenance of 11 the Privacy Program;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 325,
+            "quote_end_line": 326
+          },
+          {
+            "description": "Provide written program and evaluations to board of directors or senior officer at least once every twelve months",
+            "quoted_text": "12 B. Provide the written program and any evaluations thereof or updates 13 thereto to Defendant’s board of directors or governing body or, if no such 14 board or equivalent governing body exists, to a senior officer of 15 Defendant responsible for Defendant’s Privacy Program at least once 16 every twelve (12) months;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 327,
+            "quote_end_line": 331
+          },
+          {
+            "description": "Designate qualified employee(s) to coordinate and be responsible for the privacy program",
+            "quoted_text": "17 C. Designate a qualified employee or employees to coordinate and be 18 responsible for the Privacy Program;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 332,
+            "quote_end_line": 333
+          },
+          {
+            "description": "Assess and document internal and external privacy risks at least once every twelve months",
+            "quoted_text": "19 D. Assess and document, at least once every twelve (12) months, internal 20 and external risks to the privacy of Covered Information that could result 21 in the unauthorized Collection, maintenance, use, or Disclosure of, or 22 provision of access to, Covered Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 334,
+            "quote_end_line": 337
+          },
+          {
+            "description": "Design, implement, maintain, and document safeguards that control for material internal and external privacy risks",
+            "quoted_text": "23 E. Design, implement, maintain, and document safeguards that control for 24 the material internal and external risks Defendant identifies to the privacy 25 of Covered Information identified in response to sub-Provision IV.D. 26 Each safeguard must be based on the volume and sensitivity of the 27 Covered Information that is at risk, and the likelihood that the risk could 28 be realized and result in the unauthorized Collection, maintenance, use, Page 10 of 25 STIPULATED ORDER Case 2:21-cv-09693 Document 3-1 Filed 12/15/21 Page 11 of 35 Page ID #:32 1 or Disclosure of, or provision of access to, Covered Information. Such",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 338,
+            "quote_end_line": 349
+          },
+          {
+            "description": "Provide regular privacy and data security training for employees and independent contractors on at least an annual basis",
+            "quoted_text": "3 1. Regular privacy and data security training programs for all 4 (1) employees and (2) independent contractors providing services 5 to the Defendant’s technology team, in each case on at least an 6 annual basis, updated to address any identified internal or external 7 risks and safeguards implemented pursuant to this Order; 8 2. Policies, procedures, and technical measures to comply with",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 351,
+            "quote_end_line": 356
+          },
+          {
+            "description": "Implement policies, procedures, and technical measures to comply with COPPA and the COPPA Rule",
+            "quoted_text": "9 COPPA and the COPPA Rule; 10 3. Policies, procedures, and technical measures to prevent the 11 Collection, maintenance, use, or Disclosure of, or provision of",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 357,
+            "quote_end_line": 359
+          },
+          {
+            "description": "Implement policies, procedures, and technical measures to prevent data collection inconsistent with representations to consumers",
+            "quoted_text": "12 access to, Covered Information inconsistent with Defendant’s 13 representations to consumers; 14 4. For those apps that Defendant manually reviews for inclusion in",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 360,
+            "quote_end_line": 362
+          },
+          {
+            "description": "Conduct additional review of manually reviewed apps at least once every twelve months to determine if child-directed apps should be removed",
+            "quoted_text": "15 Defendant’s app categorization database, conduct an additional 16 review of a subset of such included apps at least once every twelve 17 (12) months with the first additional review occurring within forty- 18 five (45) days of entry of this Order, to determine whether any 19 apps participating in an Ad Tech Service operated by Defendant 20 should be removed from participating in the Ad Tech Service 21 because they are child-directed; 22 5. Create a record of the child-directed apps that Defendant has",
+            "deadline": "45 days for first review",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 363,
+            "quote_end_line": 370
+          },
+          {
+            "description": "Create a record of child-directed apps that have been banned or removed from participating in ad tech service",
+            "quoted_text": "23 banned or removed from participating in its Ad Tech Service; and 24 6. Provide COPPA training, at least once every twelve (12) months,",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 371,
+            "quote_end_line": 372
+          },
+          {
+            "description": "Provide COPPA training at least once every twelve months to employees and contractors who analyze child-directed websites and apps",
+            "quoted_text": "25 with respect to the proper identification of child-directed Web sites 26 and apps, to assist employees and independent contractors who 27 analyze such sites and apps, including the traffic quality analysts, 28 in performing their duties; Page 11 of 25",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 373,
+            "quote_end_line": 377
+          },
+          {
+            "description": "Assess sufficiency of safeguards at least once every twelve months and modify privacy program based on results",
+            "quoted_text": "1 F. Assess, at least once every twelve (12) months, the sufficiency of any 2 safeguards in place to address the internal and external risks to the 3 privacy of Covered Information, and modify the Privacy Program based 4 on the results;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 382,
+            "quote_end_line": 385
+          },
+          {
+            "description": "Test and monitor effectiveness of safeguards at least once every twelve months and modify privacy program based on results",
+            "quoted_text": "5 G. Test and monitor the effectiveness of the safeguards at least once every 6 twelve (12) months, and modify the Privacy Program based on the 7 results;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 386,
+            "quote_end_line": 388
+          },
+          {
+            "description": "Select and retain service providers capable of safeguarding personal information and contractually require them to implement safeguards",
+            "quoted_text": "8 H. Select and retain Service Providers capable of safeguarding Personal 9 Information they access through or receive from Defendant, and 10 contractually require Service Providers to implement and maintain 11 safeguards sufficient to address the internal and external risks to the 12 privacy of Personal Information; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 389,
+            "quote_end_line": 393
+          },
+          {
+            "description": "Evaluate and adjust privacy program at least once every twelve months in light of changes to operations or other circumstances",
+            "quoted_text": "13 I. Evaluate and adjust the Privacy Program in light of any changes to 14 Defendant’s operations or business arrangements, new or more efficient 15 technological or operational methods to control for the risks identified in 16 Provision IV.D of this Order, or any other circumstances that Defendant 17 knows or has reason to know may have an impact on the effectiveness of 18 the Privacy Program or any of its individual safeguards. At a minimum, 19 Defendant must evaluate the Privacy Program at least once every twelve 20 (12) months and modify the Privacy Program based on the results.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 394,
+            "quote_end_line": 401
           }
         ]
       },
       {
-        "provision_number": "16",
-        "title": "Document Retention and Production",
-        "category": "recordkeeping",
-        "summary": "For five years, defendants must maintain compliance documents and make them available to the FTC within 7 days of request.",
+        "provision_number": "V",
+        "title": "Privacy Assessments by a Third Party",
+        "category": "assessment",
+        "summary": "Defendant must obtain initial and biennial third-party privacy assessments for twenty years from qualified, independent assessors.",
         "requirements": [
           {
-            "description": "Maintain and produce compliance documents upon FTC request",
-            "quoted_text": "For a period of five years from the date of entry of this Consent Decree, defendants, and their successors and assigns, shall maintain and make available to the Federal Trade Commission for inspection and copying within seven (7) days of the date of receipt of a written request, a print or electronic copy in HTML format of all documents demonstrating compliance with the terms and provisions of this Consent Decree, including, but not limited to, a sample copy of every different information collection form, web page, or screen, and a sample copy of each different document containing any representation regarding defendants' collection, use, and disclosure practices pertaining to personal information.",
-            "deadline": "5 years",
-            "verified": false,
-            "confidence": 0.0
+            "description": "Obtain assessments from qualified, objective, independent third-party professional using generally accepted procedures and standards",
+            "quoted_text": "25 A. The Assessments must be obtained from a qualified, objective, 26 independent third-party professional (“Assessor”), who: (1) uses 27 procedures and standards generally accepted in the profession; 28 (2) conducts an independent review of the Privacy Program; (3) retains Page 12 of 25 STIPULATED ORDER Case 2:21-cv-09693 Document 3-1 Filed 12/15/21 Page 13 of 35 Page ID #:34 1 all documents relevant to each Assessment for five (5) years after 2 completion of such Assessment; and (4) will provide such documents to 3 the Commission within ten (10) days of receipt of a written request from 4 a representative of the Commission. No documents may be withheld on 5 the basis of a claim of confidentiality, proprietary or trade secrets, work 6 product protection, attorney-client privilege, statutory exemption, or any 7 similar claim.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 406,
+            "quote_end_line": 421
+          },
+          {
+            "description": "Provide Associate Director for Enforcement with name, affiliation, and qualifications of proposed assessor for approval",
+            "quoted_text": "8 B. For each Assessment, Defendant must provide the Associate Director for 9 Enforcement for the Bureau of Consumer Protection at the Federal Trade 10 Commission with the name, affiliation, and qualifications of the proposed 11 Assessor, whom the Associate Director shall have the authority to 12 approve in his or her sole discretion.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 422,
+            "quote_end_line": 426
+          },
+          {
+            "description": "Ensure assessments cover first 180 days after privacy program implemented for initial assessment and each two-year period thereafter for twenty years for biennial assessments",
+            "quoted_text": "13 C. The reporting period for the Assessments must cover: (1) the first 180 14 days after the Privacy Program has been put in place for the initial 15 Assessment; and (2) each two-year period thereafter for twenty (20) years 16 after issuance of the Order for the biennial Assessments.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 427,
+            "quote_end_line": 430
+          },
+          {
+            "description": "Ensure each assessment determines whether privacy program is implemented and maintained, assesses effectiveness, identifies gaps or weaknesses, addresses status of prior issues, and identifies specific evidence examined",
+            "quoted_text": "17 D. Each Assessment must, for the entire assessment period: (1) determine 18 whether Defendant has implemented and maintained the Privacy Program 19 required by Provision IV of this Order, titled Mandated Privacy Program; 20 (2) assess the effectiveness of Defendant’s implementation and 21 maintenance of sub-Provisions IV.A-I; (3) identify any gaps or 22 weaknesses in, or instances of material noncompliance with, the Privacy 23 Program; (4) address the status of gaps or weaknesses in, or instances of 24 material non-compliance with, the Privacy Program that were identified 25 in any prior Assessment required by this Order; and (5) identify specific 26 evidence (including but not limited to documents reviewed, sampling and 27 testing performed, and interviews conducted) examined to make such 28 determinations, assessments, and identifications, and explain why the Page 13 of 25 STIPULATED ORDER Case 2:21-cv-09693 Document 3-1 Filed 12/15/21 Page 14 of 35 Page ID #:35 1 evidence that the Assessor examined is (a) appropriate for assessing an 2 enterprise of Defendant’s size, complexity, and risk profile; and (b) 3 sufficient to justify the Assessor’s findings. No finding of any 4 Assessment shall rely primarily on assertions or attestations by 5 Defendant’s management. The Assessment must be signed by the 6 Assessor, state that the Assessor conducted an independent review of the 7 Privacy Program and did not rely primarily on assertions or attestations 8 by Defendant’s management, and state the number of hours that each 9 member of the assessment team worked on the Assessment. To the extent 10 that Defendant revises, updates, or adds one or more safeguards required 11 under Provision IV of this Order during an Assessment period, the 12 Assessment must assess the effectiveness of the revised, updated, or 13 added safeguard(s) for the time period in which it was in effect, and 14 provide a separate statement detailing the basis for each revised, updated, 15 or additional safeguard.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 431,
+            "quote_end_line": 462
+          },
+          {
+            "description": "Complete each assessment within sixty days after end of reporting period and submit initial assessment to Commission within ten days of completion",
+            "quoted_text": "16 E. Each Assessment must be completed within sixty (60) days after the end 17 of the reporting period to which the Assessment applies. Unless 18 otherwise directed by a Commission representative in writing, Defendant 19 must submit the initial Assessment to the Commission within ten (10) 20 days after the Assessment has been completed via email to 21 DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to 22 Associate Director for Enforcement, Bureau of Consumer Protection, 23 Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, 24 D.C. 20580. The subject line must begin, “United States v. OpenX 25 Technologies, Inc.” All subsequent biennial Assessments must be 26 retained by Defendant until the Order is terminated and provided to the 27 Associate Director for Enforcement within ten (10) days of request.",
+            "deadline": "60 days for completion, 10 days for submission",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 463,
+            "quote_end_line": 474
           }
         ]
       },
       {
-        "provision_number": "17",
-        "title": "Business Change Notification (Corporate)",
+        "provision_number": "VI",
+        "title": "Cooperation with Third-Party Privacy Assessor",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must provide assessors with all relevant information and materials, ensure network visibility, and not misrepresent material facts.",
+        "requirements": [
+          {
+            "description": "Provide or make available to assessor all information and material in possession, custody, or control relevant to assessment with no reasonable claim of privilege",
+            "quoted_text": "5 A. Provide or otherwise make available to the Assessor all information and 6 material in its possession, custody, or control that is relevant to the 7 Assessment for which there is no reasonable claim of privilege.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 485,
+            "quote_end_line": 487
+          },
+          {
+            "description": "Provide assessor with information about networks and IT assets to determine scope and visibility to in-scope portions",
+            "quoted_text": "8 B. Provide or otherwise make available to the Assessor information about 9 Defendant’s network(s) and all of Defendant’s IT assets so that the 10 Assessor can determine the scope of the Assessment, and visibility to 11 those portions of the network(s) and IT assets deemed in scope; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 488,
+            "quote_end_line": 491
+          },
+          {
+            "description": "Disclose all material facts to assessor and not misrepresent any fact material to assessor's determinations",
+            "quoted_text": "12 C. Disclose all material facts to the Assessor, and not misrepresent in any 13 manner, expressly or by implication, any fact material to the Assessor’s: 14 (1) determination of whether Defendant has implemented and maintained 15 the Privacy Program required by Provision IV of this Order, titled 16 Mandated Privacy Program; (2) assessment of the effectiveness of the 17 implementation and maintenance of sub-Provisions IV.A-I; or (3) 18 identification of any gaps or weaknesses in, or instances of material 19 noncompliance with, the Privacy Program.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 492,
+            "quote_end_line": 499
+          }
+        ]
+      },
+      {
+        "provision_number": "VII",
+        "title": "Annual Certification",
         "category": "compliance_reporting",
-        "summary": "Defendants must notify the Commission at least 30 days prior to any business changes that may affect compliance obligations.",
+        "summary": "Defendant must provide annual certifications from senior management for ten years confirming compliance with the order and disclosing any material noncompliance.",
         "requirements": [
           {
-            "description": "Notify Commission of business changes affecting compliance",
-            "quoted_text": "Defendants, and their successors and assigns, shall notify the Commission at least thirty (30) days prior to any change in the business of defendant Bigmailbox.com, Inc. that may affect compliance obligations arising under this Consent Decree, including, but not limited to, any merger, incorporation, dissolution, assignment, sale, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate; the proposed filing of a bankruptcy petition; or a change in the corporate name or address.",
+            "description": "Provide Commission with annual certification from senior corporate manager or senior officer that order requirements are established, implemented, and maintained and that no material noncompliance exists or has been disclosed",
+            "quoted_text": "22 A. One year after the issuance date of this Order, and each year thereafter 23 for ten (10) years after entry of the Order, provide the Commission with a 24 certification from a senior corporate manager, or, if no such senior 25 corporate manager exists, a senior officer of Defendant responsible for 26 Defendant’s Privacy Program that: (1) Defendant has established, 27 implemented, and maintained the requirements of this Order; and (2) 28 Defendant is not aware of any material noncompliance that has not been Page 15 of 25 STIPULATED ORDER Case 2:21-cv-09693 Document 3-1 Filed 12/15/21 Page 16 of 35 Page ID #:37 1 (a) corrected or (b) disclosed to the Commission. The certification must 2 be based on the personal knowledge of the senior corporate manager, 3 senior officer, or subject matter experts upon whom the senior corporate 4 manager or senior officer reasonably relies in making the certification.",
+            "deadline": "One year after issuance, then annually for ten years",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 502,
+            "quote_end_line": 517
+          },
+          {
+            "description": "Submit annual certifications via email to DEbrief@ftc.gov or by overnight courier with subject line beginning \"United States v. OpenX Technologies, Inc.\"",
+            "quoted_text": "6 submit all annual certifications to the Commission pursuant to this Order 7 via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal 8 Service) to Associate Director for Enforcement, Bureau of Consumer 9 Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, 10 Washington, D.C. 20580. The subject line must begin, “United States v. 11 OpenX Technologies, Inc.”",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 519,
+            "quote_end_line": 524
+          }
+        ]
+      },
+      {
+        "provision_number": "VIII",
+        "title": "Monetary Judgment for Civil Penalty",
+        "category": "affirmative_obligation",
+        "summary": "A judgment of $7,500,000 is entered against Defendant, with $2,000,000 to be paid within seven days and the remainder suspended subject to truthfulness of financial attestations.",
+        "requirements": [
+          {
+            "description": "Pay two million dollars to Plaintiff within seven days of entry of order by electronic fund transfer",
+            "quoted_text": "17 B. Defendant is ordered to pay to Plaintiff, by making payment to the 18 Treasurer of the United States, two million dollars ($2,000,000), which, 19 as Defendant stipulates, its undersigned counsel holds in escrow for no 20 purpose other than payment to Plaintiff. Such payment must be made 21 within seven (7) days of entry of this Order by electronic fund transfer in 22 accordance with instructions previously provided by a representative of 23 Plaintiff. Upon such payment, the remainder of the judgment is 24 suspended, subject to the Subsections below.",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 530,
+            "quote_end_line": 537
+          }
+        ]
+      },
+      {
+        "provision_number": "IX",
+        "title": "Additional Monetary Provisions",
+        "category": "affirmative_obligation",
+        "summary": "Defendant relinquishes rights to transferred assets and acknowledges complaint facts will be taken as true in future litigation.",
+        "requirements": [
+          {
+            "description": "Relinquish dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to order",
+            "quoted_text": "23 A. Defendant relinquishes dominion and all legal and equitable right, title, 24 and interest in all assets transferred pursuant to this Order and may not 25 seek the return of any assets.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 569,
+            "quote_end_line": 571
+          },
+          {
+            "description": "Submit Taxpayer Identification Number(s) to Commission for potential use in collecting delinquent amounts",
+            "quoted_text": "3 which Defendant must submit to the Commission, may be used for 4 collecting and reporting on any delinquent amount arising out of this 5 Order, in accordance with 31 U.S.C. § 7701.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 582,
+            "quote_end_line": 584
+          }
+        ]
+      },
+      {
+        "provision_number": "X",
+        "title": "Data Deletion",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must delete all ad request data collected prior to entry of the order within ninety days.",
+        "requirements": [
+          {
+            "description": "Delete all ad request data collected prior to entry of order, including any sample used for internal analytics",
+            "quoted_text": "8 entry of this Order, shall delete all Ad Request Data collected prior to the entry of 9 this Order, including any sample of the Ad Request Data used for internal 10 analytics.",
+            "deadline": "90 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 587,
+            "quote_end_line": 589
+          }
+        ]
+      },
+      {
+        "provision_number": "XI",
+        "title": "Notice to Demand-Side Partners",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must transmit notice to all demand-side partners within thirty days and certify completion within thirty-five days.",
+        "requirements": [
+          {
+            "description": "Transmit notice attached as Exhibit A by email to all demand-side partners",
+            "quoted_text": "14 the notice attached hereto as Exhibit A (“Notice”) by email to all of 15 OpenX’s demand-side partners. 16 B. Defendant, within thirty-five (35) days of entry of this Order, shall",
             "deadline": "30 days",
-            "verified": false,
-            "confidence": 0.0
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 593,
+            "quote_end_line": 595
+          },
+          {
+            "description": "Provide Commission with certification signed by CEO that notice was transmitted to all demand-side partners",
+            "quoted_text": "17 provide the Commission with a certification, signed by OpenX’s Chief 18 Executive Officer on behalf of OpenX, that OpenX has transmitted the 19 Notice to all of OpenX’s demand-side partners. 20 XII. ORDER ACKNOWLEDGMENTS",
+            "deadline": "35 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 596,
+            "quote_end_line": 599
           }
         ]
       },
       {
-        "provision_number": "18",
-        "title": "Employment Change Notification (Individual)",
-        "category": "compliance_reporting",
-        "summary": "For three years, individual defendant Nolan Quan must notify the Commission of employment changes involving Internet-related businesses collecting personal information.",
+        "provision_number": "XII",
+        "title": "Order Acknowledgments",
+        "category": "acknowledgment",
+        "summary": "Defendant must obtain acknowledgments of receipt of order from itself, current and future personnel, and business entities resulting from structural changes.",
         "requirements": [
           {
-            "description": "Notify Commission of employment or business changes",
-            "quoted_text": "For a period of three (3) years from the date of entry of this Consent Decree, defendant Nolan Quan shall notify the Commission of the discontinuance of his current business or employment, or of his employment with, direction or control of, or ownership interest of at least 5% in, any Internet-related business or service involving the collection of personal information online. The notice shall include defendant's new business address and telephone number, and a description of the nature of the business or employment and his duties and responsibilities.",
-            "deadline": "3 years",
-            "verified": false,
-            "confidence": 0.0
+            "description": "Submit to Commission acknowledgment of receipt of order sworn under penalty of perjury",
+            "quoted_text": "24 the Commission an acknowledgment of receipt of this Order sworn under 25 penalty of perjury. 26 B. For ten (10) years after entry of this Order, Defendant must deliver a",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 603,
+            "quote_end_line": 605
+          },
+          {
+            "description": "Deliver copy of order to all principals, officers, directors, LLC managers and members, employees with managerial responsibilities for covered information, and entities resulting from structural changes",
+            "quoted_text": "27 copy of this Order to: (1) all principals, officers, directors, and LLC 28 managers and members; (2) all employees having managerial Page 18 of 25 STIPULATED ORDER Case 2:21-cv-09693 Document 3-1 Filed 12/15/21 Page 19 of 35 Page ID #:40 1 responsibilities relating to the Collection, retention, storage, or security of 2 Covered Information, and all agents and representatives who have 3 managerial responsibility for the operation of any of Defendant’s Web 4 sites or online services; and (3) any business entity resulting from any 5 change in structure as set forth in the Provision titled Compliance 6 Reporting. Delivery must occur within seven (7) days of entry of this 7 Order for current personnel. To all others, delivery must occur before 8 they assume their responsibilities.",
+            "deadline": "7 days for current personnel, before assuming responsibilities for others",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 606,
+            "quote_end_line": 620
+          },
+          {
+            "description": "Obtain signed and dated acknowledgment of receipt of order from each individual or entity to which order was delivered",
+            "quoted_text": "9 C. From each individual or entity to which Defendant delivered a copy of 10 this Order, Defendant must obtain, within thirty (30) days, a signed and 11 dated acknowledgment of receipt of this Order.",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 621,
+            "quote_end_line": 623
           }
         ]
       },
       {
-        "provision_number": "19",
-        "title": "Taxpayer Identification Number Provision",
+        "provision_number": "XIII",
+        "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Defendants must furnish their taxpayer identifying numbers to the FTC for debt collection purposes.",
+        "summary": "Defendant must submit compliance reports and notices describing its businesses, compliance status, and any changes in structure or designated contacts.",
         "requirements": [
           {
-            "description": "Provide taxpayer identifying numbers to the FTC",
-            "quoted_text": "Defendants are hereby required, in accordance with 31 U.S.C. § 7701, to furnish to the Federal Trade Commission each of their taxpayer identifying numbers (social security number or employer identification number), which shall be used for purposes of collecting and reporting on any delinquent amount arising out of their relationship with the government.",
+            "description": "Submit comprehensive compliance report one year after entry identifying contact points, businesses, activities, compliance with each provision, privacy notices, treatment of child-directed sites, and order acknowledgments",
+            "quoted_text": "3 managerial responsibility for the operation of any of Defendant’s Web 4 sites or online services; and (3) any business entity resulting from any 5 change in structure as set forth in the Provision titled Compliance 6 Reporting. Delivery must occur within seven (7) days of entry of this 7 Order for current personnel. To all others, delivery must occur before 8 they assume their responsibilities. 9 C. From each individual or entity to which Defendant delivered a copy of 10 this Order, Defendant must obtain, within thirty (30) days, a signed and 11 dated acknowledgment of receipt of this Order. 12 XIII. COMPLIANCE REPORTING 13 IT IS FURTHER ORDERED that Defendant make timely submissions to 14 the Commission: 15 A. One year after entry of this Order, Defendant must submit a compliance 16 report, sworn under penalty of perjury, which does the following: (a) 17 identify the primary physical, postal, and email address and telephone 18 number, as designated points of contact, which representatives of the 19 Commission and Plaintiff may use to communicate with Defendant; (b) 20 identify all of Defendant’s businesses by all of their names, telephone 21 numbers, and physical, postal, email, and Internet addresses; (c) describe 22 the activities of each business; (d) describe in detail whether and how 23 Defendant is in compliance with each Provision of this Order; (e) provide 24 a copy of each different version of any privacy notice posted on each 25 Web site or online service operated by Defendant; (f) provide a statement 26 setting forth OpenX’s treatment of Child-directed Web sites and online 27 services; and (g) provide a copy of each Order Acknowledgment 28 obtained pursuant to this Order, unless previously submitted to the Page 19 of 25",
+            "deadline": "One year after entry",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 615,
+            "quote_end_line": 641
+          },
+          {
+            "description": "Submit compliance notice within fourteen days of any change in designated point of contact or structure of defendant or controlled entities",
+            "quoted_text": "2 B. For ten (10) years after entry of this Order, Defendant must submit a 3 compliance notice, sworn under penalty of perjury, within fourteen (14) 4 days of any change in the following: (a) any designated point of contact; 5 or (b) the structure of Defendant or any entity that Defendant has any 6 ownership interest in or controls directly or indirectly that may affect 7 compliance obligations arising under this Order, including: creation, 8 merger, sale, or dissolution of the entity or any subsidiary, parent, or 9 affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 647,
+            "quote_end_line": 654
+          },
+          {
+            "description": "Submit notice to Commission of filing of bankruptcy petition, insolvency proceeding, or similar proceeding within fourteen days of filing",
+            "quoted_text": "10 C. Defendant must submit to the Commission notice of the filing of any 11 bankruptcy petition, insolvency proceeding, or similar proceeding by or 12 against each Defendant within fourteen (14) days of its filing.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 655,
+            "quote_end_line": 657
+          },
+          {
+            "description": "Ensure all submissions to Commission are sworn under penalty of perjury, true and accurate, and comply with 28 U.S.C. § 1746",
+            "quoted_text": "13 D. Any submission to the Commission required by this Order to be sworn 14 under penalty of perjury must be true and accurate and comply with 28 15 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury 16 under the laws of the United States of America that the foregoing is true 17 and correct. Executed on: _____” and supplying the date, signatory’s full 18 name, title (if applicable), and signature.",
             "deadline": null,
-            "verified": false,
-            "confidence": 0.2901353965183752
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 658,
+            "quote_end_line": 663
+          },
+          {
+            "description": "Submit all compliance materials via email to DEbrief@ftc.gov or by overnight courier with subject line beginning \"United States v. OpenX Technologies, Inc.\"",
+            "quoted_text": "19 E. Unless otherwise directed by a Commission representative in writing, all 20 submissions to the Commission pursuant to this Order must be emailed to 21 DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal 22 Service) to: Associate Director for Enforcement, Bureau of Consumer 23 Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, 24 Washington, D.C. 20580. The subject line must begin: “United States v. 25 OpenX Technologies, Inc.”",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 664,
+            "quote_end_line": 670
           }
         ]
       },
       {
-        "provision_number": "20",
-        "title": "Report Submission Instructions",
-        "category": "compliance_reporting",
-        "summary": "All reports, submissions, and notices must be sent by certified mail to the specified FTC address.",
+        "provision_number": "XIV",
+        "title": "Recordkeeping",
+        "category": "recordkeeping",
+        "summary": "Defendant must create and retain specific records for ten years after entry of order, with each record retained for five years.",
         "requirements": [
           {
-            "description": "Submit all reports and notices by certified mail to designated FTC address",
-            "quoted_text": "All reports, submissions, and notices required by Paragraphs 12 - 19 of this Consent Decree shall be sent by certified mail to: Associate Director, Division of Advertising Practices, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue, NW, Washington, DC 20580, Attention: United States v. Bigmailbox, Inc., et al.",
+            "description": "Create and retain accounting records showing revenues from all goods or services sold for ten years after order entry, retaining each record for five years",
+            "quoted_text": "5 A. Accounting records showing the revenues from all goods or services 6 sold; 7 B. All records necessary to demonstrate full compliance with each provision 8 of this Order, including all submissions to the Commission;",
             "deadline": null,
-            "verified": false,
-            "confidence": 0.3286004056795132
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 683,
+            "quote_end_line": 686
+          },
+          {
+            "description": "Create and retain all records necessary to demonstrate full compliance with each provision of order for ten years after order entry, retaining each record for five years",
+            "quoted_text": "9 C. Copies of all consumer complaints relating to Defendant’s Collection, 10 maintenance, use, or Disclosure of Covered Information, whether",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 687,
+            "quote_end_line": 688
+          },
+          {
+            "description": "Create and retain copies of all consumer complaints relating to collection, maintenance, use, or disclosure of covered information and any responses for ten years after order entry, retaining each record for five years",
+            "quoted_text": "11 received directly or indirectly, such as through a Third Party, and any 12 response; and 13 D. A copy of each materially different document widely disseminated or 14 caused to be widely disseminated by Defendant containing any",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 689,
+            "quote_end_line": 692
+          },
+          {
+            "description": "Create and retain copy of each materially different document widely disseminated containing representations regarding data practices for ten years after order entry, retaining each record for five years",
+            "quoted_text": "15 representation regarding Defendant’s Collection, maintenance, use, or 16 Disclosure practices pertaining to Covered Information. 17 XV. COMPLIANCE MONITORING",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 693,
+            "quote_end_line": 695
           }
         ]
       },
       {
-        "provision_number": "21",
-        "title": "Continuing Jurisdiction",
+        "provision_number": "XV",
+        "title": "Compliance Monitoring",
+        "category": "monitoring",
+        "summary": "Commission and Plaintiff are authorized to monitor compliance through document requests, depositions, interviews, and other lawful means.",
+        "requirements": [
+          {
+            "description": "Within fourteen days of written request from Commission or Plaintiff representative, submit additional compliance reports or requested information sworn under penalty of perjury, appear for depositions, and produce documents",
+            "quoted_text": "21 A. Within fourteen (14) days of receipt of a written request from a 22 representative of the Commission or Plaintiff, Defendant must: submit 23 additional compliance reports or other requested information, which must 24 be sworn under penalty of perjury; appear for depositions; and produce 25 documents for inspection and copying. The Commission and Plaintiff are 26 also authorized to obtain discovery, without further leave of court, using 27 any of the procedures prescribed by Federal Rules of Civil Procedure 29, 28 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 699,
+            "quote_end_line": 706
+          },
+          {
+            "description": "Permit Commission and Plaintiff representatives to communicate directly with Defendant and interview any employee or affiliated person who has agreed to interview",
+            "quoted_text": "1 B. For matters concerning this Order, the Commission and Plaintiff are 2 authorized to communicate directly with Defendant. Defendant must 3 permit representatives of the Commission and Plaintiff to interview any 4 employee or other Person affiliated with Defendant who has agreed to 5 such an interview. The Person interviewed may have counsel present.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 712,
+            "quote_end_line": 716
+          }
+        ]
+      },
+      {
+        "provision_number": "XVI",
+        "title": "Retention of Jurisdiction",
         "category": "duration",
-        "summary": "The Court retains jurisdiction for interpretation, modification, enforcement, and punishment of violations of the Consent Decree.",
+        "summary": "The Court retains jurisdiction for purposes of construction, modification, and enforcement of the order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction for enforcement and modification",
-            "quoted_text": "This Court shall retain jurisdiction of this matter for the purposes of enabling any of the parties to this Consent Decree to apply to the Court at any time for such further orders or directives as may be necessary or appropriate for the interpretation or modification of this Consent Decree, for the enforcement of compliance therewith, or for the punishment of violations thereof.",
+            "description": "Court retains jurisdiction for construction, modification, and enforcement of order",
+            "quoted_text": "13 XVI. RETENTION OF JURISDICTION 14 IT IS FURTHER ORDERED that this Court retains jurisdiction of this",
             "deadline": null,
-            "verified": false,
-            "confidence": 0.29422066549912435
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 724,
+            "quote_end_line": 725
           }
         ]
       }
     ],
     "duration": {
-      "duration_years": null,
-      "termination_text": "This Court shall retain jurisdiction of this matter for the purposes of enabling any of the parties to this Consent Decree to apply to the Court at any time for such further orders or directives as may be necessary or appropriate for the interpretation or modification of this Consent Decree, for the enforcement of compliance therewith, or for the punishment of violations thereof."
+      "duration_years": 20,
+      "termination_text": "The reporting period for the Assessments must cover: (1) the first 180 days after the Privacy Program has been put in place for the initial Assessment; and (2) each two-year period thereafter for twenty (20) years after issuance of the Order for the biennial Assessments."
     }
   },
   "metadata": {
@@ -349,9 +735,38 @@
       "complaint_counts": 3,
       "complaint_representations": 3,
       "order_provisions": 16,
-      "order_definitions": 17,
-      "order_requirements": 17
+      "order_definitions": 21,
+      "order_requirements": 55,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 4,
+        "III": 3,
+        "IV": 16,
+        "V": 5,
+        "VI": 3,
+        "VII": 2,
+        "VIII": 1,
+        "IX": 2,
+        "X": 1,
+        "XI": 2,
+        "XII": 3,
+        "XIII": 5,
+        "XIV": 4,
+        "XV": 2,
+        "XVI": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 3,
+        "complaint_total": 3,
+        "order_verified": 55,
+        "order_total": 55
+      }
     },
-    "processing_time_seconds": 316.1
+    "processing_time_seconds": 2317.3
   }
 }

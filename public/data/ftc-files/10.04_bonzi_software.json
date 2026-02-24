@@ -6,7 +6,7 @@
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "3000 Broad Street, Suite 115, San Luis Obispo, California 93401",
-      "business_description": "Bonzi Software, Inc. develops, advertises, sells, licenses, and distributes software products, including InternetALERT, which is software that monitors Internet traffic and provides alerts when unauthorized access attempts are made to a consumer's computer from the Internet."
+      "business_description": "Bonzi Software develops, advertises, sells, licenses, and distributes various software products, including InternetALERT, which is software that monitors Internet traffic entering a consumer's computer and provides alerts when unauthorized access attempts are detected."
     },
     "commissioners": [
       "Deborah Platt Majoras, Chairman",
@@ -24,29 +24,60 @@
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/042-3016-bonzi-software-inc"
   },
   "complaint": {
-    "factual_background": "Bonzi Software marketed and sold InternetALERT software for $49, claiming it would protect consumers from Internet attackers by monitoring and blocking unauthorized access attempts. In reality, the software provided only limited protection—it monitored a limited number of communications ports, would not monitor ports that were already open, and actually opened closed ports (potentially increasing vulnerability). The software lacked other security features necessary to significantly reduce the risk of unauthorized access or data theft.",
+    "factual_background": "Bonzi Software, Inc. developed and sold 'InternetALERT,' a software product marketed as protecting consumers' computers from unauthorized Internet access, sold for $49 per year via their website. Through banner ads, pop-up ads, and landing pages, respondents represented that InternetALERT would significantly reduce the risk of hackers accessing consumers' computers and the data stored in them. In reality, InternetALERT only monitored a limited number of communications ports, would not monitor ports that were already open at installation, and lacked other key security features such as virus protection or controls preventing personally identifiable information from being transmitted without consent. The FTC alleged that these representations were false or misleading in violation of Section 5(a) of the FTC Act.",
     "representations_made": [
       {
-        "description": "Claimed that InternetALERT significantly reduces the risk of unauthorized access into computers and the data stored in them",
-        "quoted_text": "Through the means described in Paragraphs 5 through 7, respondents have represented, expressly or by implication, that InternetALERT significantly reduces the risk of unauthorized access into computers and the data stored in them.",
-        "source_paragraph": 12
+        "description": "Claimed that InternetALERT would protect consumers' computers from Internet attackers and prevent unauthorized access, including stopping hackers dead in their tracks and ensuring no one can access the computer without the consumer's knowledge or permission",
+        "quoted_text": "InternetALERT is an absolute ‘MUST’ for anyone connecting to the Internet! It will notify you if someone is breaking into your computer, stop them dead in their tracks, and even build a visual map showing you the Attacker’s ISP (Internet Service Provider) location! You can now connect to the Internet with the comfort and security of knowing that no one from the Internet can access your computer without your knowledge or permission!",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 6,
+        "quote_start_line": 91,
+        "quote_end_line": 95
+      },
+      {
+        "description": "Claimed that downloading InternetALERT would make the consumer's computer safe and secure against Internet attackers within minutes",
+        "quoted_text": "You’re now minutes away from protecting your system against malicious attackers! Simply complete the secure form below and then press the ‘Protect’ button. You will be granted immediate access to the full version of InternetALERT and in minutes make your computer safe and secure against Internet attackers!",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 7,
+        "quote_start_line": 123,
+        "quote_end_line": 126
+      },
+      {
+        "description": "Warned consumers during uninstall that disabling InternetAlert would leave their computer unprotected against outside harmful attacks, implying the software provided meaningful protection",
+        "quoted_text": "WARNING: Your (sic) are about to Disable InternetAlert. Your computer will no longer be protected against outside harmful attacks. Are you sure you want to disable InternetAlert?",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 7,
+        "quote_start_line": 134,
+        "quote_end_line": 135
+      },
+      {
+        "description": "Represented, expressly or by implication, that InternetALERT significantly reduces the risk of unauthorized access into computers and the data stored in them",
+        "quoted_text": "12. Through the means described in Paragraphs 5 through 7, respondents have represented, expressly or by implication, that InternetALERT significantly reduces the risk of unauthorized access into computers and the data stored in them.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 12,
+        "quote_start_line": 160,
+        "quote_end_line": 162
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "False Security Protection Claims",
-        "representation": "InternetALERT significantly reduces the risk of unauthorized access into computers and the data stored in them",
-        "fact": "InternetALERT does not significantly reduce the risk of unauthorized access because it provides only limited protection against intrusion (monitoring limited ports, not monitoring already-open ports, and opening closed ports), and lacks other security features such as preventing personally identifiable information from being sent over the Internet without consent or providing virus protection",
-        "conclusion": "The acts and practices of respondents as alleged in this complaint constitute unfair or deceptive acts or practices in or affecting commerce in violation of Section 5(a) of the Federal Trade Commission Act."
+        "title": "False or Misleading Security Protection Claims",
+        "representation": "Through banner, button, and pop-up ads and Web pages, respondents represented that InternetALERT significantly reduces the risk of unauthorized access into consumers' computers and the data stored in them.",
+        "fact": "InternetALERT does not significantly reduce the risk of unauthorized access into computers because it monitors only a limited number of communications ports, does not monitor ports already open at installation, and lacks other key security features such as protection against unauthorized transmission of personally identifiable information or computer virus protection.",
+        "conclusion": "Therefore, the representation constitutes an unfair or deceptive act or practice in violation of Section 5(a) of the Federal Trade Commission Act."
       }
     ]
   },
   "order": {
     "definitions": {
       "Personally identifiable information": "individually identifiable information from or about an individual consumer including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name that reveals an individual's email address; (d) a telephone number; (e) a social security number; (f) an Internet Protocol (\"IP\") address or host name that identifies an individual; (g) a persistent identifier, such as a customer number held in a \"cookie\" or processor serial number, that is combined with other available data that identifies an individual; or (h) or any information that is combined with (a) through (g) above.",
-      "Personal information": "individually identifiable information from or about an individual consumer including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name that reveals an individual's email address; (d) a telephone number; (e) a social security number; (f) an Internet Protocol (\"IP\") address or host name that identifies an individual; (g) a persistent identifier, such as a customer number held in a \"cookie\" or processor serial number, that is combined with other available data that identifies an individual; or (h) or any information that is combined with (a) through (g) above.",
-      "Respondents": "Bonzi Software, Inc., its successors and assigns and its officers, agents, representatives, and employees, and Joe Bonzi and Jay Bonzi.",
+      "personal information": "individually identifiable information from or about an individual consumer including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name that reveals an individual's email address; (d) a telephone number; (e) a social security number; (f) an Internet Protocol (\"IP\") address or host name that identifies an individual; (g) a persistent identifier, such as a customer number held in a \"cookie\" or processor serial number, that is combined with other available data that identifies an individual; or (h) or any information that is combined with (a) through (g) above.",
+      "respondents": "Bonzi Software, Inc., its successors and assigns and its officers, agents, representatives, and employees, and Joe Bonzi and Jay Bonzi.",
       "Commerce": "as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44."
     },
     "provisions": [
@@ -54,36 +85,42 @@
         "provision_number": "I",
         "title": "Prohibition Against Misrepresentations About Security Products",
         "category": "prohibition",
-        "summary": "Respondents must not misrepresent the security capabilities or privacy protections of InternetALERT or any other security software product.",
+        "summary": "Respondents must not misrepresent, in connection with any security software product or service, either the extent to which the product reduces unauthorized access risk, or the extent to which it maintains, protects, or provides security or privacy features.",
         "requirements": [
           {
-            "description": "Must not misrepresent the extent to which any security product reduces the risk of unauthorized access",
-            "quoted_text": "IT IS ORDERED that respondents, directly or through any corporation, subsidiary, division, or other device, in connection with the manufacturing, packaging, labeling, advertising, promotion, offering for sale, sale, or distribution of InternetALERT or any other computer software product or service that is marketed as enhancing security, in or affecting commerce, shall not misrepresent: A. the extent to which any such product or service will reduce the risk of unauthorized access into such computer, or any such similar system;",
+            "description": "Must not misrepresent the extent to which InternetALERT or any security software product or service will reduce the risk of unauthorized access into a computer or similar system",
+            "quoted_text": "IT IS ORDERED that respondents, directly or through any corporation, subsidiary, division, or other device, in connection with the manufacturing, packaging, labeling, advertising, promotion, offering for sale, sale, or distribution of InternetALERT or any other computer software product or service that is marketed as enhancing security, in or affecting commerce, shall not misrepresent: Page 2 of 7 A. the extent to which any such product or service will reduce the risk of unauthorized access into such computer, or any such similar system; or",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 67,
+            "quote_end_line": 76
           },
           {
-            "description": "Must not misrepresent the extent to which any security product will maintain, protect, or provide security features",
-            "quoted_text": "IT IS ORDERED that respondents, directly or through any corporation, subsidiary, division, or other device, in connection with the manufacturing, packaging, labeling, advertising, promotion, offering for sale, sale, or distribution of InternetALERT or any other computer software product or service that is marketed as enhancing security, in or affecting commerce, shall not misrepresent: B. the extent to which any such product or service will maintain, protect, or provide security features that will enhance the security or privacy of any such computer (or any such similar system) or any data, that is stored in a computer, or any similar system, including personally identifiable information.",
+            "description": "Must not misrepresent the extent to which any security software product or service will maintain, protect, or provide security features that enhance the security or privacy of a computer or data, including personally identifiable information",
+            "quoted_text": "B. the extent to which any such product or service will maintain, protect, or provide security features that will enhance the security or privacy of any such computer (or any such similar system) or any data, that is stored in a computer, or any similar system, including personally identifiable information.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 77,
+            "quote_end_line": 80
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Prohibition Against Misrepresentations About Performance",
+        "title": "Prohibition Against Misrepresentations About Performance of Security/Privacy Software",
         "category": "prohibition",
-        "summary": "Respondents must not misrepresent the performance, benefits, or efficacy of any security or privacy software product.",
+        "summary": "Respondents must not misrepresent the performance, benefits, or efficacy of any computer software product or service marketed as enhancing the security or privacy of any computer or similar system.",
         "requirements": [
           {
-            "description": "Must not misrepresent the performance, benefits, or efficacy of any security or privacy software",
+            "description": "Must not misrepresent the performance, benefits, or efficacy of any computer software product or service marketed as enhancing security or privacy",
             "quoted_text": "IT IS FURTHER ORDERED that respondents, directly or through any corporation, subsidiary, division, or other device, in connection with the manufacturing, packaging, labeling, advertising, promotion, offering for sale, sale, or distribution of any computer software product or service that is marketed as enhancing the security or privacy of any computer or similar system, in or affecting commerce, shall not misrepresent the performance, benefits, or efficacy of any such software product or service.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 82,
+            "quote_end_line": 87
           }
         ]
       },
@@ -91,65 +128,95 @@
         "provision_number": "III",
         "title": "Consumer Refund Program",
         "category": "affirmative_obligation",
-        "summary": "Respondents must provide refunds to current InternetALERT subscribers who cancel their subscriptions, including sending email notifications and posting website notices.",
+        "summary": "Respondents must provide refunds to current InternetALERT subscribers by sending a refund notification email, posting a refund notice on their website, and issuing refund payments within seven days of receiving a request.",
         "requirements": [
           {
-            "description": "Send refund notification email to all current InternetALERT subscribers",
-            "quoted_text": "Respondents shall send, within seven (7) days from the date of service of this order, to the last known e-mail address of each current subscriber of the InternetALERT software product exact copies of the \"Refund Notification Message,\" with the subject line \"Important Refund Notice Concerning Your InternetALERT Subscription,\" attached hereto as Attachment A.",
+            "description": "Within 7 days of service of this order, send exact copies of the Refund Notification Message (Attachment A) to the last known email address of each current InternetALERT subscriber; no other materials may be included; subscribers must be given 60 days to respond",
+            "quoted_text": "A. Respondents shall send, within seven (7) days from the date of service of this order, to the last known e-mail address of each current subscriber of the InternetALERT software product exact copies of the “Refund Notification Message,” with the subject line “Important Refund Notice Concerning Your InternetALERT Subscription,” attached hereto as Attachment A. Respondents shall not include with Attachment A any other information, nor shall any other material be transmitted with Attachment A. Respondents shall give subscribers who receive Attachment A pursuant to this Part sixty (60) days to respond.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 90,
+            "quote_end_line": 97
           },
           {
-            "description": "Obtain updated email addresses for returned emails and resend notification",
-            "quoted_text": "Respondents shall use all reasonable commercially available means to obtain updated e-mail addresses for any returned e-mails within fifteen (15) days of receipt of such returned e-mail and shall resend Attachment A within seven (7) days of obtaining a new e-mail address for the recipient.",
-            "deadline": "15 days to obtain updated addresses, 7 days to resend",
+            "description": "Use all reasonable commercially available means to obtain updated email addresses for returned emails within 15 days of receipt, resend Attachment A within 7 days of obtaining a new address; subscribers must be given 60 days to respond",
+            "quoted_text": "B. Respondents shall use all reasonable commercially available means to obtain updated e-mail addresses for any returned e-mails within fifteen (15) days of receipt of such returned e-mail and shall resend Attachment A within seven (7) days of obtaining a new e-mail address for the recipient. Respondents shall not include with Attachment A any other information, nor shall any other material be transmitted with Attachment A. Respondents shall give subscribers who receive a resent Attachment A pursuant to this Part sixty (60) days to respond.",
+            "deadline": "15 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 98,
+            "quote_end_line": 104
           },
           {
-            "description": "Post refund notice on Bonzi Software homepage with hyperlink",
-            "quoted_text": "Respondents shall post within seven (7) days of service of the order and, continuing for sixty (60) days maintain, on the Bonzi Software homepage, www.bonzi.com, a hyperlink to a notice in the form and format as Attachment A. Such hyperlink shall be clear and conspicuous, labeled \"InternetALERT Refund Notice,\" and lead directly to the notice on the click-through electronic page or other display screen or panel.",
-            "deadline": "7 days to post, maintain for 60 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Provide refunds to subscribers who cancel and uninstall within 7 days of request",
-            "quoted_text": "Within seven (7) days of receiving a request for a refund, respondents shall provide current subscribers who cancel and uninstall the InternetALERT software product either (a) a check drawn on U.S. funds; or (b) a credit card refund for an amount representing the unused portion of their InternetALERT subscription calculated as of the date of acceptance of this order by the Commission for public comment.",
+            "description": "Post within 7 days of service of the order, and maintain for 60 days, a clear and conspicuous hyperlink labeled 'InternetALERT Refund Notice' on www.bonzi.com leading directly to a notice in the form of Attachment A; current subscribers must have 60 days to respond",
+            "quoted_text": "C. Respondents shall post within seven (7) days of service of the order and, continuing for sixty (60) days maintain, on the Bonzi Software homepage, www.bonzi.com, a hyperlink to a notice in the form and format as Attachment A. Such hyperlink shall be clear and conspicuous, labeled “InternetALERT Refund Notice,” and lead directly to the notice on the click- through electronic page or other display screen or panel. Respondents shall give Page 3 of 7 current subscribers who receive notice of the refund through the Bonzi Software homepage, www.bonzi.com, the opportunity to respond within sixty (60) days from the date of posting the notice required by this Part.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 105,
+            "quote_end_line": 116
+          },
+          {
+            "description": "Within 7 days of receiving a refund request, provide current subscribers who cancel and uninstall InternetALERT either a check in U.S. funds or a credit card refund for the unused portion of their subscription; checks must be mailed first class to the subscriber's physical address",
+            "quoted_text": "D. Within seven (7) days of receiving a request for a refund, respondents shall provide current subscribers who cancel and uninstall the InternetALERT software product either (a) a check drawn on U.S. funds; or (b) a credit card refund for an amount representing the unused portion of their InternetALERT subscription calculated as of the date of acceptance of this order by the Commission for public comment. For current subscribers who request a refund by check, respondents shall mail refunds by first class mail to the physical address provided by the subscriber or, if no address is provided, to the subscriber’s last known physical address.",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 117,
+            "quote_end_line": 125
           }
         ]
       },
       {
         "provision_number": "IV",
-        "title": "Distribution of Order to Third Parties",
+        "title": "Distribution of Order to Retailers and Affiliates",
         "category": "acknowledgment",
-        "summary": "Respondents must send copies of the order to retailers, affiliates, and other third parties that advertise or sell InternetALERT.",
+        "summary": "Respondents must send a copy of this order by email to any retailer, affiliate, or other third party that advertises, promotes, offers for sale, sells, or distributes InternetALERT under an agreement with respondents.",
         "requirements": [
           {
-            "description": "Send copies of order to all retailers, affiliates, and third parties that advertise or sell InternetALERT",
+            "description": "Within 7 days of service of this order, send by email exact copies of the order to any retailer, affiliate, or third party that advertises, promotes, offers for sale, sells, or distributes InternetALERT pursuant to an agreement with respondents",
             "quoted_text": "IT IS FURTHER ORDERED that respondents shall, within seven (7) days after the date of service of this order, send by e-mail exact copies of the order to any retailer, affiliate, or other third party that advertises, promotes, offers for sale, sells, or distributes the software product InternetALERT pursuant to an agreement with respondents.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 127,
+            "quote_end_line": 130
           }
         ]
       },
       {
         "provision_number": "V",
-        "title": "Recordkeeping Requirements",
+        "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondents must maintain advertisements, supporting materials, and evidence related to representations covered by the order for five years.",
+        "summary": "Respondents must retain, for five years after the last dissemination of any covered representation, all advertisements, materials relied upon, and any tests or evidence that contradict or qualify the representation, and make them available to the FTC upon request.",
         "requirements": [
           {
-            "description": "Maintain and make available all advertisements, promotional materials, supporting materials, and contradictory evidence for 5 years",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents shall, for a period of five (5) years after the last date of dissemination of any representation covered by this order, maintain and upon request make available to the Federal Trade Commission for inspection and copying: A. All advertisements and promotional materials containing the representation; B. All materials that were relied upon in disseminating the representation; and C. All tests, reports, studies, surveys, demonstrations, or other evidence in their possession or control that contradict, qualify, or call into question the representation, or the basis relied upon for the representation, including complaints and other communications with consumers or with governmental or consumer protection organizations.",
+            "description": "For 5 years after the last date of dissemination of any covered representation, maintain and make available to the FTC all advertisements and promotional materials containing the representation",
+            "quoted_text": "IT IS FURTHER ORDERED that respondents shall, for a period of five (5) years after the last date of dissemination of any representation covered by this order, maintain and upon request make available to the Federal Trade Commission for inspection and copying: A. All advertisements and promotional materials containing the representation;",
             "deadline": "5 years after last dissemination",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 132,
+            "quote_end_line": 135
+          },
+          {
+            "description": "Retain all materials that were relied upon in disseminating covered representations",
+            "quoted_text": "B. All materials that were relied upon in disseminating the representation; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 136,
+            "quote_end_line": 136
+          },
+          {
+            "description": "Retain all tests, reports, studies, surveys, demonstrations, or other evidence that contradict, qualify, or call into question any covered representation, including consumer complaints and communications with governmental or consumer protection organizations",
+            "quoted_text": "C. All tests, reports, studies, surveys, demonstrations, or other evidence in their possession or control that contradict, qualify, or call into question the representation, or the basis relied upon for the representation, including complaints and other communications with consumers or with governmental or consumer protection organizations.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 137,
+            "quote_end_line": 141
           }
         ]
       },
@@ -157,44 +224,59 @@
         "provision_number": "VI",
         "title": "Order Distribution to Personnel",
         "category": "acknowledgment",
-        "summary": "Respondents must deliver copies of the order to current and future personnel with responsibilities related to the order's subject matter.",
+        "summary": "Respondents must deliver a copy of this order to all current and future principals, officers, directors, managers, employees, agents, and representatives with relevant responsibilities — current personnel within 30 days of service, future personnel within 30 days of assuming their role.",
         "requirements": [
           {
-            "description": "Deliver copy of order to all current principals, officers, directors, managers, employees, agents, and representatives with relevant responsibilities",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents shall deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having responsibilities relating to the subject matter of this order. Respondents shall deliver this order to such current personnel within thirty (30) days after the date of service of this order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "description": "Deliver a copy of this order to all current principals, officers, directors, managers, employees, agents, and representatives with responsibilities relating to the subject matter of this order within 30 days after service of the order",
+            "quoted_text": "IT IS FURTHER ORDERED that respondents shall deliver a copy of this order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having responsibilities relating to the subject matter of this order. Respondents shall deliver this order to such current personnel within thirty (30) days Page 4 of 7",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 143,
+            "quote_end_line": 147
+          },
+          {
+            "description": "Deliver a copy of this order to all future such personnel within 30 days after the person assumes their position or responsibilities",
+            "quoted_text": "after the date of service of this order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "deadline": "30 days of assuming position",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 150,
+            "quote_end_line": 151
           }
         ]
       },
       {
         "provision_number": "VII",
-        "title": "Corporate Change Notification",
+        "title": "Corporate Change Notification — Bonzi Software, Inc.",
         "category": "compliance_reporting",
-        "summary": "Bonzi Software, Inc. must notify the FTC at least 30 days before any corporate changes that may affect compliance obligations.",
+        "summary": "Bonzi Software, Inc. must notify the FTC at least 30 days prior to any corporate change that may affect compliance obligations, including dissolution, merger, sale, bankruptcy filing, or name/address change, by certified mail to the FTC's Associate Director of Enforcement.",
         "requirements": [
           {
-            "description": "Notify the Commission at least 30 days prior to any corporate change affecting compliance obligations",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent Bonzi Software, Inc., and its successors and assigns, shall notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address.",
+            "description": "Notify the Commission at least 30 days prior to any change in the corporation that may affect compliance obligations, including dissolution, assignment, sale, merger, creation or dissolution of a subsidiary/parent/affiliate, bankruptcy filing, or change in corporate name or address; if less than 30 days' notice is possible, notify as soon as practicable",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent Bonzi Software, Inc., and its successors and assigns, shall notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address. Provided, however, that, with respect to any proposed change in the corporation about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge. All notices required by this Part shall be sent by certified mail to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580.",
             "deadline": "30 days prior to change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 153,
+            "quote_end_line": 164
           }
         ]
       },
       {
         "provision_number": "VIII",
-        "title": "Individual Respondent Notification of Employment Changes",
+        "title": "Individual Respondents' Employment Change Notification",
         "category": "compliance_reporting",
-        "summary": "Joe Bonzi and Jay Bonzi must notify the FTC of business discontinuance or new business affiliations for 10 years.",
+        "summary": "Joe Bonzi and Jay Bonzi must, for 10 years after entry of this order, notify the FTC of any discontinuance of their current business or employment and any affiliation with a new business or employment, by certified mail to the FTC's Associate Director of Enforcement.",
         "requirements": [
           {
-            "description": "Notify the Commission of discontinuance of current business or employment and affiliation with new business or employment",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents Joe Bonzi and Jay Bonzi for a period of ten (10) years after the date of entry of this order shall notify the Commission of: (1) the discontinuance of their current business or employment; and, (2) their affiliation with any new business or employment. The notice shall include respondents' new businesses names, addresses, and telephone numbers and a description of the nature of the business or employment and the respondents' duties and responsibilities.",
+            "description": "For 10 years after entry of this order, Joe Bonzi and Jay Bonzi must notify the Commission of the discontinuance of their current business or employment and any affiliation with a new business or employment, including new business names, addresses, telephone numbers, nature of business, and their duties and responsibilities",
+            "quoted_text": "IT IS FURTHER ORDERED that respondents Joe Bonzi and Jay Bonzi for a period of ten (10) years after the date of entry of this order shall notify the Commission of: (1) the discontinuance of their current business or employment; and, (2) their affiliation with any new business or employment. The notice shall include respondents’ new businesses names, addresses, and telephone numbers and a description of the nature of the business or employment and the respondents’ duties and responsibilities. All notices required by this Part shall be sent by certified mail to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580.",
             "deadline": "10 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 166,
+            "quote_end_line": 173
           }
         ]
       },
@@ -202,29 +284,42 @@
         "provision_number": "IX",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondents must file a written compliance report with the FTC within 120 days, describing their compliance with the order and the consumer redress program.",
+        "summary": "Respondents must file a written compliance report with the FTC within 120 days of service of this order, and at such other times as the FTC requires, detailing compliance with the order including a full description of the consumer redress program conducted under Part III.",
         "requirements": [
           {
-            "description": "File written compliance report detailing manner and form of compliance, including description of consumer redress program",
-            "quoted_text": "IT IS FURTHER ORDERED that respondents shall within one hundred and twenty (120) days after service of this order, and at such other times as the Federal Trade Commission may require, file with the Commission a report, in writing, setting forth in detail the manner and form in which they have complied with this order. As part of this compliance report, respondents shall describe the consumer redress program conducted pursuant to Part III of this order. This description shall include sample copies of notifications provided to subscribers pursuant to Part III of this order and separate lists identifying (a) the name, e-mail, and physical address, and refund amount for each subscriber who was a current subscriber as of the date of service of this order; and (b) the total number of current subscribers to whom e-mail notices were sent pursuant to Part III of this order.",
+            "description": "Within 120 days after service of this order, and at such other times as the FTC may require, file a written report with the Commission detailing the manner and form of compliance with this order",
+            "quoted_text": "IT IS FURTHER ORDERED that respondents shall within one hundred and twenty (120) days after service of this order, and at such other times as the Federal Trade Commission may require, file with the Commission a report, in writing, setting forth in detail the manner and form in which they have complied with this order. As part of this compliance report,",
             "deadline": "120 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 175,
+            "quote_end_line": 178
+          },
+          {
+            "description": "As part of the compliance report, describe the consumer redress program under Part III, including sample copies of notifications sent to subscribers and separate lists identifying: (a) name, email, physical address, and refund amount for each current subscriber as of service date; and (b) total number of current subscribers to whom email notices were sent",
+            "quoted_text": "form in which they have complied with this order. As part of this compliance report, respondents shall describe the consumer redress program conducted pursuant to Part III of this order. This description shall include sample copies of notifications provided to subscribers pursuant to Part III of this order and separate lists identifying (a) the name, e-mail, and physical address, and refund amount for each subscriber who was a current subscriber as of the date of service of this order; and (b) the total number of current subscribers to whom e-mail notices were sent pursuant to Part III of this order.",
+            "deadline": "120 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 178,
+            "quote_end_line": 184
           }
         ]
       },
       {
         "provision_number": "X",
-        "title": "Order Duration and Termination",
+        "title": "Order Duration",
         "category": "duration",
-        "summary": "The order will terminate on October 7, 2024, or 20 years from the most recent date the FTC files a federal court complaint alleging order violation, whichever is later.",
+        "summary": "This order terminates on October 7, 2024, or 20 years from the most recent date a complaint alleging a violation of the order is filed in federal court by the U.S. or FTC, whichever is later, subject to specified exceptions.",
         "requirements": [
           {
-            "description": "Order remains in effect until October 7, 2024, or 20 years from most recent federal court complaint filing date, whichever is later",
-            "quoted_text": "This order will terminate on October 7, 2024, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this order that terminates in less than twenty (20) years; B. This order's application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part.",
+            "description": "Order terminates on October 7, 2024, or 20 years from the most recent date a federal court complaint alleging an order violation is filed, whichever is later; filing of such complaint does not affect parts terminating in less than 20 years, application to non-defendant respondents, or the order if the complaint is filed after termination; if complaint is dismissed or respondents found not in violation and not appealed or upheld on appeal, the order terminates as though the complaint had never been filed",
+            "quoted_text": "This order will terminate on October 7, 2024, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this order that terminates in less than twenty (20) years; B. This order's application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that the respondents did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Part as though the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 189,
+            "quote_end_line": 203
           }
         ]
       }
@@ -241,11 +336,34 @@
     },
     "extraction_stats": {
       "complaint_counts": 1,
-      "complaint_representations": 1,
+      "complaint_representations": 4,
       "order_provisions": 10,
       "order_definitions": 4,
-      "order_requirements": 14
+      "order_requirements": 18,
+      "provisions_per_section": {
+        "I": 2,
+        "II": 1,
+        "III": 4,
+        "IV": 1,
+        "V": 3,
+        "VI": 2,
+        "VII": 1,
+        "VIII": 1,
+        "IX": 2,
+        "X": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 4,
+        "complaint_total": 4,
+        "order_verified": 18,
+        "order_total": 18
+      }
     },
-    "processing_time_seconds": 104.4
+    "processing_time_seconds": 85.5
   }
 }

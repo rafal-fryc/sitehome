@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { useFTCData } from "@/hooks/use-ftc-data";
 import type { GroupingMode } from "@/types/ftc";
 import FTCHeader from "@/components/ftc/FTCHeader";
+import FTCMissingCasesNotice from "@/components/ftc/FTCMissingCasesNotice";
 import FTCOverviewStats from "@/components/ftc/FTCOverviewStats";
 import FTCGroupingSelector from "@/components/ftc/FTCGroupingSelector";
 import FTCGroupChart, { ViolationDonut } from "@/components/ftc/FTCGroupChart";
@@ -69,6 +70,8 @@ export default function FTCAnalytics() {
       <FTCHeader />
 
       <main className="container max-w-6xl mx-auto px-4 py-8 space-y-8">
+        <FTCMissingCasesNotice />
+
         {/* Overview stats + donut */}
         <section className="space-y-6">
           <FTCOverviewStats data={data} />

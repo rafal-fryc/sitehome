@@ -6,7 +6,7 @@
       "incorporation_state": "California",
       "entity_type": "corporation",
       "address": "1215 G Street, Sacramento, CA 95814",
-      "business_description": "Tru Communication, Inc. (dba TCPrinting.net) provides printing services including copying, binding, and scanning of documents."
+      "business_description": "Tru Communication, Inc. (dba TCPrinting.net) provides printing services such as copying, binding, and scanning of documents."
     },
     "commissioners": [
       "Maureen K. Ohlhausen, Acting Chairman",
@@ -16,31 +16,39 @@
       "month": 11,
       "year": 2017
     },
-    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/172-3171-tru-communication-inc-matter"
   },
   "complaint": {
-    "factual_background": "Tru Communication, Inc., a California printing services company, falsely claimed on its website that it participated in and would remain compliant with the EU-U.S. Privacy Shield framework. In fact, although the company initiated an application for Privacy Shield certification, it never completed the necessary steps to actually participate in the framework.",
+    "factual_background": "Tru Communication, Inc., doing business as TCPrinting.net, is a California-based printing services company that published privacy policies on its website falsely claiming participation in the EU-U.S. Privacy Shield framework. Privacy Shield is a mechanism allowing U.S. companies to lawfully transfer personal data from the EU to the United States, requiring companies to self-certify compliance with Privacy Shield Principles to the U.S. Department of Commerce. Although Respondent initiated an application for Privacy Shield certification, it never completed the necessary steps to actually participate in the framework. By publicly claiming it would remain 'compliant and current with Privacy Shield at all times,' the company deceived consumers and businesses about its data protection practices, in violation of Section 5(a) of the FTC Act.",
     "representations_made": [
       {
-        "description": "Claimed to be a participant in the EU-U.S. Privacy Shield framework and to remain compliant at all times",
+        "description": "Claimed the company would remain compliant and current with the EU-U.S. Privacy Shield framework at all times, implying active participation in the framework",
         "quoted_text": "TC Printing will remain compliant and current with Privacy Shield at all times.",
-        "source_paragraph": 11
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 11,
+        "quote_start_line": 69,
+        "quote_end_line": 70
       },
       {
-        "description": "Represented that it is a participant in the EU-U.S Privacy Shield framework",
-        "quoted_text": "Through the means described in Paragraph 11, Respondent represents, expressly or by implication, that it is a participant in the EU-U.S Privacy Shield framework.",
-        "source_paragraph": 12
+        "description": "Represented, expressly or by implication, that Respondent is a participant in the EU-U.S. Privacy Shield framework",
+        "quoted_text": "12. Through the means described in Paragraph 11, Respondent represents, expressly or by implication, that it is a participant in the EU-U.S Privacy Shield framework.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 12,
+        "quote_start_line": 71,
+        "quote_end_line": 72
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "False Privacy Shield Participation Claim",
-        "representation": "Respondent represents that it is a participant in the EU-U.S Privacy Shield framework",
-        "fact": "Although Respondent initiated an application to Commerce for Privacy Shield certification, it did not complete the steps necessary to participate in the EU-U.S Privacy Shield framework",
-        "conclusion": "Therefore, the representation set forth in Paragraph 12 is false and misleading."
+        "title": "False Representation of EU-U.S. Privacy Shield Participation",
+        "representation": "Respondent represented, expressly or by implication, that it is a participant in the EU-U.S. Privacy Shield framework, stating it would remain 'compliant and current with Privacy Shield at all times'",
+        "fact": "Although Respondent initiated an application to Commerce for Privacy Shield certification, it did not complete the steps necessary to participate in the EU-U.S. Privacy Shield framework and was not certified",
+        "conclusion": "Therefore, the representation set forth in Paragraph 12 is false and misleading, and constitutes deceptive acts or practices in violation of Section 5(a) of the Federal Trade Commission Act"
       }
     ]
   },
@@ -51,16 +59,18 @@
     "provisions": [
       {
         "provision_number": "I",
-        "title": "Prohibition against Misrepresentations about Participation in Privacy or Security Programs",
+        "title": "Prohibition Against Misrepresentations About Participation in Privacy or Security Programs",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent its participation in, membership in, or certification by any privacy or security program, including EU-U.S. and Swiss-U.S. Privacy Shield frameworks.",
+        "summary": "Respondent must not misrepresent, in any manner, the extent to which it participates in any government or self-regulatory privacy or security program, including the EU-U.S. and Swiss-U.S. Privacy Shield frameworks.",
         "requirements": [
           {
-            "description": "Must not misrepresent participation in privacy or security programs",
+            "description": "Must not misrepresent membership, certification, endorsement, or participation in any privacy or security program sponsored by a government or self-regulatory/standard-setting organization, including but not limited to the EU-U.S. Privacy Shield framework and the Swiss-U.S. Privacy Shield framework",
             "quoted_text": "IT IS ORDERED that Respondent and its officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this order, whether acting directly or indirectly, in connection with the advertising, marketing, promotion, offering for sale, or sale of any product or service must not misrepresent in any manner, expressly or by implication, the extent to which Respondent is a member of, adheres to, complies with, is certified by, is endorsed by, or otherwise participates in any privacy or security program sponsored by a government or any self-regulatory or standard-setting organization, including but not limited to the EU-U.S. Privacy Shield framework and the Swiss - U.S. Privacy Shield framework.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 53,
+            "quote_end_line": 61
           }
         ]
       },
@@ -68,28 +78,34 @@
         "provision_number": "II",
         "title": "Acknowledgments of the Order",
         "category": "acknowledgment",
-        "summary": "Respondent must submit acknowledgment of receipt of the Order to the Commission and deliver copies to personnel, obtaining signed acknowledgments from recipients.",
+        "summary": "Respondent must acknowledge receipt of the Order itself, deliver copies to relevant personnel and successor entities, and obtain signed acknowledgments from each recipient.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt to the Commission",
-            "quoted_text": "Respondent, within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order.",
+            "description": "Within 10 days after the effective date, Respondent must submit to the Commission an acknowledgment of receipt of this Order",
+            "quoted_text": "A. Respondent, within 10 days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 65,
+            "quote_end_line": 66
           },
           {
-            "description": "Deliver copy of Order to principals, officers, directors, managers, members, employees, agents, and representatives for 20 years",
-            "quoted_text": "For twenty (20) years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives with responsibilities related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Report and Notices. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "10 days",
+            "description": "For 20 years after the issuance date, Respondent must deliver a copy of this Order to all principals, officers, directors, LLC managers and members, employees, agents, and representatives with relevant responsibilities, and any successor business entities — within 10 days for current personnel, and before assuming responsibilities for all others",
+            "quoted_text": "B. For twenty (20) years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives with responsibilities related to the subject matter of the Order; and (3) any business entity resulting from any change in Page 2 of 5 structure as set forth in the Provision titled Compliance Report and Notices. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "10 days (current personnel); before assuming responsibilities (future personnel)",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 67,
+            "quote_end_line": 76
           },
           {
-            "description": "Obtain signed and dated acknowledgments from recipients",
-            "quoted_text": "From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "From each individual or entity to which a copy of the Order was delivered, Respondent must obtain a signed and dated acknowledgment of receipt within 30 days",
+            "quoted_text": "C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 77,
+            "quote_end_line": 79
           }
         ]
       },
@@ -97,42 +113,52 @@
         "provision_number": "III",
         "title": "Compliance Report and Notices",
         "category": "compliance_reporting",
-        "summary": "Respondent must submit compliance reports and notices to the Commission regarding business information, structural changes, and bankruptcy proceedings.",
+        "summary": "Respondent must submit an initial sworn compliance report within 60 days, and thereafter submit sworn notices within 14 days of any material changes in contact information, corporate structure, or bankruptcy filings.",
         "requirements": [
           {
-            "description": "Submit initial compliance report detailing contact information, business activities, and compliance status",
-            "quoted_text": "Sixty (60) days after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "description": "Within 60 days of the issuance date, submit a sworn compliance report identifying designated contacts, all businesses, describing activities, detailing compliance with each provision, and providing copies of acknowledgments obtained",
+            "quoted_text": "A. Sixty (60) days after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of Respondent’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 83,
+            "quote_end_line": 92
           },
           {
-            "description": "Submit compliance notice of changes to designated point of contact or business structure",
-            "quoted_text": "Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (1) any designated point of contact; or (2) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "description": "Within 14 days of any change in a designated point of contact or in the structure of Respondent or any entity it owns or controls that may affect compliance, submit a sworn compliance notice",
+            "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (1) any designated point of contact; or (2) the structure of Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 93,
+            "quote_end_line": 98
           },
           {
-            "description": "Submit notice of bankruptcy or insolvency proceedings",
-            "quoted_text": "Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing.",
+            "description": "Within 14 days of filing, submit notice of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent",
+            "quoted_text": "C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within 14 days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 99,
+            "quote_end_line": 100
           },
           {
-            "description": "Ensure all submissions are sworn under penalty of perjury",
-            "quoted_text": "Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: \"I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____\" and supplying the date, signatory's full name, title (if applicable), and signature.",
+            "description": "All sworn submissions must be true and accurate and comply with 28 U.S.C. § 1746, including the specified declaration language, date, signatory's full name, title, and signature",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 101,
+            "quote_end_line": 105
           },
           {
-            "description": "Submit all reports via email or overnight courier to specified address",
-            "quoted_text": "Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to Debrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue, N.W., Washington, D.C. 20580. The subject line must begin: In re Tru Communication, Inc. dba TCPrinting.net, FTC File No. 1723171.",
+            "description": "Unless otherwise directed in writing, all submissions must be emailed to Debrief@ftc.gov or sent by overnight courier to the FTC's Associate Director of Enforcement, with the subject line beginning: In re Tru Communication, Inc. dba TCPrinting.net, FTC File No. 1723171",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to Debrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director of Enforcement, Page 3 of 5 Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue, N.W., Washington, D.C. 20580. The subject line must begin: In re Tru Communication, Inc. dba TCPrinting.net, FTC File No. 1723171.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 106,
+            "quote_end_line": 114
           }
         ]
       },
@@ -140,35 +166,43 @@
         "provision_number": "IV",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must create and retain specific records for 20 years, with each record retained for 5 years, including accounting records, personnel records, compliance records, and marketing materials.",
+        "summary": "Respondent must create and retain for five years specified categories of business records for a period of twenty years from the issuance date of the Order.",
         "requirements": [
           {
-            "description": "Create accounting records showing revenues from all goods or services sold",
-            "quoted_text": "accounting records showing the revenues from all goods or services sold;",
-            "deadline": null,
+            "description": "Create and retain for 5 years accounting records showing revenues from all goods or services sold",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for twenty (20) years after the issuance date of the Order, and retain each such record for 5 (five) years. Specifically, Respondent must create and retain the following records: A. accounting records showing the revenues from all goods or services sold;",
+            "deadline": "20 years (creation period); 5 years (retention period)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 116,
+            "quote_end_line": 119
           },
           {
-            "description": "Create personnel records for each person providing services",
-            "quoted_text": "personnel records showing, for each person providing services, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
-            "deadline": null,
+            "description": "Create and retain personnel records for each person providing services, including name, addresses, telephone numbers, job title or position, dates of service, and reason for termination if applicable",
+            "quoted_text": "B. personnel records showing, for each person providing services, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "deadline": "20 years (creation period); 5 years (retention period)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 120,
+            "quote_end_line": 122
           },
           {
-            "description": "Create all records necessary to demonstrate full compliance with the Order",
-            "quoted_text": "all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission;",
-            "deadline": null,
+            "description": "Create and retain all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
+            "quoted_text": "C. all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission; and",
+            "deadline": "20 years (creation period); 5 years (retention period)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 123,
+            "quote_end_line": 124
           },
           {
-            "description": "Create and retain copies of advertisements and marketing materials making representations subject to the Order",
-            "quoted_text": "a copy of each unique advertisement, promotional material, or other marketing material making any representation subject to this Order, and all materials that were relied upon in making the representation.",
-            "deadline": null,
+            "description": "Create and retain a copy of each unique advertisement, promotional material, or other marketing material making any representation subject to this Order, and all materials relied upon in making the representation",
+            "quoted_text": "D. a copy of each unique advertisement, promotional material, or other marketing material making any representation subject to this Order, and all materials that were relied upon in making the representation.",
+            "deadline": "20 years (creation period); 5 years (retention period)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 125,
+            "quote_end_line": 127
           }
         ]
       },
@@ -176,43 +210,60 @@
         "provision_number": "V",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission has the right to monitor Respondent's compliance, including requesting additional reports, inspecting records, interviewing personnel, and conducting undercover investigations.",
+        "summary": "The Commission is authorized to monitor Respondent's compliance through requests for reports and records, direct communications with Respondent and its personnel, and undercover investigative means.",
         "requirements": [
           {
-            "description": "Submit additional compliance reports or records upon Commission request",
-            "quoted_text": "Within ten (10) days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
+            "description": "Within 10 days of receipt of a written request from a Commission representative, Respondent must submit additional compliance reports or other requested information under penalty of perjury, and produce records for inspection and copying",
+            "quoted_text": "A. Within ten (10) days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 131,
+            "quote_end_line": 134
           },
           {
-            "description": "Permit Commission representatives to communicate directly with Respondent and interview affiliated persons",
-            "quoted_text": "For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present.",
+            "description": "Respondent must permit Commission representatives to communicate directly with Respondent and to interview any affiliated individual who has agreed to an interview, with counsel permitted to be present",
+            "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 135,
+            "quote_end_line": 138
           },
           {
-            "description": "Allow Commission to conduct undercover investigations",
-            "quoted_text": "The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Commission may use all other lawful means, including posing as consumers, suppliers, or other individuals or entities, without identification or prior notice, and may use compulsory process under Sections 9 and 20 of the FTC Act",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 139,
+            "quote_end_line": 143
           }
         ]
       },
       {
         "provision_number": "VI",
-        "title": "Order Effective Dates",
+        "title": "Order Effective Dates and Duration",
         "category": "duration",
-        "summary": "The Order is final and effective upon publication on the FTC website and will terminate on November 20, 2037, or 20 years from the most recent federal court complaint filing, whichever is later.",
+        "summary": "The Order is effective upon publication on the FTC website and terminates on November 20, 2037, or 20 years from the most recent date the Commission files a complaint alleging a violation, whichever is later, subject to specified exceptions.",
         "requirements": [
           {
-            "description": "Order is final and effective upon publication on ftc.gov",
-            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order.",
+            "description": "The Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate on",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 148,
+            "quote_end_line": 149
+          },
+          {
+            "description": "The Order terminates on November 20, 2037, or 20 years from the most recent date the United States or the Commission files a complaint in federal court alleging any violation of the Order, whichever is later, subject to specified exceptions for shorter provisions, non-defendant respondents, and post-termination filings",
+            "quoted_text": "publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate on November 20, 2037, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of the Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Provision in this Order that terminates in less than twenty (20) years; B. this Order’s application to any Respondent that is not named as a defendant in such complaint; and C. this Order if such complaint is filed after the order has terminated pursuant to this Provision. If such complaint is dismissed or a federal court rules that Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order as to Respondent will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "deadline": "November 20, 2037 (or later per complaint-filing rule)",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 149,
+            "quote_end_line": 164
           }
         ]
       }
@@ -232,8 +283,27 @@
       "complaint_representations": 2,
       "order_provisions": 6,
       "order_definitions": 1,
-      "order_requirements": 17
+      "order_requirements": 18,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 3,
+        "III": 5,
+        "IV": 4,
+        "V": 3,
+        "VI": 2
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 2,
+        "complaint_total": 2,
+        "order_verified": 18,
+        "order_total": 18
+      }
     },
-    "processing_time_seconds": 133.7
+    "processing_time_seconds": 91.5
   }
 }

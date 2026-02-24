@@ -13,55 +13,90 @@
       "month": 3,
       "year": 2017
     },
-    "legal_authority": "Sections 5(l) and 16(a)(1) of the Federal Trade Commission Act, 15 U.S.C. §§ 45(l) and 56(a)(1)",
+    "legal_authority": "Section 5(l) and Section 16(a)(1) of the Federal Trade Commission Act, 15 U.S.C. §§ 45(l) and 56(a)(1)",
     "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/102-3116-c-4351-upromise-inc"
   },
   "complaint": {
-    "factual_background": "Upromise violated a 2012 FTC Order by distributing the RewardU toolbar from 2013 to 2016 without properly disclosing its extensive data collection practices. The company failed to clearly inform consumers that the toolbar collected search queries, browsing activity, and transaction information including personal, financial, and health data. Upromise also failed to obtain required third-party security assessments that adequately evaluated the toolbar's safeguards, submitting assessments that barely mentioned RewardU and did not address its specific security measures.",
+    "factual_background": "Upromise, Inc. distributed the RewardU toolbar to consumers from March 2013 to January 2016, which collected detailed information about consumers' online activities and search queries. Despite a prior FTC Commission Order (Docket No. C-4351, issued March 2012) requiring Upromise to clearly and prominently disclose its data collection and use practices prior to download on a separate screen, Upromise buried the relevant disclosures in small, light-gray text deep within the download page — two full screens below the fold — in a 'footnote style' format that was difficult to notice and understand. The disclosure was also contradicted by multiple conflicting privacy policies, including those of third-party vendor Rakuten, creating confusion rather than clarity. Additionally, the Order required Upromise to submit third-party assessments covering any targeting tool (including RewardU); however, the assessments Upromise submitted (the Second and Third Fishnet Assessments) mentioned RewardU only superficially and failed to set forth specific safeguards or certify adequate protection of consumer data as required.",
     "representations_made": [
       {
-        "description": "Claimed to clearly and prominently disclose the types of data collected by the RewardU toolbar and how that data was used",
-        "quoted_text": "In numerous instances, Defendant failed to make the disclosure required by the Commission Order. For example, Defendant's disclosure was: A. Not in a sufficiently noticeable size; B. Not presented in an understandable language and syntax; C. Not in print that contrasts highly with the background; and D. Presented with contrary, inconsistent, or mitigating terms.",
-        "source_paragraph": 25
+        "description": "The RewardU download page purported to disclose the toolbar's data collection and use practices, but placed that disclosure after a consumer clicked a link or scrolled down two full screens past a large amount of intervening text",
+        "quoted_text": "19. The RewardU download page purportedly disclosed the toolbar’s data collection and use practices after a consumer clicked a link or scrolled down two full 5 Case 1:17-cv-10442 Document 1 Filed 03/16/17 Page 6 of 15 screens and passed a large amount of intervening text. The download page appeared like this:",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 19,
+        "quote_start_line": 130,
+        "quote_end_line": 137
       },
       {
-        "description": "Claimed to obtain compliant third-party security assessments for the RewardU toolbar as required by the Order",
-        "quoted_text": "Defendant failed to obtain assessments as required by Part VI of the Order.",
-        "source_paragraph": 37
+        "description": "The disclosure text was presented in a 'footnote style' format in small, light-gray font against a white background, written in language difficult for consumers to decipher, and the entire download process directed consumers to contradictory provisions across multiple conflicting privacy policies",
+        "quoted_text": "20. The relevant text was presented in a “footnote style” format, and the relevant information only began in the second paragraph of the second footnote. 21. The text was in a small font, much smaller than the “Get RewardU and get rewarded!” tagline. Even the pointer language immediately beneath the first screen’s download button was in a small font. 22. The relevant text (633 words, see Exhibit B) was written in a style that is difficult for consumers to decipher. For most of the time, the text was in a light gray color against a white background. The entire download process was confusing and directed consumers to contradictory provisions.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 20,
+        "quote_start_line": 143,
+        "quote_end_line": 151
+      },
+      {
+        "description": "A popup box told consumers 'By installing the application, you agree to the terms & conditions below and the privacy policy,' but the referenced terms and policies were from Rakuten and were contradictory to each other and to the Upromise/RewardU text",
+        "quoted_text": "consumer clicked to download the RewardU toolbar, he was presented with a popup box that said, “By installing the application, you agree to the terms & conditions below and the privacy policy.” The hyperlinked privacy policy was the Upromise RewardU privacy policy, which was different from the Upromise privacy policy and the RewardU text. During 2013-2015, the referenced “terms and conditions below” – the text in the scroll box generically titled Toolbar End User License Agreement – was actually the user agreement for Rakuten, and it expressly incorporated two more privacy policies (the Rakuten toolbar privacy policy and the Rakuten general privacy policy), which themselves have different – and contradictory – disclosures, both internally and in contrast to the Upromise/RewardU text. For example, Upromise informed consumers that their search queries may be used to provide search engine results, but one of Rakuten’s policies informs consumers that their search queries may be used to create marketing profiles. In the final step, the consumer checked the box for “I agree to the terms of the EULA and Privacy Policy,” but there was no indication which of the various EULAs or privacy policies was the one to which the consumer was agreeing.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 23,
+        "quote_start_line": 158,
+        "quote_end_line": 172
+      },
+      {
+        "description": "The Second Fishnet Assessment purported to assess Upromise's compliance with the Order's security program requirements covering RewardU, but mentioned RewardU only once in 133 pages and did not identify the required specific administrative, technical, and physical safeguards",
+        "quoted_text": "28. The Second Fishnet Assessment mentions RewardU just once in 133 pages, and does so incorrectly: “Upromise is currently using Compete, Inc. [should be Rakuten] as the sole service provider for target data” and the contract with that company “includes all three of the specified criteria.” The Second Fishnet Assessment does not identify or further discuss the three criteria. 29. Although it addresses other topics, the Second Fishnet Assessment does not “set forth the specific administrative, technical, and physical safeguards” for RewardU. Similarly, the Second Fishnet Assessment does not explain how RewardU’s safeguards protect consumers and otherwise comply with the Order’s requirements.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 28,
+        "quote_start_line": 195,
+        "quote_end_line": 203
+      },
+      {
+        "description": "The Third Fishnet Assessment similarly purported to satisfy the Order's assessment requirement for RewardU but merely noted the existence of contract language with Rakuten without setting forth specific safeguards or certifying adequate protection",
+        "quoted_text": "31. A later Fishnet review (“Third Fishnet Assessment”) merely states, “Rakuten Loyalty, Inc. is the vendor who provides the source code for the toolbar. The third-party agreement with Rakuten includes all three (3) of the specified criteria in the contract language.” 32. Although it addresses other topics, the Third Fishnet Assessment does not “set forth the specific administrative, technical, and physical safeguards” for RewardU. Similarly, the Third Fishnet Assessment does not explain how RewardU’s safeguards protect consumers and otherwise comply with the Order’s requirements. 33. In the absence of those features specific to RewardU, the Third Fishnet Assessment is not a compliant assessment as required by the the Order.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 31,
+        "quote_start_line": 210,
+        "quote_end_line": 219
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Failure to Make Required Disclosures",
-        "representation": "Defendant was required to clearly and prominently disclose all types of data collected by the RewardU targeting tool and all uses of that data, in a sufficiently noticeable size, in understandable language and syntax, in print that contrasts highly with the background, and without contrary or inconsistent terms",
-        "fact": "Defendant's disclosure was presented in small, footnote-style format in light gray text against a white background, buried two screens down after large amounts of intervening text, written in confusing language spanning 633 words, and contradicted by multiple conflicting privacy policies from Rakuten and other service providers",
-        "conclusion": "Therefore, Defendant violated the Commission Order."
+        "title": "Failure to Clearly and Prominently Disclose Targeting Tool Data Collection and Use",
+        "representation": "Upromise purported to disclose the RewardU toolbar's data collection and use practices on its download page, but the disclosure was buried two full screens below the fold in small, light-gray, footnote-style text that was difficult to notice or understand, and was contradicted by multiple conflicting privacy policies presented during the download process.",
+        "fact": "The Commission Order required Upromise to disclose all types of data collected and all uses of that data clearly and prominently, on a separate screen from any EULA or privacy policy, and prior to download — in text of sufficient size, contrast, and clarity for an ordinary consumer to read and comprehend, and with nothing contrary to or inconsistent with the disclosure.",
+        "conclusion": "Therefore, Defendant violated the Commission Order by failing to make the required clear and prominent disclosure — the disclosure was not in a sufficiently noticeable size, not in understandable language and syntax, not in print that contrasts highly with the background, and was presented with contrary, inconsistent, or mitigating terms."
       },
       {
         "count_number": 2,
-        "title": "Failure to Obtain Required Security Assessments",
-        "representation": "Defendant was required to obtain third-party assessments that set forth the specific administrative, technical, and physical safeguards for the RewardU toolbar, explain how those safeguards are adequate, and certify that the security program is operating with sufficient effectiveness",
-        "fact": "The Second Fishnet Assessment mentioned RewardU only once in 133 pages and did so incorrectly, failing to set forth RewardU's specific safeguards or explain their adequacy. The Third Fishnet Assessment merely stated the vendor contract included three specified criteria without identifying or discussing them, and similarly failed to set forth RewardU's safeguards or explain their adequacy",
-        "conclusion": "Therefore, Defendant violated the Commission Order."
+        "title": "Failure to Obtain Compliant Third-Party Assessments Covering the RewardU Targeting Tool",
+        "representation": "Upromise submitted the Second and Third Fishnet Assessments to the FTC as purportedly satisfying the Order's requirement to obtain and submit privacy assessments for any Covered Online Service incorporating a targeting tool, including RewardU.",
+        "fact": "The Commission Order required each assessment to set forth the specific administrative, technical, and physical safeguards implemented for the Covered Online Service (including any targeting tool), explain how those safeguards are appropriate and meet the Order's requirements, and certify that Upromise's security program operates with sufficient effectiveness to protect the security, confidentiality, and integrity of personal information. Neither the Second nor the Third Fishnet Assessment evaluated RewardU in any meaningful way, set forth specific safeguards for it, or provided the required certification.",
+        "conclusion": "Therefore, Defendant violated the Commission Order by failing to obtain and submit compliant assessments as required under Part VI of the Order."
       }
     ]
   },
   "order": {
     "definitions": {
       "Defendant": "Upromise, Inc. and its successors and assigns.",
-      "FTC Order": "the Decision and Order issued on March 27, 2012 by the Federal Trade Commission, In the Matter of Upromise, Inc., FTC No. 1023116, Docket No. C-4351, attached as Exhibit A and made a part of this Order.",
+      "FTC Order": "The Decision and Order issued on March 27, 2012 by the Federal Trade Commission, In the Matter of Upromise, Inc., FTC No. 1023116, Docket No. C-4351, attached as Exhibit A and made a part of this Order.",
       "Affected Consumers": "persons who, prior to the date of issuance of this order, downloaded and installed the TurboSaver Toolbar and had the Personalized Offers feature enabled.",
-      "Clearly and prominently": "In textual communications (e.g., printed publications or words displayed on the screen of a computer or a mobile device), the required disclosures are of a type, size, and location sufficiently noticeable for an ordinary consumer to read and comprehend them, in print that contrasts highly with the background on which they appear; In communications disseminated orally or through audible means (e.g., radio or streaming audio), the required disclosures are delivered in a volume and cadence sufficient for an ordinary consumer to hear and comprehend them; In communications disseminated through video means (e.g., television or streaming video), the required disclosures are in writing in a form consistent with subparagraph (A) of this definition and shall appear on the screen for a duration sufficient for an ordinary consumer to read and comprehend them, and in the same language as the predominant language that is used in the communication; In communications made through interactive media, such as the Internet, online services, and software, the required disclosures are unavoidable and presented in a form consistent with subparagraph (A) of this definition, in addition to any audio or video presentation of them; and In all instances, the required disclosures are presented in an understandable language and syntax, and with nothing contrary to, inconsistent with, or in mitigation of the disclosures used in any communication of them.",
+      "Clearly and prominently": "\"Clearly and prominently'' shall mean as follows:\nA. In textual communications (e.g., printed publications or words displayed on the screen of a computer or a mobile device), the required disclosures are of a type, size, and location sufficiently noticeable for an ordinary consumer to read and comprehend them, in print that contrasts highly with the background on which they appear;\nB. In communications disseminated orally or through audible means (e.g., radio or streaming audio), the required disclosures are delivered in a volume and cadence sufficient for an ordinary consumer to hear and comprehend them;\nC. In communications disseminated through video means (e.g., television or streaming video), the required disclosures are in writing in a form consistent with subparagraph (A) of this definition and shall appear on the screen for a duration sufficient for an ordinary consumer to read and comprehend them, and in the same language as the predominant language that is used in the communication;\nD. In communications made through interactive media, such as the Internet, online services, and software, the required disclosures are unavoidable and presented in a form consistent with subparagraph (A) of this definition, in addition to any audio or video presentation of them; and\nE. In all instances, the required disclosures are presented in an understandable language and syntax, and with nothing contrary to, inconsistent with, or in mitigation of the disclosures used in any communication of them.",
       "Collected Information": "any information or data transmitted from a computer by the TurboSaver Toolbar as a result of the Personalized Offers feature being enabled prior to the date of issuance of this order to any computer server owned by, operated by, or operated for the benefit of respondent.",
       "Commerce": "as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44.",
       "Computer": "any desktop or laptop computer, handheld device, telephone, or other electronic product or device that has a platform on which to download, install, or run any software program, code, script, or other content and to play any digital audio, visual, or audiovisual content.",
       "Covered Online Service": "any product or service using or incorporating a Targeting Tool. Covered Online Service includes, but is not limited to, the TurboSaver Toolbar with the Personalized Offers feature enabled.",
-      "Personal information": "individually identifiable information from or about an individual consumer including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) a telephone number; (e) a Social Security number; (f) a driver's license number or other government-issued identification number; (g) prescription information, such as medication and dosage, and prescribing physician name, address, and telephone number, health insurer name, insurance account number, or insurance policy number; (h) a bank account, debit card, or credit card account number; (i) a persistent identifier, such as a customer number held in a \"cookie\" or processor serial number, that is combined with other available data that identifies an individual consumer; (j) a biometric record; or (k) any information that is combined with any of (a) through (j) above.",
+      "Personal information": "\"Personal information\" shall mean individually identifiable information from or about an individual consumer including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) a telephone number; (e) a Social Security number; (f) a driver's license number or other government-issued identification number; (g) prescription information, such as medication and dosage, and prescribing physician name, address, and telephone number, health insurer name, insurance account number, or insurance policy number; (h) a bank account, debit card, or credit card account number; (i) a persistent identifier, such as a customer number held in a \"cookie\" or processor serial number, that is combined with other available data that identifies an individual consumer; (j) a biometric record; or (k) any information that is combined with any of (a) through (j) above.",
       "Personalized Offers feature": "the component of the TurboSaver Toolbar that Upromise has offered under the name of \"Personalized Offers.\"",
       "Respondent": "Upromise, Inc., and its successors and assigns, and its officers, agents, representatives, and employees.",
-      "Targeting Tool": "any software program or application distributed by or on behalf of respondent that is installed on a consumer's computer, whether as a standalone product or as a feature of another product, and used by or on behalf of respondent to record or transmit information about any activity occurring on that computer involving the computer's interactions with websites, services, applications, or forms, unless (a) the activity involves transmission of information related to the configuration of the software program or application itself; (b) the activity involves a consumer's interactions with respondent's websites, services, applications, and/or forms; or (c) the activity involves a consumer's interactions with respondent's member merchants and that information is collected, retained, or used only as necessary for the purpose of providing the consumer's reward service benefits for transactions involving those merchants. The TurboSaver Toolbar when configured to collect consumer data, for example, with the Personalized Offers feature enabled, is a Targeting Tool.",
+      "Targeting Tool": "\"Targeting Tool\" shall mean any software program or application distributed by or on behalf of respondent that is installed on a consumer's computer, whether as a standalone product or as a feature of another product, and used by or on behalf of respondent to record or transmit information about any activity occurring on that computer involving the computer's interactions with websites, services, applications, or forms, unless (a) the activity involves transmission of information related to the configuration of the software program or application itself; (b) the activity involves a consumer's interactions with respondent's websites, services, applications, and/or forms; or (c) the activity involves a consumer's interactions with respondent's member merchants and that information is collected, retained, or used only as necessary for the purpose of providing the consumer's reward service benefits for transactions involving those merchants.\nThe TurboSaver Toolbar when configured to collect consumer data, for example, with the Personalized Offers feature enabled, is a Targeting Tool.",
       "Third party": "any individual or entity other than respondent, except that a third party shall not include a service provider of respondent that: A. only uses or receives personal information collected by or on behalf of respondent for and at the direction of the respondent and no other individual or entity, B. does not disclose the data, or any individually identifiable information derived from such data, to any individual or entity other than respondent, and C. does not use the data for any other purpose."
     },
     "provisions": [
@@ -69,14 +104,16 @@
         "provision_number": "I",
         "title": "Prohibition Against Violating FTC Order",
         "category": "prohibition",
-        "summary": "Defendant is permanently enjoined from violating any provision of the 2012 FTC Order.",
+        "summary": "Defendant and all persons acting in concert with it are permanently enjoined from violating, directly or indirectly, any provision of the 2012 FTC Order.",
         "requirements": [
           {
-            "description": "Must not violate any provision of the FTC Order",
+            "description": "Defendant and all officers, agents, representatives, employees, attorneys, and persons in active concert with it are permanently enjoined from violating, directly or indirectly, through any corporation, subsidiary, division, or other device, any provision of the FTC Order.",
             "quoted_text": "Defendant, and its officers, agents, representatives, employees, and attorneys, and all persons in active concert or participation with any of them who receive actual notice of this Order by personal service or otherwise, are permanently enjoined from violating, directly or indirectly, through any corporation, subsidiary, division, or other device, any provision of the FTC Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 46,
+            "quote_end_line": 49
           }
         ]
       },
@@ -84,21 +121,43 @@
         "provision_number": "II",
         "title": "Civil Penalty Judgment",
         "category": "affirmative_obligation",
-        "summary": "Defendant must pay a civil penalty of $500,000 to the FTC.",
+        "summary": "A civil penalty judgment of $500,000 is entered against Defendant, which must be paid within 7 days of entry of this Order via electronic fund transfer.",
         "requirements": [
           {
-            "description": "Pay civil penalty of $500,000",
-            "quoted_text": "Within seven (7) days of entry of this Order, Defendant must pay the civil penalty in the form of an electronic fund transfer in accordance with the procedures specified by the Consumer Protection Branch, Civil Division, U.S. Department of Justice, Washington, DC 20530.",
-            "deadline": "7 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Relinquish all rights to transferred assets",
-            "quoted_text": "Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and will not seek the return of any assets.",
+            "description": "Judgment of $500,000 is entered against Defendant as a civil penalty.",
+            "quoted_text": "Judgment in the amount of five hundred thousand dollars ($500,000) is entered against Defendant as a civil penalty.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 55,
+            "quote_end_line": 56
+          },
+          {
+            "description": "Defendant must pay the civil penalty via electronic fund transfer within 7 days of entry of this Order, in accordance with procedures specified by the Consumer Protection Branch, U.S. Department of Justice.",
+            "quoted_text": "A. Within seven (7) days of entry of this Order, Defendant must pay the civil penalty in the form of an electronic fund transfer in accordance with the procedures specified by the Consumer Protection Branch, Civil Division, U.S. Department of Justice, Washington, DC 20530.",
+            "deadline": "7 days",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 57,
+            "quote_end_line": 59
+          },
+          {
+            "description": "Defendant relinquishes all legal and equitable right, title, and interest in assets transferred pursuant to this Order and will not seek their return.",
+            "quoted_text": "B. Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and will not seek the return of any assets.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 60,
+            "quote_end_line": 61
+          },
+          {
+            "description": "The facts alleged in the Complaint will be taken as true without further proof in any subsequent civil litigation by or on behalf of the FTC.",
+            "quoted_text": "C. The facts alleged in the Complaint will be taken as true, without further proof, in any subsequent civil litigation by or on behalf of the FTC, including in a proceeding to enforce its rights to any payment or monetary judgment pursuant to this Order.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 62,
+            "quote_end_line": 64
           }
         ]
       },
@@ -106,14 +165,16 @@
         "provision_number": "III",
         "title": "Evaluation of Informed User Consent to Data Collection and Use",
         "category": "assessment",
-        "summary": "Defendant must obtain a third-party evaluation certifying compliance with disclosure and consent requirements before making any Targeting Tool available to consumers.",
+        "summary": "Before making any Targeting Tool available to consumers, Defendant must obtain an evaluation and report from a qualified, FTC-approved third-party professional certifying compliance with the FTC Order's disclosure and consent requirements.",
         "requirements": [
           {
-            "description": "Obtain third-party evaluation of disclosures and consent mechanisms prior to making Targeting Tool available",
+            "description": "If required to make a disclosure or obtain consent under Section I of the FTC Order, Defendant must obtain an evaluation and report from a qualified, objective, independent third-party professional specializing in website design and user experience, subject to FTC Associate Director for Enforcement approval, prior to making the Targeting Tool available to consumers.",
             "quoted_text": "If Defendant is required to make a disclosure or obtain consent pursuant to Section I of the FTC Order, prior to the date on which Defendant makes the Targeting Tool available to consumers, Defendant must obtain an evaluation and report from a qualified, objective, independent third-party professional specializing in website design and user experience (\"evaluator\"). Defendant's evaluator selection is subject to approval from the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission. For any disclosure or consent governed by Section I of the FTC Order, the evaluator must certify Defendant's adherence to the FTC Order's \"clearly and prominently\" disclosure requirement and \"express, affirmative\" consent requirement.",
-            "deadline": null,
+            "deadline": "Prior to making the Targeting Tool available to consumers",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 66,
+            "quote_end_line": 74
           }
         ]
       },
@@ -121,14 +182,16 @@
         "provision_number": "IV",
         "title": "Assessment of Targeting Tool",
         "category": "assessment",
-        "summary": "Defendant must obtain advance FTC approval of the scope and design of any assessment conducted pursuant to the FTC Order.",
+        "summary": "For any assessment conducted under Section VI of the FTC Order, Defendant must obtain advance written approval from the FTC Associate Director for Enforcement for the assessment's scope and design.",
         "requirements": [
           {
-            "description": "Obtain advance written approval from FTC for assessment scope and design",
+            "description": "For any assessment conducted pursuant to Section VI of the FTC Order, Defendant must obtain advance written approval of the assessment's scope and design from the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
             "quoted_text": "For any assessment conducted pursuant to Section VI of the FTC Order, Defendant must obtain advance written approval of the assessment's scope and design from the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
-            "deadline": null,
+            "deadline": "Advance (prior to each assessment)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 80,
+            "quote_end_line": 82
           }
         ]
       },
@@ -136,35 +199,52 @@
         "provision_number": "V",
         "title": "Removal of the RewardU Toolbar and Associated Cookies",
         "category": "affirmative_obligation",
-        "summary": "Defendant must expire RewardU cookies and notify all affected consumers to uninstall the toolbar.",
+        "summary": "Defendant must permanently expire all RewardU-related cookies and notify all affected consumers to uninstall the toolbar and delete associated cookies within 30 days of entry of the Order.",
         "requirements": [
           {
-            "description": "Configure systems to permanently expire RewardU-related cookies",
-            "quoted_text": "Defendant must configure its systems to permanently expire any RewardU-related cookie previously placed by Defendant.",
+            "description": "Defendant must configure its systems to permanently expire any RewardU-related cookie previously placed by Defendant.",
+            "quoted_text": "Defendant must configure its systems to permanently expire any RewardU-related cookie previously placed by Defendant. Defendant must effectively notify all consumers who",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 84,
+            "quote_end_line": 85
           },
           {
-            "description": "Email notice to consumers at their most recent email address",
-            "quoted_text": "Defendant must provide the notice, within 30 days after the date of entry of the Order: By emailing the notice to consumers at the email address they most recently provided to Upromise",
+            "description": "Defendant must effectively notify all consumers who downloaded the RewardU toolbar to uninstall the toolbar and delete any associated cookies, explaining how to perform these actions, within 30 days after entry of the Order.",
+            "quoted_text": "previously placed by Defendant. Defendant must effectively notify all consumers who downloaded the RewardU toolbar to uninstall the toolbar and delete any associated cookies. Defendant's notice must explain to consumers how to perform these actions. Defendant must provide the notice, within 30 days after the date of entry of the Order:",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 85,
+            "quote_end_line": 88
           },
           {
-            "description": "Post notice on RewardU page of Upromise.com website for at least 2 years",
-            "quoted_text": "By posting a notice on the RewardU page of the Upromise.com website for at least 2 years",
+            "description": "Defendant must provide notice by emailing it to consumers at the email address they most recently provided to Upromise.",
+            "quoted_text": "A. By emailing the notice to consumers at the email address they most recently provided to Upromise;",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 89,
+            "quote_end_line": 90
           },
           {
-            "description": "Provide notice to consumers who complain or inquire about RewardU toolbar for next 3 years",
-            "quoted_text": "By providing the notice to any consumer who complains or inquires about the privacy or security of the RewardU toolbar during the next 3 years.",
-            "deadline": null,
+            "description": "Defendant must post a notice on the RewardU page of the Upromise.com website for at least 2 years.",
+            "quoted_text": "B. By posting a notice on the RewardU page of the Upromise.com website for at least 2 years;",
+            "deadline": "30 days (posting to begin); maintain for 2 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 91,
+            "quote_end_line": 92
+          },
+          {
+            "description": "Defendant must provide the notice to any consumer who complains or inquires about the privacy or security of the RewardU toolbar during the next 3 years.",
+            "quoted_text": "C. By providing the notice to any consumer who complains or inquires about the privacy or security of the RewardU toolbar during the next 3 years.",
+            "deadline": "30 days (begin); continue for 3 years",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 93,
+            "quote_end_line": 94
           }
         ]
       },
@@ -172,28 +252,34 @@
         "provision_number": "VI",
         "title": "Order Acknowledgments",
         "category": "acknowledgment",
-        "summary": "Defendant must submit acknowledgment of receipt of the Order and deliver copies to personnel.",
+        "summary": "Defendant must submit a sworn acknowledgment of receipt of the Order to the FTC within 7 days, deliver copies of the Order to all principals and relevant personnel, and obtain signed acknowledgments from each recipient within 30 days.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt of Order to FTC",
-            "quoted_text": "Defendant, within 7 days of entry of this Order, must submit to the FTC an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Defendant must submit to the FTC a sworn acknowledgment of receipt of this Order within 7 days of entry.",
+            "quoted_text": "A. Defendant, within 7 days of entry of this Order, must submit to the FTC an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 97,
+            "quote_end_line": 98
           },
           {
-            "description": "Deliver copy of Order to all principals, officers, directors, LLC managers and members",
-            "quoted_text": "For 5 years after entry of this Order, Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives who participate in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within 7 days of entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "7 days",
+            "description": "For 5 years after entry of this Order, Defendant must deliver a copy of the Order to all principals, officers, directors, LLC managers and members; all employees, agents, and representatives who participate in conduct related to the Order's subject matter; and any business entity resulting from a structural change. Delivery must occur within 7 days of entry for current personnel, and before they assume responsibilities for all others.",
+            "quoted_text": "B. For 5 years after entry of this Order, Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, 4 Case 1:17-cv-10442-RGS Document 4 Filed 03/23/17 Page 5 of 22 agents, and representatives who participate in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within 7 days of entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "7 days for current personnel; before assuming responsibilities for new personnel",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 99,
+            "quote_end_line": 108
           },
           {
-            "description": "Obtain signed and dated acknowledgments from recipients of Order",
-            "quoted_text": "From each individual or entity to which Defendant delivered a copy of this Order, Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "From each individual or entity to which Defendant delivered a copy of this Order, Defendant must obtain a signed and dated acknowledgment of receipt within 30 days.",
+            "quoted_text": "C. From each individual or entity to which Defendant delivered a copy of this Order, Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 109,
+            "quote_end_line": 111
           }
         ]
       },
@@ -201,28 +287,52 @@
         "provision_number": "VII",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Defendant must submit compliance reports and notices to the FTC at specified intervals.",
+        "summary": "Defendant must submit a sworn compliance report one year after entry of the Order, and for 20 years thereafter must submit sworn compliance notices within 14 days of certain changes in structure or contact information, and within 14 days of any bankruptcy filing.",
         "requirements": [
           {
-            "description": "Submit initial compliance report one year after entry of Order",
-            "quoted_text": "One year after entry of this Order, Defendant must submit a compliance report, sworn under penalty of perjury: Defendant must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Plaintiff or FTC may use to communicate with Defendant; (b) identify all of Defendant's businesses by all of its names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business; (d) describe in detail whether and how Defendant is in compliance with each Section of this Order; and (e) provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the FTC.",
+            "description": "One year after entry of this Order, Defendant must submit a compliance report sworn under penalty of perjury, identifying contact information, all of Defendant's businesses, describing activities of each business, describing compliance with each section of the Order, and providing copies of all Order Acknowledgments obtained.",
+            "quoted_text": "A. One year after entry of this Order, Defendant must submit a compliance report, sworn under penalty of perjury: 1. Defendant must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Plaintiff or FTC may use to communicate with Defendant; (b) identify all of Defendant's businesses by all of its names, telephone numbers, and physical, postal, email, and Internet addresses; ( c) describe the activities of each business; ( d) describe in detail whether and how Defendant is in compliance with each Section of this Order; and ( e) provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the FTC.",
             "deadline": "1 year",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 114,
+            "quote_end_line": 122
           },
           {
-            "description": "Submit compliance notice within 14 days of any change in designated point of contact or business structure",
-            "quoted_text": "For 20 years after entry of this Order, Defendant must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: Defendant must report any change in: (a) any designated point of contact; or (b) the structure of Defendant or any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including the creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
-            "deadline": "14 days",
+            "description": "For 20 years after entry of this Order, Defendant must submit a sworn compliance notice within 14 days of any change in designated points of contact or in the structure of Defendant or any controlled entity that may affect compliance obligations, including creation, merger, sale, or dissolution of subsidiaries, parents, or affiliates.",
+            "quoted_text": "B. For 20 years after entry of this Order, Defendant must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: I. Defendant must report any change in: (a) any designated point of contact; or (b) the structure of Defendant or any entity that Defendant has any ownership interest in or 5 Case 1:17-cv-10442-RGS Document 4 Filed 03/23/17 Page 6 of 22 controls directly or indirectly that may affect compliance obligations arising under this Order, including the creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days of any qualifying change; ongoing for 20 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 123,
+            "quote_end_line": 133
           },
           {
-            "description": "Submit notice of bankruptcy or insolvency proceeding",
-            "quoted_text": "Defendant must submit to the FTC notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Defendant within 14 days of its filing.",
+            "description": "Defendant must submit to the FTC notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Defendant within 14 days of its filing.",
+            "quoted_text": "C. Defendant must submit to the FTC notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Defendant within 14 days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 134,
+            "quote_end_line": 135
+          },
+          {
+            "description": "Any submission required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, including required declaration language, date, signatory's full name, title, and signature.",
+            "quoted_text": "D. Any submission to the FTC required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: \"I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: __\" and supplying the date, signatory's full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 136,
+            "quote_end_line": 140
+          },
+          {
+            "description": "Unless otherwise directed by the FTC in writing, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC. The subject line must begin: FTC v. Upromise, Matter No. C43501.",
+            "quoted_text": "E. Unless otherwise directed by a FTC representative in writing, all submissions to the FTC pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: FTC v. Upromise, Matter No. C43501.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 141,
+            "quote_end_line": 145
           }
         ]
       },
@@ -230,28 +340,34 @@
         "provision_number": "VIII",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Defendant must create and retain records demonstrating compliance for 20 years, with each record retained for 5 years.",
+        "summary": "Defendant must create certain records for 20 years after entry of the Order and retain each such record for 5 years, including compliance records, accounting records, and personnel records.",
         "requirements": [
           {
-            "description": "Create and retain records demonstrating compliance with Order and FTC Order",
-            "quoted_text": "Defendant must create certain records for 20 years after entry of the Order, and retain each such record for 5 years. Specifically, Defendant must create and retain the following records: All records necessary to demonstrate full compliance with each provision of this Order and the FTC Order, including all submissions to the FTC",
-            "deadline": null,
+            "description": "Defendant must create records for 20 years and retain each for 5 years, including all records necessary to demonstrate full compliance with each provision of this Order and the FTC Order, including all submissions to the FTC.",
+            "quoted_text": "Defendant must create certain records for 20 years after entry of the Order, and retain each such record for 5 years. Specifically, Defendant must create and retain the following records: A. All records necessary to demonstrate full compliance with each provision of this Order and the FTC Order, including all submissions to the FTC;",
+            "deadline": "Ongoing for 20 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 147,
+            "quote_end_line": 150
           },
           {
-            "description": "Create and retain accounting records showing revenues",
-            "quoted_text": "Accounting records showing the revenues from all goods or services sold or licensed",
-            "deadline": null,
+            "description": "Defendant must create and retain accounting records showing revenues from all goods or services sold or licensed.",
+            "quoted_text": "B. Accounting records showing the revenues from all goods or services sold or licensed; and",
+            "deadline": "Ongoing for 20 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 151,
+            "quote_end_line": 152
           },
           {
-            "description": "Create and retain personnel records",
-            "quoted_text": "Personnel records showing, for each person providing services, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination.",
-            "deadline": null,
+            "description": "Defendant must create and retain personnel records showing, for each person providing services, their name, addresses, telephone numbers, job title or position, dates of service, and reason for termination if applicable.",
+            "quoted_text": "C. Personnel records showing, for each person providing services, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination.",
+            "deadline": "Ongoing for 20 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 157,
+            "quote_end_line": 159
           }
         ]
       },
@@ -259,28 +375,34 @@
         "provision_number": "IX",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "Defendant must cooperate with FTC monitoring activities, including providing documents, appearing for depositions, and permitting employee interviews.",
+        "summary": "Plaintiff and the FTC have broad rights to monitor Defendant's compliance, including demanding additional reports, conducting depositions and discovery, communicating directly with Defendant, and using undercover means, all without further court order.",
         "requirements": [
           {
-            "description": "Submit additional compliance reports or information within 14 days of written request",
-            "quoted_text": "Within 14 days of receipt of a written request from a representative of the Plaintiff or the FTC, Defendant must submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying. The Plaintiff and the FTC are authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
-            "deadline": "14 days",
+            "description": "Within 14 days of receipt of a written request from the Plaintiff or the FTC, Defendant must submit additional compliance reports or other requested information sworn under penalty of perjury, appear for depositions, and produce documents for inspection and copying. The Plaintiff and FTC are authorized to obtain discovery using Federal Rules of Civil Procedure 29, 30, 31, 33, 34, 36, 45, and 69 without further leave of court.",
+            "quoted_text": "A. Within 14 days of receipt of a written request from a representative of the Plaintiff or the FTC, Defendant must submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying. The Plaintiff and the FTC are authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
+            "deadline": "14 days of written request",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 163,
+            "quote_end_line": 168
           },
           {
-            "description": "Permit FTC to communicate directly with Defendant and interview employees",
-            "quoted_text": "For matters concerning this Order, the Plaintiff and the FTC are authorized to communicate directly with Defendant. Defendant must permit representatives of the Plaintiff and the FTC to interview any employee or other person affiliated with Defendant who has agreed to such an interview. The person interviewed may have counsel present.",
+            "description": "The Plaintiff and the FTC are authorized to communicate directly with Defendant and to interview any employee or affiliated person who consents to an interview (with counsel present if desired).",
+            "quoted_text": "B. For matters concerning this Order, the Plaintiff and the FTC are authorized to communicate directly with Defendant. Defendant must permit representatives of the Plaintiff and the FTC to interview any employee or other person affiliated with Defendant who has agreed to such an interview. The person interviewed may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 169,
+            "quote_end_line": 172
           },
           {
-            "description": "Allow FTC to pose as consumers or other entities without identification",
-            "quoted_text": "The Plaintiff and the FTC may use all other lawful means, including posing, through its representatives as consumers, suppliers, or other individuals or entities, to Defendant or any individual or entity affiliated with Defendant, without the necessity of identification or prior notice. Nothing in this Order limits the FTC's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Plaintiff and the FTC may use all other lawful means, including undercover posing as consumers, suppliers, or other individuals or entities, to Defendant or any affiliated individual or entity, without identification or prior notice. Nothing in this Order limits the FTC's lawful use of compulsory process under Sections 9 and 20 of the FTC Act.",
+            "quoted_text": "C. The Plaintiff and the FTC may use all other lawful means, including posing, through its representatives as consumers, suppliers, or other individuals or entities, to Defendant or any individual or entity affiliated with Defendant, without the necessity of identification or prior notice. Nothing in this Order limits the FTC's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-l.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 173,
+            "quote_end_line": 177
           }
         ]
       },
@@ -288,271 +410,398 @@
         "provision_number": "X",
         "title": "Retention of Jurisdiction",
         "category": "duration",
-        "summary": "The Court retains jurisdiction for purposes of construction, modification, and enforcement of the Order.",
+        "summary": "The Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction over the matter",
+            "description": "This Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
             "quoted_text": "This Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 183,
+            "quote_end_line": 184
           }
         ]
       },
       {
-        "provision_number": "I",
-        "title": "Data Collection Disclosure and Consent Requirements for Targeting Tools",
+        "provision_number": "I (FTC Order)",
+        "title": "Disclosure and Consent for Targeting Tool",
         "category": "affirmative_obligation",
-        "summary": "Respondent must provide clear and prominent disclosures and obtain express affirmative consent before enabling any Targeting Tool that collects consumer data.",
+        "summary": "Respondent must clearly and prominently disclose all types of data collected and how it is used, and must obtain express affirmative consent from consumers prior to enabling any Targeting Tool, including for previously installed TurboSaver Toolbars before making material changes.",
         "requirements": [
           {
-            "description": "Provide clear and prominent disclosure of all data types collected, on separate screen prior to any EULA or privacy policy, and obtain express affirmative consent before consumer enables Targeting Tool",
-            "quoted_text": "IT IS ORDERED that respondent, directly or through any corporation, subsidiary, division, website, or other device, in connection with the advertising, promotion, offering for sale, sale, or distribution of any Targeting Tool, in or affecting commerce, shall, Prior to the consumer enabling (by downloading, installing, or otherwise activating) any Targeting Tool: Clearly and prominently, and prior to the display of and on a separate screen from, any \"end user license agreement,\" \"privacy policy,\" \"terms of use\" page, or similar document, disclose: all the types of data that the Targeting Tool will collect, including but not limited to, if applicable, a statement that the data includes transactions or communications between the consumer and third parties in secure sessions, interactions with shopping baskets, application forms, online accounts, web-based email accounts, or search engine pages, and if the information includes personal, financial or health information. how the data is used, including if the data is shared with a third party, other than as reasonably necessary: (i) to comply with applicable law, regulation, or legal process, (ii) to enforce respondent's terms of use, or (iii) to detect, prevent, or mitigate fraud or security vulnerabilities. Obtain express affirmative consent from the consumer to the enabling (by downloading, installing, or otherwise activating) and to the collection of data.",
-            "deadline": null,
+            "description": "Prior to the consumer enabling any Targeting Tool, Respondent must clearly and prominently disclose, on a separate screen prior to any end user license agreement or privacy policy, all types of data the Targeting Tool will collect (including data from secure sessions, shopping baskets, application forms, online accounts, web-based email, search engines, and whether personal, financial, or health information is included).",
+            "quoted_text": "A. Prior to the conswner enabling (by downloading, installing, or otheIWise activating) any Targeting Tool: 1. Clearly and prominently, and prior to the display of and on a separate screen from, any \"end user license agreement,\" \"privacy policy,\" \"terms of use\" page, or similar document, disclose: a) all the types of data that the Targeting Tool will collect, including but not limited to, if applicable, a statement that the data includes transactions or communications between the consumer and third parties in secure sessions, interactions with shopping baskets, application forms, online accounts, web-based email 4 Case 1:17-cv-10442-RGS Document 4 Filed 03/23/17 Page 16 of 22 accounts, or search engine pages, and if the information includes personal, financial or health information.",
+            "deadline": "Prior to enabling the Targeting Tool",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 387,
+            "quote_end_line": 402
           },
           {
-            "description": "For TurboSaver Toolbars installed before order issuance, provide notice and obtain consent before enabling data collection or making material changes to stated practices",
-            "quoted_text": "For those TurboSaver Toolbars installed by consumers before the date of issuance of this order, prior to (1) enabling data collection through any Targeting Tool or (2) otherwise making any material change from stated practices about collection or sharing of personal information through the TurboSaver Toolbar, provide the notice and obtain the express consent described in subparts A(1) and (2) of this Part.",
-            "deadline": null,
+            "description": "Prior to the consumer enabling any Targeting Tool, Respondent must clearly and prominently disclose how the data is used, including if it is shared with a third party other than as reasonably necessary to comply with law, enforce terms of use, or detect/prevent fraud or security vulnerabilities.",
+            "quoted_text": "b) how the data is used, including if the data is shared with a third party, other than as reasonably necessary: (i) to comply with applicable law, regulation, or legal process, (ii) to enforce respondent's terms of use, or (iii) to detect, prevent, or mitigate fraud or security vulnerabilities.",
+            "deadline": "Prior to enabling the Targeting Tool",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 403,
+            "quote_end_line": 407
+          },
+          {
+            "description": "Prior to enabling any Targeting Tool, Respondent must obtain express affirmative consent from the consumer to the enabling and to the collection of data.",
+            "quoted_text": "2. Obtain express affirmative consent from the consumer to the enabling (by downloading, installing, or otherwise activating) and to the collection of data.",
+            "deadline": "Prior to enabling the Targeting Tool",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 408,
+            "quote_end_line": 410
+          },
+          {
+            "description": "For TurboSaver Toolbars installed before the date of issuance of the FTC Order, prior to enabling data collection or making any material change to stated practices about collection or sharing of personal information, Respondent must provide the required notice and obtain express consent.",
+            "quoted_text": "B. For those TurboSaver Toolbars installed by consumers before the date of issuance of this order, prior to (1) enabling data collection through any Targeting Tool or (2) otherwise making any material change from stated practices about collection or sharing of personal information through the TurboSaverToolbar, provide the notice and obtain the express consent described in subparts A{U and (2) of this Part.",
+            "deadline": "Prior to enabling data collection or making material changes",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 411,
+            "quote_end_line": 416
           }
         ]
       },
       {
-        "provision_number": "II",
-        "title": "Notice to Affected Consumers About TurboSaver Toolbar Data Collection",
+        "provision_number": "II (FTC Order)",
+        "title": "Notification to Affected Consumers",
         "category": "affirmative_obligation",
-        "summary": "Respondent must notify Affected Consumers about data collection from the Personalized Offers feature and how to disable it.",
+        "summary": "Respondent must notify Affected Consumers about the Personalized Offers feature, the data collected, and how to disable and uninstall the TurboSaver Toolbar through website posting, direct consumer inquiries, and direct notice.",
         "requirements": [
           {
-            "description": "Post clear and prominent notice on website for 2 years",
-            "quoted_text": "Beginning within thirty (30) days after the date of service of this order and for two (2) years after the date of service of this order, posting of a clear and prominent notice on its website.",
-            "deadline": "30 days",
+            "description": "Beginning within 30 days of service of the FTC Order and continuing for 2 years, Respondent must post a clear and prominent notice on its website notifying Affected Consumers about the Personalized Offers feature and how to disable and uninstall the TurboSaver Toolbar.",
+            "quoted_text": "1. Begmmng within thirty (30) days after the date of service of this order and for two (2) years after the date of service of this order, posting of a clear and prominent notice on its website.",
+            "deadline": "Within 30 days; maintain for 2 years",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 426,
+            "quote_end_line": 428
           },
           {
-            "description": "Inform Affected Consumers who complain or inquire about TurboSaver Toolbar for 3years",
-            "quoted_text": "Beginning within thirty (30) days after the date of service of this order and for three (3) years after the date of service of this order, informing Affected Consumers who complain or inquire about the privacy or security of the TurboSaver Toolbar.",
-            "deadline": "30 days",
+            "description": "Beginning within 30 days of service of the FTC Order and for 3 years thereafter, Respondent must inform Affected Consumers who complain or inquire about the privacy or security of the TurboSaver Toolbar.",
+            "quoted_text": "2. Beginning within thirty (30) days after the date of service of this order and for three (3) years after the date of service of this order, informing Affected Consumers who complain or inquire about the privacy or security of the TurboSaver Toolbar.",
+            "deadline": "Within 30 days; continue for 3 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 429,
+            "quote_end_line": 432
           },
           {
-            "description": "Provide direct notice to Affected Consumers who have Personalized Offers feature enabled",
-            "quoted_text": "Within sixty (60) days after the date of service of this order, providing direct, clear and prominent notice to Affected Consumers who have the Personalized Offers feature enabled.",
+            "description": "Within 60 days of service of the FTC Order, Respondent must provide direct, clear, and prominent notice to Affected Consumers who have the Personalized Offers feature enabled.",
+            "quoted_text": "3. Within sixty (60) days after.the date of service of this order, providing direct, clear and prominent notice to Affected Consumers who have the Personalized Offers feature enabled.",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 433,
+            "quote_end_line": 435
           },
           {
-            "description": "Provide toll-free telephonic and email support to help Affected Consumers disable feature and uninstall toolbar",
-            "quoted_text": "Provide prompt, toll-free, telephonic and electronic mail support to help Affected Consumers disable the Personalized Offers feature and, if requested, uninstall the TurboSaver Toolbar.",
+            "description": "Respondent must provide prompt, toll-free, telephonic and electronic mail support to help Affected Consumers disable the Personalized Offers feature and, if requested, uninstall the TurboSaver Toolbar.",
+            "quoted_text": "B. Provide prompt, toll-free, telephonic and electronic mail support to help Affected Conswners disable the Personalized Offers feature and, if requested, uninstall the TurboSaver Toolbar.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 440,
+            "quote_end_line": 442
           }
         ]
       },
       {
-        "provision_number": "III",
+        "provision_number": "III (FTC Order)",
         "title": "Deletion of Collected Information",
         "category": "affirmative_obligation",
-        "summary": "Respondent must delete or destroy all Collected Information within 5 days.",
+        "summary": "Respondent must delete or destroy all Collected Information in its custody or control within 5 days of service of the FTC Order.",
         "requirements": [
           {
-            "description": "Delete or destroy all Collected Information in respondent's custody or control",
+            "description": "Within 5 days of service of the FTC Order, Respondent must delete or destroy, or cause to be deleted or destroyed, all Collected Information in its custody or control, unless otherwise directed by a representative of the Commission.",
             "quoted_text": "IT IS FURTHER ORDERED that respondent shall, within five (5) days after the date of service of this order, delete or destroy, or cause to be deleted or destroyed, all Collected Information in respondent's custody or control, unless otherwise directed by a representative of the Commission.",
             "deadline": "5 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 444,
+            "quote_end_line": 447
           }
         ]
       },
       {
-        "provision_number": "IV",
-        "title": "Prohibition Against Misrepresentations About Security and Privacy",
+        "provision_number": "IV (FTC Order)",
+        "title": "Prohibition Against Misrepresentations About Privacy and Security",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent the extent to which it maintains and protects the security, privacy, confidentiality, or integrity of personal information.",
+        "summary": "Respondent must not make any false or misleading representations about the extent to which it maintains and protects the security, privacy, confidentiality, or integrity of personal information collected from consumers.",
         "requirements": [
           {
-            "description": "Must not misrepresent security, privacy, confidentiality, or integrity of personal information",
+            "description": "Respondent must not make any representation, expressly or by implication, about the extent to which it maintains and protects the security, privacy, confidentiality, or integrity of any personal information collected from or about consumers, unless the representation is true and non-misleading.",
             "quoted_text": "IT IS FURTHER ORDERED that respondent, directly or through any corporation, subsidiary, division, website, or other device, in connection with its advertising, marketing, promotion, or offering of any service or product in or affecting commerce, shall not make any representation, in any manner, expressly or by implication, about the extent to which respondent maintains and protects the security, privacy, confidentiality, or integrity of any personal information collected from or about consumers, unless the representation is true, and non-misleading.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 449,
+            "quote_end_line": 455
           }
         ]
       },
       {
-        "provision_number": "V",
-        "title": "Information Security Program",
+        "provision_number": "V (FTC Order)",
+        "title": "Comprehensive Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondent must establish and maintain a comprehensive information security program to protect personal information.",
+        "summary": "Respondent must establish and maintain a comprehensive, fully documented information security program with administrative, technical, and physical safeguards appropriate to its size, complexity, and the sensitivity of the personal information it collects.",
         "requirements": [
           {
-            "description": "Establish and maintain comprehensive information security program with administrative, technical, and physical safeguards",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent, directly or through any corporation, subsidiary, division, website, or other device, in connection with its advertising, marketing, promotion, or offering of any product or service, in or affecting commerce, shall maintain a comprehensive information security program that is reasonably designed to protect the security, privacy, confidentiality, and integrity of personal information collected from or about consumers. This section may be satisfied through the review and maintenance of an existing program so long as that program fulfills the requirements set forth herein. Such program, the content and implementation of which must be fully documented in writing, shall contain administrative, technical, and physical safeguards appropriate to respondent's size and complexity and the nature and scope of respondent's activities, and the sensitivity of the personal information collected from or about consumers, including: The designation of an employee or employees to coordinate and be accountable for the information security program; The identification of material internal and external risks that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of personal information and an assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management; (2) information systems, including network and software design, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, account takeovers, or other systems failures; The design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures; The development and use of reasonable steps to select and retain service providers capable of appropriately safeguarding personal information such service providers receive from respondent or obtain on respondent's behalf, and the requirement, by contract, that such service providers implement and maintain appropriate safeguards; and The evaluation and adjustment of respondent's information security program in light of the results of the testing and monitoring required by subpart C, any material changes to respondent's operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its information security program.",
+            "description": "Respondent must maintain a comprehensive information security program reasonably designed to protect the security, privacy, confidentiality, and integrity of personal information collected from or about consumers. The program must be fully documented in writing and contain administrative, technical, and physical safeguards appropriate to Respondent's size and complexity.",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent, directly or through any corporation, subsidiary, division, website, or other device, in connection with its advertising, marketing, promotion, or offering of any product or service, in or affecting commerce, shall maintain a comprehensive information security program that is reasonably designed to protect the security, privacy, confidentiality, and integrity of personal information collected fr~m or about conswners. This section may be satisfied through the review and maintenance of an existing program so long as that program fulfills the requirements set forth herein. Such program, the content and implementation of which must be fully documented in writing, shall contain administrative, technical, and physical safeguards appropriate to respondent's size and complexity and the nature and scope of respondent's activities, and the sensitivity of the personal information collected from or about conswners, including:",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 457,
+            "quote_end_line": 467
+          },
+          {
+            "description": "Respondent must designate an employee or employees to coordinate and be accountable for the information security program.",
+            "quoted_text": "A. The designation of an employee or employees to coordinate and be accountable for the information secwity program;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 468,
+            "quote_end_line": 469
+          },
+          {
+            "description": "Respondent must identify material internal and external risks that could result in unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of personal information and assess the sufficiency of safeguards in place to control these risks, including risks in employee training and management; information systems including network and software design, processing, storage, transmission, and disposal; and prevention, detection, and response to attacks, intrusions, account takeovers, or other systems failures.",
+            "quoted_text": "B. The identification of material internal and external risks that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of personal information and an assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to: (1) 6 Case 1:17-cv-10442-RGS Document 4 Filed 03/23/17 Page 18 of 22 employee training and management; (2) information systems, including network and software design, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, account takeovers, or other systems failures;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 470,
+            "quote_end_line": 483
+          },
+          {
+            "description": "Respondent must design and implement reasonable safeguards to control identified risks and regularly test or monitor the effectiveness of the safeguards' key controls, systems, and procedures.",
+            "quoted_text": "C. The design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 484,
+            "quote_end_line": 487
+          },
+          {
+            "description": "Respondent must develop and use reasonable steps to select and retain service providers capable of appropriately safeguarding personal information, and must require by contract that such service providers implement and maintain appropriate safeguards.",
+            "quoted_text": "D. The development and use of reasonable steps to select and retain service providers capable of appropriately safeguarding personal information such service providers receive from respondent or obtain on respondent's behalf, and the requirement, by contract, that such service providers implement and maintain appropriate safeguards; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 488,
+            "quote_end_line": 492
+          },
+          {
+            "description": "Respondent must evaluate and adjust its information security program in light of testing and monitoring results, any material changes to operations or business arrangements, or any other circumstances that may have a material impact on the effectiveness of the program.",
+            "quoted_text": "E. The evaluation and adjustment of respondent's information security program in light of the results of the testing and monitoring required by subpart C, any material changes to respondent's operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its information security program.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 493,
+            "quote_end_line": 498
           }
         ]
       },
       {
-        "provision_number": "VI",
-        "title": "Third-Party Assessments of Information Security Program",
+        "provision_number": "VI (FTC Order)",
+        "title": "Third-Party Security Assessments of Covered Online Services",
         "category": "assessment",
-        "summary": "Respondent must obtain initial and biennial third-party assessments of its information security program for any Covered Online Service for 20 years.",
+        "summary": "Respondent must obtain initial and biennial third-party security assessments for any Covered Online Service from a qualified, independent professional, covering the first 180 days and each two-year period thereafter for 20 years.",
         "requirements": [
           {
-            "description": "Obtain initial third-party assessment covering first 180 days after service of order",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Part V of this order, for any Covered Online Service respondent shall obtain initial and biennial assessments and reports (\"Assessments\") from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. Professionals qualified to prepare such Assessments shall be: a person qualified as a Certified Information System Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); a person holding Global Information Assurance Certification (GIAC) from the SysAdmin, Audit, Network, Security (SANS) Institute; or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580. The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the order for the initial Assessment, and (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments.",
-            "deadline": "180 days",
+            "description": "Respondent must obtain initial and biennial assessments and reports from a qualified, objective, independent third-party professional (CISSP, CISA, GIAC/SANS certified, or FTC-approved equivalent) for any Covered Online Service, covering the first 180 days after service of the FTC Order and each two-year period thereafter for 20 years.",
+            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with-Part V of this order, for any Covered Online Service respondent shall obtain initial and biennial assessments and reports (\"Assessments\") from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. Professionals qualified to prepare such Assessments shall be: a person qualified as a Certified Information System Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); a person holding Global Information Assurance Certification (GIAC) from the SysAdmin, Audit, Network, Security (SANS) Institute; or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580. The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the order for the initial Assessment, and (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments. Each Assessment shall:",
+            "deadline": "Initial: first 180 days; Biennial thereafter for 20 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 500,
+            "quote_end_line": 512
           },
           {
-            "description": "Complete each Assessment within 60 days after end of reporting period",
-            "quoted_text": "Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
-            "deadline": "60 days",
+            "description": "Each Assessment must set forth the specific administrative, technical, and physical safeguards implemented and maintained during the reporting period.",
+            "quoted_text": "A. Set forth the specific administrative, technical, and physical safeguards that respondent has implemented and maintained during the reporting period;",
+            "deadline": null,
             "verified": true,
-            "confidence": 0.9945390070921986
+            "confidence": 1.0,
+            "quote_start_line": 517,
+            "quote_end_line": 519
           },
           {
-            "description": "Provide initial Assessment to FTC within 10 days after preparation",
-            "quoted_text": "Respondent shall provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared.",
-            "deadline": "10 days",
+            "description": "Each Assessment must explain how safeguards are appropriate to Respondent's size and complexity, the nature and scope of its activities, and the sensitivity of personal information collected.",
+            "quoted_text": "B. Explain how such safeguards are appropriate to respondent's size and complexity, and the nature and scope of respondent's activities, and the sensitivity of the personal infonnation collected from or about consumers;",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 520,
+            "quote_end_line": 522
           },
           {
-            "description": "Retain all subsequent biennial Assessments and provide to FTC within 10 days of request",
-            "quoted_text": "All subsequent biennial Assessments shall be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request.",
-            "deadline": "10 days",
+            "description": "Each Assessment must explain how the implemented safeguards meet or exceed the protections required by Part V of the FTC Order.",
+            "quoted_text": "C. Explain how the safeguards that have been implemented meet or exceed the protections required by Part V of this order; and",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 523,
+            "quote_end_line": 524
+          },
+          {
+            "description": "Each Assessment must certify that Respondent's security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of personal information is protected throughout the reporting period.",
+            "quoted_text": "D. Certify that respondent's security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of personal information is protected and has so operated throughout the reporting period.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 525,
+            "quote_end_line": 528
+          },
+          {
+            "description": "Each Assessment must be prepared and completed within 60 days after the end of the reporting period. The initial Assessment must be provided to the FTC Associate Director for Enforcement within 10 days after preparation. All subsequent biennial Assessments must be retained until the order is terminated and provided to the Associate Director within 10 days of request.",
+            "quoted_text": "Each Assessment shall be prepared and completed within sixty (6 0) days after the end of the reporting period to which the Assessment applies. Respondent shall provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared. All subsequent biennial Assessments shall be retained by respondent until the order is terminated and provided to the Associate Director ofEnforcement within ten (10) days of request.",
+            "deadline": "60 days after end of reporting period; provide to FTC within 10 days of preparation (initial) or request (biennial)",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 529,
+            "quote_end_line": 535
           }
         ]
       },
       {
-        "provision_number": "VII",
-        "title": "Recordkeeping for Representations and Assessments",
+        "provision_number": "VII (FTC Order)",
+        "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must maintain records related to representations covered by the order for 5 years and Assessment materials for 3 years.",
+        "summary": "Respondent must maintain and make available for FTC inspection, for 5 years after the last dissemination of any covered representation, all advertisements, supporting materials, contradicting evidence, and Order acknowledgments; and for 3 years after each assessment, all materials used to prepare that assessment.",
         "requirements": [
           {
-            "description": "Maintain and make available records for 5 years after last dissemination of any covered representation",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall, for a period of five (5) years after the last date of dissemination of any representation covered by this order, maintain and upon request make available to the Commission for inspection and copying: All advertisements, labeling, packaging and promotional material containing the representation; All materials relied upon in disseminating the representation; All tests, reports, studies, surveys, demonstrations, or other evidence in its possession or control that contradict, qualify, or call into question the representation, or the basis relied upon for the representation, including complaints and other communications with consumers or with governmental or consumer protection organizations; and All acknowledgments of receipt of this order, obtained pursuant to Part IX.",
-            "deadline": null,
+            "description": "For 5 years after the last date of dissemination of any representation covered by the FTC Order, Respondent must maintain and upon request make available to the FTC: all advertisements, labeling, packaging, and promotional material containing the representation; all materials relied upon in disseminating the representation; all tests, reports, studies, surveys, demonstrations, or other evidence in its possession that contradict, qualify, or call into question the representation; and all Order acknowledgments obtained pursuant to Part IX.",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall, for a period of five (5) years after the last date of dissemination of any representation covered by this order, maintain and upon request make available to the Commission for inspection and copying: A. All advertisements, labeling, packaging and promotional material containing the representation; B. All materials relied upon in disseminating the representation; C. All tests, reports, studies, surveys, demonstrations, or other evidence in its possession or control that contradict, qualify, or call into question the representation, or the basis relied upon for the representation, including complaints and other communications with consumers or with governmental or consumer protection organizations; and D. All acknowledgments of receipt of this order, obtained pursuant to Part IX.",
+            "deadline": "5 years after last dissemination",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 537,
+            "quote_end_line": 549
           },
           {
-            "description": "Maintain and make available Assessment materials for 3 years after preparation of each Assessment",
+            "description": "For 3 years after the date of preparation of each Assessment required under Part VI of the FTC Order, Respondent must maintain and upon request make available to the FTC all materials relied upon to prepare the Assessment, including plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments.",
             "quoted_text": "Moreover, for a period of three (3) years after the date of preparation of each Assessment required under Part VI of this order, respondent shall maintain and upon request make available to the Commission for inspection and copying all materials relied upon to prepare the Assessment, whether prepared by or on behalf of the respondent, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, for the compliance period covered by such Assessment.",
-            "deadline": null,
+            "deadline": "3 years after preparation of each Assessment",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 554,
+            "quote_end_line": 559
           }
         ]
       },
       {
-        "provision_number": "VIII",
-        "title": "Cooperation with FTC Investigations",
+        "provision_number": "VIII (FTC Order)",
+        "title": "Cooperation with the Commission",
         "category": "monitoring",
-        "summary": "Respondent must cooperate in good faith with FTC investigations and provide truthful testimony when requested.",
+        "summary": "Respondent must cooperate in good faith with the FTC in connection with this action or any related subsequent investigation, appearing for interviews, conferences, discovery, and proceedings as reasonably requested.",
         "requirements": [
           {
-            "description": "Cooperate with FTC in investigations and appear for interviews, conferences, discovery, and document review",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall, in connection with this action or any subsequent investigations related to or associated with the transactions or the occurrences that are the subject of the Commission's complaint, cooperate in good faith with the Commission and appear at such places and times as the Commission shall reasonably request, after written notice, for interviews, conferences, pretrial discovery, review of documents, and for such other matters as may be reasonably requested by the Commission. If requested in writing by the Commission, respondent shall appear and provide truthful testimony in any trial, deposition, or other proceeding related to or associated with the transactions or the occurrences that are the subject of the complaint, without the service of a subpoena.",
+            "description": "Respondent must cooperate in good faith with the Commission and appear at such places and times as the Commission reasonably requests, after written notice, for interviews, conferences, pretrial discovery, review of documents, and other matters. If requested in writing, Respondent must appear and provide truthful testimony in any trial, deposition, or other proceeding related to the complaint, without the service of a subpoena.",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall, in connection with this action or any subsequent investigations related to or associated with the transactions or the occurrences that are the subject of the Commission's complaint, cooperate in good faith with the Commission and appear at such places and times as the Commission shall reasonably request, after written notice, for interviews, conferences, pretrial discovery, review of documents, and for such other matters as may be reasonably requested by the Commission. Ifr equested in writing by the Commission, respondent shall appear and provide truthful testimony in any trial, deposition, or other proceeding related to or associated with the transactions or the occurrences that are the subject of the complaint, without the service of a subpoena.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 561,
+            "quote_end_line": 569
           }
         ]
       },
       {
-        "provision_number": "IX",
-        "title": "Order Acknowledgments for FTC Order",
+        "provision_number": "IX (FTC Order)",
+        "title": "Order Acknowledgments",
         "category": "acknowledgment",
-        "summary": "Respondent must deliver the FTC Order to current and future personnel and obtain signed acknowledgments.",
+        "summary": "Respondent must deliver a copy of the FTC Order to all current and future principals, officers, directors, and relevant managers, and obtain a signed and dated acknowledgment from each recipient.",
         "requirements": [
           {
-            "description": "Deliver copy of order to all current and future principals, officers, directors, and managers with relevant responsibilities",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall deliver a copy of this order to: (1) all current and future principals, officers, and directors; and (2) all current and future managers who have responsibilities with respect to the subject matter of this order, and shall secure from each such person a signed and dated statement acknowledging receipt of the order, with any electronic signatures complying with the requirements of the E-Sign Act, 15 U.S.C. § 7001 et seq.",
-            "deadline": null,
+            "description": "Respondent must deliver a copy of the FTC Order to all current and future principals, officers, and directors, and to all current and future managers who have responsibilities related to the subject matter of the order, and obtain a signed and dated acknowledgment from each person. Delivery to current personnel must occur within 30 days of service of the order; delivery to future personnel must occur within 30 days after they assume such responsibilities.",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall deliver a copy of this order to: (1) all current and future principals, officers, and directors; and (2) all current and future managers who have responsibilities with respect to the subject matter of this order, and shall secure from each such person a signed and dated statement acknowledging receipt of the order, with any electronic signatures complying with the requirements of the E-Sign Act, 15 U.S.C. § 7001 et seq. Respondent shall deliver this order to current personnel within thirty (30) days after the date of service of the order, and to future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "deadline": "30 days for current personnel; within 30 days of assuming responsibilities for future personnel",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 571,
+            "quote_end_line": 578
+          }
+        ]
+      },
+      {
+        "provision_number": "X (FTC Order)",
+        "title": "Compliance Reporting / Notification of Changes",
+        "category": "compliance_reporting",
+        "summary": "Respondent must notify the FTC at least 30 days prior to any change that may affect compliance obligations, including dissolution, sale, merger, creation or dissolution of subsidiaries, bankruptcy filing, or change in name or address.",
+        "requirements": [
+          {
+            "description": "Respondent must notify the Commission at least 30 days prior to any change in Respondent that may affect compliance obligations, including dissolution, assignment, sale, merger, emergence of a successor company, creation or dissolution of a subsidiary, parent, or affiliate engaging in acts subject to the order, proposed bankruptcy filing, or a change in Respondent's name or address. If Respondent learns of a qualifying change fewer than 30 days before it is to occur, notice must be given as soon as practicable.",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall notify the Commission at least thirty (30) days prior to any change in respondent that may affect compliance obligations arising under this order, including but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor company; the creation or dissolution of a subsidiary (including an LLC), parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in respondent's name or address. Provided, however, that with respect to any proposed change about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
+            "deadline": "30 days prior (or as soon as practicable)",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 580,
+            "quote_end_line": 589
           },
           {
-            "description": "Deliver order to current personnel within 30 days",
-            "quoted_text": "Respondent shall deliver this order to current personnel within thirty (30) days after the date of service of the order, and to future personnel within thirty (30) days after the person assumes such position or responsibilities.",
-            "deadline": "30 days",
+            "description": "All required notices under this Part must be sent by overnight courier to the Associate Director of Enforcement, Bureau of Consumer Protection, FTC, unless otherwise directed. In lieu of overnight courier, notices may be sent by first-class mail if an electronic version is contemporaneously sent to Debrief@ftc.gov.",
+            "quoted_text": "Unless otherwise directed by a representative of the Commission, all notices required by this Part shall be sent by overnight courier (not the U.S. Postal Service) to the Associate Director of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580, with the subject line FTC v. Upromise. Provided. however, that, in lieu of overnight courier, notices may be sent by first-class mail, but only if an electronic version of such notices is contemporaneously sent to the Commission at Debrief@ftc.gov.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 594,
+            "quote_end_line": 600
           }
         ]
       },
       {
-        "provision_number": "X",
-        "title": "Compliance Notifications for FTC Order",
+        "provision_number": "XI (FTC Order)",
+        "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondent must notify the FTC at least 30 days prior to any change affecting compliance obligations.",
+        "summary": "Respondent must file a written compliance report within 60 days of service of the FTC Order and submit additional written reports within 10 days of the FTC's written request.",
         "requirements": [
           {
-            "description": "Notify FTC at least 30 days prior to any change affecting compliance obligations",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall notify the Commission at least thirty (30) days prior to any change in respondent that may affect compliance obligations arising under this order, including but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor company; the creation or dissolution of a subsidiary (including an LLC), parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in respondent's name or address. Provided, however, that with respect to any proposed change about which respondent learns less than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
-            "deadline": "30 days",
-            "verified": true,
-            "confidence": 1.0
-          }
-        ]
-      },
-      {
-        "provision_number": "XI",
-        "title": "Compliance Reports for FTC Order",
-        "category": "compliance_reporting",
-        "summary": "Respondent must file compliance reports with the FTC within 60 days and when requested.",
-        "requirements": [
-          {
-            "description": "File initial compliance report within 60 days after service of order",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall, within sixty (60) days after service of this order, and at such other times as the FTC may require, file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form in which respondent has complied with this order.",
+            "description": "Within 60 days of service of the FTC Order, and at such other times as the FTC may require, Respondent must file a true and accurate written report setting forth in detail the manner and form in which Respondent has complied with the order.",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall, within sixty (60) days after service of this order, and at such other times as the FTC may require, file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form in which",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 602,
+            "quote_end_line": 604
           },
           {
-            "description": "Submit additional reports within 10 days of receipt of written notice",
-            "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, respondent shall submit additional true and accurate written reports.",
-            "deadline": "10 days",
+            "description": "Within 10 days of receipt of written notice from a representative of the Commission, Respondent must submit additional true and accurate written reports.",
+            "quoted_text": "respondent has complied with this order. Within ten (I 0) days of receipt of written notice from a representative of the Commission, respondent shall submit additional true and accurate written reports.",
+            "deadline": "10 days of written request",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 605,
+            "quote_end_line": 607
           }
         ]
       },
       {
-        "provision_number": "XII",
-        "title": "Order Duration and Termination",
+        "provision_number": "XII (FTC Order)",
+        "title": "Order Duration / Termination",
         "category": "duration",
-        "summary": "The FTC Order will terminate on December 31, 2031, or 20 years from the most recent date a complaint is filed alleging violation of the order, whichever comes later.",
+        "summary": "The FTC Order terminates on December 31, 2031, or 20 years from the most recent date the United States or the FTC files a complaint alleging any violation of the order in federal court, whichever is later.",
         "requirements": [
           {
-            "description": "Order terminates on specified date or 20 years from most recent complaint filing",
-            "quoted_text": "This order will terminate on December 31, 2031, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: Any Part of this order that terminates in less than twenty (20) years; This order's application to any respondent that is not named as a defendant in such complaint; and This order if such complaint is filed after the order has terminated pursuant to this Part.",
+            "description": "The FTC Order will terminate on December 31, 2031, or 20 years from the most recent date that the United States or the Commission files a complaint alleging any violation of the order in federal court, whichever comes later, subject to specified exceptions for parts with shorter termination periods, respondents not named as defendants, and complaints filed after order termination.",
+            "quoted_text": "This order will terminate on December 31, 2031, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part of this order that terminates in less than twenty (20) years; B. This order's application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part. ·",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 609,
+            "quote_end_line": 617
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This order will terminate on December 31, 2031, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: Any Part of this order that terminates in less than twenty (20) years; This order's application to any respondent that is not named as a defendant in such complaint; and This order if such complaint is filed after the order has terminated pursuant to this Part."
+      "termination_text": "This order will terminate on December 31, 2031, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part of this order that terminates in less than twenty (20) years; B. This order's application to any respondent that is not named as a defendant in such complaint; and C. This order if such complaint is filed after the order has terminated pursuant to this Part."
     }
   },
   "metadata": {
@@ -562,11 +811,46 @@
     },
     "extraction_stats": {
       "complaint_counts": 2,
-      "complaint_representations": 2,
+      "complaint_representations": 5,
       "order_provisions": 22,
       "order_definitions": 13,
-      "order_requirements": 44
+      "order_requirements": 58,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 4,
+        "III": 1,
+        "IV": 1,
+        "V": 5,
+        "VI": 3,
+        "VII": 5,
+        "VIII": 3,
+        "IX": 3,
+        "X": 1,
+        "I (FTC Order)": 4,
+        "II (FTC Order)": 4,
+        "III (FTC Order)": 1,
+        "IV (FTC Order)": 1,
+        "V (FTC Order)": 6,
+        "VI (FTC Order)": 6,
+        "VII (FTC Order)": 2,
+        "VIII (FTC Order)": 1,
+        "IX (FTC Order)": 1,
+        "X (FTC Order)": 2,
+        "XI (FTC Order)": 2,
+        "XII (FTC Order)": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 3
+      },
+      "verification_details": {
+        "complaint_verified": 5,
+        "complaint_total": 5,
+        "order_verified": 58,
+        "order_total": 58
+      }
     },
-    "processing_time_seconds": 261.9
+    "processing_time_seconds": 246.0
   }
 }

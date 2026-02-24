@@ -6,54 +6,58 @@
       "incorporation_state": "Illinois",
       "entity_type": "corporation",
       "address": "300 N. Elizabeth Street, 4th Floor, Chicago, Illinois 60607",
-      "business_description": "PLS Financial Services, Inc. provides management services to over 300 PLS Loan Stores and PLS Check Cashers operating in at least nine states. The company establishes policies and procedures for safe collection, handling, and disposal of sensitive consumer financial information, and offers products and services including payday loans, automobile title loans, short-term installment loans, debit cards, credit cards, and check cashing services."
+      "business_description": "PLS Financial Services provides management services to over 300 PLS Loan Stores and PLS Check Cashers across nine states. The company offers payday loans, automobile title loans, short-term installment loans, check cashing, debit cards, credit cards, and related financial services to consumers."
     },
     "commissioners": [],
     "case_date": {
       "month": 11,
       "year": 2012
     },
-    "legal_authority": "Sections 5(a), 13(b), and 16(a) of the Federal Trade Commission Act, 15 U.S.C. §§ 45(a), 53(b), and 56(a); Section 621(a) of the Fair Credit Reporting Act, 15 U.S.C. § 1681s(a); the Disposal Rule, 16 C.F.R. Part 682; the Safeguards Rule, 16 C.F.R. Part 314; and the Privacy Rule, 16 C.F.R. Part 313",
+    "legal_authority": "Sections 5(a), 13(b), and 16(a) of the Federal Trade Commission Act, 15 U.S.C. §§ 45(a), 53(b), and 56(a); Section 621(a) of the Fair Credit Reporting Act, 15 U.S.C. § 1681s(a); Disposal Rule, 16 C.F.R. Part 682; Safeguards Rule, 16 C.F.R. Part 314; Privacy Rule, 16 C.F.R. Part 313",
     "violation_type": "both",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/1023172-pls-financial-services-inc-et-al"
   },
   "complaint": {
-    "factual_background": "PLS Financial Services and related entities operated over 300 payday loan stores and check cashing locations across multiple states, collecting sensitive consumer information including Social Security numbers, bank account information, and consumer reports. Despite written statements claiming they maintained safeguards complying with federal regulations, the defendants failed to implement reasonable security measures, failed to properly dispose of sensitive documents, and failed to provide required privacy notices. As a result, intact documents containing consumers' personal information, including at least 29 consumer reports, were found in unsecured dumpsters accessible to the public.",
+    "factual_background": "PLS Financial Services and related entities operated over 300 payday loan stores and check cashing locations across nine states. Despite representing to consumers that they maintained physical, electronic, and procedural safeguards to protect personal information, defendants failed to implement reasonable security measures. As a result, intact documents containing consumers' names, Social Security numbers, bank account information, and at least 29 consumer reports were found in unsecured dumpsters accessible to the public on multiple occasions in 2010.",
     "representations_made": [
       {
-        "description": "Claimed to maintain physical, electronic and procedural safeguards complying with federal regulations",
-        "quoted_text": "We maintain physical electronic and procedural safeguards that comply with federal regulations to guard your nonpublic information.",
-        "source_paragraph": 15
+        "description": "Defendants represented they maintain physical, electronic, and procedural safeguards that comply with federal regulations to guard consumers' nonpublic information",
+        "quoted_text": "practices, including but not limited to a one page \"Privacy Notice\" which stated in part, \"We maintain physical electronic and procedural safeguards that comply with federal regulations to guard your nonpublic information.\"",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 15,
+        "quote_start_line": 127,
+        "quote_end_line": 129
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Disposal Rule Violations",
-        "representation": "Defendants maintained and possessed consumer information derived from consumer reports for business purposes",
-        "fact": "Through acts and practices described in paragraphs 16 to 18, PLS and PLS-Illinois failed to take reasonable measures to protect against unauthorized access to or use of consumer information in connection with its disposal, including failing to implement disposal policies, train employees, and oversee proper disposal, resulting in intact documents containing personal information being found in unsecured dumpsters",
-        "conclusion": "PLS's and PLS-Illinois's violations of the FCRA and the Disposal Rule constitute unfair or deceptive acts or practices in violation of Section 5(a) of the FTC Act"
+        "title": "Disposal Rule Violation",
+        "representation": "Defendants maintained and possessed consumer information derived from consumer reports but failed to take reasonable measures to protect against unauthorized access during disposal",
+        "fact": "Defendants failed to implement policies for proper disposal, failed to train employees on handling sensitive information, and failed to oversee disposal processes, resulting in intact documents with personal information being found in unsecured public dumpsters",
+        "conclusion": "PLS and PLS-Illinois failed to take reasonable measures to protect against unauthorized access to or use of consumer information in connection with its disposal, in violation of Section 628 of the FCRA and Section 682.3(a) of the Disposal Rule"
       },
       {
         "count_number": 2,
-        "title": "Safeguards Rule Violations",
-        "representation": "As financial institutions subject to the Safeguards Rule, PLS and PLS-Illinois were required to develop comprehensive written information security programs with reasonable administrative, technical, and physical safeguards",
-        "fact": "Through acts alleged in paragraph 16, PLS and PLS-Illinois failed to develop or implement reasonable administrative, technical and physical safeguards to protect the security, confidentiality and integrity of customer information, failed to identify reasonably foreseeable internal and external risks to customer information, and failed to develop, implement, or maintain a comprehensive written information security program",
-        "conclusion": "PLS and PLS-Illinois violated the Safeguards Rule, 16 C.F.R. Part 314"
+        "title": "Safeguards Rule Violation",
+        "representation": "As financial institutions, PLS and PLS-Illinois were required to develop and implement a comprehensive written information security program with reasonable administrative, technical, and physical safeguards",
+        "fact": "PLS and PLS-Illinois failed to implement reasonable safeguards, failed to identify foreseeable risks to customer information, and failed to develop or maintain a comprehensive written information security program",
+        "conclusion": "PLS and PLS-Illinois failed to develop or implement reasonable administrative, technical, and physical safeguards to protect the security, confidentiality, and integrity of customer information, in violation of the Safeguards Rule"
       },
       {
         "count_number": 3,
-        "title": "Deceptive Data Security Misrepresentation",
-        "representation": "Defendants represented, expressly or by implication, that they had implemented reasonable and appropriate measures to protect sensitive consumer information from unauthorized access",
-        "fact": "In truth and in fact, as described in paragraphs 16 to 18, Defendants did not implement reasonable and appropriate measures to protect sensitive consumer information from unauthorized access",
-        "conclusion": "Therefore, the representations described in paragraph 30 were false or misleading and constitute deceptive acts or practices in violation of Section 5(a) of the FTC Act"
+        "title": "Deceptive Security Claims",
+        "representation": "Defendants represented that they had implemented reasonable and appropriate measures to protect sensitive consumer information from unauthorized access",
+        "fact": "Defendants did not implement reasonable and appropriate measures to protect sensitive consumer information from unauthorized access, as evidenced by the failures described in paragraphs 16 to 18",
+        "conclusion": "The representations described in paragraph 30 were false or misleading and constitute deceptive acts or practices in violation of Section 5(a) of the FTC Act"
       },
       {
         "count_number": 4,
-        "title": "Privacy Rule Violations - Failure to Provide Privacy Notices",
-        "representation": "As financial institutions subject to the Privacy Rule, PLS and PLS-Illinois were required to provide privacy notices to customers no later than when a customer relationship arises and annually for the duration of that relationship",
-        "fact": "As set forth in paragraph 19, at various times from at least March 2009 through October 2010, PLS and PLS-Illinois failed to ensure that their customers were provided with a copy of its privacy policy, with files in many PLS Loan Stores having unsigned, outdated or missing privacy notices",
-        "conclusion": "PLS and PLS-Illinois violated the Privacy Rule, 16 C.F.R. Part 313"
+        "title": "Privacy Rule Violation",
+        "representation": "As financial institutions, PLS and PLS-Illinois were required to provide customers with clear privacy notices at the start of the customer relationship and annually thereafter",
+        "fact": "From at least March 2009 to October 2010, PLS and PLS-Illinois frequently failed to ensure customers were provided with privacy notices, with many files containing unsigned, outdated, or missing privacy notices despite being aware of these deficiencies",
+        "conclusion": "PLS and PLS-Illinois failed to ensure that their customers were provided with a copy of its privacy policy in violation of the Privacy Rule"
       }
     ]
   },
@@ -63,73 +67,118 @@
       "Group": "PLS Group, Inc., and its successors and assigns. Group is part of a common enterprise that includes entities that hold themselves out as PLS Loan Stores and PLS Check Cashers.",
       "PLS-Illinois": "The Payday Loan Store of Illinois, Inc., and its successors and assigns. PLS-Illinois is part of a common enterprise that includes entities that hold themselves out as PLS Loan Stores and PLS Check Cashers.",
       "Defendants": "PLS, Group, and PLS-Illinois, individually, collectively, or in any combination.",
-      "Covered Entity": "any business entity that Group controls, directly or indirectly, which collects, handles, or stores personal information. Because PLS-Illinois is a Covered Entity, 'Non-Defendant Covered Entity' means any Covered Entity other than PLS-Illinois.",
+      "Covered Entity": "any business entity that Group controls, directly or indirectly, which collects, handles, or stores personal information. Because PLS-Illinois is a Covered Entity, \"Non-Defendant Covered Entity\" means any Covered Entity other than PLS-Illinois.",
       "Fair Credit Reporting Act": "15 U.S.C. §§ 1681-1681x, as amended.",
       "person, consumer, and consumer report": "as defined in Sections 603(b), (c), and (d), respectively, of the FCRA, 15 U.S.C. §§ 1681a(b), 1681a(c), and 1681a(d).",
-      "Personal information": "individually identifiable information from or about an individual consumer including but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) a telephone number; (e) a Social Security number; (f) a driver's license or other state-issued identification number; (g) a financial institution account number; (h) credit or debit card information; (i) a persistent identifier, such as a customer number held in a 'cookie,' a static Internet Protocol ('IP') address, or processor serial number; or (j) any information that is combined with any of (a) through (i) above.",
+      "Personal information": "individually identifiable information from or about an individual consumer including but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) a telephone number; (e) a Social Security number; (f) a driver's license or other state-issued identification number; (g) a financial institution account number; (h) credit or debit card information; (i) a persistent identifier, such as a customer number held in a \"cookie\", a static Internet Protocol (\"IP\") address, or processor serial number; or (j) any information that is combined with any of (a) through (i) above.",
       "Disposal Rule": "the rule regarding the Disposal of Consumer Report Information and Records, 16 C.F.R. § 682.1 et seq.",
-      "Consumer information": "any record about an individual, whether in paper, electronic, or other form, that is a consumer report or is derived from a consumer report. Consumer information also means a compilation of such records. Consumer information does not include information that does not identify individuals, such as aggregate information or blind data.",
+      "Consumer information": "as defined in the Disposal Rule, 16 C.F.R.§ 682.1(b), i.e., \"any record about an individual, whether in paper, electronic, or other form, that is a consumer report or is derived from a consumer report. Consumer information also means a compilation of such records. Consumer information does not include information that does not identify individuals, such as aggregate information or blind data.\"",
       "Safeguards Rule": "the rule regarding the Standards for Safeguarding Customer Information, 16 C.F.R. § 314.1 et seq.",
       "Gramm-Leach-Bliley Act": "15 U.S.C. §§ 6801-6809.",
       "Commerce": "as defined in Section 4 of the FTC Act, 15 U.S.C. § 44.",
-      "Privacy Rule": "the rule regarding the Privacy of Consumer Financial Information, 16 C.F.R. § 313.1 et seq."
+      "Privacy Rule": "the rule regarding the Privacy of Consumer Financial Information, 16 C.F.R.§ 313.1 et seq."
     },
     "provisions": [
       {
         "provision_number": "I",
         "title": "Civil Penalty",
         "category": "affirmative_obligation",
-        "summary": "Judgment of $101,500 is entered against PLS and PLS-Illinois jointly and severally, to be paid to the U.S. Treasury within seven days of entry of the Order.",
+        "summary": "PLS and PLS-Illinois must pay a civil penalty of $101,500 to the U.S. Treasury for violations of the FCRA.",
         "requirements": [
           {
-            "description": "Pay civil penalty of $101,500 to the Treasurer of the United States",
-            "quoted_text": "Judgment in the amount of $ 101,500.00 (One hundred one thousand five hundred dollars) is entered against PLS and PLS-Illinois, jointly and severally, as a civil penalty, pursuant to Section 621(a) of the FCRA, 15 U.S.C. § 1681s(a), as adjusted by 16 C.F.R. § 1.98(m).",
+            "description": "Pay civil penalty of $101,500 jointly and severally",
+            "quoted_text": "A. Judgment in the amount of$ 101,500.00 (One hundred one thousand five hundred dollars) is entered against PLS and PLS-Illinois,jointly and severally, as a civil penalty, pursuant to Section 621(a) of the FCRA, 15 U.S.C. § 1681s(a), as adjusted by 16 C.P.R.§ 1.98(m).",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 119,
+            "quote_end_line": 121
           },
           {
-            "description": "Transfer payment from escrow to Treasurer of the United States",
-            "quoted_text": "Within seven (7) days of entry of this Order, PLS's and PLS-Illinois's attorneys shall transfer the sum in the form of a wire transfer or certified or cashier's check made payable to the Treasurer of the United States.",
+            "description": "Transfer civil penalty funds to attorneys' escrow prior to or concurrently with execution of Order",
+            "quoted_text": "B. PLS, PLS-IIlinois, and their attorneys represent that, prior to or concurrently with their execution of this Order, PLS and PLS-IIlinois have transferred the amount specified in paragraph A of this Section I to their attorneys, who shall hold the sum in escrow for no purpose other than payment to the Treasurer of the United States after entry of this Order by the Court.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 122,
+            "quote_end_line": 125
+          },
+          {
+            "description": "Attorneys must transfer payment to U.S. Treasury via wire or certified check",
+            "quoted_text": "Within seven (7) days of entry of this Order, PLS's and PLS-IIlinois's attorneys shall transfer the sum in the form of a wire transfer or certified or cashier's check made payable to the Treasurer of the United States. Wire transfers made pursuant to Section I of this Order shall be made in accordance with instructions provided by the Department of Justice. The check or written confirmation of the wire transfer shall be delivered to the Director, Consumer Protection Branch, U.S. Department of Justice, Civil Division, P.O. Box 386, Washington, DC 20044. The cover letter accompanying the check shall include the title of this litigation. In addition, PLS's and PLS-IIlinois's attorneys shall send written confrrmation of the payment to the FTC's counsel of record: Maria Del Monaco, Federal Trade Commission, 1111 Superior Avenue, Suite 200, Cleveland, OH 44114, Re: United States ofA merica v. PLS Financial Services, Inc.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 0.9978899082568807
+            "confidence": 1.0,
+            "quote_start_line": 126,
+            "quote_end_line": 135
           }
         ]
       },
       {
-        "provision_number": "II",
-        "title": "Prohibited Business Activities",
+        "provision_number": "II.A",
+        "title": "Prohibition Against Misrepresentations About Security",
         "category": "prohibition",
-        "summary": "Defendants are permanently enjoined from misrepresenting data security practices and from violating the FCRA Disposal Rule, GLB Safeguards Rule, and GLB Privacy Rule.",
+        "summary": "Defendants are permanently prohibited from making false or misleading representations about the extent to which they protect the security, privacy, confidentiality, or integrity of personal information collected from consumers.",
         "requirements": [
           {
-            "description": "Must not misrepresent the extent to which they maintain and protect the security, privacy, confidentiality, or integrity of personal information",
-            "quoted_text": "Defendants and their agents, servants, and employees and all persons in active concert or participation with any one or more of them, including all Covered Entities, whether acting directly or through any sole proprietorship, partnership, limited liability company, corporation, subsidiary, branch, division, or other entity who receive actual notice of this Order by personal service or otherwise, are hereby permanently restrained and enjoined, in connection with their advertising, marketing, promotion, or offering of any service or product in or affecting commerce, from making any representation, in any manner, expressly or by implication, about the extent to which Defendants maintain and protect the security, privacy, confidentiality, or integrity of any personal information collected from or about consumers, unless the representation is true, and non-misleading.",
+            "description": "Must not misrepresent the extent to which Defendants maintain and protect the security, privacy, confidentiality, or integrity of personal information collected from or about consumers",
+            "quoted_text": "A. Defendants and their agents, servants, and employees and all persons in active concert or participation with any one or more of them, including all Covered Entities, whether acting directly or through any sole proprietorship, partnership, limited liability company, corporation, subsidiary, branch, division, or other entity who receive actual notice of this Order by personal service or otherwise, are hereby permanently restrained and enjoined, in connection with their advertising, marketing, promotion, or offering of any service or product in or affecting commerce, from making any representation, in any manner, expressly or by implication, about the extent to which Defendants maintain and protect the security, privacy, confidentiality, or integrity of any personal information collected from or about consumers, unless the representation is true, and non-misleading.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
-          },
+            "confidence": 1.0,
+            "quote_start_line": 149,
+            "quote_end_line": 158
+          }
+        ]
+      },
+      {
+        "provision_number": "II.B.1",
+        "title": "Prohibition Against Violating FCRA Disposal Rule",
+        "category": "prohibition",
+        "summary": "Defendants are permanently prohibited from violating the FCRA Disposal Rule, including failing to properly dispose of consumer information by taking reasonable measures to protect against unauthorized access.",
+        "requirements": [
           {
-            "description": "Must not violate Section 628 of the FCRA or the Disposal Rule by failing to properly dispose of consumer information",
-            "quoted_text": "Violating Section 628 of the FCRA or the Disposal Rule, including but not limited to, by maintaining or otherwise possessing consumer information for a business purpose and failing to properly dispose of such information by taking reasonable measures to protect against unauthorized access to or use of the information in connection with its disposal.",
+            "description": "Must not violate Section 628 of the FCRA or the Disposal Rule by maintaining or possessing consumer information and failing to properly dispose of it with reasonable measures to protect against unauthorized access",
+            "quoted_text": "I. Violating Section 628 of the FCRA or the Disposal Rule, including but not limited to, by maintaining or otherwise possessing consumer information for a business purpose 6 Case: 1:12-cv-08334 Document #: 6 Filed: 10/26/12 Page 7 of 16 PageID #:38 and failing to properly dispose of such information by taking reasonable measures to protect against unauthorized access to or use of the information in connection with its disposal.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
-          },
+            "confidence": 0.85,
+            "quote_start_line": 164,
+            "quote_end_line": 171
+          }
+        ]
+      },
+      {
+        "provision_number": "II.B.2",
+        "title": "Prohibition Against Violating GLB Safeguards Rule",
+        "category": "prohibition",
+        "summary": "Defendants are permanently prohibited from violating the Gramm-Leach-Bliley Act Safeguards Rule, including failing to develop, implement, or maintain a comprehensive written information security program.",
+        "requirements": [
           {
-            "description": "Must not violate the GLB Act or Safeguards Rule by failing to develop, implement, or maintain a comprehensive written information security program",
-            "quoted_text": "Violating Title V, Subtitle A of the GLB Act or the Safeguards Rule, including but not limited to, by failing to develop, implement, or maintain a comprehensive written information security program containing reasonable administrative, technical and physical safeguards, including safeguards used to access, collect, distribute, process, protect, store, use, transmit, dispose of, or otherwise handle customer information;",
+            "description": "Must not violate Title V, Subtitle A of the GLB Act or the Safeguards Rule by failing to develop, implement, or maintain a comprehensive written information security program with reasonable administrative, technical and physical safeguards",
+            "quoted_text": "2. Violating Title V, Subtitle A of the GLB Act or the Safeguards Rule, including but not limited to, by failing to develop, implement, or maintain a comprehensive written information security program containing reasonable administrative, technical and physical safeguards, including safeguards used to access, collect, distribute, process, protect, store, use, transmit, dispose of, or otherwise handle customer information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
-          },
+            "confidence": 1.0,
+            "quote_start_line": 172,
+            "quote_end_line": 176
+          }
+        ]
+      },
+      {
+        "provision_number": "II.B.3",
+        "title": "Prohibition Against Violating GLB Privacy Rule",
+        "category": "prohibition",
+        "summary": "Defendants are permanently prohibited from violating the Gramm-Leach-Bliley Act Privacy Rule, including failing to provide privacy notices to consumers at the start of the relationship and annually thereafter.",
+        "requirements": [
           {
-            "description": "Must not violate the GLB Act or Privacy Rule by failing to provide privacy notices to consumers",
-            "quoted_text": "Violating Title V, Subtitle A of the GLB Act or the Privacy Rule, including but not limited to, by failing to provide consumers, no later than when a customer relationship arises and annually for the duration of that relationship, a clear and conspicuous notice that accurately reflects its privacy policies and practices, including its security policies and practices.",
+            "description": "Must not violate Title V, Subtitle A of the GLB Act or the Privacy Rule by failing to provide consumers, no later than when a customer relationship arises and annually for the duration of that relationship, a clear and conspicuous notice that accurately reflects privacy policies and practices",
+            "quoted_text": "3. Violating Title V, Subtitle A of the GLB Act or the Privacy Rule, including but not limited to, by failing to provide consumers, no later than when a customer relationship arises and annually for the duration of that relationship, a clear and conspicuous notice that accurately reflects its privacy policies and practices, including its security policies and pmctices.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 177,
+            "quote_end_line": 181
           }
         ]
       },
@@ -137,92 +186,132 @@
         "provision_number": "III",
         "title": "Required Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Defendants must establish and maintain a comprehensive information security program with administrative, technical, and physical safeguards to protect personal information.",
+        "summary": "Defendants must establish and maintain a comprehensive written information security program designed to protect the security, confidentiality, and integrity of personal information collected from consumers.",
         "requirements": [
           {
-            "description": "Establish and implement a comprehensive information security program no later than the date of entry of the Order",
-            "quoted_text": "Defendants, for themselves and all Non-Defendant Covered Entities, shall, no later than the date of entry of this Order, establish and implement, and thereafter maintain, a comprehensive information security program that is designed to protect the security, confidentiality, and integrity of personal information collected from or about consumers. Such program, the content and implementation of which must be fully documented in writing, shall contain administrative, technical, and physical safeguards appropriate to Defendants' and the Covered Entity's size and complexity, the nature and scope of Defendants' and the Covered Entity's activities, and the sensitivity of the personal information collected from or about consumers",
-            "deadline": "date of entry",
+            "description": "Establish and implement a comprehensive information security program with administrative, technical, and physical safeguards, fully documented in writing",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendants, for themselves and all Non-Defendant Covered Entities, shall, no later than the date of entry of this Order, establish and implement, and thereafter maintain, a comprehensive information security program that is designed to protect the security, confidentiality, and integrity of personal information collected from or about consumers. Such program, the content and implementation of which must be fully documented in writing, shall contain administrative, technical, and physical safeguards appropriate to Defendants' and the Covered Entity's size and complexity, the nature and scope of Defendants' 7 Case: 1:12-cv-08334 Document #: 6 Filed: 10/26/12 Page 8 of 16 PageID #:39 and the Covered Entity's activities, and the sensitivity of the personal information collected from or about consumers, including:",
+            "deadline": "no later than the date of entry of this Order",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 186,
+            "quote_end_line": 198
           },
           {
             "description": "Designate employee(s) to coordinate and be accountable for the information security program",
-            "quoted_text": "The designation of an employee or employees to coordinate and be accountable for the information security program;",
+            "quoted_text": "A. The designation of an employee or employees to coordinate and be accountable for the information security program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 199,
+            "quote_end_line": 200
           },
           {
-            "description": "Identify material internal and external risks to security, confidentiality and integrity of personal information and assess sufficiency of safeguards",
-            "quoted_text": "The identification of material internal and external risks to the security, confidentiality and integrity of personal information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and the assessment of the sufficiency of any safeguards in place to control the risks. At a minimum, this risk assessment should include consideration of the risks in each relevant area of operations, including but not limited to (1) employee training and management; (2) information systems, including network and software design, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, or other system failures;",
+            "description": "Identify material internal and external risks to personal information security and assess sufficiency of safeguards, including risks in employee training, information systems, and prevention/detection/response to attacks",
+            "quoted_text": "B. The identification of material internal and external risks to the security, confidentiality and integrity of personal information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and the assessment of the sufficiency of any safeguards in place to control the risks. At a minimum, this risk assessment should include consideration of the risks in each relevant area of operations, including but not limited to (1) employee training and management; (2) information systems, including network and software design, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, or other system failures;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 201,
+            "quote_end_line": 209
           },
           {
-            "description": "Design and implement reasonable safeguards to control identified risks and regularly test and monitor their effectiveness",
-            "quoted_text": "The design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing and monitoring of the effectiveness of the safeguards' key controls, systems, and procedures;",
+            "description": "Design and implement reasonable safeguards to control identified risks and regularly test and monitor effectiveness of key controls, systems, and procedures",
+            "quoted_text": "C. The design and implementation of reasonable safeguards to control the risks identified through risk assessment, and regular testing and monitoring of the effectiveness of the safeguards' key controls, systems, and procedures;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 210,
+            "quote_end_line": 212
           },
           {
-            "description": "Take reasonable steps to select and retain service providers capable of safeguarding personal information and require them by contract to implement appropriate safeguards",
-            "quoted_text": "The development and use of reasonable steps to select and retain service providers capable of appropriately safeguarding personal information received from Defendants and the Covered Entity, and requiring service providers by contract to implement and maintain appropriate safeguards;",
+            "description": "Take reasonable steps to select and retain service providers capable of safeguarding personal information and require service providers by contract to implement and maintain appropriate safeguards",
+            "quoted_text": "D. The development and use of reasonable steps to select and retain service providers capable of appropriately safeguarding personal information received from Defendants and the Covered Entity, and requiring service providers by contract to implement and maintain appropriate safeguards; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 213,
+            "quote_end_line": 216
           },
           {
-            "description": "Evaluate and adjust the information security program based on testing results, material changes to operations, or other circumstances",
-            "quoted_text": "The evaluation and adjustment of the information security program in light of the results of the testing and monitoring required by paragraph C of this Section III, any material changes to operations or business arrangements, or any other circumstances that Defendants or the Covered Entity knows or has reason toknow may have a material impact on the effectiveness of the information security program.",
+            "description": "Evaluate and adjust the information security program in light of testing/monitoring results, material changes to operations, or other circumstances that may impact program effectiveness",
+            "quoted_text": "E. The evaluation and adjustment of the information security program in light of the results of the testing and monitoring required by paragraph C of this Section III, any material changes to operations or business arrangements, or any other circumstances that Defendants or 8 Case: 1:12-cv-08334 Document #: 6 Filed: 10/26/12 Page 9 of 16 PageID #:40 the Covered Entity knows or has reason to know may have a material impact on the effectiveness of the information security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 217,
+            "quote_end_line": 225
           }
         ]
       },
       {
         "provision_number": "IV",
-        "title": "Assessment Requirements",
+        "title": "Third-Party Security Assessments",
         "category": "assessment",
-        "summary": "Defendants must obtain initial and biennial third-party security assessments for 20 years, with the initial assessment covering the first 180 days and subsequent assessments every two years.",
+        "summary": "Defendants must obtain initial and biennial third-party security assessments from qualified professionals for 20 years, certifying that their security program provides reasonable assurance of protection for personal information.",
         "requirements": [
           {
-            "description": "Obtain initial and biennial assessments from a qualified, independent third-party professional",
-            "quoted_text": "In connection with their compliance with Sections II(B)(1), II(B)(2) and III of this Order, Defendants shall obtain initial and biennial assessments and reports (Assessments) for Defendants and any Non-Defendant Covered Entity from a qualified, objective, independent third-party professional who uses procedures and standards generally accepted in the profession.",
+            "description": "Obtain initial and biennial third-party assessments from qualified independent professionals (CISSP, CISA, GIAC, or approved equivalent) covering specified reporting periods",
+            "quoted_text": "A. In connection with their compliance with Sections II(B)(l), II(B)(2) and III of this Order, Defendants shall obtain initial and biennial assessments and reports (Assessments) for Defendants and any Non-Defendant Covered Entity from a qualified, objective, independent third-party professional who uses procedures and standards generally accepted in the profession. Professionals qualified to prepare such assessments shall be: a person qualified as a Certified Information System Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); a person holding Global Information Assurance Certification (GIAC) from the SysAdmin, Audit, Network, Security (SANS) Institute; or a similarly qualified person or organization approved by the Associate Director of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, DC 20580. The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the Order for the initial Assessment; and (2) each two (2) year period thereafter for twenty (20) years after service of the Order for the biennial Assessments. Each Assessment shall:",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 228,
+            "quote_end_line": 240
           },
           {
-            "description": "Initial assessment must cover the first 180 days after service of the Order",
-            "quoted_text": "The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the Order for the initial Assessment; and (2) each two (2) year period thereafter for twenty (20) years after service of the Order for the biennial Assessments.",
-            "deadline": "180 days",
+            "description": "Each assessment must set forth specific safeguards implemented and maintained during the reporting period",
+            "quoted_text": "I. Set forth the specific administrative, technical, and physical safeguards that Defendants or the Covered Entity has implemented and maintained during the reporting period;",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 241,
+            "quote_end_line": 243
           },
           {
-            "description": "Each assessment must be prepared and completed within 60 days after the end of the reporting period",
-            "quoted_text": "Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
+            "description": "Each assessment must explain how safeguards are appropriate to Defendants' size, complexity, activities, and sensitivity of personal information",
+            "quoted_text": "2. Explain how such safeguards are appropriate to Defendants' or the Covered Entity's size and complexity, the nature and scope of Defendants' or the Covered 9 Case: 1:12-cv-08334 Document #: 6 Filed: 10/26/12 Page 10 of 16 PageID #:41 Entity's activities, and the sensitivity of the personal information collected from or about consumers;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 244,
+            "quote_end_line": 251
+          },
+          {
+            "description": "Each assessment must explain how safeguards meet or exceed protections required by FCRA Section 628, Disposal Rule, Safeguards Rule, and Section III of this Order",
+            "quoted_text": "3. Explain how the safeguards that have been implemented meet or exceed the protections required by Section 628 of the FCRA, the Disposal Rule, the Safeguards Rule, and Section III of this Order; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 252,
+            "quote_end_line": 254
+          },
+          {
+            "description": "Each assessment must certify that security program is operating with sufficient effectiveness to provide reasonable assurance throughout the reporting period",
+            "quoted_text": "4. CertifY that Defendants' or the Covered Entity's security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of personal information is protected and has so operated throughout the reporting period.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 255,
+            "quote_end_line": 258
+          },
+          {
+            "description": "Complete each assessment within 60 days after end of reporting period",
+            "quoted_text": "B. Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies. Defendants and any Covered Entity",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 259,
+            "quote_end_line": 260
           },
           {
-            "description": "Provide initial assessment to the Associate Director of Enforcement within 10 days after preparation",
-            "quoted_text": "Defendants and any Covered Entity shall provide the initial Assessment to the Associate Director of Enforcement, Federal Trade Commission, 600 Pennsylvania Avenue, NW, Washington, DC 20580, within ten (10) days after the Assessment has been prepared.",
+            "description": "Provide initial assessment to FTC Associate Director of Enforcement within 10 days after preparation; retain biennial assessments and provide within 10 days of request",
+            "quoted_text": "end of the reporting period to which the Assessment applies. Defendants and any Covered Entity shall provide the initial Assessment to the Associate Director of Enforcement, Federal Trade Commission, 600 Pennsylvania Avenue, NW, Washington, DC 20580, within ten (10) days after the Assessment has been prepared. All subsequent biennial Assessments shall be retained by Defendants until the Order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request. Unless otherwise dire.cted by a representative of the Commission, initial and biennial Assessments shall be sent by overnight courier (not the U.S. Postal Service) to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue, NW, Washington, DC 20580, with the subject line USA v. PLS Financial Services, Inc., FTC File Number 1023172. Provided, however, that, in lieu of overnight courier, Assessments may be sent by first class mail, but only if an electronic version of such Assessments is contemporaneously sent to the Commission at DEBrief@ftc.gov.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Retain all subsequent biennial assessments and provide them to the FTC within 10 days of request",
-            "quoted_text": "All subsequent biennial Assessments shall be retained by Defendants until the Order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 260,
+            "quote_end_line": 272
           }
         ]
       },
@@ -230,72 +319,138 @@
         "provision_number": "V",
         "title": "Order Acknowledgments",
         "category": "acknowledgment",
-        "summary": "Defendants must submit acknowledgments of receipt of the Order and distribute the Order to personnel and obtain signed acknowledgments from them.",
+        "summary": "Defendants must submit acknowledgments of receipt of the Order to the FTC and deliver copies of the Order to relevant personnel and entities, obtaining signed acknowledgments from recipients.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt of Order to the Commission",
-            "quoted_text": "Each Defendant, within 7 days of entry of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Each Defendant must submit acknowledgment of receipt of Order to Commission, sworn under penalty of perjury",
+            "quoted_text": "A. Each Defendant, within 7 days of entry of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 280,
+            "quote_end_line": 281
           },
           {
-            "description": "Deliver a copy of the Order to all principals, officers, directors, managers, employees, agents, and representatives for 20 years",
-            "quoted_text": "For 20 years after entry of this Order, each Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and managers; (2) all employees, agents, and representatives who participate in conduct related to the subject matter of this Order; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within 7 days of entry of this Order for current personnel. To all others, delivery must occur before they assume their responsibilities.",
+            "description": "Deliver copy of Order to all principals, officers, directors, managers, employees/agents/representatives in related conduct, and business entities resulting from structural changes, within 7 days for current personnel and before assumption of responsibilities for others",
+            "quoted_text": "B. For 20 years after entry of this Order, each Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and managers; (2) all employees, agents, and representatives who participate in conduct related to the subject matter of this Order; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within 7 days of entry of this Order for current personnel. To all others, delivery must occur before they assume their responsibilities.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 282,
+            "quote_end_line": 287
           },
           {
-            "description": "Obtain signed and dated acknowledgments of receipt from individuals and entities to which the Order was delivered",
-            "quoted_text": "From each individual or entity to which Defendants delivered a copy of this Order, Defendants must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "Obtain signed and dated acknowledgment of receipt of Order from each individual or entity to which Order was delivered",
+            "quoted_text": "C. From each individual or entity to which Defendants delivered a copy of this Order, Defendants must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 288,
+            "quote_end_line": 290
           }
         ]
       },
       {
-        "provision_number": "VI",
-        "title": "Compliance Reporting",
+        "provision_number": "VI.A",
+        "title": "Annual Compliance Report",
         "category": "compliance_reporting",
-        "summary": "Defendants must submit compliance reports and notices to the Commission, including an initial compliance report one year after entry of the Order and ongoing notices for 20 years regarding changes in structure or contact information.",
+        "summary": "Defendants must submit a comprehensive annual compliance report one year after entry of the Order, detailing contact information, business activities, and compliance with each section of the Order.",
         "requirements": [
           {
-            "description": "Submit initial compliance report one year after entry of the Order",
-            "quoted_text": "One year after entry of this Order, each Defendant must submit a compliance report, sworn under penalty of perjury. Each Defendant must: (a) designate at least one telephone number and an email, physical, and postal address as points of contact, which representatives of the Commission and Plaintiff may use to communicate with Defendant; (b) identify all of Defendant's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the products and services offered, and the means of advertising, marketing, and sales, and the involvement of any other Defendant; (d) describe in detail whether and how that Defendant is in compliance with each Section of this Order; and (e) provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission;",
+            "description": "Submit compliance report sworn under penalty of perjury, including designated contact points, identification of all businesses, description of activities, detailed compliance status for each Order section, and copies of Order Acknowledgments",
+            "quoted_text": "A. One year after entry of this Order, each Defendant must submit a compliance report, sworn under penalty of perjury. Each Defendant must: (a) designate at least one telephone number and an email, physical, and postal address as points of contact, which representatives of the Commission and Plaintiff may use to communicate with Defendant; (b) identifY all of Defendant's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the 11 Case: 1:12-cv-08334 Document #: 6 Filed: 10/26/12 Page 12 of 16 PageID #:43 products and services offered, and the means of advertising, marketing, and sales, and the involvement of any other Defendant; (d) describe in detail whether and how that Defendant is in compliance with each Section of this Order; and (e) provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission;",
             "deadline": "1 year",
             "verified": true,
-            "confidence": 0.85
-          },
+            "confidence": 0.85,
+            "quote_start_line": 294,
+            "quote_end_line": 308
+          }
+        ]
+      },
+      {
+        "provision_number": "VI.B",
+        "title": "Compliance Notice for Changes",
+        "category": "compliance_reporting",
+        "summary": "Defendants must notify the FTC within 14 days of any changes to designated contact points or structural changes that may affect compliance obligations.",
+        "requirements": [
           {
-            "description": "Submit compliance notice within 14 days of any change in designated point of contact or structure",
-            "quoted_text": "For 20 years following entry of this Order, each Defendant must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in (a) any designated point of contact; or (b) the structure of any Defendant or any entity that Defendant has any ownership interest in or directly or indirectly controls that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "description": "Submit compliance notice sworn under penalty of perjury within 14 days of any change in designated contact points or structure of Defendant or controlled entities that may affect compliance",
+            "quoted_text": "B. For 20 years following entry of this Order, each Defendant must submit a compliance notice, sworn under penalty ofpetjury, within 14 days of any change in (a) any designated point of contact; or (b) the structure of any Defendant or any entity that Defendant has any ownership interest in or directly or indirectly controls that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 0.85
-          },
+            "confidence": 1.0,
+            "quote_start_line": 309,
+            "quote_end_line": 314
+          }
+        ]
+      },
+      {
+        "provision_number": "VI.C",
+        "title": "Bankruptcy Notice",
+        "category": "compliance_reporting",
+        "summary": "Defendants must notify the FTC within 14 days of filing any bankruptcy petition, insolvency proceeding, or similar proceeding.",
+        "requirements": [
           {
-            "description": "Submit notice of bankruptcy filing within 14 days",
-            "quoted_text": "Each Defendant must submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or any similar proceeding by or against such Defendant within 14 days of its filing.",
+            "description": "Submit notice to Commission of filing of any bankruptcy petition, insolvency proceeding, or similar proceeding",
+            "quoted_text": "C. Each Defendant must submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or any similar proceeding by or against such Defendant within 14 days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 315,
+            "quote_end_line": 317
           }
         ]
       },
       {
         "provision_number": "VII",
-        "title": "Recordkeeping",
+        "title": "Recordkeeping Requirements",
         "category": "recordkeeping",
-        "summary": "Defendants must create and retain records for 20 years, including accounting records, personnel records, complaints, compliance records, and marketing materials, with each record retained for 5 years.",
+        "summary": "Defendants must create and retain specified records for 20 years after Order entry, including accounting records, personnel records, complaints, compliance documentation, and marketing materials.",
         "requirements": [
           {
-            "description": "Create records for 20 years after entry of the Order and retain each record for 5 years",
-            "quoted_text": "Defendants must create certain records for 20 years after entry of the Order, and retain each such record for 5 years. Specifically, Defendants must maintain the following records: A. Accounting records showing the revenues from all goods and services sold, all costs incurred in generating those revenues, and the resulting net profit or loss; B. Personnel records showing, for each person providing services, whether as an employee or otherwise, that person's: name, addresses, and telephone numbers; job title or position; dates of service; and, if applicable, the reason for termination; C. Written complaints and refund requests, whether received directly or indirectly, such as through a third party, and any response; D. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission; and E. A copy of each advertisement or other marketing material.",
+            "description": "Create records for 20 years after entry of Order and retain each record for 5 years, including accounting records showing revenues, costs, and net profit/loss",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendants must create certain records for 20 years after entry of the Order, and retain each such record for 5 years. Specifically, Defendants must maintain the following records: A. Accounting records showing the revenues from all goods and services sold, all costs incurred in generating those revenues, and the resulting net profit or loss;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 333,
+            "quote_end_line": 337
+          },
+          {
+            "description": "Maintain personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination for each person providing services",
+            "quoted_text": "B. Personnel records showing, for each person providing services, whether as an employee or otherwise, that person's: name, addresses, and telephone numbers; job title or position; dates of service; and, if applicable, the reason for termination;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 338,
+            "quote_end_line": 340
+          },
+          {
+            "description": "Maintain written complaints and refund requests received directly or indirectly and any responses",
+            "quoted_text": "C. Written complaints and refund requests, whether received directly or indirectly, such as through a third party, and any response;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 341,
+            "quote_end_line": 342
+          },
+          {
+            "description": "Maintain all records necessary to demonstrate full compliance with each provision of Order, including all submissions to the Commission",
+            "quoted_text": "D. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Conunission; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 343,
+            "quote_end_line": 344
+          },
+          {
+            "description": "Maintain a copy of each advertisement or other marketing material",
+            "quoted_text": "E. A copy of each advertisement or other marketing material.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 345,
+            "quote_end_line": 345
           }
         ]
       },
@@ -303,28 +458,43 @@
         "provision_number": "VIII",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The FTC and Plaintiff may monitor Defendants' compliance through requests for reports, depositions, document production, interviews, and other investigative means including posing as consumers.",
+        "summary": "The FTC and Plaintiff are authorized to monitor Defendants' compliance through document requests, depositions, interviews, and other discovery methods, including the ability to communicate directly with Defendants and pose as consumers.",
         "requirements": [
           {
-            "description": "Submit additional compliance reports or requested information within 14 days of written request from FTC or Plaintiff",
-            "quoted_text": "Within 14 days of receipt of a written request from a representative of the Commission or Plaintiff, each Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying.",
+            "description": "Within 14 days of written request from Commission or Plaintiff representative, Defendants must submit additional compliance reports or information sworn under penalty of perjury, appear for depositions, and produce documents for inspection and copying",
+            "quoted_text": "A. Within 14 days of receipt of a written request from a representative of the Commission or Plaintiff, each Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying. The Conunission and Plaintiff are also",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 349,
+            "quote_end_line": 352
           },
           {
-            "description": "Permit FTC and Plaintiff to communicate directly with Defendants and interview employees or affiliated persons",
-            "quoted_text": "For matters concerning this Order, the Commission and Plaintiff are authorized to communicate directly with each Defendant. Defendants must permit representatives of the Commission and Plaintiff to interview any employee or other person affiliated with any Defendant who has agreed to such an interview. The person interviewed may have counsel present.",
+            "description": "Commission and Plaintiff authorized to obtain discovery without further leave of court using Federal Rules of Civil Procedure 29, 30, 31, 33, 34, 36, 45, and 69",
+            "quoted_text": "and produce documents for inspection and copying. The Conunission and Plaintiff are also 13 Case: 1:12-cv-08334 Document #: 6 Filed: 10/26/12 Page 14 of 16 PageID #:45 authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29,30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 352,
+            "quote_end_line": 359
           },
           {
-            "description": "Allow FTC and Plaintiff to use lawful investigative means including posing as consumers",
-            "quoted_text": "The Commission and Plaintiff may use all other lawful means, including posing, through their representatives, as consumers, suppliers, or other individuals or entities, to Defendants or any individual or entity affiliated with Defendants, without the necessity of identification or prior notice.",
+            "description": "Defendants must permit Commission and Plaintiff representatives to communicate directly with Defendants and interview any employee or affiliated person who agrees to such interview",
+            "quoted_text": "B. For matters concerning this Order, the Commission and Plaintiff are authorized to communicate directly with each Defendant. Defendants must permit representatives of the Commission and Plaintiff to interview any employee or other person affiliated with any Defendant who has agreed to such an interview. The person interviewed may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 360,
+            "quote_end_line": 364
+          },
+          {
+            "description": "Commission and Plaintiff may pose as consumers, suppliers, or other entities to Defendants or affiliated individuals/entities without identification or prior notice",
+            "quoted_text": "C. The Commission and Plaintiff may use all other lawful means, including posing, through their representatives, as consumers, suppliers, or other individuals or entities, to Defendants or any individual or entity affiliated with Defendants, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49 and 57b-1.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 365,
+            "quote_end_line": 369
           }
         ]
       },
@@ -332,14 +502,16 @@
         "provision_number": "IX",
         "title": "Retention of Jurisdiction",
         "category": "duration",
-        "summary": "The Court retains jurisdiction of the matter for purposes of construction, modification, and enforcement of the Order.",
+        "summary": "The Court retains jurisdiction over this matter for purposes of construction, modification, and enforcement of the Order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction for construction, modification, and enforcement",
+            "description": "Court retains jurisdiction for purposes of construction, modification, and enforcement of Order",
             "quoted_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 371,
+            "quote_end_line": 372
           }
         ]
       }
@@ -357,10 +529,37 @@
     "extraction_stats": {
       "complaint_counts": 4,
       "complaint_representations": 1,
-      "order_provisions": 9,
+      "order_provisions": 14,
       "order_definitions": 14,
-      "order_requirements": 28
+      "order_requirements": 36,
+      "provisions_per_section": {
+        "I": 3,
+        "II.A": 1,
+        "II.B.1": 1,
+        "II.B.2": 1,
+        "II.B.3": 1,
+        "III": 6,
+        "IV": 7,
+        "V": 3,
+        "VI.A": 1,
+        "VI.B": 1,
+        "VI.C": 1,
+        "VII": 5,
+        "VIII": 4,
+        "IX": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 1,
+        "complaint_total": 1,
+        "order_verified": 36,
+        "order_total": 36
+      }
     },
-    "processing_time_seconds": 172.3
+    "processing_time_seconds": 203.7
   }
 }

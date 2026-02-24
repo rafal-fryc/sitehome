@@ -1,45 +1,49 @@
 {
   "case_info": {
-    "docket_number": "1:18-cv-114",
+    "docket_number": "1:18-cv-00114",
     "company": {
-      "name": "VTech Electronics North America, LLC",
-      "incorporation_state": "Delaware",
-      "entity_type": "limited liability company",
-      "address": "Arlington Heights, Illinois",
-      "business_description": "VTech Electronics develops and markets electronic learning products for children ages 3-9, including portable devices, online games, and the Learning Lodge Navigator online service platform for downloading child-directed apps, games, e-books and other online content."
+      "name": "VTech Electronics Limited and VTech Electronics North America, LLC",
+      "incorporation_state": "Hong Kong (VTech Electronics Limited); Delaware (VTech Electronics North America, LLC)",
+      "entity_type": "corporation (Limited); limited liability company (North America)",
+      "address": "Hong Kong (VTech Electronics Limited); Arlington Heights, Illinois (VTech Electronics North America, LLC)",
+      "business_description": "VTech develops and markets electronic learning products (ELPs) for children ages 3-9, online games, and operates the Learning Lodge Navigator online service platform. The company also developed Kid Connect, a communication app for children, and Planet VTech, a web-based platform for online games and chat."
     },
     "commissioners": [],
     "case_date": {
       "month": 1,
       "year": 2018
     },
-    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a); Children's Online Privacy Protection Act of 1998 (COPPA), 15 U.S.C. §§ 6502(c) and 6505(d); Children's Online Privacy Protection Rule, 16 C.F.R. Part 312",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act (15 U.S.C. § 45(a)); Sections 1303(c) and 1306(d) of the Children's Online Privacy Protection Act (15 U.S.C. §§ 6502(c) and 6505(d)); Children's Online Privacy Protection Rule (16 C.F.R. Part 312)",
     "violation_type": "both",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/162-3032-vtech-electronics-limited"
   },
   "complaint": {
-    "factual_background": "VTech Electronics operated online services and electronic learning products for children, including Kid Connect and Planet VTech. The company promised to encrypt personal information transmitted through its services but failed to do so. VTech also failed to implement reasonable data security measures to protect children's personal information. In November 2015, a hacker exploited common vulnerabilities and accessed personal information of millions of consumers, including children's names, photos, audio files, and physical addresses. The company violated COPPA by failing to provide proper notice, obtain verifiable parental consent, and maintain reasonable security procedures.",
+    "factual_background": "VTech Electronics Limited and VTech Electronics North America, LLC developed and operated children's electronic learning products and online services, including Learning Lodge Navigator, Kid Connect, and Planet VTech. These services collected personal information from children under 13 — including names, birthdates, photos, and audio files — without providing adequate privacy notices, without obtaining verifiable parental consent, and without maintaining reasonable data security. In November 2015, a hacker exploited well-known vulnerabilities to access VTech's network, traversing from the test environment to the live environment and exfiltrating personal information stored in clear text for millions of parents and children. VTech's Privacy Policy falsely claimed that personally identifying information submitted through its Web Services would be transmitted using HTTPS encryption, when in fact no registration information was encrypted in transmission or storage for Learning Lodge or Planet VTech.",
     "representations_made": [
       {
-        "description": "Claimed that personally identifying information submitted through web services would be transmitted encrypted using HTTPS encryption technology",
+        "description": "Claimed that most personally identifying information submitted through its Web Services would be transmitted encrypted using HTTPS encryption technology, and that any Registration Data submitted with encrypted PII would also be transmitted encrypted",
         "quoted_text": "In most cases, if you submit your PII to VTech directly through the Web Services it will be transmitted encrypted to protect your privacy using HTTPS encryption technology. Any Registration Data submitted in conjunction with encrypted PII will also be transmitted encrypted.",
-        "source_paragraph": 29
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 29,
+        "quote_start_line": 243,
+        "quote_end_line": 246
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "COPPA Violations",
-        "representation": "Defendants collected personal information from children through Kid Connect, which is directed to children",
-        "fact": "Defendants failed to: (a) provide sufficient notice on its website of information collection practices; (b) provide direct notice to parents; (c) obtain verifiable parental consent before collecting or using personal information from children; and (d) establish and maintain reasonable procedures to protect the confidentiality, security, and integrity of personal information collected from children",
-        "conclusion": "Therefore, Defendants have violated the Rule, 16 C.F.R. Part 312, which constitutes an unfair or deceptive act or practice in or affecting commerce, in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+        "title": "COPPA Rule Violations (Kid Connect)",
+        "representation": "Defendants collected personal information from children under 13 through Kid Connect, an online service directed to children, with actual knowledge that children used these services (evidenced by collecting birth dates and birth years)",
+        "fact": "Defendants failed to: (a) provide sufficient notice of their information collection practices on the website or online service; (b) provide direct notice to parents of information collection and use practices; (c) obtain verifiable parental consent before collecting or using personal information from children; and (d) establish and maintain reasonable procedures to protect the confidentiality, security, and integrity of personal information collected from children",
+        "conclusion": "Therefore, Defendants have violated the COPPA Rule, 16 C.F.R. Part 312, which constitutes an unfair or deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 2,
-        "title": "Data Encryption Misrepresentation",
-        "representation": "Defendants represented that most personally identifying information submitted by consumers and all registration information transmitted with it would be transmitted in encrypted form",
-        "fact": "Defendants did not encrypt any information transmitted through their Learning Lodge or Planet VTech online services, including registration information",
-        "conclusion": "Therefore, Defendants' representation as described in Paragraph 34 of this Complaint is false and misleading and constitutes a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+        "title": "False Encryption Representation (FTC Act Section 5)",
+        "representation": "Through their Privacy Policy applicable to Learning Lodge, Kid Connect, and Planet VTech, Defendants represented that most personally identifying information submitted by consumers and all registration information transmitted with it would be transmitted in encrypted form using HTTPS encryption technology",
+        "fact": "In truth and in fact, Defendants did not encrypt any information transmitted through their Learning Lodge or Planet VTech online services, including registration information",
+        "conclusion": "Therefore, Defendants' representation is false and misleading and constitutes a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       }
     ]
   },
@@ -56,45 +60,53 @@
       "Operator": "any person who operates a Web site located on the Internet or an online service and who collects or maintains personal information from or about the users of or visitors to such Web site or online service, or on whose behalf such information is collected or maintained, or offers products or services for sale through the Web site or online service, where such Web site or online service is operated for commercial purposes involving commerce among the several States, or with one or more foreign nations; in any territory of the United States or in the District of Columbia, or between any such territory and another such territory or any State or foreign nation; or between the District of Columbia and any State, territory, or foreign nation.",
       "Parent": "includes a legal guardian.",
       "Person": "any individual, partnership, corporation, trust, estate, cooperative, association, or other entity.",
-      "Personal information": "individually identifiable information about an individual collected online from a child, including: 1. A first and last name; 2. A home or other physical address including street name and name of a city or town; 3. Online contact information as defined in 16 C.F.R. § 312.2; 4. A screen or user name where it functions in the same manner as online contact information, as defined in 16 C.F.R. § 312.2; 5. A telephone number; 6. A Social Security number; 7. A persistent identifier that can be used to recognize a user over time and across different Web sites or online services. Such persistent identifier includes, but is not limited to, a customer number held in a cookie, an Internet Protocol (IP) address, a processor or device serial number, or unique device identifier; 8. A photograph, video, or audio file where such file contains a child's image or voice; 9. Geolocation information sufficient to identify street name and name of a city or town; or 10. Information concerning the child or the parents of that child that the operator collects online from the child and combines with an identifier described in this section.",
+      "Personal information": "individually identifiable information about an individual collected online from a child, including:\n1. A first and last name;\n2. A home or other physical address including street name and name of a city or town;\n3. Online contact information as defined in 16 C.F.R. § 312.2;\n4. A screen or user name where it functions in the same manner as online contact information, as defined in 16 C.F.R. § 312.2;\n5. A telephone number;\n6. A Social Security number;\n7. A persistent identifier that can be used to recognize a user over time and across different Web sites or online services. Such persistent identifier includes, but is not limited to, a customer number held in a cookie, an Internet Protocol (IP) address, a processor or device serial number, or unique device identifier;\n8. A photograph, video, or audio file where such file contains a child's image or voice;\n9. Geolocation information sufficient to identify street name and name of a city or town; or\n10. Information concerning the child or the parents of that child that the operator collects online from the child and combines with an identifier described in this section.",
       "Registration information": "information collected by Defendants from individual consumers in the course of registering to use Defendants' products or services, including: 1. A first and last name; 2. A home or other physical address including street name and name of a city or town; 3. Online contact information; 4. A telephone number; 5. A Social Security number; 6. Authentication credentials, such as a username and password; 7. Photo, video, or audio files; and 8. The name, date of birth, and any personal information relating to a child.",
       "Support for the internal operations of the Web site or online service": "1. Those activities necessary to: a. Maintain or analyze the functioning of the Web site or online service; b. Perform network communications; c. Authenticate users of, or personalize the content on, the Web site or online service; d. Serve contextual advertising on the Web site or online service or cap the frequency of advertising; e. Protect the security or integrity of the user, Web site, or online service; f. Ensure legal or regulatory compliance; or g. Fulfill a request of a child as permitted by 16 C.F.R. §§ 312.5(c)(3) and (4); 2. So long as the information collected for the activities listed in paragraphs (1)(a)-(g) of this definition is not used or disclosed to contact a specific individual, including through behavioral advertising, to amass a profile on a specific individual, or for any other purpose.",
-      "Web site or online service directed to children": "a commercial Web site or online service, or portion thereof, that is targeted to children. 1. In determining whether a Web site or online service, or a portion thereof, is directed to children, the Commission will consider its subject matter, visual content, use of animated characters or child-oriented activities and incentives, music or other audio content, age of models, presence of child celebrities or celebrities who appeal to children, language or other characteristics of the Web site or online service, as well as whether advertising promoting or appearing on the Web site or online service is directed to children. The Commission will also consider competent and reliable empirical evidence regarding audience composition, and evidence regarding the intended audience. 2. A Web site or online service shall be deemed directed to children when it has actual knowledge that it is collecting personal information directly from users of another Web site or online service directed to children. 3. A Web site or online service that is directed to children under this criteria set forth in paragraph (1) of this definition, but that does not target children as its primary audience, shall not be deemed directed to children if it: a. Does not collect personal information from any visitor prior to collecting age information; and b. Prevents the collection, use, or disclosure of personal information from visitors who identify themselves as under age 13 without first complying with the notice and parental consent provisions of this part. 4. A Web site or online service shall not be deemed directed to children solely because it refers or links to a commercial Web site or online service directed to children by using information location tools, including a directory, index, reference, pointer, or hypertext link."
+      "Web site or online service directed to children": "a commercial Web site or online service, or portion thereof, that is targeted to children."
     },
     "provisions": [
       {
         "provision_number": "I",
-        "title": "Injunction Concerning the Collection of Personal Information",
+        "title": "Injunction Concerning the Collection of Personal Information (COPPA Compliance)",
         "category": "prohibition",
-        "summary": "Defendants are permanently enjoined from violating the Children's Online Privacy Protection Rule, including requirements for direct notice to parents, online notice, obtaining verifiable parental consent, and maintaining reasonable security procedures.",
+        "summary": "Defendants and all persons acting with them are permanently restrained from violating the COPPA Rule, including failing to provide direct parental notice, failing to post a privacy policy link, failing to obtain verifiable parental consent, and failing to maintain reasonable security procedures.",
         "requirements": [
           {
-            "description": "Must not fail to make reasonable efforts to ensure parent receives direct notice of information practices",
-            "quoted_text": "IT IS ORDERED that Defendants and Defendants' officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with being an operator of any Web site or online service directed to children or of any Web site or online service with actual knowledge that it is collecting or maintaining personal information from a child, are hereby permanently restrained and enjoined from violating the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312, including, but not limited to: A. Failing to make reasonable efforts, taking into account available technology, to ensure that a parent of a child receives direct notice of Defendants' practices with regard to the collection, use, or disclosure of personal information, including notice of any material change in the collection, use, or disclosure practices to which the parent has previously consented;",
+            "description": "Must not fail to make reasonable efforts to ensure parents receive direct notice of Defendants' practices regarding collection, use, or disclosure of personal information, including notice of material changes",
+            "quoted_text": "1 A. Failing to make reasonable efforts, taking into account available technology, to ensure 2 that a parent of a child receives direct notice of Defendants’ practices with regard to the 3 collection, use, or disclosure of personal information, including notice of any material 4 change in the collection, use, or disclosure practices to which the parent has previously 5 consented;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9090909090909091
+            "confidence": 1.0,
+            "quote_start_line": 468,
+            "quote_end_line": 476
           },
           {
-            "description": "Must not fail to post a prominent and clearly labeled link to online notice of information practices",
-            "quoted_text": "B. Failing to post a prominent and clearly labeled link to an online notice of its information practices with regard to children, if any, on the home or landing page or screen of its Web site or online service, and at each area of the Web site or online service where personal information is collected;",
+            "description": "Must not fail to post a prominent and clearly labeled link to an online notice of information practices on the home or landing page and at each area where personal information is collected",
+            "quoted_text": "B. Failing to post a prominent and clearly labeled link to an online notice of its information 7 8 practices with regard to children, if any, on the home or landing page or screen of its Web 9 site or online service, and at each area of the Web site or online service where personal 10 information is collected;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 478,
+            "quote_end_line": 483
           },
           {
-            "description": "Must not fail to obtain verifiable parental consent before any collection, use, or disclosure of personal information",
-            "quoted_text": "C. Failing to obtain verifiable parental consent before any collection, use, or disclosure of personal information, including consent to any material change in the collection, use, or disclosure practices to which the parent has previously consented;",
+            "description": "Must not fail to obtain verifiable parental consent before any collection, use, or disclosure of personal information, including consent to material changes",
+            "quoted_text": "C. Failing to obtain verifiable parental consent before any collection, use, or disclosure of 12 personal information, including consent to any material change in the collection, use, or 13 disclosure practices to which the parent has previously consented; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 485,
+            "quote_end_line": 489
           },
           {
             "description": "Must not fail to establish and maintain reasonable procedures to protect the confidentiality, security, and integrity of personal information",
-            "quoted_text": "D. Failing to establish and maintain reasonable procedures to protect the confidentiality, security, and integrity of personal information.",
+            "quoted_text": "D. Failing to establish and maintain reasonable procedures to protect the confidentiality, 15 16 security, and integrity of personal information.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 491,
+            "quote_end_line": 493
           }
         ]
       },
@@ -102,14 +114,25 @@
         "provision_number": "II",
         "title": "Monetary Judgment for Civil Penalty",
         "category": "affirmative_obligation",
-        "summary": "Defendants must pay a civil penalty of $650,000 to the United States.",
+        "summary": "A civil penalty judgment of $650,000 is entered against Defendants jointly and severally, to be paid to the U.S. Treasury within 7 days of entry of the Order by electronic fund transfer.",
         "requirements": [
           {
-            "description": "Pay civil penalty of $650,000",
-            "quoted_text": "A. Judgement in the amount of six hundred fifty thousand dollars ($650,000) is entered in favor of Plaintiff against Defendants, jointly and severally, as a civil penalty. B. Defendants are ordered to pay to Plaintiff, bymaking payment to the Treasurer of the United States, six hundred fifty thousand dollars ($650,000), which, as Defendants stipulate, their undersigned counsel holds in escrow for no purpose other than payment to Plaintiff. Such payment must be made within 7 days of entry of this Order by electronic fund transfer in accordance with instructions previously provided by a representative of Plaintiff.",
+            "description": "Judgment of $650,000 entered in favor of Plaintiff against Defendants, jointly and severally, as a civil penalty",
+            "quoted_text": "A. Judgement in the amount of six hundred fifty thousand dollars ($650,000) is entered in 22 favor of Plaintiff against Defendants, jointly and severally, as a civil penalty.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 502,
+            "quote_end_line": 504
+          },
+          {
+            "description": "Defendants must pay $650,000 to the Treasurer of the United States within 7 days of entry of this Order by electronic fund transfer",
+            "quoted_text": "24 B. Defendants are ordered to pay to Plaintiff, by making payment to the Treasurer of the 25 United States, six hundred fifty thousand dollars ($650,000), which, as Defendants 26 stipulate, their undersigned counsel holds in escrow for no purpose other than payment to 27 28 Case: 1:18-cv-00114 Document #: 2-1 Filed: 01/08/18 Page 10 of 21 PageID #:47 1 Plaintiff. Such payment must be made within 7 days of entry of this Order by electronic 2 fund transfer in accordance with instructions previously provided by a representative of 3 Plaintiff.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 0.8900293255131965
+            "confidence": 0.85,
+            "quote_start_line": 506,
+            "quote_end_line": 520
           }
         ]
       },
@@ -117,35 +140,43 @@
         "provision_number": "III",
         "title": "Additional Monetary Provisions",
         "category": "affirmative_obligation",
-        "summary": "Defendants relinquish all rights to transferred assets and acknowledge that facts alleged establish liability for purposes of subsequent enforcement and bankruptcy proceedings.",
+        "summary": "Defendants relinquish all rights to assets transferred under the Order; complaint facts may be used in future proceedings; and Defendants must submit their Taxpayer Identification Numbers to the Commission.",
         "requirements": [
           {
-            "description": "Relinquish dominion and all legal and equitable rights in transferred assets",
-            "quoted_text": "A. Defendants relinquish dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets.",
+            "description": "Defendants relinquish dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek return of any assets",
+            "quoted_text": "A. Defendants relinquish dominion and all legal and equitable right, title, and interest in all 7 8 assets transferred pursuant to this Order and may not seek the return of any assets.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 526,
+            "quote_end_line": 528
           },
           {
-            "description": "Acknowledge facts alleged will be taken as true in subsequent civil litigation",
-            "quoted_text": "B. The facts alleged in the Complaint will be taken as true, without further proof, in any subsequent civil litigation by or on behalf of the Commission in a proceeding to enforce its rights to any payment or monetary judgement pursuant to this Order.",
+            "description": "Facts alleged in the Complaint will be taken as true without further proof in any subsequent civil litigation to enforce payment or monetary judgment",
+            "quoted_text": "9 B. The facts alleged in the Complaint will be taken as true, without further proof, in any 10 subsequent civil litigation by or on behalf of the Commission in a proceeding to enforce 11 its rights to any payment or monetary judgement pursuant to this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 529,
+            "quote_end_line": 533
           },
           {
-            "description": "Acknowledge facts establish elements for bankruptcy proceedings under Section 523(a)(2)(A)",
-            "quoted_text": "C. The facts alleged in the Complaint establish all elements necessary to sustain an action by the Commission pursuant to Section 523(a)(2)(A) of the Bankruptcy Code, 11 U.S.C. § 523(a)(2)(A), and this Order will have collateral estoppel effect for such purposes.",
+            "description": "Facts alleged in the Complaint establish all elements necessary to sustain an action under Section 523(a)(2)(A) of the Bankruptcy Code; this Order has collateral estoppel effect for such purposes",
+            "quoted_text": "C. The facts alleged in the Complaint establish all elements necessary to sustain an action by 13 the Commission pursuant to Section 523(a)(2)(A) of the Bankruptcy Code, 11 U.S.C. § 14 523(a)(2)(A), and this Order will have collateral estoppel effect for such purposes.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 535,
+            "quote_end_line": 539
           },
           {
-            "description": "Acknowledge Taxpayer Identification Numbers may be used for collecting delinquent amounts",
-            "quoted_text": "D. Defendants acknowledge that their Taxpayer Identification Numbers, which Defendants must submit to the Commission, may be used for collecting and reporting on any delinquent amount arising out of this Order, in accordance with 31 U.S.C. §7701.",
+            "description": "Defendants must submit their Taxpayer Identification Numbers to the Commission, which may be used for collecting and reporting on any delinquent amount arising out of this Order",
+            "quoted_text": "16 D. Defendants acknowledge that their Taxpayer Identification Numbers, which Defendants 17 must submit to the Commission, may be used for collecting and reporting on any 18 delinquent amount arising out of this Order, in accordance with 31 U.S.C. §7701.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 541,
+            "quote_end_line": 544
           }
         ]
       },
@@ -153,14 +184,16 @@
         "provision_number": "IV",
         "title": "Injunction Regarding Misrepresenting Data Security and Privacy Practices",
         "category": "prohibition",
-        "summary": "Defendants are permanently enjoined from misrepresenting the extent to which they maintain and protect the privacy, confidentiality, security, or integrity of covered information.",
+        "summary": "Defendants are permanently restrained from misrepresenting, expressly or by implication, the extent to which they maintain and protect the privacy, confidentiality, security, or integrity of covered information, including their collection, use, disclosure, and deletion practices.",
         "requirements": [
           {
-            "description": "Must not misrepresent the extent to which they protect privacy, confidentiality, security, or integrity of covered information",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants, Defendants' officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them who receive actual notice of this Order, whether acting directly or indirectly, are permanently restrained and enjoined from misrepresenting, expressly or by implication, the extent to which they maintain and protect the privacy, confidentiality, security, or integrity of covered information, including Defendants' collection, use, disclosure, and deletion practices.",
+            "description": "Must not misrepresent, expressly or by implication, the extent to which they maintain and protect the privacy, confidentiality, security, or integrity of covered information, including collection, use, disclosure, and deletion practices",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendants, Defendants’ officers, agents, employees, 22 and attorneys, and all other persons in active concert or participation with any of them who 23 24 receive actual notice of this Order, whether acting directly or indirectly, are permanently 25 restrained and enjoined from misrepresenting, expressly or by implication, the extent to 26 27 28 Case: 1:18-cv-00114 Document #: 2-1 Filed: 01/08/18 Page 11 of 21 PageID #:48 1 which they maintain and protect the privacy, confidentiality, security, or integrity of covered 2 information, including Defendants’ collection, use, disclosure, and deletion practices.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.8696356275303644
+            "confidence": 0.85,
+            "quote_start_line": 550,
+            "quote_end_line": 565
           }
         ]
       },
@@ -168,14 +201,61 @@
         "provision_number": "V",
         "title": "Comprehensive Data Security Program Requirement",
         "category": "affirmative_obligation",
-        "summary": "Defendants must establish and maintain a comprehensive written information security program with administrative, technical, and physical safeguards to protect personal information.",
+        "summary": "Defendants must establish, implement, and maintain a comprehensive written information security program with administrative, technical, and physical safeguards, including designated personnel, risk assessments, safeguard controls, service provider oversight, and ongoing program evaluation.",
         "requirements": [
           {
-            "description": "Establish and implement comprehensive information security program",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant must, no later than the date of service of this Order, establish and implement, and thereafter maintain, a comprehensive information security program that is reasonably designed to protect the security, confidentiality, and integrity of personal information collected directly or indirectly by Defendants. The content, implementation and maintenance of the program must be fully documented in writing. The program must contain administrative, technical, and physical safeguards appropriate to Defendants' size and complexity, the nature and scope of Defendants' activities, and the sensitivity of the personal information, including: A. The designation of an employee or employees to coordinate and be responsible for the information security program; B. The identification of internal and external risks to the security, confidentiality, or integrity of personal information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment must include consideration of risks in each area of relevant operation, including: (1) employee training and management; (2) information systems, such as network and software design, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, or other systems failures; C. The design and implementation of reasonable safeguards to control these risks, and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures; D. The development and use of reasonable steps to select and retain service providers capable of appropriately safeguarding personal information they receive from Defendants, and requiring service providers, by contract, to implement and maintain appropriate safeguards; and E. The evaluation and adjustment of the information security program in light of the results of the testing and monitoring required by sub-provision C, any changes to Defendants' operations or business arrangements, or any other circumstances that Defendants know or have reason to know may have an impact on the effectiveness of the information security program.",
-            "deadline": "no later than the date of service of this Order",
+            "description": "Must establish and implement a comprehensive information security program, reasonably designed to protect the security, confidentiality, and integrity of personal information, fully documented in writing, no later than the date of service of this Order",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant must, no later than the date of service of 5 this Order, establish and implement, and thereafter maintain, a comprehensive information 6 security program that is reasonably designed to protect the security, confidentiality, and 7 8 integrity of personal information collected directly or indirectly by Defendants. The content, 9 implementation and maintenance of the program must be fully documented in writing. The 10 program must contain administrative, technical, and physical safeguards appropriate to 11 Defendants’ size and complexity, the nature and scope of Defendants’ activities, and the 12 sensitivity of the personal information, including:",
+            "deadline": "date of service of this Order",
             "verified": true,
-            "confidence": 0.9143683083511778
+            "confidence": 1.0,
+            "quote_start_line": 569,
+            "quote_end_line": 582
+          },
+          {
+            "description": "Must designate an employee or employees to coordinate and be responsible for the information security program",
+            "quoted_text": "A. The designation of an employee or employees to coordinate and be responsible for the 14 information security program;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 584,
+            "quote_end_line": 586
+          },
+          {
+            "description": "Must identify internal and external risks to the security, confidentiality, or integrity of personal information and assess the sufficiency of safeguards, including consideration of employee training, information systems, and prevention/detection/response to attacks",
+            "quoted_text": "16 B. The identification of internal and external risks to the security, confidentiality, or 17 integrity of personal information that could result in the unauthorized disclosure, misuse, 18 loss, alteration, destruction, or other compromise of such information, and assessment of 19 the sufficiency of any safeguards in place to control these risks. At a minimum, this risk 20 assessment must include consideration of risks in each area of relevant operation, 21 including: (1) employee training and management; (2) information systems, such as 22 network and software design, information processing, storage, transmission, and disposal; 23 24 and (3) prevention, detection, and response to attacks, intrusions, or other systems 25 failures;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 588,
+            "quote_end_line": 603
+          },
+          {
+            "description": "Must design and implement reasonable safeguards to control identified risks, and regularly test or monitor the effectiveness of safeguards' key controls, systems, and procedures",
+            "quoted_text": "1 C. The design and implementation of reasonable safeguards to control these risks, and 2 regular testing or monitoring of the effectiveness of the safeguards’ key controls, 3 systems, and procedures;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 610,
+            "quote_end_line": 614
+          },
+          {
+            "description": "Must develop and use reasonable steps to select and retain service providers capable of appropriately safeguarding personal information, and require service providers by contract to implement and maintain appropriate safeguards",
+            "quoted_text": "D. The development and use of reasonable steps to select and retain service providers 5 capable of appropriately safeguarding personal information they receive from 6 Defendants, and requiring service providers, by contract, to implement and maintain 7 8 appropriate safeguards; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 616,
+            "quote_end_line": 622
+          },
+          {
+            "description": "Must evaluate and adjust the information security program in light of testing results, changes to operations or business arrangements, or other circumstances that may impact the program's effectiveness",
+            "quoted_text": "9 E. The evaluation and adjustment of the information security program in light of the results 10 of the testing and monitoring required by sub-provision C, any changes to Defendants’ 11 operations or business arrangements, or any other circumstances that Defendants know or 12 have reason to know may have an impact on the effectiveness of the information security 13 program.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 623,
+            "quote_end_line": 631
           }
         ]
       },
@@ -183,35 +263,43 @@
         "provision_number": "VI",
         "title": "Data Security Program Assessment Requirement",
         "category": "assessment",
-        "summary": "Defendants must obtain initial and biennial third-party security assessments for 20 years, with the initial assessment covering the first 180 days after the order.",
+        "summary": "Defendants must obtain initial and biennial third-party assessments of their information security program from a qualified independent professional (CISSP, CISA, or GIAC), covering specified periods, with each assessment certifying the program's effectiveness; the initial assessment must be submitted to the FTC within 10 days of completion.",
         "requirements": [
           {
-            "description": "Obtain assessments from qualified, objective, independent third-party professional",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with compliance with the Provision of this Order titled Comprehensive Data Security Program Requirement, Defendants must obtain initial and biennial assessments (\"Assessments\"): A. The Assessments must be obtained from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. A professional qualified to prepare such Assessments must be: an individual qualified as a Certified Information System Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); an individual holding Global Information Assurance Certification (GIAC) from the SANS Institute; or a qualified individual or entity approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
+            "description": "Must obtain initial and biennial assessments from a qualified, objective, independent third-party professional (CISSP, CISA, GIAC, or FTC-approved individual or entity)",
+            "quoted_text": "A. The Assessments must be obtained from a qualified, objective, independent third-party 20 professional, who uses procedures and standards generally accepted in the profession. A 21 professional qualified to prepare such Assessments must be: an individual qualified as a 22 Certified Information System Security Professional (CISSP) or as a Certified Information 23 24 Systems Auditor (CISA); an individual holding Global Information Assurance 25 Certification (GIAC) from the SANS Institute; or a qualified individual or entity 26 27 28 Case: 1:18-cv-00114 Document #: 2-1 Filed: 01/08/18 Page 13 of 21 PageID #:50 1 approved by the Associate Director for Enforcement, Bureau of Consumer Protection, 2 Federal Trade Commission.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9247368421052632
+            "confidence": 0.85,
+            "quote_start_line": 640,
+            "quote_end_line": 659
           },
           {
-            "description": "Submit initial Assessment to Commission within 10 days after completion",
-            "quoted_text": "D. Each Assessment must be completed within 60 days after the end of the reporting period to which the Assessment applies. Defendants must submit the initial Assessment to the Commission within 10 days after the Assessment has been completed.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 0.9808840864440079
-          },
-          {
-            "description": "Retain all subsequent biennial Assessments until Order terminates",
-            "quoted_text": "Defendants must retain all subsequent biennial Assessments, at least until the Order terminates.",
+            "description": "The initial assessment reporting period must cover the first 180 days after the issuance date of the Order; each biennial assessment must cover each 2-year period thereafter for 20 years after issuance",
+            "quoted_text": "B. The reporting period for the Assessments must cover: (1) the first 180 days after the 4 issuance date of the Order for the initial Assessment, and (2) each 2-year period 5 thereafter for 20 years after issuance of the Order for the biennial Assessments.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9852238805970149
+            "confidence": 1.0,
+            "quote_start_line": 661,
+            "quote_end_line": 665
           },
           {
-            "description": "Submit biennial Assessments to Commission within 10 days of request",
-            "quoted_text": "Defendants must submit any biennial Assessments to the Commission within 10 days of a request from a representative of the Commission.",
-            "deadline": "10 days",
+            "description": "Each assessment must set forth specific safeguards implemented, explain how they are appropriate to Defendants' size and activities, explain how they meet the Order's requirements, and certify that the security program is operating with sufficient effectiveness",
+            "quoted_text": "C. Each Assessment must: 7 8 a. Set forth the specific administrative, technical, and physical safeguards that 9 Defendants have implemented and maintained during the reporting period; 10 b. Explain how such safeguards are appropriate to Defendants’ size and complexity, 11 the nature and scope of Defendants’ activities, and the sensitivity of the personal 12 information collected; 13 c. Explain how the safeguards that have been implemented meet or exceed the 14 protections required by the Provision of this Order titled Comprehensive Data 15 16 Security Program Requirement; and 17 d. Certify that the security program is operating with sufficient effectiveness to 18 provide reasonable assurance that the security, confidentiality, and integrity of 19 personal information is protected and has so operated throughout the reporting 20 period.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 667,
+            "quote_end_line": 689
+          },
+          {
+            "description": "Each assessment must be completed within 60 days after the end of the reporting period; the initial assessment must be submitted to the Commission within 10 days after completion; subsequent biennial assessments must be retained until the Order terminates and submitted to the Commission within 10 days of a request",
+            "quoted_text": "D. Each Assessment must be completed within 60 days after the end of the reporting period 22 to which the Assessment applies. Defendants must submit the initial Assessment to the 23 24 Commission within 10 days after the Assessment has been completed. Defendants must 25 retain all subsequent biennial Assessments, at least until the Order terminates. 26 27 28 Case: 1:18-cv-00114 Document #: 2-1 Filed: 01/08/18 Page 14 of 21 PageID #:51 1 Defendants must submit any biennial Assessments to the Commission within 10 days of a 2 request from a representative of the Commission.",
+            "deadline": "60 days after end of reporting period; 10 days after completion for submission",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 691,
+            "quote_end_line": 706
           }
         ]
       },
@@ -219,28 +307,34 @@
         "provision_number": "VII",
         "title": "Order Acknowledgments",
         "category": "acknowledgment",
-        "summary": "Defendants must submit acknowledgment of receipt of the Order, deliver copies to relevant personnel, and obtain signed acknowledgments from recipients.",
+        "summary": "Each Defendant must submit a sworn acknowledgment of receipt of the Order within 7 days; deliver copies of the Order to principals, officers, managers, and relevant employees within 7 days (and to future personnel before they assume responsibilities) for 5 years; and obtain signed acknowledgments from each recipient within 30 days.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt of Order to Commission",
-            "quoted_text": "A. Each Defendant, within 7 days of entry of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Each Defendant must submit to the Commission a sworn acknowledgment of receipt of this Order within 7 days of entry",
+            "quoted_text": "A. Each Defendant, within 7 days of entry of this Order, must submit to the Commission an 7 8 acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 714,
+            "quote_end_line": 716
           },
           {
-            "description": "Deliver copy of Order to all principals, officers, directors, managers, members, and relevant employees",
-            "quoted_text": "B. For five (5) years after entry of this Order, Defendants must deliver a copy of this Order to: (1) all principals, officers, directors, and managers and members; (2) all employees, agents, and representatives having management responsibilities related to subject matter covered by this Order; and (3) any business entity resulting from any change in structure as set forth in the Part titled Compliance Reporting. Delivery must occur within seven (7) days of entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "7 days",
+            "description": "For 5 years after entry, Defendants must deliver a copy of the Order to all principals, officers, directors, managers, members, employees/agents with management responsibilities related to the Order's subject matter, and any business entity resulting from a change in structure; delivery must occur within 7 days for current personnel and before responsibilities are assumed for all others",
+            "quoted_text": "9 B. For five (5) years after entry of this Order, Defendants must deliver a copy of this Order 10 to: (1) all principals, officers, directors, and managers and members; (2) all employees, 11 agents, and representatives having management responsibilities related to subject matter 12 covered by this Order; and (3) any business entity resulting from any change in structure 13 as set forth in the Part titled Compliance Reporting. Delivery must occur within seven 14 (7) days of entry of this Order for current personnel. For all others, delivery must occur 15 16 before they assume their responsibilities.",
+            "deadline": "7 days for current personnel; before assuming responsibilities for future personnel",
             "verified": true,
-            "confidence": 0.9939794168096056
+            "confidence": 1.0,
+            "quote_start_line": 717,
+            "quote_end_line": 729
           },
           {
-            "description": "Obtain signed and dated acknowledgment of receipt from each individual or entity to which Order was delivered",
-            "quoted_text": "C. From each individual or entity to which a Defendant delivered a copy of this Order, that Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "From each individual or entity to which a Defendant delivered a copy of the Order, that Defendant must obtain a signed and dated acknowledgment of receipt within 30 days",
+            "quoted_text": "17 C. From each individual or entity to which a Defendant delivered a copy of this Order, that 18 Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of 19 this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 730,
+            "quote_end_line": 734
           }
         ]
       },
@@ -248,28 +342,52 @@
         "provision_number": "VIII",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Defendants must submit annual compliance reports for one year, notify the Commission of structural changes for ten years, and notify of bankruptcy filings.",
+        "summary": "Each Defendant must submit a sworn annual compliance report one year after entry of the Order covering contact information, business activities, compliance status, privacy notices, parental consent methods, and security procedures; must submit compliance notices within 14 days of structural or contact changes for 10 years; and must notify the Commission of any bankruptcy filing within 14 days.",
         "requirements": [
           {
-            "description": "Submit compliance report one year after entry of Order",
-            "quoted_text": "A. One year after entry of this Order, each Defendant must submit a compliance report, sworn under penalty of perjury. Each Defendant must: 1. Identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission and Plaintiff may use to communicate with Defendant; 2. Identify all of that Defendant's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; 3. Describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales, and involvement of any other Defendant; 4. Describe in detail whether and how that Defendant is in compliance with each section of this Order; 5. Provide a copy of each different version of any privacy notice posted on each Web site or online service operated by that Defendant that is directed to children or otherwise communicated to parents of children from whom that Defendant collects personal information; 6. Provide a statement setting forth in detail any methods used to obtain verifiable parental consent prior to any collection, use, and/or disclosure of personal information or the methods used to avoid collecting, using, and/or disclosing personal information; 7. Provide a statement setting forth in detail the means provided for parents to review any personal information collected and to refuse to permit its further use or maintenance; 8. Provide a statement setting forth in detail the procedures used to protect the confidentiality, security, and integrity of personal information collected; and 9. Provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission.",
-            "deadline": "1 year",
+            "description": "One year after entry of the Order, each Defendant must submit a sworn compliance report identifying contact information, all businesses, activities, compliance with each section of the Order, privacy notices, parental consent methods, means for parents to review information, security procedures, and copies of Order acknowledgments",
+            "quoted_text": "24 A. One year after entry of this Order, each Defendant must submit a compliance report, 25 sworn under penalty of perjury. Each Defendant must: 26 27 28 Case: 1:18-cv-00114 Document #: 2-1 Filed: 01/08/18 Page 15 of 21 PageID #:52 1 1. Identify the primary physical, postal, and email address and telephone number, as 2 designated points of contact, which representatives of the Commission and 3 Plaintiff may use to communicate with Defendant; 4 2. Identify all of that Defendant’s businesses by all of their names, telephone 5 numbers, and physical, postal, email, and Internet addresses; 6 3. Describe the activities of each business, including the goods and services offered, 7 8 the means of advertising, marketing, and sales, and involvement of any other 9 Defendant; 10 4. Describe in detail whether and how that Defendant is in compliance with each 11 section of this Order; 12 5. Provide a copy of each different version of any privacy notice posted on each 13 Web site or online service operated by that Defendant that is directed to children 14 or otherwise communicated to parents of children from whom that Defendant 15 16 collects personal information; 17 6. Provide a statement setting forth in detail any methods used to obtain verifiable 18 parental consent prior to any collection, use, and/or disclosure of personal 19 information or the methods used to avoid collecting, using, and/or disclosing 20 personal information; 21 7. Provide a statement setting forth in detail the means provided for parents to 22 review any personal information collected and to refuse to permit its further use 23 24 or maintenance; 25 8. Provide a statement setting forth in detail the procedures used to protect the 26 confidentiality, security, and integrity of personal information collected; and 27 28 Case: 1:18-cv-00114 Document #: 2-1 Filed: 01/08/18 Page 16 of 21 PageID #:53 1 9. Provide a copy of each Order Acknowledgment obtained pursuant to this Order, 2 unless previously submitted to the Commission.",
+            "deadline": "1 year after entry",
             "verified": true,
-            "confidence": 0.9091377091377091
+            "confidence": 0.85,
+            "quote_start_line": 742,
+            "quote_end_line": 801
           },
           {
-            "description": "Submit compliance notice within 14 days of changes to designated point of contact or structure",
-            "quoted_text": "B. For ten (10) years after entry of this Order, each Defendant must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in: (a) any designated point of contact; or (b) the structure of any Defendant or any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
-            "deadline": "14 days",
+            "description": "For 10 years after entry of the Order, each Defendant must submit a sworn compliance notice within 14 days of any change in designated point of contact or in the structure of any Defendant or related entity that may affect compliance obligations",
+            "quoted_text": "B. For ten (10) years after entry of this Order, each Defendant must submit a compliance 4 notice, sworn under penalty of perjury, within 14 days of any change in: (a) any 5 designated point of contact; or (b) the structure of any Defendant or any entity that 6 Defendant has any ownership interest in or controls directly or indirectly that may affect 7 8 compliance obligations arising under this Order including: creation, merger, sale, or 9 dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or 10 practices subject to this Order.",
+            "deadline": "14 days of any qualifying change",
             "verified": true,
-            "confidence": 0.9831116794543905
+            "confidence": 1.0,
+            "quote_start_line": 803,
+            "quote_end_line": 814
           },
           {
-            "description": "Submit notice of bankruptcy petition, insolvency proceeding, or similar proceeding within 14 days of filing",
-            "quoted_text": "C. Each Defendant must submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Defendant within 14 days of its filing.",
+            "description": "Each Defendant must notify the Commission of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding within 14 days of its filing",
+            "quoted_text": "C. Each Defendant must submit to the Commission notice of the filing of any bankruptcy 12 petition, insolvency proceeding, or similar proceeding by or against such Defendant 13 within 14 days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 816,
+            "quote_end_line": 820
+          },
+          {
+            "description": "All submissions required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, concluding with the prescribed declaration language",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of 15 16 perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by 17 concluding: “I declare under penalty of perjury under the laws of the United States of 18 America that the foregoing is true and correct. Executed on: _______” and supplying the 19 date, signatory’s full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 822,
+            "quote_end_line": 829
+          },
+          {
+            "description": "Unless otherwise directed in writing, all submissions must be emailed to Debrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC; subject line must begin: United States v. VTech Electronics Limited",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to 21 the Commission pursuant to this Order must be emailed to Debrief@ftc.gov or sent by 22 overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, 23 24 Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue 25 NW, Washington, DC 20580. The subject line must begin: United States v. VTech 26 Electronics Limited.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 831,
+            "quote_end_line": 841
           }
         ]
       },
@@ -277,14 +395,34 @@
         "provision_number": "IX",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Defendants must create and retain records demonstrating compliance for ten years after entry of the Order, with each record retained for five years.",
+        "summary": "Defendants must create certain records for 10 years after entry of the Order and retain each such record for 5 years, including all compliance records and submissions, consumer complaints relating to covered information collection, and copies of each materially different form or page through which covered information is collected.",
         "requirements": [
           {
-            "description": "Create and retain records demonstrating full compliance with each provision of Order",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants must create certain records for ten (10) years after entry of this Order, and retain each such record for five (5) years. Specifically, Defendants must create and retain the following records: A. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission; B. Copies of all consumer complaints relating to Defendants' collection of covered information, and any response; and C. A copy of each materially different form, page, or screen created, maintained, or otherwise provided by Defendants through which covered information is collected, and a copy of each materially different document containing any representation regarding collection, use, and disclosure practices pertaining to covered information. Each webpage copy shall be accompanied by the URL of the webpage where the material was posted online. Electronic copies shall include all text and graphics files, audio scripts, and other computer files used in presenting information on the Internet.",
+            "description": "Must create and retain all records necessary to demonstrate full compliance with each provision of the Order, including all submissions to the Commission, for 10 years (created) and 5 years (retained)",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendants must create certain records for ten (10) 3 years after entry of this Order, and retain each such record for five (5) years. Specifically, 4 Defendants must create and retain the following records: 5 A. All records necessary to demonstrate full compliance with each provision of this Order, 6 including all submissions to the Commission;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9095718108831401
+            "confidence": 1.0,
+            "quote_start_line": 849,
+            "quote_end_line": 857
+          },
+          {
+            "description": "Must create and retain copies of all consumer complaints relating to Defendants' collection of covered information, and any response",
+            "quoted_text": "8 B. Copies of all consumer complaints relating to Defendants’ collection of covered 9 information, and any response; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 859,
+            "quote_end_line": 860
+          },
+          {
+            "description": "Must create and retain a copy of each materially different form, page, or screen through which covered information is collected, and each materially different document containing representations regarding collection, use, and disclosure of covered information, including URLs and all electronic files",
+            "quoted_text": "C. A copy of each materially different form, page, or screen created, maintained, or 11 otherwise provided by Defendants through which covered information is collected, and a 12 copy of each materially different document containing any representation regarding 13 collection, use, and disclosure practices pertaining to covered information. Each 14 webpage copy shall be accompanied by the URL of the webpage where the material was 15 16 posted online. Electronic copies shall include all text and graphics files, audio scripts, 17 and other computer files used in presenting information on the Internet.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 862,
+            "quote_end_line": 873
           }
         ]
       },
@@ -292,28 +430,34 @@
         "provision_number": "X",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission and Plaintiff are authorized to monitor Defendants' compliance through various means including requesting additional reports, depositions, document production, employee interviews, and posing as consumers.",
+        "summary": "The Commission and Plaintiff are authorized to monitor Defendants' compliance through written requests for reports and documents (responded to within 14 days), depositions, direct communications with Defendants and their employees, and undercover methods; the Commission's compulsory process authority is preserved.",
         "requirements": [
           {
-            "description": "Comply with Commission and Plaintiff requests for additional compliance reports, depositions, and document production within 14 days",
-            "quoted_text": "A. Within fourteen (14) days of receipt of a written request from a representative of the Commission or Plaintiff, each Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying. The Commission and Plaintiff are also authorized to obtain discovery, without further leave of court, using any procedure prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
+            "description": "Within 14 days of receipt of a written request from the Commission or Plaintiff, each Defendant must submit additional compliance reports or other requested information (sworn under penalty of perjury), appear for depositions, and produce documents for inspection and copying; discovery may be obtained using Federal Rules of Civil Procedure 29, 30, 31, 33, 34, 36, 45, and 69",
+            "quoted_text": "A. Within fourteen (14) days of receipt of a written request from a representative of the 22 Commission or Plaintiff, each Defendant must: submit additional compliance reports or 23 24 other requested information, which must be sworn under penalty of perjury; appear for 25 depositions; and produce documents for inspection and copying. The Commission and 26 Plaintiff are also authorized to obtain discovery, without further leave of court, using any 27 28 Case: 1:18-cv-00114 Document #: 2-1 Filed: 01/08/18 Page 18 of 21 PageID #:55 1 procedure prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic 2 depositions), 31, 33, 34, 36, 45, and 69.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 0.8696993060909792
+            "confidence": 0.85,
+            "quote_start_line": 881,
+            "quote_end_line": 897
           },
           {
-            "description": "Permit Commission and Plaintiff to communicate directly with Defendants and interview employees",
-            "quoted_text": "B. For matters concerning this Order, the Commission and Plaintiff are authorized to communicate directly with each Defendant. Defendants must permit representatives of the Commission and Plaintiff to interview any employee or other person affiliated with Defendants who has agreed to such an interview. The person interviewed may have counsel present.",
+            "description": "The Commission and Plaintiff may communicate directly with each Defendant and may interview any employee or affiliated person who has agreed to an interview; counsel may be present",
+            "quoted_text": "B. For matters concerning this Order, the Commission and Plaintiff are authorized to 4 communicate directly with each Defendant. Defendants must permit representatives of 5 the Commission and Plaintiff to interview any employee or other person affiliated with 6 Defendants who has agreed to such an interview. The person interviewed may have 7 8 counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9969064748201439
+            "confidence": 1.0,
+            "quote_start_line": 899,
+            "quote_end_line": 907
           },
           {
-            "description": "Allow Commission and Plaintiff to pose as consumers, suppliers, or other entities without identification or notice",
-            "quoted_text": "C. The Commission and Plaintiff may use all other lawful means, including posing, through its representatives as consumers, suppliers, or other individuals or entities, to Defendants or any individual or entity affiliated with Defendants, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Commission and Plaintiff may use all other lawful means, including posing as consumers, suppliers, or other individuals without prior notice; the Commission's compulsory process authority under Sections 9 and 20 of the FTC Act is preserved",
+            "quoted_text": "9 C. The Commission and Plaintiff may use all other lawful means, including posing, through 10 its representatives as consumers, suppliers, or other individuals or entities, to Defendants 11 or any individual or entity affiliated with Defendants, without the necessity of 12 identification or prior notice. Nothing in this Order limits the Commission’s lawful use 13 of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 14 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.9830761209593326
+            "confidence": 1.0,
+            "quote_start_line": 908,
+            "quote_end_line": 918
           }
         ]
       },
@@ -324,11 +468,13 @@
         "summary": "The Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of the Order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction for construction, modification, and enforcement",
-            "quoted_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+            "description": "This Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order",
+            "quoted_text": "17 IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for 18 purposes of construction, modification, and enforcement of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 921,
+            "quote_end_line": 923
           }
         ]
       }
@@ -348,8 +494,32 @@
       "complaint_representations": 1,
       "order_provisions": 11,
       "order_definitions": 15,
-      "order_requirements": 26
+      "order_requirements": 36,
+      "provisions_per_section": {
+        "I": 4,
+        "II": 2,
+        "III": 4,
+        "IV": 1,
+        "V": 6,
+        "VI": 4,
+        "VII": 3,
+        "VIII": 5,
+        "IX": 3,
+        "X": 3,
+        "XI": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 1
+      },
+      "verification_details": {
+        "complaint_verified": 1,
+        "complaint_total": 1,
+        "order_verified": 36,
+        "order_total": 36
+      }
     },
-    "processing_time_seconds": 585.0
+    "processing_time_seconds": 339.9
   }
 }

@@ -1,57 +1,83 @@
 {
   "case_info": {
-    "docket_number": "2:17-cv-00758",
+    "docket_number": "Case 2:17-cv-00758",
     "company": {
       "name": "VIZIO, Inc.",
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "39 Tesla, Irvine, California 92618",
-      "business_description": "VIZIO designs and sells internet-connected televisions and monitors. Since 2002, VIZIO has designed and sold televisions in the United States, and since 2010 has sold over 11 million internet-connected televisions equipped with automated content recognition (ACR) software that tracks consumer viewing habits."
+      "business_description": "VIZIO designs and manufactures internet-connected televisions and monitors. Since 2002, VIZIO has sold televisions in the United States, and since 2010 has sold over 11 million internet-connected televisions equipped with proprietary automated content recognition (ACR) software."
     },
     "commissioners": [],
     "case_date": {
       "month": 2,
       "year": 2017
     },
-    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a); Section 13(b) of the Federal Trade Commission Act, 15 U.S.C. § 53(b)",
     "violation_type": "both",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/162-3024-vizio-inc-vizio-inscape-services-llc"
   },
   "complaint": {
-    "factual_background": "VIZIO installed automated content recognition (ACR) software on over 11 million internet-connected televisions that tracked what consumers watched on a second-by-second basis and transmitted this data to VIZIO servers. The company sold this highly specific viewing data to third parties for audience measurement, advertising effectiveness analysis, and targeted advertising, without adequately informing consumers. The ACR software was turned on by default, and consumers received inadequate or misleading disclosures about the comprehensive data collection and sharing practices.",
+    "factual_background": "VIZIO, Inc. and VIZIO Inscape Services, LLC secretly tracked what consumers watched on their internet-connected televisions on a second-by-second basis using proprietary Automated Content Recognition (ACR) software, enabled by default, without consumers' knowledge or consent. Beginning in February 2014, Defendants collected viewing data from over 10 million televisions and transmitted it to their servers, storing it indefinitely. Defendants then sold this sensitive viewing data to third parties for audience measurement, advertising effectiveness analysis, and targeted advertising, while also appending demographic information such as age, income, and marital status. The 'Smart Interactivity' setting used to enable this tracking was described only as enabling 'program offers and suggestions,' with no disclosure of the actual data collection and sharing practices. Defendants never actually delivered on the promised 'program offers and suggestions,' making the feature description both misleading and false.",
     "representations_made": [
       {
-        "description": "Claimed that the 'Smart Interactivity' feature enabled program offers and suggestions",
-        "quoted_text": "In all televisions enabled with ACR tracking, VIZIO televisions had a setting, available through the settings menu, called 'Smart Interactivity.' This setting included the description: 'Enables program offers and suggestions.' Similarly, in the manual for some VIZIO televisions, a section entitled 'Smart Interactivity' described the practice as 'Your TV can display program-related information as part of the broadcast.'",
-        "source_paragraph": 22
+        "description": "VIZIO represented that the 'Smart Interactivity' feature enabled program offers and suggestions about what to watch, while omitting that it actually comprehensively collected and shared consumers' television viewing activity with third parties.",
+        "quoted_text": "37. Beginning in February 2014, Defendants represented, expressly or by implication, that the “Smart Interactivity” feature of their televisions enabled program offers and suggestions about what to watch.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 37,
+        "quote_start_line": 233,
+        "quote_end_line": 235
       },
       {
-        "description": "Represented that Smart Interactivity would provide program offers and suggestions to consumers",
-        "quoted_text": "Beginning in February 2014, Defendants represented expressly or by implication that Defendants would provide program offers and suggestions to consumers with 'Smart Interactivity' enabled on their televisions.",
-        "source_paragraph": 42
+        "description": "The 'Smart Interactivity' setting description stated it 'Enables program offers and suggestions,' and the television manual described it as displaying 'program-related information as part of the broadcast,' with no mention of data collection.",
+        "quoted_text": "22. In all televisions enabled with ACR tracking, VIZIO televisions had a setting, available through the settings menu, called “Smart Interactivity.” This setting included the description: “Enables program offers and suggestions.” Similarly, in the manual for some VIZIO televisions, a section entitled “Smart Interactivity” described the practice as “Your TV can display program-related information as part of the broadcast.” Neither description provided information about the collection of viewing data. Defendants have not provided any “program offers or suggestions” or “program-related information” for most televisions for more than two years, and did not update the disclosures.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 22,
+        "quote_start_line": 164,
+        "quote_end_line": 171
+      },
+      {
+        "description": "Defendants represented expressly or by implication that they would provide program offers and suggestions to consumers with 'Smart Interactivity' enabled on their televisions.",
+        "quoted_text": "42. Beginning in February 2014, Defendants represented expressly or by implication that Defendants would provide program offers and suggestions to consumers with “Smart Interactivity” enabled on their televisions.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 42,
+        "quote_start_line": 253,
+        "quote_end_line": 255
+      },
+      {
+        "description": "The initial pop-up notification sent to consumers stated that 'Smart Interactivity' had been enabled but provided no information about viewing data collection or ACR software.",
+        "quoted_text": "after purchase, an initial pop-up notification appeared on the screen that said: The VIZIO Privacy Policy has changed. Smart Interactivity has been enabled on your TV, but you may disable it in the settings menu. See www.vizio.com/privacy for more details. This message will time out in 1 minute. This notification provided no information about the collection of viewing data or ACR software. Nor did it directly link to the settings menu or privacy policy. See Exhibit A.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 20,
+        "quote_start_line": 149,
+        "quote_end_line": 155
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Unfair Tracking",
-        "representation": "Defendants used ACR technology to comprehensively collect sensitive television viewing activity of consumers on a second-by-second basis and shared this data with third parties for tracking and targeted advertising, through a medium consumers would not expect to be used for tracking, without consumers' consent",
-        "fact": "Defendants' collection and sharing of sensitive data without consumers' consent has caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves",
-        "conclusion": "This is an unfair act or practice, in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a), and an unconscionable commercial practice in violation of the CFA."
+        "title": "Unfair Tracking Without Consumer Consent",
+        "representation": "Beginning in February 2014, Defendants used ACR technology to comprehensively collect sensitive television viewing activity on a second-by-second basis, store it indefinitely, and share it with third parties for cross-device advertising targeting — all through a medium (a television) that consumers would not expect to be used for tracking.",
+        "fact": "Defendants engaged in these pervasive data collection and sharing practices without consumers' knowledge or consent, causing substantial injury that consumers could not reasonably avoid.",
+        "conclusion": "Defendants' collection and sharing of sensitive data without consumers' consent is an unfair act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a), and an unconscionable commercial practice in violation of the New Jersey CFA, N.J. Stat. Ann. § 56:8-2, with each instance constituting a separate violation."
       },
       {
         "count_number": 2,
         "title": "Deceptive Omission Regarding Smart Interactivity",
-        "representation": "Defendants represented that the 'Smart Interactivity' feature of their televisions enabled program offers and suggestions about what to watch",
-        "fact": "Defendants failed to adequately disclose that the 'Smart Interactivity' feature comprehensively collected and shared consumers' television viewing activity from cable boxes, DVRs, streaming devices, and airwaves, which Defendants then provided on a household-by-household basis to third parties",
-        "conclusion": "Defendants' failure to disclose adequately the material information, in light of the representation set forth in Paragraph 37, is a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a), and constitutes unconscionable commercial practices and/or omissions of material fact in violation of the CFA."
+        "representation": "Beginning in February 2014, Defendants represented, expressly or by implication, that the 'Smart Interactivity' feature of their televisions enabled program offers and suggestions about what to watch.",
+        "fact": "Defendants failed to adequately disclose that the 'Smart Interactivity' feature comprehensively collected and shared consumers' television viewing activity from cable boxes, DVRs, streaming devices, and airwaves, which Defendants then provided on a household-by-household basis to third parties.",
+        "conclusion": "Defendants' failure to disclose this material information, in light of the representation made about 'Smart Interactivity,' is a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a), and an unconscionable commercial practice and/or omission of material fact in violation of the CFA, with each instance constituting a separate violation."
       },
       {
         "count_number": 3,
         "title": "Deceptive Representation Regarding Smart Interactivity",
-        "representation": "Defendants represented that they would provide program offers and suggestions to consumers with 'Smart Interactivity' enabled on their televisions",
-        "fact": "Defendants did not provide program offers or suggestions to consumers with 'Smart Interactivity' enabled on their televisions",
-        "conclusion": "This is a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a), and an unconscionable commercial practice and/or misrepresentation in violation of the CFA."
+        "representation": "Beginning in February 2014, Defendants represented expressly or by implication that they would provide program offers and suggestions to consumers with 'Smart Interactivity' enabled on their televisions.",
+        "fact": "In fact, Defendants did not provide program offers or suggestions to consumers with 'Smart Interactivity' enabled on their televisions.",
+        "conclusion": "This is a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a), and an unconscionable commercial practice and/or misrepresentation in violation of the CFA, N.J. Stat. Ann. § 56:8-2, with each instance constituting a separate violation."
       }
     ]
   },
@@ -60,58 +86,76 @@
       "Covered Information": "information collected from a VIZIO internet-connected device, including, but not limited to, (1) product registration data; (2) Viewing Data; (3) Internet Protocol (\"IP\") address; (4) User ID or other identifiers; and (5) geolocation or information that can be used to derive geolocation. Covered Information also means information combined with any of (1) through (5) above.",
       "Defendants": "VIZIO, Inc., and its successors and assigns, and VIZIO Inscape Services, LLC, and its successors and assigns.",
       "Smart TV": "any of Defendants' televisions or monitors that have the ability to connect to the internet.",
-      "Viewing Data": "any information or data collected or planned to be collected from a Smart TV about the content viewed on that television, or any reports or data derived therefrom and any information combined with such data.",
-      "Prominently": "that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: (1) A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. (2) An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. (3) In any communication using an interactive electronic medium, such as in connection with an update to device firmware, the disclosure must be unavoidable. (4) The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the triggering representation appears. (5) The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. (6) The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. (7) When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group."
+      "Viewing Data": "any information or data collected or planned to be collected from a Smart TV about the content viewed on that television, or any reports or data derived therefrom and any information combined with such data."
     },
     "provisions": [
       {
         "provision_number": "I",
         "title": "Prohibited Misleading Representations",
         "category": "prohibition",
-        "summary": "Defendants must not misrepresent the extent to which they collect, use, maintain, or protect privacy, confidentiality, or security of Covered Information, or the purpose of their collection, use, or disclosure.",
+        "summary": "Defendants must not misrepresent the extent to which they collect, use, maintain, or protect Covered Information, or the purpose of their collection, use, or disclosure of Covered Information.",
         "requirements": [
           {
             "description": "Must not misrepresent the extent to which Defendants collect, use, maintain, or protect the privacy, confidentiality, or security of any Covered Information",
-            "quoted_text": "IT IS ORDERED that Defendants and Defendants' officers, agents, employees, and attorneys, directly or through any corporation, subsidiary, division, website, or other device or affiliate owned or controlled by Defendants, in or affecting commerce, must not misrepresent in any manner, expressly or by implication: A. The extent to which Defendants collect, use, maintain, or protect the privacy, confidentiality, or security of any Covered Information",
+            "quoted_text": "IT IS ORDERED that Defendants and Defendants’ officers, agents, employees, and attorneys, directly or through any corporation, subsidiary, division, website, or other device or affiliate owned or controlled by Defendants, in or affecting commerce, must not misrepresent in any manner, expressly or by implication: A. The extent to which Defendants collect, use, maintain, or protect the privacy, confidentiality, or security of any Covered Information; or",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 67,
+            "quote_end_line": 72
           },
           {
             "description": "Must not misrepresent the purpose of their collection, use, or disclosure of Covered Information",
-            "quoted_text": "IT IS ORDERED that Defendants and Defendants' officers, agents, employees, and attorneys, directly or through any corporation, subsidiary, division, website, or other device or affiliate owned or controlled by Defendants, in or affecting commerce, must not misrepresent in any manner, expressly or by implication: B. The purpose of their collection, use, or disclosure of Covered Information.",
+            "quoted_text": "B. The purpose of their collection, use, or disclosure of Covered Information.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 73,
+            "quote_end_line": 73
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Notice and Affirmative Express Consent Provision",
+        "title": "Notice and Affirmative Express Consent",
         "category": "affirmative_obligation",
-        "summary": "Prior to collecting any Viewing Data, Defendants must prominently disclose what data will be collected and shared, obtain affirmative express consent, and provide instructions for revoking consent.",
+        "summary": "Before collecting any Viewing Data, Defendants must provide prominent disclosures about data collection practices, obtain affirmative express consent, and provide instructions for revoking consent.",
         "requirements": [
           {
-            "description": "Prominently disclose to the consumer, separate and apart from any privacy policy or terms of use, the types of Viewing Data that will be collected and used, types that will be shared with third parties, the identity or specific categories of such third parties, and all purposes for sharing such information",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants and Defendants' officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, in connection with any collection of Viewing Data for any product or service, prior to collecting any Viewing Data must: A. Prominently disclose to the consumer, separate and apart from any \"privacy policy,\" \"terms of use\" page, or other similar document: (1) the types of Viewing Data that will be collected and used, (2) the types of Viewing Data that will be shared with third parties; (3) the identity or specific categories of such third parties; and (4) all purposes for Defendants' sharing of such information",
+            "description": "Prominently disclose to consumers, separate from any privacy policy or terms of use, the types of Viewing Data collected and used, shared with third parties, the identity or categories of such third parties, and all purposes for sharing",
+            "quoted_text": "A. Prominently disclose to the consumer, separate and apart from any “privacy policy,” “terms of use” page, or other similar document: (1) the types of Viewing Data that will be collected and used, (2) the types of Viewing Data that will be shared with third parties; (3) the identity or specific categories of such third parties; and (4) all purposes for Defendants’ sharing of such information;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 82,
+            "quote_end_line": 86
           },
           {
-            "description": "Obtain the consumer's affirmative express consent at the time the disclosure is made and upon any material changes to the terms disclosed",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants and Defendants' officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, in connection with any collection of Viewing Data for any product or service, prior to collecting any Viewing Data must: B. Obtain the consumer's affirmative express consent (1) at the time the disclosure in Part II.A is made and (2) upon any material changes to the terms disclosed in Part II.A",
+            "description": "Obtain the consumer's affirmative express consent at the time the disclosure is made and upon any material changes to the disclosed terms",
+            "quoted_text": "B. Obtain the consumer’s affirmative express consent (1) at the time the disclosure in Part II.A is made and (2) upon any material changes to the terms disclosed in Part II.A; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 87,
+            "quote_end_line": 88
           },
           {
-            "description": "Provide instructions for how the consumer may revoke consent to collection of Viewing Data",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants and Defendants' officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, in connection with any collection of Viewing Data for any product or service, prior to collecting any Viewing Data must: C. Provide instructions, at any time the consumer's affirmative express consent is sought under Part II.B, for how the consumer may revoke consent to collection of Viewing Data.",
+            "description": "Provide instructions for how the consumer may revoke consent to collection of Viewing Data, at any time affirmative express consent is sought",
+            "quoted_text": "C. Provide instructions, at any time the consumer’s affirmative express consent is sought under Part II.B, for how the consumer may revoke consent to collection of Viewing Data.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 89,
+            "quote_end_line": 90
+          },
+          {
+            "description": "Disclosures must be prominent: visually stand out, audibly clear, unavoidable in interactive electronic media, use plain language, appear in all relevant languages, comply across all mediums, not be contradicted, and account for targeted audiences",
+            "quoted_text": "D. For the purposes of this Order, “Prominently” means that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: 1. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. 2. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. 3. In any communication using an interactive electronic medium, such as in connection with an update to device firmware, the disclosure must be unavoidable. 4. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the triggering representation appears. Case 2:17-cv-00758 Document 1-3 Filed 02/06/17 Page 5 of 17 PageID: 19 5. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. 6. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. 7. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, “ordinary consumers” includes reasonable members of that group.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 91,
+            "quote_end_line": 113
           }
         ]
       },
@@ -119,14 +163,16 @@
         "provision_number": "III",
         "title": "Data Deletion",
         "category": "affirmative_obligation",
-        "summary": "Defendants must destroy Viewing Data collected prior to March 1, 2016, subject to certain exceptions for legal requirements or user consent.",
+        "summary": "Within 120 days of the Order, Defendants must destroy Viewing Data collected prior to March 1, 2016, with limited exceptions for government requests, legal requirements, or user consent.",
         "requirements": [
           {
-            "description": "Destroy Viewing Data that has been collected prior to March 1, 2016, with exceptions for government agency requests, legal requirements, or user consent",
-            "quoted_text": "IT IS FURTHER ORDERED that within 120 days after entry of this Order, Defendants and Defendants' officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, must destroy Viewing Data that has been collected prior to March 1, 2016. Provided, however, that such Viewing Data need not be destroyed, and may be disclosed, (A) to the extent requested by a government agency or required by law, regulation, or court order, including without limitation as required by rules applicable to the safeguarding of evidence in pending litigation, or (B) to the extent a user of a television associated with the Viewing Data has affirmatively consented to the collection, use, or disclosure thereof, consistent with Part II of this order.",
+            "description": "Destroy all Viewing Data collected prior to March 1, 2016, within 120 days after entry of this Order, unless required by government/law or user has affirmatively consented",
+            "quoted_text": "IT IS FURTHER ORDERED that within 120 days after entry of this Order, Defendants and Defendants’ officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, must destroy Viewing Data that has been collected prior to March 1, 2016. Provided, however, that such Viewing Data need not be destroyed, and may be disclosed, (A) to the extent requested by a government agency or required by law, regulation, or court order, including without limitation as required by rules applicable to the safeguarding of evidence in pending litigation, or (B) to the extent a user of a television associated with the Viewing Data has affirmatively consented to the collection, use, or disclosure thereof, consistent with Part II of this order.",
             "deadline": "120 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 115,
+            "quote_end_line": 123
           }
         ]
       },
@@ -134,49 +180,61 @@
         "provision_number": "IV",
         "title": "Mandated Privacy Program",
         "category": "affirmative_obligation",
-        "summary": "Defendants must establish and maintain a comprehensive privacy program to address privacy risks and protect the privacy and confidentiality of Covered Information.",
+        "summary": "Defendants must establish, implement, and maintain a comprehensive written privacy program designed to address privacy risks and protect Covered Information, including designated personnel, risk assessments, controls, service provider oversight, and ongoing evaluation.",
         "requirements": [
           {
-            "description": "Establish and implement, and thereafter maintain, a comprehensive privacy program reasonably designed to address privacy risks and protect the privacy and confidentiality of Covered Information",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants must, no later than the effective date of this Order, establish and implement, and thereafter maintain, a comprehensive privacy program that is reasonably designed to (1) address privacy risks related to the development and management of new and existing products and services for consumers, and (2) protect the privacy and confidentiality of Covered Information collected directly or indirectly by Defendants.",
-            "deadline": "no later than the effective date",
+            "description": "Establish and implement, no later than the effective date of this Order, and thereafter maintain, a comprehensive written privacy program reasonably designed to address privacy risks and protect Covered Information",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendants must, no later than the effective date of this Order, establish and implement, and thereafter maintain, a comprehensive privacy program that is reasonably designed to (1) address privacy risks related to the development and management of new and existing products and services for consumers, and (2) protect the privacy and confidentiality of Covered Information collected directly or indirectly by Case 2:17-cv-00758 Document 1-3 Filed 02/06/17 Page 6 of 17 PageID: 20 Defendants. Such program, the content and implementation of which must be documented in writing, must contain controls and procedures appropriate to Defendants’ size and complexity, the nature and scope of Defendants’ activities, and the sensitivity of the Covered Information, including:",
+            "deadline": "effective date of Order",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 125,
+            "quote_end_line": 136
           },
           {
             "description": "Designate an employee or employees to coordinate and be responsible for the privacy program",
-            "quoted_text": "Such program, the content and implementation of which must be documented in writing, must contain controls and procedures appropriate to Defendants' size and complexity, the nature and scope of Defendants' activities, and the sensitivity of the Covered Information, including: A. The designation of an employee or employees to coordinate and be responsible for the privacy program",
+            "quoted_text": "A. The designation of an employee or employees to coordinate and be responsible for the privacy program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 137,
+            "quote_end_line": 138
           },
           {
-            "description": "Identify reasonably foreseeable risks that could result in unauthorized collection, use, or disclosure of Covered Information and assess the sufficiency of safeguards",
-            "quoted_text": "Such program, the content and implementation of which must be documented in writing, must contain controls and procedures appropriate to Defendants' size and complexity, the nature and scope of Defendants' activities, and the sensitivity of the Covered Information, including: B. The identification of reasonably foreseeable risks, both internal and external, that could result in Defendants' unauthorized collection, use, or disclosure of Covered Information and an assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including: (1) employee training and management, including training on the requirements of this Order, and (2) product design, development, and research",
+            "description": "Identify reasonably foreseeable internal and external risks of unauthorized collection, use, or disclosure of Covered Information, and assess the sufficiency of safeguards, including consideration of employee training and product design",
+            "quoted_text": "B. The identification of reasonably foreseeable risks, both internal and external, that could result in Defendants’ unauthorized collection, use, or disclosure of Covered Information and an assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including: (1) employee training and management, including training on the requirements of this Order, and (2) product design, development, and research;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 139,
+            "quote_end_line": 144
           },
           {
-            "description": "Design and implement reasonable controls and procedures to address risks and regularly test or monitor their effectiveness",
-            "quoted_text": "Such program, the content and implementation of which must be documented in writing, must contain controls and procedures appropriate to Defendants' size and complexity, the nature and scope of Defendants' activities, and the sensitivity of the Covered Information, including: C. The design and implementation of reasonable controls and procedures to address such risks and regular testing or monitoring of the effectiveness of those controls and procedures",
+            "description": "Design and implement reasonable controls and procedures to address identified risks, and regularly test or monitor their effectiveness",
+            "quoted_text": "C. The design and implementation of reasonable controls and procedures to address such risks and regular testing or monitoring of the effectiveness of those controls and procedures;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 145,
+            "quote_end_line": 146
           },
           {
-            "description": "Develop and use reasonable steps to select and retain service providers capable of protecting Covered Information and require service providers by contract to implement appropriate privacy protections",
-            "quoted_text": "Such program, the content and implementation of which must be documented in writing, must contain controls and procedures appropriate to Defendants' size and complexity, the nature and scope of Defendants' activities, and the sensitivity of the Covered Information, including: D. The development and use of reasonable steps to select and retain service providers capable of appropriately protecting the privacy of Covered Information they receive from Defendants and requiring service providers, by contract, to implement and maintain appropriate privacy protections for such Covered Information",
+            "description": "Take reasonable steps to select and retain service providers capable of protecting privacy of Covered Information, and require service providers by contract to implement and maintain appropriate privacy protections",
+            "quoted_text": "D. The development and use of reasonable steps to select and retain service providers capable of appropriately protecting the privacy of Covered Information they receive from Defendants and requiring service providers, by contract, to implement and maintain appropriate privacy protections for such Covered Information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 147,
+            "quote_end_line": 150
           },
           {
-            "description": "Evaluate and adjust the privacy program in light of testing results, changes to operations, or other circumstances that may impact effectiveness",
-            "quoted_text": "Such program, the content and implementation of which must be documented in writing, must contain controls and procedures appropriate to Defendants' size and complexity, the nature and scope of Defendants' activities, and the sensitivity of the Covered Information, including: E. The evaluation and adjustment of Defendants' privacy program in light of the results of the testing and monitoring required by sub-provision C, any changes to Defendants' operations or business arrangements, or any other circumstances that Defendants know or have reason to know may have an impact on the effectiveness of the privacy program.",
+            "description": "Evaluate and adjust the privacy program in light of testing results, operational changes, or other circumstances that may impact its effectiveness",
+            "quoted_text": "E. The evaluation and adjustment of Defendants’ privacy program in light of the results of the testing and monitoring required by sub-provision C, any changes to Defendants’ operations or business arrangements, or any other circumstances that Defendants know or have reason to know may have an impact on the effectiveness of the privacy program.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 151,
+            "quote_end_line": 154
           }
         ]
       },
@@ -184,35 +242,43 @@
         "provision_number": "V",
         "title": "Privacy Assessments by a Third Party",
         "category": "assessment",
-        "summary": "Defendants must obtain initial and biennial privacy assessments from qualified, independent third-party professionals for 20 years.",
+        "summary": "Defendants must obtain initial and biennial third-party privacy assessments by a qualified independent professional approved by the FTC, covering specific content requirements, and must provide or retain assessments per specified timelines.",
         "requirements": [
           {
-            "description": "Obtain initial and biennial assessments from a qualified, objective, independent third-party professional with minimum 3 years experience in privacy and data protection, approved by the FTC",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with the Provision of this Order titled Mandated Privacy Program, Defendants must obtain initial and biennial assessments (\"Assessments\"): A. The Assessments must be completed by a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. An individual qualified to prepare such Assessments must have a minimum of 3 years of experience in the field of privacy and data protection. All individuals selected to complete such Assessments must be approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission in his or her sole discretion.",
+            "description": "Obtain initial and biennial assessments completed by a qualified, objective, independent third-party professional with at least 3 years of experience in privacy and data protection, approved by the FTC Associate Director for Enforcement",
+            "quoted_text": "A. The Assessments must be completed by a qualified, objective, independent third- party professional, who uses procedures and standards generally accepted in the profession. An individual qualified to prepare such Assessments must have a minimum of 3 years of experience in the field of privacy and data protection. All individuals selected to complete such Assessments must be approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission in his or her sole discretion. Any decision not to approve an individual selected to conduct such Assessments must be accompanied by a writing setting forth in detail the reasons for denying such approval.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 162,
+            "quote_end_line": 169
           },
           {
-            "description": "Complete each Assessment within 60 days after the end of the reporting period",
-            "quoted_text": "D. Each Assessment must be completed within 60 days after the end of the reporting period to which the Assessment applies.",
-            "deadline": "60 days",
+            "description": "Initial assessment must cover the first 180 days after the Order issuance date; biennial assessments must cover each 2-year period thereafter for 20 years",
+            "quoted_text": "B. The reporting period for the Assessments must cover: (1) the first 180 days after the issuance date of the Order for the initial Assessment, and (2) each 2-year period thereafter for 20 years after the issuance date of the Order for the biennial Assessments.",
+            "deadline": "180 days (initial); every 2 years for 20 years (biennial)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 170,
+            "quote_end_line": 172
           },
           {
-            "description": "Provide the initial Assessment to Plaintiffs within 10 days after completion",
-            "quoted_text": "Defendants must provide the initial Assessment to Plaintiffs within 10 days after the Assessment has been completed.",
-            "deadline": "10 days",
+            "description": "Each assessment must set forth specific privacy controls implemented, explain their appropriateness, explain how they meet Order requirements, and certify they are operating with sufficient effectiveness",
+            "quoted_text": "C. Each Assessment must: 1. Set forth the specific privacy controls that Defendants have implemented and maintained during the reporting period; 2. Explain how such privacy controls are appropriate to Defendants’ size and complexity, the nature and scope of Defendants’ activities, and the sensitivity of the Covered Information; Case 2:17-cv-00758 Document 1-3 Filed 02/06/17 Page 8 of 17 PageID: 22 3. Explain how the privacy controls that have been implemented meet or exceed the protections required by the Provision of this Order titled Mandated Privacy Program; and 4. Certify that the privacy controls are operating with sufficient effectiveness to provide reasonable assurance to protect the privacy of Covered Information and that the controls have so operated throughout the reporting period.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 173,
+            "quote_end_line": 187
           },
           {
-            "description": "Retain all subsequent biennial Assessments at least until the Order terminates and submit to Plaintiffs within 10 days of request",
-            "quoted_text": "Defendants must retain all subsequent biennial Assessments, at least until the Order terminates. Defendants must submit any biennial Assessments to Plaintiffs within 10 days of a request from a representative of Plaintiffs.",
-            "deadline": "10 days",
+            "description": "Each assessment must be completed within 60 days after the end of the reporting period; initial assessment must be provided to Plaintiffs within 10 days of completion; subsequent biennial assessments must be retained until Order terminates and submitted to Plaintiffs within 10 days of request",
+            "quoted_text": "D. Each Assessment must be completed within 60 days after the end of the reporting period to which the Assessment applies. Defendants must provide the initial Assessment to Plaintiffs within 10 days after the Assessment has been completed. Defendants must retain all subsequent biennial Assessments, at least until the Order terminates. Defendants must submit any biennial Assessments to Plaintiffs within 10 days of a request from a representative of Plaintiffs.",
+            "deadline": "60 days after reporting period ends; 10 days to provide/submit",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 188,
+            "quote_end_line": 193
           }
         ]
       },
@@ -220,28 +286,52 @@
         "provision_number": "VI",
         "title": "Monetary Relief",
         "category": "affirmative_obligation",
-        "summary": "Defendants must pay $1,500,000 to the FTC and $1,000,000 to the New Jersey Division of Consumer Affairs, with $300,000 suspended subject to compliance.",
+        "summary": "Defendants must pay $1,500,000 to the FTC and $1,000,000 to the New Jersey Division of Consumer Affairs, with $700,000 due immediately and $300,000 suspended for 5 years conditioned on compliance.",
         "requirements": [
           {
-            "description": "Pay $1,500,000 to the Commission by electronic fund transfer",
-            "quoted_text": "IT IS FURTHER ORDERED that: A. Defendants must pay to the Commission $1,500,000 within [8] days of the effective date of this Order by electronic fund transfer in accordance with instructions provided by a representative of the Commission.",
+            "description": "Pay $1,500,000 to the Commission within 8 days of the effective date of this Order by electronic fund transfer",
+            "quoted_text": "A. Defendants must pay to the Commission $1,500,000 within [8] days of the effective date of this Order by electronic fund transfer in accordance with instructions provided by a representative of the Commission.",
             "deadline": "8 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 196,
+            "quote_end_line": 198
           },
           {
-            "description": "Pay $1,000,000 to the New Jersey Division of Consumer Affairs, consisting of $915,940 in civil penalties and $84,060 in attorneys' fees and investigative costs",
-            "quoted_text": "IT IS FURTHER ORDERED that: B. Defendants shall also pay the New Jersey Division of Consumer Affairs $1,000,000.00, which is comprised of $915,940.00 in civil penalties pursuant to N.J. Stat. Ann. § 56:8-13, and $84,060.00 in attorneys' fees and investigative costs pursuant to N.J. Stat. Ann. § 56:8-11, -19 (\"New Jersey Monetary Relief\").",
+            "description": "Pay $1,000,000 to the New Jersey Division of Consumer Affairs ($915,940 in civil penalties and $84,060 in attorneys' fees/investigative costs)",
+            "quoted_text": "B. Defendants shall also pay the New Jersey Division of Consumer Affairs $1,000,000.00, which is comprised of $915,940.00 in civil penalties pursuant to N.J. Stat. Ann. § 56:8-13, and $84,060.00 in attorneys’ fees and investigative costs pursuant to N.J. Stat. Ann. § 56:8-11, -19 (“New Jersey Monetary Relief”).",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 199,
+            "quote_end_line": 202
           },
           {
-            "description": "Pay $700,000 of the New Jersey Monetary Relief to the New Jersey Division of Consumer Affairs",
-            "quoted_text": "IT IS FURTHER ORDERED that: C. Defendants shall pay $700,000 of the New Jersey Monetary Relief to the New Jersey Division of Consumer Affairs within [8] days of the effective date of this Order by credit card, wire transfer, bank check, money order, certified check, or cashier's check payable to \"New Jersey Division of Consumer Affairs\" and shall be forwarded to: Case Management Tracking, Division of Consumer Affairs, 124 Halsey Street – 7th Floor, Newark, New Jersey 07101.",
+            "description": "Pay $700,000 of the New Jersey Monetary Relief within 8 days of the effective date of this Order by specified payment methods to the NJ Division of Consumer Affairs",
+            "quoted_text": "C. Defendants shall pay $700,000 of the New Jersey Monetary Relief to the New Jersey Division of Consumer Affairs within [8] days of the effective date of this Order by credit Case 2:17-cv-00758 Document 1-3 Filed 02/06/17 Page 9 of 17 PageID: 23 card, wire transfer, bank check, money order, certified check, or cashier’s check payable to “New Jersey Division of Consumer Affairs” and shall be forwarded to: Case Management Tracking, Division of Consumer Affairs, 124 Halsey Street – 7th Floor, Newark, New Jersey 07101.",
             "deadline": "8 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 203,
+            "quote_end_line": 211
+          },
+          {
+            "description": "The remaining $300,000 (Suspended Penalty) is suspended and automatically vacated after 5 years from the effective date, provided Defendants comply with the Order and do not violate the CFA",
+            "quoted_text": "D. The balance of the New Jersey Monetary Relief, totaling $300,000, shall be suspended and automatically vacated at the expiration of five (5) years from the effective date of this order (“Suspended Penalty”), provided: a. Defendants comply in all material respects with Sections I through VI and Sections VIII through XI of this Order; b. Defendants do not engage in acts or practices in violation of the CFA.",
+            "deadline": "5 years",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 212,
+            "quote_end_line": 217
+          },
+          {
+            "description": "If Defendants fail to comply, the NJ Division of Consumer Affairs must provide written notice of noncompliance and afford Defendants a 15-day cure period before seeking judgment for unpaid amounts",
+            "quoted_text": "E. In the event Defendants fail to comply with Section VI, Paragraph D of this Order, the New Jersey Division of Consumer Affairs (“Division”) shall provide Defendants with written notice of default or noncompliance, seeking payment of any unpaid portion of the New Jersey Monetary Relief, as well as the Suspended Penalty (“Notice of Noncompliance”). In any such Notice of Noncompliance, the Division shall provide Defendants with the specific details of the alleged default or noncompliance, as well as any supporting documents, and shall afford Defendants a fifteen (15) day period from receipt of the Notice of Noncompliance to cure the default or noncompliance. The Division may move on short notice or by Order to Show Cause to have a judgment entered for any unpaid portion of the New Jersey Monetary Relief as well as the Suspended Penalty.",
+            "deadline": "15 days to cure",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 218,
+            "quote_end_line": 227
           }
         ]
       },
@@ -249,14 +339,43 @@
         "provision_number": "VII",
         "title": "Additional Monetary Provisions",
         "category": "affirmative_obligation",
-        "summary": "Defendants relinquish dominion over all assets transferred pursuant to the Order and acknowledge facts for bankruptcy purposes.",
+        "summary": "Defendants relinquish all rights to transferred assets, acknowledge that Complaint facts may be used in future enforcement proceedings, and confirm their Taxpayer Identification Numbers may be used for delinquency reporting.",
         "requirements": [
           {
-            "description": "Relinquish dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order",
-            "quoted_text": "IT IS FURTHER ORDERED that: A. Defendants relinquish dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets.",
+            "description": "Defendants relinquish all legal and equitable right, title, and interest in assets transferred pursuant to this Order and may not seek their return",
+            "quoted_text": "A. Defendants relinquish dominion and all legal and equitable right, title, and interest Case 2:17-cv-00758 Document 1-3 Filed 02/06/17 Page 10 of 17 PageID: 24 in all assets transferred pursuant to this Order and may not seek the return of any assets.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 230,
+            "quote_end_line": 234
+          },
+          {
+            "description": "Facts alleged in the Complaint will be taken as true in any subsequent civil litigation by Plaintiffs to enforce payment rights, including in bankruptcy proceedings",
+            "quoted_text": "B. The facts alleged in the Complaint will be taken as true, without further proof, in any subsequent civil litigation by or on behalf of any of Plaintiffs to enforce their rights to any payment pursuant to this Order, such as a nondischargeability complaint in any bankruptcy case.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 235,
+            "quote_end_line": 237
+          },
+          {
+            "description": "Facts alleged in the Complaint establish all elements necessary to sustain an action under Section 523(a)(2)(A) of the Bankruptcy Code, and this Order will have collateral estoppel effect",
+            "quoted_text": "C. The facts alleged in the Complaint establish all elements necessary to sustain an action by or on behalf of any of Plaintiffs pursuant to Section 523(a)(2)(A) of the Bankruptcy Code, 11 U.S.C. § 523(a)(2)(A), and this Order will have collateral estoppel effect for such purposes.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 238,
+            "quote_end_line": 241
+          },
+          {
+            "description": "Defendants acknowledge that their Taxpayer Identification Numbers may be used for collecting and reporting on any delinquent amounts arising out of this Order",
+            "quoted_text": "D. Defendants acknowledge that their Taxpayer Identification Numbers, which Defendants have previously submitted to the Commission, may be used for collecting and reporting on any delinquent amount arising out of this Order, in accordance with 31 U.S.C. § 7701.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 242,
+            "quote_end_line": 245
           }
         ]
       },
@@ -264,28 +383,34 @@
         "provision_number": "VIII",
         "title": "Acknowledgments of the Order",
         "category": "acknowledgment",
-        "summary": "Defendants must submit acknowledgments of receipt of the Order and deliver copies to principals, officers, directors, and employees, obtaining signed acknowledgments.",
+        "summary": "Defendants must submit a sworn acknowledgment of receipt within 10 days, deliver copies of the Order to principals, employees, and agents within specified timeframes, and obtain signed acknowledgments from each recipient within 30 days.",
         "requirements": [
           {
-            "description": "Submit to Plaintiffs an acknowledgment of receipt of this Order under sworn penalty of perjury",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants obtain acknowledgments of receipt of this Order: A. Defendants, within 10 days of entry of this Order, must submit to Plaintiffs an acknowledgment of receipt of this Order under sworn penalty of perjury.",
+            "description": "Within 10 days of entry of this Order, submit to Plaintiffs a sworn acknowledgment of receipt of this Order under penalty of perjury",
+            "quoted_text": "A. Defendants, within 10 days of entry of this Order, must submit to Plaintiffs an acknowledgment of receipt of this Order under sworn penalty of perjury.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 249,
+            "quote_end_line": 250
           },
           {
-            "description": "For 5 years, deliver a copy of this Order to all principals, officers, directors, employees, agents, and representatives who participate in conduct related to the subject matter, and any business entity resulting from change in structure",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants obtain acknowledgments of receipt of this Order: B. For 5 years after the issuance date of this Order, Defendants must deliver a copy of this Order to: (1) all principals, officers, and directors; (2) all employees, agents, and representatives who participate in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Report and Notices. Delivery must occur within 10 days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "10 days",
+            "description": "For 5 years after issuance, deliver a copy of this Order to all principals, officers, directors, relevant employees, agents, representatives, and any successor business entities; within 10 days for current personnel, and before assuming responsibilities for all others",
+            "quoted_text": "B. For 5 years after the issuance date of this Order, Defendants must deliver a copy of this Order to: (1) all principals, officers, and directors; (2) all employees, agents, and representatives who participate in conduct related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Report and Notices. Delivery must occur within 10 days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their Case 2:17-cv-00758 Document 1-3 Filed 02/06/17 Page 11 of 17 PageID: 25 responsibilities.",
+            "deadline": "10 days for current personnel; before assuming responsibilities for others",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 251,
+            "quote_end_line": 260
           },
           {
-            "description": "Obtain from each individual or entity to which a copy of the Order was delivered a signed and dated acknowledgment of receipt",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants obtain acknowledgments of receipt of this Order: C. From each individual or entity to which a Defendant delivered a copy of this Order, that Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "Obtain a signed and dated acknowledgment of receipt of this Order from each individual or entity to which a copy was delivered, within 30 days of delivery",
+            "quoted_text": "C. From each individual or entity to which a Defendant delivered a copy of this Order, that Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 261,
+            "quote_end_line": 263
           }
         ]
       },
@@ -293,28 +418,61 @@
         "provision_number": "IX",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Defendants must submit compliance reports to Plaintiffs one year after issuance and provide compliance notices within 14 days of certain changes.",
+        "summary": "Defendants must submit an annual compliance report one year after issuance, provide sworn notices within 14 days of certain changes or bankruptcy filings, and follow specified submission procedures for both the FTC and New Jersey authorities.",
         "requirements": [
           {
-            "description": "Submit a compliance report one year after issuance, sworn under penalty of perjury, identifying contact information, business names and activities, and detailing compliance with each provision of the Order",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants make timely submissions to Plaintiffs: A. One year after the issuance date of this Order, Defendants must submit a compliance report, sworn under penalty of perjury, in which it must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of Plaintiffs may use to communicate with Defendants; (b) identify all of Defendants' businesses by all of their names; (c) describe the activities of each business, including the goods and services offered; (d) describe in detail whether and how Defendants are in compliance with each Provision of this Order, including a discussion of all of the changes Defendants made to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order to Plaintiffs, unless previously submitted.",
-            "deadline": "one year",
+            "description": "Submit a sworn compliance report one year after the issuance date identifying contact information, business activities, compliance status for each Order provision, and copies of acknowledgments",
+            "quoted_text": "A. One year after the issuance date of this Order, Defendants must submit a compliance report, sworn under penalty of perjury, in which it must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of Plaintiffs may use to communicate with Defendants; (b) identify all of Defendants’ businesses by all of their names; (c) describe the activities of each business, including the goods and services offered; (d) describe in detail whether and how Defendants are in compliance with each Provision of this Order, including a discussion of all of the changes Defendants made to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order to Plaintiffs, unless previously submitted.",
+            "deadline": "1 year",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 266,
+            "quote_end_line": 274
           },
           {
-            "description": "Submit a compliance notice within 14 days of any change in designated point of contact or structure of Corporate Defendants",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants make timely submissions to Plaintiffs: B. Defendants must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (a) any designated point of contact; or (b) the structure of any Corporate Defendants or any entity that Defendants have any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "description": "Submit a sworn compliance notice within 14 days of any change in designated point of contact or the structure of any corporate defendant or affiliated entity that may affect compliance obligations",
+            "quoted_text": "B. Defendants must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (a) any designated point of contact; or (b) the structure of any Corporate Defendants or any entity that Defendants have any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 275,
+            "quote_end_line": 280
           },
           {
-            "description": "Submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants make timely submissions to Plaintiffs: C. Defendants must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Defendants within 14 days of its filing.",
+            "description": "Submit notice of any bankruptcy petition, insolvency proceeding, or similar proceeding filed by or against Defendants within 14 days of filing",
+            "quoted_text": "C. Defendants must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Defendants within 14 days of its Case 2:17-cv-00758 Document 1-3 Filed 02/06/17 Page 12 of 17 PageID: 26 filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 281,
+            "quote_end_line": 286
+          },
+          {
+            "description": "All sworn submissions must comply with 28 U.S.C. § 1746, stating truth and accuracy under penalty of perjury with date and signature",
+            "quoted_text": "D. Any submission to Plaintiffs required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 287,
+            "quote_end_line": 291
+          },
+          {
+            "description": "All submissions to the Commission must be emailed to DEbrief@ftc.gov or sent by overnight courier to the FTC Associate Director for Enforcement, with subject line beginning: In re VIZIO, Inc.",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue, NW, Washington, DC 20580. The subject line must begin: In re VIZIO, Inc.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 292,
+            "quote_end_line": 296
+          },
+          {
+            "description": "All submissions to the Attorney General and/or Director must be emailed to cmt@dca.lps.state.nj.us or sent by overnight courier to the NJ Division of Consumer Affairs, with subject line beginning: In re VIZIO, Inc.",
+            "quoted_text": "F. Unless otherwise directed by an Attorney General and/or Director representative in writing, all submissions to the Attorney General and/or Director pursuant to this Order must be emailed to cmt@dca.lps.state.nj.us or sent by overnight courier (not the U.S. Postal Service) to: Case Management Tracking, Division of Consumer Affairs, 124 Halsey Street – 7th Floor, Newark, New Jersey 07101. The subject line must begin: In re VIZIO, Inc.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 297,
+            "quote_end_line": 301
           }
         ]
       },
@@ -322,14 +480,61 @@
         "provision_number": "X",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Defendants must create and retain certain records for 20 years after issuance, including accounting records, personnel records, consumer complaints, privacy representations, and assessment materials.",
+        "summary": "Defendants must create and retain specified records for 20 years after the Order issuance date, retaining each for at least 5 years, covering accounting, personnel, consumer complaints, representations, assessment materials, and all compliance documents.",
         "requirements": [
           {
-            "description": "Create certain records for 20 years after the issuance date and retain each such record for 5 years, including accounting records, personnel records, consumer complaints, privacy representations, assessment materials, and compliance records",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants must create certain records for 20 years after the issuance date of the Order, and retain each such record for 5 years, unless otherwise specified below. Specifically, Defendants, in connection with the collection, maintenance, or storage of personal information from or about consumers, must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss; B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination; C. Copies or records of all consumer complaints regarding Defendants' collection, use, maintenance, or protection of the privacy, confidentiality, or security of any Covered Information, whether received directly or indirectly, such as through a third party, and any response; D. A copy of each representation by Defendants that describes Defendants' collection, use, maintenance, or protection of the privacy, confidentiality, or security of any Covered Information. E. For 5 years after the date of preparation of each Assessment required by this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Defendants, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Defendants' compliance with related Provisions of this Order, for the compliance period covered by such Assessment; and F. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to Plaintiffs.",
+            "description": "Create and retain accounting records showing revenues, costs, and net profit or loss from all goods or services sold",
+            "quoted_text": "A. Accounting records showing the revenues from all goods or services sold, the Case 2:17-cv-00758 Document 1-3 Filed 02/06/17 Page 13 of 17 PageID: 27 costs incurred in generating those revenues, and resulting net profit or loss;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 308,
+            "quote_end_line": 312
+          },
+          {
+            "description": "Create and retain personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination for each person providing services related to the Order",
+            "quoted_text": "B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 313,
+            "quote_end_line": 316
+          },
+          {
+            "description": "Create and retain copies or records of all consumer complaints regarding Defendants' collection, use, maintenance, or protection of Covered Information, and any responses",
+            "quoted_text": "C. Copies or records of all consumer complaints regarding Defendants’ collection, use, maintenance, or protection of the privacy, confidentiality, or security of any Covered Information, whether received directly or indirectly, such as through a third party, and any response;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 317,
+            "quote_end_line": 320
+          },
+          {
+            "description": "Create and retain a copy of each representation by Defendants describing their collection, use, maintenance, or protection of the privacy, confidentiality, or security of Covered Information",
+            "quoted_text": "D. A copy of each representation by Defendants that describes Defendants’ collection, use, maintenance, or protection of the privacy, confidentiality, or security of any Covered Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 321,
+            "quote_end_line": 323
+          },
+          {
+            "description": "For 5 years after preparation of each Assessment, retain all materials relied upon to prepare it, including plans, reports, studies, reviews, audits, policies, training materials, and assessments",
+            "quoted_text": "E. For 5 years after the date of preparation of each Assessment required by this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Defendants, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Defendants’ compliance with related Provisions of this Order, for the compliance period covered by such Assessment; and",
+            "deadline": "5 years after each assessment",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 324,
+            "quote_end_line": 328
+          },
+          {
+            "description": "Retain all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to Plaintiffs",
+            "quoted_text": "F. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to Plaintiffs.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 329,
+            "quote_end_line": 330
           }
         ]
       },
@@ -337,21 +542,34 @@
         "provision_number": "XI",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "Plaintiffs may request additional compliance reports, interview Defendants' personnel, and use all lawful means including posing as consumers to monitor compliance.",
+        "summary": "Plaintiffs may monitor Defendants' compliance by requesting additional reports and records, communicating directly with and interviewing Defendants' affiliates, and using other lawful investigative means including undercover contact.",
         "requirements": [
           {
-            "description": "Within 10 days of receipt of written request from Plaintiffs, submit additional compliance reports or other requested information and produce records for inspection",
-            "quoted_text": "IT IS FURTHER ORDERED that, for the purpose of monitoring Defendants' compliance with this Order: A. Within 10 days of receipt of a written request from a representative of Plaintiffs, Defendants must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
+            "description": "Within 10 days of a written request from Plaintiffs, Defendants must submit additional sworn compliance reports, other requested information, and produce records for inspection and copying",
+            "quoted_text": "A. Within 10 days of receipt of a written request from a representative of Plaintiffs, Case 2:17-cv-00758 Document 1-3 Filed 02/06/17 Page 14 of 17 PageID: 28 Defendants must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 334,
+            "quote_end_line": 339
           },
           {
-            "description": "Permit representatives of Plaintiffs to communicate directly with Defendants and interview anyone affiliated with Defendants who has agreed to such an interview",
-            "quoted_text": "IT IS FURTHER ORDERED that, for the purpose of monitoring Defendants' compliance with this Order: B. For matters concerning this Order, representatives of the Plaintiffs are authorized to communicate directly with Defendants. Defendants must permit representatives of Plaintiffs to interview anyone affiliated with any Respondent who has agreed to such an interview. The interviewee may have counsel present.",
+            "description": "Defendants must permit representatives of Plaintiffs to communicate directly with Defendants and to interview anyone affiliated with any Respondent who has agreed to such an interview, with counsel present if desired",
+            "quoted_text": "B. For matters concerning this Order, representatives of the Plaintiffs are authorized to communicate directly with Defendants. Defendants must permit representatives of Plaintiffs to interview anyone affiliated with any Respondent who has agreed to such an interview. The interviewee may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 340,
+            "quote_end_line": 343
+          },
+          {
+            "description": "Plaintiffs may use all other lawful means, including posing as consumers, suppliers, or other individuals, without prior notice or identification, and may use compulsory process under the FTC Act and CFA",
+            "quoted_text": "C. Plaintiffs may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Defendants or any individual or entity affiliated with Defendants, without the necessity of identification or prior notice. Nothing in this Order limits Plaintiffs’ lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1, and the CFA, N.J. Stat. Ann. § 56:8- 3, -4.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 344,
+            "quote_end_line": 349
           }
         ]
       },
@@ -359,14 +577,16 @@
         "provision_number": "XII",
         "title": "Retention of Jurisdiction",
         "category": "duration",
-        "summary": "The Court retains jurisdiction for purposes of construction, modification, and enforcement of this Order.",
+        "summary": "The Court retains jurisdiction over this matter for purposes of construction, modification, and enforcement of the Order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction of this matter for purposes of construction, modification and enforcement of this Order",
+            "description": "This Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order",
             "quoted_text": "IT IS FURTHER ORDERED that this Court retain jurisdiction of this matter for purposes of construction, modification and enforcement of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 351,
+            "quote_end_line": 352
           }
         ]
       }
@@ -383,11 +603,36 @@
     },
     "extraction_stats": {
       "complaint_counts": 3,
-      "complaint_representations": 2,
+      "complaint_representations": 4,
       "order_provisions": 12,
-      "order_definitions": 5,
-      "order_requirements": 30
+      "order_definitions": 4,
+      "order_requirements": 45,
+      "provisions_per_section": {
+        "I": 2,
+        "II": 4,
+        "III": 1,
+        "IV": 6,
+        "V": 4,
+        "VI": 5,
+        "VII": 4,
+        "VIII": 3,
+        "IX": 6,
+        "X": 6,
+        "XI": 3,
+        "XII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 4,
+        "complaint_total": 4,
+        "order_verified": 45,
+        "order_total": 45
+      }
     },
-    "processing_time_seconds": 173.3
+    "processing_time_seconds": 125.9
   }
 }

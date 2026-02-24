@@ -1,31 +1,51 @@
 {
   "case_info": {
-    "docket_number": "3:12-cv-01487-SI",
+    "docket_number": "CV '12 1487",
     "company": {
       "name": "RockYou, Inc.",
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "Redwood City, California",
-      "business_description": "RockYou operated a website and online service that allowed users to develop and share content through individualized software widgets. The company provided services to consumers online through RockYou.com and various social networking websites, allowing users to create slideshows, upload photos, and share multimedia content."
+      "business_description": "RockYou, Inc. operated a website and online service accessible worldwide on the Internet through RockYou.com where users could develop content, create and share widgets (including slideshows), and register to save content for later retrieval and editing."
     },
     "commissioners": [],
-    "date_issued": "2012-03-27",
-    "legal_authority": "Section 5(a)(1) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)(1); Section 1303(c) of COPPA, 15 U.S.C. § 6502(c); Sections 1303(c) and 1306(d) of the Children's Online Privacy Protection Act of 1998, 15 U.S.C. §§ 6501-6506",
+    "case_date": {
+      "month": 3,
+      "year": 2012
+    },
+    "legal_authority": "Sections 5(a)(1), 5(m)(1)(A), 13(b), and 16(a) of the Federal Trade Commission Act, 15 U.S.C. §§ 45(a)(1), 45(m)(1)(A), 53(b), and 56(a); Sections 1303(c) and 1306(d) of the Children's Online Privacy Protection Act of 1998 (COPPA), 15 U.S.C. §§ 6501-6506, 6502(c) and 6505(d)",
     "violation_type": "both",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/1023120-rockyou-inc"
   },
   "complaint": {
-    "factual_background": "RockYou, Inc. operated a website and social networking services from 2006 through 2010 that collected personal information from users, including email addresses and passwords stored in clear text. The company failed to implement reasonable data security measures, resulting in unauthorized access to approximately 32 million email addresses and passwords. Additionally, from December 2008 through January 2010, RockYou knowingly collected personal information from approximately 179,000 children under age 13 without obtaining parental consent, in violation of COPPA.",
+    "factual_background": "RockYou, Inc. operated a website that collected personal information from consumers but failed to implement basic data security measures, resulting in unauthorized access to approximately 32 million email addresses and passwords. Additionally, from December 2008 through January 2010, RockYou knowingly collected personal information from approximately 179,000 children under age 13 without obtaining parental consent or providing proper notice, in violation of COPPA requirements.",
     "representations_made": [
       {
         "description": "Claimed to use commercially reasonable physical, managerial, and technical safeguards to preserve the integrity and security of personal information",
-        "quoted_text": "RockYou! uses commercially reasonable physical, managerial, and technical safeguards to preserve the integrity and security of your personal information. We cannot, however, ensure or warrant the security of any information you transmit to RockYou! and you do so at your own risk. Once we receive your transmission of information, RockYou! makes commercially reasonable efforts to ensure the security of our systems. However, please note that this is not a guarantee that such information may not be accessed, disclosed, altered, or destroyed by breach of any of our physical, technical, or managerial safeguards.",
-        "source_paragraph": 15
+        "quoted_text": "1 RockYou! uses commercially reasonable physical, managerial, and technical safeguards to preserve the integrity and security of your personal information. We cannot, however, 2 ensure or warrant the security of any information you transmit to RockYou! and you do so at your own risk. Once we receive your transmission of information, RockY ou! 3 makes commercially reasonable efforts to ensure the security of our systems. However, please note that this is not a guarantee that such information may not be accessed, 4 disclosed, altered, or destroyed by breach of any of our physical, technical, or managerial 5 safeguards. (Exhibit A, www.rockyou.com Privacy Policy, February 13,2006)",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 15,
+        "quote_start_line": 220,
+        "quote_end_line": 229
       },
       {
-        "description": "Claimed not to knowingly collect or maintain personally identifiable information from children under 13 and promised to delete such information if discovered",
-        "quoted_text": "Protecting the privacy of young children is especially important. For that reason, RockYou! does not knowingly collect or maintain personally identifiable information or non-personally-identifiable information on the RockYou! Sites from persons under 13 years of age, and no part of our website is directed to persons under 13. If you are under 13 years of age then please do not use or access the RockYou! Sites at any time or in any manner. If RockYou! learns that personally identifiable information of persons under 13 years of age has been collected on the RockYou! Sites without verified parental consent, then RockYou! will take appropriate steps to delete this information.",
-        "source_paragraph": 22
+        "description": "Claimed not to knowingly collect or maintain personally identifiable information from persons under 13 years of age",
+        "quoted_text": "Protecting the privacy of young children is especially important. For that reason, RockYo u! does not knowingly collect or maintain personally identifiable information or 26 non-personally-identifiable information on the RockYou! Sites from persons under 13 27 years of age, and no part of our website is directed to persons under 13. If you are under 13 years of age then please do not use or access the RockYo u! Sites at any time or in any 28 manner. If RockY ou! learns that personally identifiable information of persons under 13 omplaint for Permanent Injunction, Civil Penalties, and Other Relief Page 7 of12",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 22,
+        "quote_start_line": 310,
+        "quote_end_line": 317
+      },
+      {
+        "description": "Stated that if RockYou learns that personally identifiable information of persons under 13 has been collected, it will take appropriate steps to delete this information",
+        "quoted_text": "28 manner. If RockY ou! learns that personally identifiable information of persons under 13 omplaint for Permanent Injunction, Civil Penalties, and Other Relief Page 7 of12 1 years of age has been collected on the RockY ou! Sites without verified parental consent, then RockYou! will take appropriate steps to delete this information. Exhibit A (Privacy",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 22,
+        "quote_start_line": 316,
+        "quote_end_line": 321
       }
     ],
     "counts": [
@@ -33,19 +53,19 @@
         "count_number": 1,
         "title": "Data Security Misrepresentation",
         "representation": "Defendant represented that it implemented reasonable and appropriate measures to protect against unauthorized access to the personal information it obtained from customers",
-        "fact": "Defendant failed to take reasonable measures by: (a) unnecessarily collecting email passwords; (b) storing passwords in clear text; (c) failing to segment servers; and (d) not protecting against commonly known attacks such as SQL injection and XSS attacks, resulting in unauthorized access to approximately 32 million email addresses and passwords",
+        "fact": "Defendant did not implement reasonable and appropriate measures to protect against unauthorized access, including: unnecessarily collecting email passwords, storing passwords in clear text, failing to segment servers, and not protecting against SQL injection and XSS attacks",
         "conclusion": "Therefore, the representation set forth in Paragraph 15 was false or misleading and constituted a deceptive act or practice in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 2,
         "title": "COPPA Rule Violations",
-        "representation": "Defendant operated a website that collected personal information from children under age 13 with actual knowledge",
-        "fact": "Defendant violated the COPPA Rule by: (a) failing to provide sufficient notice on its website of information collection practices; (b) failing to provide direct notice to parents; (c) failing to obtain verifiable parental consent; and (d) failing to establish reasonable procedures to protect the confidentiality, security, and integrity of personal information collected from children",
+        "representation": "Defendant collected, used, and/or disclosed personal information from children",
+        "fact": "Defendant failed to: provide sufficient notice on its website of information practices; provide direct notice to parents; obtain verifiable parental consent; and establish reasonable procedures to protect confidentiality, security, and integrity of children's personal information",
         "conclusion": "Therefore, Defendant has violated the Children's Online Privacy Protection Rule, 16 C.F.R. Part 312."
       },
       {
         "count_number": 3,
-        "title": "Misrepresentation Regarding Children's Information Collection",
+        "title": "Misrepresentation About Children's Information Collection",
         "representation": "Defendant represented that it: (a) did not knowingly collect or maintain personal information from children under 13; and (b) would delete any personal information that it learns it has collected from children",
         "fact": "Defendant knowingly collected, and did not delete, personal information from children under 13",
         "conclusion": "Therefore, the representations set forth in Paragraph 35 above were false and misleading and constitute deceptive acts or practices in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
@@ -53,11 +73,451 @@
     ]
   },
   "order": {
-    "definitions": {},
-    "provisions": [],
+    "definitions": {
+      "Rule": "the Federal Trade Commission's Children's Online Privacy Protection Rule, 16 C.F.R. Part 312.",
+      "child": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "collects": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "collection": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "Commission": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "delete": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "disclosure": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "Internet": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "online contact information": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "operator": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "parent": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "person": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "personal information": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "third party": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "verifiable consent": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "website or online service directed to children": "defined in Section 312.2 of the Rule, 16 C.F.R. § 312.2.",
+      "Consumer personal information": "individually identifiable information from or about an individual consumer including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) a telephone number; (e) a Social Security number; (f) a driver's license or other state-issued identification number; (g) a financial institution account number; (h) credit or debit card information; (i) a persistent identifier, such as a customer number held in a \"cookie,\" a static Internet Protocol (\"IP\") address, or processor serial number; (j) nonpublic communications and content posted on Defendant's web site or within Defendant's applications provided on any other web site; or (k) any information that is combined with any of (a) through (j) above.",
+      "Defendant": "RockYou, Inc., a corporation, its successors and assigns and its officers, agents, representatives, and employees."
+    },
+    "provisions": [
+      {
+        "provision_number": "14",
+        "title": "Injunction Against COPPA Violations",
+        "category": "prohibition",
+        "summary": "Defendant is enjoined from violating the Children's Online Privacy Protection Rule in connection with any website or online service directed to children.",
+        "requirements": [
+          {
+            "description": "Must not fail to provide sufficient notice of information collected from children as required by Section 312.4(b) of the Rule",
+            "quoted_text": "2277 AA.. ffaaiilliinngg ttoo pprroovviiddee ssuuffffiicciieenntt nnoottiiccee ooff tthhee iinnffoorrmmaattiioonn DDeeffeennddaanntt ccoolllleeccttss oonnlliinnee 2288 oonnsseenntt DDeeccrreeee PPaaggee 44 ooff 2200 Case3:12-cv-01487-SI Document4 Filed03/28/12 Page8 of 31 11 ffrroomm cchhiillddrreenn,, hhooww iitt uusseess ssuucchh iinnffoorrmmaattiioonn,, iittss ddiisscclloossuurree pprraaccttiicceess,, aanndd aallll ootthheerr 22",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 181,
+            "quote_end_line": 190
+          },
+          {
+            "description": "Must not fail to provide direct notice to parents as required by Section 312.4(c) of the Rule",
+            "quoted_text": "33 BB.. ffaaiilliinngg ttoo pprroovviiddee ddiirreecctt nnoottiiccee ttoo ppaarreennttss ooff wwhhaatt iinnffoorrmmaattiioonn DDeeffeennddaanntt ccoolllleeccttss 44 oonnlliinnee ffrroomm cchhiillddrreenn,, hhooww iitt uusseess ssuucchh iinnffoorrmmaattiioonn,, iittss ddiisscclloossuurree pprraaccttiicceess,, aanndd 55 66 aallll ootthheerr rreeqquuiirreedd ccoonntteenntt,, aass rreeqquuiirreedd bbyy SSeeccttiioonn 331122..44((cc )) ooff tthhee RRuullee,, 1166 CC..FF..RR.. 77",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.5314900153609831,
+            "quote_start_line": 192,
+            "quote_end_line": 198
+          },
+          {
+            "description": "Must not fail to obtain verifiable parental consent before collection, use, or disclosure of personal information from children as required by Section 312.5 of the Rule",
+            "quoted_text": "88 CC.. ffaaiilliinngg ttoo oobbttaaiinn vveerriiffiiaabbllee ppaarreennttaall ccoonnsseenntt bbeeffoorree aannyy ccoolllleeccttiioonn,, uussee,, aanndd//oorr 99 ddiisscclloossuurree ooff ppeerrssoonnaall iinnffoorrmmaattiioonn ffrroomm cchhiillddrreenn,, aass rreeqquuiirreedd bbyy SSeeccttiioonn 331122..55 ooff 1100",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.5469387755102041,
+            "quote_start_line": 200,
+            "quote_end_line": 204
+          },
+          {
+            "description": "Must not fail to establish and maintain reasonable procedures to protect confidentiality, security, and integrity of personal information collected from children as required by Section 312.8 of the Rule",
+            "quoted_text": "1122 DD.. ffaaiilliinngg ttoo eessttaabblliisshh aanndd mmaaiinnttaaiinn rreeaassoonnaabbllee pprroocceedduurreess ttoo pprrootteecctt tthhee 1133 ccoonnffiiddeennttiiaalliittyy,, sseeccuurriittyy,, aanndd iinntteeggrriittyy ooff ppeerrssoonnaall iinnffoorrmmaattiioonn ccoolllleecctteedd ffrroomm 1144",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.4146981627296588,
+            "quote_start_line": 206,
+            "quote_end_line": 210
+          },
+          {
+            "description": "Must not violate any other provision of the Rule, 16 C.F.R. Part 312",
+            "quoted_text": "1155 EE.. vviioollaattiinngg aannyy ootthheerr pprroovviissiioonn ooff tthhee RRuullee,, 1166 CC..FF..RR.. PPaarrtt 331122,, aanndd aass tthhee RRuullee mmaayy 1166 1177 hheerreeaafftteerr bbee aammeennddeedd.. AA ccooppyy ooff tthhee RRuullee iiss aattttaacchheedd hheerreettoo aass \"\"AAppppeennddiixx AA\"\" 1188",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.45161290322580644,
+            "quote_start_line": 212,
+            "quote_end_line": 216
+          }
+        ]
+      },
+      {
+        "provision_number": "15",
+        "title": "Prohibition Against Misrepresentations About Children's Information",
+        "category": "prohibition",
+        "summary": "Defendant is enjoined from making any misrepresentation concerning the collection, use, disclosure, or deletion of children's personal information.",
+        "requirements": [
+          {
+            "description": "Must not make any misrepresentation concerning the collection, use, disclosure, or deletion of children's personal information in connection with operation of any website or online service",
+            "quoted_text": "wwiitthh tthhee ooppeerraattiioonn ooff aannyy wweebbssiittee oorr oonnlliinnee sseerrvviiccee,, ffrroomm mmaakkiinngg aannyy mmiissrreepprreesseennttaattiioonn 2255 ccoonncceerrnniinngg tthhee ccoolllleeccttiioonn,, uussee,, ddiisscclloossuurree,, oorr ddeelleettiioonn ooff cchhiillddrreenn''ss ppeerrssoonnaall iinnffoorrmmaattiioonn..",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.697495183044316,
+            "quote_start_line": 227,
+            "quote_end_line": 229
+          }
+        ]
+      },
+      {
+        "provision_number": "16",
+        "title": "Deletion of Children's Personal Information",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must delete all personal information collected and maintained in violation of the Rule from April 21, 2000 through the date of entry of the Order.",
+        "requirements": [
+          {
+            "description": "Delete all personal information collected and maintained in violation of the Rule from April 21, 2000 through date of entry of Order",
+            "quoted_text": "nnoottiiccee ooff tthhee eennttrryy ooff tthhiiss OOrrddeerr sshhaallll ddeelleettee aallll ppeerrssoonnaall iinnffoorrmmaattiioonn ccoolllleecctteedd aanndd 44 mmaaiinnttaaiinneedd wwiitthhiinn iittss ppoosssseessssiioonn,, ccuussttooddyy,, oorr ccoonnttrrooll iinn vviioollaattiioonn ooff tthhee RRuullee aatt aannyy ttiimmee 55 66 ffrroomm AApprriill 2211,, 22000000 tthhrroouugghh tthhee ddaattee ooff eennttrryy ooff tthhiiss OOrrddeerr..",
+            "deadline": "10 days",
+            "verified": false,
+            "confidence": 0.5682182985553772,
+            "quote_start_line": 242,
+            "quote_end_line": 246
+          }
+        ]
+      },
+      {
+        "provision_number": "17",
+        "title": "Consumer Education Remedy",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must place a clear and conspicuous notice on websites directed to children that provides a hyperlink to FTC privacy tips for 5 years.",
+        "requirements": [
+          {
+            "description": "Place clear and conspicuous notice on websites directed to children with hyperlink to OnGuardOnline.gov for tips on protecting kids' privacy online",
+            "quoted_text": "88 1177.. IITT IISS FFUURRTTHHEERR OORRDDEERREEDD tthhaatt,, ffoorr aa ppeerriioodd ooff 55 yyeeaarrss ffrroomm tthhee ddaattee ooff eennttrryy ooff tthhiiss 99 OOrrddeerr,, DDeeffeennddaanntt,, iinn ccoonnnneeccttiioonn wwiitthh iittss ooppeerraattiioonn ooff aannyy wweebbssiittee oorr oonnlliinnee sseerrvviiccee 1100 1111 ddiirreecctteedd ttoo cchhiillddrreenn,, aanndd aannyy wweebbssiittee oorr oonnlliinnee sseerrvviiccee tthhrroouugghh wwhhiicchh DDeeffeennddaanntt,, wwiitthh 1122 aaccttuuaall kknnoowwlleeddggee,, ccoolllleeccttss,, uusseess,, aanndd//oorr ddiisscclloosseess ppeerrssoonnaall iinnffoorrmmaattiioonn ffrroomm cchhiillddrreenn,, 1133 sshhaallll ppllaaccee aa cclleeaarr aanndd ccoonnssppiiccuuoouuss nnoottiiccee,, tthhaatt wwiillll uunnaavvooiiddaabbllyy bbee sseeeenn bbyy uusseerrss pprriioorr ttoo 1144 tthhee ccoolllleeccttiioonn ooff ppeerrssoonnaall iinnffoorrmmaattiioonn ffrroomm tthhee uusseerrss,, wwhhiicchh ssttaatteess aass ffoolllloowwss iinn bboolldd 1155 ttyyppeeffaaccee:: 1166 1177 NNOOTTIICCEE:: VViissiitt wwwwww..OOnnGGuuaarrddOOnnlliinnee..ggoovv ffoorr ttiippss ffrroomm tthhee FFeeddeerraall TTrraaddee CCoommmmiissssiioonn oonn pprrootteeccttiinngg kkiiddss'' pprriivvaaccyy oonnlliinnee 1188 [[\"\"wwwwww..OOnngguuaarrddOOnnlliinnee..ggoovv\"\" mmuusstt ccoonnttaaiinn aa hhyyppeerrlliinnkk ttoo",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.0,
+            "quote_start_line": 249,
+            "quote_end_line": 267
+          },
+          {
+            "description": "Change hyperlinks/URLs within 15 days after receipt of notice from FTC of a change to such hyperlinks/URLs",
+            "quoted_text": "1199 hhttttpp::////wwwwww..oonngguuaarrddoonnlliinnee.. ggoovv// ttooppiiccss//kkiiddss--pprriivvaaccyy ..aassppxx]] 2200 DDeeffeennddaanntt sshhaallll bbee rreeqquuiirreedd ttoo cchhaannggee tthhee hhyyppeerrlliinnkkss//UURRLLss wwiitthhiinn 1155 ddaayyss aafftteerr rreecceeiipptt 2211",
+            "deadline": "15 days",
+            "verified": false,
+            "confidence": 0.6195899772209568,
+            "quote_start_line": 268,
+            "quote_end_line": 270
+          }
+        ]
+      },
+      {
+        "provision_number": "18",
+        "title": "Civil Penalty",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must pay a civil penalty of $250,000 to the United States within 5 days of receipt of notice of entry of the Order.",
+        "requirements": [
+          {
+            "description": "Pay civil penalty of $250,000 by electronic fund transfer",
+            "quoted_text": "2233 1188.. IITT IISS FFUURRTTHHEERR OORRDDEERREEDD tthhaatt DDeeffeennddaanntt sshhaallll ppaayy ttoo PPllaaiinnttiiffff aa cciivviill ppeennaallttyy,, 2244 2255 ppuurrssuuaanntt ttoo SSeeccttiioonn 55((mm))((11))((AA)) ooff tthhee FFTTCC AAcctt,, 1155 UU..SS..CC.. §§ 4455((mm))((11))((AA)),, iinn tthhee aammoouunntt 2266 ooff ttwwoo hhuunnddrreedd aanndd ffiiffttyy tthhoouussaanndd ddoollllaarrss (($$225500,,000000)),, dduuee aanndd ppaayyaabbllee wwiitthhiinn ffiivvee ((55)) 2277 ddaayyss ooff rreecceeiipptt ooff nnoottiiccee ooff tthhee eennttrryy ooff tthhiiss OOrrddeerr.. UUnnlleessss ootthheerrwwiissee ddiirreecctteedd,, ppaayymmeenntt 2288 oonnsseenntt DDeeccrreeee PPaaggee 66 ooff 2200 Case3:12-cv-01487-SI Document4 Filed03/28/12 Page10 of 31 11 sshhaallll bbee mmaaddee bbyy eelleeccttrroonniicc ffuunndd ttrraannssffeerr iinn aaccccoorrddaannccee wwiitthh pprroocceedduurreess ssppeecciiffiieedd bbyy tthhee 22 CCoonnssuummeerr PPrrootteeccttiioonn BBrraanncchh,, CCiivviill DDiivviissiioonn,, UU..SS.. DDeeppaarrttmmeenntt ooff JJuussttiiccee,, WWaasshhiinnggttoonn,, 33",
+            "deadline": "5 days",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 274,
+            "quote_end_line": 291
+          }
+        ]
+      },
+      {
+        "provision_number": "22",
+        "title": "Prohibition Against Misrepresentations About Consumer Information Security",
+        "category": "prohibition",
+        "summary": "Defendant must not misrepresent the extent to which it maintains and protects the privacy, confidentiality, security, or integrity of consumer personal information.",
+        "requirements": [
+          {
+            "description": "Must not misrepresent in any manner the extent to which they maintain and protect the privacy, confidentiality, security, or integrity of consumer personal information",
+            "quoted_text": "2244 2255 mmiissrreepprreesseenntt iinn aannyy mmaannnneerr,, eexxpprreessssllyy oorr bbyy iimmpplliiccaattiioonn,, tthhee eexxtteenntt ttoo wwhhiicchh tthheeyy 2266 mmaaiinnttaaiinn aanndd pprrootteecctt tthhee pprriivvaaccyy,, ccoonnffiiddeennttiiaalliittyy,, sseeccuurriittyy,, oorr iinntteeggrriittyy ooff ccoonnssuummeerr 2277 ppeerrssoonnaall iinnffoorrmmaattiioonn ccoolllleecctteedd ffii--oomm oorr aabboouutt ccoonnssuummeerrss..",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.3145299145299145,
+            "quote_start_line": 325,
+            "quote_end_line": 330
+          }
+        ]
+      },
+      {
+        "provision_number": "23",
+        "title": "Information Security Program",
+        "category": "affirmative_obligation",
+        "summary": "Defendant must establish and implement a comprehensive information security program to protect the security, confidentiality, and integrity of consumer personal information.",
+        "requirements": [
+          {
+            "description": "Establish and implement, and thereafter maintain, a comprehensive information security program that is reasonably designed to protect the security, confidentiality, and integrity of consumer personal information",
+            "quoted_text": "Case3:12-cv-01487-SI Document4 Filed03/28/12 Page11 of 31 11 33.. IITT IISS FFUURRTTHHEERR OORRDDEERREEDD tthhaatt DDeeffeennddaanntt,, aanndd iittss ooffffiicceerrss,, aaggeennttss,, rreepprreesseennttaattiivveess,, 22 aanndd eemmppllooyyeeeess,, ddiirreeccttllyy oorr tthhrroouugghh aannyy ccoorrppoorraattiioonn,, ssuubbssiiddiiaarryy,, lliimmiitteedd lliiaabbiilliittyy 33 ccoommppaannyy,, ddiivviissiioonn,, oorr ootthheerr ddeevviiccee,, iinn ccoonnnneeccttiioonn wwiitthh tthhee aaddvveerrttiissiinngg,, mmaarrkkeettiinngg,, 44 pprroommoottiioonn,, ooffffeerriinngg ffoorr ssaallee,, oorr ssaallee ooff aannyy pprroodduucctt oorr sseerrvviiccee,, iinn oorr aaffffeeccttiinngg ccoommmmeerrccee,, 55 66 sshhaallll,, nnoo llaatteerr tthhaann tthhee ddaattee ooff sseerrvviiccee ooff tthhiiss oorrddeerr,, eessttaabblliisshh aanndd iimmpplleemmeenntt,, aanndd 77 tthheerreeaafftteerr mmaaiinnttaaiinn,, aa ccoommpprreehheennssiivvee iinnffoorrmmaattiioonn sseeccuurriittyy pprrooggrraamm tthhaatt iiss rreeaassoonnaabbllyy 88 ddeessiiggnneedd ttoo pprrootteecctt tthhee sseeccuurriittyy,, ccoonnffiiddeennttiiaalliittyy,, aanndd iinntteeggrriittyy ooff ccoonnssuummeerr ppeerrssoonnaall 99 iinnffoorrmmaattiioonn ccoolllleecctteedd ffrroomm oorr aabboouutt ccoonnssuummeerrss.. SSuucchh pprrooggrraamm,, tthhee ccoonntteenntt aanndd 1100 1111 iimmpplleemmeennttaattiioonn ooff wwhhiicchh mmuusstt bbee ffuullllyy ddooccuummeenntteedd iinn wwrriittiinngg,, sshhaallll ccoonnttaaiinn 1122 aaddmmiinniissttrraattiivvee,, tteecchhnniiccaall,, aanndd pphhyyssiiccaall ssaaffeegguuaarrddss aapppprroopprriiaattee ttoo DDeeffeennddaanntt''ss ssiizzee aanndd 1133 ccoommpplleexxiittyy,, tthhee nnaattuurree aanndd ssccooppee ooff DDeeffeennddaanntt''ss aaccttiivviittiieess,, aanndd tthhee sseennssiittiivviittyy ooff tthhee 1144",
+            "deadline": "no later than the date of service",
+            "verified": true,
+            "confidence": 0.79,
+            "quote_start_line": 335,
+            "quote_end_line": 357
+          },
+          {
+            "description": "Designate employee(s) to coordinate and be accountable for the information security program",
+            "quoted_text": "1155 AA.. tthhee ddeessiiggnnaattiioonn ooff aann eemmppllooyyeeee oorr eemmppllooyyeeeess ttoo ccoooorrddiinnaattee aanndd bbee aaccccoouunnttaabbllee ffoorr 1166",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.7063492063492064,
+            "quote_start_line": 359,
+            "quote_end_line": 361
+          },
+          {
+            "description": "Identify material internal and external risks to security, confidentiality, and integrity of consumer personal information and assess sufficiency of safeguards",
+            "quoted_text": "1188 BB.. tthhee iiddeennttiiffiiccaattiioonn ooff mmaatteerriiaall iinntteerrnnaall aanndd eexxtteerrnnaall rriisskkss ttoo tthhee sseeccuurriittyy,, 1199 ccoonnffiiddeennttiiaalliittyy,, aanndd iinntteeggrriittyy ooff ccoonnssuummeerr ppeerrssoonnaall iinnffoorrmmaattiioonn tthhaatt ccoouulldd rreessuulltt 2200 iinn tthhee uunnaauutthhoorriizzeedd ddiisscclloossuurree,, mmiissuussee,, lloossss,, aalltteerraattiioonn,, ddeessttrruuccttiioonn,, oorr ootthheerr 2211 2222 ccoommpprroommiissee ooff ssuucchh iinnffoorrmmaattiioonn,, aanndd aasssseessssmmeenntt ooff tthhee ssuuffffiicciieennccyy ooff aannyy 2233 ssaaffeegguuaarrddss iinn ppllaaccee ttoo ccoonnttrrooll tthheessee rriisskkss.. AAtt aa mmiinniimmuumm,, tthhiiss rriisskk aasssseessssmmeenntt 2244 sshhoouulldd iinncclluuddee ccoonnssiiddeerraattiioonn ooff rriisskkss iinn eeaacchh aarreeaa ooff rreelleevvaanntt ooppeerraattiioonn,, iinncclluuddiinngg,, 2255 bbuutt nnoott lliimmiitteedd ttoo:: ((11)) eemmppllooyyeeee ttrraaiinniinngg aanndd mmaannaaggeemmeenntt;; ((22)) iinnffoorrmmaattiioonn 2266 ssyysstteemmss,, iinncclluuddiinngg nneettwwoorrkk aanndd ssooffttwwaarree ddeessiiggnn,, iinnffoorrmmaattiioonn pprroocceessssiinngg,, ssttoorraaggee,, 2277 2288 ttrraannssmmiissssiioonn,, aanndd ddiissppoossaall;; aanndd ((33)) pprreevveennttiioonn,, ddeetteeccttiioonn,, aanndd rreessppoonnssee ttoo aattttaacckkss,, oonnsseenntt DDeeccrreeee PPaaggee 88 ooff 2200 Case3:12-cv-01487-SI Document4 Filed03/28/12 Page12 of 31 11",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 363,
+            "quote_end_line": 385
+          },
+          {
+            "description": "Design and implement reasonable safeguards to control risks identified through risk assessment, and regularly test or monitor effectiveness",
+            "quoted_text": "CC.. tthhee ddeessiiggnn aanndd iimmpplleemmeennttaattiioonn ooff rreeaassoonnaabbllee ssaaffeegguuaarrddss ttoo ccoonnttrrooll tthhee 33 rriisskkss iiddeennttiiffiieedd tthhrroouugghh rriisskk aasssseessssmmeenntt,, aanndd rreegguullaarr tteessttiinngg oorr mmoonniittoorriinngg 44 ooff tthhee eeffffeeccttiivveenneessss oofftthhee ssaaffeegguuaarrddss'' kkeeyy ccoonnttrroollss,, ssyysstteemmss,, aanndd 55 66 pprroocceedduurreess..",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.33389544688026984,
+            "quote_start_line": 388,
+            "quote_end_line": 394
+          },
+          {
+            "description": "Develop and use reasonable steps to select and retain service providers capable of safeguarding consumer personal information and require service providers by contract to implement and maintain appropriate safeguards",
+            "quoted_text": "77 DD.. tthhee ddeevveellooppmmeenntt aanndd uussee ooff rreeaassoonnaabbllee sstteeppss ttoo sseelleecctt aanndd rreettaaiinn sseerrvviiccee pprroovviiddeerrss 88 ccaappaabbllee ooff aapppprroopprriiaatteellyy ssaaffeegguuaarrddiinngg ccoonnssuummeerr ppeerrssoonnaall iinnffoorrmmaattiioonn tthheeyy 99 rreecceeiivvee ffrroomm DDeeffeennddaanntt,, aanndd rreeqquuiirriinngg sseerrvviiccee pprroovviiddeerrss bbyy ccoonnttrraacctt ttoo iimmpplleemmeenntt 1100",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.4935897435897436,
+            "quote_start_line": 395,
+            "quote_end_line": 401
+          },
+          {
+            "description": "Evaluate and adjust information security program in light of testing and monitoring results, material changes to operations or business arrangements, or other circumstances that may impact effectiveness",
+            "quoted_text": "1122 EE.. tthhee eevvaalluuaattiioonn aanndd aaddjjuussttmmeenntt ooff DDeeffeennddaanntt''ss iinnffoorrmmaattiioonn sseeccuurriittyy 1133 pprrooggrraamm iinn lliigghhtt ooff tthhee rreessuullttss ooff tthhee tteessttiinngg aanndd mmoonniittoorriinngg rreeqquuiirreedd bbyy 1144 ssuubbppaarrtt CC,, aannyy mmaatteerriiaall cchhaannggeess ttoo DDeeffeennddaanntt''ss ooppeerraattiioonnss oorr bbuussiinneessss 1155 aarrrraannggeemmeennttss,, oorr aannyy ootthheerr cciirrccuummssttaanncceess tthhaatt DDeeffeennddaanntt kknnoowwss oorr hhaass 1166 1177 rreeaassoonn ttoo kknnooww mmaayy hhaavvee aa mmaatteerriiaall iimmppaacctt oonn tthhee eeffffeeccttiivveenneessss ooff iittss 1188",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.35251798561151076,
+            "quote_start_line": 403,
+            "quote_end_line": 413
+          }
+        ]
+      },
+      {
+        "provision_number": "24",
+        "title": "Third-Party Security Assessments",
+        "category": "assessment",
+        "summary": "Defendant must obtain initial and biennial assessments from a qualified, objective, independent third-party professional for 20 years.",
+        "requirements": [
+          {
+            "description": "Obtain initial and biennial assessments from qualified, objective, independent third-party professional using procedures and standards generally accepted in the profession",
+            "quoted_text": "ooff tthhiiss oorrddeerr,, DDeeffeennddaanntt sshhaallll oobbttaaiinn iinniittiiaall aanndd bbiieennnniiaall aasssseessssmmeennttss aanndd rreeppoorrttss 2211 2222 ((\"\"AAsssseessssmmeennttss\"\")) ffrroomm aa qquuaalliiffiieedd,, oobbjjeeccttiivvee,, iinnddeeppeennddeenntt tthhiirrdd--ppaarrttyy pprrooffeessssiioonnaall,, wwhhoo 2233 uusseess pprroocceedduurreess aanndd ssttaannddaarrddss ggeenneerraallllyy aacccceepptteedd iinn tthhee pprrooffeessssiioonn.. TThhee rreeppoorrttiinngg ppeerriioodd 2244 ffoorr tthhee AAsssseessssmmeennttss sshhaallll ccoovveerr:: ((11)) tthhee ffiirrsstt yyeeaarr aafftteerr sseerrvviiccee ooff tthhee OOrrddeerr ffoorr tthhee iinniittiiaall 2255 AAsssseessssmmeenntt,, aanndd ((22)) eeaacchh 22 yyeeaarr ppeerriioodd tthheerreeaafftteerr ffoorr 2200 yyeeaarrss aafftteerr sseerrvviiccee ooff tthhee OOrrddeerr 2266 ffoorr tthhee bbiieennnniiaall AAsssseessssmmeennttss..",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.29704797047970477,
+            "quote_start_line": 418,
+            "quote_end_line": 428
+          },
+          {
+            "description": "Each Assessment must set forth specific safeguards implemented and maintained, explain their appropriateness, explain how they meet or exceed protections required by Paragraph 23, and certify security program is operating with sufficient effectiveness",
+            "quoted_text": "Case3:12-cv-01487-SI Document4 Filed03/28/12 Page13 of 31 11 AA.. EEaacchh AAsssseessssmmeenntt sshhaallll:: 22 11.. sseett ffoorrtthh tthhee ssppeecciiffiicc aaddmmiinniissttrraattiivvee,, tteecchhnniiccaall,, aanndd pphhyyssiiccaall ssaaffeegguuaarrddss 33 tthhaatt DDeeffeennddaanntt hhaass iimmpplleemmeenntteedd aanndd mmaaiinnttaaiinneedd dduurriinngg tthhee rreeppoorrttiinngg 44 ppeerriioodd;; 55 66 22.. eexxppllaaiinn hhooww ssuucchh ssaaffeegguuaarrddss aarree aapppprroopprriiaattee ttoo DDeeffeennddaanntt''ss ssiizzee aanndd 77 ccoommpplleexxiittyy,, tthhee nnaattuurree aanndd ssccooppee ooff DDeeffeennddaanntt''ss aaccttiivviittiieess,, aanndd tthhee 88 sseennssiittiivviittyy ooff tthhee ccoonnssuummeerr ppeerrssoonnaall iinnffoorrmmaattiioonn ccoolllleecctteedd ffrroomm oorr aabboouutt 99 ccoonnssuummeerrss;; 1100 1111 33.. eexxppllaaiinn hhooww tthhee ssaaffeegguuaarrddss tthhaatt hhaavvee bbeeeenn iimmpplleemmeenntteedd mmeeeett oorr eexxcceeeedd 1122 tthhee pprrootteeccttiioonnss rreeqquuiirreedd bbyy tthhee PPaarraaggrraapphh 2233 ooff tthhiiss OOrrddeerr;; aanndd 1133 44.. cceerrttiiffyy tthhaatt DDeeffeennddaanntt''ss sseeccuurriittyy pprrooggrraamm iiss ooppeerraattiinngg wwiitthh ssuuffffiicciieenntt 1144 eeffffeeccttiivveenneessss ttoo pprroovviiddee rreeaassoonnaabbllee aassssuurraannccee tthhaatt tthhee sseeccuurriittyy,, 1155 ccoonnffiiddeennttiiaalliittyy,, aanndd iinntteeggrriittyy ooff ccoonnssuummeerr ppeerrssoonnaall iinnffoorrmmaattiioonn iiss 1166",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 434,
+            "quote_end_line": 460
+          },
+          {
+            "description": "Each Assessment must be prepared and completed within 60 days after the end of the reporting period by a qualified professional (CISSP, CISA, GIAC, or approved person/organization)",
+            "quoted_text": "1188 BB.. EEaacchh AAsssseessssmmeenntt sshhaallll bbee pprreeppaarreedd aanndd ccoommpplleetteedd wwiitthhiinn 6600 ddaayyss aafftteerr tthhee eenndd ooff 1199 tthhee rreeppoorrttiinngg ppeerriioodd ttoo wwhhiicchh tthhee AAsssseessssmmeenntt aapppplliieess bbyy aa ppeerrssoonn qquuaalliiffiieedd aass aa 2200 CCeerrttiiffiieedd IInnffoorrmmaattiioonn SSyysstteemm SSeeccuurriittyy PPrrooffeessssiioonnaall ((CCIISSSSPP)) oorr aass aa CCeerrttiiffiieedd 2211 2222 IInnffoorrmmaattiioonn SSyysstteemmss AAuuddiittoorr ((CCIISSAA));; aa ppeerrssoonn hhoollddiinngg GGlloobbaall IInnffoorrmmaattiioonn 2233 AAssssuurraannccee CCeerrttiiffiiccaattiioonn ((GGIIAACC)) ffrroomm tthhee SSyyssAAddmmiinn,, AAuuddiitt,, NNeettwwoorrkk,, SSeeccuurriittyy 2244 ((SSAANNSS)) IInnssttiittuuttee;; oorr aa qquuaalliiffiieedd ppeerrssoonn oorr oorrggaanniizzaattiioonn aapppprroovveedd bbyy tthhee AAssssoocciiaattee 2255 DDiirreeccttoorr ffoorr EEnnffoorrcceemmeenntt,, BBuurreeaauu ooff CCoonnssuummeerr PPrrootteeccttiioonn,, FFeeddeerraall TTrraaddee 2266",
+            "deadline": "60 days",
+            "verified": false,
+            "confidence": 0.26245847176079734,
+            "quote_start_line": 462,
+            "quote_end_line": 476
+          },
+          {
+            "description": "Provide the initial Assessment to the Associate Director for Enforcement within 10 days after the Assessment has been prepared",
+            "quoted_text": "11 CC.. DDeeffeennddaanntt sshhaallll pprroovviiddee tthhee iinniittiiaall AAsssseessssmmeenntt ttoo tthhee AAssssoocciiaattee DDiirreeccttoorr ffoorr 22 EEnnffoorrcceemmeenntt,, BBuurreeaauu ooff CCoonnssuummeerr PPrrootteeccttiioonn,, FFeeddeerraall TTrraaddee CCoommmmiissssiioonn,, 33",
+            "deadline": "10 days",
+            "verified": false,
+            "confidence": 0.5914221218961625,
+            "quote_start_line": 484,
+            "quote_end_line": 488
+          },
+          {
+            "description": "Retain all subsequent biennial Assessments until order is terminated and provide to Associate Director for Enforcement within 10 days of request",
+            "quoted_text": "44 AAllll ssuubbsseeqquueenntt bbiieennnniiaall AAsssseessssmmeennttss sshhaallll bbee rreettaaiinneedd bbyy DDeeffeennddaanntt uunnttiill tthhee 55 66 oorrddeerr iiss tteerrmmiinnaatteedd aanndd pprroovviiddeedd ttoo tthhee AAssssoocciiaattee DDiirreeccttoorr ffoorr EEnnffoorrcceemmeenntt wwiitthhiinn 77",
+            "deadline": "10 days",
+            "verified": false,
+            "confidence": 0.29533678756476683,
+            "quote_start_line": 490,
+            "quote_end_line": 494
+          }
+        ]
+      },
+      {
+        "provision_number": "25",
+        "title": "Order Acknowledgments",
+        "category": "acknowledgment",
+        "summary": "Defendant must obtain acknowledgments of receipt of the Order from itself and deliver the Order to specified personnel and entities.",
+        "requirements": [
+          {
+            "description": "Submit to Commission an acknowledgment of receipt of Order sworn under penalty of perjury",
+            "quoted_text": "1122 AA.. DDeeffeennddaanntt,, wwiitthhiinn 77 ddaayyss ooff eennttrryy ooff tthhiiss OOrrddeerr,, mmuusstt ssuubbmmiitt ttoo tthhee CCoommmmiissssiioonn 1133 aann aacckknnoowwlleeddggmmeenntt ooff rreecceeiipptt ooff tthhiiss OOrrddeerr sswwoorrnn uunnddeerr ppeennaallttyy ooff ppeerrjjuurryy..",
+            "deadline": "7 days",
+            "verified": false,
+            "confidence": 0.5676855895196506,
+            "quote_start_line": 502,
+            "quote_end_line": 504
+          },
+          {
+            "description": "Deliver a copy of Order to all principals, officers, directors, and managers; all employees, agents, and representatives having supervisory responsibilities relating to collection, retention, storage, or security of consumer personal information and relating to operation of any website or online service subject to Order; and any business entity resulting from any change in structure",
+            "quoted_text": "BB.. FFoorr 88 yyeeaarrss aafftteerr eennttrryy oofftthhiiss OOrrddeerr,, DDeeffeennddaanntt mmuusstt ddeelliivveerr aa ccooppyy ooff tthhiiss OOrrddeerr 1155 ttoo:: ((11)) aallll pprriinncciippaallss,, ooffffiicceerrss,, ddiirreeccttoorrss,, aanndd mmaannaaggeerrss;; ((22)) aallll eemmppllooyyeeeess,, aaggeennttss,, 1166 1177 aanndd rreepprreesseennttaattiivveess hhaavviinngg ssuuppeerrvviissoorryy rreessppoonnssiibbiilliittiieess rreellaattiinngg ttoo tthhee ccoolllleeccttiioonn,, 1188 rreetteennttiioonn,, ssttoorraaggee,, oorr sseeccuurriittyy ooff ccoonnssuummeerr ppeerrssoonnaall iinnffoorrmmaattiioonn aanndd aallll 1199 eemmppllooyyeeeess,, aaggeennttss,, aanndd rreepprreesseennttaattiivveess hhaavviinngg ssuuppeerrvviissoorryy rreessppoonnssiibbiilliittiieess rreellaatteedd 2200 ttoo tthhee ooppeerraattiioonn ooff aannyy wweebbssiittee oorr oonnlliinnee sseerrvviiccee ssuubbjjeecctt ttoo tthhiiss OOrrddeerr;; aanndd ((33)) aannyy 2211 2222 bbuussiinneessss eennttiittyy rreessuullttiinngg ffrroomm aannyy cchhaannggee iinn ssttrruuccttuurree aass sseett ffoorrtthh iinn tthhee SSeeccttiioonn 2233 ttiittlleedd \"\"CCoommpplliiaannccee RReeppoorrttiinngg..\"\" DDeelliivveerryy mmuusstt ooccccuurr wwiitthhiinn 77 ddaayyss ooff eennttrryy ooff 2244 tthhiiss OOrrddeerr ffoorr ccuurrrreenntt ppeerrssoonnnneell.. TToo aallll ootthheerrss,, ddeelliivveerryy mmuusstt ooccccuurr bbeeffoorree tthheeyy 2255 aassssuummee tthheeiirr rreessppoonnssiibbiilliittiieess..",
+            "deadline": "7 days",
+            "verified": false,
+            "confidence": 0.0,
+            "quote_start_line": 506,
+            "quote_end_line": 524
+          },
+          {
+            "description": "Obtain, within 30 days, a signed and dated acknowledgment of receipt of Order from each individual or entity to which Defendant delivered a copy of the Order",
+            "quoted_text": "CC.. FFrroomm eeaacchh iinnddiivviidduuaall oorr eennttiittyy ttoo wwhhiicchh aa DDeeffeennddaanntt ddeelliivveerreedd aa ccooppyy ooff tthhiiss 2277 2288 OOrrddeerr,, tthhaatt DDeeffeennddaanntt mmuusstt oobbttaaiinn,, wwiitthhiinn 3300 ddaayyss,, aa ssiiggnneedd aanndd ddaatteedd aacckknnoowwlleeddggmmeenntt ooff rreecceeiipptt ooff tthhiiss OOrrddeerr..",
+            "deadline": "30 days",
+            "verified": true,
+            "confidence": 0.7075812274368231,
+            "quote_start_line": 526,
+            "quote_end_line": 529
+          }
+        ]
+      },
+      {
+        "provision_number": "26",
+        "title": "Compliance Reporting",
+        "category": "compliance_reporting",
+        "summary": "Defendant must make timely submissions to the Commission including a comprehensive compliance report 180 days after entry of the Order and change notifications for 20 years.",
+        "requirements": [
+          {
+            "description": "Submit a compliance report, sworn under penalty of perjury, 180 days after date of entry of Order with contact information, business identification, business activities, compliance status, registration process details, privacy notices, parental consent methods, and Order Acknowledgments",
+            "quoted_text": "66.. IITT IISS FFUURRTTHHEERR OORRDDEERREEDD tthhaatt DDeeffeennddaanntt mmaakkee ttiimmeellyy ssuubbmmiissssiioonnss ttoo tthhee 33 CCoommmmiissssiioonn:: 44 AA.. OOnnee hhuunnddrreedd eeiigghhttyy ((118800)) ddaayyss aafftteerr tthhee ddaattee ooff eennttrryy ooff tthhiiss OOrrddeerr,, DDeeffeennddaanntt 55 66 mmuusstt ssuubbmmiitt aa ccoommpplliiaannccee rreeppoorrtt,, sswwoorrnn uunnddeerr ppeennaallttyy ooff ppeerrjjuurryy.. TThhiiss rreeppoorrtt 77 mmuusstt:: 88 11.. DDeessiiggnnaattee aatt lleeaasstt oonnee tteelleepphhoonnee nnuummbbeerr aanndd aann eemmaaiill,, pphhyyssiiccaall,, aanndd 99 ppoossttaall aaddddrreessss aass ppooiinnttss ooff ccoonnttaacctt,, wwhhiicchh rreepprreesseennttaattiivveess ooff tthhee 1100 1111 CCoommmmiissssiioonn mmaayy uussee ttoo ccoommmmuunniiccaattee wwiitthh DDeeffeennddaanntt;; 1122 22.. IIddeennttiiffyy aallll ooff DDeeffeennddaanntt''ss bbuussiinneesssseess bbyy aallll ooff tthheeiirr nnaammeess,, tteelleepphhoonnee 1133 nnuummbbeerrss,, aanndd pphhyyssiiccaall,, ppoossttaall,, eemmaaiill,, aanndd IInntteerrnneett aaddddrreesssseess;; 1144 33.. DDeessccrriibbee tthhee aaccttiivviittiieess ooff eeaacchh bbuussiinneessss,, iinncclluuddiinngg tthhee pprroodduuccttss aanndd 1155 sseerrvviicceess ooffffeerreedd aanndd tthhee mmeeaannss ooff aaddvveerrttiissiinngg,, mmaarrkkeettiinngg,, aanndd ssaalleess;; 1166 1177 44.. DDeessccrriibbee iinn ddeettaaiill wwhheetthheerr aanndd hhooww DDeeffeennddaanntt iiss iinn ccoommpplliiaannccee wwiitthh eeaacchh 1188 SSeeccttiioonn ooff tthhiiss OOrrddeerr;; 1199 55.. PPrroovviiddee aa ssttaatteemmeenntt sseettttiinngg ffoorrtthh iinn ddeettaaiill tthhee ccrriitteerriiaa aanndd pprroocceessss tthhrroouugghh 2200 wwhhiicchh DDeeffeennddaanntt''ss wweebbssiitteess oorr oonnlliinnee sseerrvviicceess rreeggiisstteerr vviissiittoorrss oonnlliinnee ffoorr 2211 2222 aannyy aaccttiivviittyy rreeqquuiirriinngg tthhee ssuubbmmiissssiioonn ooff ppeerrssoonnaall iinnffoorrmmaattiioonn,, aanndd aa ccooppyy 2233 ooff eeaacchh ddiiffffeerreenntt vveerrssiioonn ooff ssccrreeeenn oorr ppaaggee pprroovviiddiinngg oorr ccoolllleeccttiinngg 2244 rreeggiissttrraattiioonn iinnffoorrmmaattiioonn;; 2255 66.. PPrroovviiddee aa ccooppyy ooff eeaacchh ddiiffffeerreenntt vveerrssiioonn ooff aannyy pprriivvaaccyy nnoottiiccee ppoosstteedd oonn 2266 eeaacchh wweebbssiittee oorr oonnlliinnee sseerrvviiccee ooppeerraatteedd bbyy DDeeffeennddaanntt;; 2277 2288 77.. PPrroovviiddee aa ssttaatteemmeenntt sseettttiinngg ffoorrtthh iinn ddeettaaiill eeaacchh ppllaaccee wwhheerree tthhee pprriivvaaccyy oonnsseenntt DDeeccrreeee PPaaggee 1122 ooff 2200 Case3:12-cv-01487-SI Document4 Filed03/28/12 Page16 of 31 11 nnoottiiccee oonn aannyy ssuucchh wweebbssiittee oorr oonnlliinnee sseerrvviiccee iiss llooccaatteedd aanndd aa ccooppyy ooff eeaacchh 22 ddiiffffeerreenntt vveerrssiioonn ooff ssccrreeeenn oorr ppaaggee oonn wwhhiicchh ssuucchh wweebbssiittee oorr oonnlliinnee 33 sseerrvviiccee ccoolllleeccttss ppeerrssoonnaall iinnffoorrmmaattiioonn;; 44 88.. PPrroovviiddee aa ccooppyy ooff eeaacchh ddiiffffeerreenntt vveerrssiioonn ooff aannyy pprriivvaaccyy nnoottiiccee sseenntt ttoo 55 66 ppaarreennttss ooff cchhiillddrreenn tthhaatt rreeggiisstteerr oonn eeaacchh wweebbssiittee oorr oonnlliinnee sseerrvviiccee;; 77 99.. PPrroovviiddee aa ssttaatteemmeenntt sseettttiinngg ffoorrtthh iinn ddeettaaiill wwhheenn aanndd hhooww eeaacchh ssuucchh nnoottiiccee 88 ttoo ppaarreennttss iiss pprroovviiddeedd;; 99 1100.. PPrroovviiddee aa ssttaatteemmeenntt sseettttiinngg ffoorrtthh iinn ddeettaaiill tthhee mmeetthhooddss uusseedd ttoo oobbttaaiinn 1100 1111 vveerriiffiiaabbllee ppaarreennttaall ccoonnsseenntt pprriioorr ttoo aannyy ccoolllleeccttiioonn,, uussee,, aanndd//oorr ddiisscclloossuurree 1122 ooff ppeerrssoonnaall iinnffoorrmmaattiioonn ffrroomm cchhiillddrreenn;; 1133 1111.. PPrroovviiddee aa ssttaatteemmeenntt sseettttiinngg ffoorrtthh iinn ddeettaaiill tthhee mmeeaannss pprroovviiddeedd ffoorr ppaarreennttss 1144 ttoo rreevviieeww tthhee ppeerrssoonnaall iinnffoorrmmaattiioonn ccoolllleecctteedd ffrroomm tthheeiirr cchhiillddrreenn aanndd ttoo 1155 rreeffuussee ttoo ppeerrmmiitt iittss ffuurrtthheerr uussee oorr mmaaiinntteennaannccee;; 1166 1177 1122.. PPrroovviiddee aa ssttaatteemmeenntt sseettttiinngg ffoorrtthh iinn ddeettaaiill wwhhyy eeaacchh ttyyppee ooff iinnffoorrmmaattiioonn 00 1188 ccoolllleecctteedd ffrroomm aa cchhiilldd iiss rreeaassoonnaabbllyy nneecceessssaarryy ffoorr tthhee pprroovviissiioonn ooff tthhee 1199 ppaarrttiiccuullaarr rreellaatteedd aaccttiivviittyy;; 2200 1133.. PPrroovviiddee aa ssttaatteemmeenntt sseettttiinngg ffoorrtthh iinn ddeettaaiill tthhee pprroocceedduurreess uusseedd ttoo pprrootteecctt 2211 2222 tthhee ccoonnffiiddeennttiiaalliittyy,, sseeccuurriittyy,, aanndd iinntteeggrriittyy ooff ppeerrssoonnaall iinnffoorrmmaattiioonn 2233 ccoolllleecctteedd ffrroomm cchhiillddrreenn;; aanndd 2244 1144.. PPrroovviiddee aa ccooppyy ooff eeaacchh OOrrddeerr AAcckknnoowwlleeddggeemmeenntt oobbttaaiinneedd ppuurrssuuaanntt ttoo tthhiiss 2255 OOrrddeerr,, uunnlleessss pprreevviioouussllyy ssuubbmmiitttteedd ttoo tthhee CCoommmmiissssiioonn..",
+            "deadline": "180 days",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 536,
+            "quote_end_line": 625
+          },
+          {
+            "description": "Submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in designated point of contact or structure of Defendant or any entity that Defendant has ownership interest in or controls that may affect compliance obligations",
+            "quoted_text": "BB.. FFoorr 2200 yyeeaarrss ffoolllloowwiinngg eennttrryy ooff tthhiiss OOrrddeerr,, DDeeffeennddaanntt mmuusstt ssuubbmmiitt aa ccoommpplliiaannccee 2277 2288 nnoottiiccee,, sswwoorrnn uunnddeerr ppeennaallttyy ooff ppeerrjjuurryy,, wwiitthhiinn 1144 ddaayyss ooff aannyy cchhaannggee iinn tthhee oonnsseenntt DDeeccrreeee PPaaggee 1133 ooff 2200 Case3:12-cv-01487-SI Document4 Filed03/28/12 Page17 of 31 11 ffoolllloowwiinngg:: ((aa)) aannyy ddeessiiggnnaatteedd ppooiinntt ooff ccoonnttaacctt;; oorr ((bb)) tthhee ssttrruuccttuurree ooff DDeeffeennddaanntt oorr 22 aannyy eennttiittyy tthhaatt DDeeffeennddaanntt hhaass aannyy oowwnneerrsshhiipp iinntteerreesstt iinn oorr ddiirreeccttllyy oorr iinnddiirreeccttllyy 33 ccoonnttrroollss tthhaatt mmaayy aaffffeecctt ccoommpplliiaannccee oobblliiggaattiioonnss aarriissiinngg uunnddeerr tthhiiss OOrrddeerr,, 44 iinncclluuddiinngg:: ccrreeaattiioonn,, mmeerrggeerr,, ssaallee,, oorr ddiissssoolluuttiioonn ooff tthhee eennttiittyy oorr aannyy ssuubbssiiddiiaarryy,, 55 66 ppaarreenntt,, oorr aaffffiilliiaattee tthhaatt eennggaaggeess iinn aannyy aaccttss oorr pprraaccttiicceess ssuubbjjeecctt ttoo tthhiiss OOrrddeerr..",
+            "deadline": "14 days",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 627,
+            "quote_end_line": 643
+          },
+          {
+            "description": "Submit notice of filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Defendant within 14 days of its filing",
+            "quoted_text": "CC.. DDeeffeennddaanntt mmuusstt ssuubbmmiitt ttoo tthhee CCoommmmiissssiioonn nnoottiiccee ooff tthhee ffiilliinngg ooff aannyy bbaannkkrruuppttccyy 88 ppeettiittiioonn,, iinnssoollvveennccyy pprroocceeeeddiinngg,, oorr aannyy ssiimmiillaarr pprroocceeeeddiinngg bbyy oorr aaggaaiinnsstt 99 DDeeffeennddaanntt wwiitthhiinn 1144 ddaayyss ooff iittss ffiilliinngg..",
+            "deadline": "14 days",
+            "verified": false,
+            "confidence": 0.398576512455516,
+            "quote_start_line": 645,
+            "quote_end_line": 649
+          }
+        ]
+      },
+      {
+        "provision_number": "27",
+        "title": "Recordkeeping",
+        "category": "recordkeeping",
+        "summary": "Defendant must create certain records for 20 years after entry of the Order, and retain each such record for 5 years.",
+        "requirements": [
+          {
+            "description": "Maintain accounting records showing revenues from all goods or services sold, costs incurred, and resulting net profit or loss",
+            "quoted_text": "AA.. AAccccoouunnttiinngg rreeccoorrddss sshhoowwiinngg tthhee rreevveennuueess ffrroomm aallll ggooooddss oorr sseerrvviicceess ssoolldd,, aallll 44 ccoossttss iinnccuurrrreedd iinn ggeenneerraattiinngg tthhoossee rreevveennuueess,, aanndd tthhee rreessuullttiinngg nneett pprrooffiitt oorr lloossss;;",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.42297650130548303,
+            "quote_start_line": 689,
+            "quote_end_line": 691
+          },
+          {
+            "description": "Maintain personnel records showing for each person providing services their name, addresses, telephone numbers, job title or position, dates of service, and if applicable, reason for termination",
+            "quoted_text": "66 BB.. PPeerrssoonnnneell rreeccoorrddss sshhoowwiinngg,, ffoorr eeaacchh ppeerrssoonn pprroovviiddiinngg sseerrvviicceess,, wwhheetthheerr aass aann 77 eemmppllooyyeeee oorr ootthheerrwwiissee,, tthhaatt ppeerrssoonn''ss:: nnaammee,, aaddddrreesssseess,, aanndd tteelleepphhoonnee nnuummbbeerrss;; 88 jjoobb ttiittllee oorr ppoossiittiioonn;; ddaatteess ooff sseerrvviiccee;; aanndd,, iiff aapppplliiccaabbllee,, tthhee rreeaassoonn ffoorr 99 tteerrmmiinnaattiioonn;;",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.4208860759493671,
+            "quote_start_line": 693,
+            "quote_end_line": 699
+          },
+          {
+            "description": "Maintain a copy of all complaints submitted by consumers regarding information security practices or practices relating to collection or retention of consumer personal information",
+            "quoted_text": "1111 CC.. AA ccooppyy ooff aallll ccoommppllaaiinnttss ssuubbmmiitttteedd bbyy ccoonnssuummeerrss ttoo DDeeffeennddaanntt rreeggaarrddiinngg iittss 1122 iinnffoorrmmaattiioonn sseeccuurriittyy pprraaccttiicceess oorr iittss pprraaccttiicceess rreellaattiinngg ttoo tthhee ccoolllleeccttiioonn oorr rreetteennttiioonn 1133 ooff ccoonnssuummeerr ppeerrssoonnaall iinnffoorrmmaattiioonn,, iinncclluuddiinngg ffrroomm cchhiillddrreenn;;",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.5747126436781609,
+            "quote_start_line": 701,
+            "quote_end_line": 705
+          },
+          {
+            "description": "Maintain all records necessary to demonstrate full compliance with each provision of Order, including all submissions to the Commission",
+            "quoted_text": "DD.. AAllll rreeccoorrddss nneecceessssaarryy ttoo ddeemmoonnssttrraattee ffuullll ccoommpplliiaannccee wwiitthh eeaacchh pprroovviissiioonn ooff tthhiiss 1155 OOrrddeerr,, iinncclluuddiinngg aallll ssuubbmmiissssiioonnss ttoo tthhee CCoommmmiissssiioonn;; aanndd",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.49283667621776506,
+            "quote_start_line": 707,
+            "quote_end_line": 709
+          },
+          {
+            "description": "Maintain a sample copy of every materially different form, page, or screen through which Defendant collects personal information, and sample copy of each materially different document containing any representation regarding collection, use, and disclosure practices pertaining to personal information of a child",
+            "quoted_text": "1177 EE.. AA ssaammppllee ccooppyy ooff eevveerryy mmaatteerriiaallllyy ddiiffffeerreenntt ffoorrmm,, ppaaggee,, oorr ssccrreeeenn ccrreeaatteedd,, 1188 mmaaiinnttaaiinneedd,, oorr ootthheerrwwiissee pprroovviiddeedd bbyy DDeeffeennddaanntt tthhrroouugghh wwhhiicchh DDeeffeennddaanntt 1199 ccoolllleeccttss ppeerrssoonnaall iinnffoorrmmaattiioonn,, aanndd aa ssaammppllee ccooppyy ooff eeaacchh mmaatteerriiaallllyy ddiiffffeerreenntt 2200 ddooccuummeenntt ccoonnttaaiinniinngg aannyy rreepprreesseennttaattiioonn rreeggaarrddiinngg DDeeffeennddaanntt''ss ccoolllleeccttiioonn,, uussee,, 2211 2222 aanndd ddiisscclloossuurree pprraaccttiicceess ppeerrttaaiinniinngg ttoo ppeerrssoonnaall iinnffoorrmmaattiioonn ooff aa cchhiilldd.. EEaacchh wweebb 2233 ppaaggee ccooppyy sshhaallll bbee aaccccoommppaanniieedd bbyy tthhee UURRLL ooff tthhee wweebb ppaaggee wwhheerree tthhee mmaatteerriiaall 2244 wwaass ppoosstteedd oonnlliinnee.. EElleeccttrroonniicc ccooppiieess sshhaallll iinncclluuddee aallll tteexxtt aanndd ggrraapphhiiccss ffiilleess,, 2255 aauuddiioo ssccrriippttss,, aanndd ootthheerr ccoommppuutteerr ffiilleess uusseedd iinn pprreesseennttiinngg iinnffoorrmmaattiioonn oonn tthhee 2266 IInntteerrnneett.. PPrroovviiddeedd,, hhoowweevveerr,, tthhaatt DDeeffeennddaanntt sshhaallll nnoott bbee rreeqquuiirreedd ttoo rreettaaiinn aannyy 2277 2288 ddooccuummeenntt ffoorr lloonnggeerr tthhaann ttwwoo ((22)) yyeeaarrss aafftteerr tthhee ddooccuummeenntt wwaass ccrreeaatteedd,, oorr ttoo oonnsseenntt DDeeccrreeee PPaaggee 1155 ooff 2200 Case3:12-cv-01487-SI Document4 Filed03/28/12 Page19 of 31 11 rreettaaiinn aa pprriinntt oorr eelleeccttrroonniicc ccooppyy ooff aannyy aammeennddeedd wweebb ppaaggee oorr ssccrreeeenn ttoo tthhee eexxtteenntt 22 tthhaatt tthhee aammeennddmmeenntt ddooeess nnoott aaffffeecctt DDeeffeennddaanntt''ss ccoommpplliiaannccee oobblliiggaattiioonnss uunnddeerr 33 tthhiiss OOrrddeerr..",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 711,
+            "quote_end_line": 739
+          }
+        ]
+      },
+      {
+        "provision_number": "28",
+        "title": "Compliance Monitoring",
+        "category": "monitoring",
+        "summary": "The Commission is authorized to monitor compliance with this Order through various means including requests for reports, depositions, document production, interviews, and other lawful discovery methods.",
+        "requirements": [
+          {
+            "description": "Within 14 days of receipt of written request from Commission representative, Defendant must submit additional compliance reports or other requested information sworn under penalty of perjury, appear for depositions, and produce documents for inspection and copying",
+            "quoted_text": "AA.. WWiitthhiinn 1144 ddaayyss ooff rreecceeiipptt ooff aa wwrriitttteenn rreeqquueesstt ffrroomm aa rreepprreesseennttaattiivvee ooff tthhee 99 CCoommmmiissssiioonn,, DDeeffeennddaanntt mmuusstt:: ssuubbmmiitt aaddddiittiioonnaall ccoommpplliiaannccee rreeppoorrttss oorr ootthheerr 1100 1111 rreeqquueesstteedd iinnffoorrmmaattiioonn,, wwhhiicchh mmuusstt bbee sswwoorrnn uunnddeerr ppeennaallttyy ooff ppeerrjjuurryy;; aappppeeaarr ffoorr 1122 ddeeppoossiittiioonnss;; aanndd pprroodduuccee ddooccuummeennttss,, ffoorr iinnssppeeccttiioonn aanndd ccooppyyiinngg.. TThhee 1133 CCoommmmiissssiioonn iiss aallssoo aauutthhoorriizzeedd ttoo oobbttaaiinn ddiissccoovveerryy,, wwiitthhoouutt ffuurrtthheerr lleeaavvee ooff ccoouurrtt,, 1144 uussiinngg aannyy ooff tthhee pprroocceedduurreess pprreessccrriibbeedd bbyy FFeeddeerraall RRuulleess ooff CCiivviill PPrroocceedduurree 2299,,3300 1155 ((iinncclluuddiinngg tteelleepphhoonniicc ddeeppoossiittiioonnss)),, 3311,, 3333,, 3344,, 3366,, 4455,, aanndd 6699..",
+            "deadline": "14 days",
+            "verified": false,
+            "confidence": 0.272027373823781,
+            "quote_start_line": 747,
+            "quote_end_line": 759
+          },
+          {
+            "description": "Commission is authorized to communicate directly with Defendant and Defendant must permit Commission representatives to interview any employee or other person affiliated with Defendant who has agreed to such an interview",
+            "quoted_text": "1177 BB.. FFoorr mmaatttteerrss ccoonncceerrnniinngg tthhiiss OOrrddeerr,, tthhee CCoommmmiissssiioonn iiss aauutthhoorriizzeedd ttoo ccoommmmuunniiccaattee 1188 ddiirreeccttllyy wwiitthh DDeeffeennddaanntt.. DDeeffeennddaanntt mmuusstt ppeerrmmiitt rreepprreesseennttaattiivveess ooff tthhee 1199 CCoommmmiissssiioonn ttoo iinntteerrvviieeww aannyy eemmppllooyyeeee oorr ootthheerr ppeerrssoonn aaffffiilliiaatteedd wwiitthh aannyy 2200 DDeeffeennddaanntt wwhhoo hhaass aaggrreeeedd ttoo ssuucchh aann iinntteerrvviieeww.. TThhee ppeerrssoonn iinntteerrvviieewweedd mmaayy 2211 2222 hhaavvee ccoouunnsseell pprreesseenntt..",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.28350515463917525,
+            "quote_start_line": 761,
+            "quote_end_line": 769
+          },
+          {
+            "description": "Commission may use all other lawful means, including posing as consumers, suppliers, or other individuals or entities to Defendant or any affiliated individual or entity, without the necessity of identification or prior notice",
+            "quoted_text": "CC.. TThhee CCoommmmiissssiioonn mmaayy uussee aallll ootthheerr llaawwffuull mmeeaannss,, iinncclluuddiinngg ppoossiinngg,, tthhrroouugghh iittss 2244 rreepprreesseennttaattiivveess,, aass ccoonnssuummeerrss,, ssuupppplliieerrss,, oorr ootthheerr iinnddiivviidduuaallss oorr eennttiittiieess,, ttoo 2255 DDeeffeennddaanntt oorr aannyy iinnddiivviidduuaall oorr eennttiittyy aaffffiilliiaatteedd wwiitthh DDeeffeennddaanntt,, wwiitthhoouutt tthhee 2266 nneecceessssiittyy ooff iiddeennttiiffiiccaattiioonn oorr pprriioorr nnoottiiccee.. NNootthhiinngg iinn tthhiiss OOrrddeerr lliimmiittss tthhee 2277 2288 CCoommmmiissssiioonn''ss llaawwffuull uussee ooff ccoommppuullssoorryy pprroocceessss,, ppuurrssuuaanntt ttoo SSeeccttiioonnss 99 aanndd 2200 ooff tthhee FFTTCC AAcctt,, 1155 UU..SS..CC.. §§§§ 4499,, 5577bb--11..",
+            "deadline": null,
+            "verified": false,
+            "confidence": 0.0,
+            "quote_start_line": 771,
+            "quote_end_line": 780
+          }
+        ]
+      }
+    ],
     "duration": {
-      "duration_years": null,
-      "termination_text": ""
+      "duration_years": 20,
+      "termination_text": "For 20 years following entry of this Order, Defendant must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change... Defendant must create certain records for 20 years after entry of the Order... each 2 year period thereafter for 20 years after service of the Order for the biennial Assessments."
     }
   },
   "metadata": {
@@ -67,11 +527,36 @@
     },
     "extraction_stats": {
       "complaint_counts": 3,
-      "complaint_representations": 2,
-      "order_provisions": 0,
-      "order_definitions": 0,
-      "order_requirements": 0
+      "complaint_representations": 3,
+      "order_provisions": 12,
+      "order_definitions": 18,
+      "order_requirements": 36,
+      "provisions_per_section": {
+        "14": 5,
+        "15": 1,
+        "16": 1,
+        "17": 2,
+        "18": 1,
+        "22": 1,
+        "23": 6,
+        "24": 5,
+        "25": 3,
+        "26": 3,
+        "27": 5,
+        "28": 3
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 5,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 3,
+        "complaint_total": 3,
+        "order_verified": 10,
+        "order_total": 36
+      }
     },
-    "processing_time_seconds": 198.8
+    "processing_time_seconds": 46022.4
   }
 }

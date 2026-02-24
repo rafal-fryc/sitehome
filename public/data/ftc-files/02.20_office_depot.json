@@ -2,11 +2,11 @@
   "case_info": {
     "docket_number": "9:19-cv-80431",
     "company": {
-      "name": "OFFICE DEPOT, INC.",
+      "name": "Office Depot, Inc.",
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "6600 North Military Trail, Boca Raton, Florida",
-      "business_description": "Office Depot is a nationwide retailer that operates over a thousand stores selling office supplies and furniture, as well as offering print services and technical support services. In November 2013, Office Depot merged with OfficeMax."
+      "business_description": "Office Depot is a nationwide retailer that operates over a thousand stores selling office supplies and furniture, as well as offering print services and technical support services. In November 2013, Office Depot merged with OfficeMax and operates retail locations under both the Office Depot and OfficeMax store banners."
     },
     "commissioners": [],
     "case_date": {
@@ -18,53 +18,95 @@
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/172-3023-office-depot-inc"
   },
   "complaint": {
-    "factual_background": "From 2009 to November 2016, Office Depot and its vendor Support.com used a deceptive software program called PC Health Check to falsely tell consumers their computers had malware infections or symptoms. The program automatically reported malware whenever store employees checked any of four initial checkboxes about generic computer issues, regardless of what the scan actually found. Based on these false security warnings, consumers purchased diagnostic and repair services costing over $300. Defendants collected tens of millions of dollars using this deceptive sales tool despite receiving numerous complaints from employees and consumers about its false results.",
+    "factual_background": "From at least 2009 to November 2016, Office Depot and its tech-support vendor Support.com used a software program called the PC Health Check Program as a deceptive sales tool in Office Depot and OfficeMax stores. The program was advertised to consumers as a free diagnostic service that would scan computers for viruses and performance issues, but it was designed so that simply checking any of four generic checkbox questions at the start automatically triggered a false 'Malware Symptoms Found' result in the detailed report, regardless of the actual condition of the computer. Consumers were never informed that the alarming results were predetermined by those checkbox selections and not by any actual scan. Based on these false findings, consumers were pressured to purchase diagnostic and repair services costing over $300 per service. Despite repeated internal complaints from store employees and warnings from the Florida Attorney General's office, Defendants continued the practice and collected tens of millions of dollars until a Seattle TV station exposed the scheme in late 2016.",
     "representations_made": [
       {
-        "description": "The PC Health Check Program scanned computers for viruses and security problems",
-        "quoted_text": "We fix computers. Come in today for your FREE PC tune-up. Improve overall system performance. Security Assessment. Scans the system for viruses.",
-        "source_paragraph": 24
+        "description": "Advertised the PC Health Check Program as a free service that diagnoses computers for security problems, performance issues, and scans for viruses",
+        "quoted_text": "to hand out to consumers in its stores. One typical iteration of the PCHC card advertised: “We fix computers. Come in today for your FREE PC tune-up. Improve overall system performance. Security Assessment. Scans the system for viruses.”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 24,
+        "quote_start_line": 160,
+        "quote_end_line": 162
       },
       {
-        "description": "The program would run complete diagnostics on the computer",
-        "quoted_text": "The Office Depot Companies told consumers that a store 'tech expert' would 'run complete diagnostics' on the computer and the PC Health Check Program would 'optimize' the computer.",
-        "source_paragraph": 23
+        "description": "Claimed that a store 'tech expert' would 'run complete diagnostics' on the computer and the PC Health Check Program would 'optimize' the computer",
+        "quoted_text": "23. The Office Depot Companies told consumers that a store “tech expert” would “run complete diagnostics” on the computer and the PC Health Check Program would - 6 - Case 9:19-cv-80431-XXXX Document 1 Entered on FLSD Docket 03/27/2019 Page 7 of 26 “optimize” the computer. As described below, the PC Health Check Program did not run complete diagnostics on consumers’ computers.",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 23,
+        "quote_start_line": 150,
+        "quote_end_line": 157
       },
       {
-        "description": "The scan found or identified malware symptoms on consumers' computers",
-        "quoted_text": "Since at least 2009 through November 2016, the Office Depot stores, through the PC Health Check Program Detailed Report, falsely represented to consumers that the scan found symptoms of malware on the consumer's computer",
-        "source_paragraph": 50
+        "description": "Falsely reported to consumers that the scan 'found' or 'identified' malware symptoms or infections whenever an Initial Checkbox Statement was checked, regardless of the computer's actual condition",
+        "quoted_text": "47. Defendants configured and used the PC Health Check Program to falsely report to consumers that the scan portion of the program “found” or “identified” malware symptoms or infections whenever an Initial Checkbox Statement was checked, regardless of whether the computer was infected or had symptoms of malware. These misrepresentations were stated in a section of the Detailed Report relating to “Malware Symptoms.” In fact, the scan itself did not “find” or “identify” anything to return the results listed in the “Malware Symptoms” section because the results under this section were triggered only by checking one of the Initial Checkbox Statements.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 47,
+        "quote_start_line": 375,
+        "quote_end_line": 382
       },
       {
-        "description": "The scan found infections in consumers' systems (July 2011 to October 2015)",
-        "quoted_text": "Starting in or around July 2011 and until October 2015, this language was modified and Defendants represented to consumers that the PC Health Check Program had 'found infections in your system,' in addition to 'finding' malware symptoms",
-        "source_paragraph": 54
+        "description": "Reported 'Malware Symptoms Found' and a 'Security Status: POOR' result as if generated by the scan, when in fact it was automatically triggered by checkbox selection",
+        "quoted_text": "50. Since at least 2009 through November 2016, the Office Depot stores, through the PC Health Check Program Detailed Report, falsely represented to consumers that the scan found symptoms of malware on the consumer’s computer, as illustrated below: Security Status: POOR Malware Symptoms Found Figure 6: PC Health Check Program Detailed Report when any Initial Checkbox Statements were checked",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 50,
+        "quote_start_line": 394,
+        "quote_end_line": 400
       },
       {
-        "description": "The scan identified potential malware related symptoms (October 2015 to November 2016)",
-        "quoted_text": "In October 2015, Defendants changed the language found under the 'Malware Symptoms Found' statement to state that the 'scan has identified potential malware related symptoms'",
-        "source_paragraph": 55
+        "description": "Stated in the Detailed Report that the consumer's system 'could be infected with malware' (May 2009 to June 2011)",
+        "quoted_text": "Malware ymptoms found Your systemc ould be infected l'lith rnalware, Frequent pop•ups, er ashes and not able to brol'Jse internet freely are sy~toms of malware inf ettion. Scan your computer for a11y possible malware Infections. Figure 7: Additional language in the Office Depot PC Health Check Program Detailed Report when any Initial Checkbox Statements were checked (May 2009 to June 2011)",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 53,
+        "quote_start_line": 420,
+        "quote_end_line": 425
       },
       {
-        "description": "Support.com represented the PC Health Check Program used heuristic questions to identify likely malware infestations",
-        "quoted_text": "Support.com informed Office Depot that this software program runs in only a few minutes using 'heuristic questions to identify likely malware infestations.'",
-        "source_paragraph": 17
+        "description": "Stated in the Detailed Report that the PC Health Check Program had 'found infections in your system' (July 2011 to October 2015)",
+        "quoted_text": "54. Starting in or around July 2011 and until October 2015, this language was modified and Defendants represented to consumers that the PC Health Check Program had “found infections in your system,” in addition to “finding” malware symptoms: Security Status: POOR Malware Symptoms round Figure 8: Additional language in the Office Depot PC Health Check Program Detailed Report when any Initial Checkbox Statements were checked (from at least July 2011 to October 2015)",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 54,
+        "quote_start_line": 426,
+        "quote_end_line": 432
+      },
+      {
+        "description": "Stated in the Detailed Report that the 'scan has identified potential malware related symptoms' (October 2015 to November 2016)",
+        "quoted_text": "55. In October 2015, Defendants changed the language found under the “Malware Symptoms Found” statement to state that the “scan has identified potential malware related symptoms”: Security Status: POOR Malware Symptoms Found Figure 9: Additional language in the Office Depot PC Health Check Program Detailed Report when any Initial Checkbox Statements were checked (October 2015 to November 2016) This language in the Detailed Report appeared until November 2016 when the Office Depot Companies stopped using the PC Health Check Program.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 55,
+        "quote_start_line": 433,
+        "quote_end_line": 441
+      },
+      {
+        "description": "OfficeMax version stated 'Your system may be infected with malware' without substantiation whenever an Initial Checkbox Statement was checked (July 2011 to November 2016)",
+        "quoted_text": "56. In late 2010 or early 2011, Support.com began providing OfficeMax the PC Health Check Program for use in OfficeMax stores. From at least July 2011 to November 2016, - 17 - Case 9:19-cv-80431-XXXX Document 1 Entered on FLSD Docket 03/27/2019 Page 18 of 26 OfficeMax used the PC Health Check Program to misrepresent to consumers that the scan found malware symptoms whenever an Initial Checkbox Statement was checked. Along with deceptively claiming that the PC Health Check Program found malware symptoms, the program also stated, without substantiation, that “Your system may be infected with malware”: Figure 10: OfficeMax PC Health Check Program Detailed Report and additional language when any Initial Checkbox Statements were checked (July 2011 to November 2016)",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 56,
+        "quote_start_line": 442,
+        "quote_end_line": 453
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Deceptive Representations by Office Depot",
-        "representation": "Office Depot represented that the PC Health Check Program had detected infections or symptoms of malware on consumers' computers",
-        "fact": "The PC Health Check Program did not actually detect malware. The scan results were automatically triggered solely by checking one of four initial checkbox statements about generic computer issues, regardless of the actual state of the computer or what the scan found",
-        "conclusion": "Office Depot's representations are false, misleading, or were not substantiated at the time the representations were made, and therefore constitute deceptive acts or practices in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+        "title": "Deceptive Representations – Office Depot",
+        "representation": "Office Depot represented, directly or indirectly, expressly or by implication, that the PC Health Check Program had detected infections or symptoms of malware on consumers' computers",
+        "fact": "The PC Health Check Program did not and, by design, could not detect infections or malware symptoms through its scan; the 'Malware Symptoms Found' result was automatically triggered solely by the selection of one or more Initial Checkbox Statements and was independent of any actual scan result",
+        "conclusion": "Office Depot's representations are false, misleading, or were not substantiated at the time they were made, and therefore constitute deceptive acts or practices in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
       },
       {
         "count_number": 2,
-        "title": "Means and Instrumentalities - Support.com",
-        "representation": "Support.com provided Office Depot with the PC Health Check Program that made representations that it detected infections or symptoms of malware on consumers' computers",
-        "fact": "The representations made through the PC Health Check Program are false, misleading, or were not substantiated at the time they were made. Support.com developed and provided this deceptive program knowing it would be used as a sales tool with consumers",
-        "conclusion": "Support.com provided the Office Depot Companies with the means and instrumentalities for the commission of deceptive acts or practices, which constitutes deceptive acts or practices in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+        "title": "Means and Instrumentalities – Support.com",
+        "representation": "Support.com provided the Office Depot Companies with the PC Health Check Program, through which false and misleading representations were made expressly or by implication that the program had detected infections or symptoms of malware on consumers' computers",
+        "fact": "The representations made through the PC Health Check Program were false, misleading, or were not substantiated at the time they were made; Support.com, as the developer and licensor of the program, knowingly provided the Office Depot Companies with the means and instrumentalities for the commission of these deceptive acts or practices",
+        "conclusion": "Support.com's practices constitute deceptive acts or practices in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a), by placing into the hands of another the means or instrumentalities of violating Section 5(a)."
       }
     ]
   },
@@ -80,21 +122,25 @@
         "provision_number": "I",
         "title": "Prohibition Against Misrepresentations",
         "category": "prohibition",
-        "summary": "Settling Defendant is permanently enjoined from misrepresenting that they have detected security or performance issues on consumers' devices or any other material facts about technical support goods or services.",
+        "summary": "Settling Defendant and all persons acting with it are permanently enjoined from misrepresenting that they have detected security or performance issues on a consumer's Electronic Device, or any other material fact concerning technical support goods or services.",
         "requirements": [
           {
-            "description": "Must not misrepresent detection of security or performance issues on consumer's Electronic Device",
-            "quoted_text": "IT IS ORDERED that Settling Defendant, its officers, agents, and employees and all other Persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with promoting, providing, distributing, selling, or offering for sale a technical support good or service are permanently restrained and enjoined from misrepresenting, expressly or by implication: A. That they have detected security or performance issues on a consumer's Electronic Device, including viruses, infections, malware or symptoms of malware",
+            "description": "Must not misrepresent detection of security or performance issues (including viruses, infections, malware or symptoms of malware) on a consumer's Electronic Device",
+            "quoted_text": "IT IS ORDERED that Settling Defendant, its officers, agents, and employees and all other Persons in active concert or participation with any of them, who receive actual notice of this Order, 2 Case 9:19-cv-80431-RLR Document 5 Entered on FLSD Docket 03/29/2019 Page 3 of 11 whether acting directly or indirectly, in connection with promoting, providing, distributing, selling, or offering for sale a technical support good or service are permanently restrained and enjoined from misrepresenting, expressly or by implication: A. That they have detected security or performance issues on a consumer’s Electronic Device, including viruses, infections, malware or symptoms of malware; or",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 52,
+            "quote_end_line": 62
           },
           {
-            "description": "Must not misrepresent any other material fact about technical support goods or services",
+            "description": "Must not misrepresent any other material fact concerning technical support goods or services, such as value, total costs, restrictions, limitations, conditions, or material aspects of performance, efficacy, nature, or central characteristics",
             "quoted_text": "B. Any other fact material to consumers concerning such goods or services, such as their value or total costs, any material restrictions, limitations, or conditions, or any material aspect of the performance, efficacy, nature or central characteristics of such goods or services.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 63,
+            "quote_end_line": 65
           }
         ]
       },
@@ -102,35 +148,52 @@
         "provision_number": "II",
         "title": "Software Provider Review, Termination and Recordkeeping",
         "category": "affirmative_obligation",
-        "summary": "Settling Defendant must review existing and prospective Software Providers for conduct violating Section I, suspend or terminate those engaging in such conduct, and maintain records of all reviews and actions taken.",
+        "summary": "Settling Defendant must review existing and prospective Software Providers for prohibited conduct, suspend or terminate non-compliant providers, and maintain records of all reviews and actions taken.",
         "requirements": [
           {
-            "description": "Review all existing Software Providers for conduct described in Section I and suspend or terminate those engaging in such conduct",
-            "quoted_text": "Settling Defendant shall, within one hundred twenty (120) days of the date of entry of this Order, review whether each of Settling Defendant's existing Software Providers, in the course of acting as a Software Provider, engages in any conduct described in Section I of this Order. If this review reveals that the Software Provider is engaging in any such conduct with respect to such services, Settling Defendant will immediately suspend services as necessary to stop such conduct, until further review establishes that the Software Provider is no longer engaging in any such conduct, or immediately terminate the Software Provider's provision of technical support goods and services.",
+            "description": "Within 120 days of entry, review all existing Software Providers for conduct described in Section I; immediately suspend or terminate any provider found to be engaging in such conduct",
+            "quoted_text": "A. Settling Defendant shall, within one hundred twenty (120) days of the date of entry of this Order, review whether each of Settling Defendant’s existing Software Providers, in the course of acting as a Software Provider, engages in any conduct described in Section I of this Order. If this review reveals that the Software Provider is engaging in any such conduct with respect to such services, Settling Defendant will immediately suspend services as necessary to stop such conduct, until further review establishes that the Software Provider is no longer engaging in any such conduct, or immediately terminate the Software Provider’s provision of technical support goods and services.",
             "deadline": "120 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 68,
+            "quote_end_line": 75
           },
           {
-            "description": "Perform additional review within 30 days if becoming aware of evidence suggesting Software Provider is engaging in prohibited conduct",
-            "quoted_text": "If Settling Defendant becomes aware of any evidence or information suggesting that a Software Provider, in the course of acting as a Software Provider, is engaging in any conduct described in Section I of this Order, Settling Defendant shall perform an additional review of the Software Provider within thirty (30) days. If this review reveals that the Software Provider is engaging in any such conduct with respect to such services, Settling Defendant will immediately suspend services as necessary to stop such conduct, until further review establishes that the Software Provider is no longer engaging in any such conduct, or immediately terminate the Software Provider's provision of technical support goods and services.",
+            "description": "Upon learning of evidence or information suggesting a Software Provider is engaging in prohibited conduct, perform an additional review within 30 days and immediately suspend or terminate if the review confirms such conduct",
+            "quoted_text": "B. If Settling Defendant becomes aware of any evidence or information suggesting that a Software Provider, in the course of acting as a Software Provider, is engaging in any conduct described in Section I of this Order, Settling Defendant shall perform an additional review of the Software Provider within thirty (30) days. If this review reveals that the Software Provider is 3 Case 9:19-cv-80431-RLR Document 5 Entered on FLSD Docket 03/29/2019 Page 4 of 11 engaging in any such conduct with respect to such services, Settling Defendant will immediately suspend services as necessary to stop such conduct, until further review establishes that the Software Provider is no longer engaging in any such conduct, or immediately terminate the Software Provider’s provision of technical support goods and services.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 76,
+            "quote_end_line": 87
           },
           {
-            "description": "Review prospective Software Providers before establishing business relationship and do not engage with those likely to engage in prohibited conduct",
-            "quoted_text": "Prior to entering into a business relationship with any prospective Software Provider, Settling Defendant shall conduct a review of whether the prospective Software Provider, in the course of providing technical support goods and services, has engaged, is engaging, or is likely to engage in any conduct described in Section I of this Order. Settling Defendant will not establish a business relationship with the prospective Software Provider if this review concludes that the prospective Software Provider is engaging or is likely to engage in any conduct described in Section I of this Order.",
+            "description": "Prior to entering into any business relationship with a prospective Software Provider, conduct a review of whether it has engaged, is engaging, or is likely to engage in prohibited conduct; do not establish a relationship if the review concludes it is engaging or likely to engage in such conduct",
+            "quoted_text": "C. Prior to entering into a business relationship with any prospective Software Provider, Settling Defendant shall conduct a review of whether the prospective Software Provider, in the course of providing technical support goods and services, has engaged, is engaging, or is likely to engage in any conduct described in Section I of this Order. Settling Defendant will not establish a business relationship with the prospective Software Provider if this review concludes that the prospective Software Provider is engaging or is likely to engage in any conduct described in Section I of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 88,
+            "quote_end_line": 94
           },
           {
-            "description": "Create and maintain records of all Software Provider reviews, suspensions, and terminations",
-            "quoted_text": "Settling Defendant shall create and maintain records of its reviews and any suspensions or terminations of the use or sale of technical support goods and services provided by each Software Provider, including documentation of the review process, procedures, and implementation, status, and outcome.",
+            "description": "Reviews of Software Providers must include steps reasonably calculated to determine whether the provider engages in prohibited conduct, which may include obtaining and reviewing the provider's software, advertising and marketing materials, and consumer reviews",
+            "quoted_text": "D. Reviewing a Software Provider, for the purposes of Paragraphs A - C, above, must include steps reasonably calculated to determine whether a Software Provider, in the course of providing technical support goods and services, engages in any conduct described in Section I of this Order. Such steps may include obtaining and reviewing the Software Provider’s software, advertising and marketing materials, and consumer reviews, but need not include all of these steps.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 95,
+            "quote_end_line": 99
+          },
+          {
+            "description": "Create and maintain records of all Software Provider reviews and any suspensions or terminations, including documentation of the review process, procedures, implementation, status, and outcome",
+            "quoted_text": "E. Settling Defendant shall create and maintain records of its reviews and any suspensions or terminations of the use or sale of technical support goods and services provided by each Software Provider, including documentation of the review process, procedures, and implementation, status, and outcome.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 100,
+            "quote_end_line": 103
           }
         ]
       },
@@ -138,14 +201,25 @@
         "provision_number": "III",
         "title": "Monetary Judgment",
         "category": "affirmative_obligation",
-        "summary": "Judgment of $25 million is entered against Settling Defendant as equitable monetary relief, to be paid within 14 days.",
+        "summary": "A monetary judgment of $25,000,000 is entered against Settling Defendant, to be paid to the FTC within 14 days of entry of the Order by electronic fund transfer.",
         "requirements": [
           {
-            "description": "Pay $25 million to the Commission",
-            "quoted_text": "Judgment in the amount of twenty-five million dollars ($25,000,000) is entered in favor of the Commission against Settling Defendant as equitable monetary relief. Settling Defendant is ordered to pay the amount in Subsection A to the Commission within 14 days of entry of this Order by electronic fund transfer in accordance with instructions previously provided by a representative of the Commission.",
+            "description": "Judgment of $25,000,000 is entered in favor of the Commission against Settling Defendant as equitable monetary relief",
+            "quoted_text": "A. Judgment in the amount of twenty-five million dollars ($25,000,000) is entered in favor of the Commission against Settling Defendant as equitable monetary relief.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 110,
+            "quote_end_line": 111
+          },
+          {
+            "description": "Pay $25,000,000 to the Commission within 14 days of entry of this Order by electronic fund transfer in accordance with instructions previously provided by a Commission representative",
+            "quoted_text": "B. Settling Defendant is ordered to pay the amount in Subsection A to the Commission within 14 days of entry of this Order by electronic fund transfer in accordance with instructions previously provided by a representative of the Commission.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 112,
+            "quote_end_line": 114
           }
         ]
       },
@@ -153,21 +227,52 @@
         "provision_number": "IV",
         "title": "Additional Monetary Provisions",
         "category": "affirmative_obligation",
-        "summary": "Settling Defendant relinquishes all rights to assets transferred, and facts in the Complaint are deemed true for enforcement purposes, including bankruptcy proceedings.",
+        "summary": "Settling Defendant relinquishes all rights to transferred assets, agrees that Complaint facts may be taken as true in future proceedings, acknowledges use of its tax ID for collections, and permits the FTC to use paid funds for equitable relief including consumer redress.",
         "requirements": [
           {
-            "description": "Relinquish dominion and all rights to assets transferred pursuant to this Order",
-            "quoted_text": "Settling Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets.",
+            "description": "Settling Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets",
+            "quoted_text": "A. Settling Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 117,
+            "quote_end_line": 118
           },
           {
-            "description": "Acknowledge that Taxpayer Identification Numbers may be used for collecting delinquent amounts",
-            "quoted_text": "Settling Defendant acknowledges that its Taxpayer Identification Numbers (Social Security Numbers or Employer Identification Numbers) may be used for collecting and reporting on any delinquent amount arising out of this Order, in accordance with 31 U.S.C. § 7701.",
+            "description": "Facts alleged in the Complaint will be taken as true without further proof in any subsequent civil litigation by or on behalf of the Commission to enforce payment or monetary judgment under this Order",
+            "quoted_text": "B. The facts alleged in the Complaint will be taken as true, without further proof, in any subsequent civil litigation by or on behalf of the Commission, in a proceeding to enforce its rights to any payment or monetary judgment pursuant to this Order, such as a nondischargeability complaint in any bankruptcy case.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 119,
+            "quote_end_line": 122
+          },
+          {
+            "description": "Facts alleged in the Complaint establish all elements necessary to sustain an action under Section 523(a)(2)(A) of the Bankruptcy Code, and this Order will have collateral estoppel effect for such purposes",
+            "quoted_text": "C. The facts alleged in the Complaint establish all elements necessary to sustain an action by the Commission pursuant to Section 523(a)(2)(A) of the Bankruptcy Code, 11 U.S.C. § 523(a)(2)(A), and this Order will have collateral estoppel effect for such purposes.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 123,
+            "quote_end_line": 125
+          },
+          {
+            "description": "Settling Defendant acknowledges that its Taxpayer Identification Numbers may be used for collecting and reporting on any delinquent amount arising out of this Order",
+            "quoted_text": "D. Settling Defendant acknowledges that its Taxpayer Identification Numbers (Social Security Numbers or Employer Identification Numbers) may be used for collecting and reporting on any delinquent amount arising out of this Order, in accordance with 31 U.S.C. § 7701.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 126,
+            "quote_end_line": 128
+          },
+          {
+            "description": "All money paid to the Commission may be deposited into a fund for equitable relief including consumer redress; any unused money is to be deposited to the U.S. Treasury as disgorgement; Settling Defendant has no right to challenge Commission actions under this subsection",
+            "quoted_text": "E. All money paid to the Commission pursuant to this Order may be deposited into a fund 5 Case 9:19-cv-80431-RLR Document 5 Entered on FLSD Docket 03/29/2019 Page 6 of 11 administered by the Commission or its designee to be used for equitable relief, including consumer redress and any attendant expenses for the administration of any redress fund. If a representative of the Commission decides that direct redress to consumers is wholly or partially impracticable or money remains after redress is completed, the Commission may apply any remaining money for such other equitable relief (including consumer information remedies) as it determines to be reasonably related to Settling Defendant’s practices alleged in the Complaint. Any money not used for such equitable relief is to be deposited to the U.S. Treasury as disgorgement. Settling Defendant has no right to challenge any actions the Commission or its representatives may take pursuant to this Subsection.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 129,
+            "quote_end_line": 142
           }
         ]
       },
@@ -175,14 +280,16 @@
         "provision_number": "V",
         "title": "Customer Information",
         "category": "affirmative_obligation",
-        "summary": "Settling Defendant must provide customer information to the Commission for consumer redress purposes within 14 days of written request.",
+        "summary": "Settling Defendant must provide sufficient customer information to enable the FTC to administer consumer redress, and must supply any requested information within 14 days of a written request.",
         "requirements": [
           {
-            "description": "Provide customer information related to redress within 14 days of Commission's written request",
+            "description": "Permanently restrained and enjoined from failing to provide sufficient customer information to enable the Commission to efficiently administer consumer redress; must provide any requested information in the form prescribed by the Commission within 14 days of a written request",
             "quoted_text": "IT IS FURTHER ORDERED that Settling Defendant, its officers, agents, employees, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, are permanently restrained and enjoined from directly or indirectly from failing to provide sufficient customer information to enable the Commission to efficiently administer consumer redress. If a representative of the Commission requests in writing any information in the possession of Settling Defendant related to redress, Settling Defendant must provide it, in the form prescribed by the Commission, within 14 days.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 144,
+            "quote_end_line": 150
           }
         ]
       },
@@ -190,28 +297,34 @@
         "provision_number": "VI",
         "title": "Order Acknowledgments",
         "category": "acknowledgment",
-        "summary": "Settling Defendant must submit acknowledgment of receipt of this Order, deliver copies to relevant personnel for 3 years, and obtain signed acknowledgments from those who receive copies.",
+        "summary": "Settling Defendant must submit a sworn acknowledgment of receipt of the Order within 7 days, deliver copies to key personnel within 7 days (and to future personnel before they assume responsibilities), and obtain signed acknowledgments from all recipients within 30 days.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt of this Order to the Commission",
-            "quoted_text": "Settling Defendant, within 7 days of entry of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Within 7 days of entry, submit to the Commission a sworn acknowledgment of receipt of this Order under penalty of perjury",
+            "quoted_text": "A. Settling Defendant, within 7 days of entry of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 154,
+            "quote_end_line": 155
           },
           {
-            "description": "Deliver copy of Order to all principals, officers, directors, upper-level management with relevant responsibilities, and successor business entities",
-            "quoted_text": "For 3 years after entry of this Order, Settling Defendant must deliver a copy of this Order to: (1) all principals, officers, and directors; (2) all upper-level management, including vice-presidents, division heads, merchants, and store managers, who have managerial responsibilities for the advertising, modification or operation of diagnostic software programs, for use with retail customers, that purport to detect security or performance issues on consumers' Electronic Devices; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within 7 days of entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "7 days",
+            "description": "For 3 years after entry, deliver a copy of this Order to all principals, officers, directors, upper-level management with managerial responsibilities for advertising or operation of relevant diagnostic software programs, and any business entity resulting from a change in structure; delivery must occur within 7 days for current personnel and before new personnel assume responsibilities",
+            "quoted_text": "B. For 3 years after entry of this Order, Settling Defendant must deliver a copy of this Order to: (1) all principals, officers, and directors; (2) all upper-level management, including vice- presidents, division heads, merchants, and store managers, who have managerial responsibilities for the advertising, modification or operation of diagnostic software programs, for use with retail customers, that purport to detect security or performance issues on consumers’ Electronic Devices; and (3) any business entity resulting from any change in structure as set forth in the Section titled Compliance Reporting. Delivery must occur within 7 days of entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "7 days (current personnel); before assuming responsibilities (new personnel)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 160,
+            "quote_end_line": 167
           },
           {
-            "description": "Obtain signed and dated acknowledgments from each individual or entity that received a copy of this Order",
-            "quoted_text": "From each individual or entity to which Settling Defendant delivered a copy of this Order, Settling Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "Within 30 days of delivering a copy of this Order, obtain a signed and dated acknowledgment of receipt from each individual or entity to which it was delivered",
+            "quoted_text": "C. From each individual or entity to which Settling Defendant delivered a copy of this Order, Settling Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 168,
+            "quote_end_line": 170
           }
         ]
       },
@@ -219,28 +332,52 @@
         "provision_number": "VII",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Settling Defendant must submit annual compliance reports, notify the Commission of structural changes for 10 years, and report any bankruptcy filings within 14 days.",
+        "summary": "Settling Defendant must file a sworn compliance report one year after entry, submit sworn notices within 14 days of structural or contact changes for 10 years, notify the FTC of any bankruptcy filing within 14 days, and submit all required filings by email or overnight courier.",
         "requirements": [
           {
-            "description": "Submit comprehensive compliance report one year after entry of Order",
-            "quoted_text": "One year after entry of this Order, Settling Defendant must submit a compliance report, sworn under penalty of perjury: 1. Settling Defendant must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission may use to communicate with Settling Defendant; (b) identify all of Settling Defendant's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered, and the means of advertising, marketing, and sales; (d) describe in detail whether and how Settling Defendant is in compliance with each Section of this Order; and (e) provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "description": "One year after entry, submit a sworn compliance report identifying contact information, all businesses and their activities, describing compliance with each Order section, and providing copies of all Order acknowledgments obtained",
+            "quoted_text": "A. One year after entry of this Order, Settling Defendant must submit a compliance report, sworn under penalty of perjury: 1. Settling Defendant must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission may use to communicate with Settling Defendant; (b) identify all of Settling Defendant’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered, and the means of advertising, marketing, and sales; (d) describe in detail whether and how 7 Case 9:19-cv-80431-RLR Document 5 Entered on FLSD Docket 03/29/2019 Page 8 of 11 Settling Defendant is in compliance with each Section of this Order; and (e) provide a copy of each Order Acknowledgment obtained pursuant to this Order, unless previously submitted to the Commission.",
             "deadline": "1 year",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 174,
+            "quote_end_line": 188
           },
           {
-            "description": "Submit compliance notice within 14 days of any change in contact information or corporate structure",
-            "quoted_text": "For 10 years after entry of this Order, Settling Defendant must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in: (a) any designated point of contact; or (b) the structure of Settling Defendant or any entity that Settling Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
-            "deadline": "14 days",
+            "description": "For 10 years after entry, submit a sworn compliance notice within 14 days of any change in designated point of contact or in the structure of Settling Defendant or any entity it owns or controls that may affect compliance obligations under this Order",
+            "quoted_text": "B. For 10 years after entry of this Order, Settling Defendant must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in: (a) any designated point of contact; or (b) the structure of Settling Defendant or any entity that Settling Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days of any qualifying change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 189,
+            "quote_end_line": 194
           },
           {
-            "description": "Submit notice of filing of bankruptcy petition or insolvency proceeding",
-            "quoted_text": "Settling Defendant must submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Settling Defendant within 14 days of its filing.",
+            "description": "Submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Settling Defendant within 14 days of its filing",
+            "quoted_text": "C. Settling Defendant must submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Settling Defendant within 14 days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 195,
+            "quote_end_line": 197
+          },
+          {
+            "description": "Any submission required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 198,
+            "quote_end_line": 202
+          },
+          {
+            "description": "Unless otherwise directed, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC, 600 Pennsylvania Avenue NW, Washington, DC 20580; subject line must begin: FTC v. Office Depot, Inc., et al.",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: FTC v. Office Depot, Inc., et al.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 203,
+            "quote_end_line": 207
           }
         ]
       },
@@ -248,14 +385,52 @@
         "provision_number": "VIII",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Settling Defendant must create and retain for 5 years various records including accounting records, personnel records, consumer complaints, compliance documentation, and marketing materials for 10 years after entry of the Order.",
+        "summary": "Settling Defendant must create specified records for 10 years and retain each for 5 years, including accounting records, personnel records, consumer complaints, compliance documentation, and copies of all marketing materials.",
         "requirements": [
           {
-            "description": "Create and retain accounting records, personnel records, consumer complaints, compliance records, and marketing materials",
-            "quoted_text": "IT IS FURTHER ORDERED that Settling Defendant must create certain records for 10 years after entry of the Order, and retain each such record for 5 years. Specifically, Settling Defendant, in connection with marketing and selling computer security software or computer-related technical support services to retail customers, must create and retain the following records: A. accounting records showing the revenues from all goods or services sold; B. personnel records showing, for each Person providing services, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination; C. records of all consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, such as through a third party, and any response; D. all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission; and E. a copy of each unique advertisement or other marketing material.",
+            "description": "Create and retain accounting records showing revenues from all goods or services sold, in connection with marketing and selling computer security software or computer-related technical support services to retail customers",
+            "quoted_text": "IT IS FURTHER ORDERED that Settling Defendant must create certain records for 10 years after entry of the Order, and retain each such record for 5 years. Specifically, Settling Defendant, in connection with marketing and selling computer security software or computer- related technical support services to retail customers, must create and retain the following records: A. accounting records showing the revenues from all goods or services sold;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 213,
+            "quote_end_line": 217
+          },
+          {
+            "description": "Create and retain personnel records showing, for each person providing services (employee or otherwise): name, addresses, telephone numbers, job title or position, dates of service, and reason for termination if applicable",
+            "quoted_text": "B. personnel records showing, for each Person providing services, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 218,
+            "quote_end_line": 220
+          },
+          {
+            "description": "Create and retain records of all consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, and any response",
+            "quoted_text": "C. records of all consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, such as through a third party, and any response;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 221,
+            "quote_end_line": 222
+          },
+          {
+            "description": "Create and retain all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
+            "quoted_text": "D. all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 223,
+            "quote_end_line": 224
+          },
+          {
+            "description": "Create and retain a copy of each unique advertisement or other marketing material",
+            "quoted_text": "E. a copy of each unique advertisement or other marketing material.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 225,
+            "quote_end_line": 225
           }
         ]
       },
@@ -263,21 +438,34 @@
         "provision_number": "IX",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission has the right to monitor compliance through various means including requesting documents and depositions within 21 days, interviewing employees, and conducting undercover investigations.",
+        "summary": "The FTC is authorized to monitor Settling Defendant's compliance through written requests for reports and documents, depositions, direct communications with employees, and undercover investigative methods; Settling Defendant must respond within 21 days of written requests.",
         "requirements": [
           {
-            "description": "Comply with Commission requests for compliance reports, depositions, and document production within 21 days",
-            "quoted_text": "Within 21 days of receipt of a written request from a representative of the Commission, Settling Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying. The Commission is also authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
+            "description": "Within 21 days of receipt of a written request from a Commission representative, must submit additional compliance reports or other requested information (sworn under penalty of perjury), appear for depositions, and produce documents for inspection and copying; Commission may also obtain discovery under Federal Rules of Civil Procedure 29, 30, 31, 33, 34, 36, 45, and 69",
+            "quoted_text": "A. Within 21 days of receipt of a written request from a representative of the Commission, Settling Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying. The Commission is also authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 9 Case 9:19-cv-80431-RLR Document 5 Entered on FLSD Docket 03/29/2019 Page 10 of 11 (including telephonic depositions), 31, 33, 34, 36, 45, and 69. Provided, however, that Settling Defendant, after attempting to resolve a dispute without court action and for good cause shown, may file a motion with this Court seeking an order for one or more of the protections set forth in Rule 26(c).",
             "deadline": "21 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 229,
+            "quote_end_line": 241
           },
           {
-            "description": "Permit Commission to communicate directly with Settling Defendant and interview employees",
-            "quoted_text": "For matters concerning this Order, the Commission is authorized to communicate directly with the Settling Defendant. Settling Defendant must permit representatives of the Commission to interview any employee or other Person affiliated with Settling Defendant who has agreed to such an interview. The Person interviewed may have counsel present.",
+            "description": "For matters concerning this Order, the Commission may communicate directly with Settling Defendant; Settling Defendant must permit Commission representatives to interview any affiliated employee or person who has agreed to such an interview",
+            "quoted_text": "B. For matters concerning this Order, the Commission is authorized to communicate directly with the Settling Defendant. Settling Defendant must permit representatives of the Commission to interview any employee or other Person affiliated with Settling Defendant who has agreed to such an interview. The Person interviewed may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 242,
+            "quote_end_line": 245
+          },
+          {
+            "description": "The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals without identification or prior notice; nothing in this Order limits the Commission's lawful use of compulsory process under Sections 9 and 20 of the FTC Act",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing, through its representatives as consumers, suppliers, or other individuals or entities, to Settling Defendant or any individual or entity affiliated with Settling Defendant, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 246,
+            "quote_end_line": 250
           }
         ]
       },
@@ -288,18 +476,20 @@
         "summary": "The Court retains jurisdiction over this matter for purposes of construction, modification, and enforcement of the Order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction for enforcement purposes",
+            "description": "This Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order",
             "quoted_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 252,
+            "quote_end_line": 253
           }
         ]
       }
     ],
     "duration": {
       "duration_years": null,
-      "termination_text": "This Order does not contain a specific termination date. The Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order. Certain obligations have time limits: 3 years for Order acknowledgment deliveries (Section VI.B) and 10 years for compliance notices regarding structural changes (Section VII.B) and recordkeeping (Section VIII)."
+      "termination_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order."
     }
   },
   "metadata": {
@@ -309,11 +499,34 @@
     },
     "extraction_stats": {
       "complaint_counts": 2,
-      "complaint_representations": 6,
+      "complaint_representations": 8,
       "order_provisions": 10,
       "order_definitions": 4,
-      "order_requirements": 20
+      "order_requirements": 32,
+      "provisions_per_section": {
+        "I": 2,
+        "II": 5,
+        "III": 2,
+        "IV": 5,
+        "V": 1,
+        "VI": 3,
+        "VII": 5,
+        "VIII": 5,
+        "IX": 3,
+        "X": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 8,
+        "complaint_total": 8,
+        "order_verified": 32,
+        "order_total": 32
+      }
     },
-    "processing_time_seconds": 140.0
+    "processing_time_seconds": 98.4
   }
 }

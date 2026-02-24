@@ -1,116 +1,129 @@
 {
   "case_info": {
-    "docket_number": "1:23-cv-2659",
+    "docket_number": "1:23-cv-02659",
     "company": {
       "name": "TransUnion Rental Screening Solutions, Inc.",
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "Greenwood Village, Colorado",
-      "business_description": "TransUnion Rental Screening Solutions, Inc. (TURSS) furnishes background screening reports about consumers to rental property owners, property management companies, employers, and other background screening companies throughout the United States to assist in tenant and employee selection. These background screening reports include public record information, including criminal records and residential eviction records."
+      "business_description": "TransUnion Rental Screening Solutions, Inc. (TURSS) provides tenant and employment background screening reports to rental property owners, property management companies, employers, and other background screening companies throughout the United States. These reports include public record information such as criminal records and residential eviction records."
     },
     "commissioners": [],
     "case_date": {
       "month": 10,
       "year": 2023
     },
-    "legal_authority": "Section 13(b) of the Federal Trade Commission Act, 15 U.S.C. § 53(b); Section 621(a)-(b) of the Fair Credit Reporting Act (FCRA), 15 U.S.C. § 1681s(a)(1), (b)(1)(H); and Sections 1054(a) and 1055 of the Consumer Financial Protection Act of 2010 (CFPA), 12 U.S.C. §§ 5564(a) and 5565",
-    "violation_type": "unfair",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a); Section 621(a)(1) of the Fair Credit Reporting Act, 15 U.S.C. § 1681s(a)(1)",
+    "violation_type": "deceptive",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/182-3204-transunion-rental-screening-solutions-inc-trans-union-llc-ftc-cfpb-v"
   },
   "complaint": {
-    "factual_background": "TransUnion Rental Screening Solutions (TURSS) violated the Fair Credit Reporting Act by failing to maintain reasonable procedures to ensure accuracy in tenant screening reports used by landlords to make rental decisions. The company reported multiple entries for single eviction cases, displayed inaccurate or missing case dispositions, mislabeled judgment amounts, and included sealed court records in their reports. Additionally, TURSS failed to disclose third-party vendors like LexisNexis as sources of information in consumer file disclosures, instead identifying only the jurisdiction. These failures caused consumers harm including prolonged housing searches, additional fees, denial of housing, and difficulty correcting errors.",
+    "factual_background": "TransUnion Rental Screening Solutions, Inc. (TURSS) and Trans Union LLC violated the Fair Credit Reporting Act by failing to follow reasonable procedures to assure maximum possible accuracy in tenant background screening reports used by landlords to make rental decisions. TURSS displayed multiple entries for the same eviction case, making consumers' eviction histories appear more voluminous than they actually were. TURSS also reported inaccurate case dispositions—omitting final outcomes or incorrectly reporting judgments—and mislabeled data fields (e.g., calling alleged debt amounts 'Judgment Amount' when no court judgment existed). Additionally, TURSS failed to remove sealed eviction records from its reports and, until prompted by FTC Civil Investigative Demands, did not disclose to consumers that third-party vendors such as LexisNexis were the actual sources of criminal and eviction records in their files.",
     "representations_made": [
       {
-        "description": "Implicitly represented that it followed reasonable procedures to assure maximum possible accuracy of information in Consumer Reports",
-        "quoted_text": "Section 607(b) of the FCRA, 15 U.S.C. § 1681e(b), requires that \"[w]henever a [C]onsumer [R]eporting [A]gency prepares a [C]onsumer [R]eport it shall follow reasonable procedures to assure maximum possible accuracy of the information concerning the individual about whom the report relates.\"",
-        "source_paragraph": 23
+        "description": "TURSS displayed each Event in an eviction case as a separate report entry, causing a single eviction case to appear as multiple separate eviction cases and making consumers' eviction histories look more extensive than they actually were",
+        "quoted_text": "27. When reporting Eviction Proceeding Records in Tenant Screening Reports, TURSS’s procedure has been to display each Event in a case as a separate entry in the report.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 27,
+        "quote_start_line": 172,
+        "quote_end_line": 173
       },
       {
-        "description": "Labeled fields in eviction records as 'Judgment Amount' implying court-ordered judgments",
-        "quoted_text": "Until at least early 2019, TURSS included a field for Eviction Proceeding Records in Tenant Screening Reports that it labeled or described as a \"Judgment Amount.\"",
-        "source_paragraph": 41
+        "description": "TURSS provided Tenant Screening Reports with Eviction Proceeding Records that did not identify a final disposition or that reported an incorrect final disposition (e.g., reporting a judgment for the plaintiff when the case was actually dismissed)",
+        "quoted_text": "34. In numerous instances, TURSS has provided Tenant Screening Reports with errors including Eviction Proceeding Records that do not identify a final disposition and merely indicate that an eviction case was initiated, even if a later or final disposition is available in public records. TURSS has also provided Tenant Screening Reports with Eviction Proceeding Records that have an incorrect final disposition, such as reporting a judgment for the plaintiff when a case was actually dismissed.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 34,
+        "quote_start_line": 204,
+        "quote_end_line": 209
       },
       {
-        "description": "Represented in File Disclosures that the jurisdiction was the sole source of criminal and eviction records",
-        "quoted_text": "Prior to June 2021, when a consumer requested a File Disclosure from TURSS, TURSS provided the consumer with a File Disclosure that identified the jurisdiction for the criminal record or Eviction Proceeding Record as the sole source of the information even when, in fact, TURSS obtained the information from a third-party vendor source.",
-        "source_paragraph": 58
+        "description": "TURSS labeled data fields as 'Judgment Amount' when the amounts populated were not necessarily court-awarded judgments but rather any amount alleged owed by the plaintiff landlord, falsely implying a court had ordered the amount",
+        "quoted_text": "43. The term “Judgment Amount” was inaccurate and misleading because it falsely represented that a court had ordered the amount due in a judgment.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 43,
+        "quote_start_line": 246,
+        "quote_end_line": 247
+      },
+      {
+        "description": "TURSS included sealed Eviction Proceeding Records in Tenant Screening Reports because it lacked procedures to identify and delete records that had been sealed after being supplied by LexisNexis",
+        "quoted_text": "49. Prior to November 2021, TURSS did not have procedures to ensure that the updates from LexisNexis would allow TURSS to identify and delete all Eviction Proceeding Records in TURSS’s database that may have been sealed after being supplied to TURSS. 11 Case No. 1:23-cv-02659 Document 1 filed 10/12/23 USDC Colorado pg 12 of 16 Specifically, the updates may not have included changes to eviction cases more than one year old if the only record was a civil new filing, even if those records were subsequently sealed.",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 49,
+        "quote_start_line": 269,
+        "quote_end_line": 277
+      },
+      {
+        "description": "When consumers requested File Disclosures, TURSS identified only the originating jurisdiction as the source of criminal and eviction records, omitting that it had actually obtained the information from third-party vendors such as LexisNexis",
+        "quoted_text": "58. Prior to June 2021, when a consumer requested a File Disclosure from TURSS, TURSS provided the consumer with a File Disclosure that identified the jurisdiction for the criminal record or Eviction Proceeding Record as the sole source of the information even when, in fact, TURSS obtained the information from a third-party vendor source.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 58,
+        "quote_start_line": 312,
+        "quote_end_line": 315
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Failure to Follow Reasonable Accuracy Procedures",
-        "representation": "TURSS was required to follow reasonable procedures to assure maximum possible accuracy of Consumer Report information under Section 607(b) of the FCRA",
-        "fact": "TURSS failed to follow reasonable procedures to: (1) prevent multiple entries for the same eviction case, (2) accurately report case dispositions, (3) accurately label data fields including mislabeling amounts as 'Judgment Amount' when no judgment existed, and (4) prevent inclusion of sealed eviction records. These failures were knowing and reckless and resulted in incorrect and misleading information in Consumer Reports.",
-        "conclusion": "Defendant TURSS has violated Section 607(b) of the FCRA, 15 U.S.C. § 1681e(b). Defendant Trans Union LLC has also violated Section 607(b) of the FCRA through its acts and practices described in managing and overseeing TURSS's FCRA compliance."
+        "title": "Failure to Follow Reasonable Procedures for Maximum Possible Accuracy (FCRA § 607(b))",
+        "representation": "TURSS prepared and furnished Consumer Reports containing Eviction Proceeding Records with multiple duplicative entries for single cases, inaccurate or missing case dispositions, mislabeled data fields (including 'Judgment Amount'), and sealed records that should have been removed",
+        "fact": "Section 607(b) of the FCRA requires that whenever a Consumer Reporting Agency prepares a Consumer Report it shall follow reasonable procedures to assure maximum possible accuracy of the information; TURSS knowingly and recklessly failed to implement such procedures across all four categories of deficiency",
+        "conclusion": "By and through these acts and practices, Defendant TURSS has violated Section 607(b) of the FCRA, 15 U.S.C. § 1681e(b); and Defendant Trans Union LLC, through its management and oversight of TURSS's FCRA compliance policies and procedures, has likewise violated Section 607(b) of the FCRA, 15 U.S.C. § 1681e(b)."
       },
       {
         "count_number": 2,
-        "title": "Failure to Disclose Information Sources",
-        "representation": "TURSS was required under Section 609(a) of the FCRA to clearly and accurately disclose to consumers all information in their file and the sources of that information",
-        "fact": "In numerous instances, TURSS failed to identify third-party vendors such as LexisNexis as sources of criminal records and Eviction Proceeding Records in File Disclosures to consumers. Instead, TURSS identified only the jurisdiction as the source even when it obtained information from third-party vendors. This failure was knowing and reckless and prevented consumers from disputing inaccuracies at the actual source.",
-        "conclusion": "Defendant TURSS has violated Section 609(a) of the FCRA, 15 U.S.C. § 1681g(a). Defendant Trans Union LLC has also violated Section 609(a) of the FCRA through its acts and practices described in managing and overseeing TURSS's FCRA compliance."
+        "title": "Failure to Disclose Sources of Information in Consumer File Disclosures (FCRA § 609(a))",
+        "representation": "When consumers requested File Disclosures, TURSS identified only the jurisdiction (e.g., the court) as the source of criminal records and Eviction Proceeding Records, even when TURSS had actually obtained that information from third-party vendors such as LexisNexis",
+        "fact": "Section 609(a) of the FCRA requires Consumer Reporting Agencies to clearly and accurately disclose to consumers, upon request, all information in the consumer's file and the sources of that information; TURSS knowingly and recklessly omitted third-party vendor sources from its File Disclosures until compelled by FTC Civil Investigative Demands",
+        "conclusion": "By and through these acts and practices, Defendant TURSS has violated Section 609(a) of the FCRA, 15 U.S.C. § 1681g(a); and Defendant Trans Union LLC, through its management and oversight of TURSS's FCRA compliance policies and procedures, has likewise violated Section 609(a) of the FCRA, 15 U.S.C. § 1681g(a)."
       }
     ]
   },
   "order": {
     "definitions": {
-      "Adverse Action": "means: 1. A denial or cancellation of, an increase in any charge for, or a reduction or other adverse or unfavorable change in the terms of coverage or amount of, any insurance, existing or applied for, in connection with the underwriting of insurance; 2. A denial of employment or any other decision for employment purposes that adversely affects any current or prospective employee; 3. A denial or cancellation of, an increase in any charge for, or any other adverse or unfavorable change in the terms of, a license or other benefit granted by a governmental instrumentality required by law to consider an applicant's financial responsibility or status; or 4. An action taken or determination that is: a) made in connection with an application that was made by, or a transaction that was initiated by, any consumer, or in connection with a review of an account to determine whether the consumer continues to meet the terms of the account; and b) adverse to the interests of the consumer.",
-      "Affected Consumers": "includes: 1. Each consumer who, between December 1, 2015 and the date of entry of this Order, disputed a record with Defendants, either directly or through a reseller, which resulted in a change related to an Eviction Proceeding Record that the Defendants associate with such consumer, and where the dispute concerned the disposition or outcome of an Eviction Proceeding, a \"judgment amount\" associated with an Eviction Proceeding, or the reporting of a Sealed Record from an Eviction Proceeding. 2. Each consumer for whom the following conditions are met: a) Defendants issued a recommendation between September 1, 2016 and the date of entry of this Order that the consumer's application for housing be denied based on an Eviction Proceeding Record that the Defendants associated with such consumer and the criteria associated with the customer receiving the recommendation, and b) Defendants associated an Eviction Proceeding Record with the consumer that did not have an associated final outcome.",
-      "Background Screening Report": "means a Consumer Report provided for employment or rental background screening purposes that incorporates or includes either an Eviction Proceeding Record or criminal record information or otherwise reflects a search for Eviction Proceeding Records or criminal record information, including when provided to a reseller.",
-      "Bureau Enforcement Director": "means the Assistant Director of the Office of Enforcement for the Bureau, or his or her delegate.",
-      "Consumer Report": "means any written, oral, or other communication of any information by a Consumer Reporting Agency bearing on a consumer's credit worthiness, credit standing, credit capacity, character, general reputation, personal characteristics, or mode of living which is used or expected to be used or collected in whole or in part for the purpose of serving as a factor in establishing the consumer's eligibility for any of the following purposes: 1. Credit or insurance to be used primarily for personal, family, or household purposes; 2. Employment purposes; 3. By a person which the Consumer Reporting Agency has reason to believe: a) intends to use the information for employment purposes, b) intends to use the information in connection with a determination of the consumer's eligibility for a license or other benefit granted by a governmental instrumentality required by law to consider an applicant's financial responsibility or status, or c) otherwise has a legitimate business need for the information (i) in connection with a business transaction that is initiated by the consumer, or (ii) to review an account to determine whether the consumer continues to meet the terms of the account; or 4. Any purpose authorized by 15 U.S.C. § 1681b.",
-      "Consumer Reporting Agency": "means any person which, for monetary fees, dues, or on a cooperative nonprofit basis, regularly engages in whole or in part in the practice of assembling or evaluating consumer credit information or other information on consumers for the purpose of furnishing Consumer Reports to third parties, and which uses any means or facility of interstate commerce for the purpose of preparing or furnishing Consumer Reports.",
-      "Consumer's File": "means, when used in connection with information concerning any consumer, all of the information on that consumer recorded and retained by a Consumer Reporting Agency regardless of how the information is stored.",
-      "Defendants": "means Trans Union LLC, a Delaware limited liability company, and TransUnion Rental Screening Solutions, Inc., a Delaware corporation, which is a subsidiary of Trans Union LLC as of the date of entry of this Order, individually, collectively, or in any combination, and their successors and assigns.",
-      "Eviction Proceeding": "means any legal proceeding concerning a consumer's habitation in, occupation of, or possession of land or real property and, where applicable, related monetary claims, including for rent or damages, such as eviction or forcible entry and detainer proceedings and any other proceedings reported in the same category as eviction or forcible entry and detainer proceedings. This term does not include mortgage-related proceedings against mortgagors that relate solely to mortgage payments and do not relate to the mortgagor's habitation, occupation, or use of the property.",
-      "Eviction Proceeding Record": "means any record associated with an Eviction Proceeding.",
-      "Frequency Report": "means a report showing the frequency with which Eviction Proceeding Records are updated.",
-      "Investigative Consumer Report": "means a Consumer Report or portion thereof in which information on a consumer's character, general reputation, personal characteristics, or mode of living is obtained through personal interviews with neighbors, friends, or associates of the consumer reported on or with others with whom he is acquainted or who may have knowledge concerning any such items of information. However, such information shall not include specific factual information on a consumer's credit record obtained directly from a creditor of the consumer or from a Consumer Reporting Agency when such information was obtained directly from a creditor of the consumer or from the consumer.",
-      "Related Consumer Action": "means a private action by or on behalf of one or more consumers or an enforcement action by another governmental agency brought against either or both Defendants based on substantially the same facts as described in the Complaint.",
-      "Sealed Record": "means a record that has been sealed, expunged, or similarly excluded from the public record."
+      "Adverse Action": "1. A denial or cancellation of, an increase in any charge for, or a reduction or other adverse or unfavorable change in the terms of coverage or amount of, any insurance, existing or applied for, in connection with the underwriting of insurance; 2. A denial of employment or any other decision for employment purposes that adversely affects any current or prospective employee; 3. A denial or cancellation of, an increase in any charge for, or any other adverse or unfavorable change in the terms of, a license or other benefit granted by a governmental instrumentality required by law to consider an applicant's financial responsibility or status; or 4. An action taken or determination that is: a) made in connection with an application that was made by, or a transaction that was initiated by, any consumer, or in connection with a review of an account to determine whether the consumer continues to meet the terms of the account; and b) adverse to the interests of the consumer.",
+      "Affected Consumers": "\"Affected Consumers\" includes:\n1. Each consumer who, between December 1, 2015 and the date of entry of this Order, disputed a record with Defendants, either directly or through a reseller, which resulted in a change related to an Eviction Proceeding Record that the Defendants associate with such consumer, and where the dispute concerned the disposition or outcome of an Eviction Proceeding, a \"judgment amount\" associated with an Eviction Proceeding, or the reporting of a Sealed Record from an Eviction Proceeding.\n2. Each consumer for whom the following conditions are met:\na) Defendants issued a recommendation between September 1, 2016 and the date of entry of this Order that the consumer's application for housing be denied based on an Eviction Proceeding Record that the Defendants associated with such consumer and the criteria associated with the customer receiving the recommendation, and\nb) Defendants associated an Eviction Proceeding Record with the consumer that did not have an associated final outcome.",
+      "Background Screening Report": "A Consumer Report provided for employment or rental background screening purposes that incorporates or includes either an Eviction Proceeding Record or criminal record information or otherwise reflects a search for Eviction Proceeding Records or criminal record information, including when provided to a reseller.",
+      "Bureau Enforcement Director": "The Assistant Director of the Office of Enforcement for the Bureau, or his or her delegate.",
+      "Consumer Report": "\"Consumer Report\" means any written, oral, or other communication of any information by a Consumer Reporting Agency bearing on a consumer's credit worthiness, credit standing, credit capacity, character, general reputation, personal characteristics, or mode of living which is used or expected to be used or collected in whole or in part for the purpose of serving as a factor in establishing the consumer's eligibility for any of the following purposes:\n1. Credit or insurance to be used primarily for personal, family, or household purposes;\n2. Employment purposes;\n3. By a person which the Consumer Reporting Agency has reason to believe:\na) intends to use the information for employment purposes,\nb) intends to use the information in connection with a determination of the consumer's eligibility for a license or other benefit granted by a governmental instrumentality required by law to consider an applicant's financial responsibility or status, or\nc) otherwise has a legitimate business need for the information (i) in connection with a business transaction that is initiated by the consumer, or (ii) to review an account to determine whether the consumer continues to meet the terms of the account; or\n4. Any purpose authorized by 15 U.S.C. § 1681b.",
+      "Consumer Reporting Agency": "Any person which, for monetary fees, dues, or on a cooperative nonprofit basis, regularly engages in whole or in part in the practice of assembling or evaluating consumer credit information or other information on consumers for the purpose of furnishing Consumer Reports to third parties, and which uses any means or facility of interstate commerce for the purpose of preparing or furnishing Consumer Reports.",
+      "Consumer's File": "When used in connection with information concerning any consumer, all of the information on that consumer recorded and retained by a Consumer Reporting Agency regardless of how the information is stored.",
+      "Defendants": "Trans Union LLC, a Delaware limited liability company, and TransUnion Rental Screening Solutions, Inc., a Delaware corporation, which is a subsidiary of Trans Union LLC as of the date of entry of this Order, individually, collectively, or in any combination, and their successors and assigns.",
+      "Eviction Proceeding": "Any legal proceeding concerning a consumer's habitation in, occupation of, or possession of land or real property and, where applicable, related monetary claims, including for rent or damages, such as eviction or forcible entry and detainer proceedings and any other proceedings reported in the same category as eviction or forcible entry and detainer proceedings. This term does not include mortgage-related proceedings against mortgagors that relate solely to mortgage payments and do not relate to the mortgagor's habitation, occupation, or use of the property.",
+      "Eviction Proceeding Record": "Any record associated with an Eviction Proceeding.",
+      "Frequency Report": "A report showing the frequency with which Eviction Proceeding Records are updated.",
+      "Investigative Consumer Report": "\"Investigative Consumer Report\" means a Consumer Report or portion thereof in which information on a consumer's character, general reputation, personal characteristics, or mode of living is obtained through personal interviews with neighbors, friends, or associates of the consumer reported on or with others with whom he is acquainted or who may have knowledge concerning any such items of information. However, such information shall not include specific factual information on a consumer's credit record obtained directly from a creditor of the consumer or from a Consumer Reporting Agency when such information was obtained directly from a creditor of the consumer or from the consumer.",
+      "Related Consumer Action": "A private action by or on behalf of one or more consumers or an enforcement action by another governmental agency brought against either or both Defendants based on substantially the same facts as described in the Complaint.",
+      "Sealed Record": "A record that has been sealed, expunged, or similarly excluded from the public record."
     },
     "provisions": [
       {
         "provision_number": "I",
         "title": "Prohibited Business Activities",
         "category": "prohibition",
-        "summary": "Defendants are permanently enjoined from failing to maintain reasonable procedures to assure maximum possible accuracy in Background Screening Reports and from failing to disclose all sources of information in a Consumer's File upon request.",
+        "summary": "Defendants are permanently enjoined from failing to maintain reasonable procedures to ensure maximum possible accuracy in Background Screening Reports and from failing to disclose sources of information in a Consumer's File upon consumer request.",
         "requirements": [
           {
-            "description": "Must not fail to maintain reasonable procedures to assure maximum possible accuracy of information in Background Screening Reports, including preventing multiple filings for the same Eviction Proceeding",
-            "quoted_text": "IT IS ORDERED that Defendants and their officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with the provision of Background Screening Reports are hereby permanently restrained and enjoined from: A. Failing to maintain reasonable procedures to assure maximum possible accuracy of the information concerning the individual about whom a Background Screening Report relates, including reasonable procedures designed to: 1. Prevent the inclusion of multiple filings for the same Eviction Proceeding;",
+            "description": "Must not fail to maintain reasonable procedures to assure maximum possible accuracy of information in Background Screening Reports, including procedures to prevent duplicate Eviction Proceeding filings, accurately reflect dispositions, correctly label data fields, and exclude Sealed Records",
+            "quoted_text": "A. Failing to maintain reasonable procedures to assure maximum possible accuracy of the information concerning the individual about whom a Background Screening Report relates, including reasonable procedures designed to: 1. Prevent the inclusion of multiple filings for the same Eviction Proceeding; 2. Accurately reflect dispositions of Eviction Proceedings; 3. Label data fields to describe accurately the contents of the data field; and 4. Ensure that Sealed Records are not included in Background Screening Reports;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 170,
+            "quote_end_line": 176
           },
           {
-            "description": "Must not fail to maintain reasonable procedures to accurately reflect dispositions of Eviction Proceedings",
-            "quoted_text": "Failing to maintain reasonable procedures to assure maximum possible accuracy of the information concerning the individual about whom a Background Screening Report relates, including reasonable procedures designed to: 2. Accurately reflect dispositions of Eviction Proceedings;",
+            "description": "Must not fail to clearly and accurately disclose to a consumer, upon request for their Consumer's File, all sources of information including vendors or third parties from which Defendants directly acquire criminal record or Eviction Proceeding Record information",
+            "quoted_text": "B. Failing to, upon a consumer’s request for such Consumer’s File, clearly and accurately disclose to the consumer all sources of all information in the Consumer’s File, including but not limited to any vendors or other third parties from which Defendants directly acquire criminal record or Eviction Proceeding Record information in the Consumer’s File; except that the sources of information acquired solely for use in preparing an Investigative Consumer Report and actually used for no other purpose need not be disclosed;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Must not fail to maintain reasonable procedures to label data fields to describe accurately the contents of the data field",
-            "quoted_text": "Failing to maintain reasonable procedures to assure maximum possible accuracy of the information concerning the individual about whom a Background Screening Report relates, including reasonable procedures designed to: 3. Label data fields to describe accurately the contents of the data field;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Must not fail to maintain reasonable procedures to ensure that Sealed Records are not included in Background Screening Reports",
-            "quoted_text": "Failing to maintain reasonable procedures to assure maximum possible accuracy of the information concerning the individual about whom a Background Screening Report relates, including reasonable procedures designed to: 4. Ensure that Sealed Records are not included in Background Screening Reports;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Must not fail to clearly and accurately disclose to consumers all sources of all information in the Consumer's File upon request",
-            "quoted_text": "B. Failing to, upon a consumer's request for such Consumer's File, clearly and accurately disclose to the consumer all sources of all information in the Consumer's File, including but not limited to any vendors or other third parties from which Defendants directly acquire criminal record or Eviction Proceeding Record information in the Consumer's File; except that the sources of information acquired solely for use in preparing an Investigative Consumer Report and actually used for no other purpose need not be disclosed;",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 181,
+            "quote_end_line": 186
           }
         ]
       },
@@ -118,35 +131,43 @@
         "provision_number": "II",
         "title": "Affirmative Requirements",
         "category": "affirmative_obligation",
-        "summary": "Defendants must develop and implement written procedures to prevent inclusion of inaccurate eviction records, maintain a dispute monitoring program, establish a compliance committee, and retain Frequency Reports.",
+        "summary": "Defendants must implement written procedures to prevent inclusion of inaccurate or improper records in Background Screening Reports, monitor dispute data, maintain a compliance committee, and retain Frequency Reports.",
         "requirements": [
           {
-            "description": "Develop, implement, and follow written procedures to prevent inclusion of sealed records, eviction records without final outcomes, multiple filings, and inaccurate monetary amounts in Background Screening Reports",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants must, in connection with the provision of Background Screening Reports: A. Develop, implement, and follow written procedures reasonably designed to prevent the inclusion in Background Screening Reports of any of the following: (1) any Sealed Record, (2) any Eviction Proceeding Record that does not have a final outcome, (3) multiple filings for any Eviction Proceeding, (4) any filing for an Eviction Proceeding other than the most recent filing evidencing the outcome or superseding post-judgment filing, such as satisfaction or release of a final judgment, or (5) any monetary amount associated with an Eviction Proceeding Record other than a final judgment amount or an amount reflecting full or partial satisfaction of such judgment, provided that Defendants must disclose to customers that any amount reported may include attorney or court fees or costs. Defendants also must monitor the effectiveness of the procedures, take corrective action to address identified issues, and retain records sufficient to demonstrate the implementation of this provision;",
+            "description": "Develop, implement, and follow written procedures to prevent inclusion of Sealed Records, Eviction Proceeding Records without final outcomes, duplicate filings, superseded filings, or non-final monetary amounts in Background Screening Reports; monitor effectiveness, take corrective action, and retain records",
+            "quoted_text": "A. Develop, implement, and follow written procedures reasonably designed to prevent the inclusion in Background Screening Reports of any of the following: (1) any Sealed Record, (2) any Eviction Proceeding Record that does not have a final outcome, (3) multiple filings for any Eviction Proceeding, (4) any filing for an Eviction Proceeding other than the most recent filing evidencing the outcome or superseding post-judgment filing, such as satisfaction or release of a final judgment, or (5) any monetary amount associated with an Eviction Proceeding Record other than a final judgment amount or an amount reflecting full or partial satisfaction of such judgment, provided that Defendants must disclose to customers that any amount reported may include attorney or court fees or costs. Defendants also must monitor the effectiveness of the procedures, take corrective action to address identified issues, and retain records sufficient to demonstrate the implementation of this provision;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 190,
+            "quote_end_line": 200
           },
           {
-            "description": "Maintain a program to regularly monitor consumer dispute data relating to criminal records and Eviction Proceeding Records and take corrective action",
-            "quoted_text": "B. Maintain a program to regularly monitor consumer dispute data relating to criminal records and Eviction Proceeding Records and to take corrective action internally or with public records providers, including but not limited to vendors or other third parties from which Defendants directly acquire criminal record or Eviction Proceeding Record information, that includes root cause analysis of aggregated issues, and retain records sufficient to demonstrate the program, the issues identified, and the corrective action taken;",
+            "description": "Maintain a program to regularly monitor consumer dispute data relating to criminal records and Eviction Proceeding Records, take corrective action including root cause analysis of aggregated issues, and retain records demonstrating the program, issues identified, and corrective actions taken",
+            "quoted_text": "B. Maintain a program to regularly monitor consumer dispute data relating to criminal records and Eviction Proceeding Records and to take corrective action internally or with public Page 8 of 24 Case No. 1:23-cv-02659-GPG Document 15 filed 10/18/23 USDC Colorado pg 9 of 24 records providers, including but not limited to vendors or other third parties from which Defendants directly acquire criminal record or Eviction Proceeding Record information, that includes root cause analysis of aggregated issues, and retain records sufficient to demonstrate the program, the issues identified, and the corrective action taken;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 201,
+            "quote_end_line": 210
           },
           {
-            "description": "Maintain a compliance committee that meets quarterly and reports to the Board of Directors",
-            "quoted_text": "C. Maintain a committee, comprised of individuals responsible for: (1) the execution of Defendants' compliance with the FCRA with respect to the provision of Background Screening Reports; and (2) overseeing Defendants' compliance with this Order and the programs required by this Section. The committee must: (1) meet at least quarterly, (2) retain records sufficient to demonstrate the work of the committee, including minutes and materials from each meeting, and (3) regularly report on its work and Defendants' compliance with the FCRA with respect to the provision of Background Screening Reports and this Order to the Board of Directors or a committee of the Board of Directors of the ultimate parent entity that controls Defendants (which as of the date of entry of this Order, is the publicly-traded company TransUnion);",
+            "description": "Maintain a compliance committee responsible for FCRA compliance and Order oversight that meets at least quarterly, retains records including meeting minutes, and regularly reports to the Board of Directors or a Board committee of the ultimate parent entity (TransUnion)",
+            "quoted_text": "C. Maintain a committee, comprised of individuals responsible for: (1) the execution of Defendants’ compliance with the FCRA with respect to the provision of Background Screening Reports; and (2) overseeing Defendants’ compliance with this Order and the programs required by this Section. The committee must: (1) meet at least quarterly, (2) retain records sufficient to demonstrate the work of the committee, including minutes and materials from each meeting, and (3) regularly report on its work and Defendants’ compliance with the FCRA with respect to the provision of Background Screening Reports and this Order to the Board of Directors or a committee of the Board of Directors of the ultimate parent entity that controls Defendants (which as of the date of entry of this Order, is the publicly-traded company TransUnion); and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 211,
+            "quote_end_line": 219
           },
           {
-            "description": "Retain all Frequency Reports created or received from Eviction Proceeding Record providers",
+            "description": "Retain all Frequency Reports created by any Defendant or received from Eviction Proceeding Record providers",
             "quoted_text": "D. Retain all Frequency Reports created by any Defendant, if any, and received from Eviction Proceeding Record providers.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 220,
+            "quote_end_line": 221
           }
         ]
       },
@@ -154,14 +175,16 @@
         "provision_number": "III",
         "title": "Consumer's File Disclosures",
         "category": "affirmative_obligation",
-        "summary": "TransUnion Rental Screening Solutions must provide consumers with all information in their Consumer's File upon request at no charge.",
+        "summary": "Defendant TransUnion Rental Screening Solutions, Inc. must provide consumers, upon request and at no charge, all information in their Consumer's File, including all information that might be provided to a customer or end user.",
         "requirements": [
           {
-            "description": "Provide consumers with all information in their Consumer's File upon request at no charge",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant TransUnion Rental Screening Solutions, Inc. must provide to any consumer, upon request and at no charge, all information in that Consumer's File at the time of the request, including but not limited to all information that Defendant TransUnion Rental Screening Solutions, Inc. might provide to a customer or end user.",
+            "description": "TransUnion Rental Screening Solutions, Inc. must provide to any consumer, upon request and at no charge, all information in that Consumer's File at the time of the request, including all information that might be provided to a customer or end user",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant TransUnion Rental Screening Solutions, Inc. must provide to any consumer, upon request and at no charge, all information in that Consumer’s File at the time of the request, including but not limited to all information that Defendant TransUnion Rental Screening Solutions, Inc. might provide to a customer or end user.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 223,
+            "quote_end_line": 226
           }
         ]
       },
@@ -169,14 +192,16 @@
         "provision_number": "IV",
         "title": "Adverse Action Template",
         "category": "affirmative_obligation",
-        "summary": "TransUnion Rental Screening Solutions must make available to customers a template for Adverse Action notices that complies with FCRA requirements and must make it publicly available on its websites.",
+        "summary": "Defendant TransUnion Rental Screening Solutions, Inc. must make available to customers a written Adverse Action notice template consistent with FCRA requirements, including prompts to attach the Consumer Report and state reasons for the Adverse Action, and must post it publicly on its websites.",
         "requirements": [
           {
-            "description": "Make available to customers a template for written Adverse Action notices consistent with FCRA requirements that prompts attachment of Consumer Report and principal reasons for the action",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendant TransUnion Rental Screening Solutions, Inc. must make available to its customers and other end users of its Consumer Reports provided for rental background screening purposes a template for written Adverse Action notices consistent with the requirements of 15 U.S.C § 1681m. In addition, the template must also prompt the customer or end user to attach a copy of the Consumer Report and state the principal reason(s) for the Adverse Action. Defendant TransUnion Rental Screening Solutions, Inc. must make the template publicly available, including on its websites in close proximity to information about its provision of Consumer Reports provided for rental background screening purposes.",
+            "description": "TransUnion Rental Screening Solutions, Inc. must make available to customers and end users a template for written Adverse Action notices consistent with 15 U.S.C. § 1681m, prompting attachment of the Consumer Report and statement of principal reason(s) for Adverse Action, and must make the template publicly available including on its websites in close proximity to information about its provision of Consumer Reports for rental background screening",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendant TransUnion Rental Screening Solutions, Page 9 of 24 Case No. 1:23-cv-02659-GPG Document 15 filed 10/18/23 USDC Colorado pg 10 of 24 Inc. must make available to its customers and other end users of its Consumer Reports provided for rental background screening purposes a template for written Adverse Action notices consistent with the requirements of 15 U.S.C § 1681m. In addition, the template must also prompt the customer or end user to attach a copy of the Consumer Report and state the principal reason(s) for the Adverse Action. Defendant TransUnion Rental Screening Solutions, Inc. must make the template publicly available, including on its websites in close proximity to information about its provision of Consumer Reports provided for rental background screening purposes.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 228,
+            "quote_end_line": 239
           }
         ]
       },
@@ -184,42 +209,52 @@
         "provision_number": "V",
         "title": "Order to Pay Redress",
         "category": "affirmative_obligation",
-        "summary": "Defendants must reserve $11 million for consumer redress, submit a Redress Plan to the Bureau for approval within 60 days, and implement the approved plan to compensate Affected Consumers.",
+        "summary": "Defendants must reserve $11,000,000 for consumer redress, submit a Bureau-approved Redress Plan within 60 days, compensate Affected Consumers on a pro rata basis, and remit any unused funds to the Bureau.",
         "requirements": [
           {
-            "description": "Reserve or deposit $11,000,000 into a segregated account for providing redress to Affected Consumers",
-            "quoted_text": "Within 10 days of entry of this Order, Defendants must reserve or deposit into a segregated deposit account Eleven Million Dollars ($11,000,000) for the purpose of providing redress to Affected Consumers as required by this Section.",
+            "description": "Within 10 days of entry of this Order, Defendants must reserve or deposit $11,000,000 into a segregated deposit account for the purpose of providing redress to Affected Consumers",
+            "quoted_text": "A. Within 10 days of entry of this Order, Defendants must reserve or deposit into a segregated deposit account Eleven Million Dollars ($11,000,000) for the purpose of providing redress to Affected Consumers as required by this Section.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 242,
+            "quote_end_line": 244
           },
           {
-            "description": "Submit a comprehensive written Redress Plan to the Bureau Enforcement Director for review and non-objection",
-            "quoted_text": "Within 60 days of entry of this Order, Defendants must submit to the Bureau Enforcement Director for review and non-objection a comprehensive written plan for providing redress consistent with this Order (\"Redress Plan\").",
+            "description": "Within 60 days of entry of this Order, Defendants must submit to the Bureau Enforcement Director a comprehensive written Redress Plan for review and non-objection; if directed to revise, Defendants must resubmit within 15 days; after non-objection, Defendants must implement the plan",
+            "quoted_text": "B. Within 60 days of entry of this Order, Defendants must submit to the Bureau Enforcement Director for review and non-objection a comprehensive written plan for providing redress consistent with this Order (“Redress Plan”). The Bureau Enforcement Director will have the discretion to make a determination of non-objection to the Redress Plan or direct the Defendants to revise it. Each time the Bureau Enforcement Director directs the Defendants to revise the Redress Plan, the Defendants must revise and resubmit the Redress Plan to the Bureau Enforcement Director within 15 days. After receiving notification that the Bureau Enforcement Director has made a determination of non-objection to the Redress Plan, the Defendants must implement and adhere to the steps, recommendations, deadlines, and timeframes outlined in the Redress Plan.",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 245,
+            "quote_end_line": 254
           },
           {
-            "description": "Revise and resubmit the Redress Plan within 15 days each time the Bureau Enforcement Director directs revision",
-            "quoted_text": "Each time the Bureau Enforcement Director directs the Defendants to revise the Redress Plan, the Defendants must revise and resubmit the Redress Plan to the Bureau Enforcement Director within 15 days.",
-            "deadline": "15 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "If redress provided is less than $11 million, pay the difference to the Bureau",
-            "quoted_text": "After completing the Redress Plan, if the amount of redress provided to Affected Consumers is less than Eleven Million Dollars ($11,000,000), within 30 days of the completion of the Redress Plan, Defendants must pay to the Bureau, by wire transfer to the Bureau or to the Bureau's agent, and according to the Bureau's wiring instructions, the difference between the amount of redress provided to Affected Consumers and Eleven Million Dollars ($11,000,000).",
-            "deadline": "30 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must not condition payment of redress on Affected Consumers waiving any right",
-            "quoted_text": "Defendants may not condition the payment of any redress to any Affected Consumer under this Order on that Affected Consumer waiving any right.",
+            "description": "The Redress Plan must specify methodology for identifying Affected Consumers and their number, require pro rata compensation by check, identify redress amounts, describe payment processes including unclaimed funds, specify methodology for identifying mailing addresses, provide for an explanatory Redress Notification Letter, prohibit inclusion of extraneous materials without Bureau written confirmation, require follow-up mailing if initial attempt fails, include an exemplar letter and envelope, describe timeframes and deadlines, state that Defendants will pay all administration costs, and describe all reporting to the Bureau and FTC",
+            "quoted_text": "C. The Redress Plan must: 1. Specify the methodology that Defendants are using to identify Affected Consumers and state the number of Affected Consumers; 2. Require Defendants to compensate by check each Affected Consumer on a pro rata basis; 3. Identify the amount of redress to be provided to each Affected Consumer; 4. Describe the processes for issuing, delivering, and tracking payments to all Affected Consumers, including the processes for handling any unclaimed funds; 5. Specify the methodology Defendants will use to identify the mailing address for each Affected Consumer, which must include reasonable efforts to identify current mailing addresses, including and in addition to the U.S. Postal Service National Change of Address database; 6. Provide that Defendants will send each Affected Consumer an explanatory letter that includes a statement that redress is being provided in accordance with the terms of this Order and states why the Affected Consumer is receiving the redress, as well as how the consumer can request a free copy of a Consumer Report for such consumer (“Redress Notification Letter”); 7. Provide that Defendants shall not include in any envelope containing a Redress Notification Letter any materials other than the Redress Notification Letter and a payment to the Affected Consumer, unless Defendants have written confirmation from the Bureau that the Bureau does not object to the inclusion of additional materials; Page 11 of 24 Case No. 1:23-cv-02659-GPG Document 15 filed 10/18/23 USDC Colorado pg 12 of 24 8. Provide that if an initial mailing attempt fails, Defendants shall conduct further research to identify the Affected Consumer’s current mailing address and make at least one further mailing attempt; 9. Provide an exemplar of the Redress Notification Letter and envelope; 10. Describe timeframes and deadlines for implementing the Redress Plan, including the period during which redress checks will remain valid and available to negotiate; 11. State that Defendants will pay all costs of administering redress required by this Order; and 12. Describe all reporting that Defendants will provide to the Bureau and FTC concerning the Defendants’ provision of redress.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 259,
+            "quote_end_line": 295
+          },
+          {
+            "description": "Within 30 days of completion of the Redress Plan, if redress paid to Affected Consumers is less than $11,000,000, Defendants must pay the difference to the Bureau by wire transfer",
+            "quoted_text": "D. After completing the Redress Plan, if the amount of redress provided to Affected Consumers is less than Eleven Million Dollars ($11,000,000), within 30 days of the completion of the Redress Plan, Defendants must pay to the Bureau, by wire transfer to the Bureau or to the Bureau’s agent, and according to the Bureau’s wiring instructions, the difference between the amount of redress provided to Affected Consumers and Eleven Million Dollars ($11,000,000).",
+            "deadline": "30 days after Redress Plan completion",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 296,
+            "quote_end_line": 300
+          },
+          {
+            "description": "Defendants may not condition the payment of any redress to any Affected Consumer on that consumer waiving any right",
+            "quoted_text": "F. Defendants may not condition the payment of any redress to any Affected Consumer under this Order on that Affected Consumer waiving any right.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 311,
+            "quote_end_line": 312
           }
         ]
       },
@@ -227,28 +262,34 @@
         "provision_number": "VI",
         "title": "Order to Pay Civil Money Penalty",
         "category": "affirmative_obligation",
-        "summary": "Defendants must pay a $4 million civil money penalty to the Bureau within 10 days of entry of this Order.",
+        "summary": "Defendants must pay a $4,000,000 civil money penalty to the Bureau within 10 days of entry of this Order, and may not claim tax benefits or seek reimbursement for the penalty.",
         "requirements": [
           {
-            "description": "Pay a civil money penalty of $4,000,000 to the Bureau by wire transfer",
-            "quoted_text": "Within 10 days of entry of this Order, Defendants must pay the civil money penalty by wire transfer to the Bureau or to the Bureau's agent in compliance with the Bureau's wiring instructions.",
+            "description": "Defendants must pay a civil money penalty of $4,000,000 to the Bureau under Section 1055(c) of the CFPA",
+            "quoted_text": "A. Under Section 1055(c) of the CFPA, 12 U.S.C. § 5565(c), by reason of the violations of law alleged in the Complaint, Defendants must pay a civil money penalty of Four Million Dollars ($4,000,000) to the Bureau.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 315,
+            "quote_end_line": 317
+          },
+          {
+            "description": "Within 10 days of entry of this Order, Defendants must pay the civil money penalty by wire transfer to the Bureau or its agent in compliance with the Bureau's wiring instructions",
+            "quoted_text": "B. Within 10 days of entry of this Order, Defendants must pay the civil money penalty by wire transfer to the Bureau or to the Bureau’s agent in compliance with the Bureau’s wiring instructions.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 318,
+            "quote_end_line": 320
           },
           {
-            "description": "Must not claim tax deduction or benefit for civil money penalty paid",
-            "quoted_text": "Defendants must treat the civil money penalty paid under this Order as a penalty paid to the government for all purposes. Regardless of how the Bureau ultimately uses those funds, Defendants may not: 1. Claim, assert, or apply for a tax deduction, tax credit, or any other tax benefit for any civil money penalty paid under this Order;",
+            "description": "Defendants must treat the civil money penalty as a penalty paid to the government for all purposes and may not claim any tax deduction, tax credit, or other tax benefit, nor seek or accept reimbursement or indemnification from any source including insurance for the penalty",
+            "quoted_text": "D. Defendants must treat the civil money penalty paid under this Order as a penalty paid to the government for all purposes. Regardless of how the Bureau ultimately uses those funds, Defendants may not: 1. Claim, assert, or apply for a tax deduction, tax credit, or any other tax benefit for any civil money penalty paid under this Order; or 2. Seek or accept, directly or indirectly, reimbursement or indemnification from any source, including but not limited to payment made under any insurance policy, with regard to any civil money penalty paid under this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Must not seek or accept reimbursement or indemnification for civil money penalty paid",
-            "quoted_text": "Defendants may not: 2. Seek or accept, directly or indirectly, reimbursement or indemnification from any source, including but not limited to payment made under any insurance policy, with regard to any civil money penalty paid under this Order.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 323,
+            "quote_end_line": 330
           }
         ]
       },
@@ -256,21 +297,61 @@
         "provision_number": "VII",
         "title": "Additional Monetary Provisions",
         "category": "affirmative_obligation",
-        "summary": "Defendants must notify the Bureau within 30 days of any Related Consumer Action settlement and pay offset amounts to the U.S. Treasury if applicable.",
+        "summary": "Covers interest accrual on default, relinquishment of funds, collateral estoppel effect of the Complaint's facts, Taxpayer Identification Number use, and notification requirements upon Related Consumer Actions.",
         "requirements": [
           {
-            "description": "Notify the Bureau within 30 days of entry of final judgment, order, or settlement in a Related Consumer Action",
-            "quoted_text": "Within 30 days of the entry of a final judgment, order, or settlement in a Related Consumer Action, the affected Defendant must notify the Bureau of the final judgment, order, or settlement in writing. That notification must indicate the amount of redress, if any, that such Defendant paid or is required to pay to consumers and describe the consumers or classes of consumers to whom that redress has been or will be paid.",
-            "deadline": "30 days",
+            "description": "In the event of default on payment obligations, interest computed under 28 U.S.C. § 1961 will accrue on outstanding amounts from the date of default to the date of payment",
+            "quoted_text": "A. In the event of any default on Defendants’ obligations to make payment under this Order, interest, computed under 28 U.S.C. § 1961, as amended, will accrue on any outstanding amounts not paid from the date of default to the date of payment, and will immediately become due and payable.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 337,
+            "quote_end_line": 340
           },
           {
-            "description": "If a Related Consumer Action results in offset or reduction based on this Order's civil money penalty, pay the offset amount to the U.S. Treasury",
-            "quoted_text": "If the court in any Related Consumer Action offsets or otherwise reduces the amount of compensatory monetary remedies imposed against a Defendant based on the civil money penalty paid in this action or based on any payment that the Bureau makes from the Civil Penalty Fund, that Defendant must, within 30 days after entry of a final order granting such offset or reduction, notify the Bureau and pay the amount of the offset or reduction to the U.S. Treasury.",
+            "description": "Defendants relinquish all dominion, control, and title to funds paid under this Order to the fullest extent permitted by law and no part of the funds may be returned to Defendants",
+            "quoted_text": "B. Defendants relinquish all dominion, control, and title to the funds paid under this Order to the fullest extent permitted by law and no part of the funds may be returned to Defendants.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 341,
+            "quote_end_line": 342
+          },
+          {
+            "description": "The facts alleged in the Complaint will be taken as true and given collateral estoppel effect in any subsequent proceeding based on entry of this Order or civil litigation by or on behalf of the Bureau or FTC, including nondischargeability complaints in bankruptcy",
+            "quoted_text": "C. The facts alleged in the Complaint will be taken as true and be given collateral estoppel effect, without further proof, in any proceeding based on the entry of this Order, or in any subsequent civil litigation by or on behalf of the Bureau or the FTC, including in a proceeding to enforce the Bureau’s rights to any payment or monetary judgment under this Order, such as a nondischargeability complaint in any bankruptcy case.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 343,
+            "quote_end_line": 347
+          },
+          {
+            "description": "The facts alleged in the Complaint establish all elements necessary to sustain a Bureau action under Section 523(a)(2)(A) of the Bankruptcy Code, and this Order will have collateral estoppel effect against each Defendant even in their capacity as debtor-in-possession",
+            "quoted_text": "D. The facts alleged in the Complaint establish all elements necessary to sustain an action by the Bureau under Section 523(a)(2)(A) of the Bankruptcy Code, 11 U.S.C. § 523(a)(2)(A), and for such purposes this Order will have collateral estoppel effect against each Defendant, even in such Defendant’s capacity as debtor-in-possession.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 348,
+            "quote_end_line": 351
+          },
+          {
+            "description": "Defendants acknowledge that their Taxpayer Identification Numbers previously submitted to the FTC and Bureau may be used for collecting and reporting on any delinquent amounts under this Order pursuant to 31 U.S.C. § 7701",
+            "quoted_text": "E. Defendants acknowledge that their Taxpayer Identification Numbers (Social Security Numbers or Employer Identification Numbers), which Defendants previously submitted to the FTC and Bureau, may be used for collecting and reporting on any delinquent amount arising out of this Order, in accordance with 31 U.S.C. § 7701.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 352,
+            "quote_end_line": 355
+          },
+          {
+            "description": "Within 30 days of entry of a final judgment, order, or settlement in a Related Consumer Action, the affected Defendant must notify the Bureau in writing of the final judgment, order, or settlement including the amount of redress paid and description of affected consumers; Defendants may not seek offset or reduction of monetary remedies in Related Consumer Actions based on the civil money penalty paid in this action; if a court grants such offset or reduction, the Defendant must notify the Bureau and pay the offset amount to the U.S. Treasury within 30 days",
+            "quoted_text": "F. Within 30 days of the entry of a final judgment, order, or settlement in a Related Consumer Action, the affected Defendant must notify the Bureau of the final judgment, order, or settlement in writing. That notification must indicate the amount of redress, if any, that such Defendant paid or is required to pay to consumers and describe the consumers or classes of consumers to whom that redress has been or will be paid. To preserve the deterrent effect of the civil money penalty in any Related Consumer Action, Defendants may not argue that any Defendant is entitled to, nor may any Defendant benefit by, any offset or reduction of any monetary remedies imposed in the Related Consumer Action because of the civil money penalty paid in this action or because of any payment that the Bureau makes from the Civil Penalty Fund. If the court in any Related Consumer Action offsets or otherwise reduces the amount of compensatory monetary remedies imposed against a Defendant based on the civil money penalty paid in this action or based on any payment that the Bureau makes from the Civil Penalty Fund, that Defendant must, within 30 days after entry of a final order granting such offset or reduction, notify the Bureau and pay the amount of the offset or reduction to the U.S. Treasury. Such a payment will not be considered an additional civil money penalty and will not change the amount of the civil money penalty imposed in this action.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 360,
+            "quote_end_line": 375
           }
         ]
       },
@@ -278,14 +359,16 @@
         "provision_number": "VIII",
         "title": "Cooperation",
         "category": "affirmative_obligation",
-        "summary": "Defendants must cooperate fully with the Bureau to help determine the identity, location, and injury of Affected Consumers, providing requested information within 14 days.",
+        "summary": "Defendants must fully cooperate with the Bureau to identify Affected Consumers and the amount of their injury, providing requested information within 14 days of a written request.",
         "requirements": [
           {
-            "description": "Cooperate fully to help the Bureau determine identity, location, and injury of Affected Consumers, providing information within 14 days of written request",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants must cooperate fully to help the Bureau determine the identity and location of, and the amount of injury sustained by, each Affected Consumer. Defendants must provide such information in their or their agents' possession or control within 14 days of receiving a written request from the Bureau.",
+            "description": "Defendants must cooperate fully to help the Bureau determine the identity, location, and amount of injury of each Affected Consumer, and must provide such information within 14 days of receiving a written request from the Bureau",
+            "quoted_text": "IT IS FURTHER ORDERED that Defendants must cooperate fully to help the Bureau determine the identity and location of, and the amount of injury sustained by, each Affected Consumer. Defendants must provide such information in their or their agents’ possession or control within 14 days of receiving a written request from the Bureau.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 377,
+            "quote_end_line": 380
           }
         ]
       },
@@ -293,28 +376,34 @@
         "provision_number": "IX",
         "title": "Order Acknowledgments",
         "category": "acknowledgment",
-        "summary": "Defendants must submit acknowledgments of receipt of this Order, deliver copies to relevant personnel and service providers for 5 years, and obtain signed acknowledgments from recipients.",
+        "summary": "Defendants must submit sworn acknowledgments of receipt of this Order, deliver copies to current and future relevant personnel, and obtain signed acknowledgments from recipients.",
         "requirements": [
           {
-            "description": "Each Defendant must submit acknowledgment of receipt of this Order sworn under penalty of perjury",
-            "quoted_text": "Each Defendant, within 7 days of entry of this Order, must submit to the FTC and Bureau an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Each Defendant must submit to the FTC and Bureau a sworn acknowledgment of receipt of this Order within 7 days of entry",
+            "quoted_text": "A. Each Defendant, within 7 days of entry of this Order, must submit to the FTC and Bureau an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 388,
+            "quote_end_line": 389
           },
           {
-            "description": "For 5 years, deliver a copy of this Order to all principals, officers, directors, managers, business leaders, senior managers, and service providers with relevant responsibilities",
-            "quoted_text": "For 5 years after entry of this Order, each Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all business leaders and senior managers who have responsibilities related to the subject matter of the Order; (3) any service providers who have responsibilities related to the subject matter of the Order; and (4) any business entity resulting from any change in structure as set forth in the Section titled \"Compliance Reporting.\" Delivery must occur within 7 days of entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "7 days",
+            "description": "For 5 years after entry, each Defendant must deliver a copy of this Order to all principals, officers, directors, LLC managers and members, business leaders and senior managers with relevant responsibilities, service providers with relevant responsibilities, and any entity resulting from a change in structure; delivery must occur within 7 days for current personnel and before others assume their responsibilities",
+            "quoted_text": "B. For 5 years after entry of this Order, each Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all business leaders and senior managers who have responsibilities related to the subject matter of the Order; (3) any service providers who have responsibilities related to the subject matter of the Order; and (4) any business entity resulting from any change in structure as set forth in the Section titled “Compliance Reporting.” Delivery must occur within 7 days of entry of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "7 days for current personnel; before assuming responsibilities for others",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 390,
+            "quote_end_line": 396
           },
           {
-            "description": "Obtain signed and dated acknowledgment of receipt from each individual or entity that received a copy of this Order",
-            "quoted_text": "From each individual or entity to which a Defendant delivered a copy of this Order, that Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "From each individual or entity to which a Defendant delivered a copy of this Order, that Defendant must obtain a signed and dated acknowledgment of receipt within 30 days",
+            "quoted_text": "C. From each individual or entity to which a Defendant delivered a copy of this Order, that Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 397,
+            "quote_end_line": 399
           }
         ]
       },
@@ -322,56 +411,97 @@
         "provision_number": "X",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Defendants must make timely submissions to the FTC and Bureau, including initial contact information within 7 days, a list of Order recipients within 90 days, annual compliance reports, change notifications, bankruptcy notices, and quarterly payment reports.",
+        "summary": "Defendants must make timely submissions to the FTC and Bureau, including initial contact and business information within 7 days, a list of Order recipients at 90 days, an annual compliance report, ongoing notices of structural or operational changes for 5 years, bankruptcy filings within 14 days, quarterly redress payment reports, and sworn declarations for all submissions.",
         "requirements": [
           {
-            "description": "Trans Union LLC must identify designated points of contact, all businesses involved in providing legal or compliance support to TransUnion Rental Screening Solutions, and describe the support provided",
-            "quoted_text": "Within 7 days of the entry of this Order: 1. Defendant Trans Union LLC must, sworn under penalty of perjury: (1) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Bureau or FTC may use to communicate with that Defendant; (2) identify all of Defendant Trans Union LLC's businesses involved in providing legal or compliance support to Defendant TransUnion Rental Screening Solutions, Inc. by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; and (3) describe the legal or compliance support provided to Defendant TransUnion Rental Screening Solutions, Inc. and the involvement of any other Defendant.",
+            "description": "Within 7 days of entry, Trans Union LLC must submit sworn information identifying its primary contact information, all businesses providing legal or compliance support to TransUnion Rental Screening Solutions, Inc., and a description of that support",
+            "quoted_text": "A. Within 7 days of the entry of this Order: 1. Defendant Trans Union LLC must, sworn under penalty of perjury: (1) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Bureau or FTC may use Page 16 of 24 Case No. 1:23-cv-02659-GPG Document 15 filed 10/18/23 USDC Colorado pg 17 of 24 to communicate with that Defendant; (2) identify all of Defendant Trans Union LLC’s businesses involved in providing legal or compliance support to Defendant TransUnion Rental Screening Solutions, Inc. by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; and (3) describe the legal or compliance support provided to Defendant TransUnion Rental Screening Solutions, Inc. and the involvement of any other Defendant.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 403,
+            "quote_end_line": 416
           },
           {
-            "description": "TransUnion Rental Screening Solutions must identify designated points of contact, all businesses, and describe activities of each business",
-            "quoted_text": "Within 7 days of the entry of this Order: 2. Defendant TransUnion Rental Screening Solutions, Inc. must, sworn under penalty of perjury: (1) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Bureau or FTC may use to communicate with that Defendant; (2) identify all Defendant's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; and (3) describe the activities of each such business, including the products and services offered, and the involvement of any other Defendant.",
+            "description": "Within 7 days of entry, TransUnion Rental Screening Solutions, Inc. must submit sworn information identifying its primary contact information, all its businesses by name and contact details, and a description of each business's activities and products and services",
+            "quoted_text": "2. Defendant TransUnion Rental Screening Solutions, Inc. must, sworn under penalty of perjury: (1) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Bureau or FTC may use to communicate with that Defendant; (2) identify all Defendant’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; and (3) describe the activities of each such business, including the products and services offered, and the involvement of any other Defendant.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 417,
+            "quote_end_line": 424
           },
           {
-            "description": "Submit a list of all persons and their titles to whom this Order has been delivered",
-            "quoted_text": "Ninety days after entry of this Order, each Defendant must submit to the FTC and Bureau a list of all persons and their titles to whom this Order has been delivered pursuant to the Section of this Order titled \"Order Acknowledgements.\"",
+            "description": "Ninety days after entry, each Defendant must submit to the FTC and Bureau a list of all persons and their titles to whom this Order has been delivered pursuant to the Order Acknowledgements section",
+            "quoted_text": "B. Ninety days after entry of this Order, each Defendant must submit to the FTC and Bureau a list of all persons and their titles to whom this Order has been delivered pursuant to the Section of this Order titled “Order Acknowledgements.”",
             "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 425,
+            "quote_end_line": 427
           },
           {
-            "description": "Submit a compliance report describing compliance with each paragraph of this Order and provide copies of Order Acknowledgments",
-            "quoted_text": "One year after entry of this Order, each Defendant must submit a compliance report to the FTC and Bureau, sworn under penalty of perjury, in which, at a minimum, each Defendant must (1) describe in detail whether and how that Defendant is in compliance with each paragraph of this Order; and (2) provide a copy of each Order Acknowledgment obtained pursuant to the Section of this Order titled \"Order Acknowledgements,\" unless previously submitted to the FTC and Bureau.",
+            "description": "One year after entry, each Defendant must submit a sworn compliance report describing in detail whether and how it is in compliance with each paragraph of this Order and providing copies of Order Acknowledgments obtained, unless previously submitted",
+            "quoted_text": "C. One year after entry of this Order, each Defendant must submit a compliance report to the FTC and Bureau, sworn under penalty of perjury, in which, at a minimum, each Defendant must (1) describe in detail whether and how that Defendant is in compliance with each paragraph of this Order; and (2) provide a copy of each Order Acknowledgment obtained pursuant to the Page 17 of 24 Case No. 1:23-cv-02659-GPG Document 15 filed 10/18/23 USDC Colorado pg 18 of 24 Section of this Order titled “Order Acknowledgements,” unless previously submitted to the FTC and Bureau.",
             "deadline": "1 year",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 428,
+            "quote_end_line": 437
           },
           {
-            "description": "For 5 years, submit compliance notice at least 30 days before or within 14 days after learning of changes to designated points of contact, structure, types of reports offered, or provision of new Consumer Reports with eviction or criminal record information",
-            "quoted_text": "For 5 years after entry of this Order, each Defendant must submit a compliance notice to the FTC and Bureau, sworn under penalty of perjury, at least 30 days before, or within 14 days after learning of the change, whichever is sooner, of any change to the following: (1) any designated point of contact; (2) the structure of any Defendant or any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order; (3) the type or format of Background Screening Reports that Defendant offers; (4) if that Defendant begins providing Consumer Reports to customers in the United States or concerning consumers or transactions in the United States that include an Eviction Proceeding Record or criminal record information but are not Background Screening Reports; or (5) if any entity that Defendant has a majority ownership interest in or controls directly or indirectly that is not covered by the Sections of this Order titled \"Prohibited Business Activities\" or \"Affirmative Requirements\" begins providing Consumer Reports to customers in the United States or concerning consumers or transactions in the United States that include any Eviction Proceeding Record or criminal record information.",
-            "deadline": "30 days before or 14 days after",
+            "description": "For 5 years after entry, each Defendant must submit a sworn compliance notice to the FTC and Bureau at least 30 days before, or within 14 days after learning of, any change to: designated contact points, Defendant's structure or ownership that may affect compliance, type or format of Background Screening Reports offered, commencement of providing Consumer Reports with Eviction Proceeding Records or criminal record information that are not Background Screening Reports, or majority-owned subsidiaries or controlled entities beginning to provide such Consumer Reports",
+            "quoted_text": "D. For 5 years after entry of this Order, each Defendant must submit a compliance notice to the FTC and Bureau, sworn under penalty of perjury, at least 30 days before, or within 14 days after learning of the change, whichever is sooner, of any change to the following: (1) any designated point of contact; (2) the structure of any Defendant or any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order; (3) the type or format of Background Screening Reports that Defendant offers; (4) if that Defendant begins providing Consumer Reports to customers in the United States or concerning consumers or transactions in the United States that include an Eviction Proceeding Record or criminal record information but are not Background Screening Reports; or (5) if any entity that Defendant has a majority ownership interest in or controls directly or indirectly that is not covered by the Sections of this Order titled “Prohibited Business Activities” or “Affirmative Requirements” begins providing Consumer Reports to customers in the United States or concerning consumers or transactions in the United States that include any Eviction Proceeding Record or criminal record information.",
+            "deadline": "30 days before or 14 days after learning of change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 438,
+            "quote_end_line": 453
           },
           {
-            "description": "Submit notice of filing of any bankruptcy petition, insolvency proceeding, or similar proceeding",
-            "quoted_text": "Each Defendant must submit to the FTC and Bureau notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Defendant within 14 days of its filing.",
+            "description": "Each Defendant must submit to the FTC and Bureau notice of any bankruptcy petition, insolvency proceeding, or similar proceeding filed by or against that Defendant within 14 days of its filing",
+            "quoted_text": "E. Each Defendant must submit to the FTC and Bureau notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Defendant within 14 days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 454,
+            "quote_end_line": 456
           },
           {
-            "description": "Submit quarterly reports on all payments made pursuant to this Order, including number of and dollar amounts for Affected Customers, checks mailed, and checks negotiated",
-            "quoted_text": "Defendants must submit to the FTC and Bureau reports under penalty of perjury on all payments made pursuant to this Order. Defendants must submit a report quarterly and at the conclusion of redress and any disgorgement summarizing their payment compliance, including stating the total number of, and dollar amounts for, Affected Customers, checks mailed, and checks negotiated.",
+            "description": "Defendants must submit sworn reports on all payments made pursuant to this Order quarterly and at the conclusion of redress and any disgorgement, summarizing payment compliance including total number and dollar amounts for Affected Customers, checks mailed, and checks negotiated",
+            "quoted_text": "F. Defendants must submit to the FTC and Bureau reports under penalty of perjury on all payments made pursuant to this Order. Defendants must submit a report quarterly and at the conclusion of redress and any disgorgement summarizing their payment compliance, including stating the total number of, and dollar amounts for, Affected Customers, checks mailed, and checks negotiated.",
+            "deadline": "Quarterly and at conclusion of redress",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 461,
+            "quote_end_line": 465
+          },
+          {
+            "description": "All submissions required to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, concluding with the prescribed declaration language",
+            "quoted_text": "G. Any submission to the FTC or Bureau required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 466,
+            "quote_end_line": 470
+          },
+          {
+            "description": "Unless otherwise directed, all submissions to the FTC must be emailed to DEbrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, Bureau of Consumer Protection, FTC, 600 Pennsylvania Avenue NW, Washington, DC 20580, with subject line beginning: FTC & CFPB v. TransUnion 1823204",
+            "quoted_text": "H. Unless otherwise directed by an FTC representative in writing, all submissions to the FTC pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: FTC & CFPB v. TransUnion 1823204.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 471,
+            "quote_end_line": 475
+          },
+          {
+            "description": "Unless otherwise directed, all submissions to the Bureau must be emailed to Enforcement_Compliance@cfpb.gov with the subject line 'FTC and CFPB v. TransUnion Rental Screening Solutions, Inc. and Trans Union LLC, Case No. 23-cv-02659'",
+            "quoted_text": "I. Unless otherwise directed by a Bureau representative in writing, all submissions to the Bureau pursuant to this Order must be emailed to Enforcement_Compliance@cfpb.gov, with the subject line, “FTC and CFPB v. TransUnion Rental Screening Solutions, Inc. and Trans Union LLC, Case No. 23-cv-02659.”",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 476,
+            "quote_end_line": 479
           }
         ]
       },
@@ -379,42 +509,52 @@
         "provision_number": "XI",
         "title": "Recordkeeping Provisions",
         "category": "recordkeeping",
-        "summary": "Defendants must create and retain for 5 years certain records including accounting records, personnel records, complaints, training materials, and all records demonstrating compliance with this Order.",
+        "summary": "Defendants must create and retain for 5 years specified records relating to Background Screening Reports, including accounting records, personnel records, complaints, training materials, and all records necessary to demonstrate compliance.",
         "requirements": [
           {
-            "description": "Create for 5 years and retain for 5 years accounting records showing revenues from all products or services sold",
-            "quoted_text": "IT IS FURTHER ORDERED that Defendants must create certain records for 5 years after entry of this Order and retain each such record for 5 years. Specifically, Defendants, in connection with the provision of Background Screening Reports, must create and retain the following records: A. Accounting records showing the revenues from all products or services sold;",
+            "description": "Defendants must create and retain for 5 years accounting records showing revenues from all products or services sold",
+            "quoted_text": "A. Accounting records showing the revenues from all products or services sold;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 489,
+            "quote_end_line": 489
           },
           {
-            "description": "Create for 5 years and retain for 5 years personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination",
-            "quoted_text": "Defendants must create certain records for 5 years after entry of this Order and retain each such record for 5 years. Specifically, Defendants, in connection with the provision of Background Screening Reports, must create and retain the following records: B. Personnel records showing, for each person providing services, whether as an employee or otherwise: name, addresses, and telephone numbers; job title or position; dates of service; and, if applicable, the reason for termination;",
+            "description": "Defendants must create and retain for 5 years personnel records showing, for each person providing services: name, addresses, telephone numbers, job title or position, dates of service, and if applicable, reason for termination",
+            "quoted_text": "B. Personnel records showing, for each person providing services, whether as an employee or otherwise: name, addresses, and telephone numbers; job title or position; dates of service; and, if applicable, the reason for termination;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 490,
+            "quote_end_line": 492
           },
           {
-            "description": "Create for 5 years and retain for 5 years all complaints concerning the subject matter of this Order and any responses",
-            "quoted_text": "Defendants must create certain records for 5 years after entry of this Order and retain each such record for 5 years. Specifically, Defendants, in connection with the provision of Background Screening Reports, must create and retain the following records: C. Complaints concerning the subject matter of this Order, whether received directly or indirectly, such as through a third party, and any response;",
+            "description": "Defendants must create and retain for 5 years all complaints concerning the subject matter of this Order, whether received directly or indirectly through a third party, and any response",
+            "quoted_text": "C. Complaints concerning the subject matter of this Order, whether received directly or indirectly, such as through a third party, and any response;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 493,
+            "quote_end_line": 494
           },
           {
-            "description": "Create for 5 years and retain for 5 years all employee training materials concerning the subject matter of this Order",
-            "quoted_text": "Defendants must create certain records for 5 years after entry of this Order and retain each such record for 5 years. Specifically, Defendants, in connection with the provision of Background Screening Reports, must create and retain the following records: D. All employee training materials concerning the subject matter of this Order;",
+            "description": "Defendants must create and retain for 5 years all employee training materials concerning the subject matter of this Order",
+            "quoted_text": "D. All employee training materials concerning the subject matter of this Order; and",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 495,
+            "quote_end_line": 495
           },
           {
-            "description": "Create for 5 years and retain for 5 years all records necessary to demonstrate full compliance with each provision of this Order",
-            "quoted_text": "Defendants must create certain records for 5 years after entry of this Order and retain each such record for 5 years. Specifically, Defendants, in connection with the provision of Background Screening Reports, must create and retain the following records: E. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the FTC or Bureau.",
+            "description": "Defendants must create and retain for 5 years all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the FTC or Bureau",
+            "quoted_text": "E. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the FTC or Bureau.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 496,
+            "quote_end_line": 497
           }
         ]
       },
@@ -422,21 +562,43 @@
         "provision_number": "XII",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The FTC and Bureau may request additional compliance reports, sworn testimony, or documents from Defendants within 14 days; communicate directly with Defendants; and interview employees or affiliated persons.",
+        "summary": "The FTC and Bureau have the right to monitor Defendants' compliance by requesting additional reports, communicating directly with Defendants, interviewing employees, and using compulsory legal process.",
         "requirements": [
           {
-            "description": "Within 14 days of written request from FTC or Bureau, submit additional compliance reports or other requested information under penalty of perjury, provide sworn testimony, or produce documents",
-            "quoted_text": "Within 14 days of receipt of a written request from the FTC or Bureau, Defendants must submit additional compliance reports or other requested information, which must be made under penalty of perjury; provide sworn testimony; or produce documents.",
+            "description": "Within 14 days of receipt of a written request from the FTC or Bureau, Defendants must submit additional compliance reports or other requested information under penalty of perjury, provide sworn testimony, or produce documents",
+            "quoted_text": "A. Within 14 days of receipt of a written request from the FTC or Bureau, Defendants must submit additional compliance reports or other requested information, which must be made under penalty of perjury; provide sworn testimony; or produce documents.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 501,
+            "quote_end_line": 503
           },
           {
-            "description": "Permit FTC or Bureau representatives to interview any employee or affiliated person who has agreed to such an interview regarding this matter, related conduct, or compliance with the Order",
-            "quoted_text": "Defendants must permit FTC or Bureau representatives to interview any employee or other person affiliated with Defendants who has agreed to such an interview regarding: (a) this matter; (b) anything related to or associated with the conduct described in the Complaint; or (c)compliance with the Order. The person interviewed may have counsel present.",
+            "description": "For purposes of compliance monitoring, the FTC or Bureau may communicate directly with Defendants unless Defendants retain counsel related to these communications",
+            "quoted_text": "B. For purposes of this Section, the FTC or Bureau may communicate directly with Defendants, unless Defendants retain counsel related to these communications.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 504,
+            "quote_end_line": 505
+          },
+          {
+            "description": "Defendants must permit FTC or Bureau representatives to interview any employee or other affiliated person who has agreed to such an interview regarding the matter, conduct described in the Complaint, or compliance with the Order; the person may have counsel present",
+            "quoted_text": "C. Defendants must permit FTC or Bureau representatives to interview any employee or other person affiliated with Defendants who has agreed to such an interview regarding: (a) this Page 20 of 24 Case No. 1:23-cv-02659-GPG Document 15 filed 10/18/23 USDC Colorado pg 21 of 24 matter; (b) anything related to or associated with the conduct described in the Complaint; or (c)compliance with the Order. The person interviewed may have counsel present.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 506,
+            "quote_end_line": 513
+          },
+          {
+            "description": "Nothing in this Order limits the FTC's or Bureau's lawful use of civil investigative demands under 15 U.S.C. § 57b-1 or 12 C.F.R. § 1080.6 or other compulsory process",
+            "quoted_text": "D. Nothing in this Order will limit the FTC’s or Bureau’s lawful use of civil investigative demands under 15 U.S.C. § 57b-1 or 12 C.F.R. § 1080.6 or other compulsory process.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 514,
+            "quote_end_line": 515
           }
         ]
       },
@@ -444,21 +606,23 @@
         "provision_number": "XIII",
         "title": "Retention of Jurisdiction",
         "category": "duration",
-        "summary": "The Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
+        "summary": "The Court retains jurisdiction over this matter for purposes of construction, modification, and enforcement of the Order.",
         "requirements": [
           {
-            "description": "Court retains jurisdiction for construction, modification, and enforcement of this Order",
+            "description": "This Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order",
             "quoted_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 517,
+            "quote_end_line": 518
           }
         ]
       }
     ],
     "duration": {
-      "duration_years": 5,
-      "termination_text": "For 5 years after entry of this Order, each Defendant must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all business leaders and senior managers who have responsibilities related to the subject matter of the Order; (3) any service providers who have responsibilities related to the subject matter of the Order; and (4) any business entity resulting from any change in structure as set forth in the Section titled \"Compliance Reporting.\" ... For 5 years after entry of this Order, each Defendant must submit a compliance notice to the FTC and Bureau, sworn under penalty of perjury, at least 30 days before, or within 14 days after learning of the change, whichever is sooner... IT IS FURTHER ORDERED that Defendants must create certain records for 5 years after entry of this Order and retain each such record for 5 years."
+      "duration_years": null,
+      "termination_text": "IT IS FURTHER ORDERED that this Court retains jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order."
     }
   },
   "metadata": {
@@ -468,11 +632,37 @@
     },
     "extraction_stats": {
       "complaint_counts": 2,
-      "complaint_representations": 3,
+      "complaint_representations": 5,
       "order_provisions": 13,
       "order_definitions": 14,
-      "order_requirements": 40
+      "order_requirements": 46,
+      "provisions_per_section": {
+        "I": 2,
+        "II": 4,
+        "III": 1,
+        "IV": 1,
+        "V": 5,
+        "VI": 3,
+        "VII": 6,
+        "VIII": 1,
+        "IX": 3,
+        "X": 10,
+        "XI": 5,
+        "XII": 4,
+        "XIII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 3
+      },
+      "verification_details": {
+        "complaint_verified": 5,
+        "complaint_total": 5,
+        "order_verified": 46,
+        "order_total": 46
+      }
     },
-    "processing_time_seconds": 222.6
+    "processing_time_seconds": 230.6
   }
 }

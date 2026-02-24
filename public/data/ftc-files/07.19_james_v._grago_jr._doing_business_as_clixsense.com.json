@@ -6,7 +6,7 @@
       "incorporation_state": "",
       "entity_type": "sole proprietorship",
       "address": "Hampstead, North Carolina",
-      "business_description": "ClixSense operates an online platform since 2010 where users earn money by viewing advertisements, performing online tasks, and completing online surveys. The company generated revenues of $6.7 million in 2015 and $9.1 million in 2016, and stored personal information for approximately 6.6 million consumers."
+      "business_description": "ClixSense is an online platform that generates revenue by allowing individual consumers to earn money from viewing advertisements, performing online tasks, and completing online surveys. The platform collected and stored personal information including names, addresses, dates of birth, gender, email addresses, and Social Security numbers from approximately 6.6 million consumers."
     },
     "commissioners": [
       "Joseph J. Simons, Chairman",
@@ -19,40 +19,44 @@
       "month": 7,
       "year": 2019
     },
-    "legal_authority": "Section 5 of the Federal Trade Commission Act",
+    "legal_authority": "Federal Trade Commission Act",
     "violation_type": "both",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/172-3003-james-v-grago-jr-doing-business-clixsensecom-matter"
   },
   "complaint": {
-    "factual_background": "ClixSense.com, operated by James V. Grago, Jr., collected personal information from approximately 6.6 million consumers who earned money by viewing advertisements and completing online tasks. Despite promising to use the latest security and encryption techniques, the company stored all personal information in clear text with no encryption and failed to implement basic security measures. In February 2016, after downloading a potentially harmful browser extension without proper precautions, hackers breached the network and ultimately stole data on 6.6 million consumers, publicly posting information for 2.7 million users including hundreds of Social Security numbers.",
+    "factual_background": "James V. Grago, Jr., operating ClixSense.com, collected personal information from approximately 6.6 million consumers—including names, addresses, dates of birth, Social Security numbers, and passwords—while publicly claiming to use 'the latest security and encryption techniques' to protect that data. In reality, Respondent stored all consumer data in clear text with no encryption, failed to implement basic security controls such as intrusion detection, access segregation, and vulnerability testing, and permitted employees to store plain-text credentials in personal email accounts. In February 2016, Respondent carelessly downloaded an unknown browser extension directly onto the ClixSense network without any isolation, providing hackers an entry point. By September 2016, hackers had downloaded the entire user table of 6.6 million consumers and publicly posted personal information of approximately 2.7 million of them, including hundreds of Social Security numbers, vastly increasing the risk of identity theft and fraud.",
     "representations_made": [
       {
-        "description": "Claimed to utilize the latest security and encryption techniques to ensure security of account information",
-        "quoted_text": "ClixSense utilizes the latest security and encryption techniques to ensure the security of your account information . . . . We view protection of users' privacy as a very important community principle. We understand clearly that you and your information are one of our most important assets.",
-        "source_paragraph": 7
+        "description": "Claimed to utilize the latest security and encryption techniques to ensure the security of users' account information, and described user privacy protection as a very important community principle",
+        "quoted_text": "Is my personal information secure? ClixSense utilizes the latest security and encryption techniques to ensure the security of your account information . . . . We view protection of users’ privacy as a very important community principle. We understand clearly that you and your information are one of our most important assets.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 7,
+        "quote_start_line": 50,
+        "quote_end_line": 54
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "Deception: Misrepresentation about Encryption",
-        "representation": "Respondent represented that it utilized the latest encryption techniques to ensure the security of users' personal information",
-        "fact": "Respondent did not utilize any encryption techniques to ensure the security of users' personal information",
-        "conclusion": "Therefore, the representation set forth in Paragraph 21 is false or misleading."
+        "representation": "Respondent represented, directly or indirectly, expressly or by implication, that it utilized the latest encryption techniques to ensure the security of users' personal information.",
+        "fact": "Respondent did not utilize any encryption techniques to ensure the security of users' personal information — all consumer data was stored in clear text with no encryption whatsoever.",
+        "conclusion": "The representation set forth in Paragraph 21 is false or misleading."
       },
       {
         "count_number": 2,
         "title": "Deception: Misrepresentation about Latest Security Techniques",
-        "representation": "Respondent represented that it utilized the latest security techniques to ensure the security of users' personal information",
-        "fact": "Respondent did not utilize the latest security techniques to ensure the security of users' personal information. Respondent failed to: perform vulnerability testing, protect against common vulnerabilities, implement reasonable access controls, detect anomalous activity, or use encryption for data at rest. These practices failed to meet minimal data security measures prescribed by data security professionals since at least 2013",
-        "conclusion": "Therefore, the representation set forth in Paragraph 23 is false or misleading."
+        "representation": "Respondent represented, directly or indirectly, expressly or by implication, that it utilized the latest security techniques to ensure the security of users' personal information.",
+        "fact": "Respondent did not utilize the latest security techniques — it failed to perform vulnerability testing, use intrusion detection systems, implement access controls, detect anomalous activity, or use encryption, among other deficiencies that fell below minimal standards prescribed by data security professionals since at least 2013.",
+        "conclusion": "The representation set forth in Paragraph 23 is false or misleading."
       },
       {
         "count_number": 3,
         "title": "Unfairness: Failure to Employ Reasonable Security Practices",
-        "representation": "Respondent engaged in unreasonable security practices including: failing to limit access between computers on the network and the Internet; permitting employees to store plain text credentials in personal email accounts; failing to change default login and password credentials; and maintaining consumers' personal information in clear text",
-        "fact": "These failures led to a breach where hackers downloaded personal information on 6.6 million consumers and publicly posted data for 2.7 million consumers including hundreds of Social Security numbers. Respondent could have addressed each failure by implementing readily available and relatively low-cost security measures. Prior to notifications, consumers had no way of independently knowing about the security failures and could not reasonably have avoided possible harms",
-        "conclusion": "This practice is an unfair act or practice. Respondent's failure to employ reasonable security practices caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves."
+        "representation": "Respondent failed to employ reasonable security practices, including failing to limit network access between computers, permitting employees to store plain-text credentials in personal email and on laptops, failing to change default login credentials for third-party network resources, and maintaining consumer personal information including Social Security numbers in clear text.",
+        "fact": "Respondent could have addressed each of these failures by implementing readily available and relatively low-cost security measures, but did not do so, resulting in a breach that exposed personal information of 6.6 million consumers.",
+        "conclusion": "Respondent's failure to employ reasonable security practices caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves. This practice is an unfair act or practice."
       }
     ]
   },
@@ -67,14 +71,16 @@
         "provision_number": "I",
         "title": "Prohibition Against Misrepresentations About Privacy or Security of Personal Information",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent the extent to which it maintains and protects the privacy, security, confidentiality, or integrity of Personal Information, including encryption and security techniques.",
+        "summary": "Respondent must not misrepresent in any manner the extent to which it maintains and protects the privacy, security, confidentiality, or integrity of Personal Information, including encryption and security techniques.",
         "requirements": [
           {
-            "description": "Must not misrepresent the extent of privacy, security, confidentiality, or integrity protections for Personal Information",
-            "quoted_text": "IT IS ORDERED that Respondent, Respondent's officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service must not misrepresent in any manner, expressly or by implication, the extent to which Respondent maintains and protects the privacy, security, confidentiality, or integrity of Personal Information, including the extent to which Respondent utilizes (1) encryption techniques; and (2) security techniques.",
+            "description": "Must not misrepresent, expressly or by implication, the extent to which Respondent maintains and protects the privacy, security, confidentiality, or integrity of Personal Information, including encryption and security techniques",
+            "quoted_text": "IT IS ORDERED that Respondent, Respondent’s officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service must not misrepresent in any manner, expressly or by implication, the extent to which Respondent maintains and protects the privacy, security, confidentiality, or integrity of Personal Page 2 of 9 Information, including the extent to which Respondent utilizes (1) encryption techniques; and (2) security techniques.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 69,
+            "quote_end_line": 78
           }
         ]
       },
@@ -82,70 +88,88 @@
         "provision_number": "II",
         "title": "Mandated Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondent must establish and maintain a comprehensive information security program designed to protect Personal Information, including documentation, risk assessments, safeguards, testing, service provider management, and regular evaluations.",
+        "summary": "Respondent must establish, implement, and maintain a comprehensive information security program for any business it controls that collects or stores Personal Information, meeting at least eight specific minimum requirements.",
         "requirements": [
           {
-            "description": "Establish and implement a comprehensive information security program before transferring, selling, sharing, collecting, maintaining, or storing Personal Information",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent, for any business that Respondent controls directly or indirectly, shall not transfer, sell, share, collect, maintain, or store Personal Information unless it establishes and implements, and thereafter maintains, a comprehensive information security program (\"Information Security Program\") that is designed to protect the security, confidentiality, and integrity of such Personal Information.",
+            "description": "Establish and implement a comprehensive information security program designed to protect the security, confidentiality, and integrity of Personal Information for any business Respondent controls",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent, for any business that Respondent controls directly or indirectly, shall not transfer, sell, share, collect, maintain, or store Personal Information unless it establishes and implements, and thereafter maintains, a comprehensive information security program (“Information Security Program”) that is designed to protect the security, confidentiality, and integrity of such Personal Information. To satisfy this requirement, Respondent must, at a minimum:",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 80,
+            "quote_end_line": 85
           },
           {
             "description": "Document in writing the content, implementation, and maintenance of the Information Security Program",
-            "quoted_text": "Document in writing the content, implementation, and maintenance of the Information Security Program;",
+            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Information Security Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 86,
+            "quote_end_line": 87
           },
           {
             "description": "Designate a qualified employee or employees to coordinate and be responsible for the Information Security Program",
-            "quoted_text": "Designate a qualified employee or employees to coordinate and be responsible for the Information Security Program;",
+            "quoted_text": "B. Designate a qualified employee or employees to coordinate and be responsible for the Information Security Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 88,
+            "quote_end_line": 89
           },
           {
-            "description": "Assess and document internal and external risks at least once every twelve months and promptly following a Covered Incident",
-            "quoted_text": "Assess and document, at least once every twelve months and promptly following a Covered Incident, internal and external risks to the security, confidentiality, or integrity of Personal Information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information;",
-            "deadline": null,
+            "description": "Assess and document, at least once every twelve months and promptly following a Covered Incident, internal and external risks to the security, confidentiality, or integrity of Personal Information",
+            "quoted_text": "C. Assess and document, at least once every twelve months and promptly following a Covered Incident, internal and external risks to the security, confidentiality, or integrity of Personal Information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information;",
+            "deadline": "annually and after each Covered Incident",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 90,
+            "quote_end_line": 93
           },
           {
-            "description": "Design, implement, and document safeguards that address identified risks",
-            "quoted_text": "Design, implement, and document safeguards that address the internal and external risks Respondent identifies to the security, confidentiality, or integrity of Personal Information identified in response to sub-Provision II.C. Each safeguard shall take into account the sensitivity of Personal Information at issue;",
+            "description": "Design, implement, and document safeguards that address the internal and external risks identified, taking into account the sensitivity of Personal Information",
+            "quoted_text": "D. Design, implement, and document safeguards that address the internal and external risks Respondent identifies to the security, confidentiality, or integrity of Personal Information identified in response to sub-Provision II.C. Each safeguard shall take into account the sensitivity of Personal Information at issue;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 94,
+            "quote_end_line": 97
           },
           {
-            "description": "Assess the sufficiency of safeguards at least once every twelve months and promptly following a Covered Incident",
-            "quoted_text": "Assess, at least once every twelve months and promptly following a Covered Incident, the sufficiency of any safeguards in place to address the risks to the security, confidentiality, or integrity of Personal Information. Each such assessment must evaluate safeguards in each area of relevant operation, including: (1) employee training and management; (2) information systems, such as network and software design, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, or other systems failures;",
-            "deadline": null,
+            "description": "Assess, at least once every twelve months and promptly following a Covered Incident, the sufficiency of safeguards in place, evaluating employee training, information systems, and prevention/detection/response to attacks",
+            "quoted_text": "E. Assess, at least once every twelve months and promptly following a Covered Incident, the sufficiency of any safeguards in place to address the risks to the security, confidentiality, or integrity of Personal Information. Each such assessment must evaluate safeguards in each area of relevant operation, including: (1) employee training and management; (2) information systems, such as network and software design, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, or other systems failures;",
+            "deadline": "annually and after each Covered Incident",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 98,
+            "quote_end_line": 104
           },
           {
-            "description": "Test and monitor the effectiveness of safeguards at least once every twelve months and promptly following a Covered Incident",
-            "quoted_text": "Test and monitor the effectiveness of the safeguards at least once every twelve months and promptly following a Covered Incident, and modify the Information Security Program based on the results;",
-            "deadline": null,
+            "description": "Test and monitor the effectiveness of safeguards at least once every twelve months and promptly following a Covered Incident, and modify the Information Security Program based on the results",
+            "quoted_text": "F. Test and monitor the effectiveness of the safeguards at least once every twelve months and promptly following a Covered Incident, and modify the Information Security Program based on the results;",
+            "deadline": "annually and after each Covered Incident",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 105,
+            "quote_end_line": 107
           },
           {
-            "description": "Select service providers capable of safeguarding Personal Information and contractually require them to implement safeguards",
-            "quoted_text": "Select and retain service providers capable of safeguarding Personal Information they receive from Respondent, and contractually require service providers to implement and maintain safeguards for Personal Information;",
+            "description": "Select and retain service providers capable of safeguarding Personal Information, and contractually require service providers to implement and maintain safeguards for Personal Information",
+            "quoted_text": "G. Select and retain service providers capable of safeguarding Personal Information they receive from Respondent, and contractually require service providers to implement and maintain safeguards for Personal Information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 108,
+            "quote_end_line": 110
           },
           {
-            "description": "Evaluate and adjust the Information Security Program at least once every twelve months and in response to changes or incidents",
-            "quoted_text": "Evaluate and adjust the Information Security Program in light of any changes to Respondent's operations or business arrangements, a Covered Incident, or any other circumstances that Respondent knows or has reason to know may have an impact on the effectiveness of the Information Security Program. At a minimum, Respondent must evaluate the Information Security Program at least once every twelve months.",
-            "deadline": null,
+            "description": "Evaluate and adjust the Information Security Program in light of changes to operations, business arrangements, Covered Incidents, or other relevant circumstances, at a minimum once every twelve months",
+            "quoted_text": "H. Evaluate and adjust the Information Security Program in light of any changes to Respondent’s operations or business arrangements, a Covered Incident, or any other circumstances that Respondent knows or has reason to know may have an impact on the effectiveness of the Information Security Program. At a minimum, Respondent must evaluate the Information Security Program at least once every twelve months.",
+            "deadline": "annually and after material changes or Covered Incidents",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 114,
+            "quote_end_line": 118
           }
         ]
       },
@@ -153,49 +177,43 @@
         "provision_number": "III",
         "title": "Data Security Assessments by a Third Party",
         "category": "assessment",
-        "summary": "Respondent must obtain initial and biennial third-party assessments for twenty years from qualified professionals to evaluate the Information Security Program's implementation and effectiveness.",
+        "summary": "Respondent must obtain initial and biennial third-party data security assessments from a qualified, independent assessor (CISSP, CISA, or GIAC-certified), covering compliance with the Information Security Program, for twenty years.",
         "requirements": [
           {
-            "description": "Obtain assessments from a qualified, objective, independent third-party professional (CISSP, CISA, GIAC, or FTC-approved)",
-            "quoted_text": "The Assessments must be obtained from a qualified, objective, independent third-party professional (\"Assessor\"), who uses procedures and standards generally accepted in the profession. The Assessor preparing such Assessments must be: an individual qualified as a Certified Information System Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); an individual holding Global Information Assurance Certification (GIAC) from the SANS Institute; or a qualified individual or entity approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
+            "description": "Obtain initial and biennial assessments from a qualified, objective, independent third-party professional who is CISSP, CISA, GIAC certified, or approved by the FTC Associate Director for Enforcement",
+            "quoted_text": "A. The Assessments must be obtained from a qualified, objective, independent third-party professional (“Assessor”), who uses procedures and standards generally accepted in the profession. The Assessor preparing such Assessments must be: an individual qualified as a Certified Information System Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); an individual holding Global Information Assurance Certification (GIAC) from the SANS Institute; or a qualified individual or entity approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 124,
+            "quote_end_line": 131
           },
           {
-            "description": "Obtain initial assessment covering the first 180 days after Order issuance and biennial assessments for twenty years thereafter",
-            "quoted_text": "The reporting period for the Assessments must cover: (1) the first 180 days after the issuance date of the Order for the initial Assessment; and (2) each 2-year period thereafter for twenty (20) years after issuance of the Order for the biennial Assessments.",
+            "description": "Initial assessment must cover the first 180 days after the Order's issuance date; biennial assessments must cover each 2-year period thereafter for twenty years",
+            "quoted_text": "B. The reporting period for the Assessments must cover: (1) the first 180 days after the issuance date of the Order for the initial Assessment; and (2) each 2-year period thereafter for twenty (20) years after issuance of the Order for the biennial Assessments.",
+            "deadline": "initial: first 180 days; then every 2 years for 20 years",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 132,
+            "quote_end_line": 134
+          },
+          {
+            "description": "Each assessment must determine whether Respondent has implemented and maintained the Information Security Program, assess effectiveness of sub-Provisions II.A-H, and identify any gaps or weaknesses",
+            "quoted_text": "C. Each Assessment must: (1) determine whether Respondent has implemented and maintained Provision II of this Order titled Mandated Information Security Program; (2) assess the effectiveness of Respondent’s implementation and maintenance of sub- Provisions II.A-H; and (3) identify any gaps or weaknesses in the Information Security Program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 135,
+            "quote_end_line": 139
           },
           {
-            "description": "Each assessment must determine compliance with Provision II, assess effectiveness, and identify gaps or weaknesses",
-            "quoted_text": "Each Assessment must: (1) determine whether Respondent has implemented and maintained Provision II of this Order titled Mandated Information Security Program; (2) assess the effectiveness of Respondent's implementation and maintenance of sub-Provisions II.A-H; and (3) identify any gaps or weaknesses in the Information Security Program.",
-            "deadline": null,
+            "description": "Each assessment must be completed within sixty (60) days after the end of the reporting period; the initial assessment must be submitted to the Commission within ten (10) days after completion via email or overnight courier",
+            "quoted_text": "D. Each Assessment must be completed within sixty (60) days after the end of the reporting period to which the Assessment applies. Unless otherwise directed by a Commission representative in writing, Respondent must submit the initial Assessment to the Commission within ten (10) days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “In re James V. Grago, Jr., d/b/a ClixSense.com, FTC File No.1723003.” All subsequent biennial Assessments shall be retained by Respondent until the order is terminated and provided to the Associate Director for Enforcement within ten (10) days of request.",
+            "deadline": "60 days after reporting period ends; submit initial within 10 days of completion",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Complete each assessment within sixty days after the end of the reporting period",
-            "quoted_text": "Each Assessment must be completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
-            "deadline": "60 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Submit initial assessment to the Commission within ten days after completion",
-            "quoted_text": "Unless otherwise directed by a Commission representative in writing, Respondent must submit the initial Assessment to the Commission within ten (10) days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Retain all subsequent biennial assessments until Order termination and provide to FTC within ten days of request",
-            "quoted_text": "All subsequent biennial Assessments shall be retained by Respondent until the order is terminated and provided to the Associate Director for Enforcement within ten (10) days of request.",
-            "deadline": "10 days",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 140,
+            "quote_end_line": 149
           }
         ]
       },
@@ -203,14 +221,16 @@
         "provision_number": "IV",
         "title": "Prohibition Against Misrepresentations to the Assessor",
         "category": "prohibition",
-        "summary": "Respondent must not misrepresent any material facts to the third-party Assessor conducting assessments of the Information Security Program.",
+        "summary": "Respondent must not misrepresent any material fact to the third-party assessor conducting the data security assessments required under Provision III.",
         "requirements": [
           {
-            "description": "Must not misrepresent any fact material to the Assessor's determination, assessment, or identification of gaps",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent, whether acting directly or indirectly, in connection with any Assessment required by Provision III of this Order titled Data Security Assessments by a Third Party, must not misrepresent in any manner, expressly or by implication, any fact material to the Assessor's: (1) determination of whether Respondent has implemented and maintained Provision II of this Order titled Mandated Information Security Program; (2) assessment of the effectiveness of the implementation and maintenance of sub-Provisions II.A-H; or (3) identification of any gaps or weaknesses in the Information Security Program.",
+            "description": "Must not misrepresent, expressly or by implication, any fact material to the Assessor's determination of compliance with the Information Security Program, assessment of its effectiveness, or identification of gaps or weaknesses",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent, whether acting directly or indirectly, in connection with any Assessment required by Provision III of this Order titled Data Security Assessments by a Third Party, must not misrepresent in any manner, expressly or by implication, any fact material to the Assessor’s: (1) determination of whether Respondent has implemented and maintained Provision II of this Order titled Mandated Information Security Program; (2) assessment of the effectiveness of the implementation and maintenance of sub-Provisions II.A- H; or (3) identification of any gaps or weaknesses in the Information Security Program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 154,
+            "quote_end_line": 160
           }
         ]
       },
@@ -218,21 +238,25 @@
         "provision_number": "V",
         "title": "Annual Certification",
         "category": "compliance_reporting",
-        "summary": "Respondent must provide annual certifications from a senior manager or officer certifying compliance with the Order, including disclosure of any material noncompliance or Covered Incidents.",
+        "summary": "Respondent must provide the Commission with an annual certification from a senior corporate manager or officer confirming compliance with the Order, disclosing any material noncompliance, and describing any Covered Incidents.",
         "requirements": [
           {
-            "description": "Provide annual certification to the Commission one year after Order issuance and each year thereafter",
-            "quoted_text": "One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from a senior corporate manager, or, if no such senior corporate manager exists, a senior officer of Respondent responsible for Respondent's Information Security Program that: (1) Respondent has established, implemented, and maintained the requirements of this Order; (2) Respondent is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission; and (3) includes a brief description of any Covered Incident. The certification must be based on the personal knowledge of the senior corporate manager, senior officer, or subject matter experts upon whom the senior corporate manager or senior officer reasonably relies in making the certification.",
-            "deadline": null,
+            "description": "One year after the Order's issuance and each year thereafter, provide the Commission with a certification from a senior corporate manager or officer confirming: (1) the Order requirements have been established, implemented, and maintained; (2) no uncorrected or undisclosed material noncompliance exists; and (3) a brief description of any Covered Incident",
+            "quoted_text": "A. One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from a senior corporate manager, or, if no such senior corporate manager exists, a senior officer of Respondent responsible for Respondent’s Information Security Program that: (1) Respondent has established, implemented, and maintained the requirements of this Order; (2) Respondent is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission; and (3) includes a brief description of any Covered Incident. The certification must be based on the personal knowledge of the senior corporate manager, senior officer, or subject matter experts upon whom the senior corporate manager or senior officer reasonably relies in making the certification.",
+            "deadline": "annually, beginning 1 year after issuance",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 164,
+            "quote_end_line": 173
           },
           {
-            "description": "Submit all annual certifications to the Commission via email or overnight courier",
-            "quoted_text": "Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
+            "description": "Submit all annual certifications to the Commission via email to DEbrief@ftc.gov or by overnight courier, with subject line beginning 'In re James V. Grago, Jr., d/b/a ClixSense.com, FTC File No.1723003'",
+            "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “In re James V. Grago, Jr., d/b/a ClixSense.com, FTC File No.1723003.”",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 174,
+            "quote_end_line": 179
           }
         ]
       },
@@ -240,28 +264,34 @@
         "provision_number": "VI",
         "title": "Acknowledgments of the Order",
         "category": "acknowledgment",
-        "summary": "Respondent must submit acknowledgment of receipt of the Order and deliver copies to all relevant personnel and entities for twenty years, obtaining signed acknowledgments within thirty days.",
+        "summary": "Respondent must acknowledge receipt of the Order, deliver copies to principals, officers, employees, and agents with relevant responsibilities, and obtain signed acknowledgments from each recipient.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt of Order to the Commission within ten days after effective date",
-            "quoted_text": "Respondent, within ten (10) days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order.",
-            "deadline": "10 days",
+            "description": "Within ten (10) days after the effective date of the Order, submit to the Commission an acknowledgment of receipt of the Order",
+            "quoted_text": "A. Respondent, within ten (10) days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order.",
+            "deadline": "10 days after effective date",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 183,
+            "quote_end_line": 184
           },
           {
-            "description": "Deliver copy of Order to all principals, officers, directors, managers, employees, agents, and representatives for twenty years",
-            "quoted_text": "For twenty (20) years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives with responsibilities related to the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in Provision VII of this Order titled Compliance Reports and Notices. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "10 days",
+            "description": "For twenty (20) years after the Order's issuance, deliver a copy of the Order to all principals, officers, directors, LLC managers and members, employees and agents with relevant responsibilities, and any successor business entity; delivery within ten (10) days for current personnel, before assumption of responsibilities for all others",
+            "quoted_text": "B. For twenty (20) years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees, agents, and representatives with responsibilities related to Page 5 of 9 the subject matter of the Order; and (3) any business entity resulting from any change in structure as set forth in Provision VII of this Order titled Compliance Reports and Notices. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "10 days for current personnel; before assuming responsibilities for others",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 185,
+            "quote_end_line": 195
           },
           {
-            "description": "Obtain signed and dated acknowledgment of receipt from each individual or entity receiving the Order within thirty days",
-            "quoted_text": "From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
-            "deadline": "30 days",
+            "description": "Obtain, within thirty (30) days of delivery, a signed and dated acknowledgment of receipt of the Order from each individual or entity to whom the Order was delivered",
+            "quoted_text": "C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
+            "deadline": "30 days after delivery",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 196,
+            "quote_end_line": 198
           }
         ]
       },
@@ -269,49 +299,70 @@
         "provision_number": "VII",
         "title": "Compliance Reports and Notices",
         "category": "compliance_reporting",
-        "summary": "Respondent must submit a comprehensive compliance report one year after Order issuance, and timely notices of changes to contact information, business structure, personal information, or bankruptcy filings.",
+        "summary": "Respondent must submit an annual compliance report and timely notices of changes to contact information, business structure, name, role, or bankruptcy filings, all sworn under penalty of perjury.",
         "requirements": [
           {
-            "description": "Submit compliance report one year after Order issuance, sworn under penalty of perjury, including contact information, business descriptions, compliance status, and acknowledgments",
-            "quoted_text": "One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which: Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes Respondent made to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "description": "One year after the Order's issuance, submit a compliance report sworn under penalty of perjury identifying contact information, all businesses, business activities, compliance status for each provision, and copies of Order acknowledgments",
+            "quoted_text": "A. One year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which: 1. Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of Respondent’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered, the means of advertising, marketing, and sales; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes Respondent made to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year after issuance",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 202,
+            "quote_end_line": 214
+          },
+          {
+            "description": "Additionally in the compliance report, identify all personal telephone numbers, addresses, business activities, and describe involvement in each business activity including title, role, responsibilities, and ownership",
+            "quoted_text": "2. Additionally, Respondent must: (a) identify all his telephone numbers and all his physical, postal, email and Internet addresses, including all residences; (b) identify all his business activities, including any business for which Respondent performs services whether as an employee or otherwise and any entity in which Respondent, individually, has any ownership interest; and (c) describe in detail Respondent’s involvement in each such business activity, including title, role, responsibilities, participation, authority, control, and any ownership.",
+            "deadline": "1 year after issuance",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 215,
+            "quote_end_line": 221
+          },
+          {
+            "description": "Within fourteen (14) days of any change, submit a sworn compliance notice of changes to designated points of contact or the structure of any entity Respondent owns or controls that may affect compliance obligations",
+            "quoted_text": "B. Respondent must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in the following: 1. Respondent must submit notice of any change in: (a) any designated point of contact; or (b) the structure of any entity that Respondent has any ownership interest in or Page 6 of 9 controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "deadline": "14 days after change",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 222,
+            "quote_end_line": 232
+          },
+          {
+            "description": "Within fourteen (14) days of any change, submit notice of any change in name, alias, fictitious name, or residence address, or any change in title or role in any business activity",
+            "quoted_text": "2. Additionally, Respondent must submit notice of any change in: (a) name, including alias or fictitious name, or residence address; or (b) title or role in any business activity, including (i) any business for which Respondent performs services whether as an employee or otherwise and (ii) any entity in which Respondent has any ownership interest and over which Respondent has direct or indirect control. For each such business activity, also identify its name, physical address, and any Internet address.",
+            "deadline": "14 days after change",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 233,
+            "quote_end_line": 239
+          },
+          {
+            "description": "Submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within fourteen (14) days of its filing",
+            "quoted_text": "C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within fourteen (14) days of its filing.",
+            "deadline": "14 days after filing",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 240,
+            "quote_end_line": 242
+          },
+          {
+            "description": "All submissions sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 243,
+            "quote_end_line": 247
           },
           {
-            "description": "Include in compliance report personal information about Respondent's addresses, business activities, involvement, and ownership interests",
-            "quoted_text": "Additionally, Respondent must: (a) identify all his telephone numbers and all his physical, postal, email and Internet addresses, including all residences; (b) identify all his business activities, including any business for which Respondent performs services whether as an employee or otherwise and any entity in which Respondent, individually, has any ownership interest; and (c) describe in detail Respondent's involvement in each such business activity, including title, role, responsibilities, participation, authority, control, and any ownership.",
+            "description": "Unless otherwise directed, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, FTC, with subject line beginning 'In re James V. Grago, Jr., d/b/a ClixSense.com, FTC File No.1723003'",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “In re James V. Grago, Jr., d/b/a ClixSense.com, FTC File No.1723003.”",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Submit compliance notice within fourteen days of any change in designated contact points or business structure",
-            "quoted_text": "Respondent must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in the following: Respondent must submit notice of any change in: (a) any designated point of contact; or (b) the structure of any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
-            "deadline": "14 days",
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Submit compliance notice within fourteen days of any change in name, residence address, title, role, or business activities",
-            "quoted_text": "Additionally, Respondent must submit notice of any change in: (a) name, including alias or fictitious name, or residence address; or (b) title or role in any business activity, including (i) any business for which Respondent performs services whether as an employee or otherwise and (ii) any entity in which Respondent has any ownership interest and over which Respondent has direct or indirect control. For each such business activity, also identify its name, physical address, and any Internet address.",
-            "deadline": "14 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Submit notice of bankruptcy filing within fourteen days",
-            "quoted_text": "Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against Respondent within fourteen (14) days of its filing.",
-            "deadline": "14 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "All submissions must be sworn under penalty of perjury and comply with 28 U.S.C. § 1746",
-            "quoted_text": "Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: \"I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____\" and supplying the date, signatory's full name, title (if applicable), and signature.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 248,
+            "quote_end_line": 253
           }
         ]
       },
@@ -319,49 +370,61 @@
         "provision_number": "VIII",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must create and retain specific records for twenty years, including accounting records, personnel records, consumer complaints, privacy/security representations, and compliance documentation, with each record retained for five years.",
+        "summary": "Respondent must create and retain specified records for twenty years after the Order's issuance, retaining each record for five years, covering revenues, personnel, consumer complaints, privacy representations, and compliance documentation.",
         "requirements": [
           {
-            "description": "Create records for twenty years after Order issuance and retain each record for five years",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for twenty (20) years after the issuance date of the Order, and retain each such record for five (5) years.",
-            "deadline": null,
+            "description": "Create and retain records for twenty (20) years after issuance; retain each record for five (5) years",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for twenty (20) years after the issuance date of the Order, and retain each such record for five (5) years. Specifically, Respondent must create and retain the following records:",
+            "deadline": "20 years creation period; 5 years retention per record",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 255,
+            "quote_end_line": 257
           },
           {
-            "description": "Create and retain accounting records showing revenues from all goods or services sold",
-            "quoted_text": "Accounting records showing the revenues from all goods or services sold;",
+            "description": "Maintain accounting records showing revenues from all goods or services sold",
+            "quoted_text": "A. Accounting records showing the revenues from all goods or services sold;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 258,
+            "quote_end_line": 258
           },
           {
-            "description": "Create and retain personnel records with detailed information for each person providing services",
-            "quoted_text": "Personnel records showing, for each person providing services, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "description": "Maintain personnel records showing for each service provider: name, addresses, telephone numbers, job title or position, dates of service, and reason for termination if applicable",
+            "quoted_text": "B. Personnel records showing, for each person providing services, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 259,
+            "quote_end_line": 261
           },
           {
-            "description": "Create and retain copies of all consumer complaints concerning the Order's subject matter and responses",
-            "quoted_text": "Copies or records of all consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, such as through a third party, and any response;",
+            "description": "Maintain copies or records of all consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, and any response",
+            "quoted_text": "C. Copies or records of all consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, such as through a third party, and any response;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 262,
+            "quote_end_line": 263
           },
           {
-            "description": "Create and retain copies of all widely disseminated representations about privacy, security, confidentiality, or integrity of Personal Information",
-            "quoted_text": "A copy of each widely disseminated representation by Respondent that describes the extent to which Respondent maintains or protects the privacy, confidentiality, security, or integrity of any Personal Information, including any representation concerning a change in any website or other service controlled by Respondent that relates to the privacy, confidentiality, security, or integrity of Personal Information, including the extent to which Respondent utilizes (1) encryption techniques; and (2) security techniques;",
+            "description": "Maintain a copy of each widely disseminated representation describing the extent to which Respondent maintains or protects the privacy, confidentiality, security, or integrity of any Personal Information, including representations about encryption and security techniques",
+            "quoted_text": "D. A copy of each widely disseminated representation by Respondent that describes the extent to which Respondent maintains or protects the privacy, confidentiality, security, or integrity of any Personal Information, including any representation concerning a change in any website or other service controlled by Respondent that relates to the privacy, confidentiality, security, or integrity of Personal Information, including the extent to which Respondent utilizes (1) encryption techniques; and (2) security techniques; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 267,
+            "quote_end_line": 272
           },
           {
-            "description": "Create and retain all records necessary to demonstrate full compliance with each provision of the Order",
-            "quoted_text": "All records necessary to demonstrate full compliance with each Provision of this Order, including all submissions to the Commission.",
+            "description": "Maintain all records necessary to demonstrate full compliance with each Provision of the Order, including all submissions to the Commission",
+            "quoted_text": "E. All records necessary to demonstrate full compliance with each Provision of this Order, including all submissions to the Commission.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 273,
+            "quote_end_line": 274
           }
         ]
       },
@@ -369,28 +432,34 @@
         "provision_number": "IX",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission has authority to monitor Respondent's compliance through requests for reports and records, direct communication, interviews, and lawful investigative means including posing as consumers.",
+        "summary": "The Commission is authorized to monitor Respondent's compliance by requesting reports and records, conducting interviews, and using any other lawful means including undercover methods.",
         "requirements": [
           {
-            "description": "Submit additional compliance reports or information within ten days of written request from the Commission",
-            "quoted_text": "Within ten (10) days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
-            "deadline": "10 days",
+            "description": "Within ten (10) days of receipt of a written request from a Commission representative, submit additional compliance reports or other requested information sworn under penalty of perjury, and produce records for inspection and copying",
+            "quoted_text": "A. Within ten (10) days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
+            "deadline": "10 days after written request",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 278,
+            "quote_end_line": 281
           },
           {
-            "description": "Allow Commission representatives to communicate directly with Respondent and interview affiliated persons who agree to interviews",
-            "quoted_text": "For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present.",
+            "description": "Permit Commission representatives to communicate directly with Respondent and to interview anyone affiliated with Respondent who has agreed to such an interview; interviewee may have counsel present",
+            "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 282,
+            "quote_end_line": 285
           },
           {
-            "description": "Commission may use all lawful means to monitor compliance, including posing as consumers or other entities",
-            "quoted_text": "The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Commission may use all other lawful means, including posing as consumers or suppliers, without identification or prior notice; nothing limits the Commission's lawful use of compulsory process under FTC Act Sections 9 and 20",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 286,
+            "quote_end_line": 290
           }
         ]
       },
@@ -398,28 +467,32 @@
         "provision_number": "X",
         "title": "Order Effective Dates",
         "category": "duration",
-        "summary": "The Order is effective upon publication on the FTC website and terminates twenty years from issuance date or from the most recent federal court complaint filing, with exceptions for earlier terminating provisions and dismissed complaints.",
+        "summary": "The Order is final upon publication on the FTC website and terminates twenty years from issuance, or twenty years from the most recent date a complaint is filed in federal court alleging a violation, whichever is later.",
         "requirements": [
           {
-            "description": "Order is final and effective upon publication on ftc.gov and terminates twenty years from issuance or from most recent federal court complaint",
-            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order. This Order will terminate twenty (20) years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: Any Provision in this Order that terminates in less than twenty (20) years; This Order's application to any Respondent that is not named as a defendant in such complaint; and This Order if such complaint is filed after the Order has terminated pursuant to this Provision.",
+            "description": "Order is final and effective upon publication on the Commission's website (ftc.gov) as a final order",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 292,
+            "quote_end_line": 293
           },
           {
-            "description": "If federal court complaint is dismissed or ruled in Respondent's favor, Order terminates as though complaint was never filed",
-            "quoted_text": "Provided, further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any Provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
-            "deadline": null,
+            "description": "Order terminates twenty (20) years from issuance or twenty (20) years from the most recent date the Commission files a complaint in federal court alleging any violation, whichever is later; with specific carve-outs for provisions terminating sooner, non-defendant respondents, and orders terminated before filing",
+            "quoted_text": "publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate twenty (20) years from the date of its issuance (which date may be stated at the end of this Order, near the Commission’s seal), or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than twenty (20) years; Page 8 of 9 B. This Order’s application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. Provided, further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any Provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "deadline": "20 years from issuance or most recent violation complaint, whichever is later",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 293,
+            "quote_end_line": 312
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This Order will terminate twenty (20) years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later"
+      "termination_text": "This Order will terminate twenty (20) years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than twenty (20) years; B. This Order's application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision."
     }
   },
   "metadata": {
@@ -432,8 +505,31 @@
       "complaint_representations": 1,
       "order_provisions": 10,
       "order_definitions": 3,
-      "order_requirements": 39
+      "order_requirements": 38,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 9,
+        "III": 4,
+        "IV": 1,
+        "V": 2,
+        "VI": 3,
+        "VII": 7,
+        "VIII": 6,
+        "IX": 3,
+        "X": 2
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 1,
+        "complaint_total": 1,
+        "order_verified": 38,
+        "order_total": 38
+      }
     },
-    "processing_time_seconds": 171.7
+    "processing_time_seconds": 105.8
   }
 }

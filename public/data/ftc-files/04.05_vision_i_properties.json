@@ -4,9 +4,9 @@
     "company": {
       "name": "Vision I Properties, LLC",
       "incorporation_state": "Utah",
-      "entity_type": "LLC",
+      "entity_type": "corporation",
       "address": "2250 N. University Parkway, Suite 4880, Provo, UT 84604",
-      "business_description": "Vision I Properties, LLC, doing business as CartManager International, licenses shopping cart software and provides related services to thousands of small online retail merchants. The shopping cart software generates customizable shopping cart and check out web pages for use on merchants' websites."
+      "business_description": "Vision I Properties, LLC, doing business as CartManager International, licenses shopping cart software and provides related services to thousands of small online retail merchants. The shopping cart software generates customizable shopping cart and checkout web pages for use on merchants' web sites, which collect consumer information including names, addresses, phone numbers, email addresses, and credit card information."
     },
     "commissioners": [
       "Deborah Platt Majoras, Chairman",
@@ -24,184 +24,199 @@
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/042-3068-vision-i-properties-llc-et-al-matter"
   },
   "complaint": {
-    "factual_background": "Vision I Properties, LLC (doing business as CartManager International) licensed shopping cart software to thousands of small online retail merchants. Beginning in January 2003, the company rented personal information of nearly one million consumers to third parties for marketing purposes, despite the fact that merchant privacy policies promised not to sell, trade, or rent customer information. The company collected this information through shopping cart pages that appeared to be part of the merchants' sites but did not disclose that the information would be shared with third parties.",
+    "factual_background": "Vision I Properties, LLC, doing business as CartManager International, licensed shopping cart software to thousands of small online merchants. The software collected consumers' personal information—including names, addresses, phone numbers, and purchase histories—through checkout pages that appeared to be part of the merchants' own websites. In January 2003, CartManager began renting this personal information of nearly one million consumers to third parties for direct mail and telemarketing purposes. Despite this practice, the checkout pages never disclosed to consumers that their data would be shared with third parties and was not subject to the merchants' privacy policies—policies that explicitly promised not to sell or share customer information. CartManager also failed to adequately inform its merchant clients that it intended to use or share customer data in ways that may conflict with those merchants' own stated privacy commitments.",
     "representations_made": [
       {
-        "description": "Merchants represented they would not sell, trade or rent personal information to third parties",
-        "quoted_text": "[ ] is committed to protecting customer privacy. We use the information we collect from you to process orders and to provide an enhanced shopping experience. [ ] does not sell, trade or rent personal information or shopping habits to third parties. Customer account and transaction information, as well as correspondence, is handled with the utmost discretion.",
-        "source_paragraph": 5
+        "description": "Merchant privacy policies, enabled by Respondent's software, promised that customer information would not be sold, traded, rented, or disclosed to third parties and would be kept confidential and secure.",
+        "quoted_text": "A. “[ ] is committed to protecting customer privacy. We use the information we collect from you to process orders and to provide an enhanced shopping experience. [ ] does not sell, trade or rent personal information or shopping habits to third parties. Customer account and transaction information, as well as correspondence, is handled with the utmost discretion.” B. “PRIVACY POLICY: It’s simple. We don’t sell, trade, or lend any information on our customers or visitors to anyone.” C. “[ ] Pledges and solidly guarantees that all personal information, from any source, that is submitted, gathered, tracked or otherwise obtained or retained in the normal course of online business activity associated with the company’s Web site/s, is secure and held confidential at all times from sale, disclosure, rental, and tampering by any known third party. . . .” D. “[ ] is committed to protecting your privacy. . . . We never sell any information to outside parties. We protect your information from unauthorized access. Information you give us is used only to the extent needed to conduct our business and to meet the highest quality service standards for processing, verifying and filling your orders.”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 5,
+        "quote_start_line": 49,
+        "quote_end_line": 65
       },
       {
-        "description": "Merchants represented they would not sell, trade, or lend customer information to anyone",
-        "quoted_text": "PRIVACY POLICY: It's simple. We don't sell, trade, or lend any information on our customers or visitors to anyone.",
-        "source_paragraph": 5
+        "description": "The shopping cart and checkout pages generated by Respondent's software did not disclose that consumer information was not subject to the merchant privacy policies or that it would be shared with third parties for marketing purposes.",
+        "quoted_text": "7. Although the shopping cart and check out pages generated by Respondent’s software appear to be part of the merchants’ sites, the pages do not disclose to consumers that the information entered on them is not subject to the merchant privacy policies or that it will be shared with third parties for marketing purposes. Further, because the shopping cart and check out pages are typically the only pages on the merchants’ sites that collect personal information, consumers reasonably expect that the merchants’ privacy policies cover information consumers provide on those pages.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 7,
+        "quote_start_line": 75,
+        "quote_end_line": 81
       },
       {
-        "description": "Merchants represented that personal information would be held confidential and protected from sale, disclosure, or rental to third parties",
-        "quoted_text": "[ ] Pledges and solidly guarantees that all personal information, from any source, that is submitted, gathered, tracked or otherwise obtained or retained in the normal course of online business activity associated with the company's Web site/s, is secure and held confidential at all times from sale, disclosure, rental, and tampering by any known third party. . . .",
-        "source_paragraph": 5
-      },
-      {
-        "description": "Merchants represented they would never sell information to outside parties and would protect it from unauthorized access",
-        "quoted_text": "[ ] is committed to protecting your privacy. . . . We never sell any information to outside parties. We protect your information from unauthorized access. Information you give us is used only to the extent needed to conduct our business and to meet the highest quality service standards for processing, verifying and filling your orders.",
-        "source_paragraph": 5
+        "description": "Respondent's online license agreement asserted ownership of all consumer data submitted through its shopping cart but did not explain how it intended to use the data or that such use might conflict with merchant privacy policies.",
+        "quoted_text": "Although Respondent’s online license agreement asserts that \"CartManager shall retain full ownership of all data submitted by either Merchant or Purchaser through the CartManager Shopping Cart . . . including, but not limited to name, mailing & shipping address, email address, phone number, dollar amount of purchase, type of purchase and description of purchase,\" this statement is buried in the middle of the online agreement and does not explain how Respondent intends to use the information or that such use may conflict with the merchants’ privacy policies.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 8,
+        "quote_start_line": 86,
+        "quote_end_line": 92
       }
     ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Unfair Practice - Violation of Merchant Privacy Policies",
-        "representation": "Through shopping cart software used at merchant Web sites, Respondent collected personal information from consumers knowing that such practices were contrary to merchant privacy policies that promised not to sell, trade, or rent customer information to third parties",
-        "fact": "Beginning in January 2003, Respondent rented to third parties for marketing purposes consumers' personal information collected through shopping cart pages, including the name, address, phone number, and purchase history of nearly one million consumers. The shopping cart pages did not disclose to consumers that information entered would not be subject to merchant privacy policies or that it would be shared with third parties. Respondent also did not adequately inform merchants that it intended to use customer information in a manner inconsistent with merchants' privacy policies.",
-        "conclusion": "Respondent's practices have caused consumers substantial injury that is not offset by countervailing benefits to consumers or competition. Further, because Respondent's practices were not adequately disclosed to merchants or consumers, the injury was not reasonably avoidable. These acts and practices constitute unfair acts or practices in or affecting commerce in violation of Section 5(a) of the Federal Trade Commission Act."
+        "title": "Unfair Data Collection and Sharing Practices",
+        "representation": "Respondent collected personal information from consumers through shopping cart and checkout pages that appeared to be part of merchant websites governed by merchant privacy policies promising not to share consumer data with third parties.",
+        "fact": "Respondent shared consumers' personal information with third parties for marketing purposes knowing such practices were contrary to the merchant privacy policies, without disclosing this to consumers or adequately informing merchants, causing substantial consumer injury that was not reasonably avoidable.",
+        "conclusion": "The acts and practices of Respondent constitute unfair acts or practices in or affecting commerce in violation of Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)."
       }
     ]
   },
   "order": {
     "definitions": {
-      "Personally identifiable information or personal information": "individually identifiable information from or about an individual including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name that reveals an individual's email address; (d) a telephone number; (e) a Social Security number; (f) a persistent identifier, such as a customer number held in a \"cookie\" or processor serial number, that is combined with other available data that identifies an individual; or (g) any information that is combined with any of (a) through (f) above.",
+      "Personally identifiable information": "individually identifiable information from or about an individual including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name that reveals an individual's email address; (d) a telephone number; (e) a Social Security number; (f) a persistent identifier, such as a customer number held in a \"cookie\" or processor serial number, that is combined with other available data that identifies an individual; or (g) any information that is combined with any of (a) through (f) above.",
       "Respondent": "Vision One and its successors and assigns and its officers, and its agents, representatives, and employees.",
       "Merchant customer": "a person or entity that uses Respondent's shopping cart software and related services in connection with the sale of products and services on a Web site.",
-      "Clearly and conspicuously": "A. In print communications, the message shall be in a type size and location sufficiently noticeable for an ordinary consumer to read and comprehend it, in print that contrasts with the background against which it appears. B. In communications disseminated orally, the message shall be delivered in a volume and cadence sufficient for an ordinary consumer to hear and comprehend it. C. In communications made through an electronic medium (such as television, video, radio, and interactive media such as the Internet, online services and software), the message shall be presented simultaneously in both the audio and visual portions of the communication. In any communication presented solely through visual or audio means, the message may be made through the same means in which the communication is presented. Any audio message shall be delivered in a volume and cadence sufficient for an ordinary consumer to hear and comprehend it. Any visual message shall be of a size and shade, with a degree of contrast to the background against which it appears, and shall appear on the screen for a duration and in a location, sufficiently noticeable for an ordinary consumer to read and comprehend it. The message shall be in understandable language and syntax. Nothing contrary to, inconsistent with, or in mitigation of the message shall be used in any communication.",
+      "Clearly and conspicuously": "shall mean as follows:\nA. In print communications, the message shall be in a type size and location sufficiently noticeable for an ordinary consumer to read and comprehend it, in print that contrasts with the background against which it appears.\nB. In communications disseminated orally, the message shall be delivered in a volume and cadence sufficient for an ordinary consumer to hear and comprehend it.\nC. In communications made through an electronic medium (such as television, video, radio, and interactive media such as the Internet, online services and software), the message shall be presented simultaneously in both the audio and visual portions of the communication. In any communication presented solely through visual or audio means, the message may be made through the same means in which the communication is presented. Any audio message shall be delivered in a volume and cadence sufficient for an ordinary consumer to hear and comprehend it. Any visual message shall be of a size and shade, with a degree of contrast to the background against which it appears, and shall appear on the screen for a duration and in a location, sufficiently noticeable for an ordinary consumer to read and comprehend it.\nThe message shall be in understandable language and syntax. Nothing contrary to, inconsistent with, or in mitigation of the message shall be used in any communication.",
       "Commerce": "as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44."
     },
     "provisions": [
       {
         "provision_number": "I",
-        "title": "Prohibition Against Misrepresentations About Collection and Use of Personal Information",
+        "title": "Prohibition Against False or Misleading Representations About Personal Information",
         "category": "prohibition",
-        "summary": "Respondent must not make any false or misleading representations regarding the collection, use, or disclosure of personally identifiable information.",
+        "summary": "Respondent is prohibited from making any false or misleading representation, express or implied, regarding the collection, use, or disclosure of personally identifiable information from consumers.",
         "requirements": [
           {
-            "description": "Must not make false or misleading representations about collection, use, or disclosure of personally identifiable information",
+            "description": "Must not make any false or misleading representation, expressly or by implication, regarding the collection, use, or disclosure of personally identifiable information from consumers",
             "quoted_text": "IT IS ORDERED that Respondent, directly or through any corporation, subsidiary, division, or other device, in connection with the collection of personally identifiable information from or about consumers, shall not make, expressly or by implication, any false or misleading representation regarding the collection, use, or disclosure of personally identifiable information.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 87,
+            "quote_end_line": 90
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Prohibition on Sale of Pre-Order Personal Information",
+        "title": "Prohibition on Disclosure of Pre-Order Consumer Information for Marketing",
         "category": "prohibition",
-        "summary": "Respondent must not sell, rent, or disclose to any third party for marketing purposes any personally identifiable information that was collected from consumers prior to the date of service of this Order.",
+        "summary": "Respondent must not sell, rent, or disclose to any third party for marketing purposes any personally identifiable information collected from consumers prior to the date of service of this Order.",
         "requirements": [
           {
-            "description": "Must not sell, rent, or disclose for marketing purposes any personally identifiable information collected through shopping cart software prior to the date of service of this Order",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent, directly or through any corporation, subsidiary, division, or other device, shall not sell, rent, or disclose to any third party for marketing purposes any personally identifiable information that was collected from consumers through shopping cart software used at a merchant customer's Web site prior to the date of service of this Order.",
+            "description": "Must not sell, rent, or disclose to any third party for marketing purposes any personally identifiable information collected from consumers through shopping cart software at a merchant customer's Web site prior to the date of service of this Order",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent, directly or through any corporation, subsidiary, division, or other device, shall not sell, rent, or disclose to any third party for marketing purposes any personally identifiable information that was collected from consumers through shopping cart software used at a merchant customer’s Web site prior to the date of service of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 92,
+            "quote_end_line": 96
           }
         ]
       },
       {
         "provision_number": "III",
-        "title": "Conditional Permission to Sell Post-Order Personal Information",
-        "category": "affirmative_obligation",
-        "summary": "Respondent may sell, rent, or disclose personally identifiable information collected after the date of service of this Order only if it provides proper notice to merchant customers or consumers and obtains required certifications or makes required disclosures.",
+        "title": "Conditional Prohibition on Disclosure of Post-Order Consumer Information for Marketing",
+        "category": "prohibition",
+        "summary": "Respondent must not sell, rent, or disclose post-Order consumer information for marketing purposes unless it first provided the merchant customer a clear written notice and obtained written certification, or provided a clear disclosure directly to consumers about Respondent's data practices.",
         "requirements": [
           {
-            "description": "Provide clear and conspicuous written notice to merchant customer and obtain written certification stating merchant received notice and either merchant's privacy policy permits information sharing or merchant provides clear disclosure that consumer is leaving merchant's site and entering Respondent's site governed by Respondent's privacy policy",
-            "quoted_text": "Provided to the merchant customer a clear and conspicuous written notice of its information practices and obtained from the merchant customer a written certification stating: (1) that the merchant customer received such notice; and (2) either (a) that its posted privacy policy states that consumers' information may be sold, rented, or disclosed to third parties, or (b) that it provides a clear and conspicuous disclosure, before any personally identifiable information is collected from consumers through Respondent's shopping cart or other software, stating that the consumer is leaving the merchant customer's Web site and entering Respondent's Web site, and that Respondent's site is governed by Respondent's own privacy policy.",
+            "description": "Must not sell, rent, or disclose post-Order personally identifiable information for marketing unless Respondent provided the merchant customer a clear and conspicuous written notice of its information practices and obtained a written certification from the merchant customer confirming receipt and either a matching privacy policy or a clear consumer-facing disclosure that they are entering Respondent's site",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent, directly or through any corporation, subsidiary, division, or other device, shall not sell, rent, or disclose to any third party for marketing purposes any personally identifiable information collected from consumers through shopping cart or other software used at a merchant customer’s Web site after the date of service of this Order unless, prior to the date such information was collected, Respondent took one of the following two actions: 3 A. Provided to the merchant customer a clear and conspicuous written notice of its information practices and obtained from the merchant customer a written certification stating: (1) that the merchant customer received such notice; and (2) either (a) that its posted privacy policy states that consumers’ information may be sold, rented, or disclosed to third parties, or (b) that it provides a clear and conspicuous disclosure, before any personally identifiable information is collected from consumers through Respondent’s shopping cart or other software, stating that the consumer is leaving the merchant customer’s Web site and entering Respondent’s Web site, and that Respondent’s site is governed by Respondent’s own privacy policy. The written notice to merchants required by this Paragraph shall be labeled \"Important Notice to Merchants from CartManager\" and must: (1) state that Respondent intends to sell, rent, or disclose such information; (2) identify the types or categories of any entities to which such information will be disclosed; (3) advise the merchant customer that it may be liable for any misrepresentations it makes about the use or disclosure of information collected from consumers at its Web site, including through software used at the site; and (4) contain no other information;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 98,
+            "quote_end_line": 125
           },
           {
-            "description": "Written notice to merchants must be labeled 'Important Notice to Merchants from CartManager' and must state Respondent's intent to sell information, identify types of entities receiving information, advise merchant of potential liability, and contain no other information",
-            "quoted_text": "The written notice to merchants required by this Paragraph shall be labeled \"Important Notice to Merchants from CartManager\" and must: (1) state that Respondent intends to sell, rent, or disclose such information; (2) identify the types or categories of any entities to which such information will be disclosed; (3) advise the merchant customer that it may be liable for any misrepresentations it makes about the use or disclosure of information collected from consumers at its Web site, including through software used at the site; and (4) contain no other information",
+            "description": "Alternatively, must provide a clear and conspicuous disclosure on the collection page(s) stating that the consumer is on Respondent's Web site and that information will be used, sold, rented, or disclosed to third parties for marketing purposes",
+            "quoted_text": "B. Provided a clear and conspicuous disclosure on the page(s) through which it collected such information stating: (1) that the consumer is on Respondent’s Web site, and (2) that information provided by the consumer to Respondent will be used, sold, rented, or disclosed to third parties for marketing purposes.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Alternatively, provide clear and conspicuous disclosure on collection pages stating consumer is on Respondent's Web site and information will be used, sold, rented, or disclosed to third parties for marketing purposes",
-            "quoted_text": "Provided a clear and conspicuous disclosure on the page(s) through which it collected such information stating: (1) that the consumer is on Respondent's Web site, and (2) that information provided by the consumer to Respondent will be used, sold, rented, or disclosed to third parties for marketing purposes.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 127,
+            "quote_end_line": 130
           }
         ]
       },
       {
         "provision_number": "IV",
-        "title": "Monetary Disgorgement",
+        "title": "Monetary Disgorgement Payment",
         "category": "affirmative_obligation",
-        "summary": "Respondent must pay $9,101.63 to the United States Treasury as disgorgement within five days of service of this Order.",
+        "summary": "Respondent must pay $9,101.63 to the United States Treasury as disgorgement within five days of service of this Order, with interest accruing on any default balance.",
         "requirements": [
           {
-            "description": "Pay $9,101.63 to the United States Treasury as disgorgement by cashier's check or certified check made payable to the Treasurer of the United States",
-            "quoted_text": "IT IS FURTHER ORDERED that within five (5) days of the date of service of this Order, Respondent shall pay $9,101.63 to the United States Treasury as disgorgement. Such payment shall be by cashier's check or certified check made payable to the Treasurer of the United States.",
+            "description": "Pay $9,101.63 to the United States Treasury by cashier's check or certified check within five (5) days of service of this Order",
+            "quoted_text": "IT IS FURTHER ORDERED that within five (5) days of the date of service of this Order, Respondent shall pay $9,101.63 to the United States Treasury as disgorgement. Such payment shall be by cashier’s check or certified check made payable to the Treasurer of the United States.",
             "deadline": "5 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 132,
+            "quote_end_line": 134
           },
           {
-            "description": "Pay interest on unpaid balance if default continues for more than ten days beyond due date",
+            "description": "In the event of default continuing more than ten (10) days beyond the due date, pay interest as computed under 28 U.S.C. § 1961, accruing on the unpaid balance from the date of default until fully paid",
             "quoted_text": "In the event of any default in payment, which default continues for more than ten (10) days beyond the due date of payment, Respondent shall also pay interest as computed under 28 U.S.C. § 1961, which shall accrue on the unpaid balance from the date of default until the date the balance is fully paid.",
-            "deadline": "10 days",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 135,
+            "quote_end_line": 138
           }
         ]
       },
       {
         "provision_number": "V",
-        "title": "Recordkeeping Requirements",
+        "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must maintain and make available to the FTC for five years all documents demonstrating compliance with this Order, including privacy statements, merchant disclosures, and records of third-party disclosures.",
+        "summary": "Respondent must maintain and make available to the FTC for five years all documents demonstrating compliance with the Order, including privacy statements, merchant notices and certifications, and records of third-party disclosures.",
         "requirements": [
           {
-            "description": "Maintain for five years after last dissemination print or electronic copies of all privacy statements relating to collection of personally identifiable information",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent Vision One and its successors and assigns shall, for a period of five (5) years after the last date of dissemination of any representation covered by this Order, maintain and upon request make available to the Federal Trade Commission for inspection and copying a print or electronic copy of all documents demonstrating their compliance with the terms and provisions of this Order, including, but not limited to: A. A sample copy of each different privacy statement or communication relating to the collection of personally identifiable information containing representations about how personally identifiable information will be used and/or disclosed.",
+            "description": "Maintain and upon request make available to the FTC for inspection and copying all documents demonstrating compliance with this Order for a period of five (5) years after the last date of dissemination of any covered representation, including sample copies of privacy statements with URLs and dates",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent Vision One and its successors and assigns shall, for a period of five (5) years after the last date of dissemination of any representation covered by this Order, maintain and upon request make available to the Federal Trade Commission for inspection and copying a print or electronic copy of all documents demonstrating their compliance with the terms and provisions of this Order, including, but not limited to: A. A sample copy of each different privacy statement or communication relating to the collection of personally identifiable information containing representations about how personally identifiable information will be used and/or disclosed. Each Web page copy shall be dated and contain the full URL of the Web page where the material was posted online. Electronic copies shall include all text and graphics files, audio scripts, and other computer files used in presenting the information on the Web; provided, however, that after creation of any Web page or screen in compliance with this Order, Respondent shall not be required to retain a print or electronic copy of any amended Web page or screen to the extent that the amendment does not affect Respondent’s compliance obligations under this Order;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 143,
+            "quote_end_line": 160
           },
           {
-            "description": "Maintain sample copies of documents containing Part III.A. disclosures, list of merchant customers who received disclosures, merchant communications and certifications, complaints from merchants, and sample copies of Part III.B. disclosures",
-            "quoted_text": "B. A sample copy of each different document containing the disclosures required by Part III.A. of this Order; a list of all merchant customers who received each different document containing such disclosures; all communications by merchant customers in response to such disclosures, including all written certifications received pursuant to Part III.A. and any complaints received from merchant customers; and a sample copy of each different document containing the disclosures required by Part III.B.",
+            "description": "Retain sample copies of each different document containing the disclosures required by Part III.A., a list of all merchant customers who received them, all communications and written certifications from merchant customers, any complaints from merchant customers, and sample copies of disclosures required by Part III.B.",
+            "quoted_text": "B. A sample copy of each different document containing the disclosures required by Part III.A. of this Order; a list of all merchant customers who received each different document containing such disclosures; all communications by merchant customers in response to such disclosures, including all written certifications received pursuant to Part III.A. and any complaints received from merchant customers; and a sample copy of each different document containing the disclosures required by Part III.B.; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 161,
+            "quote_end_line": 167
           },
           {
-            "description": "Maintain all invoices, communications, and records relating to disclosure of personally identifiable information to third parties",
+            "description": "Retain all invoices, communications, and records relating to the disclosure to third parties of personally identifiable information collected through merchant customer Web sites",
             "quoted_text": "C. All invoices, communications, and records relating to the disclosure to third parties of personally identifiable information collected through merchant customer Web sites.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 168,
+            "quote_end_line": 170
           }
         ]
       },
       {
         "provision_number": "VI",
-        "title": "Order Acknowledgment",
+        "title": "Order Acknowledgment and Delivery",
         "category": "acknowledgment",
-        "summary": "Respondent must deliver a copy of this Order to all current and future personnel with responsibilities related to the subject matter and obtain signed acknowledgments of receipt.",
+        "summary": "Respondent must deliver a copy of the Order to all current and future principals, officers, directors, managers, employees, agents, and representatives with relevant responsibilities, and obtain signed, dated acknowledgments of receipt.",
         "requirements": [
           {
-            "description": "Deliver copy of Order to current principals, officers, directors, managers, employees, agents, and representatives with relevant responsibilities and secure signed acknowledgments",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent Vision One and its successors and assigns shall deliver a copy of this Order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having responsibilities with respect to the subject matter of this Order, and shall secure from each such person a signed and dated statement acknowledging receipt of the Order.",
+            "description": "Deliver a copy of this Order to all current principals, officers, directors, managers, employees, agents, and representatives with relevant responsibilities and obtain a signed and dated acknowledgment of receipt from each within thirty (30) days after the date of service of this Order",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent Vision One and its successors and assigns shall deliver a copy of this Order to all current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having responsibilities with respect to the subject matter of this Order, and shall secure from each such person a signed and dated statement acknowledging receipt of the Order. Respondent shall deliver this Order to such current personnel within thirty (30) days after the date of service of this Order, and to such future personnel within thirty (30) days after the person assumes such",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 172,
+            "quote_end_line": 178
           },
           {
-            "description": "Deliver Order to current personnel within thirty days after service of Order",
-            "quoted_text": "Respondent shall deliver this Order to such current personnel within thirty (30) days after the date of service of this Order",
-            "deadline": "30 days",
+            "description": "Deliver a copy of this Order to all future personnel with relevant responsibilities and obtain a signed and dated acknowledgment within thirty (30) days after the person assumes such position or responsibilities",
+            "quoted_text": "this Order, and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
+            "deadline": "30 days of assuming position",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Deliver Order to future personnel within thirty days after person assumes relevant position or responsibilities",
-            "quoted_text": "and to such future personnel within thirty (30) days after the person assumes such position or responsibilities.",
-            "deadline": "30 days",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 178,
+            "quote_end_line": 179
           }
         ]
       },
@@ -209,21 +224,25 @@
         "provision_number": "VII",
         "title": "Notification of Corporate Changes",
         "category": "compliance_reporting",
-        "summary": "Respondent must notify the Commission at least thirty days prior to any corporate change that may affect compliance obligations, including dissolution, merger, bankruptcy, or name change.",
+        "summary": "Respondent must notify the FTC at least 30 days prior to any corporate change that may affect compliance obligations under this Order, including dissolution, sale, merger, bankruptcy filings, or name/address changes.",
         "requirements": [
           {
-            "description": "Notify Commission at least thirty days prior to any corporate change affecting compliance obligations, including dissolution, assignment, sale, merger, creation or dissolution of subsidiary, bankruptcy filing, or name/address change",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent Vision One and its successors and assigns shall notify the Commission at least thirty (30) days prior to any change in the corporation(s) that may affect compliance obligations arising under this Order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address.",
-            "deadline": "30 days",
+            "description": "Notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations, including dissolution, assignment, sale, merger, emergence of a successor, creation or dissolution of a subsidiary/parent/affiliate, proposed bankruptcy filing, or change in corporate name or address; send notice by certified mail to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, FTC, Washington, D.C. 20580",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent Vision One and its successors and assigns shall notify the Commission at least thirty (30) days prior to any change in the corporation(s) that may affect compliance obligations arising under this Order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address. Provided, however, that, with respect to any proposed change in the corporation about which Respondent learns less than thirty (30) days prior to the date such action is to take place, Respondent shall notify the Commission as soon as is practicable after obtaining such knowledge. All notices required by this Part shall be sent by certified mail to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580.",
+            "deadline": "30 days prior to change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 184,
+            "quote_end_line": 195
           },
           {
-            "description": "For changes learned about less than thirty days in advance, notify Commission as soon as practicable after obtaining knowledge",
-            "quoted_text": "Provided, however, that, with respect to any proposed change in the corporation about which Respondent learns less than thirty (30) days prior to the date such action is to take place, Respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
-            "deadline": null,
+            "description": "If Respondent learns of a proposed corporate change less than thirty (30) days before it is to occur, notify the Commission as soon as practicable after obtaining such knowledge",
+            "quoted_text": "change in the corporate name or address. Provided, however, that, with respect to any proposed change in the corporation about which Respondent learns less than thirty (30) days prior to the date such action is to take place, Respondent shall notify the Commission as soon as is practicable after obtaining such knowledge. All notices required by this Part shall be sent by certified mail to the Associate Director, Division of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580.",
+            "deadline": "As soon as practicable",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 190,
+            "quote_end_line": 195
           }
         ]
       },
@@ -231,14 +250,16 @@
         "provision_number": "VIII",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondent must file a written compliance report with the Commission within sixty days after service of this Order and at such other times as the Commission may require.",
+        "summary": "Respondent must file a written compliance report with the FTC within sixty days of service of this Order, and at such other times as the FTC may require.",
         "requirements": [
           {
-            "description": "File written compliance report with the Commission setting forth in detail the manner and form of compliance with this Order",
+            "description": "File a written report with the Commission within sixty (60) days after service of this Order setting forth in detail the manner and form in which Respondent has complied with this Order, and at such other times as the FTC may require",
             "quoted_text": "IT IS FURTHER ORDERED that Respondent Vision One and its successors and assigns shall, within sixty (60) days after service of this Order, and at such other times as the Federal Trade Commission may require, file with the Commission a report, in writing, setting forth in detail the manner and form in which it has complied with this Order.",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 197,
+            "quote_end_line": 200
           }
         ]
       },
@@ -246,21 +267,23 @@
         "provision_number": "IX",
         "title": "Order Duration and Termination",
         "category": "duration",
-        "summary": "This Order will terminate on April 19, 2025, or twenty years from the most recent date that the United States or FTC files a complaint alleging any violation of the Order, whichever comes later.",
+        "summary": "The Order terminates on April 19, 2025, or twenty years from the most recent date a complaint alleging an Order violation is filed in federal court, whichever is later, subject to specified exceptions.",
         "requirements": [
           {
-            "description": "Order terminates on April 19, 2025, or twenty years from most recent complaint filing date, whichever is later, subject to certain exceptions",
-            "quoted_text": "This Order will terminate on April 19, 2025, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this Order that terminates in less than twenty (20) years; B. This Order's application to any respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Part.",
+            "description": "Order terminates on April 19, 2025, or twenty (20) years from the most recent date a federal court complaint alleging any violation of the Order is filed, whichever is later; exceptions apply for parts terminating sooner, respondents not named in the complaint, and orders that have already terminated",
+            "quoted_text": "This Order will terminate on April 19, 2025, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this Order that terminates in less than twenty (20) years; B. This Order’s application to any respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Part as though the complaint had 6 never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 202,
+            "quote_end_line": 220
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This Order will terminate on April 19, 2025, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this Order that terminates in less than twenty (20) years; B. This Order's application to any respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Part as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal."
+      "termination_text": "This Order will terminate on April 19, 2025, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Part in this Order that terminates in less than twenty (20) years; B. This Order's application to any respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Part."
     }
   },
   "metadata": {
@@ -270,11 +293,33 @@
     },
     "extraction_stats": {
       "complaint_counts": 1,
-      "complaint_representations": 4,
+      "complaint_representations": 3,
       "order_provisions": 9,
       "order_definitions": 5,
-      "order_requirements": 17
+      "order_requirements": 15,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 1,
+        "III": 2,
+        "IV": 2,
+        "V": 3,
+        "VI": 2,
+        "VII": 2,
+        "VIII": 1,
+        "IX": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 1
+      },
+      "verification_details": {
+        "complaint_verified": 3,
+        "complaint_total": 3,
+        "order_verified": 15,
+        "order_total": 15
+      }
     },
-    "processing_time_seconds": 105.8
+    "processing_time_seconds": 98.7
   }
 }

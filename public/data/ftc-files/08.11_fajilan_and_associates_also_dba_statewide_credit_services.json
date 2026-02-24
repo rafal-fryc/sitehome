@@ -2,11 +2,11 @@
   "case_info": {
     "docket_number": "C-4332",
     "company": {
-      "name": "Fajilan and Associates, Inc. also d/b/a Statewide Credit Services",
+      "name": "Fajilan and Associates, Inc.",
       "incorporation_state": "California",
       "entity_type": "corporation",
       "address": "2690 South White Road, Suite 235, San Jose, California 95148",
-      "business_description": "Statewide contracts with nationwide consumer reporting agencies to obtain consumer reports that it assembles and merges into single 'trimerge reports' containing sensitive consumer information such as credit histories, Social Security numbers, and addresses. The company sells these trimerge reports to mortgage brokers and others to determine consumers' eligibility for credit."
+      "business_description": "Fajilan and Associates, Inc., operating as Statewide Credit Services, contracts with nationwide consumer reporting agencies to obtain consumer reports, which it assembles and merges into trimerge reports containing sensitive consumer information such as full names, addresses, Social Security numbers, dates of birth, employer history, and credit account information. These trimerge reports are sold to mortgage brokers and other clients to determine consumers' eligibility for credit."
     },
     "commissioners": [
       "Jon Leibowitz, Chairman",
@@ -19,146 +19,210 @@
       "month": 8,
       "year": 2011
     },
-    "legal_authority": "Section 5 of the Federal Trade Commission Act, 15 U.S.C. § 45(a); the Standards for Safeguards Customer Information Rule, 16 C.F.R. Part 314, issued pursuant to Title V, Subtitle A of the Gramm-Leach-Bliley Act, 15 U.S.C. §§ 6801-6809; and the Fair Credit Reporting Act, 15 U.S.C. § 1681 et seq.",
-    "violation_type": "unfair",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a); the Fair Credit Reporting Act, 15 U.S.C. § 1681 et seq.; and the Standards for Safeguarding Customer Information Rule, 16 C.F.R. Part 314, issued pursuant to Title V, Subtitle A of the Gramm-Leach-Bliley Act, 15 U.S.C. §§ 6801-6809",
+    "violation_type": "both",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/092-3089-fajilan-associates-inc-also-dba-statewide-credit-services-matter"
   },
   "complaint": {
-    "factual_background": "Fajilan and Associates, Inc., d/b/a Statewide Credit Services, is a consumer reporting agency that assembles and sells trimerge credit reports containing sensitive consumer information. Between October 2006 and November 2007, the company failed to implement reasonable security measures for its online portal and did not verify the security of end user clients' computer systems. As a result, hackers exploited vulnerabilities in the company's and its clients' networks, accessing at least 323 consumer reports without authorization. After the breaches, the company failed to investigate the causes, patch vulnerabilities, or warn other clients of the threats.",
-    "representations_made": [],
+    "factual_background": "Statewide Credit Services, a consumer reporting agency, sold sensitive trimerge credit reports (containing Social Security numbers, account numbers, and other personal data) to mortgage brokers via an online portal. From at least October 2006, the company failed to implement basic information security policies, did not verify that end-user clients had adequate security measures such as firewalls or antivirus software, and failed to monitor for anomalous access. As a direct result, hackers exploited vulnerabilities in Statewide's and its clients' networks between October 2006 and November 2007, gaining unauthorized access to at least 323 consumer reports. After each breach, respondents took no meaningful corrective action — they did not patch vulnerabilities, did not warn other clients, and continued granting access to end users with unverified security.",
+    "representations_made": [
+      {
+        "description": "Respondents failed to develop and disseminate information security policies for Statewide and its end user clients, assess security risks, implement monitoring, or take corrective action — effectively representing through their conduct that their security practices were reasonable when they were not",
+        "quoted_text": "8. From at least October 2006, respondents have engaged in a number of practices that, taken together, failed to provide reasonable and appropriate security for consumers’ personal information. Among other things, respondents failed to: a. develop and disseminate information security policies for Statewide and its end user clients; b. assess the risks of allowing end users with unverified or inadequate security to access consumer reports through Statewide’s portal; c. implement reasonable steps to address these risks by, for example, evaluating the security of end user’s computer networks, requiring appropriate information security measures, and training end user clients; 2 d. implement reasonable steps to maintain an effective system of monitoring access to consumer reports by Statewide’s end users, including by monitoring to detect anomalies and other suspicious activity; and e. take appropriate action to correct existing vulnerabilities or threats to personal information in light of known risks.",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 8,
+        "quote_start_line": 67,
+        "quote_end_line": 84
+      },
+      {
+        "description": "Respondents allowed clients without basic security measures (firewalls, updated antivirus) to access consumer reports, directly enabling hackers to obtain highly sensitive consumer data",
+        "quoted_text": "9. Because of Statewide’s lack of information security policies and procedures, respondents allow clients without basic security measures in place, such as firewalls and updated antivirus software, to have access to their trimerge reports. The lack of such security measures directly caused highly-sensitive consumer reports to be available to hackers, as explained below.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 9,
+        "quote_start_line": 85,
+        "quote_end_line": 89
+      },
+      {
+        "description": "Following multiple breaches, respondents made no reasonable efforts to determine causes, patch vulnerabilities, change screening policies, or require end users to demonstrate their systems were secure",
+        "quoted_text": "11. Following each of the breaches, respondents did not make reasonable efforts to determine the cause(s) of the breaches and protect against future breaches. For example, respondents did not perform a comprehensive assessment of Statewide’s computer system, and made no efforts to identify and patch any vulnerabilities. Nor did respondents change any of their policies for screening new end users or require that new and existing end user clients submit any documentation demonstrating that the clients’ computer systems were virus free and otherwise properly protected.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 11,
+        "quote_start_line": 97,
+        "quote_end_line": 104
+      },
+      {
+        "description": "Respondents made no effort to warn other end users of known threats and continued granting access to clients whose information security had not been adequately verified",
+        "quoted_text": "12. In addition, respondents have made no effort to warn their other end users of a known threat, or to suggest they make any efforts to ensure their systems were adequately secured. Respondents continue to give access to consumer reports to end user clients whose information security has not been adequately verified.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 12,
+        "quote_start_line": 105,
+        "quote_end_line": 108
+      }
+    ],
     "counts": [
       {
         "count_number": 1,
-        "title": "Violations of the Safeguards Rule",
-        "representation": "As a financial institution subject to the GLB Act Safeguards Rule, respondents were required to develop a comprehensive written information security program with reasonable safeguards to protect customer information",
-        "fact": "Respondents failed to implement reasonable security policies and procedures, including: (a) failing to design and implement information safeguards to control risks to customer information; (b) failing to regularly test or monitor the effectiveness of existing controls; (c) failing to evaluate and adjust the security program in light of known risks; and (d) failing to develop, implement, and maintain a comprehensive information security program",
-        "conclusion": "Respondents have violated the Safeguards Rule, 16 C.F.R. §§ 314.3, 314.4"
+        "title": "Violations of the Safeguards Rule (GLB Act)",
+        "representation": "Respondents purported to operate as a financial institution handling consumer information while failing to implement any comprehensive written information security program, including failing to design and implement safeguards, failing to test or monitor existing controls, failing to evaluate and adjust the program in light of known risks, and failing to develop or maintain a comprehensive information security program.",
+        "fact": "The Safeguards Rule (16 C.F.R. §§ 314.3, 314.4) requires financial institutions to develop a comprehensive written information security program with reasonable administrative, technical, and physical safeguards, including designating a coordinator, identifying risks, implementing and testing safeguards, overseeing service providers, and evaluating the program in light of changing circumstances.",
+        "conclusion": "As described in Paragraphs 7 through 12, respondents failed to implement reasonable security policies and procedures to protect sensitive consumer information, and thereby engaged in violations of the Safeguards Rule."
       },
       {
         "count_number": 2,
-        "title": "Violation of FCRA Section 604 - Furnishing Reports Without Permissible Purpose",
-        "representation": "Consumer reporting agencies are prohibited from furnishing consumer reports except for specified permissible purposes under FCRA Section 604",
-        "fact": "In multiple instances, respondents furnished consumer reports to hackers that did not have a permissible purpose to obtain a consumer report",
-        "conclusion": "Respondents have violated Section 604 of the FCRA, 15 U.S.C. § 1681b"
+        "title": "Furnishing Consumer Reports Without Permissible Purpose (FCRA § 604)",
+        "representation": "In multiple instances, respondents furnished consumer reports to hackers who had no permissible purpose to obtain them.",
+        "fact": "Section 604 of the FCRA, 15 U.S.C. § 1681b, prohibits a consumer reporting agency from furnishing a consumer report except for specified permissible purposes.",
+        "conclusion": "By and through the acts and practices described in Paragraphs 7 through 12, respondents violated Section 604 of the FCRA, 15 U.S.C. § 1681b."
       },
       {
         "count_number": 3,
-        "title": "Violation of FCRA Section 607(a) - Failure to Maintain Reasonable Procedures",
-        "representation": "Consumer reporting agencies must maintain reasonable procedures to limit the furnishing of consumer reports to permissible purposes listed under Section 604",
-        "fact": "Respondents failed to maintain reasonable procedures to limit the furnishing of consumer reports to the purposes listed under Section 604 of the FCRA",
-        "conclusion": "Respondents have violated Section 607(a) of the FCRA, 15 U.S.C. § 1681e(a)"
+        "title": "Failure to Maintain Reasonable Procedures to Limit Furnishing (FCRA § 607(a))",
+        "representation": "Respondents failed to maintain reasonable procedures to limit the furnishing of consumer reports to permissible purposes.",
+        "fact": "Section 607(a) of the FCRA, 15 U.S.C. § 1681e(a), requires every consumer reporting agency to maintain reasonable procedures to limit the furnishing of consumer reports to permissible purposes listed under Section 604.",
+        "conclusion": "By and through the acts and practices described in Paragraphs 7 through 12, respondents violated Section 607(a) of the FCRA, 15 U.S.C. § 1681e(a)."
       },
       {
         "count_number": 4,
-        "title": "Violation of FCRA Section 607(a) - Furnishing Reports with Reasonable Grounds to Believe Improper Use",
-        "representation": "A consumer reporting agency is prohibited from furnishing a consumer report if it has reasonable grounds for believing the report will not be used for a permissible purpose",
-        "fact": "In numerous instances, respondents furnished consumer reports under circumstances in which they had reasonable grounds for believing that the reports would not be used for a permissible purpose",
-        "conclusion": "Respondents have violated Section 607(a) of the FCRA, 15 U.S.C. § 1681e(a)"
+        "title": "Furnishing Reports With Reasonable Grounds to Believe No Permissible Purpose (FCRA § 607(a))",
+        "representation": "In numerous instances, respondents furnished consumer reports under circumstances in which they had reasonable grounds for believing the reports would not be used for a permissible purpose.",
+        "fact": "Section 607(a) of the FCRA, 15 U.S.C. § 1681e(a), prohibits a consumer reporting agency from furnishing a consumer report to any person if it has reasonable grounds for believing the report will not be used for a permissible purpose.",
+        "conclusion": "By and through the acts and practices described in Paragraphs 10 through 12, respondents violated Section 607(a) of the FCRA, 15 U.S.C. § 1681e(a)."
       },
       {
         "count_number": 5,
-        "title": "Unfair Acts or Practices - FTC Act Section 5(a)",
-        "representation": "Respondents were obligated to employ reasonable and appropriate measures to secure the personal information they maintain and sell",
-        "fact": "Respondents have not employed reasonable and appropriate measures to secure the personal information they maintain and sell. This failure has caused or is likely to cause substantial injury to consumers that is not offset by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers",
-        "conclusion": "This practice was, and is, an unfair act or practice in or affecting commerce in violation of Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)"
+        "title": "Unfair and Deceptive Acts via FCRA Violations (FTC Act § 5(a))",
+        "representation": "By their violations of Sections 604 and 607(a) of the FCRA, respondents engaged in unfair and deceptive acts or practices in or affecting commerce.",
+        "fact": "Pursuant to Section 621(a) of the FCRA, 15 U.S.C. § 1681s, FCRA violations constitute unfair and deceptive acts and practices under Section 5(a) of the FTC Act.",
+        "conclusion": "Respondents engaged in unfair and deceptive acts and practices in or affecting commerce, in violation of Section 5(a) of the FTC Act, 15 U.S.C. § 45(a)."
+      },
+      {
+        "count_number": 6,
+        "title": "Unfair Security Practices (FTC Act § 5(a))",
+        "representation": "Respondents did not employ reasonable and appropriate measures to secure the personal information they maintain and sell.",
+        "fact": "Respondents' failure to employ reasonable and appropriate security measures has caused or is likely to cause substantial injury to consumers that is not offset by countervailing benefits and is not reasonably avoidable by consumers.",
+        "conclusion": "This practice was, and is, an unfair act or practice in or affecting commerce in violation of Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a)."
       }
     ]
   },
   "order": {
     "definitions": {
       "Personal information": "individually identifiable information from or about an individual consumer including, but not limited to: (a) a first and last name; (b) a home or other physical address, including street name and name of city or town; (c) an email address or other online contact information; (d) a telephone number; (e) a Social Security number; (f) a credit card or debit card account number; (g) checking account information, (h) a driver's license, military or state identification number; (i) a persistent identifier, such as a customer number, that is combined with other available data that identifies an individual consumer; or (j) any information that is combined with any of (a) through (i) above.",
-      "Gramm-Leach-Bliley Act or GLB Act": "15 U.S.C. §§ 6801-6809, as amended, the \"Safeguards Rule\" or the \"Standards for Safeguarding Customer Information Rule\" refers to 16 C.F.R. Part 314, issued pursuant to Title V, Subtitle A of the GLB Act, 15 U.S.C. §§ 6801-6809.",
-      "Financial institution": "as defined in Section 509(3)(A) of the GLB Act, 15 U.S.C. § 6809(3)(A).",
-      "The Fair Credit Reporting Act or FCRA": "15 U.S.C. § 1681 et seq.",
-      "Consumer report": "as defined in Section 603(d)(1) of the FCRA, 15 U.S.C. § 1681a(d)(1).",
-      "Corporate respondent": "Statewide Credit Services, Inc. and its subsidiaries, divisions, affiliates, successors and assigns. \"Individual respondent\" means Robert Fajilan. \"Respondents\" means the Individual respondent and Corporate respondent, individually, collectively, or in any combination.",
-      "Commerce": "as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44."
+      "Gramm-Leach-Bliley Act": "refers to 15 U.S.C. §§ 6801-6809, as amended, the \"Safeguards Rule\" or the \"Standards for Safeguarding Customer Information Rule\" refers to 16 C.F.R. Part 314, issued pursuant to Title V, Subtitle A of the GLB Act, 15 U.S.C. §§ 6801-6809.",
+      "Financial institution": "shall mean as defined in Section 509(3)(A) of the GLB Act, 15 U.S.C. § 6809(3)(A).",
+      "The Fair Credit Reporting Act": "refers to 15 U.S.C. § 1681 et seq.",
+      "Consumer report": "shall mean as defined in Section 603(d)(1) of the FCRA, 15 U.S.C. § 1681a(d)(1).",
+      "Corporate respondent": "Statewide Credit Services, Inc. and its subsidiaries, divisions, affiliates, successors and assigns.",
+      "Individual respondent": "Robert Fajilan.",
+      "Respondents": "the Individual respondent and Corporate respondent, individually, collectively, or in any combination.",
+      "Commerce": "shall mean as defined in Section 4 of the Federal Trade Commission Act, 15 U.S.C. § 44."
     },
     "provisions": [
       {
         "provision_number": "I",
-        "title": "Information Security Program",
+        "title": "Comprehensive Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondents must establish and maintain a comprehensive information security program to protect personal information, including designation of responsible employees, risk assessment, safeguards implementation, service provider oversight, and program evaluation.",
+        "summary": "Corporate respondent and any business entity controlled by Individual respondent that collects, maintains, or stores personal information must establish, implement, and maintain a comprehensive information security program, documented in writing, with administrative, technical, and physical safeguards.",
         "requirements": [
           {
-            "description": "Establish and implement comprehensive information security program",
-            "quoted_text": "IT IS ORDERED that Corporate respondent and any business entity that Individual respondent, Robert Fajilan, controls, directly or indirectly, which collects, maintains, or stores personal information from or about consumers, shall, no later than the date of service of this order, establish and implement, and thereafter maintain, a comprehensive information security program that is reasonably designed to protect the security, confidentiality, and integrity of personal information collected from or about consumers, including the security, confidentiality, and integrity of personal information accessible to end users.",
-            "deadline": "no later than the date of service",
+            "description": "Establish and maintain a comprehensive, written information security program reasonably designed to protect the security, confidentiality, and integrity of personal information, no later than the date of service of this order.",
+            "quoted_text": "IT IS ORDERED that Corporate respondent and any business entity that Individual respondent, Robert Fajilan, controls, directly or indirectly, which collects, maintains, or stores personal information from or about consumers, shall, no later than the date of service of this order, establish and implement, and thereafter maintain, a comprehensive information security program that is reasonably designed to protect the security, confidentiality, and integrity of personal information collected from or about consumers, including the security, confidentiality, and integrity of personal information accessible to end users. Such program, the content and implementation of which must be fully documented in writing, shall contain administrative, technical, and physical safeguards appropriate to Corporate respondent’s or the entity’s size and complexity, the nature and scope of Corporate respondent’s or the entity’s activities, and the sensitivity of the personal information collected from or about consumers. The information security program must include:",
+            "deadline": "date of service of order",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 89,
+            "quote_end_line": 100
           },
           {
-            "description": "Designate employee(s) to coordinate and be accountable for the information security program",
-            "quoted_text": "the designation of an employee or employees to coordinate and be accountable for the information security program;",
+            "description": "Designate an employee or employees to coordinate and be accountable for the information security program.",
+            "quoted_text": "A. the designation of an employee or employees to coordinate and be accountable for the information security program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 101,
+            "quote_end_line": 102
           },
           {
-            "description": "Identify and assess material internal and external risks to personal information security",
-            "quoted_text": "the identification of material internal and external risks to the security, confidentiality, and integrity of personal information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management; (2) information systems, including network and software design, access, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, or other systems failures;",
+            "description": "Identify material internal and external risks to personal information security and assess the sufficiency of existing safeguards, covering at minimum employee training and management, information systems, and prevention/detection/response to attacks.",
+            "quoted_text": "B. the identification of material internal and external risks to the security, confidentiality, and integrity of personal information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, and assessment of the sufficiency of any safeguards in place to control these risks. At a minimum, this risk assessment should include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management; (2) information systems, including network and software design, access, information processing, storage, transmission, and disposal; and (3) prevention, detection, and response to attacks, intrusions, or other systems failures;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 103,
+            "quote_end_line": 113
           },
           {
-            "description": "Design and implement reasonable safeguards with regular testing and monitoring",
-            "quoted_text": "the design and implementation of reasonable safeguards to control the risks identified through risk assessment and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures;",
+            "description": "Design and implement reasonable safeguards to control identified risks, and regularly test or monitor the effectiveness of the safeguards' key controls, systems, and procedures.",
+            "quoted_text": "C. the design and implementation of reasonable safeguards to control the risks identified through risk assessment and regular testing or monitoring 3 of the effectiveness of the safeguards’ key controls, systems, and procedures;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 114,
+            "quote_end_line": 120
           },
           {
-            "description": "Select and retain service providers capable of safeguarding personal information and require them by contract to maintain safeguards",
-            "quoted_text": "the development and use of reasonable steps to select and retain service providers capable of appropriately safeguarding personal information they receive from the Corporate respondent or the entity, and requiring service providers by contract to implement and maintain appropriate safeguards;",
+            "description": "Take reasonable steps to select and retain service providers capable of appropriately safeguarding personal information, and require service providers by contract to implement and maintain appropriate safeguards.",
+            "quoted_text": "D. the development and use of reasonable steps to select and retain service providers capable of appropriately safeguarding personal information they receive from the Corporate respondent or the entity, and requiring service providers by contract to implement and maintain appropriate safeguards; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 121,
+            "quote_end_line": 125
           },
           {
-            "description": "Evaluate and adjust information security program based on testing results and operational changes",
-            "quoted_text": "the evaluation and adjustment of respondent's or the entity's information security program in light of the results of the testing and monitoring required by sub-Part C, any material changes to Corporate respondent's or the entity's operations or business arrangements, or any other circumstances that Corporate respondent or the entity know or have reason to know may have a material impact on the effectiveness of their information security program.",
+            "description": "Evaluate and adjust the information security program based on testing and monitoring results, material changes to operations or business arrangements, or any other circumstances that may have a material impact on its effectiveness.",
+            "quoted_text": "E. the evaluation and adjustment of respondent’s or the entity’s information security program in light of the results of the testing and monitoring required by sub-Part C, any material changes to Corporate respondent’s or the entity’s operations or business arrangements, or any other circumstances that Corporate respondent or the entity know or have reason to know may have a material impact on the effectiveness of their information security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 126,
+            "quote_end_line": 131
           }
         ]
       },
       {
         "provision_number": "II",
-        "title": "Compliance with Safeguards Rule",
+        "title": "Prohibition Against Safeguards Rule Violations",
         "category": "prohibition",
-        "summary": "Respondents must not violate any provision of the Safeguards Rule, 16 C.F.R. Part 314.",
+        "summary": "Corporate respondent and any business entity controlled by Individual respondent must not violate any provision of the FTC Safeguards Rule, 16 C.F.R. Part 314.",
         "requirements": [
           {
-            "description": "Must not violate any provision of the Safeguards Rule",
-            "quoted_text": "IT IS FURTHER ORDERED that Corporate respondent and any business entity that Individual respondent, Robert Fajilan controls, directly or indirectly, and their officers, agents, representatives, and employees, shall not, directly or through any corporation, subsidiary, division, website, or other device, violate any provision of the Safeguards Rule, 16 C.F.R. Part 314.",
+            "description": "Must not, directly or through any corporation, subsidiary, division, website, or other device, violate any provision of the Safeguards Rule, 16 C.F.R. Part 314, including any future amendments or modifications to that Rule.",
+            "quoted_text": "IT IS FURTHER ORDERED that Corporate respondent and any business entity that Individual respondent, Robert Fajilan controls, directly or indirectly, and their officers, agents, representatives, and employees, shall not, directly or through any corporation, subsidiary, division, website, or other device, violate any provision of the Safeguards Rule, 16 C.F.R. Part 314. In the event that this Rule is hereafter amended or modified, respondents’ compliance with that Rule as so amended or modified shall not be a violation of this order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 133,
+            "quote_end_line": 138
           }
         ]
       },
       {
         "provision_number": "III",
-        "title": "FCRA Compliance - Permissible Purpose and Reasonable Procedures",
-        "category": "affirmative_obligation",
-        "summary": "Respondents must furnish consumer reports only to those with permissible purpose and maintain reasonable procedures to limit furnishing to permissible purposes.",
+        "title": "FCRA Compliance — Permissible Purpose for Consumer Reports",
+        "category": "prohibition",
+        "summary": "Corporate respondent and any business entity controlled by Individual respondent must furnish consumer reports only to those with a permissible purpose and must maintain reasonable procedures to ensure this, as required by the FCRA.",
         "requirements": [
           {
-            "description": "Furnish consumer reports only to those with a permissible purpose under FCRA Section 604",
-            "quoted_text": "furnish such consumer report only to those with a permissible purpose as described in Section 604 of the Fair Credit Reporting Act, 15 U.S.C. § 1681b;",
+            "description": "Furnish consumer reports only to those with a permissible purpose as described in Section 604 of the FCRA, 15 U.S.C. § 1681b.",
+            "quoted_text": "A. furnish such consumer report only to those with a permissible purpose as described in Section 604 of the Fair Credit Reporting Act, 15 U.S.C. § 1681b;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 143,
+            "quote_end_line": 144
           },
           {
-            "description": "Maintain reasonable procedures to limit furnishing consumer reports to permissible purposes",
-            "quoted_text": "maintain reasonable procedures to limit the furnishing of such consumer report to those with a permissible purpose and ensure that no consumer report is furnished to any person when there are reasonable grounds to believe that the consumer report will not be used for a permissible purpose, as required by Section 607(a) of the Fair Credit Reporting Act, 15 U.S.C. § 1681e(a).",
+            "description": "Maintain reasonable procedures to limit furnishing of consumer reports to those with a permissible purpose and ensure no consumer report is furnished when there are reasonable grounds to believe it will not be used for a permissible purpose, as required by Section 607(a) of the FCRA.",
+            "quoted_text": "B. maintain reasonable procedures to limit the furnishing of such consumer report to those with a permissible purpose and ensure that no consumer report is furnished to any person when there are reasonable grounds to believe that the consumer report will not be used for a permissible purpose, as required by Section 607(a) of the Fair Credit Reporting Act, 15 U.S.C. § 1681e(a).",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 145,
+            "quote_end_line": 149
           }
         ]
       },
@@ -166,35 +230,61 @@
         "provision_number": "IV",
         "title": "Third-Party Security Assessments",
         "category": "assessment",
-        "summary": "Respondents must obtain initial and biennial third-party security assessments from qualified professionals for 20 years, with the initial assessment covering the first 180 days and subsequent assessments covering each 2-year period.",
+        "summary": "Respondents must obtain initial and biennial third-party security assessments from a qualified, independent professional (CISSP, CISA, or GIAC-certified), covering the first 180 days after service and then every two years for 20 years.",
         "requirements": [
           {
-            "description": "Obtain initial and biennial third-party security assessments from qualified professionals",
-            "quoted_text": "IT IS FURTHER ORDERED that, Corporate respondent and any business entity that Individual respondent, Robert Fajilan, controls, directly or indirectly, which collects, maintains, or stores personal information from or about consumers, shall, in connection with their compliance with Part I of this order, obtain initial and biennial assessments and reports (\"Assessments\") from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession.",
+            "description": "Obtain initial and biennial assessments from a qualified, objective, independent third-party professional (CISSP, CISA, GIAC, or FTC-approved equivalent), prepared within 60 days after the end of each reporting period. The initial reporting period covers the first 180 days after service; each subsequent biennial period covers two years thereafter for 20 years.",
+            "quoted_text": "compliance with Part I of this order, obtain initial and biennial assessments and reports (“Assessments”) from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies by a person qualified as a Certified Information System Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); a person holding Global Information Assurance Certification (GIAC) from the SysAdmin, Audit, Network, Security (SANS) Institute; or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, D.C. 20580. The reporting period for the Assessments shall cover: (1) the first one hundred and eighty (180) days after service of the order for the initial Assessment, and (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments. Each Assessment shall:",
+            "deadline": "Initial: within 60 days after first 180-day period; biennial thereafter",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 157,
+            "quote_end_line": 169
+          },
+          {
+            "description": "Each Assessment must set forth the specific administrative, technical, and physical safeguards implemented and maintained during the reporting period.",
+            "quoted_text": "A. set forth the specific administrative, technical, and physical safeguards that Corporate respondent or the entity have implemented and maintained during the reporting period;",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 170,
+            "quote_end_line": 172
           },
           {
-            "description": "Complete each assessment within 60 days after the end of the reporting period",
-            "quoted_text": "Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies by a person qualified as a Certified Information System Security Professional (CISSP) or as a Certified Information Systems Auditor (CISA); a person holding Global Information Assurance Certification (GIAC) from the SysAdmin, Audit, Network, Security (SANS) Institute; or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, D.C. 20580.",
-            "deadline": "60 days",
+            "description": "Each Assessment must explain how the safeguards are appropriate to the entity's size, complexity, activities, and sensitivity of personal information collected.",
+            "quoted_text": "B. explain how such safeguards are appropriate to Corporate respondent’s or the entity’s size and complexity, the nature and scope of Corporate respondent’s or the entity’s activities, and the sensitivity of the personal information collected from or about consumers;",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 173,
+            "quote_end_line": 176
           },
           {
-            "description": "Provide initial assessment to FTC within 10 days after preparation",
-            "quoted_text": "Respondents shall provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared.",
-            "deadline": "10 days",
+            "description": "Each Assessment must explain how the implemented safeguards meet or exceed the protections required by the Safeguards Rule.",
+            "quoted_text": "C. explain how the safeguards that have been implemented meet or exceed the protections required by the Safeguards Rule; and",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 177,
+            "quote_end_line": 178
           },
           {
-            "description": "Retain all subsequent biennial assessments and provide to FTC within 10 days upon request",
-            "quoted_text": "All subsequent biennial Assessments shall be retained by respondents until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days after respondents receive such request.",
-            "deadline": "10 days",
+            "description": "Each Assessment must certify that the security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of personal information is protected throughout the reporting period.",
+            "quoted_text": "D. certify that Corporate respondent’s or the entity’s security program is operating with sufficient effectiveness to provide reasonable assurance that the security, confidentiality, and integrity of personal information is protected and has so operated throughout the reporting period.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 179,
+            "quote_end_line": 182
+          },
+          {
+            "description": "Provide the initial Assessment to the FTC Associate Director for Enforcement within 10 days after it has been prepared. Retain all subsequent biennial Assessments until the order terminates and provide them to the Associate Director within 10 days of request.",
+            "quoted_text": "Respondents shall provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared. All subsequent biennial Assessments shall be retained by respondents until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days after respondents receive such request.",
+            "deadline": "10 days after preparation (initial); 10 days after request (biennial)",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 183,
+            "quote_end_line": 187
           }
         ]
       },
@@ -202,64 +292,78 @@
         "provision_number": "V",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondents must maintain and make available to the FTC documents relating to compliance, communications with law enforcement, and assessment materials for specified retention periods.",
+        "summary": "Respondents must maintain and make available to the FTC specified records for defined periods: compliance documents for 5 years, law enforcement communications for 5 years, and assessment-related materials for 3 years after each Assessment.",
         "requirements": [
           {
-            "description": "Maintain for 5 years documents relating to compliance that contradict, qualify, or call into question compliance with the order",
-            "quoted_text": "for a period of five (5) years, a print or electronic copy of each document relating to compliance, including but not limited to documents, prepared by or on behalf of Corporate respondent or the entity, that contradict, qualify, or call into question Corporate respondent's or the entity's compliance with this order;",
-            "deadline": null,
+            "description": "Maintain for 5 years a print or electronic copy of each document relating to compliance, including documents that contradict, qualify, or call into question compliance with this order.",
+            "quoted_text": "A. for a period of five (5) years, a print or electronic copy of each document relating to compliance, including but not limited to documents, prepared by or on behalf of Corporate respondent or the entity, that contradict, qualify, or call into question Corporate respondent’s or the entity’s compliance with this order;",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 196,
+            "quote_end_line": 199
           },
           {
-            "description": "Maintain for 5 years copies of all subpoenas and communications with law enforcement relating to consumer reports or personal information",
-            "quoted_text": "for a period of five (5) years, copies of all subpoenas and other communications with law enforcement entities or personnel, whether in written or electronic form, if such documents bear in any respect on Corporate respondent's or the entity's collection, maintenance, or furnishing of consumer reports or other personal information of consumers;",
-            "deadline": null,
+            "description": "Maintain for 5 years copies of all subpoenas and other communications with law enforcement entities or personnel (written or electronic) that bear on the collection, maintenance, or furnishing of consumer reports or other personal information.",
+            "quoted_text": "B. for a period of five (5) years, copies of all subpoenas and other communications with law enforcement entities or personnel, whether in written or electronic form, if such documents bear in any respect on Corporate respondent’s or the entity’s collection, maintenance, or furnishing of consumer reports or other personal information of consumers; and",
+            "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 200,
+            "quote_end_line": 204
           },
           {
-            "description": "Maintain for 3 years after each assessment all materials relied upon to prepare the assessment",
-            "quoted_text": "for a period of three (3) years after the date of preparation of each Assessment required under Part IV of this order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of the Corporate respondent or the entity, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials relating to the Corporate respondent's or the entity's compliance with Parts I and II of this order, for the compliance period covered by such Assessment.",
-            "deadline": null,
+            "description": "Maintain for 3 years after the date of preparation of each Assessment all materials relied upon to prepare the Assessment, including plans, reports, studies, reviews, audits, audit trails, policies, training materials, assessments, and any other materials relating to compliance with Parts I and II.",
+            "quoted_text": "C. for a period of three (3) years after the date of preparation of each Assessment required under Part IV of this order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of the Corporate respondent or the entity, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials relating to the Corporate respondent’s or the entity’s compliance with Parts I and II of this order, for the compliance period covered by such Assessment.",
+            "deadline": "3 years after each Assessment",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 205,
+            "quote_end_line": 211
           }
         ]
       },
       {
         "provision_number": "VI",
-        "title": "Order Acknowledgment and Delivery",
+        "title": "Order Delivery and Acknowledgment",
         "category": "acknowledgment",
-        "summary": "For 5 years, respondents must deliver copies of the order to current and future personnel and obtain signed acknowledgments of receipt within 30 days.",
+        "summary": "For 5 years from entry of the order, respondents must deliver copies of the order to current and future principals, officers, managers, employees, and agents, and must obtain signed, dated acknowledgments of receipt within 30 days of delivery.",
         "requirements": [
           {
-            "description": "Corporate respondent must deliver order to principals, officers, directors, managers, relevant employees, and entities resulting from structural changes",
-            "quoted_text": "Corporate respondent must deliver a copy of this Order to (1) all current and future principals, officers, directors, and managers, (2) all employees, agents and representatives who engage in conduct related to the subject matter of the Order, and (3) any business entity resulting from any change in structure set forth in Part VIII. For current personnel, delivery shall be within five (5) days of service of this Order. For new personnel, delivery shall occur prior to them assuming their responsibilities. For any business entity resulting from any change in structure set forth in Part VIII, delivery shall be at least ten (10) days prior to the change in structure.",
-            "deadline": "5 days",
+            "description": "Corporate respondent must deliver a copy of the Order to all current and future principals, officers, directors, managers, relevant employees/agents, and any successor business entity: within 5 days of service for current personnel, prior to assuming responsibilities for new personnel, and at least 10 days prior to any structural change.",
+            "quoted_text": "A. Corporate respondent must deliver a copy of this Order to (1) all current and future principals, officers, directors, and managers, (2) all employees, agents and representatives who engage in conduct related to the subject matter of the Order, and (3) any business entity resulting from any change in structure set forth in Part VIII. For current personnel, delivery shall be within five (5) days of service of this Order. For new personnel, delivery shall occur prior to them assuming their responsibilities. For any business entity resulting from any change in structure set forth in Part VIII, delivery shall be at least ten (10) days prior to the change in structure.",
+            "deadline": "5 days (current personnel); prior to start (new personnel); 10 days before structural change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 215,
+            "quote_end_line": 223
           },
           {
-            "description": "Individual respondent must deliver order to personnel of businesses he controls that collect personal information",
-            "quoted_text": "For any business that Individual respondent, Robert Fajilan, controls, directly or indirectly, which collects, maintains, or stores personal information from or about consumers, Individual respondent must deliver a copy of this Order to (1) all principals, officers, directors, and managers of that business, (2) all employees, agents, and representatives of that business who engage in conduct related to the subject matter of the Order, and (3) any business entity resulting from any change in structure set forth in Part VII. For current personnel, delivery shall be within five (5) days of service of this Order. For new personnel, delivery shall occur prior to them assuming their responsibilities. For any business entity resulting from any change in structure set forth in Part VII, delivery shall be at least ten (10) days prior to the change in structure.",
-            "deadline": "5 days",
+            "description": "Individual respondent must deliver a copy of the Order to all principals, officers, directors, managers, and relevant employees/agents of any business he controls that handles personal information, and to successor entities: within 5 days of service for current personnel, prior to assuming responsibilities for new personnel, and at least 10 days prior to structural changes.",
+            "quoted_text": "B. For any business that Individual respondent, Robert Fajilan, controls, directly or indirectly, which collects, maintains, or stores personal information from or about consumers, Individual respondent must deliver a copy of this Order to (1) all principals, officers, directors, and managers of that business, (2) all employees, agents, and representatives of that business who engage in conduct related to the subject matter of the Order, and (3) any business entity resulting from any change in structure set forth in Part VII. For current personnel, delivery shall be within five (5) days of service of this Order. For new personnel, delivery shall occur prior to them assuming their responsibilities. For any business entity resulting from any change in structure set forth in Part VII, delivery shall be at least ten (10) days prior to the change in structure.",
+            "deadline": "5 days (current personnel); prior to start (new personnel); 10 days before structural change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 224,
+            "quote_end_line": 234
           },
           {
-            "description": "Individual respondent must deliver order to principals and managers of businesses where he has security policy responsibilities",
-            "quoted_text": "For any business that collects, maintains, or stores personal information from or about consumers, where Individual respondent, Robert Fajilan, is not a controlling person of the business, but he otherwise has responsibility, in whole or in part, for developing or overseeing the implementation of policies and procedures to protect the privacy, security, confidentiality, or integrity of personal information collected from or about consumers by the business, Individual respondent must deliver a copy of this Order to all principals and managers of such business before engaging in such conduct.",
-            "deadline": null,
+            "description": "For any business where Individual respondent is not a controlling person but has responsibility for developing or overseeing privacy/security policies, he must deliver a copy of the Order to all principals and managers before engaging in such conduct.",
+            "quoted_text": "C. For any business that collects, maintains, or stores personal information from or about consumers, where Individual respondent, Robert Fajilan, is not a controlling person of the business, but he otherwise has responsibility, in whole or in part, for developing or overseeing the implementation of policies and procedures to protect the privacy, security, confidentiality, or integrity of personal information collected from or about consumers by the business, Individual respondent must deliver a copy of this Order to all principals and managers of such business before engaging in such conduct.",
+            "deadline": "Before engaging in such conduct",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 238,
+            "quote_end_line": 245
           },
           {
-            "description": "Secure signed and dated acknowledgment of receipt from all persons receiving the order",
-            "quoted_text": "Respondents must secure a signed and dated statement acknowledging receipt of this Order, within thirty (30) days of delivery, from all persons receiving a copy of the Order pursuant to this section.",
-            "deadline": "30 days",
+            "description": "Respondents must secure a signed and dated statement acknowledging receipt of the Order from all persons receiving a copy, within 30 days of delivery.",
+            "quoted_text": "D. Respondents must secure a signed and dated statement acknowledging receipt of this Order, within thirty (30) days of delivery, from all persons receiving a copy of the Order pursuant to this section.",
+            "deadline": "30 days of delivery",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 246,
+            "quote_end_line": 248
           }
         ]
       },
@@ -267,50 +371,60 @@
         "provision_number": "VII",
         "title": "Individual Respondent Notification Requirements",
         "category": "compliance_reporting",
-        "summary": "For 10 years, individual respondent Fajilan must notify the FTC within 10 days of changes in residence, business or employment status, or name.",
+        "summary": "For 10 years from entry of the order, Individual respondent Robert Fajilan must notify the Commission of changes to his residence/contact information, business or employment status and ownership interests, and name or aliases.",
         "requirements": [
           {
-            "description": "Notify FTC within 10 days of changes in residence, mailing address, or telephone numbers",
-            "quoted_text": "Any changes in Individual respondent's residence, mailing address, and or telephone numbers, within ten (10) days of such a change;",
-            "deadline": "10 days",
+            "description": "Notify the Commission of any changes in Individual respondent's residence, mailing address, and/or telephone numbers within 10 days of such a change.",
+            "quoted_text": "A. Any changes in Individual respondent’s residence, mailing address, and or telephone numbers, within ten (10) days of such a change;",
+            "deadline": "10 days of change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 252,
+            "quote_end_line": 253
           },
           {
-            "description": "Notify FTC within 10 days of changes in business or employment status or ownership",
-            "quoted_text": "Any changes in Individual respondent's business or employment status (including self-employment), and any changes in his ownership in any business entity, within ten (10) days of such a change. Such notice shall include the name and address of each business that respondent is affiliated with, employed by, created or forms, or performs services for; a detailed description of the nature of the business or employment; and a detailed description of the respondent's duties and responsibilities in connection with such business or employment;",
-            "deadline": "10 days",
+            "description": "Notify the Commission of any changes in Individual respondent's business or employment status (including self-employment) and any changes in ownership of any business entity within 10 days, including the name and address of the business, a description of the business or employment, and a description of respondent's duties and responsibilities.",
+            "quoted_text": "B. Any changes in Individual respondent’s business or employment status (including self-employment), and any changes in his ownership in any business entity, within ten (10) days of such a change. Such notice shall include the name and address of each business that respondent is affiliated with, employed by, created or forms, or performs services for; a detailed description of the nature of the business or employment; and a detailed description of the respondent’s duties and responsibilities in connection with such business or employment; and",
+            "deadline": "10 days of change",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 254,
+            "quote_end_line": 260
           },
           {
-            "description": "Notify FTC within 10 days of changes in name or use of aliases or fictitious names",
-            "quoted_text": "Any changes in Individual respondent's name or use of any aliases or fictitious names, including \"doing business as\" names.",
-            "deadline": "10 days",
+            "description": "Notify the Commission of any changes in Individual respondent's name or use of any aliases or fictitious names, including 'doing business as' names.",
+            "quoted_text": "C. Any changes in Individual respondent’s name or use of any aliases or fictitious names, including “doing business as” names.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 261,
+            "quote_end_line": 262
+          },
+          {
+            "description": "All notices required by this Part must be sent by overnight courier (not U.S. Postal Service) to the FTC Associate Director of Enforcement; alternatively, notices may be sent by first-class mail only if an electronic version is contemporaneously sent to DEbrief@ftc.gov.",
+            "quoted_text": "Unless otherwise directed by a representative of the Commission, all notices required by this Part shall be sent by overnight courier (not the U.S. Postal Service) to the Associate Director of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, D.C. 20580, with the subject line FTC v. Fajilan and Associates, Inc. also d/b/a Statewide Credit Services, and Robert Fajilan. Provided, however, that, in lieu of overnight courier, notices may be sent by first-class mail, but only if an electronic version of such notices is contemporaneously sent to the Commission at DEbrief@ftc.gov.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 263,
+            "quote_end_line": 269
           }
         ]
       },
       {
         "provision_number": "VIII",
-        "title": "Corporate Changes Notification",
+        "title": "Corporate Respondent Change Notification",
         "category": "compliance_reporting",
-        "summary": "Corporate respondent must notify the FTC at least 30 days prior to any corporate change that may affect compliance obligations, including dissolution, merger, bankruptcy, or name changes.",
+        "summary": "Corporate respondent must notify the Commission at least 30 days prior to any corporate change that may affect compliance obligations, such as dissolution, sale, merger, bankruptcy filing, or change of name or address.",
         "requirements": [
           {
-            "description": "Notify FTC at least 30 days prior to corporate changes affecting compliance obligations",
-            "quoted_text": "IT IS FURTHER ORDERED that Corporate respondent shall notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address.",
-            "deadline": "30 days",
+            "description": "Notify the Commission at least 30 days prior to any change in the corporation that may affect compliance obligations, including dissolution, assignment, sale, merger, creation or dissolution of a subsidiary/parent/affiliate, bankruptcy petition filing, or change in corporate name or address. If the change is learned of with fewer than 30 days' notice, notify as soon as practicable.",
+            "quoted_text": "IT IS FURTHER ORDERED that Corporate respondent shall notify the Commission at least thirty (30) days prior to any change in the corporation that may affect compliance obligations arising under this order, including, but not limited to, a dissolution, assignment, sale, 7 merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address. Provided, however, that with respect to any proposed change in the corporation about which Corporate respondent learns less than thirty (30) days prior to the date such action is to take place, Corporate respondent shall notify the Commission as soon as is practicable after obtaining such knowledge. Unless otherwise directed by a representative of the Commission, all notices required by this Part shall be sent by overnight courier (not the U.S. Postal Service) to the Associate Director of Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, D.C. 20580, with the subject line FTC v. Fajilan and Associates Inc., d/b/a Statewide Credit Services, and Robert Fajilan. Provided, however, that, in lieu of overnight courier, notices may be sent by first-class mail, but only if an electronic version of such notices is contemporaneously sent to the Commission at DEbrief@ftc.gov.",
+            "deadline": "30 days prior to change (or as soon as practicable)",
             "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Notify FTC as soon as practicable if learning of corporate change less than 30 days before it occurs",
-            "quoted_text": "Provided, however, that with respect to any proposed change in the corporation about which Corporate respondent learns less than thirty (30) days prior to the date such action is to take place, Corporate respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
-            "deadline": "as soon as practicable",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 271,
+            "quote_end_line": 289
           }
         ]
       },
@@ -318,43 +432,49 @@
         "provision_number": "IX",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondents must file a compliance report with the FTC within 60 days of service of the order and submit additional reports within 10 days upon request.",
+        "summary": "Respondents must file an initial written compliance report with the FTC within 60 days of service of the order, and submit additional written reports within 10 days of written notice from the Commission.",
         "requirements": [
           {
-            "description": "File initial compliance report within 60 days of service",
-            "quoted_text": "IT IS FURTHER ORDERED that Corporate respondent, and its successors and assigns, and Individual respondent Robert Fajilan, within sixty (60) days after the date of service of this order, shall file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of their own compliance with this order.",
-            "deadline": "60 days",
+            "description": "File a true and accurate written compliance report with the Commission within 60 days after the date of service of this order, setting forth in detail the manner and form of compliance with this order.",
+            "quoted_text": "and Individual respondent Robert Fajilan, within sixty (60) days after the date of service of this order, shall file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of their own compliance with this order. Within ten (10) days of receipt of",
+            "deadline": "60 days after service of order",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 292,
+            "quote_end_line": 294
           },
           {
-            "description": "Submit additional compliance reports within 10 days of written notice from FTC",
-            "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, they shall submit additional true and accurate written reports.",
-            "deadline": "10 days",
+            "description": "Submit additional true and accurate written reports within 10 days of receipt of written notice from a representative of the Commission.",
+            "quoted_text": "the manner and form of their own compliance with this order. Within ten (10) days of receipt of written notice from a representative of the Commission, they shall submit additional true and accurate written reports.",
+            "deadline": "10 days of written notice",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 294,
+            "quote_end_line": 296
           }
         ]
       },
       {
         "provision_number": "X",
-        "title": "Order Termination",
+        "title": "Order Duration and Termination",
         "category": "duration",
-        "summary": "The order will terminate on August 17, 2031, or 20 years from the most recent date the FTC files a complaint alleging violation of the order, whichever is later.",
+        "summary": "The order terminates on August 17, 2031, or 20 years from the most recent date the FTC files a federal court complaint alleging a violation of the order, whichever is later, subject to specified exceptions.",
         "requirements": [
           {
-            "description": "Order terminates on specified date or 20 years from most recent complaint filing",
-            "quoted_text": "This order will terminate on August 17, 2031, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Part in this order that terminates in less than twenty (20) years; B. this order's application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Part.",
-            "deadline": null,
+            "description": "The order will terminate on August 17, 2031, or twenty years from the most recent date the FTC files a federal court complaint alleging any violation of the order, whichever is later, with specified exceptions for provisions with shorter terms, non-defendant respondents, and post-termination complaints.",
+            "quoted_text": "This order will terminate on August 17, 2031, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Part in this order that terminates in less than twenty (20) years; B. this order’s application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that respondents did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Part as though the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "deadline": "August 17, 2031 or 20 years from most recent complaint filing",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 298,
+            "quote_end_line": 312
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This order will terminate on August 17, 2031, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Part in this order that terminates in less than twenty (20) years; B. this order's application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that respondents did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order will terminate according to this Part as though the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal."
+      "termination_text": "This order will terminate on August 17, 2031, or twenty (20) years from the most recent date that the United States or the Federal Trade Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Part in this order that terminates in less than twenty (20) years; B. this order's application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Part."
     }
   },
   "metadata": {
@@ -363,12 +483,35 @@
       "order": "08.11, Fajilan and Associates, Inc., also dba Statewide Credit Services Order.pdf"
     },
     "extraction_stats": {
-      "complaint_counts": 5,
-      "complaint_representations": 0,
+      "complaint_counts": 6,
+      "complaint_representations": 4,
       "order_provisions": 10,
-      "order_definitions": 7,
-      "order_requirements": 28
+      "order_definitions": 9,
+      "order_requirements": 30,
+      "provisions_per_section": {
+        "I": 6,
+        "II": 1,
+        "III": 2,
+        "IV": 6,
+        "V": 3,
+        "VI": 4,
+        "VII": 4,
+        "VIII": 1,
+        "IX": 2,
+        "X": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 4,
+        "complaint_total": 4,
+        "order_verified": 30,
+        "order_total": 30
+      }
     },
-    "processing_time_seconds": 126.6
+    "processing_time_seconds": 108.3
   }
 }

@@ -6,10 +6,10 @@
       "incorporation_state": "Idaho",
       "entity_type": "corporation",
       "address": "3120 Fairview Park Drive, Suite 300, Falls Church, Virginia, 22042",
-      "business_description": "Global Tel*Link Corporation provides communications services and payment services to jails, prisons, and detention facilities, allowing incarcerated individuals to correspond with non-incarcerated contacts and access funds. The company collects sensitive personally identifiable information including names, addresses, passport numbers, driver's license numbers, Social Security numbers, and financial account information from incarcerated individuals and their contacts."
+      "business_description": "Global Tel*Link Corporation provides communications services (voice calls, video calls, written messages) and payment services to incarcerated individuals in jails, prisons, and detention facilities across all 50 states, the District of Columbia, and Puerto Rico. The company also provides services to family members and friends of incarcerated individuals, serving over 1.9 million incarcerated people (more than 85% of the U.S. inmate population) and over 13 million non-incarcerated users as of 2020, with annual net revenue exceeding $600 million."
     },
     "commissioners": [
-      "Lina Khan, Chair",
+      "Lina M. Khan, Chair",
       "Rebecca Kelly Slaughter",
       "Alvaro M. Bedoya"
     ],
@@ -22,130 +22,146 @@
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/2123012-global-tel-link-corporation"
   },
   "complaint": {
-    "factual_background": "Global Tel*Link Corporation and its subsidiaries provide communications and payment services to incarcerated individuals and their contacts, collecting sensitive personal information. In August 2020, they copied production data containing personally identifiable information of approximately 649,500 individuals into an inadequately secured test environment on AWS, which was then left accessible on the internet without password protection for several days. Unauthorized individuals accessed and exfiltrated the data, which appeared on the dark web. Respondents then made false statements about the incident to the public and facilities, and failed to notify affected consumers for approximately nine months.",
+    "factual_background": "Global Tel*Link Corporation (GTL), Telmate, and TouchPay Holdings provided communications and payment services to incarcerated individuals and their contacts, collecting highly sensitive personal information. In August 2020, they copied real consumer data into an unprotected AWS test environment lacking encryption, monitoring, firewalls, or access controls. A vendor technician changed security settings, exposing approximately 649,500 individuals' personal data to the internet for at least two days, during which unauthorized parties exfiltrated roughly 44 billion bytes of data. Respondents then publicly misrepresented the scope of the breach—falsely claiming no payment or medical information was affected—and failed to notify affected consumers for approximately nine months. They also continued to misrepresent in facility bid responses that they had never experienced a significant data breach.",
     "representations_made": [
       {
-        "description": "Claimed to be security-focused and committed to preventing data breaches and hacks",
-        "quoted_text": "Respondents market themselves to Facilities as an organization that is 'security-focused from the inside out,' and that their 'attention is focused on…security,' specifically 'preventing data breaches and hacks.'",
-        "source_paragraph": 17
+        "description": "Marketed themselves as security-focused, claiming their attention was on preventing data breaches and hacks",
+        "quoted_text": "17. Respondents have made and continue to make various representations regarding their information security capabilities and practices. For example, Respondents market themselves to Facilities as an organization that is “security-focused from the inside out,” and that their “attention is focused on…security,” specifically “preventing data breaches and hacks.”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 17,
+        "quote_start_line": 121,
+        "quote_end_line": 124
       },
       {
-        "description": "Stated data security is a cornerstone of their business and they are different from competitors",
-        "quoted_text": "'GTL is different in data security from our competition' and data security is 'the cornerstone of what we do.'",
-        "source_paragraph": 18
+        "description": "GTL executives stated in a YouTube video that data security is 'the cornerstone of what we do' and that GTL is different from competitors in data security",
+        "quoted_text": "18. Since 2017, Respondents have disseminated a YouTube video highlighting the importance of data security in Respondents’ industry. The video features GTL executives making the following statements: a. “GTL is different in data security from our competition” and data security is “the cornerstone of what we do.” b. Data security is important for Respondents’ business because incarcerated users use Respondents’ services to “shar[e] confidential information,” including information related to commissary services, medical services, and phone services. c. “A facility that’s looking for a secure environment…should be asking those questions: have you had a breach? And if you’ve had one, what have you done to correct it?”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 18,
+        "quote_start_line": 125,
+        "quote_end_line": 135
       },
       {
-        "description": "Claimed to have exceptional security architecture that prevents customer data from falling into the wrong hands",
-        "quoted_text": "At GTL, we take information security and data protection very seriously. That's why we've gone to exceptional lengths to safeguard each customer's data and private information that is generated through the course of their relationship with us. Our security architecture provides our customers the reassurance that their data won't fall into the wrong hands.",
-        "source_paragraph": 20
+        "description": "Information Security Framework document claimed exceptional lengths were taken to safeguard customer data so it would not fall into the wrong hands",
+        "quoted_text": "20. Since May 2017, as part of their RFP responses to Facilities seeking information about Respondents’ data security practices, Respondents have disseminated or caused to be disseminated a marketing document entitled “Information Security Framework.” This document states: “At GTL, we take information security and data protection very seriously. That’s why we’ve gone to exceptional lengths to safeguard each customer’s data and private information that is generated through the course of their relationship with us. Our security architecture provides our customers the reassurance that their data won’t fall into the wrong hands.”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 20,
+        "quote_start_line": 140,
+        "quote_end_line": 146
       },
       {
-        "description": "Claimed to use IP address controls to limit access to customer data",
-        "quoted_text": "[C]ontrols are in place to limit access only from specific IP addresses. This means that access to customer data will be denied if a request is from an unknown IP address.",
-        "source_paragraph": 21
+        "description": "Information Security Framework claimed specific security controls including IP address restrictions, 128-bit encryption, 24/7 log monitoring, firewall change controls, and automatic intrusion prevention",
+        "quoted_text": "21. The “Information Security Framework” document goes on to make the following statements regarding Respondents’ use of specific data security safeguards: a. “[C]ontrols are in place to limit access only from specific IP addresses. This means that access to customer data will be denied if a request is from an unknown IP address.” b. “[M]ultiple layers of 128-bit encryption and perimeter firewall protection prevent unauthorized access from the Internet.” 4 c. “A robust centralized log monitoring solution provides alerts to the GTL Information Security Department based on predefined and internally developed alarm rules. This application is monitored to detect other anomalies that might indicate inappropriate use of GTL assets….GTL uses industry accepted log monitoring so[ft]ware to perform file integrity monitoring and to provide real time monitoring of application, security, and system event logs. Using this log monitoring so[ft]ware, the GTL Information Security Department monitors log events 24/7 and investigates all alerts.” d. “[A]ny changes to firewall hardware or so[ft]ware or security rules are approved by GTL’s Information Security Department, follow all change control policies and procedures, and are properly documented.” e. “Intrusion Prevention Systems are deployed to alert the GTL Information Security Department to potential attacks and automatically block such attacks. Many companies choose to rely on an Intrusion Detection System that simply alerts of potential attacks, but GTL’s systems automatically block suspected malicious traffic.”",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 21,
+        "quote_start_line": 147,
+        "quote_end_line": 172
       },
       {
-        "description": "Claimed to use multiple layers of encryption and perimeter firewall protection",
-        "quoted_text": "[M]ultiple layers of 128-bit encryption and perimeter firewall protection prevent unauthorized access from the Internet.",
-        "source_paragraph": 21
+        "description": "Solution Integration marketing document claimed the most robust data and wireless security in the market through multiple firewalls, SSL, and best-in-industry security standards",
+        "quoted_text": "22. Since May 2017, in response to RFPs from potential Facility customers, Respondents have also disseminated or caused to be disseminated a marketing document entitled “Solution Integration.” This document states: “Our integrated solutions also help enhance data and technology security. We follow security best practices, the latest encryption methodologies, and proper protocols to ensure our system offers the most robust data and wireless security in the market. Our technologies leverage multiple layers of firewalls, SSL, and best-in-industry security standards to ensure all data transmitted through our systems are secure.”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 22,
+        "quote_start_line": 173,
+        "quote_end_line": 179
       },
       {
-        "description": "Claimed to have 24/7 log monitoring by the Information Security Department",
-        "quoted_text": "A robust centralized log monitoring solution provides alerts to the GTL Information Security Department based on predefined and internally developed alarm rules. This application is monitored to detect other anomalies that might indicate inappropriate use of GTL assets….GTL uses industry accepted log monitoring so[ft]ware to perform file integrity monitoring and to provide real time monitoring of application, security, and system event logs. Using this log monitoring so[ft]ware, the GTL Information Security Department monitors log events 24/7 and investigates all alerts.",
-        "source_paragraph": 21
+        "description": "Privacy policies on consumer-facing websites claimed use of industry standard physical, technical, and administrative security measures to protect personally identifiable information",
+        "quoted_text": "23. Respondents have also made security representations to individual consumers. Since at least January 2020, Respondents have disseminated privacy policies on their public-facing websites, including on the GettingOut website. These privacy policies have made and continue to make the following representation: “We seek to use industry standard physical, technical and administrative security measures designed to protect your personally identifiable information. However, no data transmission or storage system can be guaranteed to be 100% secure. If you have reason to believe that your interaction with us is no longer secure (for example, if you feel that the security of any account you might have with us has been compromised), please immediately notify us in accordance with the ‘Contact Us’ section above.”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 23,
+        "quote_start_line": 180,
+        "quote_end_line": 188
       },
       {
-        "description": "Claimed to use Intrusion Prevention Systems that automatically block suspected malicious traffic",
-        "quoted_text": "Intrusion Prevention Systems are deployed to alert the GTL Information Security Department to potential attacks and automatically block such attacks. Many companies choose to rely on an Intrusion Detection System that simply alerts of potential attacks, but GTL's systems automatically block suspected malicious traffic.",
-        "source_paragraph": 21
+        "description": "Statement to Comparitech blog claimed no medical data, passwords, or consumer payment information were affected by the Incident, and that Respondents were already notifying affected customers",
+        "quoted_text": "Telmate, a GTL subsidiary immediately locked down the server as a precaution upon being made aware of a vulnerability in the data system due to the actions of one of our vendors. This vulnerability was swiftly corrected, the data security team was immediately supplemented with the assistance of third-party consultants and we continue to work closely with law enforcement authorities as we conduct further inquiry into this incident. Based on the current facts of the investigation, no medical data, passwords, or consumer payment information were affected. We continue to speak with and notify necessary parties, including the affected Telmate customers – a small subset of all GTL customers – about the incident and the actions we have taken to safeguard data. The security of the data we keep is of the utmost importance to us, and we are committed to doing everything we can to keep it safe. (Emphasis added.)",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 38,
+        "quote_start_line": 299,
+        "quote_end_line": 309
       },
       {
-        "description": "Claimed to follow security best practices and latest encryption methodologies for robust data security",
-        "quoted_text": "Our integrated solutions also help enhance data and technology security. We follow security best practices, the latest encryption methodologies, and proper protocols to ensure our system offers the most robust data and wireless security in the market. Our technologies leverage multiple layers of firewalls, SSL, and best-in-industry security standards to ensure all data transmitted through our systems are secure.",
-        "source_paragraph": 22
+        "description": "RFP responses to Facilities stated there were no system incidents resulting in significant failure of service commitments or system requirements during the period April 1–September 30, 2020",
+        "quoted_text": "43. For example, since December 2020, Respondents have stated in their RFP responses to potential Facility customers that “there were no system incidents that resulted in a significant failure in the achievement of one or more of service commitments and system requirements throughout the period April 1, 2020, to September 30, 2020,” where “system requirements” are defined to include that “Logical access to programs, data and computer resources is restricted to authorized and appropriate users, and such users are restricted to performing authorized and appropriate actions.”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 43,
+        "quote_start_line": 342,
+        "quote_end_line": 348
       },
       {
-        "description": "Claimed to use industry standard security measures to protect personally identifiable information",
-        "quoted_text": "We seek to use industry standard physical, technical and administrative security measures designed to protect your personally identifiable information.",
-        "source_paragraph": 23
-      },
-      {
-        "description": "Represented that medical data, passwords, and consumer payment information were not affected by the Incident",
-        "quoted_text": "Based on the current facts of the investigation, no medical data, passwords, or consumer payment information were affected.",
-        "source_paragraph": 38
-      },
-      {
-        "description": "Represented that they would notify affected parties about the incident",
-        "quoted_text": "We continue to speak with and notify necessary parties, including the affected Telmate customers – a small subset of all GTL customers – about the incident and the actions we have taken to safeguard data.",
-        "source_paragraph": 38
-      },
-      {
-        "description": "Represented in RFP responses that they experienced no system security incidents from April 1, 2020 to September 30, 2020",
-        "quoted_text": "there were no system incidents that resulted in a significant failure in the achievement of one or more of service commitments and system requirements throughout the period April 1, 2020, to September 30, 2020",
-        "source_paragraph": 43
-      },
-      {
-        "description": "Represented that they never experienced or had not experienced a data security breach within specified timeframes",
-        "quoted_text": "Respondents have submitted RFP responses stating that, e.g., Respondents have never experienced a data security breach or have not experienced a data security breach within the past five years.",
-        "source_paragraph": 44
+        "description": "RFP responses to Facilities stated Respondents had never experienced a data security breach or had not experienced one within the past five years",
+        "quoted_text": "44. In other instances, Respondents have submitted RFP responses stating that, e.g., Respondents have never experienced a data security breach or have not experienced a data security breach within the past five years.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 44,
+        "quote_start_line": 349,
+        "quote_end_line": 351
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "Unfair Data Security Practices",
-        "representation": "Respondents failed to employ reasonable and appropriate measures to protect consumers' personally identifiable information",
-        "fact": "Respondents did not encrypt data in the Test Environment, did not use automated monitoring, did not employ perimeter firewalls, did not employ log monitoring or Intrusion Prevention Systems, did not vet the vendor's security practices, did not provide security training, and did not track personally identifiable information",
-        "conclusion": "This failure caused or was likely to cause substantial injury to consumers that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves. This practice is an unfair act or practice."
+        "representation": "Respondents were responsible for protecting consumers' personally identifiable information stored in their systems, including the Test Environment",
+        "fact": "Respondents failed to employ reasonable and appropriate measures to protect consumers' personally identifiable information, including failure to encrypt data, use monitoring software, employ firewalls, vet vendor security practices, or provide security training",
+        "conclusion": "This failure caused or was likely to cause substantial injury to consumers that is not outweighed by countervailing benefits and is not reasonably avoidable by consumers themselves. This practice is an unfair act or practice."
       },
       {
         "count_number": 2,
-        "title": "Unfair Failure to Notify Affected Consumers",
-        "representation": "Respondents failed to timely notify affected consumers that their personally identifiable information had been exposed as a result of the Incident",
-        "fact": "Respondents did not notify affected individuals until May 2021, approximately nine months after the August 2020 incident, and have provided no notice to potentially hundreds of thousands of additional users whose information was in the Test Environment",
-        "conclusion": "This failure caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers themselves. This practice is an unfair act or practice."
+        "title": "Unfair Failure to Notify Affected Consumers of the Incident",
+        "representation": "Respondents were obligated to timely notify affected consumers that their personally identifiable information had been exposed",
+        "fact": "Respondents failed to notify affected consumers for approximately nine months after the Incident, and ultimately notified only approximately 45,000 of the potentially hundreds of thousands of affected individuals",
+        "conclusion": "This failure caused or is likely to cause substantial injury to consumers that is not outweighed by countervailing benefits and is not reasonably avoidable by consumers themselves. This practice is an unfair act or practice."
       },
       {
         "count_number": 3,
         "title": "Misrepresentations Regarding Data Security",
-        "representation": "Respondents represented that they implemented reasonable and appropriate measures to protect personally identifiable information against unauthorized access",
+        "representation": "Respondents represented, directly or indirectly, that they implemented reasonable and appropriate measures to protect personally identifiable information against unauthorized access",
         "fact": "Respondents did not implement reasonable and appropriate measures to protect personally identifiable information in the Test Environment against unauthorized access",
         "conclusion": "Therefore, the representation set forth in Paragraph 49 is false or misleading."
       },
       {
         "count_number": 4,
         "title": "Misrepresentations to Individual Users Regarding the Incident",
-        "representation": "Respondents represented that they had no reason to believe that consumers' sensitive personally identifiable information was affected by the Incident",
-        "fact": "Respondents had reason to believe that consumers' sensitive personally identifiable information was affected by the Incident, including credit card numbers, medical information, addresses, email addresses, Social Security numbers, passport numbers, and driver's license numbers",
+        "representation": "Respondents represented, directly or indirectly, that they had no reason to believe that consumers' sensitive personally identifiable information was affected by the Incident",
+        "fact": "Respondents had reason to believe that consumers' sensitive personally identifiable information was affected by the Incident, as they knew at least as of August 19, 2020 that credit card numbers and medical information were included",
         "conclusion": "Therefore, the representation set out in Paragraph 51 was false or misleading."
       },
       {
         "count_number": 5,
         "title": "Misrepresentations to Individual Users Regarding Notice",
         "representation": "Respondents represented that they would timely notify users whose personally identifiable information had been exposed as a result of the Incident",
-        "fact": "Respondents failed to provide timely notice to users whose personally identifiable information was exposed, waiting approximately nine months to notify only about 45,000 of the approximately 649,500 affected individuals",
+        "fact": "Respondents failed to provide timely notice to users whose personally identifiable information was exposed, waiting approximately nine months before notifying any affected individuals",
         "conclusion": "Therefore, the representation set out in Paragraph 53 was false or misleading."
       },
       {
         "count_number": 6,
         "title": "Deceptive Representations to Facilities Regarding the Incident",
-        "representation": "Respondents represented to Facilities that they have never experienced a data security breach or that they had not experienced a data security breach within a particular timeframe that includes the dates of the Incident",
-        "fact": "Respondents experienced a data security breach in August 2020 where the Test Environment was left accessible via the internet without password protection, resulting in unauthorized access and exfiltration of approximately 649,500 individuals' data",
-        "conclusion": "In fact, as described in Paragraphs 29-37, the representations set out in Paragraph 55 have been false or misleading."
+        "representation": "In multiple RFP responses to Facilities since the Incident, Respondents represented that they had never experienced a data security breach or had not experienced one within a timeframe that includes the dates of the Incident",
+        "fact": "Respondents did in fact experience a significant data security breach in August 2020, during which approximately 649,500 individuals' personally identifiable information was exposed and exfiltrated",
+        "conclusion": "The representations set out in Paragraph 55 have been false or misleading."
       }
     ]
   },
   "order": {
     "definitions": {
-      "Affected Consumer": "any individual consumer whose Personal Information was exposed by the Identified Breach if: 1. The exposed information includes any of the following with respect to the individual consumer (hereafter for purposes of this definition, \"Identifying Elements\"): a. An individual's first and last name, so long as it appears in conjunction with Personal Information other than a first and last name; b. A Social Security number (but not including only the last four digits of a Social Security number), driver's license number, passport number, alien registration number, or other government-issued unique identification number; c. A unique numeric identifier assigned to an individual by a Facility in connection with the individual's incarceration, such as a booking number; d. A unique financial identifier, including a full financial account number, full credit or debit card number, or electronic identification number; or e. An email address or other online contact information, such as a user identifier or a screen name; 2. Respondents have collected or maintained the exposed Identifying Elements in the ordinary course of business; and 3. Respondents have the technological capability to link the exposed Identifying Elements with the consumer's valid mail or email address or other means of communicating with the consumer in writing.",
+      "Affected Consumer": "\"Affected Consumer\" means any individual consumer whose Personal Information was exposed by the Identified Breach if:\n1. The exposed information includes any of the following with respect to the individual consumer (hereafter for purposes of this definition, \"Identifying Elements\"):\na. An individual's first and last name, so long as it appears in conjunction with Personal Information other than a first and last name;\nb. A Social Security number (but not including only the last four digits of a Social Security number), driver's license number, passport number, alien registration number, or other government-issued unique identification number;\nc. A unique numeric identifier assigned to an individual by a Facility in connection with the individual's incarceration, such as a booking number;\nd. A unique financial identifier, including a full financial account number, full credit or debit card number, or electronic identification number; or\ne. An email address or other online contact information, such as a user identifier or a screen name;\n2. Respondents have collected or maintained the exposed Identifying Elements in the ordinary course of business; and\n3. Respondents have the technological capability to link the exposed Identifying Elements with the consumer's valid mail or email address or other means of communicating with the consumer in writing.",
       "Authorized User": "any employee, contractor, agent, customer, or other person that is authorized to access any of Respondents' information systems or data.",
       "Change Management": "a documented process for making changes that affect risk to the security of networks, systems, and assets that store, process, or connect to systems that store or process Personal Information, including the identification, impact analysis, approval or rejection, prioritization, implementation, testing, and post-implementation review of such changes.",
-      "Clear(ly) and conspicuous(ly)": "that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: 1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure (\"triggering representation\") is made through only one means. 2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. 3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. 4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. 6. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the triggering representation appears. 7. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. 8. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication. 9. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
-      "Consumer Report": "any written, oral, or other communication of any information by a Consumer Reporting Agency bearing on a consumer's credit worthiness, credit standing, credit capacity, character, general reputation, personal characteristics, or mode of living which is used or expected to be used or collected in whole or in part for the purpose of serving as a factor in establishing the consumer's eligibility for: (1) credit or insurance to be used primarily for personal, family, or household purposes; (2) employment purposes; or (3) any other purpose authorized under FCRA Section 604, 15 U.S.C. § 1681b.",
-      "Consumer Reporting Agency": "any person which, for monetary fees, dues, or on a cooperative nonprofit basis, regularly engages in whole or in part in the practice of assembling or evaluating consumer credit information or other information on consumers for the purpose of furnishing Consumer Reports to third parties, and which uses any means or facility of interstate commerce for the purpose of preparing or furnishing Consumer Reports.",
+      "Clearly and Conspicuously": "\"Clear(ly) and conspicuous(ly)\" means that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways:\n1. In any communication that is solely visual or solely audible, the disclosure must be made through the same means through which the communication is presented. In any communication made through both visual and audible means, such as a television advertisement, the disclosure must be presented simultaneously in both the visual and audible portions of the communication even if the representation requiring the disclosure (\"triggering representation\") is made through only one means.\n2. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood.\n3. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it.\n4. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable.\n6. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in each language in which the triggering representation appears.\n7. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications.\n8. The disclosure must not be contradicted or mitigated by, or inconsistent with, anything else in the communication.\n9. When the representation or sales practice targets a specific audience, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
+      "Consumer Report": "has the meaning provided in the Fair Credit Reporting Act (\"FCRA\"), 15 U.S.C. § 1681 et seq., and any amendments thereto. As of the date of effective date of this Order, \"Consumer Report\" is defined under the FCRA as any written, oral, or other communication of any information by a Consumer Reporting Agency bearing on a consumer's credit worthiness, credit standing, credit capacity, character, general reputation, personal characteristics, or mode of living which is used or expected to be used or collected in whole or in part for the purpose of serving as a factor in establishing the consumer's eligibility for: (1) credit or insurance to be used primarily for personal, family, or household purposes; (2) employment purposes; or (3) any other purpose authorized under FCRA Section 604, 15 U.S.C. § 1681b.",
+      "Consumer Reporting Agency": "has the meaning provided in the FCRA, 15 U.S.C. § 1681 et seq., and any amendments thereto. As of the date of effective date of this Order, \"Consumer Reporting Agency\" is defined under the FCRA as any person which, for monetary fees, dues, or on a cooperative nonprofit basis, regularly engages in whole or in part in the practice of assembling or evaluating consumer credit information or other information on consumers for the purpose of furnishing Consumer Reports to third parties, and which uses any means or facility of interstate commerce for the purpose of preparing or furnishing Consumer Reports.",
       "Covered Incident": "any incident that results in Respondents notifying, pursuant to a statutory or regulatory requirement, any U.S. federal, state, or local government entity that Personal Information of or about an individual consumer was, or is reasonably believed to have been, accessed or acquired, or publicly exposed without authorization.",
       "Facility": "a Jail or Prison, and any entity with which Respondents contract to provide any product or service in connection with the operation of a Jail or Prison.",
-      "Future Affected Consumer": "any individual consumer whose Personal Information Respondents have reason to believe has been accessed, acquired, or publicly exposed without authorization in connection with a Covered Incident if: 1. The accessed, acquired, or publicly exposed information includes any of the following (hereafter for purposes of this definition, \"Identifying Elements\"): a. An individual's first and last name, so long as it appears in conjunction with Personal Information other than a first and last name; b. A Social Security number (but not including only the last four digits of a Social Security number), driver's license number, passport number, alien registration number, or other government-issued unique identification number; c. A unique numeric identifier assigned to an individual by a Facility in connection with the individual's incarceration, such as a booking number; d. Unique biometric data such as a face embedding, fingerprint, voice print, a retina or iris image, or any other unique physical representation; e. A unique financial identifier, including a full financial account number, a full credit or debit card number, or electronic identification number; or f. An email address or other online contact information, such as a user identifier or a screen name; 2. Respondents have collected or maintained the accessed, acquired, or publicly exposed Identifying Elements in the ordinary course of business; and 3. Respondents have the technological capability to link the accessed, acquired, or publicly exposed Identifying Elements with the consumer's valid mail or email address or other means of communicating with the consumer in writing.",
+      "Future Affected Consumer": "\"Future Affected Consumer\" means any individual consumer whose Personal Information Respondents have reason to believe has been accessed, acquired, or publicly exposed without authorization in connection with a Covered Incident if:\n1. The accessed, acquired, or publicly exposed information includes any of the following (hereafter for purposes of this definition, \"Identifying Elements\"):\na. An individual's first and last name, so long as it appears in conjunction with Personal Information other than a first and last name;\nb. A Social Security number (but not including only the last four digits of a Social Security number), driver's license number, passport number, alien registration number, or other government-issued unique identification number;\nc. A unique numeric identifier assigned to an individual by a Facility in connection with the individual's incarceration, such as a booking number;\nd. Unique biometric data such as a face embedding, fingerprint, voice print, a retina or iris image, or any other unique physical representation;\ne. A unique financial identifier, including a full financial account number, a full credit or debit card number, or electronic identification number; or\nf. An email address or other online contact information, such as a user identifier or a screen name;\n2. Respondents have collected or maintained the accessed, acquired, or publicly exposed Identifying Elements in the ordinary course of business; and\n3. Respondents have the technological capability to link the accessed, acquired, or publicly exposed Identifying Elements with the consumer's valid mail or email address or other means of communicating with the consumer in writing.",
       "Identified Breach": "the exposure of Personal Information from systems of or controlled by Respondents that was discovered on or about August 13, 2020.",
       "Jail": "a facility of a local, state, or federal law enforcement agency that is used primarily to hold individuals who are: 1. Awaiting adjudication of criminal charges; 2. Post-conviction and committed to confinement for sentences of one year or less; or 3. Post-conviction and awaiting transfer to another facility. The term also includes city, county, or regional facilities that have contracted with a private company to manage day-to-day operations; privately owned and operated facilities primarily engaged in housing city, county or regional inmates; facilities used to detain individuals, operated directly by the Federal Bureau of Prisons or U.S. Immigration and Customs Enforcement, or pursuant to a contract with those agencies; juvenile detention centers; and secure mental health facilities.",
       "Multi-Factor Authentication": "authentication through verification of at least two of the following types of authentication factors: 1. Knowledge factors, such as a password; 2. Possession factors, such as a token; or 3. Inherence factors, such as biometric characteristics.",
@@ -159,175 +175,97 @@
         "provision_number": "I",
         "title": "Mandated Information Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondents must establish, implement, and maintain a comprehensive information security program within 60 days of the order's effective date to protect Personal Information.",
+        "summary": "Respondents must establish, implement, and maintain a comprehensive information security program within 60 days of the Order's effective date, meeting detailed minimum requirements across documentation, risk assessment, safeguards, training, encryption, access controls, and data minimization.",
         "requirements": [
           {
-            "description": "Establish and implement comprehensive information security program",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents, and any business that Respondents control directly, or indirectly, in connection with the collection, maintenance, use, or disclosure of, or provision of access to, Personal Information, must, within sixty (60) days of the effective date of this Order, establish and implement, and thereafter maintain, a comprehensive information security program (\"Information Security Program\") that protects the security, confidentiality, and integrity of such Personal Information.",
+            "description": "Establish and implement a comprehensive information security program within 60 days of the effective date of the Order",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents, and any business that Respondents control directly, or indirectly, in connection with the collection, maintenance, use, or disclosure of, or provision of access to, Personal Information, must, within sixty (60) days of the effective date of this Order, establish and implement, and thereafter maintain, a comprehensive information security program (“Information Security Program”) that protects the security, confidentiality, and integrity of such Personal Information. To satisfy this requirement, Respondents must, at a minimum:",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 228,
+            "quote_end_line": 234
           },
           {
-            "description": "Document the Information Security Program in writing",
-            "quoted_text": "Document in writing the content, implementation, and maintenance of the Information Security Program",
+            "description": "Document in writing the content, implementation, and maintenance of the Information Security Program",
+            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Information Security Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 235,
+            "quote_end_line": 236
           },
           {
-            "description": "Designate a qualified employee as Qualified Individual responsible for the program",
-            "quoted_text": "Designate a qualified employee responsible for coordinating, overseeing, and implementing the Information Security Program and enforcing the Information Security Program (\"Qualified Individual\")",
+            "description": "Designate a qualified employee (Qualified Individual) responsible for coordinating, overseeing, implementing, and enforcing the Information Security Program",
+            "quoted_text": "B. Designate a qualified employee responsible for coordinating, overseeing, and implementing the Information Security Program and enforcing the Information Security Program (“Qualified Individual”);",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 237,
+            "quote_end_line": 239
           },
           {
-            "description": "Require Qualified Individual to report to board or senior officer at least annually and within 30 days after a Covered Incident",
-            "quoted_text": "Require the Qualified Individual to report in writing to Respondents' board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Respondents responsible for Respondents' Information Security Program at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident, if any.",
-            "deadline": "12 months and 30 days after Covered Incident",
+            "description": "Require the Qualified Individual to report in writing to the board of directors (or equivalent) at least annually and within 30 days after a Covered Incident, covering the status of the program, risk matters, testing results, incidents, and recommendations",
+            "quoted_text": "C. Require the Qualified Individual to report in writing to Respondents’ board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Respondents responsible for Respondents’ Information Security Program at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident, if any. The report must include the following information: 1. The overall status of the Information Security Program and Respondents’ compliance with this Provision, including by providing the written program and any evaluations thereof or updates thereto; and 2. Material matters related to the Information Security Program, addressing issues such as risk assessment, risk management, and control decisions; service provider arrangements; results of testing, including any testing conducted pursuant to sub-Provision G of this Provision; Covered Incidents or violations of Respondents’ information security policies or procedures and management’s responses thereto; and recommendations for changes in the Information Security Program.",
+            "deadline": "annually; 30 days after Covered Incident",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 240,
+            "quote_end_line": 255
           },
           {
-            "description": "Assess and document risks at least annually and within 30 days of Covered Incident",
-            "quoted_text": "Assess and document, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, reasonably foreseeable internal and external risks to the security, confidentiality, or integrity of Personal Information within the possession, custody, or control of Respondents",
-            "deadline": "12 months and 30 days after Covered Incident",
+            "description": "Conduct and document written risk assessments at least annually and within 30 days of a Covered Incident, including criteria for evaluating risks, assessing confidentiality/integrity/availability, and describing how risks will be mitigated",
+            "quoted_text": "D. Assess and document, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, reasonably foreseeable internal and external risks to the security, confidentiality, or integrity of Personal Information within the possession, custody, or control of Respondents that could result in the (1) unauthorized collection, maintenance, use, or disclosure of, provision of access to, or destruction of, Personal Information; or (2) misuse, loss, theft, alteration, or other compromise of such information. The risk assessments must be written and must include: 7 1. Criteria for the evaluation and categorization of identified security risks or threats Respondents face; 2. Criteria for the assessment of the confidentiality, integrity, and availability of Respondents’ networks, systems, and assets and Personal Information, including the adequacy of the existing controls in the context of the identified risks or threats Respondents face; and 3. Requirements describing how identified risks will be mitigated or accepted based on the risk assessment and how the Information Security Program will address the risks.",
+            "deadline": "annually; 30 days after Covered Incident",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 256,
+            "quote_end_line": 275
           },
           {
-            "description": "Design, implement, maintain, and document safeguards based on identified risks",
-            "quoted_text": "Design, implement, maintain, and document safeguards that control for the internal and external risks identified in response to sub-Provision I.D. Each safeguard must be based on the volume and sensitivity of the Personal Information that is at risk, and the likelihood that the risk could be realized",
+            "description": "Design, implement, and maintain documented safeguards controlling internal and external risks, including inventory policies, access logging, anomaly monitoring, technical/physical access controls, access limitation and periodic auditing, incident response plan, annual security training, qualified security personnel, encryption of sensitive data, secure development practices, change management procedures, multi-factor authentication, and data minimization/retention policies",
+            "quoted_text": "E. Design, implement, maintain, and document safeguards that control for the internal and external risks identified in response to sub-Provision I.D. Each safeguard must be based on the volume and sensitivity of the Personal Information that is at risk, and the likelihood that the risk could be realized and result in the (1) unauthorized collection, maintenance, use, or disclosure of, provision of access to, or destruction of, Personal Information; or (2) misuse, loss, theft, alteration, or other compromise of such information. Such safeguards must also include: 1. Policies, procedures, standards, and technical measures to systematically inventory Personal Information in Respondents’ control, including policies, procedures, and technical measures to track and inventory the transfer and storage of Personal Information among and within Respondents’ various networks, systems, and assets; 2. Policies, procedures, standards, and technical measures to log and monitor access to networks, systems, and assets in Respondents’ control; 3. Policies, procedures, standards, and technical measures to monitor all of Respondents’ networks, systems, and assets to identify and log anomalous activity and/or data security events, including unauthorized attempts to access or exfiltrate Personal Information from Respondents’ networks, systems, and assets. Such measures must require Respondents to determine baseline system activity, identify and respond to anomalous events and unauthorized attempts to access or exfiltrate Personal Information, and verify the effectiveness of monitoring and logging; 4. Technical, organizational, and, as appropriate, physical controls to: a. Safeguard against unauthorized access to any network, system, or asset in Respondents’ control that stores, collects, maintains, or processes Personal Information, including properly configured firewalls; intrusion detection and prevention systems configured to identify and prevent unauthorized access to networks, systems, or assets that store, process, or connect to networks, systems, or assets that store or process Personal Information; file integrity 8 monitoring tools; data loss prevention tools; properly configured physical or logical segmentation of networks, systems, and databases; restricting inbound connections to approved IP addresses; requiring that connections to the network, system, or asset are authenticated and encrypted; preventing the storage of unsecured access keys or other unsecured credentials on Respondents’ networks, systems, or assets, or in any cloud-based services; requiring and enforcing strong passwords and other credentials; and b. Limit Authorized Users’ access only to Personal Information that they need to perform their duties and functions, or, in the case of consumers, to access their own information, periodically audit Authorized Users’ levels of access based on their need to know, and terminate access within 30 days following a change in Authorized Users’ need to know (including because of the termination of employment or contract) or if Authorized Users engage in inappropriate access or usage; 5. Policies and procedures to document in writing the content, implementation, and maintenance of an incident response plan designed to ensure the identification of, investigation of, and response to the unauthorized access to Personal Information. Such incident response plan must include policies and procedures to ensure the timely investigation of data security events and the timely remediation of critical and high-risk vulnerabilities. Respondents must revise and update this incident response plan to adapt to any changes to their networks, systems, and assets; 6. Regular security training programs, on at least an annual basis, that are updated, as applicable, to address internal or external risks identified by Respondents under sub-Provision I.D of this Order, and that include, at a minimum: a. Security awareness training for all employees and service providers who have access to networks, systems, or assets that contain Personal Information on Respondents’ security policies and procedures, including the requirements of this Order, to be conducted when an employee begins employment or takes on a new role in which the employee has access to networks, systems, or assets that contain Personal Information, and on at least an annual basis thereafter; b. For information security personnel, security updates and training sufficient to address relevant security risks; and c. For developers, engineers, other employees, and service providers with job duties that relate to the development, design, implementation, updating, modification, or operation of systems or software that Respondents use to provide products or services, training in secure development principles, including secure engineering and defensive programming concepts; 7. Utilizing qualified information security personnel employed by Respondents or an 9 affiliate or service provider sufficient to manage Respondents’ information security risks and to perform or oversee the Information Security Program, and verifying that key information security personnel take steps to maintain current knowledge of changing information security threats and countermeasures; 8. Protecting by encryption, at a minimum, all information about or derived from an individual’s government-issued identification documents or credentials, such as an image of a driver’s license, state identification card, or passport, or a driver’s license number, military identification number, passport number, or Social Security number, dates of birth, messages exchanged by users, and user account credentials held or transmitted by Respondents both in transit over external networks and at rest, except that, to the extent Respondents determine that encryption of this information, either in transit over external networks or at rest, is infeasible or would increase the risk of unauthorized access to consumers’ Personal Information, Respondents may instead secure such information using effective alternative compensating controls reviewed and approved by the Qualified Individual; 9. Adopting secure development practices and procedures for in-house developed applications utilized by Respondents for transmitting, accessing, or storing Personal Information and for evaluating, assessing, or testing the security of externally developed applications that Respondents utilize to transmit, access, or store Personal Information; 10. Adopting and implementing procedures for Change Management that apply to all networks, systems, and assets that contain Personal Information, which must include the following requirements as to each change subject to Change Management procedures: a. The change must be implemented by applying source code or configuration files to a network, system, or asset; b. The source code or configuration files required by sub-Provision I.E.10.a must be reviewed and approved, prior to their application, by a person with appropriate training or expertise other than the person proposing, planning, or implementing the change; and c. The means by which the reviewed code or configuration files are applied must be programmatic or automated, rather than manual, unless: i. The Qualified Individual makes a written determination that programmatic or automated application is impossible, and that such impossibility cannot be remedied without increased risk of unauthorized access to consumers’ Personal Information; and ii. Respondents develop and implement alternative procedures, specifically approved and documented by the Qualified Individual, to ensure that the 10 manual application of reviewed code or configuration files does not result in the introduction of error. 11. Requiring Multi-Factor Authentication for any of Respondents’ employees or contractors to access any information system in Respondents’ control that is used, in whole or in part, to store, collect, or transmit Personal Information, unless the Qualified Individual has approved in writing the use of reasonably equivalent or more secure access controls; and 12. Developing, implementing, and maintaining policies and procedures to minimize data collection, storage, and retention, including data deletion or retention policies and procedures. Such policies and procedures must include the secure disposal of Personal Information in any format no later than two years after the last date the information is used in connection with the provision of a product or service to the consumer to which it relates, unless such information is necessary for business operations or for other legitimate business purposes, including to comply with a properly authorized civil, criminal, or regulatory investigation, or subpoena or summons by Federal, state, or local authorities; to comply with the consumer’s request; where the information is otherwise required to be retained by law or regulation; or where targeted disposal is not reasonably feasible due to the manner in which the information is maintained. To the extent Respondents retain information for longer than two years after the last date the information is used in connection with the provision of a product or service to the consumer to which it relates, Respondents must document in writing the legitimate business purpose for which Respondents retain such information and must delete such information upon the conclusion of the stated business purpose. Respondents must periodically review Respondents’ data retention policy to minimize the unnecessary retention of data;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 276,
+            "quote_end_line": 414
           },
           {
-            "description": "Implement policies and procedures to systematically inventory Personal Information",
-            "quoted_text": "Policies, procedures, standards, and technical measures to systematically inventory Personal Information in Respondents' control, including policies, procedures, and technical measures to track and inventory the transfer and storage of Personal Information among and within Respondents' various networks, systems, and assets",
+            "description": "Assess the sufficiency of safeguards at least annually and within 30 days of a Covered Incident, and modify the Information Security Program based on results",
+            "quoted_text": "F. Assess, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, the sufficiency of any safeguards in place to address the internal and external risks to the security, confidentiality, or integrity of Personal Information, and modify the Information Security Program based on the results;",
+            "deadline": "annually; 30 days after Covered Incident",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 415,
+            "quote_end_line": 419
+          },
+          {
+            "description": "Test and monitor safeguard effectiveness at least annually and within 30 days of a Covered Incident, including vulnerability testing every four months and penetration testing annually",
+            "quoted_text": "G. Test and monitor the effectiveness of the safeguards at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, and modify the Information Security Program based on the results. Such testing and monitoring must include vulnerability testing of Respondents’ networks, systems, and assets once every four (4) months and promptly (not to exceed thirty (30) days) after a Covered Incident, and penetration testing of Respondents’ networks, systems, and assets at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident;",
+            "deadline": "annually; every 4 months for vulnerability testing; 30 days after Covered Incident",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 420,
+            "quote_end_line": 427
+          },
+          {
+            "description": "Select and retain service providers capable of safeguarding Personal Information, vet their security practices, and contractually require them to provide security training and maintain adequate safeguards",
+            "quoted_text": "H. Select and retain service providers capable of safeguarding Personal Information they access through or receive from Respondents, including by implementing policies and procedures to adequately vet and assess the service providers’ data security practices 11 prior to contracting with the service providers and periodically thereafter. Respondents must also contractually require service providers to (1) provide regular security training programs to their employees; and (2) implement and maintain safeguards sufficient to address the internal and external risks to the security, confidentiality, or integrity of Personal Information; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 428,
+            "quote_end_line": 438
           },
           {
-            "description": "Implement logging and monitoring of access to networks, systems, and assets",
-            "quoted_text": "Policies, procedures, standards, and technical measures to log and monitor access to networks, systems, and assets in Respondents' control",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Monitor networks, systems, and assets to identify and log anomalous activity and data security events",
-            "quoted_text": "Policies, procedures, standards, and technical measures to monitor all of Respondents' networks, systems, and assets to identify and log anomalous activity and/or data security events, including unauthorized attempts to access or exfiltrate Personal Information from Respondents' networks, systems, and assets.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Implement technical, organizational, and physical controls to safeguard against unauthorized access",
-            "quoted_text": "Technical, organizational, and, as appropriate, physical controls to: a. Safeguard against unauthorized access to any network, system, or asset in Respondents' control that stores, collects, maintains, or processes Personal Information, including properly configured firewalls; intrusion detection and prevention systems configured to identify and prevent unauthorized access to networks, systems, or assets that store, process, or connect to networks, systems, or assets that store or process Personal Information",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Limit Authorized Users' access to Personal Information based on need to know and terminate access within 30 days",
-            "quoted_text": "Limit Authorized Users' access only to Personal Information that they need to perform their duties and functions, or, in the case of consumers, to access their own information, periodically audit Authorized Users' levels of access based on their need to know, and terminate access within 30 days following a change in Authorized Users' need to know (including because of the termination of employment or contract) or if Authorized Users engage in inappropriate access or usage",
-            "deadline": "30 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Document incident response plan for unauthorized access to Personal Information",
-            "quoted_text": "Policies and procedures to document in writing the content, implementation, and maintenance of an incident response plan designed to ensure the identification of, investigation of, and response to the unauthorized access to Personal Information.",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Provide regular security training programs on at least an annual basis",
-            "quoted_text": "Regular security training programs, on at least an annual basis, that are updated, as applicable, to address internal or external risks identified by Respondents under sub-Provision I.D of this Order",
+            "description": "Evaluate and adjust the Information Security Program in light of material changes to operations, Covered Incidents, new technologies, or other relevant circumstances, at least annually",
+            "quoted_text": "I. Evaluate and adjust the Information Security Program in light of any material changes to Respondents’ operations or business arrangements, a Covered Incident, new or more efficient technological or operational methods to control for the risks identified in Provision I.D of this Order, or any other circumstances that Respondents know or have reason to know may have an impact on the effectiveness of the Information Security Program or any of its individual safeguards. At a minimum, Respondents must evaluate the Information Security Program at least once every twelve (12) months and modify the Information Security Program based on the results.",
             "deadline": "annually",
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Provide security awareness training for all employees and service providers with access to Personal Information",
-            "quoted_text": "Security awareness training for all employees and service providers who have access to networks, systems, or assets that contain Personal Information on Respondents' security policies and procedures, including the requirements of this Order, to be conducted when an employee begins employment or takes on a new role in which the employee has access to networks, systems, or assets that contain Personal Information, and on at least an annual basis thereafter",
-            "deadline": "annually",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Utilize qualified information security personnel",
-            "quoted_text": "Utilizing qualified information security personnel employed by Respondents or an affiliate or service provider sufficient to manage Respondents' information security risks and to perform or oversee the Information Security Program, and verifying that key information security personnel take steps to maintain current knowledge of changing information security threats and countermeasures",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Protect specified Personal Information by encryption in transit and at rest",
-            "quoted_text": "Protecting by encryption, at a minimum, all information about or derived from an individual's government-issued identification documents or credentials, such as an image of a driver's license, state identification card, or passport, or a driver's license number, military identification number, passport number, or Social Security number, dates of birth, messages exchanged by users, and user account credentials held or transmitted by Respondents both in transit over external networks and at rest",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Adopt secure development practices for in-house and externally developed applications",
-            "quoted_text": "Adopting secure development practices and procedures for in-house developed applications utilized by Respondents for transmitting, accessing, or storing Personal Information and for evaluating, assessing, or testing the security of externally developed applications that Respondents utilize to transmit, access, or store Personal Information",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Adopt and implement Change Management procedures",
-            "quoted_text": "Adopting and implementing procedures for Change Management that apply to all networks, systems, and assets that contain Personal Information, which must include the following requirements as to each change subject to Change Management procedures: a. The change must be implemented by applying source code or configuration files to a network, system, or asset; b. The source code or configuration files required by sub-Provision I.E.10.a must be reviewed and approved, prior to their application, by a person with appropriate training or expertise other than the person proposing, planning, or implementing the change; and c. The means by which the reviewed code or configuration files are applied must be programmatic or automated, rather than manual",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Require Multi-Factor Authentication for employees or contractors to access information systems containing Personal Information",
-            "quoted_text": "Requiring Multi-Factor Authentication for any of Respondents' employees or contractors to access any information system in Respondents' control that is used, in whole or in part, to store, collect, or transmit Personal Information, unless the Qualified Individual has approved in writing the use of reasonably equivalent or more secure access controls",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Develop and maintain data minimization, collection, storage, retention, and deletion policies including secure disposal within 2 years unless necessary for business operations",
-            "quoted_text": "Developing, implementing, and maintaining policies and procedures to minimize data collection, storage, and retention, including data deletion or retention policies and procedures. Such policies and procedures must include the secure disposal of Personal Information in any format no later than two years after the last date the information is used in connection with the provision of a product or service to the consumer to which it relates, unless such information is necessary for business operations or for other legitimate business purposes",
-            "deadline": "2 years",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Assess sufficiency of safeguards at least annually and within 30 days of Covered Incident",
-            "quoted_text": "Assess, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, the sufficiency of any safeguards in place to address the internal and external risks to the security, confidentiality, or integrity of Personal Information, and modify the Information Security Program based on the results",
-            "deadline": "12 months and 30 days after Covered Incident",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Test and monitor effectiveness of safeguards at least annually and within 30 days of Covered Incident, including vulnerability testing every 4 months and penetration testing annually",
-            "quoted_text": "Test and monitor the effectiveness of the safeguards at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, and modify the Information Security Program based on the results. Such testing and monitoring must include vulnerability testing of Respondents' networks, systems, and assets once every four (4) months and promptly (not to exceed thirty (30) days) after a Covered Incident, and penetration testing of Respondents' networks, systems, and assets at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident",
-            "deadline": "4 months for vulnerability testing, 12 months for penetration testing, and 30 days after Covered Incident",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Select and retain service providers capable of safeguarding Personal Information and contractually require them to implement safeguards",
-            "quoted_text": "Select and retain service providers capable of safeguarding Personal Information they access through or receive from Respondents, including by implementing policies and procedures to adequately vet and assess the service providers' data security practices prior to contracting with the service providers and periodically thereafter. Respondents must also contractually require service providers to (1) provide regular security training programs to their employees; and (2) implement and maintain safeguards sufficient to address the internal and external risks to the security, confidentiality, or integrity of Personal Information",
-            "deadline": null,
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Evaluate and adjust Information Security Program at least annually based on material changes",
-            "quoted_text": "Evaluate and adjust the Information Security Program in light of any material changes to Respondents' operations or business arrangements, a Covered Incident, new or more efficient technological or operational methods to control for the risks identified in Provision I.D of this Order, or any other circumstances that Respondents know or have reason to know may have an impact on the effectiveness of the Information Security Program or any of its individual safeguards. At a minimum, Respondents must evaluate the Information Security Program at least once every twelve (12) months and modify the Information Security Program based on the results.",
-            "deadline": "12 months",
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 439,
+            "quote_end_line": 446
           }
         ]
       },
@@ -335,56 +273,52 @@
         "provision_number": "II",
         "title": "Information Security Assessments by a Third Party",
         "category": "assessment",
-        "summary": "Respondents must obtain initial and biennial third-party assessments of their Information Security Program, with the initial assessment covering the first 180 days and subsequent biennial assessments for 20 years.",
+        "summary": "Respondents must obtain initial and biennial independent third-party assessments of their Information Security Program, with the Assessor approved by the FTC, covering the first 180 days and each two-year period thereafter for 20 years, and submit reports to the Commission.",
         "requirements": [
           {
-            "description": "Obtain initial and biennial assessments from qualified, objective, independent third-party assessor",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with compliance with Provision I of this Order, titled Mandated Information Security Program, Respondents must obtain initial and biennial assessments (\"Assessments\"): A. The Assessments must be obtained from a qualified, objective, independent third-party professional (\"Assessor\"), who (1) uses procedures and standards generally accepted in the profession; (2) conducts an independent review of the Information Security Program; and (3) retains all documents relevant to each Assessment for five (5) years after completion of such Assessment and will provide such documents to the Commission within ten (10) days of receipt of a written request from a representative of the Commission.",
-            "deadline": "10 days for providing documents to Commission upon request",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Provide Commission with name, affiliation, and qualifications of proposed Assessor for approval",
-            "quoted_text": "For each Assessment, Respondents must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name, affiliation, and qualifications of the proposed Assessor, whom the Associate Director will have the authority to approve in her or his sole discretion.",
+            "description": "Obtain assessments from a qualified, objective, independent third-party Assessor using generally accepted procedures, who retains all relevant documents for 5 years and provides them to the Commission within 10 days of request",
+            "quoted_text": "A. The Assessments must be obtained from a qualified, objective, independent third- party professional (“Assessor”), who (1) uses procedures and standards generally accepted in the profession; (2) conducts an independent review of the Information Security Program; and (3) retains all documents relevant to each Assessment for five (5) years after completion of such Assessment and will provide such documents to the Commission within ten (10) days of receipt of a written request from a representative of the Commission. The Assessor may not withhold any documents relating to Assessments of Respondents from the Commission on the basis of a claim of confidentiality, proprietary or trade secrets, work product protection, attorney-client privilege, statutory protection, or any similar claim.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 455,
+            "quote_end_line": 464
           },
           {
-            "description": "Initial Assessment must cover first 180 days after order issuance; biennial assessments cover each two-year period for 20 years",
-            "quoted_text": "The reporting period for the Assessments must cover (1) the first 180 days after the issuance date of the Order for the initial Assessment; and (2) each two-year period thereafter for twenty (20) years after issuance of the Order for the biennial Assessments.",
-            "deadline": "180 days for initial; biennial for 20 years",
-            "verified": true,
-            "confidence": 0.85
-          },
-          {
-            "description": "Each Assessment must determine whether Information Security Program has been implemented and maintained",
-            "quoted_text": "Each Assessment must, for the entire assessment period: 1. Determine whether Respondents have implemented and maintained the Information Security Program required by Provision I of this Order, titled Mandated Information Security Program; 2. Assess the effectiveness of Respondents' implementation and maintenance of sub-Provisions I.A-I; 3. Identify any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program; 4. Address the status of gaps or weaknesses in, or instances of material non-compliance with, the Information Security Program that were identified in any prior Assessment required by this Order",
+            "description": "Provide the FTC's Associate Director for Enforcement with the name, affiliation, and qualifications of the proposed Assessor for approval",
+            "quoted_text": "B. For each Assessment, Respondents must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name, affiliation, and qualifications of the proposed Assessor, whom the Associate Director will have the authority to approve in her or his sole discretion.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 465,
+            "quote_end_line": 469
           },
           {
-            "description": "Complete each Assessment within 60 days after end of reporting period",
-            "quoted_text": "Each Assessment must be completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
-            "deadline": "60 days",
+            "description": "Ensure assessment reporting periods cover the first 180 days after Order issuance for the initial assessment, and each two-year period thereafter for 20 years for biennial assessments",
+            "quoted_text": "C. The reporting period for the Assessments must cover (1) the first 180 days after the issuance date of the Order for the initial Assessment; and (2) each two-year period thereafter for twenty (20) years after issuance of the Order for the biennial 12 Assessments.",
+            "deadline": "180 days (initial); biennial thereafter for 20 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 470,
+            "quote_end_line": 476
           },
           {
-            "description": "Submit unredacted and proposed redacted copy of initial Assessment to Commission within 10 days of completion",
-            "quoted_text": "Unless otherwise directed by a Commission representative in writing, Respondents must submit an unredacted copy of the initial Assessment and a proposed redacted copy suitable for public disclosure to the Commission within ten (10) days after the Assessment has been completed via email to DEbrief@ftc.gov",
-            "deadline": "10 days",
+            "description": "Each Assessment must determine whether the Information Security Program has been implemented and maintained, assess its effectiveness, identify gaps or weaknesses, address prior gaps, and identify specific evidence examined",
+            "quoted_text": "D. Each Assessment must, for the entire assessment period: 1. Determine whether Respondents have implemented and maintained the Information Security Program required by Provision I of this Order, titled Mandated Information Security Program; 2. Assess the effectiveness of Respondents’ implementation and maintenance of sub-Provisions I.A-I; 3. Identify any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program; 4. Address the status of gaps or weaknesses in, or instances of material non- compliance with, the Information Security Program that were identified in any prior Assessment required by this Order; and 5. Identify specific evidence (including documents reviewed, sampling and testing performed, and interviews conducted) examined to make such determinations, assessments, and identifications, and explain why the evidence that the Assessor examined is (a) appropriate for assessing an enterprise of Respondents’ size, complexity, and risk profile; and (b) sufficient to justify the Assessor’s findings. No finding of any Assessment shall rely primarily on assertions or attestations by Respondents’ management. The Assessment must be signed by the Assessor, state that the Assessor conducted an independent review of the Information Security Program and did not rely primarily on assertions or attestations by Respondents’ management, and state the number of hours that each member of the assessment team worked on the Assessment. To the extent that Respondents revise, update, or add one or more safeguards required under Provision I of this Order during an Assessment period, the Assessment must assess the effectiveness of the revised, updated, or added safeguard(s) for the time period in which it was in effect, and provide a separate statement detailing the basis for each revised, updated, or additional safeguard.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 477,
+            "quote_end_line": 503
           },
           {
-            "description": "Retain subsequent biennial Assessments and provide to Commission within 10 days of request",
-            "quoted_text": "Respondents must retain an unredacted copy of each subsequent biennial Assessment as well as a proposed redacted copy of each subsequent biennial Assessment suitable for public disclosure until the order is terminated and must provide each such Assessment to the Associate Director for Enforcement within ten (10) days of request.",
-            "deadline": "10 days of request",
+            "description": "Complete each Assessment within 60 days after the end of the reporting period; submit the initial Assessment (unredacted and proposed redacted copies) to the Commission within 10 days of completion; retain subsequent biennial Assessments and provide them to the Associate Director within 10 days of request",
+            "quoted_text": "E. Each Assessment must be completed within sixty (60) days after the end of the reporting period to which the Assessment applies. Unless otherwise directed by a Commission representative in writing, Respondents must submit an unredacted copy of the initial Assessment and a proposed redacted copy suitable for public disclosure to the Commission within ten (10) days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “In re Global Tel*Link Corporation, FTC File No. 2123012.” Respondents must retain an unredacted copy of each subsequent biennial Assessment as well as a proposed redacted copy of each subsequent biennial Assessment suitable 13 for public disclosure until the order is terminated and must provide each such Assessment to the Associate Director for Enforcement within ten (10) days of request. The initial Assessment and any subsequent biennial Assessment provided to the Commission must be marked, in the upper right-hand corner of each page, with the words “DPIP Assessment” in red lettering.",
+            "deadline": "60 days after reporting period ends; 10 days after completion for initial submission",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 504,
+            "quote_end_line": 522
           }
         ]
       },
@@ -392,28 +326,34 @@
         "provision_number": "III",
         "title": "Cooperation with Third-Party Information Security Assessor",
         "category": "affirmative_obligation",
-        "summary": "Respondents must fully cooperate with the third-party Assessor by providing all relevant information, materials, network access, and disclosing all material facts necessary for the Assessment.",
+        "summary": "Respondents must fully cooperate with the third-party Assessor by providing all relevant information, network visibility, and disclosing all material facts without misrepresentation.",
         "requirements": [
           {
-            "description": "Provide or make available to Assessor all relevant information and material without reasonable claim of privilege",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents, whether acting directly or indirectly, in connection with any Assessment required by Provision II of this Order, titled Information Security Assessments by a Third Party, must: A. Provide or otherwise make available to the Assessor all information and material in their possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege",
+            "description": "Provide or make available to the Assessor all relevant information and materials in Respondents' possession for which there is no reasonable claim of privilege",
+            "quoted_text": "A. Provide or otherwise make available to the Assessor all information and material in their possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 527,
+            "quote_end_line": 529
           },
           {
-            "description": "Provide Assessor information about networks, systems, and assets to determine scope and visibility",
-            "quoted_text": "Provide or otherwise make available to the Assessor information about Respondents' network(s), systems, and assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the network(s), systems, and assets deemed in scope",
+            "description": "Provide the Assessor with information about Respondents' networks, systems, and assets to determine Assessment scope and grant visibility to in-scope portions",
+            "quoted_text": "B. Provide or otherwise make available to the Assessor information about Respondents’ network(s), systems, and assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the network(s), systems, and assets deemed in scope; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 530,
+            "quote_end_line": 533
           },
           {
-            "description": "Disclose all material facts to Assessor and not misrepresent any material fact",
-            "quoted_text": "Disclose all material facts to the Assessor, and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor's (1) determination of whether Respondents have implemented and maintained the Information Security Program required by Provision I of this Order, titled Mandated Information Security Program; (2) assessment of the effectiveness of the implementation and maintenance of sub-Provisions I.A-I; or (3) identification of any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program.",
+            "description": "Disclose all material facts to the Assessor and not misrepresent any fact material to the Assessor's determinations regarding the Information Security Program",
+            "quoted_text": "C. Disclose all material facts to the Assessor, and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor’s (1) determination of whether Respondents have implemented and maintained the Information Security Program required by Provision I of this Order, titled Mandated Information Security Program; (2) assessment of the effectiveness of the implementation and maintenance of sub-Provisions I.A-I; or (3) identification of any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 534,
+            "quote_end_line": 540
           }
         ]
       },
@@ -421,21 +361,25 @@
         "provision_number": "IV",
         "title": "Annual Certification",
         "category": "compliance_reporting",
-        "summary": "Respondents must provide annual certifications to the Commission from a senior corporate manager that they have established, implemented, and maintained the Order requirements and are not aware of material noncompliance.",
+        "summary": "Respondents must annually provide the FTC with a certification from a senior corporate manager attesting to compliance with the Order, absence of uncorrected material noncompliance, and describing any Covered Incidents during the certified period.",
         "requirements": [
           {
-            "description": "Provide annual certification to Commission starting one year after order issuance",
-            "quoted_text": "IT IS FURTHER ORDERED that, Respondents must: A. One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from a senior corporate manager, or, if no such senior corporate manager exists, a senior officer of Respondents responsible for Respondents' Information Security Program that (1) Respondents have established, implemented, and maintained the requirements of this Order; (2) Respondents are not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission; and (3) includes a brief description of all Covered Incidents during the certified period.",
-            "deadline": "1 year after issuance, then annually",
+            "description": "One year after issuance and each year thereafter, provide the Commission with a certification from a senior corporate manager (or senior officer) attesting to: establishment and maintenance of Order requirements; no uncorrected material noncompliance; and a description of all Covered Incidents during the period",
+            "quoted_text": "A. One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from a senior corporate manager, or, if no such senior corporate manager exists, a senior officer of Respondents responsible for Respondents’ Information Security Program that (1) Respondents have established, implemented, and maintained the requirements of this Order; (2) Respondents are not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission; and (3) includes a brief description of all Covered Incidents during the certified period. The certification must be based on the personal knowledge of the senior corporate manager, senior officer, or subject matter experts upon whom the senior corporate manager or senior officer reasonably relies in making the certification.",
+            "deadline": "annually, beginning 1 year after issuance",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 543,
+            "quote_end_line": 553
           },
           {
-            "description": "Submit annual certifications via email or overnight courier",
-            "quoted_text": "Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
-            "deadline": null,
+            "description": "Submit annual certifications to the Commission via email to DEbrief@ftc.gov or by overnight courier, with subject line beginning \"In re Global Tel*Link Corporation, FTC File No. 2123012\"",
+            "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all 14 annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “In re Global Tel*Link Corporation, FTC File No. 2123012.”",
+            "deadline": "annually",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 554,
+            "quote_end_line": 562
           }
         ]
       },
@@ -443,77 +387,79 @@
         "provision_number": "V",
         "title": "Credit Monitoring and Identity Protection Product",
         "category": "affirmative_obligation",
-        "summary": "Respondents must provide Affected Consumers with enrollment in a credit monitoring and identity protection product offered by an approved independent third party, including specific monitoring features and identity theft insurance.",
+        "summary": "Respondents must provide Affected Consumers with enrollment in an FTC-approved credit monitoring and identity protection product for two years, including daily credit monitoring, dark web alerts, identity theft insurance, and accessible enrollment for incarcerated consumers.",
         "requirements": [
           {
-            "description": "Provide name and qualifications of Third Party to Commission within 14 days for approval",
-            "quoted_text": "The Product must be offered, provided, and maintained by an independent third party (the \"Third Party\") that has been approved by the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission. Within 14 days of the effective date of this Order, Telmate and its successors and assigns must provide the name and qualifications of the Third Party to: DEbrief@ftc.gov",
+            "description": "Within 14 days of the effective date of the Order, Telmate must provide the name and qualifications of the proposed independent Third Party credit monitoring provider to the FTC for approval",
+            "quoted_text": "A. The Product must be offered, provided, and maintained by an independent third party (the “Third Party”) that has been approved by the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission. Within 14 days of the effective date of this Order, Telmate and its successors and assigns must provide the name and qualifications of the Third Party to: DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “In re Global Tel*Link Corporation, FTC File No. 2123012.”",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 567,
+            "quote_end_line": 575
           },
           {
-            "description": "Within 120 days of Third Party approval, instruct Third Party to provide Product registration means to each Affected Consumer",
-            "quoted_text": "Within one hundred and twenty (120) days of receiving approval of the Third Party from the Associate Director for Enforcement for the Bureau of Consumer Protection, Telmate and its successors and assigns must: 1. Instruct or otherwise cause the Third Party to provide to each Affected Consumer receiving a notice pursuant to Section IX.B the means to register for or access the Product, such as an activation code",
-            "deadline": "120 days",
+            "description": "Within 120 days of receiving Third Party approval, Telmate must instruct the Third Party to provide each Affected Consumer with means to register for the Product, and provide the Third Party with sufficient information about Affected Consumers including incarceration status",
+            "quoted_text": "B. Within one hundred and twenty (120) days of receiving approval of the Third Party from the Associate Director for Enforcement for the Bureau of Consumer Protection, Telmate and its successors and assigns must: 1. Instruct or otherwise cause the Third Party to provide to each Affected Consumer receiving a notice pursuant to Section IX.B the means to register for or access the Product, such as an activation code; and 2. Provide the Third Party with sufficient information regarding Affected Consumers to enable the Third Party to efficiently identify and communicate with each Affected Consumer, including, to the extent known, information regarding whether any Affected Consumer is currently incarcerated; if so, in what Facility.",
+            "deadline": "120 days after Third Party approval",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 576,
+            "quote_end_line": 585
           },
           {
-            "description": "Provide Third Party with sufficient information regarding Affected Consumers for identification and communication",
-            "quoted_text": "Provide the Third Party with sufficient information regarding Affected Consumers to enable the Third Party to efficiently identify and communicate with each Affected Consumer, including, to the extent known, information regarding whether any Affected Consumer is currently incarcerated; if so, in what Facility.",
-            "deadline": "120 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Within 30 days of learning identity of additional Affected Consumer, instruct Third Party to provide Product access",
-            "quoted_text": "After complying with sub-Provision B of this Provision, Telmate and its successors and assigns must, within thirty (30) days of learning the identity of an additional Affected Consumer, learning of any reason to believe that an Affected Consumer has not received the means to register for or access the Product, instruct or otherwise cause the Third Party to provide each such Affected Consumer with the means to register for or access the Product.",
+            "description": "Within 30 days of learning of an additional Affected Consumer or that an Affected Consumer has not received enrollment means, instruct the Third Party to provide that consumer with enrollment access",
+            "quoted_text": "C. After complying with sub-Provision B of this Provision, Telmate and its successors and assigns must, within thirty (30) days of learning the identity of an additional Affected Consumer, learning of any reason to believe that an Affected Consumer has not received the means to register for or access the Product, instruct or otherwise cause the Third Party to provide each such Affected Consumer with the means to register for or access the Product.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 586,
+            "quote_end_line": 591
           },
           {
-            "description": "Require Third Party to communicate with Affected Consumers using methods reasonably calculated to reach them, including mail",
-            "quoted_text": "Telmate and its successors and assigns must require the Third Party to communicate with each Affected Consumer using methods of communication that are reasonably calculated to reach that consumer, including in light of the consumer's incarceration status. The Third Party must be able to send and receive communications to and from consumers by mail.",
+            "description": "Require the Third Party to communicate with each Affected Consumer using methods reasonably calculated to reach them including by mail, taking into account incarceration status",
+            "quoted_text": "D. Telmate and its successors and assigns must require the Third Party to communicate with each Affected Consumer using methods of communication that are reasonably calculated to reach that consumer, including in light of the consumer’s incarceration status. The 15 Third Party must be able to send and receive communications to and from consumers by mail.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 592,
+            "quote_end_line": 599
           },
           {
-            "description": "Coordinate with Facilities to allow incarcerated Affected Consumers to enroll via communications services",
-            "quoted_text": "To the extent that Respondents provide communications services, including voice or telephone services or services related to incarcerated consumers' ability to send and receive mail, in any Facility in which any Affected Consumer is incarcerated, Respondents will coordinate in good faith with Facilities to allow Affected Consumers who are incarcerated to enroll in the Product via those communication services, including by requesting that Facilities add a telephone number that can be used for enrollment in the Product to the approved call list. Respondents will make reasonable efforts to ensure that calls and mail between Third Party and Affected Consumers are free of charge.",
+            "description": "To the extent Respondents provide communications services in Facilities where Affected Consumers are incarcerated, coordinate in good faith with Facilities to allow enrollment via those services, and make reasonable efforts to ensure calls and mail with the Third Party are free of charge",
+            "quoted_text": "E. To the extent that Respondents provide communications services, including voice or telephone services or services related to incarcerated consumers’ ability to send and receive mail, in any Facility in which any Affected Consumer is incarcerated, Respondents will coordinate in good faith with Facilities to allow Affected Consumers who are incarcerated to enroll in the Product via those communication services, including by requesting that Facilities add a telephone number that can be used for enrollment in the Product to the approved call list. Respondents will make reasonable efforts to ensure that calls and mail between Third Party and Affected Consumers are free of charge.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 600,
+            "quote_end_line": 607
           },
           {
-            "description": "Affected Consumers eligible to enroll for at least 90 days; provide 2 years of enrollment beginning on registration date",
-            "quoted_text": "Affected Consumers must be eligible to enroll in the Product for a period of at least ninety (90) days following receipt of information from the Third Party about how to register for or access the Product. Telmate and its successors and assigns must cause the Third Party to provide each such Affected Consumer with two (2) years of enrollment in the Product beginning on the date that the Affected Consumer registers for the Product.",
-            "deadline": "90 days eligibility, 2 years enrollment",
+            "description": "Affected Consumers must be eligible to enroll for at least 90 days after receiving enrollment information; Telmate must cause the Third Party to provide each enrolling Affected Consumer with two years of product enrollment",
+            "quoted_text": "F. Affected Consumers must be eligible to enroll in the Product for a period of at least ninety (90) days following receipt of information from the Third Party about how to register for or access the Product. Telmate and its successors and assigns must cause the Third Party to provide each such Affected Consumer with two (2) years of enrollment in the Product beginning on the date that the Affected Consumer registers for the Product.",
+            "deadline": "90-day enrollment window; 2 years of product access",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 608,
+            "quote_end_line": 612
           },
           {
-            "description": "Product must include specific monitoring features, alerts, insurance, and customer service center",
-            "quoted_text": "The Product must include: 1. An option for Affected Consumers incarcerated in Facilities to receive automated credit monitoring alerts generated by the Product via a mechanism that is simple, accessible, secure, and free of charge to Affected Consumers and the Third Party, such as by providing a mechanism by which Affected Consumers can receive alerts by mail; 2. Daily Consumer Report monitoring from each of the three Nationwide Consumer Reporting Agencies showing key changes to one or more of an Affected Consumer's Consumer Reports, including automated alerts when the following occur: new accounts are opened; inquiries or requests for an Affected Consumer's Consumer Report for the purpose of obtaining credit, including for new credit card applications; changes to an Affected Consumer's address; and negative information, including delinquencies or bankruptcies",
+            "description": "The Product must include: incarceration-accessible credit monitoring alerts; daily Consumer Report monitoring from all three Nationwide Consumer Reporting Agencies with automated alerts; dark web and public data alerts; $1,000,000 identity theft insurance; a customer service center; and child monitoring services for Affected Consumers under 18",
+            "quoted_text": "G. The Product must include: 1. An option for Affected Consumers incarcerated in Facilities to receive automated credit monitoring alerts generated by the Product via a mechanism that is simple, accessible, secure, and free of charge to Affected Consumers and the Third Party, such as by providing a mechanism by which Affected Consumers can receive alerts by mail; 2. Daily Consumer Report monitoring from each of the three Nationwide Consumer Reporting Agencies showing key changes to one or more of an Affected Consumer’s Consumer Reports, including automated alerts when the following occur: new accounts are opened; inquiries or requests for an Affected Consumer’s Consumer Report for the purpose of obtaining credit, including for new credit card applications; changes to an Affected Consumer’s address; and negative information, including delinquencies or bankruptcies; 3. Automated alerts, using public or proprietary data sources: a. When data elements submitted by an Affected Consumer for monitoring, such as Social Security numbers, email addresses, or credit card numbers, appear on suspicious websites, including websites on the “dark web;” b. When names, aliases, and addresses have been associated with the Affected Consumer’s Social Security number in connection with information reported to the Consumer Reporting Agencies; c. When a payday loan or certain other unsecured credit has been taken or opened using the Affected Consumer’s Social Security number; 16 d. When banking activity is detected related to new deposit account applications, opening of new deposit accounts, changes to an Affected Consumer’s personal information on an account, and new signers being added to an Affected Consumer’s account; and e. When a balance is reported on an Affected Consumer’s credit line that has been inactive for at least six months; 4. One Million Dollars ($1,000,000) in identity theft insurance to cover costs related to incidents of identity theft or identity fraud, with coverage prior to the Affected Consumer’s enrollment in the Product, provided the costs result from a stolen identity event first discovered during the policy period and subject to the terms of the insurance policy; 5. A customer service center to provide assistance with enrollment, website navigation, monitoring alerts questions, dispute assistance, fraud resolution assistance, and other assistance related to the Product; 6. For Affected Consumers under the age of 18, the Product includes child monitoring services where the parent or guardian can enroll the Affected Consumer under the age of 18 to receive the following services: alerts when data elements submitted for monitoring appear on suspicious websites, such as websites on the “dark web;” and alerts when the Social Security number of an Affected Consumer under the age of 18 is associated with new names or addresses or the creation of a Consumer Report at one or more of the three Nationwide Consumer Reporting Agencies.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Product must include $1 million identity theft insurance with coverage prior to enrollment",
-            "quoted_text": "One Million Dollars ($1,000,000) in identity theft insurance to cover costs related to incidents of identity theft or identity fraud, with coverage prior to the Affected Consumer's enrollment in the Product, provided the costs result from a stolen identity event first discovered during the policy period and subject to the terms of the insurance policy",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 613,
+            "quote_end_line": 658
           },
           {
             "description": "Respondents must not receive or retain any monetary benefit from the Product",
-            "quoted_text": "Respondents must not receive or retain any monetary benefit from the Product.",
+            "quoted_text": "H. Respondents must not receive or retain any monetary benefit from the Product.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 659,
+            "quote_end_line": 659
           }
         ]
       },
@@ -521,28 +467,34 @@
         "provision_number": "VI",
         "title": "Covered Incident Notification to Consumers and Facilities",
         "category": "affirmative_obligation",
-        "summary": "Following any future Covered Incident, Respondents must notify each Future Affected Consumer and each Future Affected Facility within 30 days, providing specific information about the incident, its causes, affected data types, and remediation actions.",
+        "summary": "Following any future Covered Incident, Respondents must identify Future Affected Consumers and notify them and affected Facilities within 30 days of any government notification, including specific required information about the incident.",
         "requirements": [
           {
-            "description": "Within 30 days of notifying government entity of Covered Incident, provide notice to each Future Affected Consumer",
-            "quoted_text": "IT IS FURTHER ORDERED that, following any future Covered Incident, Respondents must make reasonable efforts to identify each Future Affected Consumer and must provide notification to each identified Future Affected Consumer as follows: A. Within thirty (30) days of any notification to a United States federal, state, or local entity of a Covered Incident, Respondents must provide, to each Future Affected Consumer, a notice including: 1. The date, estimated date, or estimated date range when the Covered Incident occurred; 2. A description of the facts relating to the Covered Incident, including the causes of the Covered Incident, if known (unless otherwise prohibited by law); 3. A description of each type of Personal Information that Respondents have reason to believe was accessed, acquired, or publicly exposed without authorization in connection with the Covered Incident",
+            "description": "Within 30 days of notifying any U.S. government entity of a Covered Incident, provide each Future Affected Consumer a notice including: incident date/range, description of facts and causes, types of Personal Information affected, remediation steps taken, Respondents' contact information, FTC and NCRA statement, and NCRA/FTC contact information",
+            "quoted_text": "A. Within thirty (30) days of any notification to a United States federal, state, or local entity of a Covered Incident, Respondents must provide, to each Future Affected Consumer, a notice including: 1. The date, estimated date, or estimated date range when the Covered Incident occurred; 2. A description of the facts relating to the Covered Incident, including the causes of the Covered Incident, if known (unless otherwise prohibited by law); 3. A description of each type of Personal Information that Respondents have reason to 17 believe was accessed, acquired, or publicly exposed without authorization in connection with the Covered Incident; 4. The acts that Respondents have taken to date to remediate the Covered Incident and protect Personal Information from further exposure, acquisition, or access; 5. Information that a consumer can use to contact Respondents to inquire about the Covered Incident; 6. A statement that the consumer can obtain information from the Federal Trade Commission (“FTC”) and the Nationwide Consumer Reporting Agencies about fraud alerts and security freezes; and 7. The up-to-date toll-free numbers, addresses, and websites for the Nationwide Consumer Reporting Agencies and the FTC; and",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 664,
+            "quote_end_line": 685
           },
           {
-            "description": "Within 30 days of notifying government entity of Covered Incident, provide notice to each Future Affected Facility",
-            "quoted_text": "Within thirty (30) days of any notification to a United States federal, state, or local entity of a Covered Incident, Respondents must provide to (1) each Facility that is associated with the Personal Information that is accessed, acquired, or publicly exposed without authorization and (2) each Facility in which Respondents know that one or more Future Affected Consumers is incarcerated at the time of the Covered Incident (each a \"Future Affected Facility\"): 1. The date, estimated date, or estimated date range when the Covered Incident occurred; 2. A description of the facts relating to the Covered Incident, including the causes of the Covered Incident, if known; 3. A description of each type of Personal Information that Respondents have reason to believe was accessed, acquired, or publicly exposed without authorization in connection with the Covered Incident; 4. The number of Future Affected Consumers and the number of Future Affected Consumers with a known relationship to the Facility",
+            "description": "Within 30 days of notifying any U.S. government entity of a Covered Incident, provide each affected Facility a notice including: incident date/range, description of facts and causes, types of Personal Information affected, number of Future Affected Consumers, how the Facility can obtain more information and assist affected consumers, and remediation steps taken",
+            "quoted_text": "B. Within thirty (30) days of any notification to a United States federal, state, or local entity of a Covered Incident, Respondents must provide to (1) each Facility that is associated with the Personal Information that is accessed, acquired, or publicly exposed without authorization and (2) each Facility in which Respondents know that one or more Future Affected Consumers is incarcerated at the time of the Covered Incident (each a “Future Affected Facility”): 1. The date, estimated date, or estimated date range when the Covered Incident occurred; 2. A description of the facts relating to the Covered Incident, including the causes of the Covered Incident, if known; 3. A description of each type of Personal Information that Respondents have reason to believe was accessed, acquired, or publicly exposed without authorization in connection with the Covered Incident; 4. The number of Future Affected Consumers and the number of Future Affected Consumers with a known relationship to the Facility; 5. An explanation of how the Facility can obtain more information about which consumers were affected by the Covered Incident and steps the Facility can take to assist Future Affected Consumers; and 6. The acts that Respondents have taken to date to remediate the Covered Incident and protect Personal Information from further exposure or access;",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 686,
+            "quote_end_line": 705
           },
           {
-            "description": "If additional Future Affected Consumer identified more than 30 days after Covered Incident, notify within 30 days of identification",
-            "quoted_text": "If Respondents identify an additional Future Affected Consumer more than thirty (30) days following the Covered Incident, Respondents must provide to the Future Affected Consumer, within thirty (30) days of such identification, a notice including the elements listed at sub-Provision VI.A.1-7, and to each Future Affected Facility, if any, that has not previously been notified pursuant to sub-Provision VI.B., a notice including the elements listed at sub-Provision VI.B.1-6",
+            "description": "If additional Future Affected Consumers are identified more than 30 days after the Covered Incident, notify those consumers and any newly identified Future Affected Facilities within 30 days of such identification",
+            "quoted_text": "C. If Respondents identify an additional Future Affected Consumer more than thirty (30) days following the Covered Incident, Respondents must provide to the Future Affected 18 Consumer, within thirty (30) days of such identification, a notice including the elements listed at sub-Provision VI.A.1-7, and to each Future Affected Facility, if any, that has not previously been notified pursuant to sub-Provision VI.B., a notice including the elements listed at sub-Provision VI.B.1-6;",
             "deadline": "30 days of identification",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 706,
+            "quote_end_line": 714
           }
         ]
       },
@@ -550,14 +502,25 @@
         "provision_number": "VII",
         "title": "Covered Incident Reports to the Commission",
         "category": "compliance_reporting",
-        "summary": "Within 10 days of notifying any U.S. government entity of a Covered Incident, Respondents must submit a report to the Commission describing the incident, affected information, number of consumers affected, and remediation actions.",
+        "summary": "Within 10 days of notifying any government entity of a Covered Incident, Respondents must submit a detailed report to the FTC including the incident's date, description, affected information types, number of consumers, and remediation actions.",
         "requirements": [
           {
-            "description": "Within 10 days of notifying government entity of Covered Incident, submit report to Commission",
-            "quoted_text": "IT IS FURTHER ORDERED that, within ten (10) days of any notification to a United States federal, state, or local entity of a Covered Incident, Respondents must submit a report to the Commission. The report must include, to the extent possible: A. The date, estimated date, or estimated date range when the Covered Incident occurred; B. A description of the facts relating to the Covered Incident, including the causes of the Covered Incident, if known; C. A description of each type of information that was affected by the Covered Incident; D. The number of consumers whose information was affected by the Covered Incident; E. The acts that Respondents have taken to date to remediate the Covered Incident and protect Personal Information from further exposure, acquisition, or access, and protect affected individuals from identity theft or other harm that may result from the Covered Incident",
+            "description": "Within 10 days of any notification to a U.S. federal, state, or local entity of a Covered Incident, submit a report to the Commission including: incident date/range, description of facts and causes, types of information affected, number of consumers affected, remediation steps, any law enforcement delay request and a copy thereof, and a representative copy of any materially different consumer or government notice",
+            "quoted_text": "IT IS FURTHER ORDERED that, within ten (10) days of any notification to a United States federal, state, or local entity of a Covered Incident, Respondents must submit a report to the Commission. The report must include, to the extent possible: A. The date, estimated date, or estimated date range when the Covered Incident occurred; B. A description of the facts relating to the Covered Incident, including the causes of the Covered Incident, if known; C. A description of each type of information that was affected by the Covered Incident; D. The number of consumers whose information was affected by the Covered Incident; E. The acts that Respondents have taken to date to remediate the Covered Incident and protect Personal Information from further exposure, acquisition, or access, and protect affected individuals from identity theft or other harm that may result from the Covered Incident; F. As applicable, a statement that Respondents have received a request from a federal, state, or local law enforcement agency to delay notice to Future Affected Consumers and Facilities on the basis that such notice would interfere with an ongoing investigation and a copy of such request; and G. A representative copy of any materially different notice Respondents will send or have sent to consumers or to any United States federal, state, or local government entity.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 722,
+            "quote_end_line": 739
+          },
+          {
+            "description": "Submit all Covered Incident reports via email to DEbrief@ftc.gov or overnight courier to the Associate Director for Enforcement, with subject line beginning \"In re Global Tel*Link Corporation, FTC File No. 2123012\"",
+            "quoted_text": "Unless otherwise directed by a Commission representative in writing, all Covered Incident reports to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “In re Global Tel*Link Corporation, FTC File No. 2123012.”",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 740,
+            "quote_end_line": 745
           }
         ]
       },
@@ -565,14 +528,52 @@
         "provision_number": "VIII",
         "title": "Prohibition Against Misrepresentations About Security and Privacy",
         "category": "prohibition",
-        "summary": "Respondents must not misrepresent their privacy and security measures, the occurrence or extent of Covered Incidents, notification practices, industry-standard compliance, or protection of Personal Information.",
+        "summary": "Respondents and their agents must not misrepresent their privacy and security measures, the occurrence or nature of any Covered Incident, notification efforts, industry-standard compliance, or their overall protection of Personal Information.",
         "requirements": [
           {
-            "description": "Must not misrepresent privacy and security measures, Covered Incidents, notifications, industry standards, or protection of Personal Information",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents, and Respondents' officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with promoting or offering for sale any product or service must not misrepresent in any manner, expressly or by implication: A. Respondents' privacy and security measures to prevent unauthorized access to Personal Information; B. The occurrence, extent, nature, potential consequences, or any other fact relating to a Covered Incident actually or potentially involving or affecting Personal Information within the ownership, custody, or control of one or more Respondents; C. The extent to which Respondents have notified or will notify affected parties in connection with a Covered Incident; D. The extent to which Respondents meet or exceed industry-standard security or privacy practices; and E. The extent to which Respondents otherwise protect the privacy, security, availability, confidentiality, or integrity of Personal Information.",
+            "description": "Must not misrepresent Respondents' privacy and security measures to prevent unauthorized access to Personal Information",
+            "quoted_text": "A. Respondents’ privacy and security measures to prevent unauthorized access to Personal Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 755,
+            "quote_end_line": 756
+          },
+          {
+            "description": "Must not misrepresent the occurrence, extent, nature, potential consequences, or any other fact relating to a Covered Incident involving Personal Information",
+            "quoted_text": "B. The occurrence, extent, nature, potential consequences, or any other fact relating to a Covered Incident actually or potentially involving or affecting Personal Information within the ownership, custody, or control of one or more Respondents;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 757,
+            "quote_end_line": 759
+          },
+          {
+            "description": "Must not misrepresent the extent to which Respondents have notified or will notify affected parties in connection with a Covered Incident",
+            "quoted_text": "C. The extent to which Respondents have notified or will notify affected parties in connection with a Covered Incident;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 760,
+            "quote_end_line": 761
+          },
+          {
+            "description": "Must not misrepresent the extent to which Respondents meet or exceed industry-standard security or privacy practices",
+            "quoted_text": "D. The extent to which Respondents meet or exceed industry-standard security or privacy practices; and",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 762,
+            "quote_end_line": 763
+          },
+          {
+            "description": "Must not misrepresent the extent to which Respondents protect the privacy, security, availability, confidentiality, or integrity of Personal Information",
+            "quoted_text": "E. The extent to which Respondents otherwise protect the privacy, security, availability, confidentiality, or integrity of Personal Information.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 764,
+            "quote_end_line": 765
           }
         ]
       },
@@ -580,21 +581,25 @@
         "provision_number": "IX",
         "title": "Notification to Consumers Affected by the Identified Breach",
         "category": "affirmative_obligation",
-        "summary": "Within 120 days of Third Party approval, Respondents must post Banner and Website Notices on their websites and mobile apps for one year, and Telmate must provide Direct Notice to Affected Consumers who did not receive written notice in May 2021.",
+        "summary": "Within 120 days of Third Party approval, Respondents must post a required banner notice on all relevant websites and mobile apps for one year, and Telmate must send a direct notice to each Affected Consumer who did not receive written notice of the Identified Breach in May 2021.",
         "requirements": [
           {
-            "description": "Within 120 days of Third Party approval, post Banner Notice and Website Notice on websites and mobile apps for one year",
-            "quoted_text": "IT IS FURTHER ORDERED that, within one hundred and twenty (120) days of Telmate receiving approval of the Third Party from the Associate Director for Enforcement for the Bureau of Consumer Protection pursuant to Provision V of this Order entitled \"Credit Monitoring and Identity Protection Product\": A. Respondents must post Clearly and Conspicuously on the home page of each of Respondents' websites and the home screen of each of Respondents' mobile applications that has been used to provide Telmate products and services an exact copy of the notice attached hereto as Attachment A (\"Banner Notice\"), including a hyperlink to an exact copy of the notice attached hereto as Attachment B (\"Website and App Notice\"). Respondents must leave these Notices in place for one year after posting them.",
-            "deadline": "120 days, then maintain for 1 year",
+            "description": "Within 120 days of Telmate receiving Third Party approval, post the required Banner Notice (Attachment A) clearly and conspicuously on the home page of each relevant website and mobile app, with a hyperlink to the Website and App Notice (Attachment B), and leave the notices in place for one year",
+            "quoted_text": "A. Respondents must post Clearly and Conspicuously on the home page of each of Respondents’ websites and the home screen of each of Respondents’ mobile applications that has been used to provide Telmate products and services an exact copy of the notice attached hereto as Attachment A (“Banner Notice”), including a hyperlink to an exact copy of the notice attached hereto as Attachment B (“Website and App Notice”). Respondents must leave these Notices in place for one year after posting them. Respondents must not include with the Website and App Notice any other information, documents, or attachments; and",
+            "deadline": "120 days after Third Party approval; notices remain for 1 year",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 771,
+            "quote_end_line": 778
           },
           {
-            "description": "Within 120 days of Third Party approval, provide Direct Notice to Affected Consumers who did not receive written notice in May 2021",
-            "quoted_text": "Telmate and its successors and assigns must provide a notice to each Affected Consumer to whom Respondents did not send written notice of the Identified Breach in May of 2021. The notice must consist solely of an exact copy of the notice attached hereto as Attachment C (\"Direct Notice\"). Respondents must not include with the Direct Notice any other information, documents, or attachments apart from those provided by the Third Party for credit monitoring enrollment.",
-            "deadline": "120 days",
+            "description": "Telmate must provide a Direct Notice (Attachment C) to each Affected Consumer who did not receive written notice of the Identified Breach in May 2021, without including any other information or attachments beyond those provided by the Third Party for credit monitoring enrollment",
+            "quoted_text": "B. Telmate and its successors and assigns must provide a notice to each Affected Consumer to whom Respondents did not send written notice of the Identified Breach in May of 2021. The notice must consist solely of an exact copy of the notice attached hereto as Attachment C (“Direct Notice”). Respondents must not include with the Direct Notice any other information, documents, or attachments apart from those provided by the Third 20 Party for credit monitoring enrollment.",
+            "deadline": "120 days after Third Party approval",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 779,
+            "quote_end_line": 787
           }
         ]
       },
@@ -602,14 +607,16 @@
         "provision_number": "X",
         "title": "Notification to Facilities",
         "category": "affirmative_obligation",
-        "summary": "Within 120 days of Third Party approval, Telmate must provide notice to all Facilities with known relationships to incarcerated Affected Consumers, describing obligations and providing contact information for the Third Party.",
+        "summary": "Within 120 days of Third Party approval, Telmate must send a notice by certified mail or courier to all Facilities with a known relationship to incarcerated Affected Consumers, describing obligations and providing information necessary to facilitate consumers' access to the credit monitoring product.",
         "requirements": [
           {
-            "description": "Within 120 days of Third Party approval, provide notice to Facilities with relationship to incarcerated Affected Consumers",
-            "quoted_text": "IT IS FURTHER ORDERED that, within one hundred and twenty (120) days of approval of the Third Party offering, providing, and maintaining the Product pursuant to the Provision of this Order entitled \"Credit Monitoring and Identity Protection Product,\" Telmate and its successors and assigns must provide a notice to all Facilities with a known, present relationship to one or more incarcerated Affected Consumers. The notice must describe Telmate and its successors and assigns' obligations under the Provisions of this Order entitled \"Notification to Consumers Affected by the Identified Breach\" and \"Credit Monitoring and Identity Protection Product,\" including: A. All information necessary for the Facility to facilitate incarcerated Affected Consumers' ability to receive communications required pursuant to this Order and to communicate with the Third Party; B. The identity of and contact information for the Third Party; and C. Information regarding how the costs of incarcerated Affected Consumers' communications with the Third Party are to be billed or covered. Such notice must be sent by first-class mail, postage paid and return receipt requested, or by courier service with signature proof of delivery.",
-            "deadline": "120 days",
+            "description": "Within 120 days of Third Party approval, Telmate must provide a notice to all Facilities with a known, present relationship to one or more incarcerated Affected Consumers, describing Telmate's obligations under the breach notification and credit monitoring provisions, including: all information the Facility needs to facilitate consumer communications, the Third Party's identity and contact information, and how communication costs will be billed or covered",
+            "quoted_text": "IT IS FURTHER ORDERED that, within one hundred and twenty (120) days of approval of the Third Party offering, providing, and maintaining the Product pursuant to the Provision of this Order entitled “Credit Monitoring and Identity Protection Product,” Telmate and its successors and assigns must provide a notice to all Facilities with a known, present relationship to one or more incarcerated Affected Consumers. The notice must describe Telmate and its successors and assigns’ obligations under the Provisions of this Order entitled “Notification to Consumers Affected by the Identified Breach” and “Credit Monitoring and Identity Protection Product,” including: A. All information necessary for the Facility to facilitate incarcerated Affected Consumers’ ability to receive communications required pursuant to this Order and to communicate with the Third Party; B. The identity of and contact information for the Third Party; and C. Information regarding how the costs of incarcerated Affected Consumers’ communications with the Third Party are to be billed or covered. Such notice must be sent by first-class mail, postage paid and return receipt requested, or by courier service with signature proof of delivery.",
+            "deadline": "120 days after Third Party approval",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 789,
+            "quote_end_line": 804
           }
         ]
       },
@@ -617,28 +624,34 @@
         "provision_number": "XI",
         "title": "Acknowledgments of the Order",
         "category": "acknowledgment",
-        "summary": "Respondents must submit acknowledgment of receipt of the Order within 10 days, deliver copies to specified personnel within 10 days, and obtain signed acknowledgments from recipients within 30 days.",
+        "summary": "Respondents must submit a sworn acknowledgment of receipt of the Order to the FTC within 10 days, deliver copies to all key personnel and controlled businesses, and obtain signed acknowledgments within 30 days.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt of Order to Commission within 10 days",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents obtain acknowledgments of receipt of this Order: A. Each Respondent, within ten (10) days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
+            "description": "Within 10 days after the effective date of the Order, each Respondent must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury",
+            "quoted_text": "A. Each Respondent, within ten (10) days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 808,
+            "quote_end_line": 810
           },
           {
-            "description": "Deliver copy of Order to principals, officers, directors, managers, employees, agents, and controlled businesses within 10 days for current personnel",
-            "quoted_text": "Each Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees having managerial responsibilities for conduct related to the subject matter of the Order and all agents and representatives who participate in conduct related to the subject matter of the Order; (3) each business that Respondents control, directly or indirectly; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Reports and Notices. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "10 days for current personnel",
+            "description": "Each Respondent must deliver a copy of this Order to all principals, officers, directors, LLC managers and members; all employees and agents with managerial responsibilities for relevant conduct; each controlled business; and any successor business entity — within 10 days for current personnel, and before they assume responsibilities for all others",
+            "quoted_text": "B. Each Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all employees having managerial responsibilities for conduct related to the subject matter of the Order and all agents and representatives who participate in conduct related to the subject matter of the Order; (3) each business that Respondents control, directly or indirectly; and (3) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Reports and Notices. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "10 days for current personnel; before assumption of responsibilities for others",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 811,
+            "quote_end_line": 819
           },
           {
-            "description": "Obtain signed and dated acknowledgment from each recipient within 30 days",
-            "quoted_text": "From each individual or entity to which a Respondent delivered a copy of this Order, that Respondent must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "From each individual or entity to which a copy of the Order was delivered, obtain a signed and dated acknowledgment of receipt within 30 days",
+            "quoted_text": "C. From each individual or entity to which a Respondent delivered a copy of this Order, that Respondent must obtain, within thirty (30) days, a signed and dated acknowledgment of 21 receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 0.9865217391304348
+            "confidence": 0.88,
+            "quote_start_line": 820,
+            "quote_end_line": 825
           }
         ]
       },
@@ -646,28 +659,52 @@
         "provision_number": "XII",
         "title": "Compliance Reports and Notices",
         "category": "compliance_reporting",
-        "summary": "Respondents must submit annual compliance reports within one year of order issuance, provide compliance notices within 14 days of changes affecting compliance, and notify Commission within 14 days of bankruptcy proceedings.",
+        "summary": "Respondents must submit a sworn annual compliance report one year after issuance, notify the FTC within 14 days of changes to contact information or corporate structure, and notify the FTC within 14 days of any bankruptcy filing.",
         "requirements": [
           {
-            "description": "Submit annual compliance report one year after order issuance",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents make timely submissions to the Commission: A. One (1) year after the issuance date of this Order, each Respondent must submit a compliance report, sworn under penalty of perjury, in which each Respondent must: 1. Identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; 2. Identify all of that Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; 3. Describe the activities of each business, including the goods and services offered",
-            "deadline": "1 year",
+            "description": "One year after issuance, each Respondent must submit a sworn compliance report identifying contact information, all businesses and their activities, how the Respondent is complying with each Order provision, and providing copies of all acknowledgments obtained",
+            "quoted_text": "A. One (1) year after the issuance date of this Order, each Respondent must submit a compliance report, sworn under penalty of perjury, in which each Respondent must: 1. Identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; 2. Identify all of that Respondent’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; 3. Describe the activities of each business, including the goods and services offered; each means by which consumers can access each business’s goods and services, including each website or mobile application that consumers can use to access each service; the extent to which consumers can or must register or create an account or profile in order to access goods or services; the types of Personal Information that Respondents collect in connection with consumers’ use of goods or services, and the extent to which Respondents disclose any of that information to Facilities; the means of advertising, marketing, and sales; and the involvement of any other Respondent; 4. Describe in detail whether and how that Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes the Respondent made to comply with the Order; and 5. Provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission.",
+            "deadline": "1 year after issuance",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 829,
+            "quote_end_line": 848
           },
           {
-            "description": "Submit compliance notice within 14 days of change in designated contact or structure affecting compliance",
-            "quoted_text": "Each Respondent must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in the following: 1. Any designated point of contact; or 2. The structure of any Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
+            "description": "Within 14 days of any change in a designated point of contact or in corporate structure (creation, merger, sale, dissolution of any relevant entity), each Respondent must submit a sworn compliance notice",
+            "quoted_text": "B. Each Respondent must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in the following: 1. Any designated point of contact; or 2. The structure of any Respondent or any entity that Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 849,
+            "quote_end_line": 856
           },
           {
-            "description": "Submit notice of bankruptcy filing within 14 days",
-            "quoted_text": "Each Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Respondent within fourteen (14) days of its filing.",
+            "description": "Each Respondent must submit notice of any bankruptcy petition or insolvency proceeding filed by or against it within 14 days of such filing",
+            "quoted_text": "C. Each Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Respondent within fourteen (14) days of its filing.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 860,
+            "quote_end_line": 862
+          },
+          {
+            "description": "All sworn submissions must be true and accurate, comply with 28 U.S.C. § 1746, and include the required declaration language, date, name, title, and signature",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 863,
+            "quote_end_line": 867
+          },
+          {
+            "description": "Unless otherwise directed, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the Associate Director for Enforcement, with subject line beginning \"In re Global Tel*Link Corporation, FTC File No. 2123012\"",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “In re Global Tel*Link Corporation, FTC File No. 2123012.”",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 868,
+            "quote_end_line": 873
           }
         ]
       },
@@ -675,21 +712,79 @@
         "provision_number": "XIII",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondents must create and retain specified records for five years, including accounting records, personnel records, consumer complaints, advertisements, security representations, assessment materials, law enforcement communications, and compliance documentation.",
+        "summary": "Respondents must create and retain for five years specified categories of records, including accounting records, personnel records, consumer complaints, marketing materials, security representations, Assessment materials, law enforcement communications, and all compliance records.",
         "requirements": [
           {
-            "description": "Create and retain accounting records, personnel records, consumer complaints, advertisements, security representations, assessment materials, law enforcement communications, and compliance documents for 5 years",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents must create certain records and retain each such record for five (5) years, unless otherwise specified below. Specifically, each Respondent must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss; B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination; C. Copies or records of all consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, such as through a third party, and any response; D. A copy of each unique advertisement, marketing or business proposal (including any response to a Request for Proposal), or other marketing material making a representation subject to this Order; E. A copy of each widely disseminated representation by Respondents that relates to any Covered Incident or describes the extent to which Respondents maintain or protect the privacy, security and confidentiality of any Personal Information",
-            "deadline": "5 years",
+            "description": "Create and retain for 5 years: accounting records showing revenues, costs, and net profit or loss from all goods or services sold",
+            "quoted_text": "A. Accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss;",
+            "deadline": "5 years retention",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 878,
+            "quote_end_line": 879
           },
           {
-            "description": "Retain assessment materials for 5 years after date of preparation",
-            "quoted_text": "For five (5) years after the date of preparation of each Assessment required by this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Respondents, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and Assessments, and any other materials concerning Respondents' compliance with related Provisions of this Order, for the compliance period covered by such Assessment",
-            "deadline": "5 years from preparation date",
+            "description": "Create and retain for 5 years: personnel records showing name, addresses, telephone numbers, job title, dates of service, and reason for termination for each person providing services related to the Order",
+            "quoted_text": "B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "deadline": "5 years retention",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 880,
+            "quote_end_line": 883
+          },
+          {
+            "description": "Create and retain for 5 years: copies of all consumer complaints concerning the subject matter of the Order and any responses",
+            "quoted_text": "C. Copies or records of all consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, such as through a third party, and any response;",
+            "deadline": "5 years retention",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 884,
+            "quote_end_line": 885
+          },
+          {
+            "description": "Create and retain for 5 years: a copy of each unique advertisement, marketing or business proposal, or other marketing material making a representation subject to the Order",
+            "quoted_text": "D. A copy of each unique advertisement, marketing or business proposal (including any response to a Request for Proposal), or other marketing material making a representation subject to this Order;",
+            "deadline": "5 years retention",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 886,
+            "quote_end_line": 888
+          },
+          {
+            "description": "Create and retain for 5 years: a copy of each widely disseminated representation relating to any Covered Incident or describing Respondents' maintenance or protection of privacy, security, and confidentiality of Personal Information",
+            "quoted_text": "E. A copy of each widely disseminated representation by Respondents that relates to any Covered Incident or describes the extent to which Respondents maintain or protect the privacy, security and confidentiality of any Personal Information, including any representation concerning a change in any website or other service controlled by Respondents that relates to the privacy, security, and confidentiality of Personal Information;",
+            "deadline": "5 years retention",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 889,
+            "quote_end_line": 894
+          },
+          {
+            "description": "Retain for 5 years after preparation of each Assessment: all materials relied upon to prepare the Assessment, including plans, reports, studies, reviews, audits, policies, training materials, and other compliance materials",
+            "quoted_text": "F. For five (5) years after the date of preparation of each Assessment required by this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Respondents, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and Assessments, and any other materials concerning Respondents’ compliance with related Provisions of this Order, for the compliance period covered by such Assessment;",
+            "deadline": "5 years after Assessment preparation",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 898,
+            "quote_end_line": 903
+          },
+          {
+            "description": "Retain for 5 years from date received: copies of all subpoenas and law enforcement communications relating to Respondents' compliance with this Order or any Covered Incident",
+            "quoted_text": "G. For five (5) years from the date received, copies of all subpoenas and other communications with law enforcement, if such communication relate to Respondents’ compliance with this Order or relate to any Covered Incident;",
+            "deadline": "5 years from receipt",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 904,
+            "quote_end_line": 906
+          },
+          {
+            "description": "Create and retain all records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission",
+            "quoted_text": "H. All records necessary to demonstrate full compliance with each provision of this Order, including all submissions to the Commission.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 907,
+            "quote_end_line": 908
           }
         ]
       },
@@ -697,50 +792,60 @@
         "provision_number": "XIV",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The Commission has authority to monitor compliance by requesting additional reports within 10 days, interviewing affiliated persons, and using other lawful means including posing as consumers or other entities.",
+        "summary": "The FTC has broad authority to monitor Respondents' compliance, including requiring sworn reports and document production within 10 days of request, conducting interviews, and using undercover methods.",
         "requirements": [
           {
-            "description": "Within 10 days of written request, submit additional compliance reports or produce records for inspection",
-            "quoted_text": "IT IS FURTHER ORDERED that, for the purpose of monitoring Respondents' compliance with this Order: A. Within ten (10) days of receipt of a written request from a representative of the Commission, each Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
-            "deadline": "10 days",
+            "description": "Within 10 days of receipt of a written request from a Commission representative, each Respondent must submit additional sworn compliance reports or other requested information, and produce records for inspection and copying",
+            "quoted_text": "A. Within ten (10) days of receipt of a written request from a representative of the Commission, each Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, and produce records for inspection and copying.",
+            "deadline": "10 days of request",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 912,
+            "quote_end_line": 915
           },
           {
-            "description": "Permit Commission representatives to communicate directly with Respondents and interview affiliated persons",
-            "quoted_text": "For matters concerning this Order, representatives of the Commission are authorized to communicate directly with each Respondent. Respondents must permit representatives of the Commission to interview anyone affiliated with any Respondent who has agreed to such an interview. The interviewee may have counsel present.",
+            "description": "Respondents must permit Commission representatives to communicate directly with each Respondent and to interview any affiliated person who has agreed to be interviewed, with counsel permitted to be present",
+            "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with each Respondent. Respondents must permit representatives of the Commission to interview anyone affiliated with any Respondent who has agreed to such an interview. The interviewee may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 916,
+            "quote_end_line": 919
           },
           {
-            "description": "Commission may use lawful means including posing as consumers, suppliers, or other entities",
-            "quoted_text": "The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondents or any individual or entity affiliated with Respondents, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Commission may use all other lawful means to monitor compliance, including posing as consumers, suppliers, or other entities, without identification or prior notice, and may use compulsory process under Sections 9 and 20 of the FTC Act",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondents or any individual or entity affiliated with Respondents, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 920,
+            "quote_end_line": 925
           }
         ]
       },
       {
         "provision_number": "XV",
-        "title": "Order Effective Dates",
+        "title": "Order Effective Dates and Duration",
         "category": "duration",
-        "summary": "The Order is final and effective upon publication on the FTC website and will terminate 20 years from issuance date or 20 years from the most recent complaint filing date, whichever is later.",
+        "summary": "The Order is effective upon publication on ftc.gov and terminates 20 years from issuance, or 20 years from the most recent date the FTC files a complaint alleging a violation, whichever is later, with specified exceptions.",
         "requirements": [
           {
-            "description": "Order is final and effective upon publication on FTC website",
-            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order.",
+            "description": "The Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate 20",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 927,
+            "quote_end_line": 928
           },
           {
-            "description": "Order terminates 20 years from issuance or 20 years from most recent complaint filing, whichever is later",
-            "quoted_text": "This Order will terminate 20 years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later",
+            "description": "The Order will terminate 20 years from issuance or 20 years from the most recent date the FTC files a complaint alleging any violation, whichever is later, with specified exceptions for provisions terminating earlier, non-defendant respondents, and orders already terminated",
+            "quoted_text": "publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate 20 years from the date of its issuance (which date may be stated at the end of this Order, near the Commission’s seal), or 20 years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: 24 A. Any Provision in this Order that terminates in less than 20 years; B. This Order’s application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. Provided, further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
             "deadline": "20 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 928,
+            "quote_end_line": 947
           }
         ]
       }
@@ -757,11 +862,39 @@
     },
     "extraction_stats": {
       "complaint_counts": 6,
-      "complaint_representations": 13,
+      "complaint_representations": 9,
       "order_provisions": 15,
       "order_definitions": 16,
-      "order_requirements": 67
+      "order_requirements": 62,
+      "provisions_per_section": {
+        "I": 10,
+        "II": 5,
+        "III": 3,
+        "IV": 2,
+        "V": 8,
+        "VI": 3,
+        "VII": 2,
+        "VIII": 5,
+        "IX": 2,
+        "X": 1,
+        "XI": 3,
+        "XII": 5,
+        "XIII": 8,
+        "XIV": 3,
+        "XV": 2
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 3
+      },
+      "verification_details": {
+        "complaint_verified": 9,
+        "complaint_total": 9,
+        "order_verified": 62,
+        "order_total": 62
+      }
     },
-    "processing_time_seconds": 315.1
+    "processing_time_seconds": 282.7
   }
 }

@@ -6,7 +6,7 @@
       "incorporation_state": "Washington",
       "entity_type": "corporation",
       "address": "13920 SE Eastgate Way, Suite #400, Bellevue, WA 98005",
-      "business_description": "HTC America Inc. is a mobile device manufacturer that develops and manufactures smartphones and tablet computers using Google Inc.'s Android operating system and Microsoft Corporation's Windows Mobile and Windows Phone mobile operating systems."
+      "business_description": "HTC America, Inc. is a mobile device manufacturer that develops and manufactures smartphones and tablet computers using Google Inc.'s Android operating system and Microsoft Corporation's Windows Mobile and Windows Phone mobile operating systems."
     },
     "commissioners": [
       "Edith Ramirez, Chairwoman",
@@ -23,39 +23,47 @@
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/122-3049-htc-america-inc-matter"
   },
   "complaint": {
-    "factual_background": "HTC America Inc., a mobile device manufacturer, failed to employ reasonable security practices when customizing Android and Windows Mobile devices, introducing numerous security vulnerabilities. These vulnerabilities undermined Android's permission-based security model and allowed unauthorized third-party applications to access sensitive user information and device functionality without user knowledge or consent. HTC failed to implement basic security measures, conduct security assessments, follow secure programming practices, or establish processes to receive and address security vulnerability reports.",
+    "factual_background": "HTC America Inc., a mobile device manufacturer, failed to employ reasonable security practices when customizing Android and Windows Mobile devices. The company introduced numerous security vulnerabilities that allowed third-party applications to access sensitive information (including text messages, location data, and audio recordings) and device functionality without user permission, undermining Android's permission-based security model. These vulnerabilities affected approximately 18.3 million devices and put consumers at risk of financial injury, physical tracking, fraud, and privacy violations.",
     "representations_made": [
       {
-        "description": "Claimed that users would be notified through Android's permission-based security model when third-party applications required access to personal information or device functions before installation",
-        "quoted_text": "Since at least October 2009, user manuals for HTC's Android-based mobile devices contained the following statements, or similar statements, regarding Android's permission-based security model",
-        "source_paragraph": 19
+        "description": "Represented that users would be notified when third-party applications required access to personal information or device functions before installation",
+        "quoted_text": "19. Since at least October 2009, user manuals for HTC’s Android-based mobile devices contained the following statements, or similar statements, regarding Android’s permission-based security model:",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 19,
+        "quote_start_line": 245,
+        "quote_end_line": 247
       },
       {
-        "description": "Represented through the Tell HTC user interface that location data would not be sent to HTC unless the user checked the 'Add location data' button",
-        "quoted_text": "Through this user interface, HTC represents that the user's location data will not be sent to HTC if the user does not check the button marked 'Add location data.'",
-        "source_paragraph": 20
+        "description": "Represented that location data would not be sent to HTC if the user does not check the 'Add location data' button in the Tell HTC error reporting tool",
+        "quoted_text": "Through this user interface, HTC represents that the user’s location data will not be sent to HTC if the user does not check the button marked “Add location data.”",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 20,
+        "quote_start_line": 258,
+        "quote_end_line": 259
       }
     ],
     "counts": [
       {
         "count_number": 1,
         "title": "Unfair Security Practices",
-        "representation": "HTC failed to employ reasonable and appropriate security practices in the design and customization of software on its mobile devices, including failing to implement adequate security programs, conduct security assessments, follow secure programming practices, or establish vulnerability reporting processes",
-        "fact": "HTC introduced numerous security vulnerabilities including permission re-delegation flaws, application installation vulnerabilities, insecure communications mechanisms, and failure to deactivate debug code, affecting millions of devices and exposing sensitive user information and device functionality to unauthorized access",
+        "representation": "HTC failed to employ reasonable and appropriate security practices in the design and customization of the software on its mobile devices",
+        "fact": "HTC's failures included: not implementing adequate security assessment programs; not providing security training for engineers; not conducting security audits or tests; not following secure programming practices; not implementing permission check code in custom applications; using insecure communications mechanisms; failing to deactivate debug code before shipping devices; and not implementing a process for receiving security vulnerability reports",
         "conclusion": "HTC's practices caused, or are likely to cause, substantial injury to consumers that is not offset by countervailing benefits to consumers or competition and is not reasonably avoidable by consumers. This practice was, and is, an unfair act or practice."
       },
       {
         "count_number": 2,
         "title": "Deceptive Android User Manuals",
-        "representation": "HTC represented that through the Android permission-based security model, users would be notified when a third-party application required access to personal information or device functions before completing installation",
-        "fact": "In many instances, users would not be notified when third-party applications required access to personal information or device functions due to security vulnerabilities that allowed third-party applications to access sensitive information and functionality without notifying or obtaining consent from users",
+        "representation": "HTC represented that, through the Android permission-based security model, a user would be notified when a third-party application required access to the user's personal information or to certain functions or settings before the user completes installation",
+        "fact": "In many instances, a user would not be notified when a third-party application required access to personal information or device functions. Due to security vulnerabilities, third-party applications could access sensitive information and device functionality without notifying or obtaining consent from the user",
         "conclusion": "Therefore, the representation set forth in Paragraph 22 constitutes a false or misleading representation."
       },
       {
         "count_number": 3,
         "title": "Deceptive Tell HTC User Interface",
-        "representation": "HTC represented that if a user does not check the 'Add location data' button when submitting an error report through the Tell HTC application, location data would not be sent to HTC",
-        "fact": "In some instances, location data was nevertheless sent to HTC even when users did not check the 'Add location data' button, because GPS-based location information was collected through the Tell HTC error reporting tool due to the debug code security vulnerability",
+        "representation": "HTC represented that if a user does not check the button marked 'Add location data' when submitting an error report through the Tell HTC application, location data would not be sent to HTC",
+        "fact": "In some instances, if a user did not check the button marked 'Add location data', location data was nevertheless sent to HTC. Due to the security vulnerability involving undeactivated debug code, HTC collected GPS-based location information even when the user had not checked the 'Add location data' button",
         "conclusion": "Therefore, the representation set forth in Paragraph 24 constitutes a false or misleading representation."
       }
     ]
@@ -76,11 +84,13 @@
         "summary": "Respondent must not misrepresent the extent to which it or its products maintain and protect the security of covered device functionality or the security, privacy, confidentiality, or integrity of covered information.",
         "requirements": [
           {
-            "description": "Must not misrepresent security, privacy, confidentiality, or integrity of covered device functionality or covered information",
-            "quoted_text": "IT IS ORDERED that respondent and its officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, website, or other device or affiliate owned or controlled by respondent, in or affecting commerce, shall not misrepresent in any manner, expressly or by implication, the extent to which respondent or its products or services, including any covered devices, use, maintain and protect the security of covered device functionality or the security, privacy, confidentiality, or integrity of any covered information from or about consumers.",
+            "description": "Must not misrepresent the security of covered device functionality or the security, privacy, confidentiality, or integrity of covered information",
+            "quoted_text": "IT IS ORDERED that respondent and its officers, agents, representatives, and employees, directly or through any corporation, subsidiary, division, website, or other device or affiliate owned or controlled by respondent, in or affecting commerce, shall not misrepresent in 2 any manner, expressly or by implication, the extent to which respondent or its products or services, including any covered devices, use, maintain and protect the security of covered device functionality or the security, privacy, confidentiality, or integrity of any covered information from or about consumers.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 74,
+            "quote_end_line": 83
           }
         ]
       },
@@ -88,92 +98,114 @@
         "provision_number": "II",
         "title": "Comprehensive Security Program",
         "category": "affirmative_obligation",
-        "summary": "Respondent must establish, implement, and maintain a comprehensive security program to address security risks related to covered devices and protect covered information, with documented administrative, technical, and physical safeguards.",
+        "summary": "Respondent must establish and maintain a comprehensive security program designed to address security risks related to covered devices and protect the security, confidentiality, and integrity of covered information.",
         "requirements": [
           {
-            "description": "Establish and implement comprehensive security program with documented safeguards",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall, no later than the date of service of this order, establish and implement, and thereafter maintain, a comprehensive security program that is reasonably designed to (1) address security risks related to the development and management of new and existing covered devices, and (2) protect the security, confidentiality, and integrity of covered information, whether collected by respondent or input into, stored on, captured with, accessed or transmitted through a covered device. Such program, the content and implementation of which must be fully documented in writing, shall contain administrative, technical, and physical safeguards appropriate to respondent's size and complexity, the nature and scope of respondent's activities, and the sensitivity of the covered device functionality or covered information",
-            "deadline": "date of service",
+            "description": "Establish and implement comprehensive security program that is fully documented in writing",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall, no later than the date of service of this order, establish and implement, and thereafter maintain, a comprehensive security program that is reasonably designed to (1) address security risks related to the development and management of new and existing covered devices, and (2) protect the security, confidentiality, and integrity of covered information, whether collected by respondent or input into, stored on, captured with, accessed or transmitted through a covered device. Such program, the content and implementation of which must be fully documented in writing, shall contain administrative, technical, and physical safeguards appropriate to respondent’s size and complexity, the nature and scope of respondent’s activities, and the sensitivity of the covered device functionality or covered information, including:",
+            "deadline": "no later than the date of service of this order",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 85,
+            "quote_end_line": 94
           },
           {
             "description": "Designate employee(s) to coordinate and be accountable for the security program",
-            "quoted_text": "the designation of an employee or employees to coordinate and be accountable for the security program",
+            "quoted_text": "A. the designation of an employee or employees to coordinate and be accountable for the security program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 95,
+            "quote_end_line": 96
           },
           {
             "description": "Identify material internal and external risks to security of covered devices and assess sufficiency of safeguards",
-            "quoted_text": "the identification of material internal and external risks to the security of covered devices that could result in unauthorized access to or use of covered device functionality, and assessment of the sufficiency of any safeguards in place to control these risks",
+            "quoted_text": "B. the identification of material internal and external risks to the security of covered devices that could result in unauthorized access to or use of covered device functionality, and assessment of the sufficiency of any safeguards in place to control these risks;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 97,
+            "quote_end_line": 100
           },
           {
-            "description": "Identify material risks to security, confidentiality, and integrity of covered information and assess sufficiency of safeguards",
-            "quoted_text": "the identification of material internal and external risks to the security, confidentiality, and integrity of covered information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, whether such information is in respondent's possession or is input into, stored on, captured with, accessed or transmitted through a covered device, and assessment of the sufficiency of any safeguards in place to control these risks",
+            "description": "Identify material internal and external risks to security, confidentiality, and integrity of covered information and assess sufficiency of safeguards",
+            "quoted_text": "C. the identification of material internal and external risks to the security, confidentiality, and integrity of covered information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information, whether such information is in respondent’s possession or is input into, stored on, captured with, accessed or transmitted through a covered device, and assessment of the sufficiency of any safeguards in place to control these risks;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 101,
+            "quote_end_line": 106
           },
           {
-            "description": "Risk assessments must consider risks in employee training, product design/development, secure software design/testing, and third-party vulnerability reports",
-            "quoted_text": "at a minimum, the risk assessments required by subparts B and C should include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management; (2) product design, development and research; (3) secure software design and testing, including secure engineering and defensive programming; and (4) review, assessment, and response to third-party security vulnerability reports",
+            "description": "Risk assessments must consider risks in employee training and management, product design and development, secure software design and testing, and review of third-party security vulnerability reports",
+            "quoted_text": "D. at a minimum, the risk assessments required by subparts B and C should include consideration of risks in each area of relevant operation, including, but not limited to: (1) employee training and management; (2) product design, development and research; (3) secure software design and testing, including secure engineering and defensive programming; and (4) review, assessment, and response to third-party security vulnerability reports;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 107,
+            "quote_end_line": 112
           },
           {
-            "description": "Design and implement reasonable safeguards to control identified risks, including security testing and monitoring",
-            "quoted_text": "the design and implementation of reasonable safeguards to control the risks identified through the risk assessments, including through reasonable and appropriate software security testing techniques, and regular testing or monitoring of the effectiveness of the safeguards' key controls, systems, and procedures",
+            "description": "Design and implement reasonable safeguards to control identified risks, including software security testing techniques, and regularly test or monitor effectiveness",
+            "quoted_text": "E. the design and implementation of reasonable safeguards to control the risks identified through the risk assessments, including through reasonable and appropriate software security testing techniques, and regular testing or monitoring of the effectiveness of the safeguards’ key controls, systems, and procedures;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 113,
+            "quote_end_line": 116
           },
           {
-            "description": "Develop steps to select and retain service providers capable of maintaining security practices and require them by contract to implement safeguards",
-            "quoted_text": "the development and use of reasonable steps to select and retain service providers capable of maintaining security practices consistent with this order, and requiring service providers by contract to implement and maintain appropriate safeguards",
+            "description": "Take reasonable steps to select and retain service providers capable of maintaining security practices consistent with this order, and require service providers by contract to implement and maintain appropriate safeguards",
+            "quoted_text": "F. the development and use of reasonable steps to select and retain service providers capable of maintaining security practices consistent with this order, and requiring service providers by contract to implement and maintain appropriate safeguards; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 120,
+            "quote_end_line": 122
           },
           {
-            "description": "Evaluate and adjust security program based on testing results, material changes to operations, or other circumstances",
-            "quoted_text": "the evaluation and adjustment of the security program in light of the results of the testing and monitoring required by subpart E, any material changes to respondent's operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its security program",
+            "description": "Evaluate and adjust the security program in light of testing and monitoring results, material changes to operations or business arrangements, or other circumstances that may have material impact on effectiveness",
+            "quoted_text": "G. the evaluation and adjustment of the security program in light of the results of the testing and monitoring required by subpart E, any material changes to respondent’s operations or business arrangements, or any other circumstances that respondent knows or has reason to know may have a material impact on the effectiveness of its security program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 123,
+            "quote_end_line": 127
           }
         ]
       },
       {
         "provision_number": "III",
-        "title": "Security Patches for Identified Vulnerabilities",
+        "title": "Security Patches for Specific Vulnerabilities",
         "category": "affirmative_obligation",
-        "summary": "Respondent must develop and release security patches to fix vulnerabilities described in Attachment A for affected devices with operating systems released on or after December 2010, and provide users with clear notice and installation instructions.",
+        "summary": "Respondent must develop and release security patches to fix vulnerabilities described in Attachment A for affected covered devices with operating systems released on or after December 2010.",
         "requirements": [
           {
-            "description": "Develop security patches for vulnerabilities in Attachment A for affected covered devices",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent shall develop security patches to fix the security vulnerabilities described in Attachment A for each affected covered device having an operating system version released on or after December 2010.",
+            "description": "Develop security patches to fix security vulnerabilities described in Attachment A for each affected covered device having an operating system version released on or after December 2010",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall develop security patches to fix the security vulnerabilities described in Attachment A for each affected covered device having an operating system version released on or after December 2010. Within thirty (30) days of service",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 133,
+            "quote_end_line": 135
           },
           {
-            "description": "Release security patches directly or to network operators for deployment",
-            "quoted_text": "Within thirty (30) days of service of this order, respondent shall release the applicable security patch(es) either directly to affected covered devices or to the applicable network operator for deployment of the security patch(es) to the affected covered devices.",
+            "description": "Release applicable security patch(es) either directly to affected covered devices or to the applicable network operator for deployment",
+            "quoted_text": "of this order, respondent shall release the applicable security patch(es) either directly to affected covered devices or to the applicable network operator for deployment of the security patch(es) to",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 136,
+            "quote_end_line": 137
           },
           {
-            "description": "Provide users with clear and prominent notice about patch availability and installation instructions",
-            "quoted_text": "Respondent shall provide users of the affected covered devices with clear and prominent notice regarding the availability of the applicable security patch(es) and instructions for installing the applicable security patch(es).",
+            "description": "Provide users with clear and prominent notice regarding availability of security patch(es) and instructions for installing them",
+            "quoted_text": "the affected covered devices. Respondent shall provide users of the affected covered devices with clear and prominent notice regarding the availability of the applicable security patch(es) and instructions for installing the applicable security patch(es).",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 138,
+            "quote_end_line": 140
           }
         ]
       },
@@ -181,70 +213,61 @@
         "provision_number": "IV",
         "title": "Third-Party Assessments",
         "category": "assessment",
-        "summary": "Respondent must obtain initial and biennial third-party security assessments from qualified professionals for 20 years, covering the security program's implementation and effectiveness.",
+        "summary": "Respondent must obtain initial and biennial assessments from a qualified, independent third-party professional to evaluate compliance with the security program requirements.",
         "requirements": [
           {
-            "description": "Obtain initial assessment covering first 180 days after service of order",
-            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Part II of this order, respondent shall obtain initial and biennial assessments and reports (\"Assessments\") from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. Professionals qualified to prepare such Assessments shall be: a person qualified as a Certified Secure Software Lifecycle Professional (CSSLP) with experience in secure mobile programming; or as a Certified Information System Security Professional (CISSP) with professional experience in the Software Development Security domain and secure mobile programming; or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580. The reporting period for the Assessments shall cover: (1) the first one hundred eighty (180) days after service of the order for the initial Assessment",
-            "deadline": "180 days",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Obtain biennial assessments every two years for twenty years",
-            "quoted_text": "each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments",
-            "deadline": "every 2 years for 20 years",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Each assessment must set forth specific safeguards implemented and maintained",
-            "quoted_text": "set forth the specific administrative, technical, and physical safeguards that respondent has implemented and maintained during the reporting period",
+            "description": "Obtain initial assessment from qualified third-party professional covering first 180 days after service of order",
+            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Part II of this order, respondent shall obtain initial and biennial assessments and reports (“Assessments”) from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. Professionals qualified to prepare such Assessments shall be: a person qualified as a Certified Secure Software Lifecycle Professional (CSSLP) with experience in secure mobile programming; or as a Certified Information System Security Professional (CISSP) with professional experience in the Software Development Security domain and secure mobile programming; or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580. The reporting period for the Assessments shall cover: (1) the first one hundred eighty (180) days after service of the order for the initial Assessment; and (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments. Each Assessment shall:",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 142,
+            "quote_end_line": 154
           },
           {
-            "description": "Each assessment must explain how safeguards are appropriate to respondent's circumstances",
-            "quoted_text": "explain how such safeguards are appropriate to respondent's size and complexity, the nature and scope of respondent's activities, and the sensitivity of the covered device functionality or covered information",
+            "description": "Obtain biennial assessments from qualified third-party professional covering each two-year period for twenty years after service of order",
+            "quoted_text": "IT IS FURTHER ORDERED that, in connection with its compliance with Part II of this order, respondent shall obtain initial and biennial assessments and reports (“Assessments”) from a qualified, objective, independent third-party professional, who uses procedures and standards generally accepted in the profession. Professionals qualified to prepare such Assessments shall be: a person qualified as a Certified Secure Software Lifecycle Professional (CSSLP) with experience in secure mobile programming; or as a Certified Information System Security Professional (CISSP) with professional experience in the Software Development Security domain and secure mobile programming; or a similarly qualified person or organization approved by the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580. The reporting period for the Assessments shall cover: (1) the first one hundred eighty (180) days after service of the order for the initial Assessment; and (2) each two (2) year period thereafter for twenty (20) years after service of the order for the biennial Assessments. Each Assessment shall:",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 142,
+            "quote_end_line": 154
           },
           {
-            "description": "Each assessment must explain how safeguards meet or exceed Part II requirements",
-            "quoted_text": "explain how the safeguards that have been implemented meet or exceed the protections required by Part II of this order",
+            "description": "Each assessment must set forth safeguards implemented, explain appropriateness, explain how they meet Part II requirements, and certify security program is operating effectively",
+            "quoted_text": "A. set forth the specific administrative, technical, and physical safeguards that respondent has implemented and maintained during the reporting period; 4 B. explain how such safeguards are appropriate to respondent’s size and complexity, the nature and scope of respondent’s activities, and the sensitivity of the covered device functionality or covered information; C. explain how the safeguards that have been implemented meet or exceed the protections required by Part II of this order; and D. certify that respondent’s security program is operating with sufficient effectiveness to provide reasonable assurance that the security of covered device functionality and the security, confidentiality, and integrity of covered information is protected and has so operated throughout the reporting period.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 155,
+            "quote_end_line": 168
           },
           {
-            "description": "Each assessment must certify security program is operating effectively",
-            "quoted_text": "certify that respondent's security program is operating with sufficient effectiveness to provide reasonable assurance that the security of covered device functionality and the security, confidentiality, and integrity of covered information is protected and has so operated throughout the reporting period",
-            "deadline": null,
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Complete each assessment within 60 days after end of reporting period",
-            "quoted_text": "Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies.",
+            "description": "Prepare and complete each assessment within 60 days after end of reporting period",
+            "quoted_text": "Each Assessment shall be prepared and completed within sixty (60) days after the end of the reporting period to which the Assessment applies. Respondent shall provide the initial",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 169,
+            "quote_end_line": 170
           },
           {
-            "description": "Provide initial assessment to FTC within 10 days after preparation",
-            "quoted_text": "Respondent shall provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared.",
+            "description": "Provide initial assessment to Associate Director for Enforcement within 10 days after assessment has been prepared",
+            "quoted_text": "reporting period to which the Assessment applies. Respondent shall provide the initial Assessment to the Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, Washington, D.C. 20580, within ten (10) days after the Assessment has been prepared. All subsequent biennial Assessments shall be retained by respondent until the order is",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 170,
+            "quote_end_line": 173
           },
           {
-            "description": "Retain all subsequent biennial assessments and provide within 10 days of FTC request",
-            "quoted_text": "All subsequent biennial Assessments shall be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request.",
+            "description": "Retain all subsequent biennial assessments until order is terminated and provide to Associate Director of Enforcement within 10 days of request",
+            "quoted_text": "prepared. All subsequent biennial Assessments shall be retained by respondent until the order is terminated and provided to the Associate Director of Enforcement within ten (10) days of request. Unless otherwise directed by a representative of the Commission, the initial",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 173,
+            "quote_end_line": 175
           }
         ]
       },
@@ -252,28 +275,34 @@
         "provision_number": "V",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondent must maintain and make available to the FTC records related to compliance, including assessment materials for three years and other compliance documents for three years.",
+        "summary": "Respondent must maintain records related to compliance with the order and make them available to the FTC upon request.",
         "requirements": [
           {
-            "description": "Maintain all materials relied upon to prepare each assessment for 3 years after preparation",
-            "quoted_text": "for a period of three (3) years after the date of preparation of each Assessment required under Part IV of this order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of the respondent, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials relating to respondent's compliance with Parts II and III of this order, for the compliance period covered by such Assessment",
+            "description": "Maintain for 3 years after preparation of each assessment all materials relied upon to prepare the assessment and any other materials relating to compliance with Parts II and III",
+            "quoted_text": "A. for a period of three (3) years after the date of preparation of each Assessment required under Part IV of this order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of the respondent, including but not limited to all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials relating to respondent’s compliance with Parts II and III of this order, for the compliance period covered by such Assessment;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 187,
+            "quote_end_line": 193
           },
           {
-            "description": "Maintain all advertisements and promotional materials containing covered representations for 3 years",
-            "quoted_text": "all advertisements and promotional materials containing any representations covered by this order, as well as all materials used or relied upon in making or disseminating the representation",
+            "description": "Maintain for 3 years from date of preparation or dissemination all advertisements and promotional materials containing representations covered by this order, as well as materials used or relied upon in making or disseminating the representation",
+            "quoted_text": "B. unless covered by V.A, for a period of three (3) years from the date of preparation or dissemination, whichever is later, all other documents relating to compliance with this order, including but not limited to: 5 1. all advertisements and promotional materials containing any representations covered by this order, as well as all materials used or relied upon in making or disseminating the representation; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 194,
+            "quote_end_line": 202
           },
           {
-            "description": "Maintain documents that contradict, qualify, or call into question compliance for 3 years",
-            "quoted_text": "any documents, whether prepared by or on behalf of respondent, that contradict, qualify, or call into question respondent's compliance with this order",
+            "description": "Maintain for 3 years from date of preparation or dissemination any documents that contradict, qualify, or call into question compliance with this order",
+            "quoted_text": "B. unless covered by V.A, for a period of three (3) years from the date of preparation or dissemination, whichever is later, all other documents relating to compliance with this order, including but not limited to: 5 1. all advertisements and promotional materials containing any representations covered by this order, as well as all materials used or relied upon in making or disseminating the representation; and 2. any documents, whether prepared by or on behalf of respondent, that contradict, qualify, or call into question respondent’s compliance with this order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 194,
+            "quote_end_line": 205
           }
         ]
       },
@@ -281,21 +310,25 @@
         "provision_number": "VI",
         "title": "Order Acknowledgment and Distribution",
         "category": "acknowledgment",
-        "summary": "Respondent must deliver a copy of the order to all current and future subsidiaries, principals, officers, directors, managers, employees, agents, and representatives with relevant responsibilities.",
+        "summary": "Respondent must deliver a copy of the order to all current and future subsidiaries, principals, officers, directors, managers, and employees with responsibilities relating to the subject matter of the order.",
         "requirements": [
           {
-            "description": "Deliver order to current subsidiaries and personnel with relevant responsibilities within 30 days",
-            "quoted_text": "Respondent shall deliver this order to such current subsidiaries and personnel within thirty (30) days after service of this order",
+            "description": "Deliver order to all current subsidiaries and personnel within 30 days after service of order",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall deliver a copy of this order to all current and future subsidiaries, current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having responsibilities relating to the subject matter of this order. Respondent shall deliver this order to such current subsidiaries and personnel within thirty (30) days after service of this order, and to such future subsidiaries and personnel within thirty (30) days after the person assumes such position or",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 207,
+            "quote_end_line": 212
           },
           {
-            "description": "Deliver order to future subsidiaries and personnel within 30 days of assuming position",
-            "quoted_text": "to such future subsidiaries and personnel within thirty (30) days after the person assumes such position or responsibilities",
+            "description": "Deliver order to future subsidiaries and personnel within 30 days after person assumes position or responsibilities",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent shall deliver a copy of this order to all current and future subsidiaries, current and future principals, officers, directors, and managers, and to all current and future employees, agents, and representatives having responsibilities relating to the subject matter of this order. Respondent shall deliver this order to such current subsidiaries and personnel within thirty (30) days after service of this order, and to such future subsidiaries and personnel within thirty (30) days after the person assumes such position or responsibilities.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 207,
+            "quote_end_line": 213
           }
         ]
       },
@@ -303,21 +336,25 @@
         "provision_number": "VII",
         "title": "Corporate Change Notification",
         "category": "compliance_reporting",
-        "summary": "Respondent must notify the FTC at least 30 days prior to any corporate changes that may affect compliance obligations, including dissolution, merger, bankruptcy, or name changes.",
+        "summary": "Respondent must notify the Commission at least 30 days prior to any corporate change that may affect compliance obligations under the order.",
         "requirements": [
           {
-            "description": "Notify FTC at least 30 days before corporate changes affecting compliance",
+            "description": "Notify Commission at least 30 days prior to any change in corporation(s) that may affect compliance obligations, including dissolution, assignment, sale, merger, creation or dissolution of subsidiary, bankruptcy filing, or change in corporate name or address",
             "quoted_text": "IT IS FURTHER ORDERED that respondent shall notify the Commission at least thirty (30) days prior to any change in the corporation(s) that may affect compliance obligations arising under this order, including, but not limited to: a dissolution, assignment, sale, merger, or other action that would result in the emergence of a successor corporation; the creation or dissolution of a subsidiary, parent, or affiliate that engages in any acts or practices subject to this order; the proposed filing of a bankruptcy petition; or a change in the corporate name or address.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 215,
+            "quote_end_line": 220
           },
           {
-            "description": "Notify FTC as soon as practicable if learning of change fewer than 30 days before it occurs",
+            "description": "If learning of proposed corporate change fewer than 30 days before it occurs, notify Commission as soon as practicable after obtaining such knowledge",
             "quoted_text": "Provided, however, that, with respect to any proposed change in the corporation(s) about which respondent learns fewer than thirty (30) days prior to the date such action is to take place, respondent shall notify the Commission as soon as is practicable after obtaining such knowledge.",
             "deadline": "as soon as practicable",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 221,
+            "quote_end_line": 223
           }
         ]
       },
@@ -325,21 +362,25 @@
         "provision_number": "VIII",
         "title": "Compliance Reporting",
         "category": "compliance_reporting",
-        "summary": "Respondent must file a written compliance report with the Commission within 60 days after service of the order and submit additional reports upon FTC request.",
+        "summary": "Respondent must file compliance reports with the Commission detailing manner and form of compliance with the order.",
         "requirements": [
           {
-            "description": "File initial compliance report within 60 days after service of order",
-            "quoted_text": "IT IS FURTHER ORDERED that respondent within sixty (60) days after the date of service of this order, shall file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of its compliance with this order.",
+            "description": "File with Commission a true and accurate report in writing setting forth in detail the manner and form of compliance with this order",
+            "quoted_text": "IT IS FURTHER ORDERED that respondent within sixty (60) days after the date of service of this order, shall file with the Commission a true and accurate report, in writing, setting forth in detail the manner and form of its compliance with this order. Within ten (10) days of",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 232,
+            "quote_end_line": 234
           },
           {
-            "description": "Submit additional compliance reports within 10 days of FTC request",
-            "quoted_text": "Within ten (10) days of receipt of written notice from a representative of the Commission, it shall submit an additional true and accurate written report.",
+            "description": "Submit additional true and accurate written report within 10 days of receipt of written notice from Commission representative",
+            "quoted_text": "receipt of written notice from a representative of the Commission, it shall submit an additional true and accurate written report.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 235,
+            "quote_end_line": 236
           }
         ]
       },
@@ -347,21 +388,23 @@
         "provision_number": "IX",
         "title": "Order Duration and Termination",
         "category": "duration",
-        "summary": "The order will terminate on June 25, 2033, or 20 years from the most recent date the U.S. or Commission files a complaint alleging violation of the order in federal court, whichever comes later.",
+        "summary": "The order will terminate on June 25, 2033, or 20 years from the most recent date the United States or Commission files a complaint alleging violation of the order, whichever comes later.",
         "requirements": [
           {
-            "description": "Order remains in effect for 20 years or until specified termination date",
-            "quoted_text": "This order will terminate on June 25, 2033, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Part in this order that terminates in fewer than twenty (20) years; B. this order's application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Part.",
+            "description": "Order terminates on June 25, 2033, or 20 years from most recent complaint filing date, whichever is later",
+            "quoted_text": "This order will terminate on June 25, 2033, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Part in this order that terminates in fewer than twenty (20) years; B. this order’s application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order as to such respondent will terminate according to this Part as though the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 241,
+            "quote_end_line": 255
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This order will terminate on June 25, 2033, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. any Part in this order that terminates in fewer than twenty (20) years; B. this order's application to any respondent that is not named as a defendant in such complaint; and C. this order if such complaint is filed after the order has terminated pursuant to this Part. Provided, further, that if such complaint is dismissed or a federal court rules that respondent did not violate any provision of the order, and the dismissal or ruling is either not appealed or upheld on appeal, then the order as to such respondent will terminate according to this Part as though the complaint had never been filed, except that the order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal."
+      "termination_text": "This order will terminate on June 25, 2033, or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying consent decree) in federal court alleging any violation of the order, whichever comes later"
     }
   },
   "metadata": {
@@ -374,8 +417,30 @@
       "complaint_representations": 2,
       "order_provisions": 9,
       "order_definitions": 5,
-      "order_requirements": 31
+      "order_requirements": 28,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 8,
+        "III": 3,
+        "IV": 6,
+        "V": 3,
+        "VI": 2,
+        "VII": 2,
+        "VIII": 2,
+        "IX": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 0
+      },
+      "verification_details": {
+        "complaint_verified": 2,
+        "complaint_total": 2,
+        "order_verified": 28,
+        "order_total": 28
+      }
     },
-    "processing_time_seconds": 129.4
+    "processing_time_seconds": 119.2
   }
 }

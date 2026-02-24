@@ -1,74 +1,114 @@
 {
   "case_info": {
-    "docket_number": "C-4308",
+    "docket_number": "2:23-cv-05023",
     "company": {
       "name": "Rite Aid Corporation",
       "incorporation_state": "Delaware",
       "entity_type": "corporation",
       "address": "1200 Intrepid Ave., 2nd Floor, Philadelphia, Pennsylvania",
-      "business_description": "Rite Aid Corporation is a retail pharmacy chain that operates stores throughout the United States. The company maintains a substantial course of trade in commerce through its retail pharmacy locations where it conducts business through several wholly owned subsidiaries."
+      "business_description": "Rite Aid is a retail pharmacy company that operates drugstore locations across the United States. The company conducts business through several wholly owned subsidiaries and maintains a substantial course of trade in commerce."
     },
     "commissioners": [],
     "case_date": {
       "month": 3,
       "year": 2024
     },
-    "legal_authority": "Sections 5(a) and 5(n) of the Federal Trade Commission Act, 15 U.S.C. §§ 45(a), (n)",
+    "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a); Section 13(b) of the Federal Trade Commission Act, 15 U.S.C. § 53(b)",
     "violation_type": "unfair",
     "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/2023190-rite-aid-corporation-ftc-v"
   },
   "complaint": {
-    "factual_background": "Rite Aid deployed facial recognition technology in hundreds of retail stores to identify and exclude individuals it deemed 'persons of interest' based on suspected shoplifting or criminal behavior. The company failed to take reasonable measures to prevent harm from the technology, including failing to test its accuracy, enforce image quality standards, or train employees properly. As a result, the system generated thousands of false-positive matches that led to consumers being wrongly accused, surveilled, banned from stores, and subjected to police involvement. The technology disproportionately harmed Black, Asian, Latino, and women consumers.",
-    "representations_made": [],
+    "factual_background": "Rite Aid deployed facial recognition technology in hundreds of retail pharmacy locations from approximately 2012 through 2020, using the technology to identify and take action against individuals it considered 'persons of interest' without informing consumers. The technology generated thousands of false-positive match alerts, causing Rite Aid employees to surveil, detain, publicly accuse, ban, and call police on innocent consumers—disproportionately harming Black, Asian, Latino, and women consumers. Rite Aid failed to test the technology for accuracy before or after deployment, failed to enforce image quality standards, failed to train employees properly, and failed to monitor or track false positive rates. Separately, Rite Aid also violated a 2010 FTC Order by failing to maintain a comprehensive information security program, including failing to use reasonable steps to select and vet service providers handling personal information, failing to require service providers by contract to maintain appropriate safeguards, and failing to document its information security program in writing.",
+    "representations_made": [
+      {
+        "description": "Rite Aid represented, expressly or by implication, that it implemented reasonable and appropriate measures to protect personal information against unauthorized access, through its Notice of Privacy Practices stating it takes responsibility for maintaining protected health information in confidence very seriously",
+        "quoted_text": "a. From at least 2003, the following statement in its Notice of Privacy Practices: Rite Aid takes its responsibility for maintaining your protected health information in confidence very seriously. Protected health information means information about you that may identify you and that relates to your past, present or future physical or mental health or condition and related health care services. It also includes basic demographic information. We are required by law to maintain the privacy of protected health information and to provide you with a Notice of Privacy Practices including our legal duties with respect to protected health information. (See Exhibit A).",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 6,
+        "quote_start_line": 1246,
+        "quote_end_line": 1256
+      },
+      {
+        "description": "Rite Aid represented in a customer medical history brochure that it respects and protects consumer privacy",
+        "quoted_text": "Although you have the right not to disclose your medical history, Rite Aid would like to assure you that we respect and protect your privacy. (See Exhibit B.)",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 6,
+        "quote_start_line": 1259,
+        "quote_end_line": 1261
+      },
+      {
+        "description": "Rite Aid used facial recognition technology in its retail stores without taking reasonable steps to address the risks of harm to consumers from false-positive facial recognition match alerts",
+        "quoted_text": "140. In numerous instances, as described in Paragraphs 2-93, Defendants have used facial recognition technology in their retail stores without taking reasonable steps to address the risks that their deployment of such technology was likely to result in harm to consumers as a result of false-positive facial recognition match alerts.",
+        "verified": true,
+        "confidence": 1.0,
+        "source_paragraph": 140,
+        "quote_start_line": 879,
+        "quote_end_line": 882
+      },
+      {
+        "description": "Rite Aid represented it maintained a comprehensive information security program including reasonable steps to select and retain service providers and require them by contract to maintain appropriate safeguards",
+        "quoted_text": "144. Section II of the Commission Order requires Rite Aid to “establish and implement, and thereafter maintain, a comprehensive information security program that is reasonably designed to protect the security, confidentiality, and integrity of [P]ersonal [I]nformation collected from or about consumers.” To do so under Section II of the Commission Order, Rite Aid must: A. “Develop[] and use . . . reasonable steps to select and retain service providers capable of appropriately safeguarding [P]ersonal [I]nformation they receive from [Rite Aid]”; 35 Case 2:23-cv-05023 Document 1 Filed 12/19/23 Page 36 of 38 B. “Requir[e] service providers by contract to implement and maintain appropriate safeguards” to protect Personal Information they receive from Rite Aid; and C. “Fully document[] in writing” the “content and implementation of” the information security program.",
+        "verified": true,
+        "confidence": 0.85,
+        "source_paragraph": 144,
+        "quote_start_line": 892,
+        "quote_end_line": 908
+      }
+    ],
     "counts": [
       {
         "count_number": 1,
         "title": "Unfair Facial Recognition Technology Practices",
-        "representation": "Defendants used facial recognition technology in their retail stores without taking reasonable steps to address the risks that their deployment of such technology was likely to result in harm to consumers as a result of false-positive facial recognition match alerts.",
-        "fact": "Defendants failed to: assess risks to consumers including racial disparities; test or assess accuracy before deployment; enforce image quality controls; train and oversee employees; and monitor or test accuracy of results after deployment. These failures caused the technology to generate thousands of false-positive matches, resulting in consumers being surveilled, removed from stores, publicly accused of criminal activity, searched, and subjected to police involvement.",
-        "conclusion": "Defendants' actions cause or have been likely to cause substantial injury to consumers that consumers cannot reasonably avoid themselves and that is not outweighed by countervailing benefits to consumers or competition. Therefore, Defendants' acts or practices constitute unfair acts or practices in violation of Section 5 of the FTC Act, 15 U.S.C. §§ 45(a), (n)."
+        "representation": "Defendants used facial recognition technology in their retail stores without taking reasonable steps to address the risks that their deployment of such technology was likely to result in harm to consumers as a result of false-positive facial recognition match alerts",
+        "fact": "Rite Aid failed to consider or address foreseeable harms to consumers, failed to test or assess the technology's accuracy before or after deployment, failed to enforce image quality standards necessary for the technology to function accurately, failed to train and oversee employees operating the technology, and failed to monitor false positive rates—resulting in substantial consumer injuries disproportionately affecting Black, Asian, Latino, and women consumers",
+        "conclusion": "Defendants' acts or practices constitute unfair acts or practices in violation of Section 5 of the FTC Act, 15 U.S.C. §§ 45(a), (n)."
       },
       {
         "count_number": 2,
         "title": "Unfair Failure to Implement or Maintain a Comprehensive Information Security Program in Violation of Section II of the 2010 Order",
-        "representation": "Rite Aid was required by the 2010 Commission Order to establish, implement, and maintain a comprehensive information security program that included: (A) developing and using reasonable steps to select and retain service providers capable of appropriately safeguarding Personal Information; (B) requiring service providers by contract to implement and maintain appropriate safeguards; and (C) fully documenting in writing the content and implementation of the information security program.",
-        "fact": "In numerous instances, Rite Aid: (A) did not use reasonable steps to select and retain service providers capable of appropriately safeguarding Personal Information, including by failing to follow its own information security policies; (B) did not require service providers to which it provided Personal Information to, by contract, implement or maintain appropriate safeguards; and (C) failed to fully document in writing the content and implementation of its information security program.",
-        "conclusion": "Defendants' actions cause or have been likely to cause substantial injury to consumers that consumers cannot reasonably avoid themselves and that is not outweighed by countervailing benefits to consumers or competition. Therefore, Defendants' acts or practices constitute unfair acts or practices in violation of Section 5 of the FTC Act, 15 U.S.C. §§ 45(a), (n)."
+        "representation": "Section II of the 2010 Commission Order required Rite Aid to establish, implement, and maintain a comprehensive information security program reasonably designed to protect the security, confidentiality, and integrity of personal information, including using reasonable steps to select and retain capable service providers, requiring service providers by contract to implement and maintain appropriate safeguards, and fully documenting the program in writing",
+        "fact": "In numerous instances, Rite Aid did not use reasonable steps to select and retain service providers capable of appropriately safeguarding personal information (including by failing to follow its own information security policies), did not require service providers by contract to implement or maintain appropriate safeguards, and failed to fully document in writing the content and implementation of its information security program",
+        "conclusion": "Defendants failed to implement or maintain a comprehensive information security program in violation of Section II of the 2010 Order, constituting unfair acts or practices in violation of Section 5 of the FTC Act, 15 U.S.C. §§ 45(a), (n)."
       }
     ]
   },
   "order": {
     "definitions": {
-      "Affirmative Express Consent": "means any freely given, specific, informed, and unambiguous indication of an individual consumer's wishes demonstrating agreement by the individual, such as by a clear affirmative action, following a Clear and Conspicuous disclosure to the individual of: (i) the categories of information that will be collected; (ii) the specific purpose(s) for which the information is being collected; (iii) the names or categories of Third Parties collecting the information, or to whom the information is disclosed, provided that if Respondent discloses the categories of Third Parties, the disclosure shall include a hyperlink or information about how to access a separate page listing the names of the Third Parties; (iv) a simple, easily-located means by which the consumer can withdraw consent; and (v) any limitations on the consumer's ability to withdraw consent. The Clear and Conspicuous disclosure must be separate and apart from any \"privacy policy,\" \"terms of service,\" \"terms of use,\" or other similar document, but it may reference them. The following do not constitute Affirmative Express Consent: 1. Inferring consent from the hovering over, muting, pausing, or closing of a given piece of content by the consumer; or 2. Obtaining consent through a user interface that has the effect of subverting or impairing user autonomy, decision-making, or choice.",
-      "Automated Biometric Security or Surveillance System": "means any machine-based system, including any computer software, application, or algorithm, that analyzes or uses Biometric Information of, from, or about individual consumers to generate an Output that relates to those consumers, notwithstanding any assistance by a human being in such analysis or use, and that is used in whole or in part for a Security or Surveillance Purpose. Provided, however, that the term \"Automated Biometric or Surveillance Security System\" as used in this Order does not include: 1. A camera or similar sensor that is used to capture images or videos of individuals that are not collected or used in connection with the generation of an Output; 2. Any system to the extent that it is used to authenticate or identify Respondents' employees, contractors, or agents in connection with the performance of their job duties, so long as Respondents receive Affirmative Express Consent for the collection and use of any Biometric Information in connection with such authentication; and 3. Any system to the extent it is used exclusively in the direct provision of medical services by or under the supervision of a physician, registered nurse, pharmacist, or other licensed health care professional, so long as Respondents receive Affirmative Express Consent for the collection and use of any Biometric Information in connection with such system.",
-      "Biometric Information": "means data that depict or describe physical, biological, or behavioral traits, characteristics, or measurements of or relating to an identified or identifiable person's body, including depictions or images, descriptions, recordings, or copies of an individual's facial or other physical features (e.g., iris/retina scans), finger or handprints, voice, genetics, or characteristic movements or gestures (e.g., gait or typing pattern). \"Biometric Information\" does not include data that relates solely to user accounts or credentials, such as a username, or to user devices, such as device IDs or IP addresses, in isolation from data that depict or describe or are used to infer physical, biological, or behavioral traits, characteristics, or measurements of or relating to a person's body.",
-      "Clear(ly) and Conspicuous(ly)": "means that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways: 1. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood. 2. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it. 3. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable. 4. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in English, Spanish, and each other language in which a Covered Business provides signage or other disclosures in the physical location or on the website where the disclosure appears. 5. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications. 6. The disclosure must not be contradicted or mitigated by, or inconsistent with, any other statements or representations in or near the disclosure. 7. When the deployment of an Automated Biometric Security or Surveillance System targets a specific group, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
-      "Covered Business": "means (1) any Respondent; (2) any business of which one or more Respondents is a majority owner or controls, directly or indirectly.",
-      "Covered Incident": "means any incident that results in a Covered Business notifying, pursuant to a statutory or regulatory requirement, any U.S. federal, state, or local government entity that information of or about an individual consumer was, or is reasonably believed to have been, accessed, acquired, or publicly exposed without authorization.",
-      "Covered Information": "means information from or about an individual consumer, including: (a) a first and last name; (b) a home or physical address; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) a mobile or other telephone number; (e) a driver's license or other government-issued identification number; (f) date of birth; (g) geolocation information sufficient to identify street name and name of a city or town; (h) bank account information or credit or debit card information (including a partial credit or debit card number with more than five digits); (i) user identifier, or other persistent identifier that can be used to recognize a user over time and across different devices, websites, or online services; (j) user account credentials, such as a login name and password (whether plain text, encrypted, hashed, and/or salted); (k) Biometric Information; or (l) Health Information.",
-      "Facial Recognition or Analysis System": "means an Automated Biometric Security or Surveillance System that analyzes or uses depictions or images, descriptions, recordings, copies, measurements, or geometry of or related to an individual's face to generate an Output.",
-      "Gallery": "means a collection, database, or list of samples of Biometric Information created and retained for purposes of comparison with other samples in connection with the use of an Automated Biometric Security or Surveillance System to generate an Output.",
-      "Health Information": "means individually identifiable information relating to the past, present, or future physical or mental health or conditions of an individual, the provision of health care to an individual, or the past, present, or future payment for the provision of health care to an individual. It includes, but is not limited to, the following information relating to an individual: (a) prescription information, such as medication and dosage; (b) prescribing physician name, address, and telephone number; (c) health insurer name, insurance account number, or insurance policy number; (d) information concerning medical- or health-related purchases; and (e) any information that is derived or extrapolated from information about an individual's activities, or pattern of activities, from which a determination is made that the individual has a health condition or is taking a drug.",
-      "Inaccurate Output": "means an Output that is false, misleading, or incorrect and includes, to the extent that the Output of an Automated Biometric Security or Surveillance System is binary, (1) false positives or false acceptances and (2) false negatives or false rejections.",
-      "Output": "means a match, alert, prediction, analysis, assessment, determination, recommendation, identification, calculation, candidate list, or inference that is generated by a machine-based system processing Biometric Information.",
-      "Operator": "means an officer, employee, manager, contractor, service provider, or other agent of a Covered Business whose job duties include the operation or oversight of any aspect of an Automated Biometric Security or Surveillance System.",
-      "Respondents": "mean Rite Aid Corporation, Rite Aid Hdqtrs Corp., and their subsidiaries, divisions, successors and assigns.",
-      "Security or Surveillance Purpose": "means a purpose related to surveillance (including but not limited to tracking individuals' location or behavior without Affirmative Express Consent); the detection, deterrence, prediction, or investigation of theft, crime, fraud, or other misconduct; or access to locations, material goods, information, systems, or networks.",
-      "Vendor": "means any person or entity that receives, maintains, processes, or otherwise is permitted access to Covered Information from, by, or at the direction of a Covered Business through its provision of services directly to a Covered Business."
+      "Defendant(s)": "Rite Aid Corporation, Rite Aid Hdqtrs Corp., and all of their subsidiaries, divisions, successors and assigns, individually, collectively, or in any combination.",
+      "Affirmative Express Consent": "any freely given, specific, informed, and unambiguous indication of an individual consumer's wishes demonstrating agreement by the individual, such as by a clear affirmative action, following a Clear and Conspicuous disclosure to the individual of: (i) the categories of information that will be collected; (ii) the specific purpose(s) for which the information is being collected; (iii) the names or categories of Third Parties collecting the information, or to whom the information is disclosed, provided that if Respondent discloses the categories of Third Parties, the disclosure shall include a hyperlink or information about how to access a separate page listing the names of the Third Parties; (iv) a simple, easily-located means by which the consumer can withdraw consent; and (v) any limitations on the consumer's ability to withdraw consent. The Clear and Conspicuous disclosure must be separate and apart from any \"privacy policy,\" \"terms of service,\" \"terms of use,\" or other similar document, but it may reference them.",
+      "Automated Biometric Security or Surveillance System": "any machine-based system, including any computer software, application, or algorithm, that analyzes or uses Biometric Information of, from, or about individual consumers to generate an Output that relates to those consumers, notwithstanding any assistance by a human being in such analysis or use, and that is used in whole or in part for a Security or Surveillance Purpose.",
+      "Biometric Information": "data that depict or describe physical, biological, or behavioral traits, characteristics, or measurements of or relating to an identified or identifiable person's body, including depictions or images, descriptions, recordings, or copies of an individual's facial or other physical features (e.g., iris/retina scans), finger or handprints, voice, genetics, or characteristic movements or gestures (e.g., gait or typing pattern). \"Biometric Information\" does not include data that relates solely to user accounts or credentials, such as a username, or to user devices, such as device IDs or IP addresses, in isolation from data that depict or describe or are used to infer physical, biological, or behavioral traits, characteristics, or measurements of or relating to a person's body.",
+      "Clear(ly) and Conspicuous(ly)": "\"Clear(ly) and Conspicuous(ly)\" means that a required disclosure is difficult to miss (i.e., easily noticeable) and easily understandable by ordinary consumers, including in all of the following ways:\n1. A visual disclosure, by its size, contrast, location, the length of time it appears, and other characteristics, must stand out from any accompanying text or other visual elements so that it is easily noticed, read, and understood.\n2. An audible disclosure, including by telephone or streaming video, must be delivered in a volume, speed, and cadence sufficient for ordinary consumers to easily hear and understand it.\n3. In any communication using an interactive electronic medium, such as the Internet or software, the disclosure must be unavoidable.\n4. The disclosure must use diction and syntax understandable to ordinary consumers and must appear in English, Spanish, and each other language in which a Covered Business provides signage or other disclosures in the physical location or on the website where the disclosure appears.\n5. The disclosure must comply with these requirements in each medium through which it is received, including all electronic devices and face-to-face communications.\n6. The disclosure must not be contradicted or mitigated by, or inconsistent with, any other statements or representations in or near the disclosure.\n7. When the deployment of an Automated Biometric Security or Surveillance System targets a specific group, such as children, the elderly, or the terminally ill, \"ordinary consumers\" includes reasonable members of that group.",
+      "Covered Business": "(1) any Respondent; (2) any business of which one or more Respondents is a majority owner or controls, directly or indirectly.",
+      "Covered Incident": "any incident that results in a Covered Business notifying, pursuant to a statutory or regulatory requirement, any U.S. federal, state, or local government entity that information of or about an individual consumer was, or is reasonably believed to have been, accessed, acquired, or publicly exposed without authorization.",
+      "Covered Information": "information from or about an individual consumer, including: (a) a first and last name; (b) a home or physical address; (c) an email address or other online contact information, such as an instant messaging user identifier or a screen name; (d) a mobile or other telephone number; (e) a driver's license or other government-issued identification number; (f) date of birth; (g) geolocation information sufficient to identify street name and name of a city or town; (h) bank account information or credit or debit card information (including a partial credit or debit card number with more than five digits); (i) user identifier, or other persistent identifier that can be used to recognize a user over time and across different devices, websites, or online services; (j) user account credentials, such as a login name and password (whether plain text, encrypted, hashed, and/or salted); (k) Biometric Information; or (l) Health Information.",
+      "Facial Recognition or Analysis System": "an Automated Biometric Security or Surveillance System that analyzes or uses depictions or images, descriptions, recordings, copies, measurements, or geometry of or related to an individual's face to generate an Output.",
+      "Gallery": "a collection, database, or list of samples of Biometric Information created and retained for purposes of comparison with other samples in connection with the use of an Automated Biometric Security or Surveillance System to generate an Output.",
+      "Health Information": "individually identifiable information relating to the past, present, or future physical or mental health or conditions of an individual, the provision of health care to an individual, or the past, present, or future payment for the provision of health care to an individual. It includes, but is not limited to, the following information relating to an individual: (a) prescription information, such as medication and dosage; (b) prescribing physician name, address, and telephone number; (c) health insurer name, insurance account number, or insurance policy number; (d) information concerning medical- or health-related purchases; and (e) any information that is derived or extrapolated from information about an individual's activities, or pattern of activities, from which a determination is made that the individual has a health condition or is taking a drug.",
+      "Inaccurate Output": "an Output that is false, misleading, or incorrect and includes, to the extent that the Output of an Automated Biometric Security or Surveillance System is binary, (1) false positives or false acceptances and (2) false negatives or false rejections.",
+      "Output": "a match, alert, prediction, analysis, assessment, determination, recommendation, identification, calculation, candidate list, or inference that is generated by a machine-based system processing Biometric Information.",
+      "Operator": "an officer, employee, manager, contractor, service provider, or other agent of a Covered Business whose job duties include the operation or oversight of any aspect of an Automated Biometric Security or Surveillance System.",
+      "Respondents": "Rite Aid Corporation, Rite Aid Hdqtrs Corp., and their subsidiaries, divisions, successors and assigns.",
+      "Security or Surveillance Purpose": "a purpose related to surveillance (including but not limited to tracking individuals' location or behavior without Affirmative Express Consent); the detection, deterrence, prediction, or investigation of theft, crime, fraud, or other misconduct; or access to locations, material goods, information, systems, or networks.",
+      "Vendor": "any person or entity that receives, maintains, processes, or otherwise is permitted access to Covered Information from, by, or at the direction of a Covered Business through its provision of services directly to a Covered Business."
     },
     "provisions": [
       {
         "provision_number": "I",
         "title": "Use of Facial Recognition or Analysis Systems Prohibited",
         "category": "prohibition",
-        "summary": "Respondents are banned from using facial recognition or analysis systems in retail stores, pharmacies, or online platforms for five years.",
+        "summary": "Respondents are prohibited for five years from deploying or using any Facial Recognition or Analysis System in any retail store, retail pharmacy, or online retail platform.",
         "requirements": [
           {
-            "description": "Must not deploy or use facial recognition or analysis systems in retail",
+            "description": "Prohibited for five years from deploying or using any Facial Recognition or Analysis System in retail stores, retail pharmacies, or online retail platforms, whether directly or through an intermediary",
             "quoted_text": "IT IS ORDERED that Respondents, in connection with the activities of any Covered Business, are prohibited for five (5) years from the effective date of this Order from deploying or using, or assisting in the deployment or use of, any Facial Recognition or Analysis System, whether directly or through an intermediary, in any retail store or retail pharmacy or on any online retail platform.",
-            "deadline": "5 years",
+            "deadline": "5 years (prohibition period)",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 382,
+            "quote_end_line": 386
           }
         ]
       },
@@ -76,28 +116,34 @@
         "provision_number": "II",
         "title": "Deletion of Covered Biometric Information",
         "category": "affirmative_obligation",
-        "summary": "Respondents must delete all photos and videos collected for facial recognition and instruct third parties to do the same.",
+        "summary": "Respondents must delete all consumer photos and videos used with facial recognition systems within 45 days, notifythird parties and instruct them to delete within 60 days, and forward third-party deletion confirmations within 10 days of receipt.",
         "requirements": [
           {
-            "description": "Delete all facial recognition photos, videos, and derived data",
-            "quoted_text": "Within forty-five (45) days after the effective date of this Order, delete or destroy all photos and videos of consumers used or collected in connection with the operation of a Facial Recognition or Analysis System prior to the effective date of this Order, and any data, models, or algorithms derived in whole or in part therefrom, and provide a written statement to the Commission, sworn under penalty of perjury, confirming that all such information has been deleted or destroyed",
+            "description": "Within 45 days, delete or destroy all photos and videos of consumers used or collected in connection with a Facial Recognition or Analysis System prior to the effective date, and any data, models, or algorithms derived therefrom, and provide a written statement sworn under penalty of perjury to the Commission confirming deletion",
+            "quoted_text": "A. Within forty-five (45) days after the effective date of this Order, delete or destroy all photos and videos of consumers used or collected in connection with the operation of a Facial Recognition or Analysis System prior to the effective date of this Order, and any data, models, or algorithms derived in whole or in part therefrom, and provide a written statement to the Commission, sworn under penalty of perjury, confirming that all such information has been deleted or destroyed;",
             "deadline": "45 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 391,
+            "quote_end_line": 396
           },
           {
-            "description": "Identify third parties who received facial recognition data, instruct deletion",
-            "quoted_text": "Within sixty (60) days after the effective date of this Order, Respondents must: 1. Identify all third parties, other than government entities, that received photos and videos of consumers used or collected in connection with the operation of a Facial Recognition or Analysis System prior to the effective date of this Order, and any data, models, or algorithms derived in whole or in part therefrom from any Covered Business, provide a copy of the Complaint and Order to all such identified third parties, notify all such identified third parties in writing that the Federal Trade Commission alleges that Respondents used that information in a manner that was unfair in violation of the FTC Act, and instruct all such identified third parties to delete all photos and videos of consumers used or collected in connection with the operation of a Facial Recognition or Analysis System prior to the effective date of this Order, and any data, models, or algorithms derived in whole or in part therefrom, and demand written confirmation of deletion.",
+            "description": "Within 60 days, identify all third parties (other than government entities) that received photos, videos, data, models, or algorithms from a Facial Recognition or Analysis System; provide them a copy of the Complaint and Order; notify them in writing of FTC allegations; instruct them to delete all such information; and demand written confirmation of deletion. All instructions sent to third parties must be provided to DEbrief@ftc.gov or the FTC by overnight courier",
+            "quoted_text": "B. Within sixty (60) days after the effective date of this Order, Respondents must: 1. Identify all third parties, other than government entities, that received photos and videos of consumers used or collected in connection with the operation of a Facial Recognition or Analysis System prior to the effective date of this Order, and any data, models, or algorithms derived in whole or in part therefrom from any Covered Business, provide a copy of the Complaint and Order to all such identified third parties, notify all such identified third parties in writing that the Federal Trade Commission alleges that Respondents used that information in a manner that was unfair in violation of the FTC Act, and instruct all such identified third parties to delete all photos and videos of consumers used or collected in connection with the operation of a Facial Recognition or Analysis System prior to the effective date of this Order, and any data, models, or algorithms derived in whole or in part therefrom, and demand written confirmation of deletion. Defendant’s instruction to each such identified third party shall include a description of the Biometric Information to be deleted. Defendant must provide all instructions sent to the identified third parties to: DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of 6 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 14 of 138 Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “In the Matter of Rite Aid;” and",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 397,
+            "quote_end_line": 421
           },
           {
-            "description": "Provide third-party deletion confirmations to FTC",
-            "quoted_text": "Provide all receipts of confirmation and any responses from third parties within ten (10) days of receipt to: DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: \"In the Matter of Rite Aid.\"",
-            "deadline": "10 days",
+            "description": "Provide all receipts of confirmation and any responses from third parties within ten (10) days of receipt to DEbrief@ftc.gov or by overnight courier to the FTC",
+            "quoted_text": "2. Provide all receipts of confirmation and any responses from third parties within ten (10) days of receipt to: DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “In the Matter of Rite Aid.”",
+            "deadline": "10 days of receipt",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 422,
+            "quote_end_line": 427
           }
         ]
       },
@@ -105,113 +151,123 @@
         "provision_number": "III",
         "title": "Mandated Automated Biometric Security or Surveillance System Monitoring Program",
         "category": "affirmative_obligation",
-        "summary": "If using biometric surveillance systems (other than prohibited facial recognition), Respondents must establish a comprehensive monitoring program to assess and mitigate risks of inaccurate outputs and disproportionate harm.",
+        "summary": "Before using any Automated Biometric Security or Surveillance System, Respondents must establish, implement, and maintain a comprehensive monitoring Program that identifies and addresses consumer risks, including disproportionate impacts by race, ethnicity, gender, sex, age, or disability.",
         "requirements": [
           {
-            "description": "Document the monitoring program in writing",
-            "quoted_text": "Document in writing the content, implementation, and maintenance of the Program",
+            "description": "Document in writing the content, implementation, and maintenance of the Program",
+            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 445,
+            "quote_end_line": 445
           },
           {
-            "description": "Designate qualified employees responsible for the program",
-            "quoted_text": "Designate a qualified employee or employees to coordinate and be responsible for the Program",
+            "description": "Designate a qualified employee or employees to coordinate and be responsible for the Program",
+            "quoted_text": "B. Designate a qualified employee or employees to coordinate and be responsible for the Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 446,
+            "quote_end_line": 447
           },
           {
-            "description": "Conduct written system assessments of risks",
-            "quoted_text": "For each Automated Biometric Security or Surveillance System used, prior to its implementation (or for any Automated Biometric Security or Surveillance System in use as of the effective date of this Order, within ninety (90) days of the effective date of this Order) and, thereafter, at least once every twelve (12) months, conduct a written assessment (\"System Assessment\") of potential risks to consumers from the use of the Automated Biometric Security or Surveillance System",
-            "deadline": "90 days or prior to implementation; then every 12 months",
+            "description": "For each Automated Biometric Security or Surveillance System, prior to implementation (or within 90 days for systems already in use as of the effective date), and at least once every 12 months thereafter, conduct a written System Assessment of potential risks to consumers, covering at minimum 12 enumerated review areas including inaccurate output consequences, testing, demographic factors, algorithm development, deployment context, operator training, and consumer avoidability",
+            "quoted_text": "C. For each Automated Biometric Security or Surveillance System used, prior to its implementation (or for any Automated Biometric Security or Surveillance System in use as of the effective date of this Order, within ninety (90) days of the effective date of this Order) and, thereafter, at least once every twelve (12) months, conduct a written assessment (“System Assessment”) of potential risks to consumers from the use of the Automated Biometric Security or Surveillance System, including, at a minimum, risks that consumers could experience physical, financial, or reputational injury, stigma, or severe emotional distress in connection with Inaccurate Outputs of the Automated Biometric Security or Surveillance System (e.g., if the technology misidentifies a consumer). The System Assessment must include a review of: 7 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 15 of 138 1. The consequences for consumers of Inaccurate Outputs of the Automated Biometric Security or Surveillance System, including actions that Respondents or others intend to or may foreseeably take in whole or in part as a result of such Outputs; 2. Any testing relating to the rate or likelihood of Inaccurate Outputs, the extent to which such testing was conducted using reliable methodologies and under conditions similar to those in which the Automated Biometric Security or Surveillance System will operate, and the results of such testing; 3. Any factors that are likely to affect the accuracy of the type of Automated Biometric Security or Surveillance System deployed, such as any characteristics of Biometric Information, of the context or method in which Biometric Information is captured, or of individuals whose Biometric Information is used in connection with the Automated Biometric Security or Surveillance System (e.g., skin tone or language or dialect spoken), that would increase or decrease the likelihood that its use in connection with the Automated Biometric Security or Surveillance System would result in Inaccurate Outputs; 4. The extent to which the specific components of the Automated Biometric Security or Surveillance System as deployed, including the specific types and models of any devices or software, that any Covered Business uses or will use to capture, transmit, or store Biometric Information could affect the likelihood that the Automated Biometric Security or Surveillance System produces Inaccurate Outputs; 5. Documentation and monitoring of the Automated Biometric Security or Surveillance System’s accuracy that Respondents have conducted pursuant to sub-Provision III.D; 6. The extent to which the Automated Biometric Security or Surveillance System was developed to be used for a similar purpose and under similar conditions to those under which any Covered Business deploys or will deploy the Automated Biometric Security or Surveillance System; 7. The methods by which any algorithms comprising part of the Automated Biometric Security or Surveillance System were developed, including the extent to which such components were developed using machine learning or any other method that entails the use of datasets to train algorithms, and the extent to which these methods increase the likelihood that Inaccurate Outputs will occur or will disproportionately affect consumers depending on their race, ethnicity, gender, sex, age, or disability status. This review should include, at a minimum: 8 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 16 of 138 a. The sources and manner of collection of data that have been used to train or otherwise develop algorithmic components of the Automated Biometric Security or Surveillance System; b. The extent to which the training data are materially similar to the Biometric Information that will be used in connection with deployment of the Automated Biometric Security or Surveillance System in light of factors that are known to affect the accuracy of the type of Automated Biometric Security or Surveillance System deployed; and c. The makeup of any datasets that have been used to train or otherwise develop algorithmic components of the Automated Biometric Security or Surveillance System, including the extent to which the datasets have been representative, in terms of race, ethnicity, gender, sex, age, and disability status, of the population(s) of consumers whose Biometric Information will be used in connection with deployment of the Automated Biometric Security or Surveillance System; 8. The context in which the Automated Biometric Security or Surveillance System is or will be deployed, including the geographical locations of stores deploying the technology, demographic characteristics, including race and ethnicity, of areas surrounding stores where technology is deployed, physical location within stores or sections of stores, such as pharmacies, of system components, and the scale, timing and duration of the deployment (e.g., how long the system will be deployed and whether the system will operate continuously or only under certain circumstances); 9. All policies and procedures governing the operation of the Automated Biometric Security or Surveillance System and its software, algorithms, hardware, or other components; 10. The extent to which Operators receive sufficient and relevant training or are subject to oversight; 11. The extent to which the Automated Biometric Security or Surveillance System is likely to generate Inaccurate Outputs at a higher rate when analyzing or using Biometric Information collected from or about consumers of particular races, ethnicities, sexes, genders, ages, or who have disabilities (or any of these categories in combination), taking into account technical elements of the Automated Biometric Security or Surveillance System and any components thereof, the selection of locations in which to deploy the Automated Biometric Security or Surveillance System, and the context or manner in which any Covered Business has deployed or will deploy the Automated Biometric Security or Surveillance System; and 9 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 17 of 138 12. The extent to which consumers are able to avoid the Automated Biometric Security or Surveillance System without losing access to any Covered Business’s physical retail locations or online services, including by withholding Affirmative Express Consent for, or opting out of, the collection or use of their Biometric Information.",
+            "deadline": "Prior to implementation; 90 days for existing systems; annually thereafter",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 448,
+            "quote_end_line": 550
           },
           {
-            "description": "Implement and document safeguards based on risk assessment",
-            "quoted_text": "Implement, maintain, and document safeguards that are designed to control for the risks Respondents identify in the System Assessment. Each safeguard must be based on the severity of the risk to consumers and the likelihood that the risk could be realized.",
+            "description": "Implement, maintain, and document safeguards to control for identified risks, including: selecting capable service providers contractually bound to Program requirements; requiring annual documented operator training; documenting each Output determination; periodically reviewing operator actions; developing Gallery enrollment policies; implementing biometric information quality standards including monthly Gallery reviews; annually reviewing capture means; and conducting documented testing prior to deployment and at least every 12 months thereafter",
+            "quoted_text": "D. Implement, maintain, and document safeguards that are designed to control for the risks Respondents identify in the System Assessment. Each safeguard must be based on the severity of the risk to consumers and the likelihood that the risk could be realized. Such safeguards must also include: 1. Selecting and retaining service providers with duties related to the subject matter of this Order that are capable of performing those duties in a manner consistent with the Program and this Order, and contractually requiring such service providers to (1) comply with the requirements of the Program and this Order and (2) make available to Respondents all information and materials necessary to conduct the System Assessment; 2. Requiring and documenting regular and at least annual training for all Operators, which must cover, at a minimum: a. Methodologies for interpreting or assessing the validity of the Outputs of the Automated Biometric Security or Surveillance System, including for judging whether Outputs are Inaccurate; b. Evaluation of Biometric Information to determine its quality, value, and appropriateness for use in connection with the Automated Biometric Security or Surveillance System, particularly in light of each relevant factor identified pursuant to sub-Provision III.C.3 and the quality standards implemented pursuant to sub-Provision III.D.6.a; c. An overview of the types of human cognitive bias, such as automation bias and confirmation bias, that could foreseeably affect Operators’ interpretations of the Outputs; d. Known limitations of the Automated Biometric Security or Surveillance System, including factors that are known to affect the accuracy of the Outputs of Automated Biometric Security or Surveillance Systems of the type deployed, such as image or sound quality, the method by which Biometric Information to be used in connection with the Automated Biometric Security or Surveillance System is collected, background images or sounds, the passage of time since the capture of a Biometric Information sample, or relevant demographic, physical, or other traits of the individual to whom Biometric Information pertains (such as race, ethnicity, sex, gender, age, or disability, alone or in combination); and 10 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 18 of 138 e. The requirements of this Order; 3. Documenting, for each Output, any Respondent's detennination of whether the Output is Inaccurate and any actions that Operators take in whole or in paii because of the Output; 4. Periodically, and at least annually, reviewing actions taken by any Operators in response to Outputs, updating the content of training for Operators to address systemic Operator enors identified by periodic reviews, and, if there is reason to believe that an Operator's operation of the Automated Biomen·ic Security or Smveillance System increases risk to consumers, or if an Operator fails to comply with the requirements of this Order, terminating such Operator's operation of the Automated Biomen-ic Security or Smveillance System; 5. Developing, implementing, and maintaining policies and procedures designed to ensure that Respondents have a reasonable basis for enrolling each consumer's Biometric Info1mation in any Galle1y; 6. Implementing and maintaining policies and procedures to ensure that samples of BiometI·ic Info1mation used in connection with the Automated Biomeh'ic Security or Smveillance System do not increase the likelihood of Inaccurate Outputs, including by: a. Developing, implementing, and enforcing written quality standards for BiometI·ic Info1mation to be used in connection with the Automated BiometI·ic Security or Smveillance System, taking into account the nature of the Automated BiometI·ic Security or Smveillance System, the manner in which the Biometric Info1mation is captured, and characteristics of Biometric Infonnation that could affect the accuracy of the Automated Biometric Security or Smveillance System; b. To the extent that deployment of the Automated Biomeh'ic Security or Smveillance System entails the creation of a Galle1y, periodically, and at least monthly, reviewing such Galle1y to identify and, as soon as practicable, remove samples of Biomeh'ic Info1mation that (I) have been associated with two or more Inaccurate Outputs, including Outputs that were dete1mined to be Inaccurate based on investigations conducted in response to consumer complaints pursuant to sub-Provision IV.C of this Order; (2) do not meet the quality standards referenced in sub-Provision III.D.6.a; (3) ai·e required to be deleted pursuant to Provision V of this Order, entitled \"Required Retention Limits for Biomen·ic Info1mation;\" or (4) have been enrolled without a reasonable basis or in violation of policies and procedures implemented pursuant to sub-Provision III.D.5; 11 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 19 of 138 c. Periodically, and at least annually, reviewing the means by which Biometric Information to be used in connection with the Automated Biometric Security or Surveillance System is captured, including the extent to which any software or hardware used to collect Biometric Information is functioning properly and are consistently capturing samples of Biometric Information that meet the quality standards developed and implemented pursuant to sub-Provision III.D.6.a and are not otherwise contributing to the generation of Inaccurate Outputs; and 7. Conducting documented testing of the Automated Biometric Security or Surveillance System prior to deployment and at least once every twelve (12) months thereafter. Such testing must be conducted with the Affirmative Express Consent of individuals whose Biometric Information will be used for testing and must: a. Be conducted under conditions that materially replicate the conditions under which the Automated Biometric Security or Surveillance System is actually used, taking into account factors that affect the accuracy of the type of Automated Biometric Security or Surveillance System to be tested, the means by which Biometric Information to be used in connection with the Automated Biometric Security or Surveillance System is captured, and the roles of Operators; b. Determine the rate at which the Automated Biometric Security or Surveillance System’s Outputs are Inaccurate, including by assessing the extent to which the Outputs can be verified using evidence or information other than an Output of an Automated Biometric Security or Surveillance System. For example, if an Output indicates the identity of an individual, the Output is verified if it is corroborated by a review of government- issued identification documents; c. Identify factors that cause or contribute to Inaccurate Outputs; and d. Assess and measure any statistically significant variation in the Automated Biometric Security or Surveillance System’s rate of Inaccurate Outputs depending on demographic characteristics of the consumers whose Biometric Information is analyzed or used, such as race, ethnicity, sex, gender, age, or disability (alone or in combination).",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 551,
+            "quote_end_line": 662
           },
           {
-            "description": "Provide annual training for all operators",
-            "quoted_text": "Requiring and documenting regular and at least annual training for all Operators, which must cover, at a minimum: a. Methodologies for interpreting or assessing the validity of the Outputs of the Automated Biometric Security or Surveillance System, including for judging whether Outputs are Inaccurate; b. Evaluation of Biometric Information to determine its quality, value, and appropriateness for use in connection with the Automated Biometric Security or Surveillance System, particularly in light of each relevant factor identified pursuant to sub-Provision III.C.3 and the quality standards implemented pursuant to sub-Provision III.D.6.a; c. An overview of the types of human cognitive bias, such as automation bias and confirmation bias, that could foreseeably affect Operators' interpretations of the Outputs; d. Known limitations of the Automated Biometric Security or Surveillance System, including factors that are known to affect the accuracy of the Outputs of Automated Biometric Security or Surveillance Systems of the type deployed, such as image or sound quality, the method by which Biometric Information to be used in connection with the Automated Biometric Security or Surveillance System is collected, background images or sounds, the passage of time since the capture of a Biometric Information sample, or relevant demographic, physical, or other traits of the individual to whom Biometric Information pertains (such as race, ethnicity, sex, gender, age, or disability, alone or in combination); and e. The requirements of this Order",
-            "deadline": "annually",
+            "description": "Evaluate and adjust the Program at least every 12 months in light of the System Assessment and all monitoring, testing, and documentation results, and implement modifications to substantially and timely remediate identified risks",
+            "quoted_text": "E. Evaluate and adjust the Program in light of any circumstance that Respondents know or have reason to know may materially affect the Program’s effectiveness. At a minimum, every twelve (12) months, each Covered Business must evaluate the effectiveness of the Program in light of the System Assessment and the results of all monitoring, testing, and documentation conducted pursuant to the Program. Respondents must implement modifications to substantially and timely remediate any identified risks that consumers may experience physical, financial, or reputational injury, stigma, or severe emotional 12 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 20 of 138 distress, including in connection with communications of the Outputs to law enforcement or other third parties, taking into account the extent to which such harms are likely to disproportionately affect particular demographics of consumers based on race, ethnicity, gender, sex, age, or disability (alone or in combination);",
+            "deadline": "Annually",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 663,
+            "quote_end_line": 677
           },
           {
-            "description": "Conduct documented testing of systems",
-            "quoted_text": "Conducting documented testing of the Automated Biometric Security or Surveillance System prior to deployment and at least once every twelve (12) months thereafter. Such testing must be conducted with the Affirmative Express Consent of individuals whose Biometric Information will be used for testing",
-            "deadline": "prior to deployment and every 12 months",
+            "description": "Provide the written System Assessment and Program, and any evaluations or updates, to Respondents' board of directors or governing body (or senior officer if no board exists) at least once every 12 months",
+            "quoted_text": "F. Provide the written System Assessment and Program, and any evaluations thereof or updates thereto, to Respondents’ board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Respondents responsible for the Program at least once every twelve (12) months; and",
+            "deadline": "Annually",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 678,
+            "quote_end_line": 681
           },
           {
-            "description": "Evaluate and adjust program effectiveness",
-            "quoted_text": "Evaluate and adjust the Program in light of any circumstance that Respondents know or have reason to know may materially affect the Program's effectiveness. At a minimum, every twelve (12) months, each Covered Business must evaluate the effectiveness of the Program in light of the System Assessment and the results of all monitoring, testing, and documentation conducted pursuant to the Program.",
-            "deadline": "every 12 months",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Provide program to board or senior officer",
-            "quoted_text": "Provide the written System Assessment and Program, and any evaluations thereof or updates thereto, to Respondents' board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Respondents responsible for the Program at least once every twelve (12) months",
-            "deadline": "every 12 months",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Do not deploy systems lacking competent scientific evidence of accuracy",
-            "quoted_text": "Not deploy or discontinue deployment of an Automated Biometric Security or Surveillance System if: 1. Respondents do not possess competent and reliable scientific evidence that is sufficient in quality and quantity based on standards generally accepted in the relevant scientific fields, when considered in light of the entire body of relevant and reliable scientific evidence, to substantiate that Outputs of the Automated Biometric Security or Surveillance System are likely to be accurate.",
+            "description": "Not deploy or discontinue deployment of an Automated Biometric Security or Surveillance System if Respondents lack competent and reliable scientific evidence of output accuracy, or if Respondents have reason to believe the system creates unmitigated risk of substantial consumer harm",
+            "quoted_text": "G. Not deploy or discontinue deployment of an Automated Biometric Security or Surveillance System if: 1. Respondents do not possess competent and reliable scientific evidence that is sufficient in quality and quantity based on standards generally accepted in the relevant scientific fields, when considered in light of the entire body of relevant and reliable scientific evidence, to substantiate that Outputs of the Automated Biometric Security or Surveillance System are likely to be accurate. For purposes of this Provision III, competent and reliable scientific evidence means tests, analyses, research, or studies that have been conducted and evaluated in an objective manner by qualified persons and are generally accepted in the profession to yield accurate and reliable results; or 2. Respondents have reason to believe, taking into account the System Assessment, the Program, all consumer complaints, and all monitoring, testing, documentation, and evaluations conducted pursuant to the Program, that: a. Respondents’ use of the Automated Biometric Security or Surveillance System creates or contributes to a risk that Inaccurate Outputs will cause consumers to experience substantial physical, financial, or reputational injury, discrimination based on race, ethnicity, gender, sex, age, or disability, stigma, or severe emotional distress to consumers, including in connection with communications of the Outputs to law enforcement or other third parties, taking into account the extent to which such harms are likely to disproportionately affect consumers based on race, ethnicity, gender, sex, age, or disability; and b. The identified risks are not substantially and timely eliminated by modifications to the Program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 682,
+            "quote_end_line": 707
           }
         ]
       },
       {
         "provision_number": "IV",
-        "title": "Mandatory Notice and Complaint Procedures",
+        "title": "Mandatory Notice and Complaint Procedures for Automated Biometric Security or Surveillance Systems",
         "category": "affirmative_obligation",
-        "summary": "Respondents must provide written notice to consumers enrolled in biometric databases or affected by outputs, establish complaint procedures, and respond to complaints within specific timeframes.",
+        "summary": "Before using any Automated Biometric Security or Surveillance System, Respondents must establish and maintain procedures providing consumers with notice of Gallery enrollment and Output-based actions, and a process for submitting and responding to complaints.",
         "requirements": [
           {
-            "description": "Provide notice to consumers enrolled in gallery",
-            "quoted_text": "Provide written notice to all consumers who will have their Biometric Information enrolled in any Gallery used in conjunction with an Automated Biometric Security or Surveillance System, unless Respondents are unable to provide the notice due to safety concerns or the nature of a security incident that forms the basis for enrollment. Respondents shall provide such notice prior to or promptly after enrollment",
-            "deadline": "prior to or promptly after enrollment",
+            "description": "Provide written notice to all consumers whose Biometric Information is enrolled in any Gallery (prior to or promptly after enrollment, unless safety concerns prevent it), including the basis for enrollment, instructions for obtaining their biometric sample, retention timeframe, and contact information for complaints",
+            "quoted_text": "A. Provide written notice to all consumers who will have their Biometric Information enrolled in any Gallery used in conjunction with an Automated Biometric Security or Surveillance System, unless Respondents are unable to provide the notice due to safety concerns or the nature of a security incident that forms the basis for enrollment. Respondents shall provide such notice prior to or promptly after enrollment, and the notice shall include: 1. An explanation for the reasonable basis (as described in sub-Provision III.D.5) for enrollment in the Gallery, including a description of any security incident that provided that basis; 2. Instructions about how to obtain a copy of the sample of Biometric Information that was collected in order to enroll the consumer, which Respondents must make available upon request so long as Respondents retain said sample; 3. The length of time for which Respondent will retain the consumer’s Biometric Information in the Gallery; and 4. An email address, online form, mailing address, and telephone number to which consumers can direct complaints or inquiries about their enrollment in the Gallery; the Automated Biometric Security or Surveillance System; or retention of their Biometric Information.",
+            "deadline": "Prior to or promptly after enrollment",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 725,
+            "quote_end_line": 743
           },
           {
-            "description": "Provide notice to consumers affected by outputs",
-            "quoted_text": "Provide written notice to all consumers with respect to whom Respondents, in connection with an Output, take an action that could result in physical, financial, or reputational harm to the consumers, including in connection with communications of the Output to law enforcement or other third parties, unless Respondents are unable to provide the notice due to safety concerns or the nature of a security incident relating to the Output. Respondents shall provide such notice prior to taking, or, if prior notice is infeasible, at the time of taking an action",
-            "deadline": "prior to or at the time of action",
+            "description": "Provide written notice to all consumers against whom an Output-based action is taken that could result in physical, financial, or reputational harm (prior to or at the time of taking action, unless safety concerns prevent prior notice), including the date, time, and location of the Output, a description of the action taken, explanation of how the action relates to the Output, and contact information for complaints",
+            "quoted_text": "B. Provide written notice to all consumers with respect to whom Respondents, in connection with an Output, take an action that could result in physical, financial, or reputational harm to the consumers, including in connection with communications of the Output to law enforcement or other third parties, unless Respondents are unable to provide the notice due to safety concerns or the nature of a security incident relating to the Output. Respondents shall provide such notice prior to taking, or, if prior notice is infeasible, at the time of taking an action, and the notice shall include: 1. The date, approximate time, and location of the Output; 2. A description of the action or actions taken; 14 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 22 of 138 3. An explanation of how that action relates to the Output; and 4. An email address, online form, mailing address, and telephone number to which consumers can direct complaints or inquiries about the Output; the Automated Biometric Security or Surveillance System that generated the Output; or the use, sharing, or retention of their Biometric Information.",
+            "deadline": "Prior to or at the time of action",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 744,
+            "quote_end_line": 761
           },
           {
-            "description": "Investigate each complaint",
-            "quoted_text": "Investigate each complaint to (1) determine whether the relevant Output was an Inaccurate Output, and, if so, identify any factors that likely contributed to the generation of an Inaccurate Output; and (2) assess whether Operators responded to the Output in a manner that was appropriate and consistent with the requirements of this Order",
+            "description": "Investigate each consumer complaint to determine whether the Output was Inaccurate, identify contributing factors, and assess whether Operators responded appropriately and consistently with the Order",
+            "quoted_text": "C. Investigate each complaint to (1) determine whether the relevant Output was an Inaccurate Output, and, if so, identify any factors that likely contributed to the generation of an Inaccurate Output; and (2) assess whether Operators responded to the Output in a manner that was appropriate and consistent with the requirements of this Order; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 762,
+            "quote_end_line": 765
           },
           {
-            "description": "Provide written confirmation of complaint receipt",
-            "quoted_text": "Within seven (7) days of receiving the complaint, providing written confirmation of receipt to the consumer who submitted the complaint. Such written confirmation should be provided using the same means of communication that the consumer used to submit the complaint, or by another means selected by the consumer during the complaint submission process, and should state that Respondents will investigate the consumer's complaint and provide its conclusions within thirty (30) days",
+            "description": "Within 7 days of receiving a complaint, provide written confirmation of receipt to the consumer stating that Respondents will investigate and provide conclusions within 30 days",
+            "quoted_text": "1. Within seven (7) days of receiving the complaint, providing written confirmation of receipt to the consumer who submitted the complaint. Such written confirmation should be provided using the same means of communication that the consumer used to submit the complaint, or by another means selected by the consumer during the complaint submission process, and should state that Respondents will investigate the consumer’s complaint and provide its conclusions within thirty (30) days;",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 768,
+            "quote_end_line": 774
           },
           {
-            "description": "Provide written response to complaint",
-            "quoted_text": "Within thirty (30) days of providing the written confirmation, providing a written response to the consumer who submitted the complaint. Such written response must be provided using the same means of communication as the written confirmation and must (1) state whether the Output was determined to be an Inaccurate Output and the basis for such a determination; and (2) describe in general terms actions taken in response to the complaint.",
+            "description": "Within 30 days of providing written confirmation, provide a written response to the consumer stating whether the Output was determined to be Inaccurate, the basis for that determination, and describing actions taken in response to the complaint",
+            "quoted_text": "2. Within thirty (30) days of providing the written confirmation, providing a written response to the consumer who submitted the complaint. Such written response must be provided using the same means of communication as the written confirmation and must (1) state whether the Output was determined to be an Inaccurate Output and the basis for such a determination; and (2) describe in general terms actions taken in response to the complaint.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 775,
+            "quote_end_line": 780
           }
         ]
       },
@@ -219,29 +275,33 @@
         "provision_number": "V",
         "title": "Required Retention Limits for Biometric Information",
         "category": "affirmative_obligation",
-        "summary": "Respondents must develop written retention schedules limiting biometric information retention to no more than five years unless required by law or with consent.",
+        "summary": "Before implementing any Automated Biometric Security or Surveillance System, Respondents must develop and implement a written retention schedule for each type of consumer Biometric Information, setting out purposes, a deletion timeframe of no greater than five years, and the basis for that timeframe.",
         "requirements": [
           {
-            "description": "Develop written retention schedule prior to implementing biometric systems",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondent, for any Covered Business, in connection with the operation of any retail store, retail pharmacy, or online retail platform must, prior to implementing any Automated Biometric Security or Surveillance System, develop and implement, for each type of Biometric Information from or about consumers of such physical retail location or online retail platform that is collected in whole or in part for use in connection with any Automated Biometric Security or Surveillance System, a written retention schedule setting forth: A. All purposes and business needs for which the Covered Business collects or uses the type of Biometric Information; B. A timeframe for deletion of the Biometric Information that is no greater than five (5) years, except to the extent that retention beyond five years is required by law or Respondents have obtained Affirmative Express Consent for the retention within the previous five (5) years, and precludes retention beyond what is reasonably necessary to achieve the purpose or purposes and serve the business needs for which it was collected; and C. The basis for the timeframe for deletion of the Biometric Information, including any foreseeable effect on the likelihood of Inaccurate Outputs of the passage of time since a given sample of the type of Biometric Information was collected or enrolled in a Gallery.",
-            "deadline": "prior to implementation",
+            "description": "Prior to implementing any Automated Biometric Security or Surveillance System, develop and implement a written retention schedule for each type of consumer Biometric Information specifying: all purposes and business needs for which it is collected or used; a deletion timeframe of no greater than five years (unless retention beyond five years is required by law or supported by Affirmative Express Consent); and the basis for the timeframe, including the foreseeable effect of the passage of time on inaccurate outputs",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondent, for any Covered Business, in connection with the operation of any retail store, retail pharmacy, or online retail platform must, prior to implementing any Automated Biometric Security or Surveillance System, develop and implement, for each type of Biometric Information from or about consumers of such physical retail location or online retail platform that is collected in whole or in part for use in connection with any Automated Biometric Security or Surveillance System, a written retention schedule setting forth: A. All purposes and business needs for which the Covered Business collects or uses the type of Biometric Information; B. A timeframe for deletion of the Biometric Information that is no greater than five (5) years, except to the extent that retention beyond five years is required by law or Respondents have obtained Affirmative Express Consent for the retention within the 15 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 23 of 138 previous five (5) years, and precludes retention beyond what is reasonably necessary to achieve the purpose or purposes and serve the business needs for which it was collected; and C. The basis for the timeframe for deletion of the Biometric Information, including any foreseeable effect on the likelihood of Inaccurate Outputs of the passage of time since a given sample of the type of Biometric Information was collected or enrolled in a Gallery.",
+            "deadline": "Prior to implementing any Automated Biometric Security or Surveillance System",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 782,
+            "quote_end_line": 803
           }
         ]
       },
       {
         "provision_number": "VI",
-        "title": "Disclosure of Automated Biometric Systems",
+        "title": "Disclosure of Automated Biometric Security or Surveillance Systems",
         "category": "affirmative_obligation",
-        "summary": "Respondents must post clear and conspicuous notices disclosing the use of biometric systems in retail locations and online platforms.",
+        "summary": "Within 30 days of the effective date, Respondents must post Clear and Conspicuous notices in each retail location and on each website/app/online service disclosing their use of Automated Biometric Security or Surveillance Systems, including types of biometric data collected, outputs generated, purposes, and deletion timeframes.",
         "requirements": [
           {
-            "description": "Post clear and conspicuous notices disclosing biometric system use",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents, for any Covered Business, in connection with the operation of any retail store, retail pharmacy, or online retail platform, must, within thirty (30) days after the effective date of this Order, post Clear and Conspicuous notices disclosing the Covered Business's use of any Automated Biometric Security or Surveillance System in connection with Biometric Information collected from or about consumers of the physical retail location or online retail platform. Such notices must be posted in each physical retail location, and on each website, mobile application, or online service on or through which Biometric Information from or about consumers is collected or used in whole or in part for the purpose of operating an Automated Biometric Security or Surveillance System",
+            "description": "Within 30 days after the effective date, post Clear and Conspicuous notices in each physical retail location and on each website, mobile application, or online service where Biometric Information is collected or used, disclosing: specific types of Biometric Information collected; types of Outputs generated; all purposes for which each system or its Outputs are used; and the timeframe for deletion of each type of Biometric Information",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents, for any Covered Business, in connection with the operation of any retail store, retail pharmacy, or online retail platform, must, within thirty (30) days after the effective date of this Order, post Clear and Conspicuous notices disclosing the Covered Business’s use of any Automated Biometric Security or Surveillance System in connection with Biometric Information collected from or about consumers of the physical retail location or online retail platform. Such notices must be posted in each physical retail location, and on each website, mobile application, or online service on or through which Biometric Information from or about consumers is collected or used in whole or in part for the purpose of operating an Automated Biometric Security or Surveillance System, and must include, as to each such location, website, mobile application, or online service: A. The specific types of Biometric Information that are collected in whole or in part for the purpose of operating an Automated Biometric Security or Surveillance System; B. The types of Outputs that are generated by the Automated Biometric Security or Surveillance Systems; C. All purposes for which the Covered Business uses each Automated Biometric Security or Surveillance System or its Outputs, including actions that the Covered Business may take on the basis of Outputs; and D. The timeframe for deletion of each type of Biometric Information used, as established pursuant to Provision V of this Order, entitled “Required Retention Limits for Biometric Information.”",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 805,
+            "quote_end_line": 824
           }
         ]
       },
@@ -249,178 +309,256 @@
         "provision_number": "VII",
         "title": "Prohibition Against Misrepresentations",
         "category": "prohibition",
-        "summary": "Respondents must not misrepresent the extent to which they protect the privacy, security, confidentiality, or integrity of Covered Information.",
+        "summary": "Respondents must not misrepresent in any manner the extent to which they maintain and protect the privacy, security, confidentiality, or integrity of Covered Information.",
         "requirements": [
           {
-            "description": "Must not misrepresent data security and privacy practices",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents and Respondents' officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service, must not misrepresent in any manner, expressly or by implication, the extent to which Respondents maintain and protect the privacy, security, confidentiality, or integrity of Covered Information, including, but not limited to, misrepresentations related to: A. Respondents' privacy and security measures to prevent unauthorized access to Covered Information; B. Respondents' privacy and security measures to honor the privacy choices exercised by consumers; C. Respondents' collection, maintenance, use, disclosure, or deletion of Covered Information; or D. The extent to which Respondents make or have made Covered Information accessible to any third parties.",
+            "description": "Must not misrepresent, expressly or by implication, the extent to which Respondents maintain and protect the privacy, security, confidentiality, or integrity of Covered Information, including misrepresentations about: privacy and security measures to prevent unauthorized access; measures to honor consumer privacy choices; collection, maintenance, use, disclosure, or deletion of Covered Information; or the extent to which Covered Information is made accessible to third parties",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents and Respondents’ officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service, must not misrepresent in any manner, expressly or by implication, the extent to which Respondents maintain and protect the privacy, security, confidentiality, or integrity of Covered Information, including, but not limited to, misrepresentations related to: A. Respondents’ privacy and security measures to prevent unauthorized access to Covered Information; 16 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 24 of 138 B. Respondents’ privacy and security measures to honor the privacy choices exercised by consumers; C. Respondents’ collection, maintenance, use, disclosure, or deletion of Covered Information; or D. The extent to which Respondents make or have made Covered Information accessible to any third parties.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 826,
+            "quote_end_line": 843
           }
         ]
       },
       {
         "provision_number": "VIII",
-        "title": "Mandated Information Security Program",
+        "title": "Mandated Information Security Program for Covered Businesses",
         "category": "affirmative_obligation",
-        "summary": "Respondents must establish and maintain a comprehensive information security program including specific safeguards for employee training, incident response, encryption, multi-factor authentication, and vendor management.",
+        "summary": "Within 90 days of the effective date, Respondents must establish, implement, and maintain a comprehensive Information Security Program protecting the security, confidentiality, and integrity of Covered Information, including extensive safeguards, vendor management, and ongoing risk assessments.",
         "requirements": [
           {
-            "description": "Establish and maintain comprehensive information security program",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents, for any Covered Business, in connection with the collection, maintenance, use, or disclosure of, or provision of access to, Covered Information, must each, within 90 days of the effective date of this Order, establish and implement, and thereafter maintain, a comprehensive information security program (\"Information Security Program\") that protects the security, confidentiality, and integrity of such Covered Information.",
+            "description": "Within 90 days of the effective date, establish, implement, and thereafter maintain, a comprehensive Information Security Program protecting the security, confidentiality, and integrity of Covered Information",
+            "quoted_text": "IT IS FURTHER ORDERED that Respondents, for any Covered Business, in connection with the collection, maintenance, use, or disclosure of, or provision of access to, Covered Information, must each, within 90 days of the effective date of this Order, establish and implement, and thereafter maintain, a comprehensive information security program (“Information Security Program”) that protects the security, confidentiality, and integrity of such Covered Information. To satisfy this requirement, each Covered Business must, at a minimum:",
             "deadline": "90 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 845,
+            "quote_end_line": 850
           },
           {
-            "description": "Document program in writing",
-            "quoted_text": "Document in writing the content, implementation, and maintenance of the Information Security Program",
+            "description": "Document in writing the content, implementation, and maintenance of the Information Security Program",
+            "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Information Security Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 851,
+            "quote_end_line": 852
           },
           {
-            "description": "Provide program to board or senior officer",
-            "quoted_text": "Provide the written Information Security Program and any evaluations thereof or updates thereto to the Covered Business' board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of the Covered Business responsible for the Covered Business's Information Security Program at least once every twelve (12) months and promptly (not to exceed 30 days) after a Covered Incident affecting 500 or more consumers",
-            "deadline": "every 12 months and within 30 days after incident affecting 500+",
+            "description": "Provide the written Information Security Program and any evaluations or updates to the board of directors or governing body (or senior officer if no board exists) at least once every 12 months and promptly (not to exceed 30 days) after a Covered Incident affecting 500 or more consumers",
+            "quoted_text": "B. Provide the written Information Security Program and any evaluations thereof or updates thereto to the Covered Business’ board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of the Covered Business responsible for the Covered Business’s Information Security Program at least once every twelve (12) months and promptly (not to exceed 30 days) after a Covered Incident affecting 500 or more consumers;",
+            "deadline": "Annually; within 30 days after qualifying Covered Incident",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 853,
+            "quote_end_line": 858
           },
           {
-            "description": "Designate qualified employee(s) to coordinate program",
-            "quoted_text": "Designate a qualified employee or employees, who report(s) directly to the Executive Leadership Team (including the Chief Executive Officer, Chief Information Officer, and Chief Legal Officer) to coordinate and be responsible for the Information Security Program and keep the Executive Leadership Team and Board of Directors informed of the Information Security Program, including all actions and procedures implemented to comply with the requirements of this Order, and any actions and procedures to be implemented to ensure continued compliance with this Order",
+            "description": "Designate a qualified employee or employees who report directly to the Executive Leadership Team to coordinate and be responsible for the Information Security Program and keep the Executive Leadership Team and Board of Directors informed of all actions and procedures implemented to comply with the Order",
+            "quoted_text": "C. Designate a qualified employee or employees, who report(s) directly to the Executive Leadership Team (including the Chief Executive Officer, Chief Information Officer, and Chief Legal Officer) to coordinate and be responsible for the Information Security Program and keep the Executive Leadership Team and Board of Directors informed of the Information Security Program, including all actions and procedures implemented to comply with the requirements of this Order, and any actions and procedures to be implemented to ensure continued compliance with this Order;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 859,
+            "quote_end_line": 865
           },
           {
-            "description": "Assess and document risks",
-            "quoted_text": "Assess and document, at least once every twelve (12) months and promptly (not to exceed 30 days) following a Covered Incident affecting 100 or more consumers, internal and external risks to the security, confidentiality, or integrity of Covered Information that could result in the (1) unauthorized collection, maintenance, alteration, destruction, use, disclosure of, or provision of access to, Covered Information; or the (2) misuse, loss, theft, or other compromise of such information",
-            "deadline": "every 12 months and within 30 days after incident affecting 100+",
+            "description": "Assess and document internal and external risks to Covered Information at least once every 12 months and promptly (not to exceed 30 days) following a Covered Incident affecting 100 or more consumers",
+            "quoted_text": "D. Assess and document, at least once every twelve (12) months and promptly (not to exceed 30 days) following a Covered Incident affecting 100 or more consumers, internal and external risks to the security, confidentiality, or integrity of Covered Information that could result in the (1) unauthorized collection, maintenance, alteration, destruction, use, disclosure of, or provision of access to, Covered Information; or the (2) misuse, loss, theft, or other compromise of such information;",
+            "deadline": "Annually; within 30 days after qualifying Covered Incident",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 866,
+            "quote_end_line": 871
           },
           {
-            "description": "Train all employees annually on safeguarding covered information",
-            "quoted_text": "Training of all employees, at least once every twelve (12) months, on how to safeguard Covered Information including, for information security personnel, security updates and training sufficient to address relevant security risks, and verifying that key information security personnel take steps to maintain current knowledge of changing information security threats and countermeasures",
-            "deadline": "every 12 months",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Implement multi-factor authentication for access to covered information",
-            "quoted_text": "Requiring multi-factor authentication methods for all employees, contractors, and affiliates in order to access any assets (including databases) storing Covered Information. Such multi-factor authentication methods for all employees, contractors, and affiliates should not include telephone or SMS-based authentication methods and must be resistant to phishing attacks.",
+            "description": "Design, implement, maintain, and document safeguards to control for identified risks, including: annual employee training; a written incident response plan; technical logging and monitoring measures; data minimization policies; data access controls and credential security measures; phishing-resistant multi-factor authentication for all employees, contractors, and affiliates; system hardening configuration standards; encryption of sensitive data in transit and at rest; secure system inventory at least annually; vulnerability and patch management; and timely investigation and remediation of security vulnerabilities",
+            "quoted_text": "E. Design, implement, maintain, and document safeguards that control for the internal and external risks Covered Businesses identify to the security, confidentiality, or integrity of 17 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 25 of 138 Covered Information identified in response to sub-Provision D of this Provision. Each safeguard must be based on the volume and sensitivity of the Covered Information that is at risk, and the likelihood that the risk could be realized and result in the (1) unauthorized collection, maintenance, alteration, destruction, use, disclosure of, or provision of access to, Covered Information; or the (2) misuse, loss, theft, or other compromise of such information. Such safeguards must also include: 1. Training of all employees, at least once every twelve (12) months, on how to safeguard Covered Information including, for information security personnel, security updates and training sufficient to address relevant security risks, and verifying that key information security personnel take steps to maintain current knowledge of changing information security threats and countermeasures; 2. Documenting in writing the content, implementation, and maintenance of an incident response plan designed to ensure the identification of, investigation of, and response to the unauthorized access to Covered Information. Respondents shall revise and update this incident response plan to adapt to material changes to their assets or networks; 3. Implementing technical measures to log and monitor all networks and assets for anomalous activity and active threats. Such measures shall require Respondents to determine baseline system activity and identify and respond to anomalous events and unauthorized attempts to access or exfiltrate Covered Information; 4. Policies and procedures to minimize data collection, storage, and retention, including data deletion or retention policies and procedures; 5. Implementing data access controls for all assets (including databases) storing Covered Information and technical measures, policies, and procedures to minimize or prevent online attacks resulting from the misuse of valid credentials, including: (a) restricting inbound and outbound connections; (b) requiring and enforcing strong passwords or other credentials; (c) preventing the reuse of known compromised credentials to access Covered Information; (d) implementing automatic password resets for known compromised credentials; and (e) limiting employee access to what is needed to perform that employee’s job function; 6. Requiring multi-factor authentication methods for all employees, contractors, and affiliates in order to access any assets (including databases) storing Covered Information. Such multi-factor authentication methods for all employees, contractors, and affiliates should not include telephone or SMS- based authentication methods and must be resistant to phishing attacks. Respondents may use equivalent, widely adopted industry authentication options that are not multi-factor, if the person responsible for the Information 18 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 26 of 138 Security Program under sub-Provision C of this Provision: (1) approves in writing the use of such equivalent authentication options; and (2) documents a written explanation of how the authentication options are widely adopted and at least equivalent to the security provided by multi-factor authentication; 7. Developing and implementing configuration standards to harden system components against known threats and vulnerabilities. New system components shall not be granted access to any Covered Businesses’ network, resources, or Covered Information until they meet Respondents’ configuration standards; 8. Encryption of, at a minimum, all Social Security numbers, passport numbers, financial account information, tax information, dates of birth associated with a user’s account, Health Information, and user account credentials while in transit or at rest on each Covered Businesses’ computer networks, including but not limited to cloud storage; 9. Policies and procedures to ensure that all networks, systems, and assets with access to Covered Information within the Covered Businesses’ custody or control are securely installed and inventoried at least once every twelve (12) months; 10. Implementing vulnerability and patch management measures, policies, and procedures that (a) require confirmation that any directives to apply patches or remediate vulnerabilities are received and completed and (b) include timelines for addressing vulnerabilities that account for the severity and exploitability of the risk implicated; and 11. Enforcing policies and procedures to ensure the timely investigation of data security events and the timely remediation of critical and high-risk security vulnerabilities.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 872,
+            "quote_end_line": 947
           },
           {
-            "description": "Encrypt sensitive covered information",
-            "quoted_text": "Encryption of, at a minimum, all Social Security numbers, passport numbers, financial account information, tax information, dates of birth associated with a user's account, Health Information, and user account credentials while in transit or at rest on each Covered Businesses' computer networks, including but not limited to cloud storage",
+            "description": "Assess the sufficiency of safeguards at least once every 12 months and promptly (not to exceed 30 days) following a Covered Incident affecting 100 or more consumers, and modify the Information Security Program based on results",
+            "quoted_text": "F. Assess, at least once every twelve (12) months and promptly (not to exceed 30 days) following a Covered Incident affecting 100 or more consumers, the sufficiency of any safeguards in place to address the risks to the security, confidentiality, or integrity of Covered Information, and modify the Information Security Program based on the results;",
+            "deadline": "Annually; within 30 days after qualifying Covered Incident",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 948,
+            "quote_end_line": 951
+          },
+          {
+            "description": "Test and monitor the effectiveness of safeguards at least once every 12 months and promptly (not to exceed 30 days) following a Covered Incident affecting 100 or more consumers, including vulnerability testing every 4 months and after a Covered Incident, and penetration testing at least every 12 months and after a Covered Incident",
+            "quoted_text": "G. Test and monitor the effectiveness of the safeguards in place at least once every twelve (12) months and promptly (not to exceed 30 days) following a Covered Incident affecting 100 or more consumers, and modify the Information Security Program based on the results as necessary. Such testing and monitoring must include: (1) vulnerability testing of each Covered Business’ network and applications once every four (4) months and promptly (not to exceed 30 days) after a Covered Incident; and (2) penetration testing of each Covered Business’ network(s) and applications at least once every twelve (12) months and promptly (not to exceed 30 days) after a Covered Incident;",
+            "deadline": "Annually (penetration testing); every 4 months (vulnerability testing); within 30 days after qualifying Covered Incident",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 952,
+            "quote_end_line": 959
+          },
+          {
+            "description": "Evaluate and adjust the Information Security Program in light of material operational changes, Covered Incidents affecting 100 or more consumers, new technological methods, or other material circumstances; at minimum evaluate at least every 12 months and modify if appropriate",
+            "quoted_text": "H. Evaluate and adjust the Information Security Program in light of any material changes to a Covered Business’ operations or business arrangements, a Covered Incident affecting 100 or more consumers, new or more efficient technological or operational methods to control for the risks identified in sub-Provision D of this Provision, or any other circumstances that a Covered Business or its officers, agents, or employees know or have reason to know may have a material impact on the effectiveness of the Information Security Program or any of its individual safeguards. At a minimum, each Covered Business must evaluate the Information Security Program at least once every twelve (12) months and modify the Information Security Program, if appropriate, based on the results;",
+            "deadline": "Annually",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 964,
+            "quote_end_line": 973
+          },
+          {
+            "description": "Select and retain Vendors capable of safeguarding Covered Information, implement a fully documented uniform vendor risk assessment process, and contractually require Vendors to implement safeguards sufficient to address risks to Covered Information",
+            "quoted_text": "I. Select and retain Vendors capable of safeguarding Covered Information they access through or receive from each Covered Business, including by implementing and maintaining a uniform process that is fully documented in writing to conduct risk assessments for each Vendor, and contractually require Vendors to implement and maintain safeguards sufficient to address the internal and external risks to the security, confidentiality, or integrity of Covered Information. The uniform process must include a review and analysis of the information and documentation obtained about each Vendor pursuant to this Provision. The level of the assessment for each Vendor should be commensurate with the risk it poses to the security of Covered Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 974,
+            "quote_end_line": 982
           },
           {
-            "description": "Test and monitor safeguards effectiveness",
-            "quoted_text": "Test and monitor the effectiveness of the safeguards in place at least once every twelve (12) months and promptly (not to exceed 30 days) following a Covered Incident affecting 100 or more consumers, and modify the Information Security Program based on the results as necessary. Such testing and monitoring must include: (1) vulnerability testing of each Covered Business' network and applications once every four (4) months and promptly (not to exceed 30 days) after a Covered Incident; and (2) penetration testing of each Covered Business' network(s) and applications at least once every twelve (12) months and promptly (not to exceed 30 days) after a Covered Incident",
-            "deadline": "vulnerability testing every 4 months; penetration testing every 12 months",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Evaluate and adjust program annually",
-            "quoted_text": "Evaluate and adjust the Information Security Program in light of any material changes to a Covered Business' operations or business arrangements, a Covered Incident affecting 100 or more consumers, new or more efficient technological or operational methods to control for the risks identified in sub-Provision D of this Provision, or any other circumstances that a Covered Business or its officers, agents, or employees know or have reason to know may have a material impact on the effectiveness of the Information Security Program or any of its individual safeguards. At a minimum, each Covered Business must evaluate the Information Security Program at least once every twelve (12) months and modify the Information Security Program, if appropriate, based on the results",
-            "deadline": "every 12 months",
-            "verified": true,
-            "confidence": 1.0
-          },
-          {
-            "description": "Contractually require vendors to implement safeguards",
-            "quoted_text": "Require each Vendor agree by contract (upon renewal or new engagement or, in any event, within 180 days of the effective date of this Order) to: 1. Develop and implement policies and procedures for the prompt remediation and investigation of any incident that results in the Vendor or Covered Business notifying, pursuant to an applicable statutory or regulatory requirement, any U.S. federal, state, or local government entity that information of or about an individual consumer was, or is reasonably believed to have been, accessed, acquired, or publicly exposed without authorization; and 2. Notify the Covered Business in writing as soon as possible, and in any event no later than seventy-two (72) hours, if the Vendor has reason to believe that any person has accessed, exfiltrated, or otherwise obtained without authorization Covered Information that the Vendor obtained from the Covered Business.",
+            "description": "Require each Vendor to agree by contract (upon renewal or new engagement or, in any event, within 180 days of the effective date) to: (1) develop and implement policies and procedures for prompt remediation and investigation of any reportable security incident; and (2) notify the Covered Business in writing no later than 72 hours if the Vendor has reason to believe Covered Information was accessed without authorization",
+            "quoted_text": "J. Require each Vendor agree by contract (upon renewal or new engagement or, in any event, within 180 days of the effective date of this Order) to: 1. Develop and implement policies and procedures for the prompt remediation and investigation of any incident that results in the Vendor or Covered Business notifying, pursuant to an applicable statutory or regulatory requirement, any U.S. federal, state, or local government entity that information of or about an individual consumer was, or is reasonably believed to have been, accessed, acquired, or publicly exposed without authorization; and 2. Notify the Covered Business in writing as soon as possible, and in any event no later than seventy-two (72) hours, if the Vendor has reason to believe that any person has accessed, exfiltrated, or otherwise obtained without authorization Covered Information that the Vendor obtained from the Covered Business.",
             "deadline": "180 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 983,
+            "quote_end_line": 994
           },
           {
-            "description": "Obtain vendor security documentation before granting access",
-            "quoted_text": "Obtain or possess for each Vendor, within 180 days of the effective date of this Order, documentation regarding the Vendor's information security program that is material to the security of Covered Information within the possession, custody, or control of the Covered Business, including, without limitation, documentation of the Vendor's cybersecurity risk assessment conducted within the last twelve (12) months. The Covered Business must be in possession of such documentation before it provides the Vendor with access to Covered Information",
+            "description": "Obtain or possess for each Vendor, within 180 days of the effective date, documentation regarding the Vendor's information security program material to the security of Covered Information, including a cybersecurity risk assessment conducted within the last 12 months; must possess such documentation before providing Vendor access to Covered Information",
+            "quoted_text": "K. Obtain or possess for each Vendor, within 180 days of the effective date of this Order, documentation regarding the Vendor’s information security program that is material to the security of Covered Information within the possession, custody, or control of the Covered Business, including, without limitation, documentation of the Vendor’s cybersecurity risk assessment conducted within the last twelve (12) months. The Covered Business must be in possession of such documentation before it provides the Vendor with access to Covered Information;",
             "deadline": "180 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 995,
+            "quote_end_line": 1001
           },
           {
-            "description": "Reassess vendors every 24 months",
-            "quoted_text": "At least once every twenty-four (24) months, and promptly following a Covered Incident affecting 100 or more consumers involving a Vendor or determination of a material change to a Vendor's information security program under sub-Provision L of this Provision, conduct written reassessments of each Vendor (or, in the case of a Covered Incident affecting 100 or more consumers, each relevant Vendor) to determine the continued adequacy of their safeguards to control the internal and external risks to the security of Covered Information",
-            "deadline": "every 24 months",
+            "description": "Determine in writing at least once every 24 months whether there has been a material change to the Vendor's information security program; if a material change has occurred, obtain or possess new documentation about the Vendor's information security program",
+            "quoted_text": "L. Determine in writing, at least once every twenty-four (24) months, whether there has been a material change to the Vendor’s information security program. If there has been a 20 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 28 of 138 material change, the Covered Business must obtain or possess new documentation regarding the Vendor’s information security program that is material to the security of Covered Information within the possession, custody, or control of the Covered Business;",
+            "deadline": "Every 24 months",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 0.85,
+            "quote_start_line": 1002,
+            "quote_end_line": 1010
+          },
+          {
+            "description": "Maintain in one or more central repositories all documentation about or provided by each Vendor pursuant to sub-Provisions J, K, and L, including each contract with a Vendor, for a period of five years from when it was obtained or provided",
+            "quoted_text": "M. Maintain in one or more central repositories all documentation about or provided by each Vendor pursuant to sub-Provisions J, K, and L of this Provision, including but not limited to each contract with a Vendor, for a period of five (5) years from when it was obtained or provided. This sub-Provision is in addition to and not in lieu of the Provision entitled Recordkeeping;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1011,
+            "quote_end_line": 1015
+          },
+          {
+            "description": "At least once every 24 months, and promptly following a qualifying Covered Incident involving a Vendor or determination of a material change to a Vendor's information security program, conduct written reassessments of each relevant Vendor to determine the continued adequacy of their safeguards and document the basis for the determination",
+            "quoted_text": "N. At least once every twenty-four (24) months, and promptly following a Covered Incident affecting 100 or more consumers involving a Vendor or determination of a material change to a Vendor’s information security program under sub-Provision L of this Provision, conduct written reassessments of each Vendor (or, in the case of a Covered Incident affecting 100 or more consumers, each relevant Vendor) to determine the continued adequacy of their safeguards to control the internal and external risks to the security of Covered Information and document the basis for the Covered Business’s determination as to whether each Vendor’s safeguards are adequate. The level of the assessment for each Vendor should be commensurate with the risk it poses to the security of Covered Information; and",
+            "deadline": "Every 24 months; promptly following qualifying Covered Incident or material change",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1016,
+            "quote_end_line": 1025
+          },
+          {
+            "description": "Maintain in one or more central repositories all documentation created pursuant to Vendor reassessments for a period of five years from when it was created",
+            "quoted_text": "O. Maintain in one or more central repositories all documentation created by the Covered Business pursuant to sub-Provision N of this Provision for a period of five (5) years from when it was created. This sub-Provision is in addition to and not in lieu of the Provision entitled Recordkeeping.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1026,
+            "quote_end_line": 1029
           }
         ]
       },
       {
         "provision_number": "IX",
-        "title": "Third Party Information Security Assessments",
+        "title": "Third Party Information Security Assessments for Covered Businesses",
         "category": "assessment",
-        "summary": "Respondents must obtain initial and biennial independent third-party assessments of their information security program for 20 years.",
+        "summary": "Respondents must obtain initial and biennial independent third-party assessments of their Information Security Program, covering the first 180 days after the Program is established and every two years thereafter for 20 years.",
         "requirements": [
           {
-            "description": "Obtain assessments from qualified independent third-party professional",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents must obtain initial and biennial assessments (\"Assessments\"): A. The Assessments must be obtained from a qualified, objective, independent third-party professional (\"Assessor\"), who: (1) uses procedures and standards generally accepted in the profession; (2) conducts an independent review of the Information Security Program; and (3) retains all documents relevant to each Assessment for 5 years after completion of such Assessment and will provide such documents to the Commission within 10 days of receipt of a written request from a representative of the Commission.",
+            "description": "Obtain initial and biennial Assessments from a qualified, objective, independent third-party Assessor who uses generally accepted professional procedures, conducts an independent review of the Information Security Program, and retains all relevant documents for 5 years and provides them to the Commission within 10 days of written request",
+            "quoted_text": "A. The Assessments must be obtained from a qualified, objective, independent third-party professional (“Assessor”), who: (1) uses procedures and standards generally accepted in the profession; (2) conducts an independent review of the Information Security Program; and (3) retains all documents relevant to each Assessment for 5 years after completion of such Assessment and will provide such documents to the Commission within 10 days of receipt of a written request from a representative of the Commission. No documents may be withheld by the Assessor on the basis of a claim of confidentiality, proprietary or trade secrets, work product protection, attorney-client privilege, statutory exemption, or any similar claim.",
+            "deadline": "Initial: within 180-day reporting period; biennial thereafter for 20 years",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1033,
+            "quote_end_line": 1041
+          },
+          {
+            "description": "For each Assessment, provide the FTC Associate Director for Enforcement with the name, affiliation, and qualifications of the proposed Assessor, who the Associate Director has sole discretion to approve",
+            "quoted_text": "B. For each Assessment, Respondents must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name, affiliation, and qualifications of the proposed Assessor, whom the Associate Director shall have the authority to approve in their sole discretion.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1042,
+            "quote_end_line": 1045
           },
           {
-            "description": "Provide assessor information to FTC for approval",
-            "quoted_text": "For each Assessment, Respondents must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name, affiliation, and qualifications of the proposed Assessor, whom the Associate Director shall have the authority to approve in their sole discretion.",
+            "description": "Assessment reporting periods must cover: (1) the first 180 days after the Information Security Program is put in place for the initial Assessment; and (2) each two-year period thereafter for 20 years after issuance of the Order for biennial Assessments",
+            "quoted_text": "C. The reporting period for the Assessments must cover: (1) the first 180 days after the Mandated Information Security Program for Covered Businesses required by Provision VIII of this Order has been put in place for the initial Assessment; and (2) each two-year period thereafter for 20 years after issuance of the Order for the biennial Assessments.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1050,
+            "quote_end_line": 1053
           },
           {
-            "description": "Complete initial assessment covering first 180 days, then biennial assessments for 20 years",
-            "quoted_text": "The reporting period for the Assessments must cover: (1) the first 180 days after the Mandated Information Security Program for Covered Businesses required by Provision VIII of this Order has been put in place for the initial Assessment; and (2) each two-year period thereafter for 20 years after issuance of the Order for the biennial Assessments.",
-            "deadline": "initial 180 days; then every 2 years for 20 years",
+            "description": "Each Assessment must determine whether Respondents have implemented and maintained the Information Security Program; assess its effectiveness; identify gaps, weaknesses, or material noncompliance; address the status of prior gaps; and identify specific evidence examined, with findings not relying primarily on management attestations. The Assessment must be signed by the Assessor and state hours worked",
+            "quoted_text": "D. Each Assessment must, for the entire assessment period: 1. Determine whether Respondents have implemented and maintained the Information Security Program required by the Provision entitled Mandated Information Security Program for Covered Businesses; 2. Assess the effectiveness of Respondents’ implementation and maintenance of sub- Provisions A-O of the Provision entitled Mandated Information Security Program for Covered Businesses; 3. Identify any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program; 4. Address the status of gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program that were identified in any prior Assessment required by this Order; and 5. Identify specific evidence (including, but not limited to, documents reviewed, sampling and testing performed, and interviews conducted) examined to make such determinations, assessments, and identifications, and explain why the evidence that the Assessor examined is (a) appropriate for assessing an enterprise of the business’s size, complexity, and risk profile; and (b) sufficient to justify the Assessor’s findings. No finding of any Assessment shall rely primarily on assertions or attestations by Respondents’ management. The Assessment must be signed by the Assessor, state that the Assessor conducted an independent review of the Information Security Program and did not rely primarily on assertions or attestations by Respondents’ management, and state the number of hours that each member of the assessment team worked on the Assessment. To the extent any Respondent revises, updates, or adds one or more safeguards required under the Provision entitled Mandated Information Security Program for Covered Businesses in the middle of an Assessment period, the Assessment must assess the effectiveness of the revised, updated, or added safeguard(s) for the time period in which it was in effect, and provide a separate statement detailing the basis for each revised, updated, or additional safeguard.",
+            "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1054,
+            "quote_end_line": 1082
           },
           {
-            "description": "Complete and submit assessment within specified timeframe",
-            "quoted_text": "Each Assessment must be completed within 60 days after the end of the reporting period to which the Assessment applies. Unless otherwise directed by a Commission representative in writing, Respondents must submit an unredacted copy of the initial Assessment and a proposed redacted copy suitable for public disclosure of the initial Assessment to the Commission within 10 days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580.",
-            "deadline": "60 days after reporting period ends; submit within 10 days after completion",
+            "description": "Each Assessment must be completed within 60 days after the end of the reporting period. Submit an unredacted copy and a proposed redacted copy of the initial Assessment to the Commission within 10 days after completion via DEbrief@ftc.gov or overnight courier. Retain subsequent biennial Assessments until the Order is terminated and provide to the FTC within 10 days of request. All Assessment pages must be marked 'Information Security Program Assessment' in red lettering in the upper right-hand corner",
+            "quoted_text": "E. Each Assessment must be completed within 60 days after the end of the reporting period to which the Assessment applies. Unless otherwise directed by a Commission representative in writing, Respondents must submit an unredacted copy of the initial Assessment and a proposed redacted copy suitable for public disclosure of the initial Assessment to the Commission within 10 days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to: 22 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 30 of 138 Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “In re Rite Aid Corporation, FTC File No. C-4308.” Respondents must retain an unredacted copy of each subsequent biennial Assessment as well as a proposed redacted copy of each subsequent biennial Assessment suitable for public disclosure until the Order is terminated and must provide each such Assessment to the Associate Director for Enforcement within ten (10) days of request. The initial Assessment and any subsequent biennial Assessment provided to the Commission must be marked, in the upper right-hand corner of each page, with the words “Information Security Program Assessment” in red lettering.",
+            "deadline": "60 days after end of reporting period; 10 days to submit to FTC",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 1083,
+            "quote_end_line": 1102
           }
         ]
       },
       {
         "provision_number": "X",
-        "title": "Cooperation with Third-Party Assessor",
+        "title": "Cooperation with Third-Party Information Security Assessor",
         "category": "affirmative_obligation",
-        "summary": "Respondents must cooperate with third-party assessors by providing all relevant information, access to networks and IT assets, and disclosing all material facts without misrepresentation.",
+        "summary": "Respondents must fully cooperate with the Assessor by providing all relevant information, disclosing network and IT asset details, and not misrepresenting any material facts to the Assessor.",
         "requirements": [
           {
-            "description": "Provide all relevant information to assessor",
-            "quoted_text": "IT IS FURTHER ORDERED that, Respondents, whether acting directly or indirectly, in connection with any Assessment required by the Provision entitled Third Party Information Security Assessments for Covered Businesses must: A. Provide or otherwise make available to the Assessor all information and material in their possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege",
+            "description": "Provide or otherwise make available to the Assessor all information and material in Respondents' possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege",
+            "quoted_text": "A. Provide or otherwise make available to the Assessor all information and material in their possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1107,
+            "quote_end_line": 1109
           },
           {
-            "description": "Provide access to networks and IT assets",
-            "quoted_text": "Provide or otherwise make available to the Assessor information about Respondents' networks and all of Respondents' information technology assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the networks and information technology assets deemed in scope",
+            "description": "Provide or otherwise make available to the Assessor information about Respondents' networks and all information technology assets so the Assessor can determine the scope of the Assessment and visibility to in-scope portions",
+            "quoted_text": "B. Provide or otherwise make available to the Assessor information about Respondents’ networks and all of Respondents’ information technology assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the networks and information technology assets deemed in scope; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1110,
+            "quote_end_line": 1113
           },
           {
-            "description": "Disclose material facts without misrepresentation to assessor",
-            "quoted_text": "Disclose all material facts to the Assessor, and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor's: (1) determination of whether Respondents have implemented and maintained the Mandated Information Security Program for Covered Businesses; (2) assessment of the effectiveness of the Respondents' implementation and maintenance of sub-Provisions A-O of the required Mandated Information Security Program for Covered Businesses; or (3) identification of any gaps or weaknesses in, or instances of material noncompliance with, the Mandated Information Security Program for Covered Businesses.",
+            "description": "Disclose all material facts to the Assessor and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor's determinations regarding the Information Security Program",
+            "quoted_text": "C. Disclose all material facts to the Assessor, and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor’s: (1) determination of whether Respondents have implemented and maintained the Mandated Information Security Program for Covered Businesses; (2) assessment of the effectiveness of the Respondents’ implementation and maintenance of sub-Provisions A-O of the required Mandated Information Security Program for Covered Businesses; or (3) identification of any gaps or weaknesses in, or instances of material noncompliance with, the Mandated Information Security Program for Covered Businesses.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1114,
+            "quote_end_line": 1121
           }
         ]
       },
@@ -428,21 +566,25 @@
         "provision_number": "XI",
         "title": "Annual Certification",
         "category": "compliance_reporting",
-        "summary": "Respondents must provide annual certifications from their Chief Executive Officer or senior officer confirming compliance and describing covered incidents affecting 100 or more consumers.",
+        "summary": "One year after issuance, and each year thereafter, Respondents must provide the FTC with a sworn certification from a senior executive confirming compliance with the Order, absence of uncorrected/undisclosed material noncompliance, and a description of all qualifying Covered Incidents during the certified period.",
         "requirements": [
           {
-            "description": "Provide annual certification of compliance from CEO or senior officer",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents must: A. One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from Corporate Respondents' Chief Executive Officer, ___________, or if Mr./Ms. ______ no longer serves as Respondents' Chief Executive Officer, President, or such other officer (regardless of title) that is designated in that Respondent's Bylaws or resolution of the Board of Directors as having the duties of the principal executive officer of Respondent, then a senior corporate manager, or, if no such senior corporate manager exists, a senior officer responsible for Respondents' Information Security Program that: (1) each Covered Business has established, implemented, and maintained the requirements of this Order; (2) each Covered Business is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission; and (3) includes a brief description of all Covered Incidents affecting 100 or more consumers that Respondents verified or confirmed during the certified period.",
-            "deadline": "one year after issuance and annually thereafter",
+            "description": "One year after issuance and each year thereafter, provide the Commission with a certification from the Chief Executive Officer (or equivalent senior officer) stating: (1) each Covered Business has established, implemented, and maintained the Order's requirements; (2) each Covered Business is not aware of any material noncompliance that has not been corrected or disclosed to the Commission; and (3) a brief description of all Covered Incidents affecting 100 or more consumers verified or confirmed during the certified period. The certification must be based on personal knowledge of the certifying officer or subject matter experts upon whom they reasonably rely",
+            "quoted_text": "A. One year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from Corporate Respondents’ Chief Executive Officer, ___________, or if Mr./Ms. ______ no longer serves as Respondents’ Chief Executive Officer, President, or such other officer (regardless of title) that is designated in that Respondent’s Bylaws or resolution of the Board of Directors as having the duties of the principal executive officer of Respondent, then a senior corporate manager, or, if no such senior corporate manager exists, a senior officer responsible for Respondents’ 23 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 31 of 138 Information Security Program that: (1) each Covered Business has established, implemented, and maintained the requirements of this Order; (2) each Covered Business is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission; and (3) includes a brief description of all Covered Incidents affecting 100 or more consumers that Respondents verified or confirmed during the certified period. The certification must be based on the personal knowledge of Mr./Ms.________, the senior corporate manager, senior officer, or subject matter experts upon whom Mr./Ms.________, the senior corporate manager, or senior officer reasonably relies in making the certification.",
+            "deadline": "Annually, beginning one year after issuance",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 1124,
+            "quote_end_line": 1143
           },
           {
-            "description": "Submit certifications to FTC",
-            "quoted_text": "Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, \"In re Rite Aid Corporation, FTC File No. C-4308.\"",
-            "deadline": null,
+            "description": "Submit all annual certifications to the Commission via email to DEbrief@ftc.gov or by overnight courier to the FTC. Subject line must begin: 'In re Rite Aid Corporation, FTC File No. C-4308'",
+            "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “In re Rite Aid Corporation, FTC File No. C-4308.”",
+            "deadline": "Annually",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1144,
+            "quote_end_line": 1149
           }
         ]
       },
@@ -450,14 +592,25 @@
         "provision_number": "XII",
         "title": "Covered Incident Reports",
         "category": "compliance_reporting",
-        "summary": "Respondents must report to the FTC any covered incident affecting 500 or more consumers within 10 days of notifying government entities.",
+        "summary": "Within 10 days of notifying any U.S. government entity of a Covered Incident affecting 500 or more consumers, Respondents must submit a detailed report to the FTC.",
         "requirements": [
           {
-            "description": "Submit covered incident report to FTC",
+            "description": "Within 10 days of any notification to a U.S. federal, state, or local entity of a Covered Incident affecting 500 or more consumers, submit a report to the Commission including: date/date range of the incident; description of facts, causes, and scope; description of each type of information affected; number of consumers affected; remediation actions taken; and a representative copy of each materially different notice sent to consumers or government entities regarding the incident",
             "quoted_text": "IT IS FURTHER ORDERED that, within 10 days of any notification to a United States federal, state, or local entity of a Covered Incident affecting 500 or more consumers, Respondents, for any Covered Business, must submit a report to the Commission. The report must include, to the extent possible: A. The date, estimated date, or estimated date range when the Covered Incident occurred; B. A description of the facts relating to the Covered Incident, including the causes and scope of the Covered Incident, if known; C. A description of each type of information that was affected by the Covered Incident; D. The number of consumers whose information was affected by the Covered Incident; E. The acts that each Covered Business has taken to date to remediate the Covered Incident and protect Covered Information from further exposure or access, and protect affected individuals from identity theft or other harm that may result from the Covered Incident; and F. A representative copy of each materially different notice sent by each Covered Business to consumers or to any U.S. federal, state, or local government entity regarding the Covered Incident.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1151,
+            "quote_end_line": 1166
+          },
+          {
+            "description": "All Covered Incident reports must be emailed to DEbrief@ftc.gov or sent by overnight courier to the FTC. Subject line must begin: 'In re Rite Aid Corporation, FTC File No. C-4308'",
+            "quoted_text": "Unless otherwise directed by a Commission representative in writing, all Covered Incident reports to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of 24 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 32 of 138 Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “In re Rite Aid Corporation, FTC File No. C-4308.”",
+            "deadline": null,
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 1167,
+            "quote_end_line": 1175
           }
         ]
       },
@@ -465,28 +618,34 @@
         "provision_number": "XIII",
         "title": "Acknowledgments of the Order",
         "category": "acknowledgment",
-        "summary": "Respondents must obtain acknowledgments of receipt of the order from all relevant personnel and deliver copies to principals, officers, directors, and employees for 20 years.",
+        "summary": "Respondents must submit acknowledgment of receipt of the Order within 10 days, deliver copies to all principals, officers, directors, subsidiaries, and relevant employees, and obtain signed acknowledgments within 30 days of delivery.",
         "requirements": [
           {
-            "description": "Submit acknowledgment of receipt to FTC",
-            "quoted_text": "Each Respondent, within ten (10) days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order.",
+            "description": "Within ten (10) days after the effective date, each Respondent must submit to the Commission an acknowledgment of receipt of this Order",
+            "quoted_text": "A. Each Respondent, within ten (10) days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order.",
             "deadline": "10 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1179,
+            "quote_end_line": 1180
           },
           {
-            "description": "Deliver order to personnel and obtain acknowledgments",
-            "quoted_text": "For twenty (20) years after the issuance date of this Order, each Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all of Respondents' current and future subsidiaries that own, control, or operate one or more stores or online retail platforms; (3) all employees having managerial responsibilities for conduct related to the subject matter of the Order and all agents and representatives who participate in conduct related to the subject matter of the Order; and (4) any business entity resulting from any change in structure as set forth in the Provision entitled Compliance Reports and Notices. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
-            "deadline": "10 days for current personnel; before assuming responsibilities for others",
+            "description": "For twenty (20) years after the issuance date, each Respondent must deliver a copy of this Order to: all principals, officers, directors, and LLC managers and members; all current and future subsidiaries that own, control, or operate stores or online retail platforms; all employees with managerial responsibilities and agents related to the subject matter of the Order; and any business entity resulting from a change in structure. Delivery must occur within 10 days for current personnel; before assuming responsibilities for all others",
+            "quoted_text": "B. For twenty (20) years after the issuance date of this Order, each Respondent must deliver a copy of this Order to: (1) all principals, officers, directors, and LLC managers and members; (2) all of Respondents’ current and future subsidiaries that own, control, or operate one or more stores or online retail platforms; (3) all employees having managerial responsibilities for conduct related to the subject matter of the Order and all agents and representatives who participate in conduct related to the subject matter of the Order; and (4) any business entity resulting from any change in structure as set forth in the Provision entitled Compliance Reports and Notices. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities.",
+            "deadline": "10 days for current personnel; before assuming responsibilities for new personnel",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1181,
+            "quote_end_line": 1190
           },
           {
-            "description": "Obtain signed acknowledgments from recipients",
-            "quoted_text": "From each individual or entity to which Respondents delivered a copy of this Order, Respondents must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
+            "description": "From each individual or entity to which a copy of the Order was delivered, obtain a signed and dated acknowledgment of receipt within thirty (30) days",
+            "quoted_text": "C. From each individual or entity to which Respondents delivered a copy of this Order, Respondents must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1191,
+            "quote_end_line": 1193
           }
         ]
       },
@@ -494,28 +653,52 @@
         "provision_number": "XIV",
         "title": "Compliance Reports and Notices",
         "category": "compliance_reporting",
-        "summary": "Respondents must submit annual compliance reports and provide notices of changes to contacts, corporate structure, or bankruptcy filings within 14 days.",
+        "summary": "Respondents must submit annual compliance reports, compliance notices within 14 days of changes in contact information or corporate structure, and bankruptcy filing notices within 14 days of filing.",
         "requirements": [
           {
-            "description": "Submit annual compliance report",
-            "quoted_text": "One year after the issuance date of this Order, each Respondent must submit a compliance report, sworn under penalty of perjury, in which each Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of that Respondent's businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business; (d) describe in detail whether and how that Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes the Respondent made to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission",
-            "deadline": "one year after issuance",
+            "description": "One year after issuance, each Respondent must submit a compliance report sworn under penalty of perjury identifying: primary contact information; all business names, numbers, and addresses; description of each business's activities; description of compliance with each Order Provision; and a copy of each Acknowledgment of the Order obtained pursuant to this Order",
+            "quoted_text": "A. One year after the issuance date of this Order, each Respondent must submit a compliance report, sworn under penalty of perjury, in which each Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of that Respondent’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business; (d) describe in detail whether and how that Respondent is in compliance with each Provision of this Order, including a discussion of all of the changes the Respondent made to comply with the Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission;",
+            "deadline": "1 year after issuance",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1197,
+            "quote_end_line": 1207
           },
           {
-            "description": "Submit compliance notice for changes to contact or structure",
-            "quoted_text": "Each Respondent must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in (a) any designated point of contact; or (b) the structure of such Respondent or any entity that such Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order",
+            "description": "Within fourteen (14) days of any change in a designated point of contact or the structure of any Respondent or controlled entity that may affect compliance obligations (including creation, merger, sale, or dissolution of any subsidiary, parent, or affiliate), submit a compliance notice sworn under penalty of perjury",
+            "quoted_text": "B. Each Respondent must submit a compliance notice, sworn under penalty of perjury, within fourteen (14) days of any change in (a) any designated point of contact; or (b) the 25 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 33 of 138 structure of such Respondent or any entity that such Respondent has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order;",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 1208,
+            "quote_end_line": 1217
           },
           {
-            "description": "Submit notice of bankruptcy filing",
-            "quoted_text": "Each Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Respondent within fourteen (14) days of its filing",
+            "description": "Submit notice of any bankruptcy petition, insolvency proceeding, or similar proceeding filed by or against a Respondent within fourteen (14) days of its filing",
+            "quoted_text": "C. Each Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Respondent within fourteen (14) days of its filing;",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1218,
+            "quote_end_line": 1220
+          },
+          {
+            "description": "All submissions sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746",
+            "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1221,
+            "quote_end_line": 1225
+          },
+          {
+            "description": "Unless otherwise directed by the Commission in writing, all submissions must be emailed to DEbrief@ftc.gov or sent by overnight courier to the FTC. Subject line must begin: 'In re Rite Aid Corporation, FTC File No. C-4308'",
+            "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “In re Rite Aid Corporation, FTC File No. C-4308”.",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1226,
+            "quote_end_line": 1231
           }
         ]
       },
@@ -523,14 +706,88 @@
         "provision_number": "XV",
         "title": "Recordkeeping",
         "category": "recordkeeping",
-        "summary": "Respondents must create and retain specific records for 20 years (with 5-year retention for each record), including accounting records, personnel records, consumer complaints, and compliance documentation.",
+        "summary": "Respondents must create certain records for 20 years after issuance and retain each for five years, including accounting records, personnel records, consumer complaints, compliance records, System Assessment materials, security representations, Assessor materials, law enforcement subpoenas, and noncompliance records.",
         "requirements": [
           {
-            "description": "Create and retain compliance records",
-            "quoted_text": "IT IS FURTHER ORDERED that Respondents must create certain records for twenty (20) years after the issuance date of the Order, and retain each such record for five (5) years, unless otherwise specified below. Specifically, Respondents must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss; B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person's: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination; C. Copies or records of all consumer complaints concerning the subject matter of this Order, whether received directly or indirectly, such as through a third party, and any response; D. All records necessary to demonstrate full compliance with each Provision of this Order, including all submissions to the Commission; E. For five (5) years after the date of preparation of each System Assessment required by this Order, all materials relied upon to prepare the System Assessment, including all plans, test results, reports, studies, reviews, audits, policies, training materials, and assessments, and any other materials concerning Respondents' compliance with related Provisions of this Order, for the compliance period covered by such System Assessment; F. A copy of each widely disseminated and materially different representation by Defendants that describes the extent to which Defendants maintains or protects the privacy, security, availability, confidentiality, or integrity of any Covered Information, including any representation concerning a change in any website or other service controlled by Respondents that relates to privacy, security, availability, confidentiality, or integrity of Covered Information; G. For five (5) years after the date of preparation of each Assessment by the Assessor, as those terms are defined in Provision IX, all materials and evidence that the Assessor considered, reviewed, relied upon or examined to prepare the Assessment, whether prepared by or on behalf of Respondents, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning compliance with related Provisions of this Order, for the compliance period covered by such Assessment; H. For five (5) years from the date received, copies of all subpoenas and other communications with law enforcement, if such communications relate to Respondents' compliance with this Order; and I. For five (5) years from the date created or received, all records, whether prepared by or on behalf of a Respondent, that tend to show any lack of compliance by a Respondent with this Order.",
-            "deadline": "create for 20 years; retain each for 5 years",
+            "description": "Create and retain for five years: accounting records showing revenues, costs, and net profit or loss",
+            "quoted_text": "A. Accounting records showing the revenues from all goods or services sold, the costs incurred in generating those revenues, and resulting net profit or loss;",
+            "deadline": "20 years (creation); 5 years (retention)",
             "verified": true,
-            "confidence": 0.85
+            "confidence": 1.0,
+            "quote_start_line": 1237,
+            "quote_end_line": 1238
+          },
+          {
+            "description": "Create and retain for five years: personnel records showing each service provider's name, addresses, telephone numbers, job title, dates of service, and reason for termination",
+            "quoted_text": "B. Personnel records showing, for each person providing services in relation to any aspect of the Order, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
+            "deadline": "20 years (creation); 5 years (retention)",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1239,
+            "quote_end_line": 1242
+          },
+          {
+            "description": "Create and retain for five years: copies or records of all consumer complaints concerning the subject matter of this Order, whether received directly or indirectly, and any response",
+            "quoted_text": "C. Copies or records of all consumer complaints concerning the subject matter of this Order, whether received directly or indirectly, such as through a third party, and any response;",
+            "deadline": "20 years (creation); 5 years (retention)",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1243,
+            "quote_end_line": 1244
+          },
+          {
+            "description": "Create and retain for five years: all records necessary to demonstrate full compliance with each Provision of this Order, including all submissions to the Commission",
+            "quoted_text": "D. All records necessary to demonstrate full compliance with each Provision of this Order, including all submissions to the Commission;",
+            "deadline": "20 years (creation); 5 years (retention)",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1245,
+            "quote_end_line": 1246
+          },
+          {
+            "description": "For five years after the date of preparation of each System Assessment, retain all materials relied upon to prepare the System Assessment, including all plans, test results, reports, studies, reviews, audits, policies, training materials, and assessments, and any other materials concerning Respondents' compliance with related Provisions",
+            "quoted_text": "E. For five (5) years after the date of preparation of each System Assessment required by this Order, all materials relied upon to prepare the System Assessment, including all 26 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 34 of 138 plans, test results, reports, studies, reviews, audits, policies, training materials, and assessments, and any other materials concerning Respondents’ compliance with related Provisions of this Order, for the compliance period covered by such System Assessment;",
+            "deadline": "5 years from preparation date",
+            "verified": true,
+            "confidence": 0.85,
+            "quote_start_line": 1247,
+            "quote_end_line": 1255
+          },
+          {
+            "description": "Retain a copy of each widely disseminated and materially different representation describing the extent to which Respondents maintain or protect the privacy, security, availability, confidentiality, or integrity of any Covered Information, including representations concerning changes to privacy/security-related website features",
+            "quoted_text": "F. A copy of each widely disseminated and materially different representation by Defendants that describes the extent to which Defendants maintains or protects the privacy, security, availability, confidentiality, or integrity of any Covered Information, including any representation concerning a change in any website or other service controlled by Respondents that relates to privacy, security, availability, confidentiality, or integrity of Covered Information;",
+            "deadline": null,
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1256,
+            "quote_end_line": 1261
+          },
+          {
+            "description": "For five years after the date of preparation of each Assessment by the Assessor, retain all materials and evidence the Assessor considered, reviewed, relied upon, or examined to prepare the Assessment",
+            "quoted_text": "G. For five (5) years after the date of preparation of each Assessment by the Assessor, as those terms are defined in Provision IX, all materials and evidence that the Assessor considered, reviewed, relied upon or examined to prepare the Assessment, whether prepared by or on behalf of Respondents, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning compliance with related Provisions of this Order, for the compliance period covered by such Assessment;",
+            "deadline": "5 years from preparation date",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1262,
+            "quote_end_line": 1268
+          },
+          {
+            "description": "For five years from the date received, retain copies of all subpoenas and other communications with law enforcement if such communications relate to Respondents' compliance with this Order",
+            "quoted_text": "H. For five (5) years from the date received, copies of all subpoenas and other communications with law enforcement, if such communications relate to Respondents’ compliance with this Order; and",
+            "deadline": "5 years from date received",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1269,
+            "quote_end_line": 1271
+          },
+          {
+            "description": "For five years from the date created or received, retain all records, whether prepared by or on behalf of a Respondent, that tend to show any lack of compliance by a Respondent with this Order",
+            "quoted_text": "I. For five (5) years from the date created or received, all records, whether prepared by or on behalf of a Respondent, that tend to show any lack of compliance by a Respondent with this Order.",
+            "deadline": "5 years from date created or received",
+            "verified": true,
+            "confidence": 1.0,
+            "quote_start_line": 1272,
+            "quote_end_line": 1274
           }
         ]
       },
@@ -538,65 +795,75 @@
         "provision_number": "XVI",
         "title": "Compliance Monitoring",
         "category": "monitoring",
-        "summary": "The FTC is authorized to monitor compliance through requesting reports, conducting depositions, interviewing personnel, and using investigative procedures.",
+        "summary": "The FTC is authorized to monitor Respondents' compliance through requests for reports and records, depositions, discovery, direct communications, interviews, and undercover methods, with Respondents obligated to respond within 14 days of written requests.",
         "requirements": [
           {
-            "description": "Respond to FTC requests for compliance information",
-            "quoted_text": "IT IS FURTHER ORDERED that, for the purpose of monitoring Respondents' compliance with this Order: A. Within fourteen (14) days of receipt of a written request from a representative of the Commission, each Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce records for inspection and copying. The Commission is also authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
+            "description": "Within fourteen (14) days of receipt of a written request from a Commission representative, each Respondent must submit additional compliance reports or other requested information (sworn under penalty of perjury), appear for depositions, and produce records for inspection and copying. The Commission is also authorized to obtain discovery without further leave of court under Federal Rules of Civil Procedure 29, 30, 31, 33, 34, 36, 45, and 69",
+            "quoted_text": "A. Within fourteen (14) days of receipt of a written request from a representative of the Commission, each Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce records for inspection and copying. The Commission is also authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1278,
+            "quote_end_line": 1284
           },
           {
-            "description": "Permit FTC to communicate with respondent and interview personnel",
-            "quoted_text": "For matters concerning this Order, representatives of the Commission are authorized to communicate directly with each Respondent. Respondents must permit representatives of the Commission to interview anyone affiliated with any Respondent who has agreed to such an interview. The interviewee may have counsel present.",
+            "description": "Respondents must permit representatives of the Commission to communicate directly with each Respondent and to interview anyone affiliated with any Respondent who has agreed to such an interview; the interviewee may have counsel present",
+            "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with each Respondent. Respondents must permit representatives of the Commission to interview anyone affiliated with any Respondent who has agreed to such an interview. The interviewee may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1285,
+            "quote_end_line": 1288
           },
           {
-            "description": "Allow FTC to use lawful investigative means",
-            "quoted_text": "The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondents or any individual or entity affiliated with Respondents, without the necessity of identification or prior notice. Nothing in this Order limits the Commission's lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
+            "description": "The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, without the necessity of identification or prior notice; nothing in this Order limits the Commission's lawful use of compulsory process",
+            "quoted_text": "C. The Commission may use all other lawful means, including posing through its 27 Case 2:23-cv-05023-KBH Document 19 Filed 02/26/24 Page 35 of 138 representatives as consumers, suppliers, or other individuals or entities, to Respondents or any individual or entity affiliated with Respondents, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 0.85
+            "confidence": 0.85,
+            "quote_start_line": 1289,
+            "quote_end_line": 1298
           }
         ]
       },
       {
         "provision_number": "XVII",
-        "title": "Modification of Original Order",
-        "category": "acknowledgment",
-        "summary": "This order supersedes and replaces the 2010 Decision and Order previously issued against Rite Aid.",
+        "title": "Modification of Original Decision and Order",
+        "category": "affirmative_obligation",
+        "summary": "This Decision and Order supersedes and replaces the Commission's 2010 Decision and Order in In re Rite Aid Corporation, C-4308.",
         "requirements": [
           {
-            "description": "Supersede 2010 order",
+            "description": "This Decision and Order supersedes the Decision and Order the Commission previously issued in In re Rite Aid Corporation, C-4308, 150 F.T.C. 694 (Nov. 12, 2010)",
             "quoted_text": "IT IS FURTHER ORDERED that this Decision and Order supersedes the Decision and Order the Commission previously issued in In re Rite Aid Corporation, C-4308, 150 F.T.C. 694 (Nov. 12, 2010).",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1300,
+            "quote_end_line": 1302
           }
         ]
       },
       {
         "provision_number": "XVIII",
-        "title": "Order Effective Dates",
+        "title": "Order Effective Dates and Duration",
         "category": "duration",
-        "summary": "The order is effective upon publication on the FTC website and will terminate 20 years from issuance or 20 years from the most recent complaint filing, whichever is later.",
+        "summary": "The Order is effective upon publication on the FTC's website and terminates 20 years from issuance or 20 years from the most recent federal court complaint alleging a violation, whichever is later, with specified exceptions for individual provisions, non-defendant respondents, and dismissed complaints.",
         "requirements": [
           {
-            "description": "Order effective upon publication and terminates after 20 years",
-            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order. This Order will terminate twenty (20) years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than twenty (20) years; B. This Order's application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. Provided, further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any Provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
-            "deadline": null,
+            "description": "This Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order, and will terminate twenty (20) years from the date of its issuance or twenty (20) years from the most recent date the United States or the Commission files a complaint in federal court alleging any violation of this Order, whichever comes later, subject to stated exceptions",
+            "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate twenty (20) years from the date of its issuance (which date may be stated at the end of this Order, near the Commission’s seal), or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than twenty (20) years; B. This Order’s application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision. Provided, further, that if such complaint is dismissed or a federal court rules that the Respondent did not violate any Provision of the Order, and the dismissal or ruling is either not appealed or upheld on appeal, then the Order will terminate according to this Provision as though the complaint had never been filed, except that the Order will not terminate between the date such complaint is filed and the later of the deadline for appealing such dismissal or ruling and the date such dismissal or ruling is upheld on appeal.",
+            "deadline": "20 years",
             "verified": true,
-            "confidence": 1.0
+            "confidence": 1.0,
+            "quote_start_line": 1304,
+            "quote_end_line": 1321
           }
         ]
       }
     ],
     "duration": {
       "duration_years": 20,
-      "termination_text": "This Order will terminate twenty (20) years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than twenty (20) years; B. This Order's application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision."
+      "termination_text": "This Order is final and effective upon the date of its publication on the Commission's website (ftc.gov) as a final order. This Order will terminate twenty (20) years from the date of its issuance (which date may be stated at the end of this Order, near the Commission's seal), or twenty (20) years from the most recent date that the United States or the Commission files a complaint (with or without an accompanying settlement) in federal court alleging any violation of this Order, whichever comes later; provided, however, that the filing of such a complaint will not affect the duration of: A. Any Provision in this Order that terminates in less than twenty (20) years; B. This Order's application to any Respondent that is not named as a defendant in such complaint; and C. This Order if such complaint is filed after the Order has terminated pursuant to this Provision."
     }
   },
   "metadata": {
@@ -606,11 +873,42 @@
     },
     "extraction_stats": {
       "complaint_counts": 2,
-      "complaint_representations": 0,
+      "complaint_representations": 4,
       "order_provisions": 18,
-      "order_definitions": 16,
-      "order_requirements": 56
+      "order_definitions": 17,
+      "order_requirements": 69,
+      "provisions_per_section": {
+        "I": 1,
+        "II": 3,
+        "III": 7,
+        "IV": 5,
+        "V": 1,
+        "VI": 1,
+        "VII": 1,
+        "VIII": 16,
+        "IX": 5,
+        "X": 3,
+        "XI": 2,
+        "XII": 2,
+        "XIII": 3,
+        "XIV": 5,
+        "XV": 9,
+        "XVI": 3,
+        "XVII": 1,
+        "XVIII": 1
+      },
+      "reextraction_stats": {
+        "complaint_improved": 0,
+        "order_improved": 0,
+        "definitions_corrected": 1
+      },
+      "verification_details": {
+        "complaint_verified": 4,
+        "complaint_total": 4,
+        "order_verified": 69,
+        "order_total": 69
+      }
     },
-    "processing_time_seconds": 665.4
+    "processing_time_seconds": 403.4
   }
 }
