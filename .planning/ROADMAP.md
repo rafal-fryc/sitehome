@@ -12,7 +12,7 @@ Four categories of work build this tool in dependency order: first, the offline 
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Data Pipeline** - Extend the offline build script to classify all provisions and emit the static JSON artifacts the entire UI depends on
+- [x] **Phase 1: Data Pipeline** - Extend the offline build script to classify all provisions and emit the static JSON artifacts the entire UI depends on (completed 2026-02-24)
 - [ ] **Phase 2: Tab Shell + Analytics** - Establish tabbed page architecture and extend analytics with topic-over-time and provision-level charts
 - [ ] **Phase 3: Provisions Library** - Build the core topic-first browsing experience with exact citations, filter bar, and text search
 - [ ] **Phase 4: Company & Industry View** - Add industry sector browsing showing how enforcement patterns vary across sectors
@@ -89,7 +89,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Data Pipeline | 3/4 | In Progress | - |
+| 1. Data Pipeline | 3/4 | Complete    | 2026-02-24 |
 | 2. Tab Shell + Analytics | 0/TBD | Not started | - |
 | 3. Provisions Library | 0/TBD | Not started | - |
 | 4. Company & Industry View | 0/TBD | Not started | - |
