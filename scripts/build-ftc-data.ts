@@ -5,6 +5,12 @@ import * as path from "path";
 
 type ViolationType = "deceptive" | "unfair" | "both";
 
+// Inline classification field types (pass-through strings, no need for full union types)
+type StatutoryTopic = string;
+type PracticeArea = string;
+type IndustrySector = string;
+type RemedyType = string;
+
 interface FTCCaseSummary {
   id: string;
   docket_number: string;
@@ -22,6 +28,12 @@ interface FTCCaseSummary {
   num_provisions: number;
   num_requirements: number;
   order_duration_years: number | null;
+  // Classification fields (populated from tagged source files)
+  statutory_topics: StatutoryTopic[];
+  practice_areas: PracticeArea[];
+  industry_sectors: IndustrySector[];
+  remedy_types: RemedyType[];
+  provision_counts_by_topic: Record<string, number>;
 }
 
 interface GroupStats {
@@ -156,6 +168,47 @@ function processFile(filepath: string): FTCCaseSummary | null {
 
   const sanitizedId = sanitizeFilename(filename.replace(/\.json$/, ""));
 
+  // Read classification tags from the ftc-files copy (if already classified)
+  const classifiedFilePath = path.join(FILES_DIR, sanitizedId + ".json");
+  let classifiedData: any = null;
+  try {
+    if (fs.existsSync(classifiedFilePath)) {
+      classifiedData = JSON.parse(fs.readFileSync(classifiedFilePath, "utf-8"));
+    }
+  } catch {
+    // If the classified file can't be read, proceed without classification tags
+  }
+
+  // Extract classification fields from the classified source file
+  const statutory_topics: StatutoryTopic[] = classifiedData?.case_info?.statutory_topics ?? [];
+  const practice_areas: PracticeArea[] = classifiedData?.case_info?.practice_areas ?? [];
+  const industry_sectors: IndustrySector[] = classifiedData?.case_info?.industry_sectors ?? [];
+
+  // Compute remedy_types: collect all unique remedy_types from all provisions
+  const classifiedProvisions = classifiedData?.order?.provisions ?? [];
+  const remedySet = new Set<string>();
+  for (const prov of classifiedProvisions) {
+    const provRemedies: string[] = prov.remedy_types ?? [];
+    for (const r of provRemedies) {
+      remedySet.add(r);
+    }
+  }
+  const remedy_types: RemedyType[] = [...remedySet];
+
+  // Compute provision_counts_by_topic: for each statutory topic, count how many
+  // provisions in this case have that topic in their statutory_topics array
+  const provision_counts_by_topic: Record<string, number> = {};
+  for (const topic of statutory_topics) {
+    let count = 0;
+    for (const prov of classifiedProvisions) {
+      const provTopics: string[] = prov.statutory_topics ?? [];
+      if (provTopics.includes(topic)) {
+        count++;
+      }
+    }
+    provision_counts_by_topic[topic] = count;
+  }
+
   return {
     id: sanitizedId,
     docket_number: caseInfo.docket_number || "",
@@ -173,6 +226,11 @@ function processFile(filepath: string): FTCCaseSummary | null {
     num_provisions: provisions.length,
     num_requirements: numRequirements,
     order_duration_years: raw.order?.duration?.duration_years ?? null,
+    statutory_topics,
+    practice_areas,
+    industry_sectors,
+    remedy_types,
+    provision_counts_by_topic,
   };
 }
 
@@ -330,4 +388,11 @@ for (const c of dedupedCases) {
   }
 }
 console.log(`Copied ${copied} files to ${FILES_DIR}`);
+
+// Print enhanced summary
+const withStatutoryTopics = dedupedCases.filter((c) => c.statutory_topics.length > 0).length;
+const withIndustrySectors = dedupedCases.filter((c) => c.industry_sectors.length > 0).length;
+console.log(
+  `Enhanced ftc-cases.json: ${dedupedCases.length} cases, ${withStatutoryTopics} with statutory topics, ${withIndustrySectors} with industry sectors`
+);
 console.log("Done!");

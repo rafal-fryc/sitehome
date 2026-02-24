@@ -9,7 +9,10 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build:ftc-data": "npx tsx scripts/build-ftc-data.ts"
+    "build:ftc-data": "npx tsx scripts/build-ftc-data.ts",
+    "build:classify": "npx tsx scripts/classify-provisions.ts",
+    "build:provisions": "npx tsx scripts/build-provisions.ts",
+    "build:data": "npm run build:ftc-data && npm run build:provisions"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -64,6 +67,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
     "@eslint/js": "^9.32.0",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.16.5",
