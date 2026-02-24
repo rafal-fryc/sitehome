@@ -80,7 +80,8 @@ function getAdministration(dateStr: string): string {
 // --- Helpers ---
 
 function parseDateFromFilename(filename: string): string | null {
-  const match = filename.match(/^(\d{2})\.(\d{2}),/);
+  // Match both original (MM.YY, ...) and sanitized (MM.YY_...) filename formats
+  const match = filename.match(/^(\d{2})\.(\d{2})[,_]/);
   if (!match) return null;
   const month = parseInt(match[1], 10);
   const yearShort = parseInt(match[2], 10);
@@ -89,12 +90,26 @@ function parseDateFromFilename(filename: string): string | null {
   return `${year}-${String(month).padStart(2, "0")}-15`;
 }
 
+function resolveDateFromCaseDate(caseInfo: any): string | null {
+  // Fallback: use case_date object { month, year } if available
+  const cd = caseInfo.case_date;
+  if (cd && cd.year && cd.month) {
+    return `${cd.year}-${String(cd.month).padStart(2, "0")}-15`;
+  }
+  return null;
+}
+
 function resolveDateIssued(caseInfo: any, filename: string): string | null {
   let dateIssued = caseInfo.date_issued || "";
   if (!dateIssued || dateIssued.length < 7) {
     const fallback = parseDateFromFilename(filename);
     if (fallback) dateIssued = fallback;
-    else return null;
+    else {
+      // Try case_date object as final fallback
+      const caseDateFallback = resolveDateFromCaseDate(caseInfo);
+      if (caseDateFallback) dateIssued = caseDateFallback;
+      else return null;
+    }
   }
   return dateIssued;
 }

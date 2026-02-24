@@ -375,19 +375,28 @@ fs.writeFileSync(
 );
 console.log(`Wrote ${path.join(OUT_DIR, "ftc-cases.json")}`);
 
-// Copy individual files
+// Copy individual files (skip files that already have classification tags)
 let copied = 0;
+let skippedClassified = 0;
 for (const c of dedupedCases) {
   const src = path.join(FTC_SOURCE, c.source_filename);
   const dest = path.join(FILES_DIR, c.id + ".json");
   try {
+    // Check if destination file already has classification tags — don't overwrite
+    if (fs.existsSync(dest)) {
+      const existing = JSON.parse(fs.readFileSync(dest, "utf-8"));
+      if (existing?.case_info?.statutory_topics !== undefined) {
+        skippedClassified++;
+        continue;
+      }
+    }
     fs.copyFileSync(src, dest);
     copied++;
   } catch (e) {
     console.warn(`  Failed to copy: ${c.source_filename}`);
   }
 }
-console.log(`Copied ${copied} files to ${FILES_DIR}`);
+console.log(`Copied ${copied} files to ${FILES_DIR}${skippedClassified > 0 ? ` (${skippedClassified} classified files preserved)` : ""}`);
 
 // Print enhanced summary
 const withStatutoryTopics = dedupedCases.filter((c) => c.statutory_topics.length > 0).length;

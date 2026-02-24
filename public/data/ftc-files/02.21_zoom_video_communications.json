@@ -21,7 +21,16 @@
     },
     "legal_authority": "Federal Trade Commission Act",
     "violation_type": "both",
-    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/192-3167-zoom-video-communications-inc-matter"
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/192-3167-zoom-video-communications-inc-matter",
+    "statutory_topics": [
+      "Section 5 Only"
+    ],
+    "practice_areas": [
+      "Data Security"
+    ],
+    "industry_sectors": [
+      "Technology"
+    ]
   },
   "complaint": {
     "factual_background": "Zoom Video Communications, Inc. falsely claimed to offer end-to-end encryption for its videoconferencing services when in fact Zoom's own servers retained the cryptographic keys, making true end-to-end encryption impossible. Zoom also misrepresented that it used AES 256-bit encryption, when it actually used the weaker AES 128-bit encryption in ECB mode. Additionally, Zoom falsely stated that recorded meetings were stored encrypted immediately after a meeting ended, when in reality recordings sat unencrypted on Zoom's servers for up to 60 days. Finally, Zoom secretly installed a local web server (ZoomOpener) on Mac users' computers—without adequate notice or consent—to bypass a Safari browser privacy safeguard, exposing over 3.8 million users to additional security vulnerabilities including remote code execution and denial-of-service attacks.",
@@ -30,7 +39,7 @@
         "description": "Zoom claimed to offer end-to-end encryption for all Zoom Meeting communications, including in the app, on its website, in Security Guides, and in direct customer communications",
         "quoted_text": "16. Since at least June 2016, Zoom has represented in its App, on its website, in its Security Guides, in its HIPAA Compliance Guide, in blog posts, and in direct communications with customers, that it offered end-to-end encryption to secure videoconference communications between hosts and attendees during Zoom Meetings.",
         "verified": true,
-        "confidence": 1.0,
+        "confidence": 1,
         "source_paragraph": 16,
         "quote_start_line": 131,
         "quote_end_line": 134
@@ -39,7 +48,7 @@
         "description": "Zoom displayed a popup in the app stating meetings used an end-to-end encrypted connection",
         "quoted_text": "17. For example, Zoom has represented that it provided end-to-end encryption in the Zoom App. When a user hovered over a green padlock in the top left corner of a Meeting, the user would see a popup stating, “Zoom is using an end to end encrypted connection.” 18. Zoom also has represented that it employed end-to-end encryption for Zoom Meetings on",
         "verified": true,
-        "confidence": 1.0,
+        "confidence": 1,
         "source_paragraph": 17,
         "quote_start_line": 135,
         "quote_end_line": 138
@@ -48,7 +57,7 @@
         "description": "Zoom's website claimed end-to-end encryption for all meetings",
         "quoted_text": "and zoom.us/security. For example, on its “meetings” webpage, Zoom claimed that it offered end-to-end encryption for “all meetings”: Built for modern teams HD video and audio Built-In collaboration tools Meet secvrely Bring HD video and audio to your meetillg'i Multiple participants can share their screens End-to-end encryption for all meetings. role with support for up to 1000 video simult:ineous6y :ind co-annotate for a more b.ised user security, password protection. participants and 49 videos on screen interactive meetilli:. waitini rooms. and place attendee Dfl hold",
         "verified": true,
-        "confidence": 1.0,
+        "confidence": 1,
         "source_paragraph": 18,
         "quote_start_line": 140,
         "quote_end_line": 146
@@ -57,7 +66,7 @@
         "description": "Zoom's HIPAA Compliance Guide claimed industry-standard end-to-end AES 256-bit encryption to support healthcare customers' compliance with HIPAA Security Rule",
         "quoted_text": "Zoom employs industry-standard end-to-end Advanced Encryption Standard (AES) encryption using 256-bit keys to protect meetings. Zoom encryption fully complies with HIPAA Security Standards to ensure the security and privacy of patient data.",
         "verified": true,
-        "confidence": 1.0,
+        "confidence": 1,
         "source_paragraph": 20,
         "quote_start_line": 178,
         "quote_end_line": 180
@@ -66,7 +75,7 @@
         "description": "Zoom's January 2019 white paper represented that end-to-end encryption was offered as an added layer of security, decryptable only by authenticated participants",
         "quoted_text": "21. In a January 2019 white paper entitled “End to End Encryption,” Zoom represented that it offered end-to-end encryption for Zoom Meetings as an “added layer of application security for Zoom meetings, webinars, and chat (instant messaging) sessions.” Zoom explained that end-to-end encryption meant that Zoom Meetings, webinars, and chat sessions could only be decrypted by “authenticated participant(s) who have the key required for decryption.” The white paper also explained that video, audio, and screen sharing were all “protected with the Advanced Encryption Standard (AES) 256-bit algorithm.”",
         "verified": true,
-        "confidence": 1.0,
+        "confidence": 1,
         "source_paragraph": 21,
         "quote_start_line": 181,
         "quote_end_line": 188
@@ -75,7 +84,7 @@
         "description": "Zoom claimed to use AES 256-bit encryption to protect user data on its security webpage",
         "quoted_text": "Protecting your Data Communications are established using 256-bit TLS encryption and all shared content can be encrypted using AES- 256 encryption.",
         "verified": true,
-        "confidence": 1.0,
+        "confidence": 1,
         "source_paragraph": 28,
         "quote_start_line": 236,
         "quote_end_line": 240
@@ -84,7 +93,7 @@
         "description": "Zoom's online Help Center FAQ stated that meetings were encrypted by default with AES 256-bit encryption",
         "quoted_text": "Encryption for Meetings Overview By default, Zoom encrypts in-meeting and in-webinar presentation content at the application layer using TLS 1.2 with Advanced Encryption Standard (AES) 256-bit algorithm for the Desktop Client.",
         "verified": true,
-        "confidence": 1.0,
+        "confidence": 1,
         "source_paragraph": 29,
         "quote_start_line": 251,
         "quote_end_line": 255
@@ -93,7 +102,7 @@
         "description": "Zoom's Security Guide claimed Cloud Recordings are stored encrypted in Zoom's cloud after the meeting has ended",
         "quoted_text": "32. In Zoom’s June 2019 Security Guide, Zoom claims that Cloud Recordings are processed and stored in Zoom’s cloud “after the meeting has ended,” where they “are stored encrypted as well.” Zoom’s June 2016 Security Guide similarly claimed that Cloud Recordings “are processed and securely stored in Zoom’s cloud once the meeting has ended.”",
         "verified": true,
-        "confidence": 1.0,
+        "confidence": 1,
         "source_paragraph": 32,
         "quote_start_line": 269,
         "quote_end_line": 273
@@ -102,7 +111,7 @@
         "description": "Zoom's Web Server Update Release Notes told users the update would only fix minor bugs, without disclosing installation of the ZoomOpener web server",
         "quoted_text": "July 1, 2018 Version 4.1.27695.0702 Download Type: Manual Resolved issues • Minor bug fixes",
         "verified": true,
-        "confidence": 1.0,
+        "confidence": 1,
         "source_paragraph": 51,
         "quote_start_line": 399,
         "quote_end_line": 402
@@ -170,7 +179,7 @@
             "quoted_text": "IT IS ORDERED that Respondent, and Respondent’s officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service, must not misrepresent in any manner, expressly or by implication: A. Respondent’s collection, maintenance, use, deletion, or disclosure of any Covered Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 105,
             "quote_end_line": 110
           },
@@ -179,7 +188,7 @@
             "quoted_text": "B. The security features, or any feature that impacts a Third-Party Security Feature, included in any Meeting Service, or the material changes included in any updates thereof;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 111,
             "quote_end_line": 112
           },
@@ -188,7 +197,7 @@
             "quoted_text": "C. The extent to which Respondent protects any Covered Information from unauthorized access;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 116,
             "quote_end_line": 117
           },
@@ -197,7 +206,7 @@
             "quoted_text": "D. The extent to which a User can control the privacy or security of any Covered Information collected and maintained by Respondent, and the steps the User must take to implement such controls;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 118,
             "quote_end_line": 120
           },
@@ -206,7 +215,7 @@
             "quoted_text": "E. The categories of third parties to which Respondent makes Covered Information accessible; or",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 121,
             "quote_end_line": 122
           },
@@ -215,10 +224,19 @@
             "quoted_text": "F. The extent to which Respondent otherwise maintains the privacy, security, confidentiality, or integrity of Covered Information.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 123,
             "quote_end_line": 124
           }
+        ],
+        "statutory_topics": [
+          "Section 5 Only"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Prohibition"
         ]
       },
       {
@@ -232,7 +250,7 @@
             "quoted_text": "IT IS FURTHER ORDERED that Respondent, and any business that Respondent controls directly or indirectly, in connection with the collection, maintenance, use, or disclosure of, or provision of access to, Covered Information, must, within sixty (60) days of issuance of this order, establish and implement, and thereafter maintain, a comprehensive information security program (“Program” or “Information Security Program”) that protects the security, confidentiality, and integrity of such Covered Information. To satisfy this requirement, Respondent must, at a minimum:",
             "deadline": "60 days",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 126,
             "quote_end_line": 132
           },
@@ -241,7 +259,7 @@
             "quoted_text": "A. Document in writing the content, implementation, and maintenance of the Program, including all processes and procedures that will be used to implement all Program policies and safeguards;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 133,
             "quote_end_line": 135
           },
@@ -250,7 +268,7 @@
             "quoted_text": "B. Provide the written Program and any material evaluations thereof or material updates thereto to Respondent’s board of directors or governing body or, if no such board or equivalent governing body exists, to a senior officer of Respondent responsible for Respondent’s Program at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident;",
             "deadline": "12 months / 30 days after Covered Incident",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 136,
             "quote_end_line": 140
           },
@@ -259,7 +277,7 @@
             "quoted_text": "C. Designate a qualified employee or employees to coordinate and be responsible for the Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 141,
             "quote_end_line": 142
           },
@@ -268,7 +286,7 @@
             "quoted_text": "D. Assess and document, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, internal and external risks to the security, confidentiality, or integrity of Covered Information that could result in the (1) unauthorized collection, maintenance, use, or disclosure of, or provision of access to, Covered Information; or the (2) misuse, loss, theft, alteration, destruction, or other compromise of such information;",
             "deadline": "12 months / 30 days after Covered Incident",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 143,
             "quote_end_line": 148
           },
@@ -286,7 +304,7 @@
             "quoted_text": "1. Implementing a security review by Zoom Security Personnel designated by Respondent of all new Meeting Services software or software updates, prior to release that, at a minimum, includes: a. Policies, procedures, and any applicable technical measures for reviewing all new Meeting Service software or software updates for commonly known vulnerabilities, including those identified by the Open Web Application Security Project (OWASP) and critical or high severity vulnerabilities in the National Vulnerability Database (NVD), and remediating or otherwise mitigating any such vulnerabilities; b. Policies, procedures, and any applicable technical measures to: (i) determine whether any new Meeting Services software or software update is designed to circumvent or bypass, in whole or in part, any Third-Party Security Feature such that the Third-Party Security Feature no longer provides the same protection(s) for Users against the risk of unauthorized access, collection, disclosure, use, misuse, loss, theft, alteration, destruction, or other compromise of Users’ Covered Information; and (ii) assess the risk of unauthorized access, collection, disclosure, use, misuse, loss, theft, alteration, destruction, or other compromise of the User’s Covered Information that will result from such circumvention or bypass, based on the volume and sensitivity of Covered Information that is at risk, and the likelihood that the risk could be realized; and c. Policies, procedures, and any applicable technical measures so that Respondent will not implement any new Meeting Services software or software update that has been identified under Part II.E.1.b(i) of this Order as designed to circumvent or bypass a Third-Party Security Feature, unless: (i) Zoom Security Personnel determine that the bypass or circumvention does not create a material risk of unauthorized access, collection, disclosure, use, misuse, loss, theft, alteration, destruction, or other compromise of Users’ Covered Information; or (ii) Respondent implements security measure(s) that offset or otherwise mitigate the risk(s) of unauthorized access, collection, disclosure, use, misuse, loss, theft, alteration, destruction, or other compromise of Users’ Covered Information that were identified under Part II.E.1.b(ii) of this Order;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 160,
             "quote_end_line": 190
           },
@@ -304,7 +322,7 @@
             "quoted_text": "3. Implementing a default, randomized naming convention for recorded Meetings that are to be stored on Users’ local devices, and instructing Users to employ a unique file name when saving such recorded Meetings;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 201,
             "quote_end_line": 203
           },
@@ -313,7 +331,7 @@
             "quoted_text": "4. Policies, procedures, and any applicable technical measures to: (a) systematically classify and inventory Covered Information in Respondent’s control; (b) log and monitor access to repositories of Covered Information in Respondent’s control; and (c) limit access to Covered Information by, at a minimum, limiting employee and service provider access to Covered Information to what is needed to perform that employee or service provider’s job function;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 204,
             "quote_end_line": 209
           },
@@ -322,7 +340,7 @@
             "quoted_text": "5. Data deletion policies, procedures, and any applicable technical measures, including validating that all copies of Covered Information identified for deletion are deleted within thirty-one (31) days;",
             "deadline": "31 days for data deletion",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 210,
             "quote_end_line": 212
           },
@@ -331,7 +349,7 @@
             "quoted_text": "6. Policies, procedures, and any applicable technical measures designed to reduce the risk of online attacks resulting from the misuse of valid Credentials by unauthorized third parties, including: (a) requiring Users to secure their accounts with strong, unique passwords; (b) using automated tools to identify non-human login attempts; (c) rate-limiting login attempts to minimize the risk of a brute force attack; and (d) implementing password resets for known compromised Credentials;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 213,
             "quote_end_line": 218
           },
@@ -340,7 +358,7 @@
             "quoted_text": "7. Regular security training programs, on at least an annual basis, that are updated, as applicable, to address internal or external risks identified by Respondent under sub- Provision II.D of this Order, and that include, at a minimum: a. Security awareness training for all employees on Respondent’s security policies and procedures, including the requirements of this Order and the process for submitting complaints and concerns; and b. Training in secure software development principles, including secure engineering and defensive programming concepts, for developers, engineers, and other employees that design Respondent’s products or services or that are otherwise responsible for the security of Covered Information;",
             "deadline": "Annual",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 219,
             "quote_end_line": 228
           },
@@ -349,7 +367,7 @@
             "quoted_text": "8. Technical measures to monitor all of Respondent’s networks, systems, and assets within those networks to identify anomalous activity and/or data security events on Respondent’s network, including unauthorized attempts to exfiltrate Covered Information from Respondent’s networks;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 229,
             "quote_end_line": 232
           },
@@ -358,7 +376,7 @@
             "quoted_text": "9. Incident response policies, procedures, and any applicable technical measures, including centralized log management and documenting remedial security actions;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 233,
             "quote_end_line": 234
           },
@@ -367,7 +385,7 @@
             "quoted_text": "10. Technical measures designed to safeguard against unauthorized access to any network or system that stores, collects, maintains, or processes Covered Information, such as properly configured firewalls; properly configured physical or logical segmentation of networks, systems, and databases; and securing of remote access to Respondent’s networks through multi-factor authentication or similar technology except for when accessing such networks is for the purpose of using Meeting Services; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 238,
             "quote_end_line": 243
           },
@@ -376,7 +394,7 @@
             "quoted_text": "11. Protections, such as encryption, tokenization, or other same or greater protections, for Covered Information collected, maintained, processed, or stored by Respondent, including in transit and at rest;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 244,
             "quote_end_line": 246
           },
@@ -385,7 +403,7 @@
             "quoted_text": "F. Assess, at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, the sufficiency of any safeguards in place to address the internal and external risks to the security, confidentiality, and integrity of Covered Information, and modify the Program based on the results;",
             "deadline": "12 months / 30 days after Covered Incident",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 247,
             "quote_end_line": 250
           },
@@ -394,7 +412,7 @@
             "quoted_text": "G. Test and monitor the effectiveness of the safeguards at least once every twelve (12) months and promptly (not to exceed thirty (30) days) following a Covered Incident, and modify the Program based on the results. Such testing and monitoring must include penetration testing of Respondent’s network at least once every twelve (12) months and promptly (not to exceed thirty (30) days) after a Covered Incident;",
             "deadline": "12 months / 30 days after Covered Incident",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 251,
             "quote_end_line": 255
           },
@@ -403,7 +421,7 @@
             "quoted_text": "H. Select and retain service providers capable of safeguarding Covered Information they access through or receive from Respondent, and contractually require service providers to implement and maintain safeguards for Covered Information sufficient to address the internal and external risks to the security, confidentiality, or integrity of Covered Information;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 256,
             "quote_end_line": 260
           },
@@ -412,7 +430,7 @@
             "quoted_text": "I. Consult with, and seek appropriate guidance from, independent, third-party experts on data protection in the course of establishing, implementing, maintaining, and updating the Program; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 261,
             "quote_end_line": 263
           },
@@ -421,10 +439,20 @@
             "quoted_text": "J. Evaluate and adjust the Program in light of any changes to Respondent’s operations or business arrangements, a Covered Incident, new or more efficient technological or operational methods to control for the risks identified in sub-Provision II.D of this Order, or any other circumstances that Respondent knows or has reason to know may have a material impact on the effectiveness of the Program or any of its individual safeguards. At a minimum, Respondent must evaluate the Program at least once every twelve (12) months and modify the Program as necessary based on the results.",
             "deadline": "12 months",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 264,
             "quote_end_line": 270
           }
+        ],
+        "statutory_topics": [
+          "Section 5 Only"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Data Deletion",
+          "Comprehensive Security Program"
         ]
       },
       {
@@ -438,7 +466,7 @@
             "quoted_text": "A. The Assessments must be obtained from one or more qualified, objective, independent third-party professionals (“Assessor”), who: (1) uses procedures and standards generally accepted in the profession; (2) conducts an independent review of the Program; and (3) retains all documents relevant to each Assessment for five (5) years after completion of such Assessment and (4) will provide such documents to the Commission within ten (10) days of receipt of a written request from a representative of the Commission. No documents may be withheld by the Assessor on the basis of a claim of confidentiality, proprietary or trade secrets, work product protection, attorney-client privilege, statutory exemption, or any similar claim;",
             "deadline": "10 days for document production upon request",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 278,
             "quote_end_line": 286
           },
@@ -447,7 +475,7 @@
             "quoted_text": "B. For each Assessment, Respondent must provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name(s), affiliation, and qualifications of the proposed Assessor, whom the Associate Director shall have the authority to approve in her or his sole discretion;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 287,
             "quote_end_line": 290
           },
@@ -456,7 +484,7 @@
             "quoted_text": "C. The reporting period for the Assessments must cover: (1) the first one hundred eighty (180) days after the Information Security Program has been put in place for the initial Assessment; and (2) each two-year period thereafter for twenty (20) years after issuance of the Order for the biennial Assessments;",
             "deadline": "180 days (initial); biennial thereafter for 20 years",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 291,
             "quote_end_line": 294
           },
@@ -474,10 +502,20 @@
             "quoted_text": "E. Each Assessment must be completed within sixty (60) days after the end of the reporting period to which the Assessment applies. Unless otherwise directed by a Commission representative in writing, Respondent must submit the initial Assessment to the Commission within ten (10) days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “In re Zoom Video Communications, Inc., FTC File No. 192 3167.” All subsequent biennial Assessments must be retained by Respondent until the order is terminated and provided to the Associate Director for Enforcement within ten (10) days of request.",
             "deadline": "60 days after reporting period ends; 10 days to submit initial Assessment",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 325,
             "quote_end_line": 334
           }
+        ],
+        "statutory_topics": [
+          "Section 5 Only"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Third-Party Assessment",
+          "Comprehensive Security Program"
         ]
       },
       {
@@ -491,7 +529,7 @@
             "quoted_text": "A. Provide or otherwise make available to the Assessor all information and material in its possession, custody, or control that is relevant to the Assessment for which there is no reasonable claim of privilege;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 339,
             "quote_end_line": 341
           },
@@ -500,7 +538,7 @@
             "quoted_text": "B. Provide or otherwise make available to the Assessor information about Respondent’s networks and all of Respondent’s IT assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the networks and IT assets deemed in scope; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 342,
             "quote_end_line": 345
           },
@@ -509,10 +547,19 @@
             "quoted_text": "C. Disclose all material facts to the Assessor, and not misrepresent in any manner, expressly or by implication, any fact material to the Assessor’s: (1) determination of whether Respondent has implemented and maintained the Information Security Program required by Provision II of this Order, titled Mandated Information Security Program; (2) assessment of the effectiveness of the implementation and maintenance of sub-Provisions II.A-J; or (3) identification of any gaps or weaknesses in, or instances of material noncompliance with, the Information Security Program.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 346,
             "quote_end_line": 352
           }
+        ],
+        "statutory_topics": [
+          "Section 5 Only"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Other"
         ]
       },
       {
@@ -526,7 +573,7 @@
             "quoted_text": "A. One (1) year after the issuance date of this Order, and each year thereafter, provide the Commission with a certification from a senior corporate manager, or, if no such senior corporate manager exists, a senior officer of Respondent responsible for Respondent’s Information Security Program that: (1) Respondent has established, implemented, and maintained the requirements of this Order; and (2) Respondent is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission. The certification must be based on the personal knowledge of the senior corporate manager, senior officer, or subject matter experts upon whom the senior corporate manager or senior officer reasonably relies in making the certification.",
             "deadline": "1 year after issuance, then annually",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 358,
             "quote_end_line": 366
           },
@@ -535,10 +582,19 @@
             "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “In re Zoom Video Communications, Inc., FTC File No. 192 3167.”",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 367,
             "quote_end_line": 372
           }
+        ],
+        "statutory_topics": [
+          "Section 5 Only"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Compliance Monitoring"
         ]
       },
       {
@@ -552,7 +608,7 @@
             "quoted_text": "IT IS FURTHER ORDERED that Respondent, within thirty (30) days after the date of Respondent’s discovery of a Covered Incident, but in any event no later than ten (10) days after the date Respondent first notifies any U.S. federal, state, or local government entity of the Covered Incident, must submit a report to the Commission. The report must include, to the extent possible: A. The date, estimated date, or estimated date range when the Covered Incident occurred; B. A description of the facts relating to the Covered Incident, including the causes of the Covered Incident, if known; C. A description of each type of Covered Information that was affected or triggered any notification obligation to the U.S. federal, state, or local government entity; D. The number of consumers whose information was affected or that triggered the notification obligation to the U.S. federal, state, or local government entity; E. The acts that Respondent has taken to date to remediate the Covered Incident and protect Covered Information from further exposure or access, and protect affected individuals from identity theft or other harm that may result from the Covered Incident; and F. A representative copy of any materially different notice sent by Respondent to consumers or to any U.S. federal, state, or local government entity.",
             "deadline": "30 days after discovery / 10 days after first government notification",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 374,
             "quote_end_line": 390
           },
@@ -565,6 +621,15 @@
             "quote_start_line": 391,
             "quote_end_line": 399
           }
+        ],
+        "statutory_topics": [
+          "Section 5 Only"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Compliance Monitoring"
         ]
       },
       {
@@ -578,7 +643,7 @@
             "quoted_text": "A. Respondent, within ten (10) days after the effective date of this Order, must submit to the Commission an acknowledgment of receipt of this Order, sworn under penalty of perjury;",
             "deadline": "10 days after effective date",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 403,
             "quote_end_line": 404
           },
@@ -587,7 +652,7 @@
             "quoted_text": "B. For five (5) years after the issuance date of this Order, Respondent must deliver a copy of this Order to: (a) all principals, officers, directors, and LLC managers and members; (b) all employees, agents, and representatives with managerial responsibilities related to the subject matter of the Order; and (c) any business entity resulting from any change in structure as set forth in the Provision titled Compliance Reports and Notices. Delivery must occur within ten (10) days after the effective date of this Order for current personnel. For all others, delivery must occur before they assume their responsibilities;",
             "deadline": "10 days for current personnel; before assuming responsibilities for new personnel",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 405,
             "quote_end_line": 411
           },
@@ -596,10 +661,19 @@
             "quoted_text": "C. From each individual or entity to which Respondent delivered a copy of this Order, Respondent must obtain, within thirty (30) days, a signed and dated acknowledgment of receipt of this Order.",
             "deadline": "30 days",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 413,
             "quote_end_line": 415
           }
+        ],
+        "statutory_topics": [
+          "Section 5 Only"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Other"
         ]
       },
       {
@@ -613,7 +687,7 @@
             "quoted_text": "A. One (1) year after the issuance date of this Order, Respondent must submit a compliance report, sworn under penalty of perjury, in which Respondent must: (a) identify the primary physical, postal, and email address and telephone number, as designated points of contact, which representatives of the Commission, may use to communicate with Respondent; (b) identify all of Respondent’s businesses by all of their names, telephone numbers, and physical, postal, email, and Internet addresses; (c) describe the activities of each business, including the goods and services offered, and the means of collection, maintenance, use, deletion, or disclosure of information; (d) describe in detail whether and how Respondent is in compliance with each Provision of this Order; and (e) provide a copy of each Acknowledgment of the Order obtained pursuant to this Order, unless previously submitted to the Commission;",
             "deadline": "1 year after issuance",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 419,
             "quote_end_line": 429
           },
@@ -631,7 +705,7 @@
             "quoted_text": "C. Respondent must submit notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against such Respondent within fourteen (14) days of its filing;",
             "deadline": "14 days",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 439,
             "quote_end_line": 441
           },
@@ -640,7 +714,7 @@
             "quoted_text": "D. Any submission to the Commission required by this Order to be sworn under penalty of perjury must be true and accurate and comply with 28 U.S.C. § 1746, such as by concluding: “I declare under penalty of perjury under the laws of the United States of America that the foregoing is true and correct. Executed on: _____” and supplying the date, signatory’s full name, title (if applicable), and signature; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 442,
             "quote_end_line": 446
           },
@@ -649,10 +723,19 @@
             "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin: “In re Zoom Video Communications, Inc., FTC File No. 192 3167.”",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 447,
             "quote_end_line": 452
           }
+        ],
+        "statutory_topics": [
+          "Section 5 Only"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Compliance Monitoring"
         ]
       },
       {
@@ -666,7 +749,7 @@
             "quoted_text": "IT IS FURTHER ORDERED that Respondent must create certain records for five (5) years after the issuance date of the Order, and retain each such record for five (5) years. Specifically, Respondent must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold;",
             "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 454,
             "quote_end_line": 457
           },
@@ -675,7 +758,7 @@
             "quoted_text": "B. Personnel records showing, for each person providing services, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reason for termination;",
             "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 458,
             "quote_end_line": 460
           },
@@ -684,7 +767,7 @@
             "quoted_text": "C. Copies of all U.S. consumer complaints that were submitted to Respondent and relate to the subject matter of the Order, and any response(s) to such complaints;",
             "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 461,
             "quote_end_line": 462
           },
@@ -693,7 +776,7 @@
             "quoted_text": "D. All records necessary to demonstrate full compliance with each Provision of this Order, including all submissions to the Commission;",
             "deadline": "5 years",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 463,
             "quote_end_line": 464
           },
@@ -711,10 +794,19 @@
             "quoted_text": "F. For five (5) years after the date of preparation of each Assessment required by this Order, all materials relied upon to prepare the Assessment, whether prepared by or on behalf of Respondent, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Respondent’s compliance with related Provisions of this Order, for the compliance period covered by such Assessment.",
             "deadline": "5 years after preparation of each Assessment",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 479,
             "quote_end_line": 484
           }
+        ],
+        "statutory_topics": [
+          "Section 5 Only"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Recordkeeping"
         ]
       },
       {
@@ -728,7 +820,7 @@
             "quoted_text": "A. Within fourteen (14) days of receipt of a written request from a representative of the Commission, Respondent must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury, appear for depositions, and produce records for inspection and copying;",
             "deadline": "14 days upon written request",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 488,
             "quote_end_line": 491
           },
@@ -737,7 +829,7 @@
             "quoted_text": "B. For matters concerning this Order, representatives of the Commission are authorized to communicate directly with Respondent. Respondent must permit representatives of the Commission to interview anyone affiliated with Respondent who has agreed to such an interview. The interviewee may have counsel present; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 492,
             "quote_end_line": 495
           },
@@ -746,10 +838,19 @@
             "quoted_text": "C. The Commission may use all other lawful means, including posing through its representatives as consumers, suppliers, or other individuals or entities, to Respondent or any individual or entity affiliated with Respondent, without the necessity of identification or prior notice. Nothing in this Order limits the Commission’s lawful use of compulsory process, pursuant to Sections 9 and 20 of the FTC Act, 15 U.S.C. §§ 49, 57b-1.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 496,
             "quote_end_line": 500
           }
+        ],
+        "statutory_topics": [
+          "Section 5 Only"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Compliance Monitoring"
         ]
       },
       {
@@ -763,7 +864,7 @@
             "quoted_text": "IT IS FURTHER ORDERED that this Order is final and effective upon the date of its publication on the Commission’s website (ftc.gov) as a final order. This Order will terminate",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 502,
             "quote_end_line": 503
           },
@@ -776,6 +877,15 @@
             "quote_start_line": 503,
             "quote_end_line": 522
           }
+        ],
+        "statutory_topics": [
+          "Section 5 Only"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Other"
         ]
       }
     ],

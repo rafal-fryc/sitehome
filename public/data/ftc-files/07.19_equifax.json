@@ -15,7 +15,20 @@
     },
     "legal_authority": "Section 5(a) of the Federal Trade Commission Act, 15 U.S.C. § 45(a); Standards for Safeguarding Customer Information Rule (Safeguards Rule), 16 C.F.R. Part 314, issued pursuant to Sections 501-504 of the Gramm-Leach-Bliley Act, 15 U.S.C. §§ 6801-6804",
     "violation_type": "unfair",
-    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/172-3203-equifax-inc"
+    "ftc_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/172-3203-equifax-inc",
+    "statutory_topics": [
+      "FCRA",
+      "GLBA"
+    ],
+    "practice_areas": [
+      "Data Security",
+      "Financial Practices",
+      "Privacy"
+    ],
+    "industry_sectors": [
+      "Technology",
+      "Financial Services"
+    ]
   },
   "complaint": {
     "factual_background": "Equifax Inc., one of the three nationwide consumer reporting agencies in the United States, suffered a massive data breach in 2017 that exposed the sensitive personal information of approximately 147 million consumers, including names, dates of birth, Social Security numbers, addresses, telephone numbers, email addresses, and payment card numbers. The breach occurred because Equifax failed to patch a critical Apache Struts vulnerability (2017-CVE-5638) for over four months after being alerted by US-CERT, and its automated vulnerability scanner was misconfigured and failed to detect the unpatched system. Attackers exploited this vulnerability to gain access to Equifax's network and were able to move laterally through dozens of unrelated databases due to a lack of network segmentation, plain-text storage of administrative credentials, and absence of intrusion detection controls. Despite these systemic security failures—which Equifax's own internal documents show the company was aware of since at least 2014—Equifax had represented to consumers and small businesses in its privacy policies that it maintained reasonable security safeguards and limited access to personal information to employees with a legitimate need. Equifax also violated the GLB Act Safeguards Rule by failing to develop and implement a comprehensive, adequate information security program.",
@@ -24,7 +37,7 @@
         "description": "Equifax represented in its direct-to-consumer privacy policy that it limits access to personal information to employees with a reasonable need and that it maintains reasonable physical, technical, and procedural safeguards to protect personal information",
         "quoted_text": "We are committed to protecting the security of your information through procedures and technologies designed for this purpose by taking these steps: We limit access to your personal information to employees having a reasonable need to access this information to provide products and services to you . . . We have reasonable physical, technical, and procedural safeguards to help protect your personal information.",
         "verified": true,
-        "confidence": 1.0,
+        "confidence": 1,
         "source_paragraph": 27,
         "quote_start_line": 327,
         "quote_end_line": 333
@@ -33,7 +46,7 @@
         "description": "Equifax Small Business maintained an identical privacy policy representing reasonable access controls and safeguards for consumers and small businesses purchasing Equifax Small Business Products",
         "quoted_text": "30. Since at least October 2013, Equifax Small Business has maintained a privacy policy that applies when consumers or small businesses purchase, access, or use U.S. Equifax Small Business Products for personal or business purposes through Equifax.com. That policy recites the same security statement set forth above in Paragraph 27. For the reasons previously set forth at Paragraphs 22-23 and 28, this statement was false or misleading.",
         "verified": true,
-        "confidence": 1.0,
+        "confidence": 1,
         "source_paragraph": 30,
         "quote_start_line": 354,
         "quote_end_line": 359
@@ -118,10 +131,21 @@
             "quoted_text": "IT IS ORDERED that Defendant, Defendant’s officers, agents, employees, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any good or service, are hereby permanently restrained and enjoined from misrepresenting, expressly or by implication, the extent to which Defendant maintains and protects the privacy, security, confidentiality, or integrity of any Personal Information.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 267,
             "quote_end_line": 273
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Prohibition"
         ]
       },
       {
@@ -135,7 +159,7 @@
             "quoted_text": "IT IS FURTHER ORDERED that Defendant shall establish and implement, and thereafter maintain, for twenty years after entry of this Order, a comprehensive information security program (“Information Security Program”) designed to protect the security, confidentiality, and integrity of Personal Information. To satisfy this requirement, Defendant must, at a minimum:",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 275,
             "quote_end_line": 279
           },
@@ -153,7 +177,7 @@
             "quoted_text": "B. Provide the written Information Security Program and any material evaluations thereof or updates thereto to Defendant’s board of directors or a relevant subcommittee thereof, or equivalent governing body or, if no such board or equivalent governing body exists, to a senior officer of Defendant responsible for Defendant’s Information Security Program at least once every twelve months;",
             "deadline": "annually",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 292,
             "quote_end_line": 297
           },
@@ -162,7 +186,7 @@
             "quoted_text": "C. Designate a qualified employee or employees to coordinate, oversee, and be responsible for the Information Security Program;",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 298,
             "quote_end_line": 299
           },
@@ -171,7 +195,7 @@
             "quoted_text": "D. Assess, at least once every twelve months, internal and external risks to the security, confidentiality, or integrity of Personal Information that could result in the unauthorized disclosure, misuse, loss, alteration, destruction, or other compromise of such information and document those risks that are material. Defendant shall further assess and document internal and external risks as described above as they relate to a Covered Incident promptly (not to exceed forty-five days) following verification of such a Covered Incident;",
             "deadline": "annually; 45 days after Covered Incident",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 300,
             "quote_end_line": 306
           },
@@ -198,7 +222,7 @@
             "quoted_text": "G. Test and monitor the effectiveness of the safeguards at least once every twelve months and, as they relate to a Covered Incident, promptly (not to exceed sixty days) following verification of such an incident, and modify the Information Security Program based on the results. Such testing shall include vulnerability testing of Defendant’s network at least once every four months and, as it relates to a Covered Incident, promptly (not to exceed sixty days) following verification of such an incident, and penetration testing of Defendant’s network at least once every twelve months and, as it relates to a Covered Incident, promptly (not to exceed sixty days) following verification of such an incident;",
             "deadline": "annually; every 4 months for vulnerability testing; 60 days after Covered Incident",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 408,
             "quote_end_line": 417
           },
@@ -207,7 +231,7 @@
             "quoted_text": "H. Select and retain service providers capable of safeguarding Personal Information they access through or receive from Defendant, and contractually require service providers to implement and maintain safeguards tailored to the amount and the type of Personal Information at issue; and",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 418,
             "quote_end_line": 422
           },
@@ -216,10 +240,21 @@
             "quoted_text": "I. Evaluate and adjust the Information Security Program in light of any changes to Defendant’s operations or business arrangements, including, without limitation, acquisition or licensing of any new information systems, technologies, or assets through merger or acquisition, a Covered Incident, or any other circumstances that Defendant knows or has reason to know may have a material impact on the effectiveness of the Information Security Program. At a minimum, Defendant must evaluate the Information Security Program at least once every twelve months and, as it relates to a Covered Incident, promptly (not to exceed sixty days) following verification of such an incident and modify the Information Security Program based on the results.",
             "deadline": "annually; 60 days after Covered Incident",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 427,
             "quote_end_line": 437
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Comprehensive Security Program"
         ]
       },
       {
@@ -242,7 +277,7 @@
             "quoted_text": "B. For each Assessment, Defendant shall provide the Associate Director for Enforcement for the Bureau of Consumer Protection at the Federal Trade Commission with the name and affiliation of the person selected to conduct the Assessment, which the Associate Director shall have the authority to approve in his or her sole discretion. If the Associate Director for Enforcement does not approve of the person Defendant has selected, Defendant must choose a person or entity to conduct the Assessment from a list of at least three Assessors provided by a representative of the Commission.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 462,
             "quote_end_line": 470
           },
@@ -251,7 +286,7 @@
             "quoted_text": "C. The reporting period for the Assessments must cover: (1) the first 180 days after the entry date of the Order for the initial Assessment; and (2) each two- year period thereafter for twenty years after entry of the Order for the biennial Assessments.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 475,
             "quote_end_line": 478
           },
@@ -269,10 +304,21 @@
             "quoted_text": "E. Each Assessment must be completed within sixty days after the end of the reporting period to which the Assessment applies. Unless otherwise directed by a Commission representative in writing, Defendant must submit each Assessment to the Commission within ten days after the Assessment has been completed via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin, “Federal Trade Commission v. Equifax Inc., FTC File No. 1723203.” Defendant must notify the Commission of any portions of the Assessment containing trade secrets, commercial or financial information, or information about a consumer or other third party, for which confidential treatment is requested pursuant to the Commission’s procedures concerning public disclosure set forth in 15 U.S.C. 46(f) and 16 CFR 4.10.",
             "deadline": "60 days after reporting period; submitted within 10 days of completion",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 502,
             "quote_end_line": 515
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Third-Party Assessment",
+          "Comprehensive Security Program"
         ]
       },
       {
@@ -286,7 +332,7 @@
             "quoted_text": "IT IS FURTHER ORDERED that Defendant, Defendant’s officers, agents, employees, and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any Assessment required by Section III of this Order titled Information Security Assessments by a Third Party, must not withhold any material facts from the Assessor, and must not misrepresent, expressly or by implication, any fact material to the Assessor’s: (1) evaluation of whether Defendant has implemented and maintained the Information Security Program required by Section II of this Order, titled Mandated Information Security Program; (2) assessment of the effectiveness of the implementation and maintenance of subsections A-I of Section II; or (3) identification of any gaps or weaknesses in the Information Security Program. Defendant shall provide the Assessor with information about Defendant’s entire network and all of Defendant’s IT assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the network and IT assets deemed in scope.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 522,
             "quote_end_line": 536
           },
@@ -295,10 +341,20 @@
             "quoted_text": "weaknesses in the Information Security Program. Defendant shall provide the Assessor with information about Defendant’s entire network and all of Defendant’s IT assets so that the Assessor can determine the scope of the Assessment, and visibility to those portions of the network and IT assets deemed in scope. Defendant shall also provide or otherwise make available to the Assessor all information and material in its possession, custody, or control that is relevant to the Assessment.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 533,
             "quote_end_line": 539
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Comprehensive Security Program"
         ]
       },
       {
@@ -312,7 +368,7 @@
             "quoted_text": "A. For a total of twenty years and commencing one year after the entry date of this Order, and each year thereafter, provide the Commission with a certification from the board of directors, or a relevant subcommittee thereof, or other equivalent governing body or, if no such board or equivalent governing body exists, a senior officer of Defendant responsible for Defendant’s Information Security Program, that: (1) Defendant has established, implemented, and maintained the requirements of this Order; (2) Defendant is not aware of any material noncompliance that has not been (a) corrected or (b) disclosed to the Commission; (3) Defendant has cooperated with the Assessor as required by Section IV of this Order; and (4) includes a brief description of any Covered Incident. The certification must be based on the personal knowledge of the senior corporate manager, senior officer, or subject matter experts upon whom the board of directors, or relevant subcommittee thereof, or other equivalent governing body, reasonably relies in making the certification.",
             "deadline": "annually, beginning one year after entry",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 548,
             "quote_end_line": 562
           },
@@ -321,10 +377,22 @@
             "quoted_text": "B. Unless otherwise directed by a Commission representative in writing, submit all annual certifications to the Commission pursuant to this Order via email to DEbrief@ftc.gov or by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue N.W., Washington, D.C. 20580. The subject line must begin, “Federal Trade Commission v. Equifax Inc., FTC File No. 1723203.”",
             "deadline": "annually",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 567,
             "quote_end_line": 573
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Compliance Monitoring"
         ]
       },
       {
@@ -347,7 +415,7 @@
             "quoted_text": "B. No more than thirty days after every calendar quarter, Defendant must provide Defendant’s board of directors or a relevant subcommittee thereof, or equivalent governing body or, if no such board or equivalent governing body exists, to a senior officer of Defendant responsible for Defendant’s Information Security Program, a report summarizing all Covered Incidents that occurred in that calendar quarter.",
             "deadline": "30 days after end of each calendar quarter",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 602,
             "quote_end_line": 607
           },
@@ -356,10 +424,22 @@
             "quoted_text": "C. Unless otherwise directed by a Commission representative in writing, all Covered Incident reports to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue N.W., Washington, D.C. 20580. The subject line must begin, “Federal Trade Commission v. Equifax Inc., File No. 172 3203.” Defendant must notify the Commission of any portions of the Covered Incident Report containing trade secrets, commercial or financial information, or information about a consumer or other third party, for which confidential treatment is requested pursuant to the Commission’s procedures concerning public disclosure set forth in 15 U.S.C. § 46(f) and 16 CFR Part 4.10.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 612,
             "quote_end_line": 623
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Compliance Monitoring"
         ]
       },
       {
@@ -373,7 +453,7 @@
             "quoted_text": "A. Judgment in the amount of Four Hundred Twenty-Five Million Dollars ($425,000,000) is entered in favor of the Commission against Defendant.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 627,
             "quote_end_line": 628
           },
@@ -395,6 +475,18 @@
             "quote_start_line": 670,
             "quote_end_line": 683
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Monetary Penalty"
         ]
       },
       {
@@ -417,7 +509,7 @@
             "quoted_text": "B. If the Consumer Fund lacks sufficient funds to pay claims for Out-of-Pocket Losses made during the Initial and Extended Claims Periods, Equifax Inc., its successors and assigns, deposits into the Consumer Fund, as needed to pay such claims on a monthly basis, up to an additional aggregate amount of One Hundred Twenty-Five Million Dollars ($125,000,000) within fourteen days after receipt of written notification from the Settlement Administrator that there are insufficient funds remaining in the Consumer Fund.",
             "deadline": "14 days after notification of insufficient funds",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 708,
             "quote_end_line": 714
           },
@@ -426,10 +518,22 @@
             "quoted_text": "C. Equifax Inc., its successors and assigns, pays any Additional Financial Obligations required under Section VII into the Consumer Fund.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 715,
             "quote_end_line": 716
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Monetary Penalty"
         ]
       },
       {
@@ -443,7 +547,7 @@
             "quoted_text": "A. An amount no less than Three Hundred Million Dollars ($300,000,000), plus any amount deposited in the Consumer Fund pursuant to Sections VIII.B and VIII.C, including all accumulated interest, must be used and administered as described in Section IX for the exclusive purpose of providing restitution and redress to Affected Consumers.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 721,
             "quote_end_line": 725
           },
@@ -461,7 +565,7 @@
             "quoted_text": "2. For claims submitted during the Extended Claims Period, reimbursement of claims for the following Out-of-Pocket Losses incurred during the Extended Claims Period: a. Unreimbursed costs, expenses, losses, or charges incurred by an Affected Consumer as a result of identity theft or identity fraud, falsified tax returns, or other alleged misuse of Affected Consumers’ Personal Information; b. Other miscellaneous expenses, incurred by an Affected Consumer related to remedying fraud, identity theft, or other misuse of an Affected Consumer’s Personal Information, such as notary, fax, postage, copying, mileage, and long-distance telephone charges; and c. Time Compensation limited to time spent remedying fraud, identity theft, or other misuse of an Affected Consumer’s Personal Information that is fairly traceable to the Breach.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 781,
             "quote_end_line": 795
           },
@@ -470,7 +574,7 @@
             "quoted_text": "3. For a period of seven years from the Class Action Effective Date, Assisted Identity Restoration Services to an Affected Consumer. Affected Consumers shall not be required to enroll in the Product to obtain Assisted Identity Restoration Services. a. The Assisted Identity Restoration Services shall be offered, provided and maintained by the independent third party that has been approved by a representative of the Commission and that will be presented to the MDL Court for its approval. Assisted Identity Restoration Services shall not be provided to any Affected Consumer by Defendant. Defendant shall not receive any monetary benefit from the Assisted Identity Restoration Services.",
             "deadline": "7 years from Class Action Effective Date",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 800,
             "quote_end_line": 811
           },
@@ -501,6 +605,18 @@
             "quote_start_line": 859,
             "quote_end_line": 874
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Monetary Penalty"
         ]
       },
       {
@@ -514,7 +630,7 @@
             "quoted_text": "A. Defendant shall supply the Notice Provider with information in its possession, custody, or control, to the extent reasonably available, regarding Affected Consumers sufficient to enable the Notice Provider to implement the Notice Plan.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 878,
             "quote_end_line": 881
           },
@@ -523,7 +639,7 @@
             "quoted_text": "B. Defendant shall supply the Settlement Administrator with information in its possession, custody, or control, to the extent reasonably available, regarding Affected Consumers sufficient to enable the Settlement Administrator to implement the Claims Administration Protocol. This shall include providing the Settlement Administrator with sufficient information to identify consumers who are eligible for reimbursement pursuant to IX.B.1.c.i, as those consumers are not required to submit supporting documentation for this type of Out-of-Pocket Loss.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 882,
             "quote_end_line": 889
           },
@@ -532,7 +648,7 @@
             "quoted_text": "C. Defendant must notify a designated representative of the Commission of any requested modifications to the Notice Plan or Claims Administration Protocol, including any change of the Notice Provider or Settlement Administrator, and any such modification requested by the Defendant must be approved by a designated representative of the Commission, with such approval not unreasonably withheld, and shall also require approval from the MDL Court.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 894,
             "quote_end_line": 900
           },
@@ -559,7 +675,7 @@
             "quoted_text": "7. Defendant shall transmit the information required pursuant to Section X.D without alteration and shall disclose any fact material to the information submitted. No information may be withheld on the basis of (1) a claim of confidentiality, proprietary or trade secrets, or any similar claim, or (2) any privilege asserted between Defendant and the Settlement Administrator, although such documents can be designated for confidential treatment in accordance with applicable law.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 992,
             "quote_end_line": 998
           },
@@ -568,10 +684,22 @@
             "quoted_text": "b. Defendant shall develop and implement a process to direct consumers that contact Defendant with issues related to the Settlement or the Consumer Fund to the Settlement Administrator and/or the Settlement Website.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 974,
             "quote_end_line": 977
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Other"
         ]
       },
       {
@@ -603,7 +731,7 @@
             "quoted_text": "E. All payments to the Commission must be made by electronic fund transfer in accordance with instructions provided by a representative of the Commission.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1108,
             "quote_end_line": 1110
           },
@@ -612,7 +740,7 @@
             "quoted_text": "G. In addition to payment, Defendant remains obligated to cooperate in the administration of consumer relief. If a representative of the Commission requests in writing any information related to consumer relief, Defendant must provide it, in the form prescribed by the Commission, within fourteen days. Defendant shall provide the Commission with: 1. Sufficient information to enable the Commission to efficiently administer consumer relief. 2. Sufficient information regarding any steps toward consumer notice, claims, and relief that has been provided pursuant to the Consumer Fund by the Notice Provider or the Settlement Administrator to enable the Commission to efficiently administer consumer relief.",
             "deadline": "14 days after written request",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1114,
             "quote_end_line": 1124
           },
@@ -621,10 +749,23 @@
             "quoted_text": "2. If a representative of the Commission requests in writing any information related to consumer relief, Defendant shall require the Notice Provider and the Settlement Administrator to provide it, to the extent reasonably available, in the form prescribed by the Commission, within fourteen days.",
             "deadline": "14 days after written request",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1138,
             "quote_end_line": 1142
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Compliance Monitoring",
+          "Monetary Penalty"
         ]
       },
       {
@@ -638,7 +779,7 @@
             "quoted_text": "A. Defendant relinquishes dominion and all legal and equitable right, title, and interest in all assets transferred pursuant to this Order and may not seek the return of any assets.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1146,
             "quote_end_line": 1148
           },
@@ -647,7 +788,7 @@
             "quoted_text": "B. The facts alleged in the Complaint will be taken as true, without further proof, in any subsequent civil litigation by or on behalf of the Commission in a proceeding to enforce its rights to any payment or monetary judgment pursuant to this Order, such as a nondischargeability complaint in any bankruptcy case.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1153,
             "quote_end_line": 1157
           },
@@ -656,7 +797,7 @@
             "quoted_text": "D. Defendant acknowledges that its Taxpayer Identification Number, which Defendant must submit to the Commission, may be used for collecting and reporting on any delinquent amount arising out of this Order, in accordance with 31 U.S.C. § 7701.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1162,
             "quote_end_line": 1165
           },
@@ -669,6 +810,18 @@
             "quote_start_line": 1166,
             "quote_end_line": 1187
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Monetary Penalty"
         ]
       },
       {
@@ -691,7 +844,7 @@
             "quoted_text": "B. Offer Affected Consumers who were under the age of eighteen on May 13, 2017, additional years of Single-Bureau Monitoring such that the aggregate number of years of credit monitoring provided under Section IX and the Single-Bureau Monitoring equals eighteen years. If an Affected Consumer who enrolled in the Product is under the age of eighteen when the Product expires, the Single-Bureau Monitoring offered will be child monitoring services until such Affected Consumer reaches eighteen years of age.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1204,
             "quote_end_line": 1210
           },
@@ -700,7 +853,7 @@
             "quoted_text": "C. Provide all Affected Consumers with an easily accessible process to place or remove security freezes or locks on their Personal Consumer Report for free for a period of ten years following the date of entry of this Order. Defendant shall not dissuade Affected Consumers from placing or choosing to place a security freeze. Should Defendant offer any standalone product or service as an alternative with substantially similar features as a security freeze (e.g., Lock & Alert), Defendant shall not seek to persuade Affected Consumers to choose the alternative product or service instead of a security freeze.",
             "deadline": "10 years from entry of Order",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1211,
             "quote_end_line": 1218
           },
@@ -713,6 +866,16 @@
             "quote_start_line": 1219,
             "quote_end_line": 1226
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Other"
         ]
       },
       {
@@ -730,6 +893,18 @@
             "quote_start_line": 1230,
             "quote_end_line": 1250
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Prohibition"
         ]
       },
       {
@@ -752,7 +927,7 @@
             "quoted_text": "3. Issuing a press release, using terms consistent with the approved Notice Plan, including a hyperlink to the Settlement Website, with information about the Product, the Consumer Fund, and the Settlement Website;",
             "deadline": "7 days after MDL notice order or Termination Event notice",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1275,
             "quote_end_line": 1278
           },
@@ -761,7 +936,7 @@
             "quoted_text": "4. Sending a Twitter notification via Defendant’s primary Twitter account monthly during the Initial Claims Period and then biannually during the Extended Claims Period, the text of which shall read “Visit [hyperlink to the Settlement Website] for information on the Equifax Data Breach Settlement”; and",
             "deadline": "monthly during Initial Claims Period; biannually during Extended Claims Period",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1279,
             "quote_end_line": 1283
           },
@@ -770,7 +945,7 @@
             "quoted_text": "5. Posting a Facebook notification via Defendant’s primary account monthly during the Initial Claims Period and then biannually during the Extended Claims Period, the text of which shall read “Visit [hyperlink to the Settlement website] for information on the Equifax Data Breach Settlement.”",
             "deadline": "monthly during Initial Claims Period; biannually during Extended Claims Period",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1284,
             "quote_end_line": 1288
           },
@@ -783,6 +958,18 @@
             "quote_start_line": 1289,
             "quote_end_line": 1298
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Other"
         ]
       },
       {
@@ -796,10 +983,20 @@
             "quoted_text": "IT IS FURTHER ORDERED that Defendant, Defendant’s officers, agents, employees and attorneys, and all other persons in active concert or participation with any of them, who receive actual notice of this Order, whether acting directly or indirectly, in connection with any product or service, are hereby permanently restrained and enjoined from violating any provision of the Standards for Safeguarding Consumer Information Rule, 16 C.F.R. Part 314, a copy of which is attached hereto as Exhibit B.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1300,
             "quote_end_line": 1306
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Prohibition"
         ]
       },
       {
@@ -813,7 +1010,7 @@
             "quoted_text": "A. Defendant, within seven days of entry of this Order, must submit to the Commission an acknowledgment of receipt of this Order sworn under penalty of perjury.",
             "deadline": "7 days",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1310,
             "quote_end_line": 1312
           },
@@ -831,10 +1028,22 @@
             "quoted_text": "D. From each individual or entity to which Defendant delivered a copy of this Order, Defendant must obtain, within 30 days, a signed and dated acknowledgment of receipt of this Order, which can be obtained electronically.",
             "deadline": "30 days after delivery",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1326,
             "quote_end_line": 1329
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Other"
         ]
       },
       {
@@ -857,7 +1066,7 @@
             "quoted_text": "B. For 20 years after entry of this Order, Defendant must submit a compliance notice, sworn under penalty of perjury, within 14 days of any change in the following: (a) any designated point of contact; or (b) the structure of any entity that Defendant has any ownership interest in or controls directly or indirectly that may affect compliance obligations arising under this Order, including: creation, merger, sale, or dissolution of the entity or any subsidiary, parent, or affiliate that engages in any acts or practices subject to this Order.",
             "deadline": "14 days after any qualifying change",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1351,
             "quote_end_line": 1358
           },
@@ -866,7 +1075,7 @@
             "quoted_text": "C. Defendant must submit to the Commission notice of the filing of any bankruptcy petition, insolvency proceeding, or similar proceeding by or against the Defendant within 14 days of its filing.",
             "deadline": "14 days after filing",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1359,
             "quote_end_line": 1361
           },
@@ -884,10 +1093,22 @@
             "quoted_text": "E. Unless otherwise directed by a Commission representative in writing, all submissions to the Commission pursuant to this Order must be emailed to DEbrief@ftc.gov or sent by overnight courier (not the U.S. Postal Service) to: Associate Director for Enforcement, Bureau of Consumer Protection, Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington, DC 20580. The subject line must begin “Federal Trade Commission v. Equifax Inc., FTC File No. 1723203.”",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1372,
             "quote_end_line": 1378
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Compliance Monitoring"
         ]
       },
       {
@@ -901,7 +1122,7 @@
             "quoted_text": "20 years after entry of the Order, and retain each such record for 5 years. Specifically, Defendant must create and retain the following records: A. Accounting records showing the revenues from all goods or services sold;",
             "deadline": "20 years creation; 5 years retention",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1381,
             "quote_end_line": 1383
           },
@@ -910,7 +1131,7 @@
             "quoted_text": "B. Personnel records showing, for each person providing services, whether as an employee or otherwise, that person’s: name; addresses; telephone numbers; job title or position; dates of service; and (if applicable) the reasons for termination;",
             "deadline": "20 years creation; 5 years retention",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1384,
             "quote_end_line": 1387
           },
@@ -919,7 +1140,7 @@
             "quoted_text": "C. Copies or records of all U.S. consumer complaints concerning the subject matter of the Order, whether received directly or indirectly, such as through a third party, and any response;",
             "deadline": "20 years creation; 5 years retention",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1392,
             "quote_end_line": 1394
           },
@@ -928,7 +1149,7 @@
             "quoted_text": "D. A copy of each information security assessment required by this Order and any material evaluations of Defendant’s physical, technical, or administrative controls to protect the confidentiality, integrity, or availability of Personal Information;",
             "deadline": "20 years creation; 5 years retention",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1395,
             "quote_end_line": 1398
           },
@@ -937,7 +1158,7 @@
             "quoted_text": "E. A copy of each widely disseminated and unique representation by Defendant that describes the extent to which Defendant maintains or protects the privacy, confidentiality, security, or integrity of any Personal Information;",
             "deadline": "20 years creation; 5 years retention",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1399,
             "quote_end_line": 1401
           },
@@ -946,7 +1167,7 @@
             "quoted_text": "F. For five years after the date of preparation of each Assessment required by this Order, all materials and evidence that are in the Defendant’s possession and control that the Assessor considered, reviewed, relied upon or examined to prepare the Assessment, whether prepared by or on behalf of Defendant, including all plans, reports, studies, reviews, audits, audit trails, policies, training materials, and assessments, and any other materials concerning Defendant’s compliance with related Sections of this Order, for the compliance period covered by such Assessment; and",
             "deadline": "5 years after each Assessment's preparation date",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1402,
             "quote_end_line": 1409
           },
@@ -955,10 +1176,21 @@
             "quoted_text": "G. All records necessary to demonstrate full compliance with each provision of this Order; including all submissions to the Commission.",
             "deadline": "20 years creation; 5 years retention",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1410,
             "quote_end_line": 1411
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security"
+        ],
+        "remedy_types": [
+          "Recordkeeping",
+          "Comprehensive Security Program"
         ]
       },
       {
@@ -972,7 +1204,7 @@
             "quoted_text": "A. Within 14 days of receipt of a written request from a representative of the Commission, Defendant must: submit additional compliance reports or other requested information, which must be sworn under penalty of perjury; appear for depositions; and produce documents for inspection and copying. The Commission is also authorized to obtain discovery, without further leave of court, using any of the procedures prescribed by Federal Rules of Civil Procedure 29, 30 (including telephonic depositions), 31, 33, 34, 36, 45, and 69.",
             "deadline": "14 days after written request",
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1419,
             "quote_end_line": 1426
           },
@@ -981,7 +1213,7 @@
             "quoted_text": "B. For matters concerning this Order, the Commission is authorized to communicate directly with Defendant. Defendant must permit representatives of the Commission to interview any employee or other person affiliated with Defendant who has agreed to such an interview. The person interviewed may have counsel present.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1427,
             "quote_end_line": 1431
           },
@@ -994,6 +1226,18 @@
             "quote_start_line": 1432,
             "quote_end_line": 1441
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Compliance Monitoring"
         ]
       },
       {
@@ -1007,10 +1251,22 @@
             "quoted_text": "IT IS FURTHER ORDERED that if any clause, provision, or section of this Order shall, for any reason, be held illegal, invalid, or unenforceable, such illegality, invalidity or unenforceability shall not affect any other clause, provision or section of this Order and this Order shall be construed and enforced as if such illegal, invalid or unenforceable clause, section or provision had not been contained herein.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1443,
             "quote_end_line": 1448
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Other"
         ]
       },
       {
@@ -1024,10 +1280,22 @@
             "quoted_text": "IT IS FUTHER ORDERED that this Court retain jurisdiction of this matter for purposes of construction, modification, and enforcement of this Order.",
             "deadline": null,
             "verified": true,
-            "confidence": 1.0,
+            "confidence": 1,
             "quote_start_line": 1450,
             "quote_end_line": 1451
           }
+        ],
+        "statutory_topics": [
+          "FCRA",
+          "GLBA"
+        ],
+        "practice_areas": [
+          "Data Security",
+          "Financial Practices",
+          "Privacy"
+        ],
+        "remedy_types": [
+          "Other"
         ]
       }
     ],
