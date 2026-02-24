@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-24)
 ## Current Position
 
 Phase: 1 of 5 (Data Pipeline)
-Plan: 1 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: Executing
-Last activity: 2026-02-24 — Completed 01-01-PLAN.md (TypeScript interfaces)
+Last activity: 2026-02-24 — Completed 01-03-PLAN.md (Build pipeline scripts)
 
-Progress: [█░░░░░░░░░] 5%
+Progress: [███░░░░░░░] 15%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 2 min
-- Total execution time: 0.03 hours
+- Total plans completed: 3
+- Average duration: 3 min
+- Total execution time: 0.13 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-data-pipeline | 1 | 2 min | 2 min |
+| 01-data-pipeline | 3 | 8 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min)
-- Trend: N/A (first plan)
+- Last 5 plans: 01-01 (2 min), 01-02 (2 min), 01-03 (4 min)
+- Trend: Stable
 
 *Updated after each plan completion*
 
@@ -46,6 +46,9 @@ Recent decisions affecting current work:
 - [Pre-Phase 1]: File split strategy (flat ftc-provisions.json vs topic-sharded files) must be decided before building any fetch hooks — measure actual file size after first pipeline run
 - [Phase 1, Plan 01]: EnhancedFTCCaseSummary uses `extends FTCCaseSummary` to preserve backward compat with categories field
 - [Phase 1, Plan 01]: ClassifiedProvision omits requirements array — plan spec did not include it; keeps interface focused on classification tags
+- [Phase 1, Plan 03]: build-provisions.ts uses inline types (same pattern as build-ftc-data.ts) to avoid tsx path alias issues
+- [Phase 1, Plan 03]: Practice-area shard filenames use pa- prefix to disambiguate from statutory topic shards
+- [Phase 1, Plan 03]: build-ftc-data.ts reads classification tags from public/data/ftc-files/ copies (where classify script writes them)
 
 ### Pending Todos
 
@@ -61,5 +64,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 01-01-PLAN.md (TypeScript interfaces for classification data shapes)
+Stopped at: Completed 01-03-PLAN.md (Build pipeline scripts: build-provisions.ts and enhanced build-ftc-data.ts)
 Resume file: None

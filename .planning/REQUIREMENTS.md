@@ -11,10 +11,10 @@
 - [ ] **PIPE-02**: Build pipeline classifies each provision by practice area (Privacy, Data Security, Deceptive Design / Dark Patterns, AI / Automated Decision-Making, Surveillance)
 - [ ] **PIPE-03**: Build pipeline tags each provision by remedy type (Monetary Penalty, Data Deletion, Comprehensive Security Program, Third-Party Assessment, Algorithmic Destruction, Biometric Ban, Compliance Monitoring, Recordkeeping, Prohibition, Other)
 - [ ] **PIPE-04**: Build pipeline classifies each case by industry sector inferred from company business_description field
-- [ ] **PIPE-05**: Build pipeline produces denormalized `ftc-provisions.json` flat file with all provisions, topic tags, case context, and citations
+- [x] **PIPE-05**: Build pipeline produces denormalized `ftc-provisions.json` flat file with all provisions, topic tags, case context, and citations
 - [ ] **PIPE-06**: Build pipeline produces `ftc-patterns.json` with cross-case language pattern groups
-- [ ] **PIPE-07**: Enhanced `ftc-cases.json` includes provision-level topic aggregations and industry sector per case
-- [ ] **PIPE-08**: Classification runs entirely at build time — no classification logic ships to the browser
+- [x] **PIPE-07**: Enhanced `ftc-cases.json` includes provision-level topic aggregations and industry sector per case
+- [x] **PIPE-08**: Classification runs entirely at build time — no classification logic ships to the browser
 - [x] **PIPE-09**: TypeScript interfaces defined for all new data shapes before pipeline implementation
 
 ### Provisions Library
@@ -99,10 +99,10 @@
 | PIPE-02 | Phase 1 | Pending |
 | PIPE-03 | Phase 1 | Pending |
 | PIPE-04 | Phase 1 | Pending |
-| PIPE-05 | Phase 1 | Pending |
+| PIPE-05 | Phase 1 | Complete |
 | PIPE-06 | Phase 1 | Pending |
-| PIPE-07 | Phase 1 | Pending |
-| PIPE-08 | Phase 1 | Pending |
+| PIPE-07 | Phase 1 | Complete |
+| PIPE-08 | Phase 1 | Complete |
 | PIPE-09 | Phase 1 | Complete |
 | PROV-01 | Phase 3 | Pending |
 | PROV-02 | Phase 3 | Pending |
