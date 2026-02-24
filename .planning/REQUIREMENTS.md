@@ -15,7 +15,7 @@
 - [ ] **PIPE-06**: Build pipeline produces `ftc-patterns.json` with cross-case language pattern groups
 - [ ] **PIPE-07**: Enhanced `ftc-cases.json` includes provision-level topic aggregations and industry sector per case
 - [ ] **PIPE-08**: Classification runs entirely at build time — no classification logic ships to the browser
-- [ ] **PIPE-09**: TypeScript interfaces defined for all new data shapes before pipeline implementation
+- [x] **PIPE-09**: TypeScript interfaces defined for all new data shapes before pipeline implementation
 
 ### Provisions Library
 
@@ -103,7 +103,7 @@
 | PIPE-06 | Phase 1 | Pending |
 | PIPE-07 | Phase 1 | Pending |
 | PIPE-08 | Phase 1 | Pending |
-| PIPE-09 | Phase 1 | Pending |
+| PIPE-09 | Phase 1 | Complete |
 | PROV-01 | Phase 3 | Pending |
 | PROV-02 | Phase 3 | Pending |
 | PROV-03 | Phase 3 | Pending |

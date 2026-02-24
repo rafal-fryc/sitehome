@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   5. No classification logic or provision data transformation runs in the browser — the app loads pre-computed JSON
 
 Plans:
-- [ ] 01-01-PLAN.md — TypeScript interfaces for all classification data shapes
+- [x] 01-01-PLAN.md — TypeScript interfaces for all classification data shapes
 - [ ] 01-02-PLAN.md — classify-provisions.ts script (rule-based classification agent)
 - [ ] 01-03-PLAN.md — build-provisions.ts script, enhanced build-ftc-data.ts, npm scripts
 - [ ] 01-04-PLAN.md — Run classification, build pipeline, verify distribution and spot-check
@@ -89,7 +89,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Data Pipeline | 0/4 | Planned | - |
+| 1. Data Pipeline | 1/4 | In Progress | - |
 | 2. Tab Shell + Analytics | 0/TBD | Not started | - |
 | 3. Provisions Library | 0/TBD | Not started | - |
 | 4. Company & Industry View | 0/TBD | Not started | - |
