@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-24)
 ## Current Position
 
 Phase: 5 of 5 (Cross-Case Patterns)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In Progress
-Last activity: 2026-02-25 — Completed 05-01-PLAN.md (Pattern detection pipeline)
+Last activity: 2026-02-25 — Completed 05-02-PLAN.md (Pattern browser UI)
 
-Progress: [███████████████████░] 95%
+Progress: [████████████████████] 97%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 19
+- Total plans completed: 20
 - Average duration: 3 min
-- Total execution time: 0.98 hours
+- Total execution time: 1.03 hours
 
 **By Phase:**
 
@@ -31,10 +31,10 @@ Progress: [███████████████████░] 95%
 | 02-tab-shell-analytics | 5 | 9 min | 2 min |
 | 03-provisions-library | 5 | 14 min | 3 min |
 | 04-company-industry-view | 4 | 11 min | 3 min |
-| 05-cross-case-patterns | 1 | 3 min | 3 min |
+| 05-cross-case-patterns | 2 | 6 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (4 min), 04-02 (3 min), 04-03 (3 min), 04-04 (1 min), 05-01 (3 min)
+- Last 5 plans: 04-02 (3 min), 04-03 (3 min), 04-04 (1 min), 05-01 (3 min), 05-02 (3 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -108,6 +108,9 @@ Recent decisions affecting current work:
 - [Phase 05]: Prefix merge absorbs orphan groups (<3 cases) into parents; groups independently meeting 3+ cases remain separate
 - [Phase 05]: Pattern name is most common original title variant (no curated mapping needed)
 - [Phase 05]: Verbatim text capped at 30 most recent variants per pattern; older variants get 300-char text_preview only
+- [Phase 05]: diff v8.0.3 ships own TypeScript types -- @types/diff not needed
+- [Phase 05]: VariantCard defaults to text_preview with on-demand full text and diff toggle -- avoids performance issues with many expanded variants
+- [Phase 05]: PatternTimeline paginates at 15 variants; PatternRow uses Radix Collapsible; only one pattern expanded at a time
 
 ### Pending Todos
 
@@ -123,5 +126,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Completed 05-01-PLAN.md (Pattern detection pipeline)
+Stopped at: Completed 05-02-PLAN.md (Pattern browser UI)
 Resume file: None

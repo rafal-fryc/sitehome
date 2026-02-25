@@ -33,8 +33,8 @@
 ### Cross-Case Patterns
 
 - [x] **PATN-01**: Build pipeline detects provisions with identical or near-identical titles across different consent orders
-- [ ] **PATN-02**: User can view pattern groups showing how specific provision language (e.g., "comprehensive security program") appears across multiple cases
-- [ ] **PATN-03**: Pattern timeline shows chronological evolution of recurring provision language
+- [x] **PATN-02**: User can view pattern groups showing how specific provision language (e.g., "comprehensive security program") appears across multiple cases
+- [x] **PATN-03**: Pattern timeline shows chronological evolution of recurring provision language
 - [x] **PATN-04**: Structural/boilerplate provisions (monitoring, recordkeeping, acknowledgment) are excluded from pattern analysis or clearly labeled
 
 ### Analytics & Trends
@@ -115,8 +115,8 @@
 | PROV-09 | Phase 3 | Complete |
 | PROV-10 | Phase 3 | Complete |
 | PATN-01 | Phase 5 | Complete |
-| PATN-02 | Phase 5 | Pending |
-| PATN-03 | Phase 5 | Pending |
+| PATN-02 | Phase 5 | Complete |
+| PATN-03 | Phase 5 | Complete |
 | PATN-04 | Phase 5 | Complete |
 | ANLY-01 | Phase 2 | Complete |
 | ANLY-02 | Phase 2 | Complete |
