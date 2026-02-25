@@ -27,7 +27,7 @@
 - [x] **PROV-06**: User can filter provisions within a topic by company name
 - [x] **PROV-07**: User can filter provisions within a topic by remedy type
 - [x] **PROV-08**: User can sort provisions by date, company, or provision type
-- [ ] **PROV-09**: User can search across all provisions using text search (MiniSearch)
+- [x] **PROV-09**: User can search across all provisions using text search (MiniSearch)
 - [x] **PROV-10**: Provisions library displays total count of matching provisions and cases
 
 ### Cross-Case Patterns
@@ -112,7 +112,7 @@
 | PROV-06 | Phase 3 | Complete |
 | PROV-07 | Phase 3 | Complete |
 | PROV-08 | Phase 3 | Complete |
-| PROV-09 | Phase 3 | Pending |
+| PROV-09 | Phase 3 | Complete |
 | PROV-10 | Phase 3 | Complete |
 | PATN-01 | Phase 5 | Pending |
 | PATN-02 | Phase 5 | Pending |

@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-24)
 ## Current Position
 
 Phase: 3 of 5 (Provisions Library)
-Plan: 3 of 5 in current phase
+Plan: 4 of 5 in current phase
 Status: Executing Phase 3
-Last activity: 2026-02-24 — Completed 03-03-PLAN.md (Filter bar with date range, company, remedy type filters and sorting)
+Last activity: 2026-02-24 — Completed 03-04-PLAN.md (Full-text search with MiniSearch, scope toggle, highlighting, and cross-topic results)
 
-Progress: [████████████░░░░░░░░] 60%
+Progress: [█████████████░░░░░░░] 65%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
+- Total plans completed: 13
 - Average duration: 3 min
-- Total execution time: 0.65 hours
+- Total execution time: 0.72 hours
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: [████████████░░░░░░░░] 60%
 |-------|-------|-------|----------|
 | 01-data-pipeline | 4 | 23 min | 6 min |
 | 02-tab-shell-analytics | 5 | 9 min | 2 min |
-| 03-provisions-library | 3 | 9 min | 3 min |
+| 03-provisions-library | 4 | 13 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-04 (2 min), 02-05 (1 min), 03-01 (3 min), 03-02 (3 min), 03-03 (3 min)
+- Last 5 plans: 02-05 (1 min), 03-01 (3 min), 03-02 (3 min), 03-03 (3 min), 03-04 (4 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -84,6 +84,11 @@ Recent decisions affecting current work:
 - [Phase 3, Plan 03]: Sort defaults to date descending; switching sort key sets default direction (date=desc, company/type=asc); clicking same key flips direction
 - [Phase 3, Plan 03]: All filters reset on topic change to prevent stale empty results (per research Pitfall 3)
 - [Phase 3, Plan 03]: Remedy type multi-select uses Popover + Checkbox list pattern since shadcn Select is single-select only
+- [Phase 3, Plan 04]: MiniSearch indexes title (boosted 2x), summary, and verbatim_text with prefix and fuzzy matching
+- [Phase 3, Plan 04]: Composite ID case_id__provision_number used for deduplication across shards and search result matching
+- [Phase 3, Plan 04]: Search applied before other filters (date, company, remedy) so filters narrow search results
+- [Phase 3, Plan 04]: Cross-topic search uses useQueries to load all shards in parallel with progress indicator
+- [Phase 3, Plan 04]: Search query persisted in URL via q param for shareability; scope via scope param
 
 ### Pending Todos
 
@@ -99,5 +104,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 03-03-PLAN.md (Filter bar with date range, company, remedy type filters, sorting, and filter chips)
+Stopped at: Completed 03-04-PLAN.md (Full-text search with MiniSearch, scope toggle, highlighting, and cross-topic results)
 Resume file: None
