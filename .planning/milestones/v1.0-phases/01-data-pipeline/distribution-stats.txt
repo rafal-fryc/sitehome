@@ -1,0 +1,172 @@
+FTC Enforcement Provisions Library - Distribution Statistics
+Generated: 2026-02-24
+Pipeline: Claude Code agents (Opus 4.6 reasoning) -> merge-classifications.ts -> build-ftc-data.ts -> build-provisions.ts
+
+================================================================================
+a. STATUTORY TOPIC DISTRIBUTION (from ftc-cases.json, 285 unique cases)
+================================================================================
+  Topic                         Cases   Notes
+  ----------------------------- ------  -----
+  Section 5 Only                  177   Most common (generic FTC Act enforcement)
+  FCRA                             46   Fair Credit Reporting Act
+  COPPA                            36   Children's Online Privacy Protection
+  GLBA                             24   Gramm-Leach-Bliley Act
+  Health Breach Notification        6   Health Breach Notification Rule
+  TSR                               5   Telemarketing Sales Rule
+  CAN-SPAM                          1   CAN-SPAM Act
+  TCPA                              0   (No TCPA-specific cases in dataset)
+
+  NOTE: Section 5 Only is expected to dominate — the majority of FTC privacy
+  and data security enforcement uses Section 5 alone without a named statute.
+
+================================================================================
+b. PRACTICE AREA DISTRIBUTION (from ftc-cases.json, case-level)
+================================================================================
+  Practice Area                                  Cases   % of cases
+  ---------------------------------------------- ------  ----------
+  Privacy                                          152     53.3%
+  Data Security                                     88     30.9%
+  Financial Practices                               54     18.9%
+  Surveillance                                      28      9.8%
+  Deceptive Design / Dark Patterns                  12      4.2%
+  Other                                              9      3.2%
+  AI / Automated Decision-Making                     5      1.8%
+  Telemarketing                                      4      1.4%
+
+  NOTE: Cases can have multiple practice areas. No single area is >60%.
+
+  PROVISION-LEVEL DISTRIBUTION (from shard files):
+  Practice Area                                Provisions    % of unique
+  ---------------------------------------------- ----------  ----------
+  pa-privacy                                      1,379       49.5%
+  pa-data-security                                  804       28.9%
+  pa-financial-practices                            403       14.5%
+  pa-surveillance                                   104        3.7%
+  pa-other                                           87        3.1%
+  pa-deceptive-design-dark-patterns                  59        2.1%
+  pa-ai-automated-decision-making                    39        1.4%
+  pa-telemarketing                                   34        1.2%
+
+  Privacy at 49.5% of provisions — under 60% threshold but higher than the
+  rule-based 36.3%. The LLM classification is more aggressive in tagging
+  provisions that mention privacy-adjacent concepts. Monitor in Phase 2 UI.
+
+================================================================================
+c. REMEDY TYPE DISTRIBUTION (from ftc-cases.json)
+================================================================================
+  Remedy Type                             Cases
+  --------------------------------------- ------
+  Other                                     282
+  Compliance Monitoring                     274
+  Recordkeeping                             270
+  Prohibition                               267
+  Monetary Penalty                          111
+  Third-Party Assessment                     99
+  Comprehensive Security Program             95
+  Data Deletion                              80
+  Algorithmic Destruction                     3
+  Biometric Ban                               2
+
+  NOTE: Other/Compliance Monitoring/Recordkeeping/Prohibition are structural
+  provisions present in nearly every consent order. Substantive remedy types
+  show meaningful variation.
+
+================================================================================
+d. INDUSTRY SECTOR DISTRIBUTION (from ftc-cases.json)
+================================================================================
+  Sector                  Cases
+  ----------------------- ------
+  Technology                146
+  Financial Services         59
+  Retail                     44
+  Healthcare                 30
+  Other                      23
+  Social Media               16
+  Education                   8
+  Telecom                     7
+
+  NOTE: Technology is the largest sector at 51% of cases. Less over-assigned
+  than the rule-based approach (which had 72% Technology) — the LLM better
+  distinguishes companies that use technology from tech companies.
+
+================================================================================
+e. SHARD FILE SIZES
+================================================================================
+  File                                                        Size (KB)
+  ---------------------------------------------------------- ----------
+  can-spam-provisions.json                                       15.3
+  coppa-provisions.json                                         520.0
+  fcra-provisions.json                                          447.5
+  glba-provisions.json                                          295.6
+  health-breach-notification-provisions.json                    114.9
+  pa-ai-automated-decision-making-provisions.json                40.4
+  pa-data-security-provisions.json                              820.6
+  pa-deceptive-design-dark-patterns-provisions.json              66.5
+  pa-financial-practices-provisions.json                        449.1
+  pa-other-provisions.json                                       87.1
+  pa-privacy-provisions.json                                  1,421.1
+  pa-surveillance-provisions.json                                98.8
+  pa-telemarketing-provisions.json                               41.0
+  section-5-only-provisions.json                              1,523.2
+  tsr-provisions.json                                            81.2
+
+  Total shard files: 15
+  Largest shards: ~1.5 MB each (section-5-only, pa-privacy)
+  No shard exceeds 2 MB threshold — no sub-sharding needed for Phase 2.
+
+================================================================================
+f. CLASSIFICATION COMPLETENESS
+================================================================================
+  Source files with statutory_topics:    293 / 293 (100%)
+  Cases in ftc-cases.json:              285 (after dedup by docket_number)
+  Cases with statutory_topics:          285 / 285 (100%)
+  Cases with industry_sectors:          285 / 285 (100%)
+  Unique provisions processed:          2,783
+  Total provisions across shards:       5,782 (multi-tagged provisions counted per shard)
+
+  Classification method: Claude Code agents (Opus 4.6) classifying in 6
+  parallel batches. Each agent read extracted case fields (company info,
+  legal_authority, business_description, complaint counts, factual background,
+  provision details) and applied reasoning-based classification.
+
+================================================================================
+g. COMPARISON: LLM vs RULE-BASED CLASSIFICATION
+================================================================================
+  Metric                          LLM (Opus)    Rule-based    Notes
+  ------------------------------- ----------    ----------    -----
+  Section 5 Only cases            177           179           ~same
+  FCRA cases                      46            53            LLM less aggressive
+  COPPA cases                     36            37            ~same
+  GLBA cases                      24            18            LLM found 6 more
+  Health Breach Notification      6             2             LLM found 4 more
+  Technology sector               146 (51%)     205 (72%)     LLM less over-assigned
+  Financial Services sector       59 (21%)      122 (43%)     LLM less over-assigned
+  Surveillance practice area      28 cases      ~5 cases      LLM much better detection
+  Privacy provision %             49.5%         36.3%         LLM slightly higher
+  Algorithmic Destruction         3             0             LLM found 3 cases
+  Biometric Ban                   2             3             Similar
+
+  Key differences: LLM classification shows better nuance in industry sector
+  assignment (fewer false positives from keyword matching), better detection of
+  niche categories (Health Breach Notification, Surveillance, Algorithmic
+  Destruction), and less over-assignment of broad categories (Technology,
+  Financial Services).
+
+================================================================================
+PIPE-06 STATUS
+================================================================================
+PIPE-06 (ftc-patterns.json): DEFERRED to Phase 5 per CONTEXT.md decision.
+No pattern detection runs in Phase 1.
+
+================================================================================
+BACKWARD COMPATIBILITY
+================================================================================
+Both old and new fields present on case objects in ftc-cases.json:
+  - categories (old): present on all 285 cases
+  - statutory_topics (new): present on all 285 cases
+  - practice_areas (new): present on all 285 cases
+  - industry_sectors (new): present on all 285 cases
+  - remedy_types (new): present on all 285 cases
+  - provision_counts_by_topic (new): present on all 285 cases
+
+The existing FTC analytics page reads the categories field, which is preserved.
