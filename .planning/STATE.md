@@ -5,33 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-02-24)
 
 **Core value:** A legal practitioner can find every FTC consent order provision relevant to a specific topic, with exact paragraph-level citations and source links, in under 30 seconds.
-**Current focus:** Phase 2 — Tab Shell + Analytics
+**Current focus:** Phase 3 — Provisions Library
 
 ## Current Position
 
-Phase: 2 of 5 (Tab Shell + Analytics)
-Plan: 5 of 5 in current phase
-Status: Executing
-Last activity: 2026-02-24 — Completed 02-04-PLAN.md (Topic trend lines, provision analytics, violation breakdown)
+Phase: 3 of 5 (Provisions Library)
+Plan: 0 of TBD in current phase
+Status: Phase 2 complete, Phase 3 not yet planned
+Last activity: 2026-02-24 — Completed 02-05-PLAN.md (Analytics dashboard assembly with visual verification)
 
-Progress: [████████░░] 45%
+Progress: [█████████░] 50%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: 4 min
-- Total execution time: 0.47 hours
+- Total plans completed: 9
+- Average duration: 3 min
+- Total execution time: 0.5 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-data-pipeline | 4 | 23 min | 6 min |
-| 02-tab-shell-analytics | 4 | 8 min | 2 min |
+| 02-tab-shell-analytics | 5 | 9 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-04 (15 min), 02-01 (2 min), 02-02 (2 min), 02-03 (2 min), 02-04 (2 min)
+- Last 5 plans: 02-01 (2 min), 02-02 (2 min), 02-03 (2 min), 02-04 (2 min), 02-05 (1 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -68,6 +68,8 @@ Recent decisions affecting current work:
 - [Phase 2, Plan 04]: TopicTrendLines uses explicit 0 values for years with no cases for a topic, ensuring continuous lines without misleading jumps
 - [Phase 2, Plan 04]: ProvisionAnalytics aggregates remedy_types and provision_counts_by_topic from EnhancedFTCCaseSummary for provision-level analytics
 - [Phase 2, Plan 04]: ViolationBreakdown refactored from ViolationDonut with added reference table showing count and percentage per type
+- [Phase 2, Plan 05]: Old grouping views fully replaced by 5 dedicated analytics sections -- FTCGroupingSelector, FTCGroupChart, FTCGroupList, FTCGroupDetail, FTCOverviewStats, ViolationDonut all removed
+- [Phase 2, Plan 05]: Analytics layout: flex container with sticky sidebar left + space-y-12 content stack right, mobile collapse handled by FTCSectionSidebar internally
 
 ### Pending Todos
 
@@ -83,5 +85,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 02-04-PLAN.md (Topic trend lines, provision analytics, violation breakdown)
+Stopped at: Completed 02-05-PLAN.md (Analytics dashboard assembly -- Phase 2 complete)
 Resume file: None
