@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Data Pipeline** - Extend the offline build script to classify all provisions and emit the static JSON artifacts the entire UI depends on (completed 2026-02-24)
 - [x] **Phase 2: Tab Shell + Analytics** - Establish tabbed page architecture and extend analytics with topic-over-time and provision-level charts (completed 2026-02-24)
 - [x] **Phase 3: Provisions Library** - Build the core topic-first browsing experience with exact citations, filter bar, and text search (completed 2026-02-25)
-- [ ] **Phase 4: Company & Industry View** - Add industry sector browsing showing how enforcement patterns vary across sectors
+- [x] **Phase 4: Company & Industry View** - Add industry sector browsing showing how enforcement patterns vary across sectors (completed 2026-02-25)
 - [ ] **Phase 5: Cross-Case Patterns** - Surface recurring provision language and its evolution across enforcement eras
 
 ## Phase Details
@@ -112,5 +112,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Data Pipeline | 3/4 | Complete    | 2026-02-24 |
 | 2. Tab Shell + Analytics | 5/5 | Complete    | 2026-02-24 |
 | 3. Provisions Library | 5/5 | Complete    | 2026-02-25 |
-| 4. Company & Industry View | 0/4 | Not started | - |
+| 4. Company & Industry View | 0/4 | Complete    | 2026-02-25 |
 | 5. Cross-Case Patterns | 0/TBD | Not started | - |
