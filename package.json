@@ -12,7 +12,8 @@
     "build:ftc-data": "npx tsx scripts/build-ftc-data.ts",
     "build:classify": "npx tsx scripts/classify-provisions.ts",
     "build:provisions": "npx tsx scripts/build-provisions.ts",
-    "build:data": "npm run build:ftc-data && npm run build:provisions"
+    "build:patterns": "npx tsx scripts/build-patterns.ts",
+    "build:data": "npm run build:ftc-data && npm run build:provisions && npm run build:patterns"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

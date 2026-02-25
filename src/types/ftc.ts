@@ -166,3 +166,39 @@ export interface ProvisionsManifest {
   total_cases: number;
   topics: Record<string, ManifestTopic>;
 }
+
+// Phase 5: Cross-Case Patterns — Pattern data types
+
+export interface PatternVariant {
+  case_id: string;
+  company_name: string;
+  date_issued: string;
+  year: number;
+  provision_number: string;
+  title: string;
+  text_preview: string;
+  verbatim_text: string;
+  docket_number: string;
+  ftc_url?: string;
+  administration: string;
+}
+
+export interface PatternGroup {
+  id: string;
+  name: string;
+  is_structural: boolean;
+  case_count: number;
+  variant_count: number;
+  year_range: [number, number];
+  most_recent_year: number;
+  enforcement_topics: string[];
+  practice_areas: string[];
+  variants: PatternVariant[];
+}
+
+export interface PatternsFile {
+  generated_at: string;
+  total_patterns: number;
+  total_variants: number;
+  patterns: PatternGroup[];
+}
