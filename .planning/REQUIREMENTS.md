@@ -45,7 +45,7 @@
 - [ ] **ANLY-04**: Administration comparison view showing enforcement patterns side-by-side between administrations
 - [ ] **ANLY-05**: Detailed reference tables with case counts, provision counts, and breakdowns accompanying each chart
 - [ ] **ANLY-06**: Combined chart + table views — charts for visual overview, tables for drill-down
-- [ ] **ANLY-07**: Violation type breakdown (deceptive vs unfair vs both) maintained from existing analytics
+- [x] **ANLY-07**: Violation type breakdown (deceptive vs unfair vs both) maintained from existing analytics
 - [ ] **ANLY-08**: Provision-level analytics showing counts by remedy type, topic, and category
 
 ### Company & Industry View
@@ -56,11 +56,11 @@
 
 ### Navigation & UX
 
-- [ ] **NAVX-01**: Tab navigation between Analytics, Provisions Library, and Patterns views under single FTC route
-- [ ] **NAVX-02**: URL-driven state via search params for active tab, selected topic, active filters
-- [ ] **NAVX-03**: Maintains law-library aesthetic (EB Garamond, cream/gold/dark-green palette)
-- [ ] **NAVX-04**: Performs smoothly with 293 cases and thousands of provisions in-browser
-- [ ] **NAVX-05**: OCR extraction quality disclosure where applicable — sourced text presented with appropriate caveat
+- [x] **NAVX-01**: Tab navigation between Analytics, Provisions Library, and Patterns views under single FTC route
+- [x] **NAVX-02**: URL-driven state via search params for active tab, selected topic, active filters
+- [x] **NAVX-03**: Maintains law-library aesthetic (EB Garamond, cream/gold/dark-green palette)
+- [x] **NAVX-04**: Performs smoothly with 293 cases and thousands of provisions in-browser
+- [x] **NAVX-05**: OCR extraction quality disclosure where applicable — sourced text presented with appropriate caveat
 
 ## v2 Requirements
 
@@ -124,16 +124,16 @@
 | ANLY-04 | Phase 2 | Pending |
 | ANLY-05 | Phase 2 | Pending |
 | ANLY-06 | Phase 2 | Pending |
-| ANLY-07 | Phase 2 | Pending |
+| ANLY-07 | Phase 2 | Complete |
 | ANLY-08 | Phase 2 | Pending |
 | INDY-01 | Phase 4 | Pending |
 | INDY-02 | Phase 4 | Pending |
 | INDY-03 | Phase 4 | Pending |
-| NAVX-01 | Phase 2 | Pending |
-| NAVX-02 | Phase 2 | Pending |
-| NAVX-03 | Phase 2 | Pending |
-| NAVX-04 | Phase 2 | Pending |
-| NAVX-05 | Phase 2 | Pending |
+| NAVX-01 | Phase 2 | Complete |
+| NAVX-02 | Phase 2 | Complete |
+| NAVX-03 | Phase 2 | Complete |
+| NAVX-04 | Phase 2 | Complete |
+| NAVX-05 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 39 total

@@ -5,33 +5,34 @@
 See: .planning/PROJECT.md (updated 2026-02-24)
 
 **Core value:** A legal practitioner can find every FTC consent order provision relevant to a specific topic, with exact paragraph-level citations and source links, in under 30 seconds.
-**Current focus:** Phase 1 — Data Pipeline
+**Current focus:** Phase 2 — Tab Shell + Analytics
 
 ## Current Position
 
-Phase: 1 of 5 (Data Pipeline)
-Plan: 4 of 4 in current phase
-Status: Executing — awaiting phase verification
-Last activity: 2026-02-24 — Completed 01-04-PLAN.md (Run pipeline & verify output)
+Phase: 2 of 5 (Tab Shell + Analytics)
+Plan: 1 of 5 in current phase
+Status: Executing
+Last activity: 2026-02-24 — Completed 02-01-PLAN.md (Tab shell with URL-driven state, page restructure, placeholder tabs)
 
-Progress: [████░░░░░░] 20%
+Progress: [█████░░░░░] 28%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
+- Total plans completed: 5
 - Average duration: 5 min
-- Total execution time: 0.33 hours
+- Total execution time: 0.37 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-data-pipeline | 4 | 23 min | 6 min |
+| 02-tab-shell-analytics | 1 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min), 01-02 (4 min), 01-03 (4 min), 01-04 (15 min)
-- Trend: Stable (01-04 longer due to 293-file classification)
+- Last 5 plans: 01-02 (4 min), 01-03 (4 min), 01-04 (15 min), 02-01 (2 min)
+- Trend: Stable
 
 *Updated after each plan completion*
 
@@ -54,6 +55,10 @@ Recent decisions affecting current work:
 - [Phase 1, Plan 04]: Classification done by Claude Code agents (Opus 4.6) not API script — ANTHROPIC_API_KEY not available in shell, but agents classify directly
 - [Phase 1, Plan 04]: Privacy provision % at 49.5% — under 60% threshold, monitor in Phase 2
 - [Phase 1, Plan 04]: PIPE-06 (ftc-patterns.json) formally deferred to Phase 5
+- [Phase 2, Plan 01]: FTCTabShell owns useFTCData() and passes data to FTCAnalyticsTab as props — avoids duplicate fetches
+- [Phase 2, Plan 01]: Tab-specific URL params (mode, group) cleared on tab switch to prevent stale state
+- [Phase 2, Plan 01]: Default analytics tab omits ?tab= param from URL for cleaner default links
+- [Phase 2, Plan 01]: FTCAnalyticsTab merges mode/group params with existing searchParams to preserve tab param
 
 ### Pending Todos
 
@@ -69,5 +74,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 01-04-PLAN.md (Run pipeline & verify output — all 293 files classified, human approved)
+Stopped at: Completed 02-01-PLAN.md (Tab shell with URL-driven state, page restructure, placeholder tabs)
 Resume file: None

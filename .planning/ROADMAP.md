@@ -51,7 +51,7 @@ Plans:
   5. The law-library aesthetic (EB Garamond, cream/gold/dark-green palette) is consistent across all new and modified components
 
 Plans:
-- [ ] 02-01-PLAN.md — Tab shell with URL-driven state, page restructure, placeholder tabs
+- [x] 02-01-PLAN.md — Tab shell with URL-driven state, page restructure, placeholder tabs
 - [ ] 02-02-PLAN.md — Shared infrastructure: section sidebar, analytics summary, expandable reference table
 - [ ] 02-03-PLAN.md — Enforcement by Year and by Administration chart+table sections
 - [ ] 02-04-PLAN.md — Topic trend lines, provision analytics, violation breakdown sections
@@ -97,7 +97,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Data Pipeline | 3/4 | Complete    | 2026-02-24 |
-| 2. Tab Shell + Analytics | 0/5 | Not started | - |
+| 2. Tab Shell + Analytics | 1/5 | In Progress | - |
 | 3. Provisions Library | 0/TBD | Not started | - |
 | 4. Company & Industry View | 0/TBD | Not started | - |
 | 5. Cross-Case Patterns | 0/TBD | Not started | - |
