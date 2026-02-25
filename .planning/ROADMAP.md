@@ -52,9 +52,9 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md — Tab shell with URL-driven state, page restructure, placeholder tabs
-- [ ] 02-02-PLAN.md — Shared infrastructure: section sidebar, analytics summary, expandable reference table
-- [ ] 02-03-PLAN.md — Enforcement by Year and by Administration chart+table sections
-- [ ] 02-04-PLAN.md — Topic trend lines, provision analytics, violation breakdown sections
+- [x] 02-02-PLAN.md — Shared infrastructure: section sidebar, analytics summary, expandable reference table
+- [x] 02-03-PLAN.md — Enforcement by Year and by Administration chart+table sections
+- [x] 02-04-PLAN.md — Topic trend lines, provision analytics, violation breakdown sections
 - [ ] 02-05-PLAN.md — Final assembly: compose all sections into analytics tab + visual checkpoint
 
 ### Phase 3: Provisions Library
@@ -97,7 +97,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Data Pipeline | 3/4 | Complete    | 2026-02-24 |
-| 2. Tab Shell + Analytics | 1/5 | In Progress | - |
+| 2. Tab Shell + Analytics | 4/5 | In Progress | - |
 | 3. Provisions Library | 0/TBD | Not started | - |
 | 4. Company & Industry View | 0/TBD | Not started | - |
 | 5. Cross-Case Patterns | 0/TBD | Not started | - |
