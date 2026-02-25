@@ -1,3 +1,25 @@
+import type { RemedyType } from "@/types/ftc";
+
+export const DATE_PRESETS = [
+  { label: "Last 5 years", start: "2021-01-01", end: "2026-12-31" },
+  { label: "Obama era", start: "2009-01-20", end: "2017-01-20" },
+  { label: "Trump era", start: "2017-01-20", end: "2021-01-20" },
+  { label: "Biden era", start: "2021-01-20", end: "2025-01-20" },
+] as const;
+
+export const REMEDY_TYPE_OPTIONS: RemedyType[] = [
+  "Monetary Penalty",
+  "Data Deletion",
+  "Comprehensive Security Program",
+  "Third-Party Assessment",
+  "Algorithmic Destruction",
+  "Biometric Ban",
+  "Compliance Monitoring",
+  "Recordkeeping",
+  "Prohibition",
+  "Other",
+];
+
 export const ADMINISTRATIONS: { label: string; start: string; end: string }[] = [
   { label: "Clinton", start: "1993-01-20", end: "2001-01-20" },
   { label: "G.W. Bush", start: "2001-01-20", end: "2009-01-20" },
