@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-24)
 ## Current Position
 
 Phase: 3 of 5 (Provisions Library)
-Plan: 1 of 5 in current phase
+Plan: 2 of 5 in current phase
 Status: Executing Phase 3
-Last activity: 2026-02-24 — Completed 03-01-PLAN.md (Provision pipeline enhancement with verbatim text, remedy shards, manifest)
+Last activity: 2026-02-24 — Completed 03-02-PLAN.md (Core provisions browsing with sidebar, cards, pagination)
 
-Progress: [██████████░░░░░░░░░░] 52%
+Progress: [███████████░░░░░░░░░] 57%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
+- Total plans completed: 11
 - Average duration: 3 min
-- Total execution time: 0.55 hours
+- Total execution time: 0.60 hours
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: [██████████░░░░░░░░░░] 52%
 |-------|-------|-------|----------|
 | 01-data-pipeline | 4 | 23 min | 6 min |
 | 02-tab-shell-analytics | 5 | 9 min | 2 min |
-| 03-provisions-library | 1 | 3 min | 3 min |
+| 03-provisions-library | 2 | 6 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (2 min), 02-03 (2 min), 02-04 (2 min), 02-05 (1 min), 03-01 (3 min)
+- Last 5 plans: 02-03 (2 min), 02-04 (2 min), 02-05 (1 min), 03-01 (3 min), 03-02 (3 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -75,6 +75,11 @@ Recent decisions affecting current work:
 - [Phase 3, Plan 01]: violation_type sourced from case_info.violation_type (per-case, not per-provision) -- 100% coverage, minimal size overhead
 - [Phase 3, Plan 01]: Remedy-type shards use rt- prefix (matching pa- prefix pattern for practice areas)
 - [Phase 3, Plan 01]: manifest.json includes human-readable labels, shard filenames, counts, and category classification for all 25 topics
+- [Phase 3, Plan 02]: TopicSidebar groups topics alphabetically within each category using manifest.topics category field
+- [Phase 3, Plan 02]: ProvisionCard shows full verbatim_text with whitespace-pre-line, falls back to summary with (summary) label
+- [Phase 3, Plan 02]: ProvisionsContent paginates at 50 provisions per page with ellipsis-based page numbers
+- [Phase 3, Plan 02]: Default sort is date descending (most recent first) per research recommendation
+- [Phase 3, Plan 02]: useProvisionShard fetches by shard filename from manifest -- avoids hardcoded shard filename map
 
 ### Pending Todos
 
@@ -90,5 +95,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 03-01-PLAN.md (Provision pipeline enhancement -- verbatim text, remedy shards, manifest)
+Stopped at: Completed 03-02-PLAN.md (Core provisions browsing -- sidebar, cards, pagination, URL-driven topic selection)
 Resume file: None
