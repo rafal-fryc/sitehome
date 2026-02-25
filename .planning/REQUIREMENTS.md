@@ -51,8 +51,8 @@
 ### Company & Industry View
 
 - [x] **INDY-01**: User can browse enforcement actions by industry sector (tech, health, retail, financial services, etc.)
-- [ ] **INDY-02**: Industry view shows how enforcement patterns (topics, remedy types) vary across sectors
-- [ ] **INDY-03**: Individual case cards within industry view show company details, provision summaries, and links to full provisions
+- [x] **INDY-02**: Industry view shows how enforcement patterns (topics, remedy types) vary across sectors
+- [x] **INDY-03**: Individual case cards within industry view show company details, provision summaries, and links to full provisions
 
 ### Navigation & UX
 
@@ -127,8 +127,8 @@
 | ANLY-07 | Phase 2 | Complete |
 | ANLY-08 | Phase 2 | Complete |
 | INDY-01 | Phase 4 | Complete |
-| INDY-02 | Phase 4 | Pending |
-| INDY-03 | Phase 4 | Pending |
+| INDY-02 | Phase 4 | Complete |
+| INDY-03 | Phase 4 | Complete |
 | NAVX-01 | Phase 2 | Complete |
 | NAVX-02 | Phase 2 | Complete |
 | NAVX-03 | Phase 2 | Complete |

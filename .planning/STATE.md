@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-24)
 ## Current Position
 
 Phase: 4 of 5 (Company & Industry View)
-Plan: 1 of 4 in current phase
+Plan: 2 of 4 in current phase
 Status: Executing
-Last activity: 2026-02-25 — Completed 04-01-PLAN.md (Industries tab & sector grid)
+Last activity: 2026-02-25 — Completed 04-02-PLAN.md (Sector detail view)
 
-Progress: [███████████████░░░░░] 75%
+Progress: [████████████████░░░░] 80%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 15
+- Total plans completed: 16
 - Average duration: 3 min
-- Total execution time: 0.81 hours
+- Total execution time: 0.86 hours
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Progress: [███████████████░░░░░] 75%
 | 01-data-pipeline | 4 | 23 min | 6 min |
 | 02-tab-shell-analytics | 5 | 9 min | 2 min |
 | 03-provisions-library | 5 | 14 min | 3 min |
-| 04-company-industry-view | 1 | 4 min | 4 min |
+| 04-company-industry-view | 2 | 7 min | 4 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (3 min), 03-03 (3 min), 03-04 (4 min), 03-05 (1 min), 04-01 (4 min)
+- Last 5 plans: 03-03 (3 min), 03-04 (4 min), 03-05 (1 min), 04-01 (4 min), 04-02 (3 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -96,6 +96,9 @@ Recent decisions affecting current work:
 - [Phase 04]: Subsector display shows General for most cases -- acceptable per research; future pipeline enhancement can add business_description
 - [Phase 04]: Compare functionality wired at UI level with checkbox selection and sticky bar; compare view placeholder for Plan 03
 - [Phase 04]: SectorStats aggregated in FTCIndustryTab parent and passed to SectorGrid/SectorCard to avoid recomputation
+- [Phase 04]: handleViewProvisions navigates to ?tab=provisions landing page -- no case-level filter in Provisions Library
+- [Phase 04]: CaseCardList topic filter uses multi-select Popover+Checkbox pattern matching ProvisionFilterBar
+- [Phase 04]: getPageNumbers helper duplicated in CaseCardList rather than extracting shared utility -- keeps components self-contained
 
 ### Pending Todos
 
@@ -111,5 +114,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Completed 04-01-PLAN.md (Industries tab & sector grid)
+Stopped at: Completed 04-02-PLAN.md (Sector detail view)
 Resume file: None
