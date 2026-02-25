@@ -119,6 +119,8 @@ export interface ProvisionRecord {
   title: string;
   category: string;
   summary: string;
+  verbatim_text: string;
+  violation_type: "deceptive" | "unfair" | "both" | "";
   statutory_topics: StatutoryTopic[];
   practice_areas: PracticeArea[];
   remedy_types: RemedyType[];
@@ -147,4 +149,20 @@ export interface EnhancedFTCCaseSummary extends FTCCaseSummary {
   industry_sectors: IndustrySector[];
   remedy_types: RemedyType[];
   provision_counts_by_topic: Record<string, number>;
+}
+
+// Phase 3: Provisions Library — Manifest types
+
+export interface ManifestTopic {
+  count: number;
+  shard: string;
+  category: "statutory" | "practice_area" | "remedy_type";
+  label: string;
+}
+
+export interface ProvisionsManifest {
+  generated_at: string;
+  total_provisions: number;
+  total_cases: number;
+  topics: Record<string, ManifestTopic>;
 }
