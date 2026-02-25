@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-24)
 
 **Core value:** A legal practitioner can find every FTC consent order provision relevant to a specific topic, with exact paragraph-level citations and source links, in under 30 seconds.
-**Current focus:** Phase 3 Complete — Ready for Phase 4
+**Current focus:** Phase 4 — Company & Industry View
 
 ## Current Position
 
-Phase: 3 of 5 (Provisions Library) -- COMPLETE
-Plan: 5 of 5 in current phase (all complete)
-Status: Phase 3 Complete
-Last activity: 2026-02-25 — Completed 03-05-PLAN.md (Visual verification checkpoint -- all 10 PROV requirements confirmed)
+Phase: 4 of 5 (Company & Industry View)
+Plan: 1 of 4 in current phase
+Status: Executing
+Last activity: 2026-02-25 — Completed 04-01-PLAN.md (Industries tab & sector grid)
 
-Progress: [██████████████░░░░░░] 70%
+Progress: [███████████████░░░░░] 75%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 14
+- Total plans completed: 15
 - Average duration: 3 min
-- Total execution time: 0.74 hours
+- Total execution time: 0.81 hours
 
 **By Phase:**
 
@@ -30,9 +30,10 @@ Progress: [██████████████░░░░░░] 70%
 | 01-data-pipeline | 4 | 23 min | 6 min |
 | 02-tab-shell-analytics | 5 | 9 min | 2 min |
 | 03-provisions-library | 5 | 14 min | 3 min |
+| 04-company-industry-view | 1 | 4 min | 4 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (3 min), 03-02 (3 min), 03-03 (3 min), 03-04 (4 min), 03-05 (1 min)
+- Last 5 plans: 03-02 (3 min), 03-03 (3 min), 03-04 (4 min), 03-05 (1 min), 04-01 (4 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -91,6 +92,10 @@ Recent decisions affecting current work:
 - [Phase 3, Plan 04]: Search query persisted in URL via q param for shareability; scope via scope param
 - [Phase 3, Plan 05]: TopicSidebar switched from ScrollArea to native overflow-y-auto -- ScrollArea conflicts with CSS sticky positioning
 - [Phase 3, Plan 05]: All 10 PROV requirements (PROV-01 through PROV-10) verified by user visual inspection
+- [Phase 04]: classifySubsector uses company_name and categories fields (not business_description which is unavailable at runtime)
+- [Phase 04]: Subsector display shows General for most cases -- acceptable per research; future pipeline enhancement can add business_description
+- [Phase 04]: Compare functionality wired at UI level with checkbox selection and sticky bar; compare view placeholder for Plan 03
+- [Phase 04]: SectorStats aggregated in FTCIndustryTab parent and passed to SectorGrid/SectorCard to avoid recomputation
 
 ### Pending Todos
 
@@ -106,5 +111,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Completed 03-05-PLAN.md (Visual verification checkpoint -- Phase 3 complete)
+Stopped at: Completed 04-01-PLAN.md (Industries tab & sector grid)
 Resume file: None
