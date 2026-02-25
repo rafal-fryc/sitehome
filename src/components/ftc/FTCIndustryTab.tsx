@@ -1,7 +1,9 @@
 import { useMemo, useState, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import type { FTCDataPayload, EnhancedFTCCaseSummary } from "@/types/ftc";
+import { getSectorLabel } from "@/components/ftc/industry/industry-utils";
 import SectorGrid from "@/components/ftc/industry/SectorGrid";
+import SectorDetail from "@/components/ftc/industry/SectorDetail";
 
 interface Props {
   data: FTCDataPayload;
@@ -80,6 +82,29 @@ export default function FTCIndustryTab({ data }: Props) {
     }
   }, [selectedSectors, setSearchParams]);
 
+  const handleBack = useCallback(() => {
+    const newParams = new URLSearchParams();
+    newParams.set("tab", "industries");
+    setSearchParams(newParams, { replace: true });
+  }, [setSearchParams]);
+
+  const handleViewProvisions = useCallback(
+    (_caseData: EnhancedFTCCaseSummary) => {
+      const newParams = new URLSearchParams();
+      newParams.set("tab", "provisions");
+      setSearchParams(newParams);
+    },
+    [setSearchParams]
+  );
+
+  // Get cases for the selected sector (lookup by label from slug)
+  const sectorCases = useMemo(() => {
+    if (!sectorParam) return [];
+    const label = getSectorLabel(sectorParam);
+    if (!label) return [];
+    return sectorStats[label]?.cases ?? [];
+  }, [sectorParam, sectorStats]);
+
   // Route between views based on URL params
   if (compareParam) {
     return (
@@ -91,9 +116,12 @@ export default function FTCIndustryTab({ data }: Props) {
 
   if (sectorParam) {
     return (
-      <div className="py-8 text-center text-muted-foreground font-garamond">
-        Sector detail: {sectorParam}
-      </div>
+      <SectorDetail
+        sectorSlug={sectorParam}
+        cases={sectorCases}
+        onBack={handleBack}
+        onViewProvisions={handleViewProvisions}
+      />
     );
   }
 
