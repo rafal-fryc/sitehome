@@ -80,11 +80,17 @@ Plans:
 **Goal**: A legal practitioner can browse enforcement actions by industry sector and understand how enforcement patterns — topics, remedy types, enforcement intensity — differ across sectors
 **Depends on**: Phase 3
 **Requirements**: INDY-01, INDY-02, INDY-03
-**Plans**: TBD
+**Plans**: 4 plans
 **Success Criteria** (what must be TRUE):
   1. The user can select an industry sector (tech, health, retail, financial services, etc.) and see all enforcement actions classified to that sector
   2. The industry view shows a breakdown of enforcement patterns — which topics and remedy types are most common — for the selected sector, enabling comparison across sectors
   3. Each case card within the industry view shows company details, a summary of provision types, and a link to the full provisions for that case
+
+Plans:
+- [ ] 04-01-PLAN.md — Tab integration, sector taxonomy/utilities, and sector card grid landing page
+- [ ] 04-02-PLAN.md — Sector detail view with enforcement pattern charts and paginated case cards
+- [ ] 04-03-PLAN.md — Side-by-side sector comparison view
+- [ ] 04-04-PLAN.md — Visual verification checkpoint
 
 ### Phase 5: Cross-Case Patterns
 **Goal**: A legal practitioner can see how specific recurring provision language (e.g., "comprehensive security program") has evolved across enforcement eras, with a chronological timeline of variants
@@ -106,5 +112,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Data Pipeline | 3/4 | Complete    | 2026-02-24 |
 | 2. Tab Shell + Analytics | 5/5 | Complete    | 2026-02-24 |
 | 3. Provisions Library | 5/5 | Complete    | 2026-02-25 |
-| 4. Company & Industry View | 0/TBD | Not started | - |
+| 4. Company & Industry View | 0/4 | Not started | - |
 | 5. Cross-Case Patterns | 0/TBD | Not started | - |
