@@ -4,6 +4,7 @@ import type { FTCDataPayload, EnhancedFTCCaseSummary } from "@/types/ftc";
 import { getSectorLabel } from "@/components/ftc/industry/industry-utils";
 import SectorGrid from "@/components/ftc/industry/SectorGrid";
 import SectorDetail from "@/components/ftc/industry/SectorDetail";
+import SectorCompare from "@/components/ftc/industry/SectorCompare";
 
 interface Props {
   data: FTCDataPayload;
@@ -66,7 +67,7 @@ export default function FTCIndustryTab({ data }: Props) {
       const next = new Set(prev);
       if (next.has(slug)) {
         next.delete(slug);
-      } else {
+      } else if (next.size < 3) {
         next.add(slug);
       }
       return next;
@@ -105,12 +106,18 @@ export default function FTCIndustryTab({ data }: Props) {
     return sectorStats[label]?.cases ?? [];
   }, [sectorParam, sectorStats]);
 
+  const compareSectors = compareParam
+    ? compareParam.split(",").filter(Boolean)
+    : [];
+
   // Route between views based on URL params
-  if (compareParam) {
+  if (compareSectors.length > 0) {
     return (
-      <div className="py-8 text-center text-muted-foreground font-garamond">
-        Compare: {compareParam}
-      </div>
+      <SectorCompare
+        sectorSlugs={compareSectors}
+        sectorStats={sectorStats}
+        onBack={handleBack}
+      />
     );
   }
 
