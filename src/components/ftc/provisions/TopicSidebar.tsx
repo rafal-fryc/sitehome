@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
-import { ScrollArea } from "@/components/ui/scroll-area";
+
 import type { ProvisionsManifest, ManifestTopic } from "@/types/ftc";
 
 interface Props {
@@ -48,9 +48,8 @@ export default function TopicSidebar({
   return (
     <>
       {/* Desktop sidebar */}
-      <nav className="hidden lg:block sticky top-24 w-56 shrink-0 self-start">
-        <ScrollArea className="max-h-[calc(100vh-8rem)]">
-          <div className="space-y-5 pr-3">
+      <nav className="hidden lg:block sticky top-24 w-60 shrink-0 self-start max-h-[calc(100vh-8rem)] overflow-y-auto">
+        <div className="space-y-5 pr-2">
             {CATEGORY_ORDER.map(({ key, heading }) => (
               <div key={key}>
                 <h3 className="text-xs uppercase tracking-wide-label text-muted-foreground font-semibold mb-2 px-3">
@@ -82,7 +81,6 @@ export default function TopicSidebar({
               </div>
             ))}
           </div>
-        </ScrollArea>
       </nav>
 
       {/* Mobile/tablet horizontal bar */}
