@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-24)
 ## Current Position
 
 Phase: 4 of 5 (Company & Industry View)
-Plan: 2 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: Executing
-Last activity: 2026-02-25 — Completed 04-02-PLAN.md (Sector detail view)
+Last activity: 2026-02-25 — Completed 04-03-PLAN.md (Sector compare view)
 
-Progress: [████████████████░░░░] 80%
+Progress: [█████████████████░░░] 85%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 16
+- Total plans completed: 17
 - Average duration: 3 min
-- Total execution time: 0.86 hours
+- Total execution time: 0.91 hours
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Progress: [████████████████░░░░] 80%
 | 01-data-pipeline | 4 | 23 min | 6 min |
 | 02-tab-shell-analytics | 5 | 9 min | 2 min |
 | 03-provisions-library | 5 | 14 min | 3 min |
-| 04-company-industry-view | 2 | 7 min | 4 min |
+| 04-company-industry-view | 3 | 10 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-03 (3 min), 03-04 (4 min), 03-05 (1 min), 04-01 (4 min), 04-02 (3 min)
+- Last 5 plans: 03-04 (4 min), 03-05 (1 min), 04-01 (4 min), 04-02 (3 min), 04-03 (3 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -99,6 +99,9 @@ Recent decisions affecting current work:
 - [Phase 04]: handleViewProvisions navigates to ?tab=provisions landing page -- no case-level filter in Provisions Library
 - [Phase 04]: CaseCardList topic filter uses multi-select Popover+Checkbox pattern matching ProvisionFilterBar
 - [Phase 04]: getPageNumbers helper duplicated in CaseCardList rather than extracting shared utility -- keeps components self-contained
+- [Phase 04]: SectorCompare receives sectorStats from parent (same data flow as SectorGrid) -- avoids duplicate computation
+- [Phase 04]: Top companies in compare view ranked by num_provisions not case count -- provisions more meaningful for practitioner comparison
+- [Phase 04]: 3-sector selection limit enforced silently in handleToggleSelect (no toast) -- keeps UI simple
 
 ### Pending Todos
 
@@ -114,5 +117,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Completed 04-02-PLAN.md (Sector detail view)
+Stopped at: Completed 04-03-PLAN.md (Sector compare view)
 Resume file: None
