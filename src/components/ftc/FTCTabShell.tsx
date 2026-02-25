@@ -5,10 +5,11 @@ import { useFTCData } from "@/hooks/use-ftc-data";
 import FTCAnalyticsTab from "@/components/ftc/FTCAnalyticsTab";
 import FTCProvisionsTab from "@/components/ftc/FTCProvisionsTab";
 import FTCPatternsTab from "@/components/ftc/FTCPatternsTab";
+import FTCIndustryTab from "@/components/ftc/FTCIndustryTab";
 
-type FTCTab = "analytics" | "provisions" | "patterns";
+type FTCTab = "analytics" | "provisions" | "industries" | "patterns";
 
-const VALID_TABS: FTCTab[] = ["analytics", "provisions", "patterns"];
+const VALID_TABS: FTCTab[] = ["analytics", "provisions", "industries", "patterns"];
 
 export default function FTCTabShell() {
   const { data, isLoading, error } = useFTCData();
@@ -58,6 +59,7 @@ export default function FTCTabShell() {
         <TabsList className="w-full justify-start">
           <TabsTrigger value="analytics">Analytics</TabsTrigger>
           <TabsTrigger value="provisions">Provisions Library</TabsTrigger>
+          <TabsTrigger value="industries">Industries</TabsTrigger>
           <TabsTrigger value="patterns">Patterns</TabsTrigger>
         </TabsList>
 
@@ -67,6 +69,10 @@ export default function FTCTabShell() {
 
         <TabsContent value="provisions">
           <FTCProvisionsTab />
+        </TabsContent>
+
+        <TabsContent value="industries">
+          <FTCIndustryTab data={data} />
         </TabsContent>
 
         <TabsContent value="patterns">
