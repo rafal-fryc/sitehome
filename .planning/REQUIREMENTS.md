@@ -12,7 +12,7 @@
 - [x] **PIPE-03**: Build pipeline tags each provision by remedy type (Monetary Penalty, Data Deletion, Comprehensive Security Program, Third-Party Assessment, Algorithmic Destruction, Biometric Ban, Compliance Monitoring, Recordkeeping, Prohibition, Other)
 - [x] **PIPE-04**: Build pipeline classifies each case by industry sector inferred from company business_description field
 - [x] **PIPE-05**: Build pipeline produces denormalized `ftc-provisions.json` flat file with all provisions, topic tags, case context, and citations
-- [ ] **PIPE-06**: Build pipeline produces `ftc-patterns.json` with cross-case language pattern groups
+- [x] **PIPE-06**: Build pipeline produces `ftc-patterns.json` with cross-case language pattern groups
 - [x] **PIPE-07**: Enhanced `ftc-cases.json` includes provision-level topic aggregations and industry sector per case
 - [x] **PIPE-08**: Classification runs entirely at build time — no classification logic ships to the browser
 - [x] **PIPE-09**: TypeScript interfaces defined for all new data shapes before pipeline implementation
@@ -100,7 +100,7 @@
 | PIPE-03 | Phase 1 | Complete |
 | PIPE-04 | Phase 1 | Complete |
 | PIPE-05 | Phase 1 | Complete |
-| PIPE-06 | Phase 1 | Pending |
+| PIPE-06 | Phase 5 | Complete |
 | PIPE-07 | Phase 1 | Complete |
 | PIPE-08 | Phase 1 | Complete |
 | PIPE-09 | Phase 1 | Complete |

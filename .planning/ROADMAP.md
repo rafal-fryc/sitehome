@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Tab Shell + Analytics** - Establish tabbed page architecture and extend analytics with topic-over-time and provision-level charts (completed 2026-02-24)
 - [x] **Phase 3: Provisions Library** - Build the core topic-first browsing experience with exact citations, filter bar, and text search (completed 2026-02-25)
 - [x] **Phase 4: Company & Industry View** - Add industry sector browsing showing how enforcement patterns vary across sectors (completed 2026-02-25)
-- [ ] **Phase 5: Cross-Case Patterns** - Surface recurring provision language and its evolution across enforcement eras
+- [x] **Phase 5: Cross-Case Patterns** - Surface recurring provision language and its evolution across enforcement eras (completed 2026-02-25)
 
 ## Phase Details
 
@@ -103,9 +103,9 @@ Plans:
   3. Structural/boilerplate provisions (compliance reporting, recordkeeping, acknowledgment) are either excluded from pattern results or clearly labeled as structural, so they do not drown out substantively significant patterns
 
 Plans:
-- [ ] 05-01-PLAN.md — Build pipeline: pattern detection, structural classification, ftc-patterns.json output
-- [ ] 05-02-PLAN.md — Pattern browser UI: filterable list, chronological timeline, variant cards, diff highlighting
-- [ ] 05-03-PLAN.md — Visual verification checkpoint
+- [x] 05-01-PLAN.md — Build pipeline: pattern detection, structural classification, ftc-patterns.json output
+- [x] 05-02-PLAN.md — Pattern browser UI: filterable list, chronological timeline, variant cards, diff highlighting
+- [x] 05-03-PLAN.md — Visual verification checkpoint
 
 ## Progress
 
@@ -118,4 +118,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Tab Shell + Analytics | 5/5 | Complete    | 2026-02-24 |
 | 3. Provisions Library | 5/5 | Complete    | 2026-02-25 |
 | 4. Company & Industry View | 0/4 | Complete    | 2026-02-25 |
-| 5. Cross-Case Patterns | 0/3 | Not started | - |
+| 5. Cross-Case Patterns | 3/3 | Complete    | 2026-02-25 |
