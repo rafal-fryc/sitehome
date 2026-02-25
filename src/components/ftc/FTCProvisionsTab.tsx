@@ -1,23 +1,62 @@
+import { useCallback } from "react";
+import { useSearchParams } from "react-router-dom";
+import { useProvisionsManifest } from "@/hooks/use-provisions";
+import TopicSidebar from "@/components/ftc/provisions/TopicSidebar";
+import ProvisionsLanding from "@/components/ftc/provisions/ProvisionsLanding";
+import ProvisionsContent from "@/components/ftc/provisions/ProvisionsContent";
+
 export default function FTCProvisionsTab() {
-  return (
-    <div className="flex flex-col items-center justify-center py-24 px-4 text-center">
-      <h2 className="text-3xl font-garamond font-semibold text-primary mb-4">
-        Provisions Library
-      </h2>
-      <p className="text-lg text-muted-foreground font-garamond max-w-xl mb-6">
-        Coming Soon
-      </p>
-      <p className="text-base text-muted-foreground font-garamond max-w-2xl mb-8">
-        Browse FTC consent order provisions by statutory topic, practice area,
-        and remedy type.
-      </p>
-      <div className="border border-rule bg-cream/50 p-4 max-w-xl">
-        <p className="text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground">Note:</span> Provision
-          text is extracted from consent order PDFs using automated processing
-          and should be verified against the original source documents available
-          on the FTC website.
+  const [searchParams, setSearchParams] = useSearchParams();
+  const { data: manifest, isLoading, error } = useProvisionsManifest();
+
+  const selectedTopic = searchParams.get("topic");
+
+  const handleTopicSelect = useCallback(
+    (topicSlug: string) => {
+      const newParams = new URLSearchParams(searchParams);
+      newParams.set("tab", "provisions");
+      newParams.set("topic", topicSlug);
+      setSearchParams(newParams, { replace: true });
+    },
+    [searchParams, setSearchParams]
+  );
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center py-24">
+        <div className="text-center">
+          <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4" />
+          <p className="text-muted-foreground font-garamond">
+            Loading provisions library...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error || !manifest) {
+    return (
+      <div className="flex items-center justify-center py-24">
+        <p className="text-destructive font-garamond">
+          Failed to load provisions library. Please try again.
         </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex gap-6 py-6">
+      <TopicSidebar
+        manifest={manifest}
+        selectedTopic={selectedTopic}
+        onSelectTopic={handleTopicSelect}
+      />
+      <div className="flex-1 min-w-0">
+        {selectedTopic ? (
+          <ProvisionsContent topic={selectedTopic} manifest={manifest} />
+        ) : (
+          <ProvisionsLanding manifest={manifest} />
+        )}
       </div>
     </div>
   );
