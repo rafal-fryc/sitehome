@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-24)
 ## Current Position
 
 Phase: 3 of 5 (Provisions Library)
-Plan: 2 of 5 in current phase
+Plan: 3 of 5 in current phase
 Status: Executing Phase 3
-Last activity: 2026-02-24 — Completed 03-02-PLAN.md (Core provisions browsing with sidebar, cards, pagination)
+Last activity: 2026-02-24 — Completed 03-03-PLAN.md (Filter bar with date range, company, remedy type filters and sorting)
 
-Progress: [███████████░░░░░░░░░] 57%
+Progress: [████████████░░░░░░░░] 60%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
+- Total plans completed: 12
 - Average duration: 3 min
-- Total execution time: 0.60 hours
+- Total execution time: 0.65 hours
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: [███████████░░░░░░░░░] 57%
 |-------|-------|-------|----------|
 | 01-data-pipeline | 4 | 23 min | 6 min |
 | 02-tab-shell-analytics | 5 | 9 min | 2 min |
-| 03-provisions-library | 2 | 6 min | 3 min |
+| 03-provisions-library | 3 | 9 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-03 (2 min), 02-04 (2 min), 02-05 (1 min), 03-01 (3 min), 03-02 (3 min)
+- Last 5 plans: 02-04 (2 min), 02-05 (1 min), 03-01 (3 min), 03-02 (3 min), 03-03 (3 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -80,6 +80,10 @@ Recent decisions affecting current work:
 - [Phase 3, Plan 02]: ProvisionsContent paginates at 50 provisions per page with ellipsis-based page numbers
 - [Phase 3, Plan 02]: Default sort is date descending (most recent first) per research recommendation
 - [Phase 3, Plan 02]: useProvisionShard fetches by shard filename from manifest -- avoids hardcoded shard filename map
+- [Phase 3, Plan 03]: Date preset toggles deselect when clicked again (same preset click clears the date filter)
+- [Phase 3, Plan 03]: Sort defaults to date descending; switching sort key sets default direction (date=desc, company/type=asc); clicking same key flips direction
+- [Phase 3, Plan 03]: All filters reset on topic change to prevent stale empty results (per research Pitfall 3)
+- [Phase 3, Plan 03]: Remedy type multi-select uses Popover + Checkbox list pattern since shadcn Select is single-select only
 
 ### Pending Todos
 
@@ -95,5 +99,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 03-02-PLAN.md (Core provisions browsing -- sidebar, cards, pagination, URL-driven topic selection)
+Stopped at: Completed 03-03-PLAN.md (Filter bar with date range, company, remedy type filters, sorting, and filter chips)
 Resume file: None

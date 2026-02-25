@@ -23,10 +23,10 @@
 - [x] **PROV-02**: Each provision displays verbatim quoted order language as the primary content
 - [x] **PROV-03**: Each provision shows exact paragraph-level citation (e.g., "Part II.A.3") plus working link to FTC.gov source document
 - [x] **PROV-04**: Each provision card shows case context: company name, date issued, docket number, violation type
-- [ ] **PROV-05**: User can filter provisions within a topic by date range
-- [ ] **PROV-06**: User can filter provisions within a topic by company name
-- [ ] **PROV-07**: User can filter provisions within a topic by remedy type
-- [ ] **PROV-08**: User can sort provisions by date, company, or provision type
+- [x] **PROV-05**: User can filter provisions within a topic by date range
+- [x] **PROV-06**: User can filter provisions within a topic by company name
+- [x] **PROV-07**: User can filter provisions within a topic by remedy type
+- [x] **PROV-08**: User can sort provisions by date, company, or provision type
 - [ ] **PROV-09**: User can search across all provisions using text search (MiniSearch)
 - [x] **PROV-10**: Provisions library displays total count of matching provisions and cases
 
@@ -108,10 +108,10 @@
 | PROV-02 | Phase 3 | Complete |
 | PROV-03 | Phase 3 | Complete |
 | PROV-04 | Phase 3 | Complete |
-| PROV-05 | Phase 3 | Pending |
-| PROV-06 | Phase 3 | Pending |
-| PROV-07 | Phase 3 | Pending |
-| PROV-08 | Phase 3 | Pending |
+| PROV-05 | Phase 3 | Complete |
+| PROV-06 | Phase 3 | Complete |
+| PROV-07 | Phase 3 | Complete |
+| PROV-08 | Phase 3 | Complete |
 | PROV-09 | Phase 3 | Pending |
 | PROV-10 | Phase 3 | Complete |
 | PATN-01 | Phase 5 | Pending |
