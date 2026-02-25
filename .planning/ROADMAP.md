@@ -96,11 +96,16 @@ Plans:
 **Goal**: A legal practitioner can see how specific recurring provision language (e.g., "comprehensive security program") has evolved across enforcement eras, with a chronological timeline of variants
 **Depends on**: Phase 4
 **Requirements**: PATN-01, PATN-02, PATN-03, PATN-04
-**Plans**: TBD
+**Plans**: 3 plans
 **Success Criteria** (what must be TRUE):
   1. The Patterns tab shows a list of named recurring provision patterns (e.g., "Comprehensive Security Program," "Algorithmic Destruction") with a count of cases where each pattern appears
   2. Selecting a pattern shows a chronological timeline of how that provision language appears across different consent orders, with variant cards showing the quoted text and case context for each instance
   3. Structural/boilerplate provisions (compliance reporting, recordkeeping, acknowledgment) are either excluded from pattern results or clearly labeled as structural, so they do not drown out substantively significant patterns
+
+Plans:
+- [ ] 05-01-PLAN.md — Build pipeline: pattern detection, structural classification, ftc-patterns.json output
+- [ ] 05-02-PLAN.md — Pattern browser UI: filterable list, chronological timeline, variant cards, diff highlighting
+- [ ] 05-03-PLAN.md — Visual verification checkpoint
 
 ## Progress
 
@@ -113,4 +118,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Tab Shell + Analytics | 5/5 | Complete    | 2026-02-24 |
 | 3. Provisions Library | 5/5 | Complete    | 2026-02-25 |
 | 4. Company & Industry View | 0/4 | Complete    | 2026-02-25 |
-| 5. Cross-Case Patterns | 0/TBD | Not started | - |
+| 5. Cross-Case Patterns | 0/3 | Not started | - |
