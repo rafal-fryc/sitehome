@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Data Pipeline** - Extend the offline build script to classify all provisions and emit the static JSON artifacts the entire UI depends on (completed 2026-02-24)
 - [x] **Phase 2: Tab Shell + Analytics** - Establish tabbed page architecture and extend analytics with topic-over-time and provision-level charts (completed 2026-02-24)
-- [ ] **Phase 3: Provisions Library** - Build the core topic-first browsing experience with exact citations, filter bar, and text search
+- [x] **Phase 3: Provisions Library** - Build the core topic-first browsing experience with exact citations, filter bar, and text search (completed 2026-02-25)
 - [ ] **Phase 4: Company & Industry View** - Add industry sector browsing showing how enforcement patterns vary across sectors
 - [ ] **Phase 5: Cross-Case Patterns** - Surface recurring provision language and its evolution across enforcement eras
 
@@ -73,8 +73,8 @@ Plans:
 - [x] 03-01-PLAN.md — Build pipeline: add verbatim text, violation type, remedy-type shards, manifest
 - [x] 03-02-PLAN.md — Topic sidebar, landing view, provision cards with verbatim text
 - [x] 03-03-PLAN.md — Filter bar (date range, company, remedy type), sort, filter chips
-- [ ] 03-04-PLAN.md — Full-text search (MiniSearch), scope toggle, cross-topic results
-- [ ] 03-05-PLAN.md — Visual verification checkpoint
+- [x] 03-04-PLAN.md — Full-text search (MiniSearch), scope toggle, cross-topic results
+- [x] 03-05-PLAN.md — Visual verification checkpoint
 
 ### Phase 4: Company & Industry View
 **Goal**: A legal practitioner can browse enforcement actions by industry sector and understand how enforcement patterns — topics, remedy types, enforcement intensity — differ across sectors
@@ -105,6 +105,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Data Pipeline | 3/4 | Complete    | 2026-02-24 |
 | 2. Tab Shell + Analytics | 5/5 | Complete    | 2026-02-24 |
-| 3. Provisions Library | 3/5 | In Progress | - |
+| 3. Provisions Library | 5/5 | Complete    | 2026-02-25 |
 | 4. Company & Industry View | 0/TBD | Not started | - |
 | 5. Cross-Case Patterns | 0/TBD | Not started | - |

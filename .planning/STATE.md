@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-24)
 
 **Core value:** A legal practitioner can find every FTC consent order provision relevant to a specific topic, with exact paragraph-level citations and source links, in under 30 seconds.
-**Current focus:** Phase 3 — Provisions Library
+**Current focus:** Phase 3 Complete — Ready for Phase 4
 
 ## Current Position
 
-Phase: 3 of 5 (Provisions Library)
-Plan: 4 of 5 in current phase
-Status: Executing Phase 3
-Last activity: 2026-02-24 — Completed 03-04-PLAN.md (Full-text search with MiniSearch, scope toggle, highlighting, and cross-topic results)
+Phase: 3 of 5 (Provisions Library) -- COMPLETE
+Plan: 5 of 5 in current phase (all complete)
+Status: Phase 3 Complete
+Last activity: 2026-02-25 — Completed 03-05-PLAN.md (Visual verification checkpoint -- all 10 PROV requirements confirmed)
 
-Progress: [█████████████░░░░░░░] 65%
+Progress: [██████████████░░░░░░] 70%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 13
+- Total plans completed: 14
 - Average duration: 3 min
-- Total execution time: 0.72 hours
+- Total execution time: 0.74 hours
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: [█████████████░░░░░░░] 65%
 |-------|-------|-------|----------|
 | 01-data-pipeline | 4 | 23 min | 6 min |
 | 02-tab-shell-analytics | 5 | 9 min | 2 min |
-| 03-provisions-library | 4 | 13 min | 3 min |
+| 03-provisions-library | 5 | 14 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-05 (1 min), 03-01 (3 min), 03-02 (3 min), 03-03 (3 min), 03-04 (4 min)
+- Last 5 plans: 03-01 (3 min), 03-02 (3 min), 03-03 (3 min), 03-04 (4 min), 03-05 (1 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -89,6 +89,8 @@ Recent decisions affecting current work:
 - [Phase 3, Plan 04]: Search applied before other filters (date, company, remedy) so filters narrow search results
 - [Phase 3, Plan 04]: Cross-topic search uses useQueries to load all shards in parallel with progress indicator
 - [Phase 3, Plan 04]: Search query persisted in URL via q param for shareability; scope via scope param
+- [Phase 3, Plan 05]: TopicSidebar switched from ScrollArea to native overflow-y-auto -- ScrollArea conflicts with CSS sticky positioning
+- [Phase 3, Plan 05]: All 10 PROV requirements (PROV-01 through PROV-10) verified by user visual inspection
 
 ### Pending Todos
 
@@ -103,6 +105,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-24
-Stopped at: Completed 03-04-PLAN.md (Full-text search with MiniSearch, scope toggle, highlighting, and cross-topic results)
+Last session: 2026-02-25
+Stopped at: Completed 03-05-PLAN.md (Visual verification checkpoint -- Phase 3 complete)
 Resume file: None
