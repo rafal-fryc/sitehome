@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-24)
 ## Current Position
 
 Phase: 2 of 5 (Tab Shell + Analytics)
-Plan: 1 of 5 in current phase
+Plan: 2 of 5 in current phase
 Status: Executing
-Last activity: 2026-02-24 — Completed 02-01-PLAN.md (Tab shell with URL-driven state, page restructure, placeholder tabs)
+Last activity: 2026-02-24 — Completed 02-02-PLAN.md (Analytics infrastructure: sidebar, summary, reference table)
 
-Progress: [█████░░░░░] 28%
+Progress: [██████░░░░] 33%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
+- Total plans completed: 6
 - Average duration: 5 min
-- Total execution time: 0.37 hours
+- Total execution time: 0.40 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-data-pipeline | 4 | 23 min | 6 min |
-| 02-tab-shell-analytics | 1 | 2 min | 2 min |
+| 02-tab-shell-analytics | 2 | 4 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (4 min), 01-03 (4 min), 01-04 (15 min), 02-01 (2 min)
+- Last 5 plans: 01-02 (4 min), 01-03 (4 min), 01-04 (15 min), 02-01 (2 min), 02-02 (2 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -59,6 +59,9 @@ Recent decisions affecting current work:
 - [Phase 2, Plan 01]: Tab-specific URL params (mode, group) cleared on tab switch to prevent stale state
 - [Phase 2, Plan 01]: Default analytics tab omits ?tab= param from URL for cleaner default links
 - [Phase 2, Plan 01]: FTCAnalyticsTab merges mode/group params with existing searchParams to preserve tab param
+- [Phase 2, Plan 02]: FTCSectionSidebar uses cn() for className merging, consistent with project shadcn/ui patterns
+- [Phase 2, Plan 02]: AnalyticsSummary counts unique categories for numTopics to match existing FTCCaseSummary data shape
+- [Phase 2, Plan 02]: ReferenceTable uses Fragment key pattern for row+expanded pairs, expandable rows tracked via Set<string>
 
 ### Pending Todos
 
@@ -74,5 +77,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 02-01-PLAN.md (Tab shell with URL-driven state, page restructure, placeholder tabs)
+Stopped at: Completed 02-02-PLAN.md (Analytics infrastructure: sidebar, summary, reference table)
 Resume file: None

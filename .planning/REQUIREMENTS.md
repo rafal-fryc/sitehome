@@ -43,8 +43,8 @@
 - [ ] **ANLY-02**: Interactive charts showing enforcement trends by presidential administration
 - [ ] **ANLY-03**: Topic-over-time trend lines showing how enforcement focus shifts across statutory topics and practice areas
 - [ ] **ANLY-04**: Administration comparison view showing enforcement patterns side-by-side between administrations
-- [ ] **ANLY-05**: Detailed reference tables with case counts, provision counts, and breakdowns accompanying each chart
-- [ ] **ANLY-06**: Combined chart + table views — charts for visual overview, tables for drill-down
+- [x] **ANLY-05**: Detailed reference tables with case counts, provision counts, and breakdowns accompanying each chart
+- [x] **ANLY-06**: Combined chart + table views — charts for visual overview, tables for drill-down
 - [x] **ANLY-07**: Violation type breakdown (deceptive vs unfair vs both) maintained from existing analytics
 - [ ] **ANLY-08**: Provision-level analytics showing counts by remedy type, topic, and category
 
@@ -122,8 +122,8 @@
 | ANLY-02 | Phase 2 | Pending |
 | ANLY-03 | Phase 2 | Pending |
 | ANLY-04 | Phase 2 | Pending |
-| ANLY-05 | Phase 2 | Pending |
-| ANLY-06 | Phase 2 | Pending |
+| ANLY-05 | Phase 2 | Complete |
+| ANLY-06 | Phase 2 | Complete |
 | ANLY-07 | Phase 2 | Complete |
 | ANLY-08 | Phase 2 | Pending |
 | INDY-01 | Phase 4 | Pending |
