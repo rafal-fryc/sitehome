@@ -20,9 +20,9 @@
 ### Provisions Library
 
 - [ ] **PROV-01**: User can browse provisions by selecting a substantive topic (statutory, practice area, or remedy type)
-- [ ] **PROV-02**: Each provision displays verbatim quoted order language as the primary content
-- [ ] **PROV-03**: Each provision shows exact paragraph-level citation (e.g., "Part II.A.3") plus working link to FTC.gov source document
-- [ ] **PROV-04**: Each provision card shows case context: company name, date issued, docket number, violation type
+- [x] **PROV-02**: Each provision displays verbatim quoted order language as the primary content
+- [x] **PROV-03**: Each provision shows exact paragraph-level citation (e.g., "Part II.A.3") plus working link to FTC.gov source document
+- [x] **PROV-04**: Each provision card shows case context: company name, date issued, docket number, violation type
 - [ ] **PROV-05**: User can filter provisions within a topic by date range
 - [ ] **PROV-06**: User can filter provisions within a topic by company name
 - [ ] **PROV-07**: User can filter provisions within a topic by remedy type
@@ -105,9 +105,9 @@
 | PIPE-08 | Phase 1 | Complete |
 | PIPE-09 | Phase 1 | Complete |
 | PROV-01 | Phase 3 | Pending |
-| PROV-02 | Phase 3 | Pending |
-| PROV-03 | Phase 3 | Pending |
-| PROV-04 | Phase 3 | Pending |
+| PROV-02 | Phase 3 | Complete |
+| PROV-03 | Phase 3 | Complete |
+| PROV-04 | Phase 3 | Complete |
 | PROV-05 | Phase 3 | Pending |
 | PROV-06 | Phase 3 | Pending |
 | PROV-07 | Phase 3 | Pending |

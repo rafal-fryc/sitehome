@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-24)
 ## Current Position
 
 Phase: 3 of 5 (Provisions Library)
-Plan: 0 of TBD in current phase
-Status: Phase 2 complete, Phase 3 not yet planned
-Last activity: 2026-02-24 — Completed 02-05-PLAN.md (Analytics dashboard assembly with visual verification)
+Plan: 1 of 5 in current phase
+Status: Executing Phase 3
+Last activity: 2026-02-24 — Completed 03-01-PLAN.md (Provision pipeline enhancement with verbatim text, remedy shards, manifest)
 
-Progress: [█████████░] 50%
+Progress: [██████████░░░░░░░░░░] 52%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
+- Total plans completed: 10
 - Average duration: 3 min
-- Total execution time: 0.5 hours
+- Total execution time: 0.55 hours
 
 **By Phase:**
 
@@ -29,9 +29,10 @@ Progress: [█████████░] 50%
 |-------|-------|-------|----------|
 | 01-data-pipeline | 4 | 23 min | 6 min |
 | 02-tab-shell-analytics | 5 | 9 min | 2 min |
+| 03-provisions-library | 1 | 3 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (2 min), 02-02 (2 min), 02-03 (2 min), 02-04 (2 min), 02-05 (1 min)
+- Last 5 plans: 02-02 (2 min), 02-03 (2 min), 02-04 (2 min), 02-05 (1 min), 03-01 (3 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -70,6 +71,10 @@ Recent decisions affecting current work:
 - [Phase 2, Plan 04]: ViolationBreakdown refactored from ViolationDonut with added reference table showing count and percentage per type
 - [Phase 2, Plan 05]: Old grouping views fully replaced by 5 dedicated analytics sections -- FTCGroupingSelector, FTCGroupChart, FTCGroupList, FTCGroupDetail, FTCOverviewStats, ViolationDonut all removed
 - [Phase 2, Plan 05]: Analytics layout: flex container with sticky sidebar left + space-y-12 content stack right, mobile collapse handled by FTCSectionSidebar internally
+- [Phase 3, Plan 01]: verbatim_text concatenated from requirements[].quoted_text joined by double newline -- preserves full order language per provision
+- [Phase 3, Plan 01]: violation_type sourced from case_info.violation_type (per-case, not per-provision) -- 100% coverage, minimal size overhead
+- [Phase 3, Plan 01]: Remedy-type shards use rt- prefix (matching pa- prefix pattern for practice areas)
+- [Phase 3, Plan 01]: manifest.json includes human-readable labels, shard filenames, counts, and category classification for all 25 topics
 
 ### Pending Todos
 
@@ -85,5 +90,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 02-05-PLAN.md (Analytics dashboard assembly -- Phase 2 complete)
+Stopped at: Completed 03-01-PLAN.md (Provision pipeline enhancement -- verbatim text, remedy shards, manifest)
 Resume file: None
