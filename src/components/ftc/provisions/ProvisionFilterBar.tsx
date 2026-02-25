@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { ArrowUpDown, ChevronDown, Check } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowUpDown, ChevronDown, Check, Search, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { DATE_PRESETS, REMEDY_TYPE_OPTIONS } from "@/constants/ftc";
 import CompanyAutocomplete from "@/components/ftc/provisions/CompanyAutocomplete";
@@ -30,6 +30,10 @@ interface Props {
   activeFilters: FilterChip[];
   onDismissFilter: (key: string) => void;
   onClearAll: () => void;
+  searchQuery: string;
+  onSearchChange: (query: string) => void;
+  searchScope: "topic" | "all";
+  onSearchScopeChange: (scope: "topic" | "all") => void;
 }
 
 const SORT_OPTIONS: { key: "date" | "company" | "type"; label: string }[] = [
@@ -55,9 +59,36 @@ export default function ProvisionFilterBar({
   activeFilters,
   onDismissFilter,
   onClearAll,
+  searchQuery,
+  onSearchChange,
+  searchScope,
+  onSearchScopeChange,
 }: Props) {
   const [remedyOpen, setRemedyOpen] = useState(false);
   const [sortOpen, setSortOpen] = useState(false);
+
+  // Debounced search input
+  const [localSearch, setLocalSearch] = useState(searchQuery);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Sync local state when external searchQuery changes (e.g., URL param or clear)
+  useEffect(() => {
+    setLocalSearch(searchQuery);
+  }, [searchQuery]);
+
+  const handleSearchInput = (value: string) => {
+    setLocalSearch(value);
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => {
+      onSearchChange(value);
+    }, 300);
+  };
+
+  const handleClearSearch = () => {
+    setLocalSearch("");
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    onSearchChange("");
+  };
 
   const handleRemedyToggle = (remedyType: string) => {
     if (selectedRemedyTypes.includes(remedyType)) {
@@ -71,6 +102,54 @@ export default function ProvisionFilterBar({
 
   return (
     <div className="sticky top-0 z-10 bg-background border-b border-rule py-3 space-y-2">
+      {/* Search row */}
+      <div className="flex items-center gap-2">
+        <div className="relative flex-1 min-w-[200px]">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <input
+            type="text"
+            value={localSearch}
+            onChange={(e) => handleSearchInput(e.target.value)}
+            placeholder="Search provisions..."
+            className="w-full border border-rule pl-9 pr-8 py-1.5 text-sm font-garamond bg-cream focus:outline-none focus:border-primary/50 transition-colors"
+          />
+          {localSearch && (
+            <button
+              onClick={handleClearSearch}
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+            >
+              <X className="h-3.5 w-3.5" />
+            </button>
+          )}
+        </div>
+
+        {/* Scope toggle */}
+        <div className="flex border border-rule">
+          <button
+            onClick={() => onSearchScopeChange("topic")}
+            className={cn(
+              "text-xs px-2.5 py-1.5 font-garamond transition-colors",
+              searchScope === "topic"
+                ? "bg-primary text-primary-foreground"
+                : "bg-cream hover:bg-gold/10"
+            )}
+          >
+            This topic
+          </button>
+          <button
+            onClick={() => onSearchScopeChange("all")}
+            className={cn(
+              "text-xs px-2.5 py-1.5 font-garamond transition-colors border-l border-rule",
+              searchScope === "all"
+                ? "bg-primary text-primary-foreground"
+                : "bg-cream hover:bg-gold/10"
+            )}
+          >
+            All topics
+          </button>
+        </div>
+      </div>
+
       {/* Controls row */}
       <div className="flex flex-wrap items-center gap-3">
         {/* Date range preset buttons */}
@@ -193,8 +272,6 @@ export default function ProvisionFilterBar({
         onDismiss={onDismissFilter}
         onClearAll={onClearAll}
       />
-
-      {/* Search placeholder slot (Plan 04) */}
     </div>
   );
 }

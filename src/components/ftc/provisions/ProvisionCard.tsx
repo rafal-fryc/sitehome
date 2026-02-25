@@ -1,12 +1,13 @@
 import { ExternalLink } from "lucide-react";
 import type { ProvisionRecord } from "@/types/ftc";
+import HighlightText from "@/components/ftc/provisions/HighlightText";
 
 interface Props {
   provision: ProvisionRecord;
   searchQuery?: string;
 }
 
-export default function ProvisionCard({ provision }: Props) {
+export default function ProvisionCard({ provision, searchQuery }: Props) {
   const displayText = provision.verbatim_text || provision.summary;
   const isFallback = !provision.verbatim_text && provision.summary;
 
@@ -46,13 +47,17 @@ export default function ProvisionCard({ provision }: Props) {
 
       {/* Provision text */}
       <div className="px-4 py-4 font-garamond text-foreground leading-relaxed">
-        <h4 className="font-semibold mb-2">{provision.title}</h4>
+        <h4 className="font-semibold mb-2">
+          <HighlightText text={provision.title} query={searchQuery} />
+        </h4>
         {isFallback && (
           <span className="text-xs text-muted-foreground italic mb-1 block">
             (summary)
           </span>
         )}
-        <div className="whitespace-pre-line">{displayText}</div>
+        <div className="whitespace-pre-line">
+          <HighlightText text={displayText} query={searchQuery} />
+        </div>
       </div>
     </article>
   );

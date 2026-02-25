@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { parseISO, isWithinInterval } from "date-fns";
 import { useProvisionShard } from "@/hooks/use-provisions";
+import { useProvisionSearch } from "@/hooks/use-provision-search";
 import ProvisionCard from "@/components/ftc/provisions/ProvisionCard";
 import ProvisionFilterBar from "@/components/ftc/provisions/ProvisionFilterBar";
 import type { FilterChip } from "@/components/ftc/provisions/FilterChips";
@@ -18,11 +19,22 @@ import type { ProvisionsManifest } from "@/types/ftc";
 interface Props {
   topic: string;
   manifest: ProvisionsManifest;
+  searchQuery: string;
+  onSearchChange: (query: string) => void;
+  searchScope: "topic" | "all";
+  onSearchScopeChange: (scope: "topic" | "all") => void;
 }
 
 const PAGE_SIZE = 50;
 
-export default function ProvisionsContent({ topic, manifest }: Props) {
+export default function ProvisionsContent({
+  topic,
+  manifest,
+  searchQuery,
+  onSearchChange,
+  searchScope,
+  onSearchScopeChange,
+}: Props) {
   const topicMeta = manifest.topics[topic];
   const { data: shard, isLoading, error } = useProvisionShard(topicMeta?.shard ?? null);
   const [page, setPage] = useState(1);
@@ -37,6 +49,10 @@ export default function ProvisionsContent({ topic, manifest }: Props) {
   // Sort state
   const [sortKey, setSortKey] = useState<"date" | "company" | "type">("date");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
+
+  // Search hook for in-topic search
+  const shardProvisions = useMemo(() => shard?.provisions ?? [], [shard]);
+  const { search } = useProvisionSearch(shardProvisions);
 
   // Reset page and filters when topic changes
   const prevTopicRef = useRef(topic);
@@ -54,8 +70,8 @@ export default function ProvisionsContent({ topic, manifest }: Props) {
     }
   }, [topic]);
 
-  // Reset page when any filter changes
-  const filterKey = `${activeDateRange}|${selectedCompany}|${selectedRemedyTypes.join(",")}|${sortKey}|${sortDir}`;
+  // Reset page when any filter or search changes
+  const filterKey = `${activeDateRange}|${selectedCompany}|${selectedRemedyTypes.join(",")}|${sortKey}|${sortDir}|${searchQuery}`;
   const prevFilterRef = useRef(filterKey);
   useEffect(() => {
     if (prevFilterRef.current !== filterKey) {
@@ -71,10 +87,24 @@ export default function ProvisionsContent({ topic, manifest }: Props) {
     return [...names].sort((a, b) => a.localeCompare(b));
   }, [shard]);
 
+  // Search result IDs (for in-topic search filtering)
+  const searchMatchIds = useMemo(() => {
+    if (!searchQuery.trim() || searchScope !== "topic") return null;
+    const results = search(searchQuery);
+    return new Set(results.map((r) => r.id));
+  }, [searchQuery, searchScope, search]);
+
   // Filtered + sorted provisions
   const filtered = useMemo(() => {
     if (!shard) return [];
     let result = [...shard.provisions];
+
+    // Search filter (PROV-09) — applied first so other filters narrow search results
+    if (searchMatchIds) {
+      result = result.filter(
+        (p) => searchMatchIds.has(`${p.case_id}__${p.provision_number}`)
+      );
+    }
 
     // Date range filter (PROV-05)
     if (dateStart && dateEnd) {
@@ -119,7 +149,7 @@ export default function ProvisionsContent({ topic, manifest }: Props) {
     });
 
     return result;
-  }, [shard, dateStart, dateEnd, selectedCompany, selectedRemedyTypes, sortKey, sortDir]);
+  }, [shard, searchMatchIds, dateStart, dateEnd, selectedCompany, selectedRemedyTypes, sortKey, sortDir]);
 
   // Derived counts
   const resultCount = filtered.length;
@@ -131,6 +161,9 @@ export default function ProvisionsContent({ topic, manifest }: Props) {
   // Active filters array for FilterChips
   const activeFilters = useMemo<FilterChip[]>(() => {
     const chips: FilterChip[] = [];
+    if (searchQuery.trim()) {
+      chips.push({ key: "search", label: "Search", value: searchQuery.trim() });
+    }
     if (activeDateRange) {
       chips.push({ key: "dateRange", label: "Date Range", value: activeDateRange });
     }
@@ -141,7 +174,7 @@ export default function ProvisionsContent({ topic, manifest }: Props) {
       chips.push({ key: `remedy:${rt}`, label: "Remedy Type", value: rt });
     }
     return chips;
-  }, [activeDateRange, selectedCompany, selectedRemedyTypes]);
+  }, [searchQuery, activeDateRange, selectedCompany, selectedRemedyTypes]);
 
   // Filter callbacks
   const handleDateRange = useCallback(
@@ -167,7 +200,9 @@ export default function ProvisionsContent({ topic, manifest }: Props) {
 
   const handleDismissFilter = useCallback(
     (key: string) => {
-      if (key === "dateRange") {
+      if (key === "search") {
+        onSearchChange("");
+      } else if (key === "dateRange") {
         setActiveDateRange(null);
         setDateStart(null);
         setDateEnd(null);
@@ -178,16 +213,17 @@ export default function ProvisionsContent({ topic, manifest }: Props) {
         setSelectedRemedyTypes((prev) => prev.filter((t) => t !== rt));
       }
     },
-    []
+    [onSearchChange]
   );
 
   const handleClearAll = useCallback(() => {
+    onSearchChange("");
     setActiveDateRange(null);
     setDateStart(null);
     setDateEnd(null);
     setSelectedCompany(null);
     setSelectedRemedyTypes([]);
-  }, []);
+  }, [onSearchChange]);
 
   // Pagination on FILTERED results
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
@@ -263,6 +299,10 @@ export default function ProvisionsContent({ topic, manifest }: Props) {
         activeFilters={activeFilters}
         onDismissFilter={handleDismissFilter}
         onClearAll={handleClearAll}
+        searchQuery={searchQuery}
+        onSearchChange={onSearchChange}
+        searchScope={searchScope}
+        onSearchScopeChange={onSearchScopeChange}
       />
 
       {/* Provision count with pagination range */}
@@ -292,6 +332,7 @@ export default function ProvisionsContent({ topic, manifest }: Props) {
             <ProvisionCard
               key={`${provision.case_id}__${provision.provision_number}__${idx}`}
               provision={provision}
+              searchQuery={searchScope === "topic" ? searchQuery : undefined}
             />
           ))
         )}
