@@ -42,13 +42,20 @@ Plans:
 **Goal**: Legal practitioners can navigate between three view areas of the FTC tool, and the analytics section shows topic-level enforcement trends alongside the existing grouping views
 **Depends on**: Phase 1
 **Requirements**: ANLY-01, ANLY-02, ANLY-03, ANLY-04, ANLY-05, ANLY-06, ANLY-07, ANLY-08, NAVX-01, NAVX-02, NAVX-03, NAVX-04, NAVX-05
-**Plans**: TBD
+**Plans**: 5 plans
 **Success Criteria** (what must be TRUE):
   1. The FTC page has three tabs — Analytics, Provisions Library, Patterns — and switching tabs updates the URL search param without a full page reload
   2. The Analytics tab displays enforcement trend charts by year and presidential administration, plus topic-over-time trend lines showing how enforcement focus has shifted across statutory topics
   3. Each chart has an accompanying reference table with case counts and breakdowns; the user can read exact numbers without relying on chart hover states
   4. The page renders without visible lag when loaded fresh with 293 cases and thousands of provisions in-browser
   5. The law-library aesthetic (EB Garamond, cream/gold/dark-green palette) is consistent across all new and modified components
+
+Plans:
+- [ ] 02-01-PLAN.md — Tab shell with URL-driven state, page restructure, placeholder tabs
+- [ ] 02-02-PLAN.md — Shared infrastructure: section sidebar, analytics summary, expandable reference table
+- [ ] 02-03-PLAN.md — Enforcement by Year and by Administration chart+table sections
+- [ ] 02-04-PLAN.md — Topic trend lines, provision analytics, violation breakdown sections
+- [ ] 02-05-PLAN.md — Final assembly: compose all sections into analytics tab + visual checkpoint
 
 ### Phase 3: Provisions Library
 **Goal**: A legal practitioner can select a topic, see every relevant provision across all consent orders, read verbatim order language with exact paragraph-level citations, and filter/search the results to find specific provisions in under 30 seconds
@@ -90,7 +97,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Data Pipeline | 3/4 | Complete    | 2026-02-24 |
-| 2. Tab Shell + Analytics | 0/TBD | Not started | - |
+| 2. Tab Shell + Analytics | 0/5 | Not started | - |
 | 3. Provisions Library | 0/TBD | Not started | - |
 | 4. Company & Industry View | 0/TBD | Not started | - |
 | 5. Cross-Case Patterns | 0/TBD | Not started | - |
