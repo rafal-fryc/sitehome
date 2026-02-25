@@ -1,6 +1,9 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { parseISO, isWithinInterval } from "date-fns";
 import { useProvisionShard } from "@/hooks/use-provisions";
 import ProvisionCard from "@/components/ftc/provisions/ProvisionCard";
+import ProvisionFilterBar from "@/components/ftc/provisions/ProvisionFilterBar";
+import type { FilterChip } from "@/components/ftc/provisions/FilterChips";
 import {
   Pagination,
   PaginationContent,
@@ -24,33 +27,173 @@ export default function ProvisionsContent({ topic, manifest }: Props) {
   const { data: shard, isLoading, error } = useProvisionShard(topicMeta?.shard ?? null);
   const [page, setPage] = useState(1);
 
-  // Reset page when topic changes
+  // Filter state
+  const [activeDateRange, setActiveDateRange] = useState<string | null>(null);
+  const [dateStart, setDateStart] = useState<string | null>(null);
+  const [dateEnd, setDateEnd] = useState<string | null>(null);
+  const [selectedCompany, setSelectedCompany] = useState<string | null>(null);
+  const [selectedRemedyTypes, setSelectedRemedyTypes] = useState<string[]>([]);
+
+  // Sort state
+  const [sortKey, setSortKey] = useState<"date" | "company" | "type">("date");
+  const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
+
+  // Reset page and filters when topic changes
   const prevTopicRef = useRef(topic);
   useEffect(() => {
     if (prevTopicRef.current !== topic) {
       prevTopicRef.current = topic;
       setPage(1);
+      setActiveDateRange(null);
+      setDateStart(null);
+      setDateEnd(null);
+      setSelectedCompany(null);
+      setSelectedRemedyTypes([]);
+      setSortKey("date");
+      setSortDir("desc");
     }
   }, [topic]);
 
-  // Sort by date descending (most recent first)
-  const sorted = useMemo(() => {
+  // Reset page when any filter changes
+  const filterKey = `${activeDateRange}|${selectedCompany}|${selectedRemedyTypes.join(",")}|${sortKey}|${sortDir}`;
+  const prevFilterRef = useRef(filterKey);
+  useEffect(() => {
+    if (prevFilterRef.current !== filterKey) {
+      prevFilterRef.current = filterKey;
+      setPage(1);
+    }
+  }, [filterKey]);
+
+  // Sorted unique company names from the FULL shard data (not filtered)
+  const companies = useMemo(() => {
     if (!shard) return [];
-    return [...shard.provisions].sort(
-      (a, b) => new Date(b.date_issued).getTime() - new Date(a.date_issued).getTime()
-    );
+    const names = new Set(shard.provisions.map((p) => p.company_name));
+    return [...names].sort((a, b) => a.localeCompare(b));
   }, [shard]);
 
-  // Unique cases count
-  const uniqueCases = useMemo(() => {
-    if (!shard) return 0;
-    return new Set(shard.provisions.map((p) => p.case_id)).size;
-  }, [shard]);
+  // Filtered + sorted provisions
+  const filtered = useMemo(() => {
+    if (!shard) return [];
+    let result = [...shard.provisions];
 
-  // Pagination
-  const totalPages = Math.ceil(sorted.length / PAGE_SIZE);
+    // Date range filter (PROV-05)
+    if (dateStart && dateEnd) {
+      const interval = { start: parseISO(dateStart), end: parseISO(dateEnd) };
+      result = result.filter((p) => {
+        try {
+          return isWithinInterval(parseISO(p.date_issued), interval);
+        } catch {
+          return false;
+        }
+      });
+    }
+
+    // Company filter (PROV-06)
+    if (selectedCompany) {
+      result = result.filter((p) => p.company_name === selectedCompany);
+    }
+
+    // Remedy type filter (PROV-07)
+    if (selectedRemedyTypes.length > 0) {
+      result = result.filter((p) =>
+        p.remedy_types.some((rt) => selectedRemedyTypes.includes(rt))
+      );
+    }
+
+    // Sort (PROV-08)
+    result.sort((a, b) => {
+      let cmp = 0;
+      switch (sortKey) {
+        case "date":
+          // ISO date strings: lexicographic comparison works
+          cmp = a.date_issued.localeCompare(b.date_issued);
+          break;
+        case "company":
+          cmp = a.company_name.localeCompare(b.company_name);
+          break;
+        case "type":
+          cmp = a.category.localeCompare(b.category);
+          break;
+      }
+      return sortDir === "asc" ? cmp : -cmp;
+    });
+
+    return result;
+  }, [shard, dateStart, dateEnd, selectedCompany, selectedRemedyTypes, sortKey, sortDir]);
+
+  // Derived counts
+  const resultCount = filtered.length;
+  const totalCount = shard?.provisions.length ?? 0;
+  const caseCount = useMemo(() => {
+    return new Set(filtered.map((p) => p.case_id)).size;
+  }, [filtered]);
+
+  // Active filters array for FilterChips
+  const activeFilters = useMemo<FilterChip[]>(() => {
+    const chips: FilterChip[] = [];
+    if (activeDateRange) {
+      chips.push({ key: "dateRange", label: "Date Range", value: activeDateRange });
+    }
+    if (selectedCompany) {
+      chips.push({ key: "company", label: "Company", value: selectedCompany });
+    }
+    for (const rt of selectedRemedyTypes) {
+      chips.push({ key: `remedy:${rt}`, label: "Remedy Type", value: rt });
+    }
+    return chips;
+  }, [activeDateRange, selectedCompany, selectedRemedyTypes]);
+
+  // Filter callbacks
+  const handleDateRange = useCallback(
+    (preset: string | null, start: string, end: string) => {
+      setActiveDateRange(preset);
+      setDateStart(start || null);
+      setDateEnd(end || null);
+    },
+    []
+  );
+
+  const handleSort = useCallback(
+    (key: "date" | "company" | "type") => {
+      if (sortKey === key) {
+        setSortDir((d) => (d === "asc" ? "desc" : "asc"));
+      } else {
+        setSortKey(key);
+        setSortDir(key === "date" ? "desc" : "asc");
+      }
+    },
+    [sortKey]
+  );
+
+  const handleDismissFilter = useCallback(
+    (key: string) => {
+      if (key === "dateRange") {
+        setActiveDateRange(null);
+        setDateStart(null);
+        setDateEnd(null);
+      } else if (key === "company") {
+        setSelectedCompany(null);
+      } else if (key.startsWith("remedy:")) {
+        const rt = key.slice("remedy:".length);
+        setSelectedRemedyTypes((prev) => prev.filter((t) => t !== rt));
+      }
+    },
+    []
+  );
+
+  const handleClearAll = useCallback(() => {
+    setActiveDateRange(null);
+    setDateStart(null);
+    setDateEnd(null);
+    setSelectedCompany(null);
+    setSelectedRemedyTypes([]);
+  }, []);
+
+  // Pagination on FILTERED results
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
   const startIdx = (page - 1) * PAGE_SIZE;
-  const displayed = sorted.slice(startIdx, startIdx + PAGE_SIZE);
+  const displayed = filtered.slice(startIdx, startIdx + PAGE_SIZE);
+  const hasActiveFilters = activeFilters.length > 0;
 
   if (!topicMeta) {
     return (
@@ -95,28 +238,63 @@ export default function ProvisionsContent({ topic, manifest }: Props) {
       </div>
 
       {/* Disclaimer banner */}
-      <div className="border border-rule bg-cream/50 p-4 text-sm text-muted-foreground mb-6">
+      <div className="border border-rule bg-cream/50 p-4 text-sm text-muted-foreground mb-4">
         <span className="font-semibold text-foreground">Note:</span> Provision
         text is extracted from consent order PDFs using automated processing and
         should be verified against the original source documents available on the
         FTC website.
       </div>
 
-      {/* Provision count */}
-      <p className="text-sm text-muted-foreground font-garamond mb-4">
-        Showing {startIdx + 1}&ndash;{Math.min(startIdx + PAGE_SIZE, sorted.length)}{" "}
-        of {sorted.length.toLocaleString()} provisions from{" "}
-        {uniqueCases.toLocaleString()} cases
+      {/* Filter bar */}
+      <ProvisionFilterBar
+        activeDateRange={activeDateRange}
+        onDateRange={handleDateRange}
+        companies={companies}
+        selectedCompany={selectedCompany}
+        onCompanyFilter={setSelectedCompany}
+        selectedRemedyTypes={selectedRemedyTypes}
+        onRemedyTypeFilter={setSelectedRemedyTypes}
+        sortKey={sortKey}
+        sortDir={sortDir}
+        onSort={handleSort}
+        resultCount={resultCount}
+        totalCount={totalCount}
+        caseCount={caseCount}
+        activeFilters={activeFilters}
+        onDismissFilter={handleDismissFilter}
+        onClearAll={handleClearAll}
+      />
+
+      {/* Provision count with pagination range */}
+      <p className="text-sm text-muted-foreground font-garamond my-4">
+        Showing {filtered.length > 0 ? startIdx + 1 : 0}&ndash;
+        {Math.min(startIdx + PAGE_SIZE, filtered.length)} of{" "}
+        {filtered.length.toLocaleString()} provisions from{" "}
+        {caseCount.toLocaleString()} cases
+        {hasActiveFilters && (
+          <span className="italic">
+            {" "}
+            (filtered from {totalCount.toLocaleString()} total)
+          </span>
+        )}
       </p>
 
       {/* Provision cards */}
       <div>
-        {displayed.map((provision, idx) => (
-          <ProvisionCard
-            key={`${provision.case_id}__${provision.provision_number}__${idx}`}
-            provision={provision}
-          />
-        ))}
+        {displayed.length === 0 ? (
+          <div className="py-12 text-center">
+            <p className="text-muted-foreground font-garamond">
+              No provisions match the current filters.
+            </p>
+          </div>
+        ) : (
+          displayed.map((provision, idx) => (
+            <ProvisionCard
+              key={`${provision.case_id}__${provision.provision_number}__${idx}`}
+              provision={provision}
+            />
+          ))
+        )}
       </div>
 
       {/* Pagination controls */}
