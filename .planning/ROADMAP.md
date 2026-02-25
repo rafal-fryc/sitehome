@@ -61,13 +61,20 @@ Plans:
 **Goal**: A legal practitioner can select a topic, see every relevant provision across all consent orders, read verbatim order language with exact paragraph-level citations, and filter/search the results to find specific provisions in under 30 seconds
 **Depends on**: Phase 2
 **Requirements**: PROV-01, PROV-02, PROV-03, PROV-04, PROV-05, PROV-06, PROV-07, PROV-08, PROV-09, PROV-10
-**Plans**: TBD
+**Plans**: 5 plans
 **Success Criteria** (what must be TRUE):
   1. The user can select a substantive topic (statutory authority or remedy type) and immediately see a list of provision cards — each showing verbatim quoted order language as the primary content
   2. Each provision card shows a paragraph-level citation (e.g., "Part II.A.3") and a working link to the FTC.gov source document, with a visible disclosure that the extracted text should be verified against the source
   3. Each provision card shows case context: company name, year issued, docket number, and violation type — enough information to cite the provision without leaving the page
   4. The user can filter provisions within a topic by date range, company name, and remedy type, and sort by date, company, or provision type; the display updates immediately with each filter change
   5. The user can type a search query and see matching provisions across all topics; the provisions view displays a total count of matching provisions and cases
+
+Plans:
+- [ ] 03-01-PLAN.md — Build pipeline: add verbatim text, violation type, remedy-type shards, manifest
+- [ ] 03-02-PLAN.md — Topic sidebar, landing view, provision cards with verbatim text
+- [ ] 03-03-PLAN.md — Filter bar (date range, company, remedy type), sort, filter chips
+- [ ] 03-04-PLAN.md — Full-text search (MiniSearch), scope toggle, cross-topic results
+- [ ] 03-05-PLAN.md — Visual verification checkpoint
 
 ### Phase 4: Company & Industry View
 **Goal**: A legal practitioner can browse enforcement actions by industry sector and understand how enforcement patterns — topics, remedy types, enforcement intensity — differ across sectors
@@ -98,6 +105,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Data Pipeline | 3/4 | Complete    | 2026-02-24 |
 | 2. Tab Shell + Analytics | 5/5 | Complete    | 2026-02-24 |
-| 3. Provisions Library | 0/TBD | Not started | - |
+| 3. Provisions Library | 0/5 | Not started | - |
 | 4. Company & Industry View | 0/TBD | Not started | - |
 | 5. Cross-Case Patterns | 0/TBD | Not started | - |
