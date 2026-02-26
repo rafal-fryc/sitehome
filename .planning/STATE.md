@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** A legal practitioner can find every FTC consent order provision relevant to a specific topic, with exact paragraph-level citations and source links, in under 30 seconds.
-**Current focus:** Phase 6 - Remedy Reclassification (v1.1)
+**Current focus:** Phase 7 - Pattern Condensing (v1.1)
 
 ## Current Position
 
-Phase: 6 of 9 (Remedy Reclassification)
-Plan: 06-02 (next -- awaiting user approval of proposed categories)
-Status: Awaiting user decision
-Last activity: 2026-02-26 -- Plan 06-01 complete (enum + proposal script + category analysis)
+Phase: 7 of 9 (Pattern Condensing)
+Plan: 07-01 (next)
+Status: Ready to plan
+Last activity: 2026-02-26 -- Phase 6 complete (remedy reclassification applied + rebuild)
 
-Progress: [###########.........] 56% (v1.0 complete, v1.1 plan 06-01 done)
+Progress: [############........] 62% (v1.0 complete, v1.1 phase 6 done)
 
 ## Performance Metrics
 
@@ -23,11 +23,12 @@ Progress: [###########.........] 56% (v1.0 complete, v1.1 plan 06-01 done)
 - Average duration: 3 min
 - Total execution time: 1.05 hours
 
-**v1.1 plans completed:** 1
+**v1.1 plans completed:** 2
 
 | Phase | Plan | Duration | Tasks | Files |
 |-------|------|----------|-------|-------|
 | 06 | 06-01 | 7 min | 4 | 6 |
+| 06 | 06-02 | 61 min | 5 | 323 |
 
 ## Accumulated Context
 
@@ -42,6 +43,10 @@ Recent decisions affecting current work:
 - [06-01]: classify-provisions.ts uses import not inline type -- updated prompt string for Order Administration
 - [06-01]: Added TOPIC_LABELS entry for order-administration in build-provisions.ts (manifest correctness)
 - [06-01]: Proposed 4 new + 2 existing-category reclassifications to reduce Other from 885 to ~32 (3.6%)
+- [06-02]: Rule-based classification (not LLM) for 885 provisions -- category field is deterministic signal
+- [06-02]: Consumer Notification covers disclosures, consent, opt-out, and data handling obligations
+- [06-02]: Consumer Redress covers refunds, restitution, credit monitoring, asset freeze provisions
+- [06-02]: 10 provisions remain as Other (1.1%) -- genuinely ambiguous, acceptable
 
 ### Pending Todos
 
@@ -49,10 +54,10 @@ None.
 
 ### Blockers/Concerns
 
-- User must approve proposed remedy categories before Plan 06-02 can proceed (see proposal output)
+None.
 
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 06-01-PLAN.md -- awaiting user approval of proposed categories
+Stopped at: Completed 06-02-PLAN.md -- Phase 6 complete
 Resume file: None

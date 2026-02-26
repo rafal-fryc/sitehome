@@ -22,7 +22,7 @@
 
 **Milestone Goal:** Improve data quality (remedy categories, pattern grouping) and add case-level insights (key takeaways, case provisions panel).
 
-- [ ] **Phase 6: Remedy Reclassification** - Reclassify 885 "other" provisions into meaningful remedy categories via build pipeline
+- [x] **Phase 6: Remedy Reclassification** - Reclassify 885 "other" provisions into meaningful remedy categories via build pipeline
 - [ ] **Phase 7: Pattern Condensing** - Merge similar patterns, prune low-value, sort by most recent example
 - [ ] **Phase 8: Case Provisions Panel** - Inline provisions modal in the industry tab for case-specific browsing
 - [ ] **Phase 9: Key Takeaways** - Claude-generated "what the business did wrong" summaries on case cards and provisions panel
@@ -42,7 +42,7 @@
 
 Plans:
 - [x] 06-01: Enum Foundation + Proposal Script (RMED-01, RMED-02, RMED-03) -- completed 2026-02-26
-- [ ] 06-02: Apply Reclassification + Rebuild Pipeline (RMED-04, RMED-05, RMED-06)
+- [x] 06-02: Apply Reclassification + Rebuild Pipeline (RMED-04, RMED-05, RMED-06) -- completed 2026-02-26
 
 ### Phase 7: Pattern Condensing
 **Goal**: Pattern browser shows a curated, navigable set of enforcement patterns instead of redundant variants and structural noise
@@ -102,7 +102,7 @@ Phases execute in numeric order: 6 -> 7 -> 8 -> 9
 | 3. Provisions Library | v1.0 | 5/5 | Complete | 2026-02-25 |
 | 4. Company & Industry View | v1.0 | 4/4 | Complete | 2026-02-25 |
 | 5. Cross-Case Patterns | v1.0 | 3/3 | Complete | 2026-02-25 |
-| 6. Remedy Reclassification | v1.1 | 1/2 | In progress | - |
+| 6. Remedy Reclassification | v1.1 | 2/2 | Complete | 2026-02-26 |
 | 7. Pattern Condensing | v1.1 | 0/0 | Not started | - |
 | 8. Case Provisions Panel | v1.1 | 0/0 | Not started | - |
 | 9. Key Takeaways | v1.1 | 0/0 | Not started | - |
