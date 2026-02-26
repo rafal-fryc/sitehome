@@ -33,8 +33,9 @@ type RemedyType =
   | "Recordkeeping"
   | "Prohibition"
   | "Order Administration"
+  | "Consumer Notification"
+  | "Consumer Redress"
   | "Other";
-// NOTE: Additional new categories will be added here in Plan 06-02 after user approval.
 
 // --- Paths ---
 const DATA_DIR = path.resolve("public/data/ftc-files");

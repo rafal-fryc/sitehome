@@ -34,6 +34,8 @@ type RemedyType =
   | "Recordkeeping"
   | "Prohibition"
   | "Order Administration"
+  | "Consumer Notification"
+  | "Consumer Redress"
   | "Other";
 
 interface ProvisionRecord {
@@ -384,6 +386,8 @@ const TOPIC_LABELS: Record<string, string> = {
   "recordkeeping": "Recordkeeping",
   "prohibition": "Prohibition",
   "order-administration": "Order Administration",
+  "consumer-notification": "Consumer Notification",
+  "consumer-redress": "Consumer Redress",
 };
 
 // --- Generate manifest.json ---

@@ -18,6 +18,8 @@ export const REMEDY_TYPE_OPTIONS: RemedyType[] = [
   "Recordkeeping",
   "Prohibition",
   "Order Administration",
+  "Consumer Notification",
+  "Consumer Redress",
   "Other",
 ];
 

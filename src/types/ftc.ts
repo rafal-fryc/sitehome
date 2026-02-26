@@ -73,6 +73,8 @@ export type RemedyType =
   | "Recordkeeping"
   | "Prohibition"
   | "Order Administration"
+  | "Consumer Notification"
+  | "Consumer Redress"
   | "Other";
 
 export type IndustrySector =

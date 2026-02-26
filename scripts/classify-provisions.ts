@@ -178,7 +178,7 @@ Classify this case and each provision using ONLY the enum values listed below. M
 
 Valid StatutoryTopics: COPPA, FCRA, GLBA, Health Breach Notification, CAN-SPAM, TCPA, TSR, Section 5 Only
 Valid PracticeAreas: Privacy, Data Security, Deceptive Design / Dark Patterns, AI / Automated Decision-Making, Surveillance, Financial Practices, Telemarketing, Other
-Valid RemedyTypes: Monetary Penalty, Data Deletion, Comprehensive Security Program, Third-Party Assessment, Algorithmic Destruction, Biometric Ban, Compliance Monitoring, Recordkeeping, Prohibition, Order Administration, Other
+Valid RemedyTypes: Monetary Penalty, Data Deletion, Comprehensive Security Program, Third-Party Assessment, Algorithmic Destruction, Biometric Ban, Compliance Monitoring, Recordkeeping, Prohibition, Order Administration, Consumer Notification, Consumer Redress, Other
 Valid IndustrySectors: Technology, Healthcare, Financial Services, Retail, Telecom, Education, Social Media, Other
 
 IMPORTANT NOTES:
