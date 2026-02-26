@@ -17,6 +17,7 @@ export const REMEDY_TYPE_OPTIONS: RemedyType[] = [
   "Compliance Monitoring",
   "Recordkeeping",
   "Prohibition",
+  "Order Administration",
   "Other",
 ];
 

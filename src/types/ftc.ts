@@ -72,6 +72,7 @@ export type RemedyType =
   | "Compliance Monitoring"
   | "Recordkeeping"
   | "Prohibition"
+  | "Order Administration"
   | "Other";
 
 export type IndustrySector =
