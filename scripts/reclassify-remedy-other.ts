@@ -223,6 +223,147 @@ function runApply(): void {
   );
 }
 
+// ─── WRITE MODE ────────────────────────────────────────────────────────────
+function runWrite(): void {
+  console.log("\n=== WRITE MODE ===");
+
+  // Load approved categories + classifications
+  let config: {
+    approved_categories: string[];
+    classifications: Record<string, string>; // "filename|provision_number" -> category
+  };
+  try {
+    config = JSON.parse(readFileSync(APPROVED_FILE, "utf-8"));
+  } catch {
+    console.error(`ERROR: Cannot read ${APPROVED_FILE}`);
+    console.error("Run --apply first, have Claude output the classification JSON,");
+    console.error("then add it to remedy-approved-categories.json under 'classifications'.");
+    process.exit(1);
+  }
+
+  const { approved_categories, classifications } = config;
+
+  if (!classifications || Object.keys(classifications).length === 0) {
+    console.error("ERROR: No 'classifications' key found in remedy-approved-categories.json");
+    console.error("Add Claude's classification output under the 'classifications' key.");
+    process.exit(1);
+  }
+
+  // Validate all mapped categories are approved
+  const unapproved = Object.entries(classifications)
+    .filter(([, cat]) => cat !== "Other" && !approved_categories.includes(cat))
+    .map(([key, cat]) => `${key} -> "${cat}"`);
+
+  if (unapproved.length > 0) {
+    console.error("ERROR: Unapproved categories found in classifications:");
+    unapproved.forEach((u) => console.error(`  ${u}`));
+    console.error("Fix the classifications to use only approved category names.");
+    process.exit(1);
+  }
+
+  // Count results by category
+  const categoryCounts: Record<string, number> = {};
+  for (const cat of Object.values(classifications)) {
+    categoryCounts[cat] = (categoryCounts[cat] ?? 0) + 1;
+  }
+
+  // Print summary
+  console.log("\n--- CLASSIFICATION SUMMARY ---");
+  console.log("New category assignments:");
+  Object.entries(categoryCounts)
+    .sort(([, a], [, b]) => b - a)
+    .forEach(([cat, count]) => console.log(`  ${cat}: ${count} provisions`));
+
+  const otherCount = categoryCounts["Other"] ?? 0;
+  const totalClassified = Object.keys(classifications).length;
+  const pctOther = ((otherCount / totalClassified) * 100).toFixed(1);
+  console.log(`\n  TOTAL classified: ${totalClassified}`);
+  console.log(`  Remaining "Other": ${otherCount} (${pctOther}% -- target <5%)`);
+
+  if (otherCount > totalClassified * 0.05) {
+    console.warn(
+      `\nWARNING: "Other" bucket is ${pctOther}% -- above the 5% target.`
+    );
+    console.warn(
+      "Consider reviewing flagged provisions or adding a category before proceeding."
+    );
+  }
+
+  // Confirm before write
+  console.log("\n--- CONFIRM WRITE ---");
+  console.log("About to write changes to source files in public/data/ftc-files/.");
+  console.log(
+    "This will update remedy_types for the classified provisions above."
+  );
+  console.log("\nProceed? (This confirmation is shown to the user -- await explicit approval.)");
+  console.log("When approved by user, the executor continues to the write step.");
+}
+
+// ─── WRITE-APPLY MODE ──────────────────────────────────────────────────────
+function runWriteApply(): void {
+  console.log("\n=== WRITE-APPLY MODE ===");
+
+  // Load approved categories + classifications
+  const config = JSON.parse(readFileSync(APPROVED_FILE, "utf-8"));
+  const classifications: Record<string, string> = config.classifications;
+
+  // Group classifications by filename
+  const byFile: Record<string, Record<string, string>> = {};
+  for (const [key, cat] of Object.entries(classifications)) {
+    const [filename, provision_number] = key.split("|");
+    if (!byFile[filename]) byFile[filename] = {};
+    byFile[filename][provision_number] = cat;
+  }
+
+  // Apply to each file
+  let filesModified = 0;
+  let provisionsUpdated = 0;
+  let skipped = 0;
+
+  for (const [filename, reclassifications] of Object.entries(byFile)) {
+    const filePath = path.join(DATA_DIR, filename);
+    let data: any;
+    try {
+      data = JSON.parse(readFileSync(filePath, "utf-8"));
+    } catch {
+      console.warn(`SKIP FILE: Cannot read ${filename}`);
+      continue;
+    }
+    const provisions: any[] = data.order?.provisions ?? [];
+
+    let changed = false;
+    for (const prov of provisions) {
+      const newCat = reclassifications[prov.provision_number];
+      if (newCat !== undefined) {
+        // Validate: provision must currently be purely "Other"
+        const current: string[] = prov.remedy_types ?? [];
+        if (!(current.length === 1 && current[0] === "Other")) {
+          console.warn(
+            `SKIP: ${filename}|${prov.provision_number} is not purely-Other (${JSON.stringify(current)}) -- skipping`
+          );
+          skipped++;
+          continue;
+        }
+        prov.remedy_types = [newCat]; // single value, still an array
+        provisionsUpdated++;
+        changed = true;
+      }
+    }
+
+    if (changed) {
+      writeJSONSafe(filePath, data);
+      filesModified++;
+    }
+  }
+
+  console.log(`\nWRITE COMPLETE:`);
+  console.log(`  Files modified: ${filesModified}`);
+  console.log(`  Provisions updated: ${provisionsUpdated}`);
+  if (skipped > 0) {
+    console.log(`  Skipped (not purely-Other): ${skipped}`);
+  }
+}
+
 // --- Entry point ---
 const mode = process.argv[2];
 
@@ -230,13 +371,23 @@ if (mode === "--propose") {
   runPropose();
 } else if (mode === "--apply") {
   runApply();
+} else if (mode === "--write") {
+  runWrite();
+} else if (mode === "--write-apply") {
+  runWriteApply();
 } else {
   console.error("Usage:");
   console.error(
-    "  npx tsx scripts/reclassify-remedy-other.ts --propose   # Step 1-2: analyze and propose categories"
+    "  npx tsx scripts/reclassify-remedy-other.ts --propose       # Step 1-2: analyze and propose categories"
   );
   console.error(
-    "  npx tsx scripts/reclassify-remedy-other.ts --apply    # Step 4-5: classify provisions (after approval)"
+    "  npx tsx scripts/reclassify-remedy-other.ts --apply        # Step 4-5: classify provisions (after approval)"
+  );
+  console.error(
+    "  npx tsx scripts/reclassify-remedy-other.ts --write        # Step 5: show summary, confirm before write"
+  );
+  console.error(
+    "  npx tsx scripts/reclassify-remedy-other.ts --write-apply  # Step 6: apply classifications to source files"
   );
   process.exit(1);
 }
