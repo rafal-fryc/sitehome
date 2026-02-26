@@ -1,161 +1,205 @@
 # Feature Landscape
 
-**Domain:** Legal enforcement database / regulatory provisions library
-**Product:** FTC Enforcement Provisions Library
-**Researched:** 2026-02-24
-**Overall confidence:** HIGH (domain grounded in known legal research tool conventions and direct examination of existing codebase and data)
+**Domain:** Legal enforcement database / regulatory provisions library (v1.1 milestone)
+**Product:** FTC Enforcement Provisions Library — Data Quality & Case Insights
+**Researched:** 2026-02-26
+**Overall confidence:** HIGH — grounded in direct codebase inspection, data analysis, and established legal research tool conventions
 
 ---
 
-## What Already Exists (Do Not Rebuild)
+## Context: What This Milestone Is Scoping
 
-Before categorizing features to build, these are already working in the current FTC Analytics page:
+This is a SUBSEQUENT MILESTONE on a shipped v1.0 product. The existing features (4-tab architecture, provisions library, patterns browser, industry tab, analytics) are not under scope. Four new features are being added:
+
+1. **Key takeaways** — "what the business did wrong" summaries per case
+2. **Remedy reclassification** — 280+ "other" remedies need proper categories (data shows 885 provisions in rt-other, concentrated in ~229 unique titles)
+3. **Pattern condensing** — merge similar patterns (12 assessment-pattern variants exist), prune low-value structural patterns (11 structural patterns with < 6 cases), sort by recency
+4. **Case provisions panel** — industry tab "View provisions" opens a modal/panel instead of navigating away
+
+---
+
+## Existing Features (Do Not Rebuild)
 
 | Feature | Status |
 |---------|--------|
-| Case-level grouping by year, administration, topic category | Done |
-| Bar chart + donut chart visualizations | Done |
-| Group detail view with case list | Done |
-| URL-driven state (mode + group params) | Done |
-| Overview stats (total cases, violation breakdown) | Done |
-| Law library aesthetic | Done |
-| Working FTC.gov source links per case | Done |
-| Keyword-based case-level topic classification | Done (to be replaced) |
-
-The milestone builds on and replaces this — it does NOT start from scratch.
+| 4-tab architecture (Analytics, Provisions, Patterns, Industries) | Done |
+| Topic-first provisions library with verbatim text, citations, search | Done |
+| Industry sector browsing with case cards and comparison | Done |
+| Cross-case pattern browser with timelines and word-level diff | Done |
+| Analytics dashboard with enforcement trend charts | Done |
+| Full-text search (MiniSearch) with topic/all-topics toggle | Done |
+| URL-driven state (tab, topic, sector, search query) | Done |
+| Classification pipeline (Claude at build time) | Done |
+| Remedy type taxonomy with 9 categories (+ "Other") | Done — Other bucket has 885 provisions needing reclassification |
 
 ---
 
 ## Table Stakes
 
-Features users expect when they arrive at a legal enforcement database. Missing = product feels incomplete or unprofessional.
+Features users expect from this milestone. Missing = the milestone delivers no real improvement over v1.0.
+
+### For Key Takeaways
 
 | Feature | Why Expected | Complexity | Notes |
 |---------|--------------|------------|-------|
-| Topic-first browsing | Primary mental model for legal research: "find everything the FTC has done on X topic" — not "browse by company" | Medium | Core differentiating architecture vs current analytics-first view |
-| Exact paragraph-level citations | Legal practitioners cannot use uncited sources; "Part II.A.3" matters as much as the substance | Low (data exists) | Paragraph refs already in JSON `source_paragraph` and provision numbering fields |
-| Quoted order language, verbatim | Practitioners quote consent orders directly in briefs/memos; paraphrases are useless | Low (data exists) | `quoted_text` field already present in requirements objects |
-| Working links to FTC.gov source documents | Verification requirement for any legal use; FTC.gov is the authoritative source | Low (data exists) | `ftc_url` exists per case already |
-| Case metadata with each provision | Who (company), when (date), what authority invoked — context that makes a provision usable | Low (data exists) | Case date, company name, legal authority all present |
-| Filtering within topic views | Finding relevant provisions in a topic set of 50+ requires filtering by date or company | Medium | Date range, company name, remedy type filters |
-| Sorting within topic views | Most recent first vs oldest first — two different research needs (current practice vs historical context) | Low | Date sort ascending/descending |
-| Visible provision categories | Structural type (prohibition, affirmative obligation, assessment) helps practitioners scan quickly | Low | Category field already exists on provisions |
-| Case count / provision count per topic | Tells practitioners how settled or sparse the enforcement record is on a topic | Low | Aggregation at build time |
-| Print/copy-friendly output | Legal research always ends up in a document; practitioners will copy-paste or print | Low-Medium | Clean layout, no layout-breaking elements in provision cards |
+| Brief "what they did wrong" summary on case cards | Industry cards show company name, year, violation type — no plain-English description of the conduct | Low (one new field) | Shown inline on CaseCard; 1-2 sentences max. Source data exists: `complaint.factual_background` and `complaint.counts[]` per case file |
+| Full takeaway on case detail or provisions panel | Practitioners need full context when drilling into a case's provisions | Low (same field, more space) | Displayed in the case provisions panel rather than on CaseCard |
+| Build-time generation (not runtime) | Consistent with established architecture; browser never calls Anthropic API | Medium (new pipeline script) | New `generate-takeaways.ts` script using Anthropic SDK, same pattern as `classify-provisions.ts` |
+| Takeaway stored in `ftc-cases.json` | All case-level data lives there; UI already fetches this file | Low (data shape extension) | Add `key_takeaway: string` field to `EnhancedFTCCaseSummary` |
+| Attribution that it is a generated summary | Legal practitioners are sensitive to AI-generated content; must not present as authoritative | Low | Small footnote or badge: "AI-generated summary from FTC complaint" |
+
+### For Remedy Reclassification
+
+| Feature | Why Expected | Complexity | Notes |
+|---------|--------------|------------|-------|
+| Meaningful category for every remedy provision | 885 provisions labeled "other" are unbrowsable; the rt-other shard is useless to practitioners | High (293 cases × provision review) | Claude proposes new categories at build time; existing pipeline re-run |
+| New categories that reflect actual content | Data analysis shows clear natural clusters: Order Administration, Consumer Notification, Consent/Opt-out, Data Retention/Deletion, Breach Notification, Cooperation with Assessor, Disclosure Requirements, Consumer Redress, Consumer Education | Medium (taxonomy design) | See Anti-Features for what NOT to do |
+| The rt-other shard shrinks substantially or disappears | Practitioners filtering by remedy type see no results for many topics today because everything is "other" | Medium (pipeline re-run) | After reclassification, rt-other should contain only genuinely unclassifiable provisions |
+| Reclassified provisions appear in correct remedy-type shards | Provisions re-emerge in filtered views (remedy type filter in Provisions tab) | Low (pipeline outputs automatically) | No UI changes needed if taxonomy is extended and pipeline re-run |
+
+### For Pattern Condensing
+
+| Feature | Why Expected | Complexity | Notes |
+|---------|--------------|------------|-------|
+| Merged assessment patterns | 12 variants of "Third-Party [Security/Privacy] Assessments" currently show as separate rows — this is noise | Medium (merge logic in build-patterns.ts) | Merge by semantic similarity, not just prefix; Claude-assisted or rule-based with manual list |
+| Merged acknowledgment patterns | 10 variants of order acknowledgment patterns (Order Acknowledgments, Acknowledgments of the Order, Order Delivery and Acknowledgment, etc.) appear separately; all are structural | Medium | One merged "Order Acknowledgment" structural group |
+| Pruned low-value structural groups | 11 structural patterns with 3-5 cases each (Annual Certifications, Fees and Costs, Submission Address, etc.) add clutter without informing legal research | Low (filter in build-patterns.ts) | Raise minimum threshold or explicitly suppress these |
+| Sort by most recent by default | Already implemented in build-patterns.ts — but may need re-validation after merge/prune changes | Low | Verify `most_recent_year` descending sort survives the changes |
+
+### For Case Provisions Panel
+
+| Feature | Why Expected | Complexity | Notes |
+|---------|--------------|------------|-------|
+| Provisions for a case accessible from industry tab without leaving | Current "View provisions" navigates to the Provisions tab (generic landing page, not the specific case) — this is a dead end | Medium (modal + data fetching) | The individual case file at `public/data/ftc-files/{case_id}.json` contains all provisions for that case; already fetched individually by the classify script |
+| Modal or side panel opens in-context | Practitioners comparing cases in the industry tab lose context when navigating away | Medium (modal component) | shadcn Dialog or Sheet component — both exist in the UI library |
+| Case provisions shown with verbatim text and citations | Same standard as the Provisions tab; practitioners expect this | Low (reuse ProvisionCard or a simplified version) | Can reuse existing `ProvisionCard` component or a simpler variant |
+| Panel is closeable and returns to case list | Basic modal UX | Low | shadcn Dialog handles this automatically |
+| Key takeaway shown in the panel header | First thing practitioners want to know: what did this company do? | Low (if takeaway field is already added) | Depends on key takeaways feature being implemented first |
 
 ---
 
 ## Differentiators
 
-Features that set this tool apart from the FTC's own case database and generic legal databases like Westlaw/LexisNexis.
+Features that elevate this beyond "data cleanup" into something genuinely more useful.
 
 | Feature | Value Proposition | Complexity | Notes |
 |---------|-------------------|------------|-------|
-| Three-axis taxonomy (statutory + practice area + remedy type) | No public FTC tool offers provision-level tagging across all three axes simultaneously. Practitioners can ask "show me COPPA data deletion requirements specifically" | High (classification build work) | Taxonomy must be built and applied in data pipeline |
-| Remedy type as a first-class filter | Practitioners building compliance programs specifically need "what does a comprehensive security program provision look like across cases" — no existing public tool does this at provision level | Medium | Requires remedy taxonomy + classification in build pipeline |
-| Enforcement trend charts by topic | Shows how FTC focus has shifted within a topic (e.g., how data security requirements became more specific 2017–2024) | Medium | Requires provision-level date data aggregated by topic |
-| Language evolution tracking | Shows how "comprehensive security program" boilerplate changed across enforcement eras — uniquely valuable for understanding FTC's current expectations | High | Cross-case provision text comparison; detect near-duplicate language |
-| Administration-era context on provisions | Annotates whether a provision was from an aggressive or restrained enforcement era, giving practitioners policy context | Medium | Administration data already exists; needs surface in provision UI |
-| Topic coverage summary ("what the FTC requires") | For each topic, a synthesized summary of what FTC consent orders consistently require — distilled from the provisions themselves | High | LLM-generated or manually authored; not strictly from structured data |
-| Industry sector drill-down | Enforcement patterns differ significantly between health, fintech, kids apps, retail — segmenting by industry makes the tool more actionable | High | Requires industry classification in build pipeline; not currently present |
-| Penalty / monetary remedy tracking | Visible monetary penalty amounts per case in context with topic — helps practitioners communicate regulatory financial exposure to clients | Medium | Penalty amount data needs to be added to or extracted from case JSON |
+| Factual-only takeaway framing ("what the FTC alleged") | Avoids the legal liability of AI legal advice; practitioners can trust AI-summarized complaint facts more than AI legal analysis | Low (prompt design) | Frame as: "The FTC alleged that [company] [conduct]..." — factual, not interpretive |
+| Pattern canonical variant selection improvement | Currently uses most-common title; after merging similar groups, a curator-selected canonical variant would be more informative | Medium | Could be a build-time configuration file (a JSON map of pattern-id → canonical-variant-index) |
+| Provisions panel shows case takeaway + provisions together | No existing legal research tool shows "what they did wrong" and "what they were required to do" side by side in one surface | Low (if data is present) | Unique combination unavailable in FTC's own case browser |
+| Newly categorized remedies (post-reclassification) exposed in filter UI | "Data Retention / Deletion", "Consumer Notification", "Consent / Opt-out" become first-class filter options instead of invisible | Low (update REMEDY_TYPE_OPTIONS constant) | The rt-other disappearing is a differentiator because it fills gaps in coverage |
 
 ---
 
 ## Anti-Features
 
-Features to deliberately NOT build for this milestone. Explicitly scoping out is as important as scoping in.
+Things to deliberately NOT build in this milestone.
 
 | Anti-Feature | Why Avoid | What to Do Instead |
 |--------------|-----------|-------------------|
-| Full-text search across all order language | Requires search index infrastructure (Fuse.js is possible but results are poor for legal text; Algolia/Meilisearch require a backend) — far exceeds scope, and topic-first browsing covers the primary use case | Use topic tagging as the discovery mechanism; full-text is v2 |
-| Side-by-side order comparison tool | Useful but is a separate product surface that requires significant UI investment and doesn't fit the topic-first mental model | Defer to v2 after provisions library proves value |
-| User accounts / saved searches / collections | This is a public reference tool, not a SaaS product; accounts add auth complexity, privacy obligations, and maintenance burden | Keep it stateless; practitioners can bookmark URLs since state is URL-driven |
-| Real-time FTC data sync | FTC doesn't publish a structured API; scraping is fragile; the data pipeline is intentionally offline and periodic | Manually update data pipeline when significant new cases arrive |
-| Commissioner voting records | Interesting but distinct research track from enforcement provisions; requires separate data model and adds complexity without serving the core "what did the FTC require" use case | Note as potential future feature; out of scope for provisions library |
-| Mobile-native features (swipe, offline, PWA) | Target users are attorneys at desks; responsive web is sufficient | Ensure responsive layout works, but no native mobile investment |
-| PDF export of full consent orders | FTC.gov already provides PDFs; duplicating this adds infra (PDF generation library), storage, and maintenance | Always link to FTC.gov source; never host document copies |
-| Alerts / email subscriptions for new cases | Requires backend (email service, job scheduler, user management); outside the static-site architecture | Out of scope; practitioners can manually revisit when needed |
-| AI-generated legal advice / summaries beyond description | Generates liability concerns; practitioners already distrust AI legal analysis; factual descriptions of what provisions require are appropriate, interpretive advice is not | Present what the order says, not what it means for the user's situation |
+| Runtime LLM calls for takeaway generation | Every page load would depend on Anthropic API availability and response latency — breaks the static-first architecture | Generate at build time in a new pipeline script, store in `ftc-cases.json` |
+| AI-generated legal analysis or interpretation | Introduces liability; practitioners distrust AI legal advice; FTC complaint facts are sufficient | Present verbatim complaint facts with a 1-2 sentence summary preamble only |
+| Manual curation of all 885 "other" provisions | 885 provisions at human review time is months of work; entirely defeats the purpose | Use Claude to propose categories at build time; human reviews the category taxonomy, not individual provisions |
+| New top-level remedy categories for one-off provisions | Adding "Taxpayer Identifying Number Disclosure" as a remedy category would fragment the taxonomy past usability | Consolidate into broader categories (e.g., "Disclosure Requirements") even if imperfect |
+| A separate "case detail page" as a new route | Adds routing complexity; the case provisions panel (modal/sheet) achieves the same goal without a URL change | Use shadcn Dialog or Sheet in-place |
+| Showing all 293 case takeaways on the industry sector landing page | Volume overwhelms; the list is already paginated by sector | Show takeaway only in the case provisions panel (detail context), not on the card list |
+| Fuzzy text similarity for pattern merging at build time | Fuse.js or cosine similarity on 2,194 provision texts is computationally expensive and produces noisy merges at this scale | Use a curated merge map (explicit list of pattern IDs to merge) or Claude-proposed groupings for the specific similar sets identified in data analysis |
+| Keeping structural patterns in the condensed browser | Structural patterns (recordkeeping, compliance reporting, etc.) are not what practitioners research; they add noise | Add a toggle to hide structural patterns by default in the patterns browser (or prune the worst ones entirely from the output file) |
+| Rebuilding the existing provisions browser | v1.0 provisions browser is working; this milestone is about data quality, not UI rework | Data pipeline changes feed the existing UI automatically |
 
 ---
 
 ## Feature Dependencies
 
 ```
-Provision-level topic classification (build pipeline)
-  └── Topic landing page (browse by topic)
-        └── Filtering within topic views (date, company, remedy type)
-              └── Trend charts by topic (requires date + topic aggregation)
+Feature A → Feature B (B requires A)
 
-Remedy type taxonomy (build pipeline)
-  └── Remedy type filter on topic views
-  └── Trend charts by remedy type
+generate-takeaways.ts pipeline script
+  └── key_takeaway field added to EnhancedFTCCaseSummary type
+        └── Key takeaway shown in CaseCard (brief)
+        └── Key takeaway shown in Case Provisions Panel (full)
 
-Industry sector classification (build pipeline)
-  └── Industry sector drill-down view
+Case Provisions Panel (modal/sheet)
+  └── Fetches individual case file: public/data/ftc-files/{case_id}.json
+        └── Renders provisions from order.provisions[] in that file
+        └── Optionally shows key_takeaway from ftc-cases.json (depends on takeaways feature)
 
-Language evolution tracking
-  └── Provision-level topic classification (need topics to group by)
-  └── Boilerplate detection algorithm (needs cross-case text comparison)
+Remedy reclassification
+  └── Extended RemedyType union in src/types/ftc.ts
+        └── Updated REMEDY_TYPE_OPTIONS constant
+              └── classify-provisions.ts re-run (or new reclassify-remedies.ts script)
+                    └── build-provisions.ts re-run → new/updated rt-* shard files
+                          └── manifest.json updated with new remedy type counts
+                                └── Provisions tab remedy type filter shows new categories automatically
 
-Case detail page (individual case deep-dive)
-  └── Provision detail cards with full quoted text
-  └── Links to FTC.gov source document
+Pattern condensing
+  └── build-patterns.ts updated (merge logic, prune logic, sort validation)
+        └── ftc-patterns.json regenerated with fewer, better patterns
+              └── FTCPatternsTab renders smaller, more useful set automatically
 ```
 
-**Critical path dependency:** Everything in the provisions library depends on the data pipeline producing provision-level topic tags. This is the first thing to build — all UI surfaces are blocked until classification is available.
+**Critical path for takeaways:** The `key_takeaway` field must be generated and stored in `ftc-cases.json` before any UI work begins. All UI surfaces that show takeaways depend on this data being present.
+
+**Critical path for provisions panel:** The individual case files (`ftc-files/{id}.json`) already exist and have the right structure (`order.provisions[]`). The modal only needs to fetch and render them — no pipeline work required unless takeaways need to be shown.
+
+**Reclassification is independent:** Remedy reclassification is a pure data pipeline change. No UI work is required — the existing Provisions tab remedy filter already reads from shard files. New shards appear in the filter automatically.
+
+**Pattern condensing is independent:** A pure build script change. The PatternsTab renders whatever is in `ftc-patterns.json` — fewer, better patterns just render as a better UI automatically.
 
 ---
 
-## MVP Recommendation
+## MVP Recommendation for v1.1
 
-The minimum coherent product that delivers the core value proposition:
+The minimum coherent delivery that achieves the milestone goal (data quality + case insights):
 
-**Prioritize (Phase 1 - Data Foundation):**
-1. Provision-level topic classification in build pipeline — assigns statutory topic + practice area + remedy type tags to each provision
-2. Aggregated provisions data structure emitted by build pipeline — topic → [provisions with case context]
+**Build first (data pipeline):**
+1. Remedy reclassification — the highest-leverage improvement: 885 provisions become browsable. Low UI cost, high practitioner value.
+2. Pattern condensing — merge the 12 assessment variants into 3-4, merge acknowledgment variants into 1, prune the 11 structural outliers. Low risk, clear criteria.
 
-**Prioritize (Phase 2 - Core Library UI):**
-3. Topic landing page — select a topic and see all provisions across 20+ years
-4. Provision detail cards — quoted text, paragraph citation, case name/date, FTC.gov link
-5. Date sort (newest first default) and date range filter within topic views
+**Build second (UI):**
+3. Case provisions panel — practitioners can drill from the Industry tab into a specific case's provisions without losing context. Moderate UI work, standalone value.
+4. Key takeaways — show factual complaint summary on the case provisions panel. Requires pipeline work + UI change, but the pipeline is analogous to classify-provisions.ts and the UI work is small once the panel exists.
 
-**Add early if complexity is low:**
-6. Provision count per topic on the topic selector screen
-7. Case metadata visible on each provision card (company, year, administration)
-
-**Defer (Phase 3+):**
-- Remedy type as a filter (needs taxonomy built first)
-- Enforcement trend charts by topic (needs provision-date aggregation)
-- Language evolution / boilerplate tracking
-- Industry sector drill-down
-- Administration-era context annotations
+**Phase the work this way because:**
+- Remedy reclassification and pattern condensing are pure data changes with no UI risk — they make everything else better and can ship first
+- Case provisions panel is standalone; its value does not depend on takeaways
+- Takeaways are the most complex piece (new pipeline script + LLM calls + new data field + UI) and should be built last when the panel is ready to display them
 
 ---
 
-## Research Notes on Legal Research Tool Conventions
+## Data Reality Notes
 
-The following reflects established conventions in legal research tools (Westlaw, LexisNexis, Bloomberg Law, CourtListener, agency-specific enforcement databases) that set practitioner expectations:
+These are grounded findings from direct data analysis, not assumptions:
 
-**Citation is king.** Practitioners cannot use a source they cannot cite. Every provision card must include: case name, docket number, order paragraph number, and a working link. Missing any of these makes the tool unusable for professional work.
+| Finding | Implication |
+|---------|-------------|
+| 885 provisions in rt-other (not 280 as initially stated) | Reclassification scope is larger; Claude batch classification is definitely necessary |
+| 229 unique titles in rt-other | Most are clusterable into ~8-10 new remedy categories |
+| ~585 of the 885 "other" provisions are order administration items (duration, termination, acknowledgment, jurisdiction) | A new "Order Administration" category would absorb the majority; this is low-controversy |
+| 12 assessment-related patterns exist as separate groups | A single merge pass with explicit ID list would reduce to 3-4 meaningful groups |
+| 10 acknowledgment-pattern variants exist as separate structural groups | Could merge into 1; all are structural boilerplate |
+| 11 structural patterns have < 6 cases | These are noise; prune by raising the structural minimum threshold to 6 |
+| Individual case files (`ftc-files/{id}.json`) have `order.provisions[]` with full verbatim text | Case provisions panel can be built without any pipeline changes — just fetch and render |
+| Case files have `complaint.factual_background` and `complaint.counts[]` | Rich source material for key takeaways generation exists in every case file |
 
-**Verbatim text, not paraphrase.** Legal meaning lives in exact words ("shall" vs "must", "material" vs "significant"). Summaries can introduce error. Show the actual order language, put summaries secondary.
+---
 
-**Chronological defaults.** In enforcement databases, the default sort is almost always newest-first (current practice), with oldest-first available (historical trend). This matches how practitioners think: "what is the FTC requiring today" before "how did this evolve."
+## Research Notes on Legal Research Tool Conventions (v1.1 Focus)
 
-**Topic/subject matter as primary axis.** Practitioners research by legal issue, not by company. Company-first browsing (searching for what happened to Facebook) is secondary to topic-first (finding every COPPA children's data deletion provision). The current analytics page is company/year-first; the provisions library inverts this correctly.
+**Case summarization in legal tools:** Tools like CourtListener, Casetext, and Bloomberg Law use AI summarization for case headnotes and summaries but consistently present them as "AI-generated" and factual only. They never assert legal conclusions from summaries. The FTC consent order context is easier than case law because the complaint itself states the alleged misconduct plainly — a good takeaway can be directly derived from `complaint.factual_background` and `complaint.counts[].representation` without interpretation.
 
-**Scannability over density.** Legal research tools that cram too much on screen slow practitioners down. Cards with clear hierarchy (provision title → case name/date → quoted text → citation) outperform dense tables for this use case.
+**Remedy taxonomy:** Legal databases (Westlaw KeyCite, Bloomberg Law topic classifiers) typically have 15-30 remedy categories for regulatory enforcement databases. The current taxonomy (9 categories + Other) is sparse. Adding 6-8 new remedy types is consistent with industry norms and fills the gaps. The key is that every category must be browsable and meaningful — no category should have < 10 provisions.
 
-**Permanence of URLs.** Legal citations must be linkable and stable over time. The existing URL-driven state pattern is the right call — practitioners will link to specific topic views in memos and emails.
+**Pattern browsers in legal databases:** The closest analogue is Westlaw's "Citing References" view and Bloomberg's "By Frequency" filter on citing cases. These tools surface the most-cited/most-used language, not all variants. The pattern browser currently shows 126 patterns; condensing to 80-90 meaningful ones with proper merge logic matches industry precedent for "most useful" over "most complete."
+
+**Modal/inline detail in legal tools:** Bloomberg Law and Westlaw both use slide-in panels for case detail previews — users can review a case's content without navigating away from search results. The case provisions panel mirrors this pattern exactly. It is table stakes for research tools at this maturity level.
 
 ---
 
 ## Sources
 
-- Direct codebase analysis: existing FTC Analytics implementation, data model, and build pipeline
-- JSON data examination: `public/data/ftc-files/01.05_assail.json` — confirmed provision structure, citation data, quoted text fields
-- Project requirements: `.planning/PROJECT.md` (validated requirements list)
-- Domain knowledge: established conventions of Westlaw, LexisNexis, Bloomberg Law, CourtListener, and FTC's own case proceedings browser
-- FTC enforcement database conventions: FTC.gov/enforcement case proceedings UI (known from training; confidence HIGH for UI conventions, MEDIUM for recent UI changes since August 2025)
+- Direct codebase analysis: `src/types/ftc.ts`, `src/components/ftc/industry/CaseCard.tsx`, `src/components/ftc/FTCIndustryTab.tsx`, `scripts/build-patterns.ts`, `scripts/classify-provisions.ts`
+- Data inspection: `public/data/ftc-patterns.json` (126 patterns, 2,194 variants), `public/data/provisions/rt-other-provisions.json` (885 provisions, 229 unique titles), `public/data/provisions/manifest.json` (2,783 total provisions across 293 cases)
+- Case file structure: `public/data/ftc-files/01.10_onyx_graphics.json` — confirmed `complaint.factual_background`, `complaint.counts[]`, `order.provisions[]` structure
+- Domain knowledge: Established conventions of Bloomberg Law, Westlaw, CourtListener, Casetext — case summarization, remedy taxonomy, pattern browsers, inline case detail panels
+- Confidence: HIGH — all feature scope directly grounded in existing data and code; no speculative dependencies

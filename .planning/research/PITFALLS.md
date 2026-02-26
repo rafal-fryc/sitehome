@@ -1,260 +1,286 @@
 # Domain Pitfalls
 
 **Domain:** Legal enforcement database / regulatory provisions library
-**Product:** FTC Enforcement Provisions Library (Milestone 2)
-**Researched:** 2026-02-24
-**Research Mode:** Pitfalls dimension — specific to data classification pipelines, legal research tools, and client-side analytics over structured datasets
+**Product:** FTC Enforcement Provisions Library — v1.1 Data Quality & Case Insights
+**Researched:** 2026-02-26
+**Research Mode:** Pitfalls dimension — specific to LLM-generated summaries, taxonomy reclassification, pattern condensing, and modal UI added to an existing working system
+
+---
+
+## Scope Note
+
+This document covers pitfalls **specific to the four v1.1 features** being added to a working v1.0 system: key takeaways (LLM-generated), remedy reclassification (280 "other" remedies), pattern condensing (126 → fewer patterns), and case provisions panel (modal in industry tab). Generic pitfalls from v1.0 research (keyword classification, file size, URL validity) are documented in the original PITFALLS.md and are not repeated here.
 
 ---
 
 ## Critical Pitfalls
 
-Mistakes that cause rewrites, produce legally misleading output, or block the entire provisions library from working.
+Mistakes that cause rewrites, destroy data integrity, or produce legally misleading output.
 
 ---
 
-### Pitfall 1: Keyword Matching That Reads Across Case Boundaries ("Privacy" Classifies Everything)
+### Pitfall 1: Remedy Reclassification Breaks the Existing Provisions Sharding System
 
-**What goes wrong:** The existing `classifyCategories` function runs keyword matching against `factual_background`, which is a dense block of English prose. When you extend this same approach to provision-level classification, the word "privacy" appears in nearly every data-related consent order — in phrases like "privacy policy violations," "privacy representations," "privacy practices of the company," and as boilerplate in monitoring/reporting provisions. The result: 70-80% of provisions get tagged as "Privacy / Deceptive Privacy Practices" regardless of their actual topic, collapsing the three-axis taxonomy into noise.
+**What goes wrong:** The `rt-other` shard currently contains 885 provisions classified as `Other` remedy type. Reclassifying these into new categories (e.g., "Civil Procedure", "Order Administration", "Injunction Relief") means adding new values to the `RemedyType` union type in `src/types/ftc.ts`. But `build-provisions.ts` writes remedy-type shards keyed by the `remedy_types` array on each provision record in the source JSON files (`public/data/ftc-files/*.json`). Adding a new `RemedyType` value without simultaneously updating (1) the TypeScript union, (2) the `TOPIC_LABELS` map in `build-provisions.ts`, (3) the `ValidRemedyTypes` enum in `classify-provisions.ts`'s prompt, and (4) re-running the full `build:provisions` pipeline results in a broken manifest where new categories appear in the shard directory but not in `manifest.json`, or appear with an unlabeled `"other"` fallback label. The UI then silently shows an unlabeled filter option.
 
-**Why it happens:** Provision text and factual background text serve different purposes. Factual background describes what the company did. Provision text describes what the company must now do. The signal for topic classification is different: for a provision, the legal_authority field is authoritative (it names the statute precisely), but the provision's own quoted_text and requirements[].description contain boilerplate that appears in every order regardless of topic.
+**Why it happens:** The remedy taxonomy is encoded in four places: the TypeScript union type, the prompt enum, the label map, and implicitly in the manifest. These four are manually kept in sync. When reclassification adds new values mid-process (e.g., Claude proposes "Order Administration" as a category), only the source JSON files get updated — the build pipeline constants are forgotten.
 
 **Consequences:**
-- Topic-first browsing returns hundreds of "Privacy" provisions on every topic page because the label is too broad
-- Three-axis taxonomy appears populated but is actually collapsed — practitioners get noise, not signal
-- Users cannot distinguish COPPA, GLBA, Health Breach, and generic Privacy cases from each other
-- Classification work must be redone after UI is built, causing cascading data model changes
+- New remedy categories appear in provision shards but have no label in the manifest — UI displays blank badges
+- TypeScript compile errors if new values are added to source JSON but not to the `RemedyType` union
+- Old `rt-other-provisions.json` shard still exists and is still referenced by cached manifests — counts show double-counting if users loaded the page between pipeline runs
+- Re-running classification on already-classified files requires disabling idempotency check (`isAlreadyClassified`), which could wipe existing good classifications if the script errors mid-run
 
 **Prevention:**
-1. **Classify provisions against structured fields first, prose second.** For statutory topic: use the case's `legal_authority` string, which is highly specific ("Children's Online Privacy Protection Act, 15 U.S.C. § 6502" is unambiguous). For remedy type: use `provision.category` (already structural: `prohibition`, `affirmative_obligation`, `assessment`, `compliance_reporting`, `recordkeeping`, `monitoring`) plus provision title keywords ("security program," "algorithmic destruction," "data deletion"). Prose matching is a fallback, not the primary signal.
-2. **Treat "Privacy" as a residual category, not a match condition.** If no more specific statutory match fires, then "Privacy" is appropriate. If a more specific match fires (COPPA, GLBA, FCRA, Health Breach), do not additionally tag "Privacy."
-3. **Test classification with specific queries before building UI.** Before any UI work begins, verify that a query like `topic=COPPA` returns only COPPA-specific provisions, not every provision from a case where COPPA was one of several charges. Build a classification test script that outputs per-topic counts — if "Privacy" count exceeds "Data Security" count by 10x, something is wrong.
+1. **Establish a "taxonomy change protocol" before any reclassification run.** The sequence must be: (a) finalize the new `RemedyType` enum values with their display labels, (b) update `src/types/ftc.ts` union, (c) update `TOPIC_LABELS` in `build-provisions.ts`, (d) update the `Valid RemedyTypes` list in the classification prompt, (e) only then run classification on the 280 "other" provisions.
+2. **Do not ask Claude to propose new category names at runtime.** Use a fixed pre-approved list. Claude-proposed names at classification time will be inconsistent across 280 calls — "Civil Penalties" on one case, "Civil Penalty Order" on another, "Penalty Provisions" on a third. Define the closed enum first, then classify into it.
+3. **Back up source JSON files before running reclassification.** The script writes directly to `public/data/ftc-files/*.json`. A mid-run crash can leave files in a partially-classified state. Use git to commit the pre-reclassification state as a checkpoint.
+4. **After reclassification, delete old shard files before re-running `build:provisions`.** Stale `rt-other-provisions.json` will not be overwritten if the `other` category becomes empty — it must be explicitly removed.
 
-**Detection (warning signs):**
-- Topic selector shows 60%+ of provisions under a single "Privacy" bucket
-- The "Data Security" topic and "Privacy" topic have nearly identical provision lists
-- Provisions from telemarketing cases (TSR violations) appear under "Privacy"
+**Warning signs:**
+- Running `build:provisions` logs `TOPIC_LABELS` warnings for unmapped slugs
+- TypeScript shows `Type '"Order Administration"' is not assignable to type 'RemedyType'` errors
+- `manifest.json` contains shard entries without a `label` field set by `TOPIC_LABELS`
+- The UI's remedy type filter shows a blank entry or an unlabeled badge
 
-**Phase:** Address in the data pipeline phase (before any UI is built). Classification correctness is a prerequisite for every downstream feature.
+**Phase:** Remedy reclassification pipeline phase. Must complete taxonomy design before touching any source files.
 
 ---
 
-### Pitfall 2: Flat Provisions File Grows to 10-15 MB, Breaking Page Load
+### Pitfall 2: LLM-Generated Takeaways Hallucinate Specific Facts About the Case
 
-**What goes wrong:** The STACK.md estimates ~7.5 MB for a flat `ftc-provisions.json` that includes all 293 cases' provisions with denormalized quoted_text. This estimate assumes ~5,000 provisions at ~1,500 bytes each. The actual Grep count shows 9,224 `quoted_text` fields across 292 files — each `quoted_text` in a requirement averages 300-500 characters, but provision-level `summary` fields add another 200-400 characters, and denormalized case metadata (company_name, factual_background excerpt, legal_authority) adds more. The real file may be 12-18 MB uncompressed and 2.5-4 MB gzipped. At 3-4 MB of blocking JSON, first load on a 10 Mbps connection (common for practitioners working on VPN or from courts) is 2.5-3 seconds just for the provisions payload — before any rendering.
+**What goes wrong:** Each FTC case has a `factual_background` field with prose describing what the company did. Claude is asked to generate 2-3 sentence takeaways. The hallucination risk is not generic fabrication — it is **plausible-but-wrong specifics**: wrong dollar amounts for civil penalties, wrong years, wrong statute names, wrong company descriptions. A takeaway that says "Respondent paid $1.2 million" when the actual penalty was $500K, or one that says "COPPA violation" for a Section 5 case, undermines attorney trust immediately. Legal practitioners will spot these errors and distrust the entire tool.
 
-**Why it happens:** The temptation is to emit one flat file containing everything the UI might need, because it's simple. But quoted_text is verbose. The `09.25_pornhubmindgeekaylo.json` file alone has 119 `quoted_text` instances, and `05.24_cerebral_and_kyle_robertson.json` has 87. The heaviest cases drive total file size disproportionately.
+**Why it happens:** The existing `factual_background` field was generated by an earlier LLM extraction pass, not transcribed from the source PDF. It may already contain errors. When a second LLM pass generates takeaways from an already-hallucinated input, errors compound. The generation step has no access to the ground truth consent order — it operates entirely from extracted JSON.
 
 **Consequences:**
-- Provisions library feels slow compared to the existing FTC Analytics page (which loads a 362 KB JSON)
-- Users notice the loading spinner — practitioners expect Westlaw/LexisNexis speeds
-- Vercel's free tier serves large assets fine, but the browser parse time for 10-18 MB of JSON is additional latency on top of download time
+- Practitioners quote an incorrect civil penalty figure from a takeaway in a client memo
+- Tool loses credibility with the exact audience (attorneys) who are most likely to verify against primary sources
+- No mechanism exists to detect hallucinations at generation time — errors persist silently in static JSON
 
 **Prevention:**
-1. **Split the flat provisions output by topic at build time.** Instead of `ftc-provisions.json`, emit `ftc-provisions-data-security.json`, `ftc-provisions-coppa.json`, etc. Each file is only loaded when a user navigates to that topic. A topic like "Data Security" may have 80-120 provisions; its file is 500-800 KB compressed — loads in under 100ms.
-2. **Keep the summary index separate from provision detail.** `ftc-provisions-index.json` contains provision titles, case names, dates, topic tags, and paragraph citations (everything needed to render the topic landing page and enable filtering). `ftc-provisions-detail/{id}.json` contains the full quoted_text (loaded on demand when a practitioner clicks a provision for detail). This is a lazy-loading pattern.
-3. **The build pipeline should emit file size stats** so size regressions are detected immediately, not after the UI is built.
+1. **Constrain takeaway generation to verifiable structured fields, not prose.** The takeaway should synthesize: `legal_authority` (the actual statute), `case_info.violation_type` (deceptive/unfair), provision titles (what was required), and `complaint_counts` (number of charges). These fields are structured and were extracted from headers and structured sections — less prone to OCR errors than narrative prose. Do not ask Claude to invent detail beyond what these fields contain.
+2. **Produce takeaways in a structured format, validate against source fields.** Generate JSON: `{"violation_summary": "...", "key_provisions": ["...", "..."], "statute": "..."}`. After generation, programmatically verify that the `statute` field matches `legal_authority` and that `key_provisions` map to actual provision titles. Reject and retry if validation fails.
+3. **Label all takeaways as AI-generated in the UI.** Show a small indicator: "AI-generated summary — verify against source order." This is not a disclaimer that undermines the feature; it is industry-standard practice for AI-assisted legal research tools (see Westlaw AI, Casetext CARA).
+4. **Generate takeaways from the most specific fields available.** The `legal_authority` field ("Children's Online Privacy Protection Act, 15 U.S.C. § 6502(a)") is authoritative and should be quoted directly in the takeaway for the statute citation. Do not paraphrase statutory authority.
 
-**Detection (warning signs):**
-- `ftc-provisions.json` exceeds 5 MB uncompressed
-- Chrome DevTools Network tab shows provisions JSON as the largest single payload
-- Users report "slow to load" on the provisions browsing page but not on the existing analytics page
+**Warning signs:**
+- Generated takeaway mentions a civil penalty amount not present in any structured field
+- Takeaway attributes a COPPA violation to a company whose `legal_authority` field shows only "Section 5 of the FTC Act"
+- Dry run of generation on 10 cases produces 2+ takeaways that cannot be verified against source data
 
-**Phase:** Address in the data pipeline phase when designing the output format. Retrofitting the file structure after UI is built requires changing every fetch call.
+**Phase:** Key takeaways pipeline phase. Build validation into the generation script before running on all 293 cases.
 
 ---
 
-### Pitfall 3: Provision Citations Are Wrong Because the JSON Source Is an Imperfect Extraction
+### Pitfall 3: Pattern Condensing Permanently Destroys the Merge-Target's Identity
 
-**What goes wrong:** The JSON data was generated by an offline LLM extraction pipeline from consent order PDFs. The `quoted_text` fields contain transcription artifacts — scan errors, OCR artifacts, and extraction inconsistencies visible in the Assail sample ("The Defendat is affliated with Masterard, any other credit card or debit card company, or a ban or other financial institution;" — "Defendat," "affliated," "Masterard," "ban" are all extraction errors). If this garbled quoted text appears verbatim in a provision card labeled as an FTC citation, a practitioner will immediately recognize it as wrong and distrust the entire tool.
+**What goes wrong:** The current 126 patterns were produced by title normalization (stripping punctuation, lowercasing) plus a prefix-merge heuristic (`build-patterns.ts`). Merging similar patterns in v1.1 (e.g., merging "Comprehensive Security Program" (33 cases), "Mandated Information Security Program" (4 cases), "Mandated Data Security Program" (3 cases), and "Comprehensive Privacy Program" (4 cases) into a single pattern) produces a larger group but destroys the individual pattern identities. The problem: **once you write the condensed `ftc-patterns.json`, the original groupings are gone**. There is no incremental undo. The source data (provision shards) still exists, but reconstructing which provisions belonged to which pre-merge pattern requires re-running `build-patterns.ts` from scratch.
 
-**Why it happens:** PDF-to-text extraction of legal documents is lossy. Consent orders use multi-column layouts, footnotes, special characters, ligatures, and small fonts that confuse OCR. The extraction pipeline accepted its output at face value. The data is good enough for case-level categorization and analytics (where individual word errors don't matter) but inadequate for presenting verbatim quotations as authoritative legal citations.
-
-**Consequences:**
-- Practitioner quotes garbled text in a memo and is corrected or embarrassed
-- Tool loses credibility immediately with the target audience (attorneys who will spot errors in seconds)
-- Error correction is a manual/semi-automated process across hundreds of files — cannot be fixed programmatically without re-extracting from source PDFs
-
-**Prevention:**
-1. **Visually distinguish "extracted text" from "verified quotation."** Label provision quoted_text as "Extracted language — verify against source order" and make the FTC.gov link the prominent primary CTA ("Read the full order at FTC.gov"). Do not present extracted text with the same visual treatment as a verified legal citation.
-2. **Surface the `confidence` field already in the data.** Requirements objects already have `"confidence": 1.0` or lower values. When `confidence < 0.9`, add an explicit "Low confidence extraction" indicator on the provision card. Practitioners then know to double-check.
-3. **In the provision detail card UI, always show the paragraph reference AND the FTC.gov link as equal-weight elements.** Never show quoted text without the clickable source link adjacent to it.
-4. **Do not claim this is a citeable legal database.** The tool header/about text should be explicit: "Provision text extracted from consent orders via automated pipeline. Always verify against the official order document." This is a disclosure, not a caveat that undermines the tool — it's what responsible legal tech does.
-
-**Detection (warning signs):**
-- Provision cards showing misspelled words in "quoted" order language
-- `confidence` field below 1.0 on more than 10% of requirements objects
-- Requirements with garbled words visible in the raw JSON (already confirmed in Assail sample)
-
-**Phase:** Address in the UI design phase (provision card component). Also requires a documentation/disclaimer phase. Does NOT require fixing the underlying JSON (that would require re-running the extraction pipeline).
-
----
-
-### Pitfall 4: Three-Axis Taxonomy That Does Not Match How Practitioners Actually Search
-
-**What goes wrong:** The PROJECT.md defines three axes: Statutory (COPPA, FCRA, GLBA, etc.), Practice Area (Privacy, Data Security, Deceptive Design, AI/ADM, Surveillance), and Remedy Type (Monetary Penalties, Algorithmic Destruction, Data Deletion, etc.). The pitfall is that Statutory and Practice Area heavily overlap — a COPPA case is always a Privacy/Children's Privacy case; a GLBA case is always a Data Security/Financial Privacy case. This creates a taxonomy that looks comprehensive but doubles user confusion: should they click "COPPA" or "Children's Privacy" to find children's data cases? If both exist as separate navigation entries, practitioners will try both and get frustrated when they find nearly identical result sets.
-
-**Why it happens:** Three axes sounds thorough in planning. In practice, legal practitioners have two distinct mental models: (1) statutory/regulatory authority ("what law applies"), and (2) what the order requires them to do ("what must we implement"). The Practice Area axis sits between these and belongs to neither — it's a categorization layer that makes sense to researchers but not to practitioners researching compliance program requirements.
+**Why it happens:** `build-patterns.ts` runs a one-way transformation: provisions in → pattern groups out. The output does not record which merge operations were performed. Condensing is implemented as a post-processing step that modifies the pattern output file, but the logic lives only in the script, not in the data.
 
 **Consequences:**
-- Topic selector has 25+ entries, many of which practitioners cannot distinguish
-- "Data Security" (practice area) and "FCRA" (statutory) both return cases with security program provisions, and practitioners don't know which to use
-- Taxonomy grows unwieldy; maintenance becomes expensive as new cases don't cleanly fit existing categories
+- A merged "Information Security Program" pattern with 44 variants loses the timeline signal — early "Mandated Information Security Program" language (2004-2010) and later "Comprehensive Privacy Program" language (2018-2024) belonged to distinct enforcement eras and should not share a timeline
+- The word-level diff feature (`TextDiff.tsx` using `jsdiff`) is most meaningful when comparing provisions that are semantically related; merging unrelated "other" patterns produces diffs that compare apples to oranges
+- Practitioners using the chronological evolution view see a nonsensical "evolution" of a merged pattern
 
 **Prevention:**
-1. **Reduce to two orthogonal axes: Statutory Authority and Remedy Type.** These are non-overlapping. A case's statutory authority is specific and clear from the `legal_authority` field. The remedy type is what the order actually requires (not what law it's under). Drop the Practice Area axis or collapse it into Statutory.
-2. **Make the topic selector opinionated about primary entry points.** Instead of listing all 25 taxonomy entries equally, group them: "Browse by statute" (COPPA, FCRA, GLBA, Section 5 FTC Act, TCPA...) and "Browse by what the FTC required" (Data deletion, Security program, Monetary penalty, Algorithmic destruction...). Two clear entry points, not a flat list.
-3. **Validate the taxonomy against real practitioner questions before implementing.** The two real questions practitioners ask: "What has the FTC required under COPPA?" (statutory axis) and "What does a comprehensive security program provision actually say?" (remedy type axis). Test whether both axes answer distinct questions before building both.
+1. **Commit the current `ftc-patterns.json` to git before any condensing operation.** This creates a recoverable state. The file is 4.0 MB — Git handles it fine.
+2. **Define the merge map explicitly in a config file, not as imperative code.** Write a `pattern-condense-config.json` that lists which pattern IDs should merge into which parent. The condensing script reads this config and applies it. The config becomes documentation of what was merged and why.
+3. **Merge patterns only within structural/substantive class.** Structural patterns (recordkeeping, acknowledgment, compliance reporting) should only merge with other structural patterns. Substantive patterns should only merge with other substantive patterns. Cross-class merging produces timeline noise.
+4. **Use the `most_recent_year` field as a merge guard.** If two patterns have `most_recent_year` more than 8 years apart, they likely represent different enforcement eras and should not be merged even if names are similar.
+5. **Preserve merged-from IDs in the output.** Add a `merged_from: string[]` field to `PatternGroup` that records which original pattern IDs were absorbed. This allows future reconstruction and auditing.
 
-**Detection (warning signs):**
-- Taxonomy has two axes with >60% overlap in which cases they return for the same company
-- User testing shows confusion at the topic selector (practitioners ask "what's the difference between 'Data Security' and 'Safeguards Rule'?")
-- More than 5 taxonomy entries that return fewer than 3 provisions each (indicates over-categorization)
+**Warning signs:**
+- Post-merge pattern has variants spanning more than 20 years with a gap of 5+ years in the middle (two distinct eras forced together)
+- After merge, the word-level diff in `TextDiff.tsx` shows almost no common words between adjacent variants (provisions are too dissimilar to have been a real pattern)
+- Pattern count drops below 60 — over-aggressive condensing has likely merged non-similar patterns
 
-**Phase:** Address at the start of the data pipeline phase, before writing the classification rules. Wrong taxonomy means reclassifying all 293 cases twice.
+**Phase:** Pattern condensing pipeline phase. Implement the config-driven merge approach with git checkpoint before executing.
 
 ---
 
 ## Moderate Pitfalls
 
-Mistakes that produce a worse tool or cost a sprint to fix, but do not require rewrites.
+Mistakes that cost a sprint to fix or degrade the feature quality noticeably.
 
 ---
 
-### Pitfall 5: Client-Side Filtering Over a Full Provisions List Appears Instant in Dev, Lags in Production
+### Pitfall 4: Case Provisions Modal Navigates Away Instead of Showing Inline
 
-**What goes wrong:** In development with the Vite dev server and hot module replacement, JSON is served from the local filesystem and React renders on a fast development machine. Client-side filter operations over 5,000 provisions return instantly. In production on a user's browser (especially mid-range hardware or a work laptop with many tabs open), filter operations that recompute on every keystroke in a text input cause 100-300ms UI lag. For a tool that practitioners use to narrow from 200 provisions to the 12 they care about, filter lag is directly noticeable.
+**What goes wrong:** The current "View provisions" button in `CaseCard.tsx` calls `handleViewProvisions` in `FTCIndustryTab.tsx`, which does `setSearchParams` to `tab=provisions` — it navigates away from the industry tab entirely, losing sector context (the `sector=` URL param is replaced). This is the v1.0 behavior that v1.1 intends to replace with a modal/side panel. The pitfall is implementing the modal but **not removing or overriding the old navigate-away behavior**, resulting in two paths to the same content: the modal (new) and the tab navigation (old). Practitioners get confused when clicking "View provisions" sometimes opens a modal and sometimes navigates away.
 
-**Prevention:**
-1. **Debounce all text-based filter inputs** with a 200-300ms delay. React's `useState` updating on every keypress forces re-renders; `useDeferredValue` or a debounce hook prevents this.
-2. **Memoize filtered provision arrays with `useMemo`** using filter criteria as dependencies, so re-renders from unrelated state don't recompute the filter.
-3. **Test filter performance with the full production dataset** (not mock data) on the slowest realistic hardware before the feature ships. Use Chrome's performance profiler CPU throttling (6x slowdown) to simulate mid-range hardware.
-4. **For the search index specifically:** MiniSearch's `search()` call is synchronous and fast at this corpus size (~5,000 provisions), but if indexing is done at component mount time (not at data load time), a re-mount causes a re-index. Index once in the data loading hook, cache the index in a `useRef` or module-level cache.
-
-**Detection (warning signs):**
-- Filter operations feel slightly "lagging" in dev on battery saver mode
-- React DevTools Profiler shows filter-triggered re-renders taking >50ms
-- Provision list visibly "jumps" after typing stops rather than updating smoothly
-
-**Phase:** Provisions browsing UI phase. Implement debounce and memoization from the start, not as a performance fix after the fact.
-
----
-
-### Pitfall 6: Boilerplate Detection Flags Standard Order Language as a "Pattern"
-
-**What goes wrong:** Nearly every FTC consent order contains the same standard monitoring, reporting, and recordkeeping provisions — required by the FTC's standard order language regardless of the underlying violation. The "compliance reporting" provision in a telemarketing order and a COPPA order use near-identical boilerplate. If the pattern detection algorithm flags these as a "reused language pattern," it produces a meaningless finding: "the FTC uses the same recordkeeping boilerplate in every order." This is true, trivially, and uninformative to practitioners.
-
-**Why it happens:** String similarity across provisions will inevitably cluster on the boilerplate (monitoring, reporting, recordkeeping, acknowledgment provisions) because those are the most uniformly similar text in the corpus. The substantively interesting patterns are the substantive provisions — security program requirements, algorithmic destruction language — but these are structurally less similar because they must be tailored to each respondent.
+**Why it happens:** `FTCIndustryTab.tsx` passes `onViewProvisions` as a callback down through `SectorDetail` → `CaseCardList` → `CaseCard`. The callback originates at the tab level. Changing what it does requires changing the implementation at the tab level while ensuring no other call site still uses the navigate-away behavior.
 
 **Consequences:**
-- Pattern library shows 60% "patterns" that are just standard order boilerplate
-- Practitioners get noise instead of signal on the language evolution page
-- The feature requires manual curation to be useful, which was not budgeted
+- The modal feature ships but the old navigate-away behavior persists for some entry points
+- URL state becomes inconsistent — back navigation behaves differently depending on which path was taken to view provisions
+- If the modal is added as a new component but `handleViewProvisions` still does `setSearchParams`, the modal never opens
 
 **Prevention:**
-1. **Exclude structural provision types from pattern detection by default.** Do not run similarity analysis on `category: "compliance_reporting"`, `category: "recordkeeping"`, `category: "acknowledgment"`, `category: "monitoring"`, or `category: "duration"` provisions. These are administrative boilerplate. Only run pattern detection on `prohibition` and `affirmative_obligation` provisions.
-2. **Define patterns statically, not discovered dynamically.** The PROJECT.md scope is to show how "comprehensive security program" boilerplate evolves. Define 5-10 named patterns explicitly (comprehensive security program, algorithmic destruction, data deletion, biometric ban, third-party assessment requirement, children's data prohibition). Match provisions to these patterns by title keywords and legal authority. Do not attempt open-ended clustering.
-3. **Validate that each named pattern returns fewer than 40 provisions** (otherwise it's too broad) and more than 3 (otherwise it's too rare to show evolution).
+1. **When implementing the modal, change `handleViewProvisions` in `FTCIndustryTab.tsx` to set a local state variable (`selectedCaseForModal: EnhancedFTCCaseSummary | null`), not `setSearchParams`.** The modal renders based on this state. The old `tab=provisions` navigation is removed from this handler entirely.
+2. **The modal does not use URL params for its open/closed state.** Modals that are controlled by URL params create complex interactions: the back button closes the modal (unexpected) and sharing the URL opens the modal on page load (unexpected). Use React state for modal visibility, URL params for the sector/compare navigation that already exists.
+3. **The provisions panel modal needs its own data fetch.** Case provisions live in the topic-sharded files (`provisions/*.json`), not in `ftc-cases.json`. When a user opens the modal for a specific case, the panel must fetch and filter provision shards for that case's `case_id`. This fetch happens on modal open, not on page load. Plan for a loading state inside the modal — the first open will have network latency.
 
-**Detection (warning signs):**
-- Pattern detection output shows "compliance reporting" or "acknowledgment" as the most common patterns
-- Pattern named "comprehensive security program" returns 150+ provisions (too broad — reduce keyword specificity)
-- Pattern preview shows provisions from cases with no data security charge
+**Warning signs:**
+- `CaseCard.tsx` calls both `onViewProvisions` and triggers a URL change on the same click
+- `FTCIndustryTab.tsx` still has `newParams.set("tab", "provisions")` in the `handleViewProvisions` handler after modal implementation
+- Clicking "View provisions" on two different cards opens the modal for the first case (stale closure bug)
 
-**Phase:** Data pipeline phase when implementing the pattern extraction function.
+**Phase:** Case provisions panel UI phase. Audit all call sites of `handleViewProvisions` before adding the modal component.
 
 ---
 
-### Pitfall 7: Trend Charts at the Topic Level Have Too Few Data Points to Be Meaningful
+### Pitfall 5: LLM Takeaway Generation Produces Inconsistent Tone and Length Across 293 Cases
 
-**What goes wrong:** The existing analytics page shows enforcement by year across all 285 cases, producing a meaningful bar chart (1997-2025, enough data points to see trends). When you filter to a single topic (e.g., "AI / Algorithmic"), there may be only 8-15 cases over a 6-year period. A bar chart of 8 points isn't a trend — it's a table. Labeling it "Enforcement Trends" misleads practitioners into thinking they're seeing a signal when they're seeing noise.
+**What goes wrong:** Running Claude generation over 293 cases produces takeaways that vary dramatically in length (2 sentences vs 8 sentences), formality (casual vs legal), and structure (bullet list vs prose). The v1.1 spec says "brief on cards" — but if takeaway A is 40 words and takeaway B is 200 words, the card layout breaks on case B and the user experience is inconsistent. Inconsistency is particularly visible on the industry tab's case list, where multiple `CaseCard` components render side-by-side with different content heights.
+
+**Why it happens:** LLM generation with only high-level instructions ("generate a 2-3 sentence takeaway") produces free-form output. Without length enforcement in the prompt AND in the pipeline, output length drifts across a 293-case batch. The first few cases in a batch tend to set the pattern, but later cases may drift if the model context resets.
+
+**Consequences:**
+- Card layout has mismatched heights — breaks the law-library aesthetic
+- Some takeaways are so long they dominate the card; practitioners cannot scan the case list
+- Short takeaways for complex cases feel reductive; long takeaways for simple cases feel padded
 
 **Prevention:**
-1. **Show raw counts, not trend lines, when n < 20 per topic.** Reserve trend visualization for topics with enough historical data (Data Security, Privacy, COPPA). For low-volume topics (AI/ADM, Surveillance), show a simple count table annotated with years instead of a chart that implies false precision.
-2. **Use year groupings (2-year bins) for sparse topics** to avoid single-year bars of 1-2 cases that look like meaningful variation.
-3. **Label charts clearly with the data sample size:** "Showing 12 enforcement actions (2018-2025)" tells practitioners that this is not a statistically robust trend.
+1. **Enforce length at the prompt level with a hard token constraint.** Specify: "Generate exactly 2 sentences. First sentence: what the company did wrong. Second sentence: what the FTC required. Do not exceed 50 words total."
+2. **Enforce length at the pipeline level.** After generation, check word count. If `takeaway.split(' ').length > 60`, truncate at the last sentence boundary before 60 words. Log truncations for manual review.
+3. **Generate into a fixed structure, render flexibly.** Produce `{"what_company_did": "...", "what_ftc_required": "..."}` — two fixed fields, each max 25 words. The card renders them as two short lines. The full combined text is available for case detail expansion.
+4. **Test the full batch in two passes:** dry-run on 10 representative cases (1 COPPA, 1 TSR, 1 data security, 1 financial), review for consistency, then run the full 293.
 
-**Detection (warning signs):**
-- AI/ADM topic trend chart shows bars of height 1 or 2 for most years
-- Administration-era comparison on narrow topics shows 1-2 cases per administration
-- Chart looks identical whether viewed as "trend" or as raw data points
+**Warning signs:**
+- Dry run produces a takeaway exceeding 100 words
+- Two consecutive cases have takeaways in completely different writing styles
+- Any generated takeaway contains a list (bullet points or numbered items) — a reliable signal the model ignored the sentence-count constraint
 
-**Phase:** Analytics / charts phase. Design chart components to inspect data count before choosing visualization type.
+**Phase:** Key takeaways pipeline phase. Build the validation and truncation logic before running the full 293-case batch.
 
 ---
 
-### Pitfall 8: FTC.gov URLs Break for Older Cases
+### Pitfall 6: The 885 "Other" Remedies Include Structural Provisions That Should Stay as "Other"
 
-**What goes wrong:** The PROJECT.md constraint states "Provision citations must reference exact paragraph numbers and include working FTC.gov URLs — no approximations." The `ftc_url` field in the JSON contains FTC.gov case URLs. FTC.gov has reorganized its case proceedings database at least twice since 2001. URLs in the data for cases from the early 2000s (Clinton/G.W. Bush administrations) may return 404 or redirect chains. Displaying broken source links next to provision text destroys practitioner trust immediately.
+**What goes wrong:** Reclassifying all 885 "other" remedies assumes they all need better categories. In fact, examination of the `rt-other` shard shows that the majority are structural/administrative provisions: `duration` category (Order Duration and Termination, Retention of Jurisdiction), `acknowledgment` category (Distribution of Order, Acknowledgment of Receipt), and `affirmative_obligation` category with administrative titles (Fees and Costs, Lifting of the Asset Freeze, Commission's Use of Funds). These were correctly classified as "Other" because they don't fit substantive remedy categories and creating new categories for them (e.g., "Order Administration") would add clutter to the remedy type filter without giving practitioners meaningful browsing value.
+
+**Why it happens:** The milestone spec says "reclassify 280 'other' remedies" — but the actual `rt-other` shard contains 885 provisions. The discrepancy suggests that 280 is the number of cases that have at least one "other" remedy, while 885 is the total provision count. Attempting to reclassify all 885 is 3x more work than anticipated. Furthermore, reclassifying structural administrative provisions into new categories creates false-precision in the remedy type filter ("Order Administration" is not a meaningful browsing category for legal practitioners).
 
 **Prevention:**
-1. **Do not assume all FTC.gov URLs are valid.** Add a URL validation pass to the build pipeline (simple HTTP HEAD check against each `ftc_url`) that emits a report of broken URLs before the build is committed. This can run as an optional pipeline step (`--validate-urls` flag) since it makes network requests.
-2. **For cases with `ftc_url: null` or broken URLs, link to the FTC legal library search for that docket number** (`https://www.ftc.gov/legal-library/browse/cases-proceedings/{docket_number}`). The FTC legal library search is stable even when direct case URLs change.
-3. **Display the docket number visibly on every provision card** even when a URL exists. Practitioners can independently look up any case by docket number — it's the permanent identifier.
+1. **Pre-filter the "other" shard by structural category before reclassification.** Provisions with `category` values of `duration`, `acknowledgment`, or `monitoring` that received "Other" remedy type should be left as "Other" — they are administrative scaffolding, not substantive remedies. Focus reclassification on `prohibition` and `affirmative_obligation` category provisions that received "Other."
+2. **Estimate the true reclassification target before starting.** Filter `rt-other` to only `prohibition` and `affirmative_obligation` categories — this is the subset where Claude's reclassification will add meaningful value.
+3. **Evaluate whether new remedy categories are worth adding to the filter.** If the new categories would each contain fewer than 20 provisions, they add noise to the remedy type filter. A category must be large enough to be a useful browsing dimension.
 
-**Detection (warning signs):**
-- Cases from before 2005 having `ftc_url` values that use a different URL pattern than post-2010 cases
-- Manual spot-check of 10 older case URLs finds 2-3 returning 404
-- FTC.gov URL format includes deprecated path components (check for `/os/caselist/` vs `/legal-library/browse/cases-proceedings/`)
+**Warning signs:**
+- Reclassification script queues 885 API calls instead of ~200-300
+- New remedy categories proposed by Claude appear only 3-8 times each across all cases
+- Post-reclassification `rt-other` shard still contains 600+ provisions (structural ones correctly remain)
 
-**Phase:** Data pipeline phase (add URL validation) and UI design phase (docket number as fallback citation). Pre-launch verification step.
+**Phase:** Remedy reclassification planning phase. Run the category analysis before writing any classification code.
 
 ---
 
-### Pitfall 9: Individual Case JSON Fetches Cause a Waterfall of Network Requests
+### Pitfall 7: Pattern Condensing Raises the 3-Case Minimum Threshold and Silently Drops Valuable Patterns
 
-**What goes wrong:** The current architecture fetches one `ftc-cases.json` (362 KB) for the analytics page. The provisions library might be designed to load individual case JSON files on demand — when a user clicks a provision, fetch `public/data/ftc-files/{case-id}.json` to get the full order text. This seems lazy and efficient. But when a user filters to "COPPA provisions" and the result set contains 25 cases, the UI triggers 25 parallel fetches for 25 individual JSON files, each 20-80 KB. Browsers cap parallel connections to the same origin at 6-8. The user sees a cascade of loading spinners as case files load in batches of 6.
+**What goes wrong:** Raising the minimum case count threshold during condensing (e.g., from 3 to 5 cases) to reduce total pattern count will drop 45 patterns that currently have 3-4 cases. Among those 45 are substantively important patterns: "Sensitive Location Data Program" (4 cases, 2019-2024), "Location Data Deletion Requests" (4 cases, 2022-2024), "Prohibition Against Misrepresentations About Security and Privacy" (4 cases). These represent recent enforcement trends with high practitioner relevance. Pruning by threshold alone treats a 4-case recent pattern the same as a 4-case old pattern, even though recent patterns are the most valuable to practitioners researching current enforcement posture.
+
+**Why it happens:** Threshold-based pruning is simple to implement. The temptation is to set threshold at 5 to cut the 45 borderline patterns and simplify the list. But threshold ignores recency — a 4-case pattern from 2019-2024 is more valuable than a 33-case pattern from 2002-2025 (which may represent old boilerplate no longer in use).
+
+**Consequences:**
+- Recent location data and biometric enforcement patterns disappear from the pattern browser
+- The pattern library becomes less useful for practitioners researching current FTC enforcement signals
+- Information loss is permanent unless the pipeline is re-run with lower threshold
 
 **Prevention:**
-1. **The build pipeline should emit a flat `ftc-provisions.json` (or topic-sharded versions) that contains all provision data needed for the browsing UI, without requiring any additional per-case fetches.** Individual case JSON files are only needed for download by developers; the provisions UI should be self-contained from the pre-built aggregated output.
-2. **If per-provision detail fetch is required** (for full order definitions, full complaint counts, etc.), lazy-load it only when a user explicitly requests a "full case view" — not for the provision card display. The provision card can render entirely from denormalized data in the aggregated file.
-3. **Profile the network waterfall in production** (not local dev, where all files are served from disk instantly) before shipping the provisions browsing UI.
+1. **Use a composite keep criterion, not a flat threshold.** Keep a pattern if: (a) case_count >= 5, OR (b) case_count >= 3 AND most_recent_year >= 2020. This preserves recent small patterns as signals of emerging enforcement trends.
+2. **Never prune structural patterns** — they are already filtered to a lower threshold since their value is documenting boilerplate evolution.
+3. **Export a "pruned patterns" list** before writing the condensed output. Review it before committing. Any pattern with a name containing "Location", "Biometric", "AI", "Algorithm", or "Children" should be flagged for manual review regardless of case count.
 
-**Detection (warning signs):**
-- DevTools Network tab shows 20+ individual `.json` fetches triggered by a topic page load
-- Loading state lasts >1 second for a filtered topic view even on fast connections
-- Provision cards appear in batches rather than simultaneously
+**Warning signs:**
+- Post-condense pattern count is below 60 (over-pruned)
+- "Sensitive Location Data Program" pattern is absent from the condensed output
+- All 3-case and 4-case patterns are gone regardless of recency
 
-**Phase:** Data pipeline phase (design the denormalized aggregated format) and provisions UI phase (ensure components don't trigger per-case fetches).
+**Phase:** Pattern condensing pipeline phase. Define the keep criterion in the config before running.
+
+---
+
+### Pitfall 8: Case Provisions Modal Loads the Wrong Shard (or All Shards)
+
+**What goes wrong:** When a user clicks "View provisions" for a specific case in the industry tab, the modal must show provisions for that case. Provision data lives in topic-sharded files (`public/data/provisions/*.json`). A case that spans multiple statutory topics (e.g., a case with COPPA + Section 5 charges) will have its provisions split across the `coppa-provisions.json` and `section-5-only-provisions.json` shards. Fetching only one shard and filtering by `case_id` misses provisions classified under the other shard. Fetching all shards (15+ files) is a waterfall of network requests.
+
+**Why it happens:** The provision data architecture was designed for topic-based browsing, not case-based browsing. The case provisions panel flips the query direction: from "show all provisions under this topic" to "show all provisions for this case regardless of topic." The existing sharding architecture does not support this query efficiently.
+
+**Consequences:**
+- Modal shows partial provisions for multi-topic cases — practitioners see 4 provisions when the case has 12
+- Fetching all 15+ shard files on modal open causes a visible loading delay and a cascade of network requests
+- If the modal does not communicate "showing X of Y provisions" clearly, practitioners don't know they are seeing a partial list
+
+**Prevention:**
+1. **The build pipeline must emit a case-keyed provisions index at build time.** Before this UI phase, add a `build:case-index` pipeline step that generates `public/data/case-provisions/{case_id}.json` files — one per case, containing all provisions for that case regardless of topic. This is a denormalized index written at build time, not computed at runtime.
+2. **Alternatively, add a `case_id` → `provision_ids[]` lookup to the existing `manifest.json`.** The UI can then fetch only the shard files that contain provisions for the given `case_id`, rather than all shards.
+3. **Do not attempt to load all shard files on modal open.** The correct solution is a purpose-built case-provisions data structure, not runtime aggregation across 15 shard files.
+
+**Warning signs:**
+- DevTools Network tab shows 10+ parallel JSON fetches on "View provisions" click
+- Modal shows fewer provisions than `caseData.num_provisions` indicates
+- Any runtime filtering loop that iterates across all shard data to find a single case's provisions
+
+**Phase:** Case provisions panel UI phase AND the preceding data pipeline phase. The data structure must be built before the modal UI can work correctly.
 
 ---
 
 ## Minor Pitfalls
 
-Mistakes that require a few hours to a day to fix.
+Mistakes requiring a few hours to a day to fix.
 
 ---
 
-### Pitfall 10: URL State Broken for Provisions With Special Characters in Topic Names
+### Pitfall 9: LLM Takeaway Script Loses Progress on Error and Restarts from the Beginning
 
-**What goes wrong:** Topic names like "AI / Algorithmic / Facial Recognition" and "Gramm-Leach-Bliley" contain characters that require URL encoding (`/`, `-`). React Router's `useSearchParams` handles encoding, but if topic keys are derived from the human-readable label string rather than a slug, URL params look like `?topic=AI+%2F+Algorithmic+%2F+Facial+Recognition`, which are ugly, brittle, and break when topic labels change.
-
-**Prevention:** Define stable machine-readable slugs for each taxonomy entry separate from display labels (`"ai-algorithmic"` as the URL key, `"AI / Algorithmic / Facial Recognition"` as the display label). Use the slug in URL params. Changes to display labels never break existing bookmarked URLs. This is a one-time design decision in the taxonomy data structure.
-
-**Phase:** Data pipeline phase (add `slug` field to taxonomy constants) and URL routing design.
-
----
-
-### Pitfall 11: Provision Count Display Misleads Because One Case Can Appear Under Multiple Topics
-
-**What goes wrong:** "289 provisions in Data Security" sounds authoritative. But a single data security case with 22 provisions can have 14 of those provisions also tagged under "Privacy." If a user filters to "Data Security" AND "Privacy" expecting to narrow results, the count may not decrease meaningfully, because the overlap is large. This is confusing if not surfaced.
-
-**Prevention:** On the topic selector screen, show provision counts as unique provisions within that topic (not deduplicated cross-topic). When filtering by multiple topics simultaneously (AND vs OR logic), display the count update in real-time so the user sees narrowing is working. Document the intersection behavior in a tooltip.
-
-**Phase:** Provisions browsing UI phase.
-
----
-
-### Pitfall 12: The Law Library Aesthetic Breaks Under Dense Provision Tables
-
-**What goes wrong:** The existing FTC Analytics page is primarily charts and summary cards — sparse layout. The provisions library renders dense tables with long quoted text, multiple badge rows (topic tags, remedy types), and multi-column case metadata. EB Garamond at 16px on a cream background reads beautifully in sparse contexts. In a dense provisions table with 30+ rows and multi-line cells, the lack of visual separation makes it hard to scan. Legal research tool aesthetics require clear horizontal rule demarcation between rows, strong typographic hierarchy for cited text, and narrow-enough columns that the eye doesn't have to sweep far.
+**What goes wrong:** The existing `classify-provisions.ts` uses an idempotency check (`isAlreadyClassified`) that skips already-processed files. A takeaway generation script for 293 cases making Anthropic API calls will occasionally hit rate limits, network errors, or malformed JSON responses. If the script has no progress tracking beyond the idempotency flag in the source JSON, a crash at case 150 means the script resumes from case 1 and re-processes 0-149 unnecessarily (wasting API calls) or — if no idempotency check exists — overwrites good takeaways with new ones.
 
 **Prevention:**
-1. Design provision cards (not tables) as the primary browsing format for the topic view. Cards handle variable-length quoted text and metadata better than table rows.
-2. Test layout with actual provision data (not Lorem Ipsum placeholders) — the variance in quoted_text length (50 chars to 800 chars) is the real challenge.
-3. Use the `border-rule` border color already in the project for horizontal dividers. Add subtle alternating background on table rows only when list density exceeds 20 rows.
+1. **Write a `key_takeaway` field directly into each source case JSON after successful generation**, matching the pattern of `classify-provisions.ts`. The `isAlreadyClassified`-style check (`data.case_info.key_takeaway !== undefined`) then skips already-processed cases on restart.
+2. **Implement a per-case try/catch** that logs errors and continues to the next case rather than throwing fatally. A single malformed API response should not abort 200 remaining cases.
+3. **Write a separate `takeaways-status.json` progress file** alongside the source data that records which case IDs have been completed. On restart, read this file first.
 
-**Phase:** Provisions browsing UI phase.
+**Warning signs:**
+- The script has no `--dry-run` flag
+- No `try/catch` per file (only a global `catch`)
+- Restarting the script after a crash starts API calls from file index 0
+
+**Phase:** Key takeaways pipeline phase.
+
+---
+
+### Pitfall 10: Condensed Pattern IDs Differ From v1.0 IDs, Breaking Bookmarked URLs
+
+**What goes wrong:** The current `PatternGroup.id` field is a slugified version of the pattern's most common title variant (`slugify(bestTitle)`). After condensing, merged patterns get a new canonical name (whichever title is most common in the merged group). If the merged group's canonical name is different from its pre-merge canonical name, the `id` slug changes. Any user who bookmarked a URL containing `?pattern=comprehensive-information-security-program` will find their bookmark broken after condensing, because the pattern is now at `?pattern=information-security-program`.
+
+**Prevention:**
+1. **Preserve the most-used pre-merge ID as the canonical ID for the merged pattern.** Do not re-slugify from the post-merge name; explicitly set the `id` field to the source pattern's existing ID.
+2. **Document ID stability as a constraint in the merge config.** The config file should specify the canonical ID for each merged group, not derive it from the name.
+
+**Warning signs:**
+- After condensing, the pattern with the largest `case_count` has a different `id` than it had pre-condense
+- Any pattern ID in the merged output differs from any pattern ID in the v1.0 `ftc-patterns.json`
+
+**Phase:** Pattern condensing pipeline phase.
+
+---
+
+### Pitfall 11: Modal Scroll Conflicts With the Industry Tab's Existing Scroll Container
+
+**What goes wrong:** The v1.0 industry tab uses native `overflow-y-auto` for independent sidebar scrolling (a known decision documented in PROJECT.md: "Native overflow-y-auto over ScrollArea"). A modal opened inside a scrollable container can produce double-scroll behavior: the modal itself scrolls, and the background page continues to scroll simultaneously on mousewheel events. On Windows, this is particularly problematic because the browser scrolls the element under the cursor, and if focus is on the modal but the cursor drifts, the background page scrolls unexpectedly.
+
+**Prevention:**
+1. **Use a portal to render the modal at the document root** (shadcn/ui's `Dialog` component does this by default via Radix UI's `Portal`). This removes the modal from the scroll container hierarchy.
+2. **Lock `document.body` scroll when the modal is open.** shadcn/ui `Dialog` applies `pointer-events: none` to the body by default — verify this prevents background scroll.
+3. **Test scroll behavior on Windows Chrome specifically.** The double-scroll problem is more common on Windows than macOS due to OS-level scrollbar behavior.
+
+**Warning signs:**
+- Background industry tab content scrolls when the user scrolls inside the modal
+- Modal content gets clipped by the `overflow-y-auto` container instead of overflowing above it
+
+**Phase:** Case provisions panel UI phase.
 
 ---
 
@@ -262,27 +288,28 @@ Mistakes that require a few hours to a day to fix.
 
 | Phase Topic | Likely Pitfall | Mitigation |
 |-------------|----------------|------------|
-| Data pipeline: provision classification | Pitfall 1 (keyword matching too broad, "Privacy" captures everything) | Prioritize structured fields (legal_authority, provision category) over prose matching; validate per-topic counts before UI work |
-| Data pipeline: output format design | Pitfall 2 (single flat file becomes 12+ MB) | Topic-shard output files; separate index from detail payload |
-| Data pipeline: pattern detection | Pitfall 6 (boilerplate clusters dominate patterns) | Exclude structural provision categories; use statically-defined pattern names |
-| Data pipeline: FTC URL handling | Pitfall 8 (old case URLs broken) | Validate URLs in pipeline; always surface docket number as fallback |
-| Data pipeline: taxonomy design | Pitfall 4 (overlapping axes confuse practitioners) | Reduce to Statutory + Remedy Type; validate axes are orthogonal before building classification rules |
-| Provisions browsing UI: performance | Pitfall 5 (filter lag on real hardware) | Debounce inputs, memoize filtered arrays, test on CPU-throttled Chrome |
-| Provisions browsing UI: network | Pitfall 9 (waterfall of per-case fetches) | Ensure all provision card data comes from pre-aggregated file, no per-case fetches needed |
-| Provisions browsing UI: URL routing | Pitfall 10 (special characters in topic names break URL params) | Define slugs in taxonomy constants, never derive URL keys from display labels |
-| Provisions browsing UI: citations | Pitfall 3 (garbled extracted text presented as authoritative quotes) | Label all extracted text as unverified; make FTC.gov source link the primary citation |
-| Analytics / charts phase | Pitfall 7 (trend charts meaningless for sparse topics) | Conditionally render chart vs count table based on n; label data sample size clearly |
-| Pre-launch verification | Pitfall 8 (FTC.gov URLs broken for old cases) | Run URL validation pipeline step against all 285 case URLs before deployment |
+| Remedy reclassification: taxonomy design | Pitfall 1 (taxonomy change breaks 4 places simultaneously) | Finalize new RemedyType enum values in writing before touching any code; update all 4 locations atomically |
+| Remedy reclassification: scope | Pitfall 6 (885 provisions, not 280 — most should stay "Other") | Pre-filter to prohibition + affirmative_obligation categories before classifying; structural provisions are correctly "Other" |
+| Key takeaways: generation | Pitfall 2 (hallucinated specific facts in legal summaries) | Constrain to structured fields only; validate statute against legal_authority; label as AI-generated |
+| Key takeaways: consistency | Pitfall 5 (inconsistent length and tone across 293 cases) | Hard word-count limit in prompt + programmatic truncation; structured JSON output format |
+| Key takeaways: pipeline | Pitfall 9 (no progress tracking, crashes require full restart) | Write takeaway field to source JSON after each case; per-case try/catch; --dry-run flag |
+| Pattern condensing: data loss | Pitfall 3 (merge destroys original pattern identity permanently) | Git checkpoint before merge; config-driven merge map; preserve merged_from IDs |
+| Pattern condensing: over-pruning | Pitfall 7 (threshold drops valuable recent patterns) | Composite criterion: case_count >= 5 OR (>= 3 AND most_recent_year >= 2020) |
+| Pattern condensing: URL stability | Pitfall 10 (new canonical names break pattern bookmark URLs) | Preserve pre-merge ID as canonical in merge config |
+| Case provisions panel: data architecture | Pitfall 8 (sharding by topic doesn't support case-keyed queries) | Build case-provisions index at pipeline time; do not aggregate shards at runtime |
+| Case provisions panel: navigation | Pitfall 4 (old navigate-away handler conflicts with new modal) | Remove tab navigation from handleViewProvisions; use local React state for modal |
+| Case provisions panel: scroll | Pitfall 11 (modal scroll conflicts with existing overflow-y-auto containers) | Use Radix UI Portal; test on Windows Chrome |
 
 ---
 
 ## Sources
 
-- Direct codebase inspection: `scripts/build-ftc-data.ts` — identified the existing keyword classification approach and its extension risks
-- Direct data inspection: `public/data/ftc-files/01.05_assail.json` — confirmed OCR/extraction artifacts in `quoted_text` fields (garbled words present in 2005 case)
-- Direct data inspection: Grep count of `quoted_text` across 292 files — confirmed 9,224 instances, establishing actual corpus scale for performance risk assessment
-- Codebase inspection: `src/types/ftc.ts`, `src/hooks/use-ftc-data.ts`, `src/components/ftc/FTCGroupDetail.tsx` — confirmed current fetch architecture and memoization patterns
-- Project requirements: `.planning/PROJECT.md` — confirmed citation accuracy constraint and URL requirement
-- Existing research: `.planning/research/STACK.md` — MiniSearch choice and denormalized provisions file design inform Pitfalls 5 and 9
-- Domain conventions: Legal research tool UX patterns (Westlaw, CourtListener) — inform Pitfall 3 (citation standards) and Pitfall 12 (dense layout)
-- Data scale observation: The 30 highest-count files (betterhelp 82, cerebral 87, pornhub 119 quoted_text fields) demonstrate that per-case file sizes vary significantly, informing Pitfall 2
+- Direct codebase inspection: `scripts/build-patterns.ts` — identified the one-way transformation and the 3-case threshold logic; confirmed pattern IDs are derived from post-merge canonical titles
+- Direct codebase inspection: `scripts/classify-provisions.ts` — identified the four-location taxonomy encoding problem; confirmed the `isAlreadyClassified` idempotency pattern
+- Direct codebase inspection: `scripts/build-provisions.ts` — confirmed the `TOPIC_LABELS` map and shard architecture; identified the taxonomy-update protocol requirement
+- Direct codebase inspection: `src/components/ftc/FTCIndustryTab.tsx` — confirmed `handleViewProvisions` currently calls `setSearchParams` to navigate away; identified the callback chain through SectorDetail → CaseCardList → CaseCard
+- Direct codebase inspection: `src/types/ftc.ts` — confirmed the four `RemedyType` / `StatutoryTopic` union types that must be updated atomically during reclassification
+- Direct data inspection: `public/data/provisions/manifest.json` — confirmed `rt-other` contains 885 provisions (vs PROJECT.md spec of "280 other remedies"); identified the count discrepancy
+- Direct data inspection: `public/data/ftc-patterns.json` — confirmed 126 patterns, 43 structural / 83 substantive; identified 45 patterns with 3-4 cases including recent location data and biometric patterns; confirmed 4.0 MB file size
+- Project requirements: `.planning/PROJECT.md` — confirmed the four v1.1 target features and their descriptions; confirmed static JSON constraint and build pipeline architecture
+- Prior PITFALLS.md research (v1.0) — confirmed the waterfall fetch risk for per-case JSON fetches; informed Pitfall 8 (case provisions panel data architecture)

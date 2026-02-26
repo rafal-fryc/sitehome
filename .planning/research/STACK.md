@@ -1,251 +1,274 @@
 # Technology Stack
 
-**Project:** FTC Enforcement Provisions Library (Milestone 2)
-**Researched:** 2026-02-24
-**Research Mode:** Stack dimension — additive to existing codebase
+**Project:** FTC Enforcement Provisions Library (v1.1 — Data Quality & Case Insights)
+**Researched:** 2026-02-26
+**Research Mode:** Stack dimension — additive only, covers NEW capabilities for this milestone
 
 ---
 
 ## Scope of This Document
 
-This document covers only the **new libraries and patterns** needed for the provisions library milestone. The existing foundation (React 18.3, Vite 5.4, TypeScript 5.8, Tailwind 3.4, shadcn/ui, Recharts 2.15, TanStack Query 5.83, React Router 6.30) is fixed by constraint and not re-evaluated here.
+This document covers only what is **new or changed** for v1.1. The existing foundation is fixed by project constraint and not re-evaluated:
+
+| Layer | Existing (fixed) |
+|-------|-----------------|
+| Framework | React 18.3 + Vite 5.4 + TypeScript 5.8 |
+| Styling | Tailwind CSS 3.4 + shadcn/ui + Tailwind Typography |
+| Charts | Recharts 2.15 |
+| Data fetching | TanStack Query 5.83 |
+| Routing | React Router DOM 6.30 |
+| Search | MiniSearch 7.2 |
+| Diff | diff 8.0 (jsdiff) |
+| Autocomplete | cmdk 1.1 |
+| Claude API | @anthropic-ai/sdk 0.78 (devDependency, build pipeline only) |
+| Runtime model | `claude-sonnet-4-5` (existing classify-provisions.ts) |
 
 ---
 
-## New Library Recommendations
+## New Capability: Key Takeaways Generation
 
-### 1. Client-Side Full-Text Search
+**What is needed:** A new build-time script (`scripts/build-takeaways.ts`) that reads each source file under `public/data/ftc-files/`, sends a prompt to Claude, and writes 3-5 bullet takeaways back into the data model.
 
-**Recommended: MiniSearch ^7.x**
+### Claude API — No Version Change
 
-```bash
-npm install minisearch
-```
-
-**Why MiniSearch over alternatives:**
-
-- **vs Fuse.js:** Fuse.js is a fuzzy-match library, not a full-text search engine. It has no inverted index, no field boosting, and degrades badly above ~2,000 documents. With provision-level indexing (~2,000-5,000 provisions across 293 cases), Fuse becomes noticeably slow. MiniSearch builds an inverted index at index-time, making query time O(1) regardless of corpus size. **Confidence: HIGH** — this is a well-understood architectural difference.
-
-- **vs FlexSearch:** FlexSearch has faster raw throughput but a less ergonomic API, poorer TypeScript types, and a more complex configuration surface. For a legal provisions corpus where query latency is not the bottleneck (corpus is small relative to FlexSearch's target scale), MiniSearch's cleaner API and better DX justify the choice. **Confidence: MEDIUM** — based on training data, verify npm download trends if needed.
-
-- **vs lunr.js:** lunr.js is effectively unmaintained (last release 2022). Avoid.
-
-**MiniSearch key capabilities needed:**
-- Multi-field indexing (provision title, quoted_text, summary, case company_name)
-- Field weight boosting (quoted_text weighted higher for legal precision)
-- Fuzzy matching configurable per-query
-- Returns document IDs only — application layer joins back to full provision objects
-- Works entirely at runtime in the browser with no server
-
-**Build-time vs runtime indexing decision:** Index at runtime on first load using TanStack Query's `staleTime: Infinity` pattern already established. Provisions data will be embedded in the aggregated JSON or lazy-loaded per-case. MiniSearch indexes in-memory after the JSON fetch completes. No pre-built index serialization needed at this scale. **Confidence: HIGH** — 5,000 provisions at ~500 bytes each is 2.5 MB of provision text; MiniSearch indexes this in under 200ms on modern hardware.
-
-**Confidence: HIGH** (architectural reasoning), **MEDIUM** (version number — verify current MiniSearch release on npm before installing, as major version may have advanced from 6.x to 7.x since training cutoff).
-
----
-
-### 2. Topic Classification Pipeline (Build-Time)
-
-**Recommended: Pure TypeScript in the existing `scripts/build-ftc-data.ts` pipeline**
-
-No new library needed. The classification work happens in the offline build script using rule-based matching extended with the three-level taxonomy (statutory, practice area, remedy type).
-
-**Rationale:** The existing build script already performs keyword-based classification (`classifyCategories` function). The new taxonomy is an additive expansion of the same pattern — match legal authority text, count titles, factual background, and now provision category/requirements text against keyword sets per taxonomy dimension.
-
-**Why not an NLP library (compromise/wordnet/natural):**
-- This is a closed, well-defined legal taxonomy with ~25 categories total, not open-domain classification
-- The FTC's legal authority strings are highly predictable ("Children's Online Privacy Protection Act," "Gramm-Leach-Bliley Act," etc.) — exact string matching on legal_authority outperforms statistical NLP for this domain
-- NLP libraries add build-step complexity and bundle size without accuracy gains on a controlled legal corpus
-- The existing keyword approach already achieves correct classification for the major categories; extending it to provision-level requires only more granular keyword sets
-
-**Confidence: HIGH** — verified against the actual provision data structure (provision.category field is already structural, provision.requirements[].description is already natural language; keyword matching on these is sufficient for the defined taxonomy).
-
----
-
-### 3. Data Tables with Sorting, Filtering, and Pagination
-
-**Recommended: TanStack Table ^8.x (headless, already ecosystem-adjacent)**
-
-```bash
-npm install @tanstack/react-table
-```
-
-**Why TanStack Table:**
-- TanStack Query is already installed (^5.83.0) — TanStack Table is the same vendor/philosophy, headless, composable with shadcn/ui primitives already in the project
-- The existing `FTCCaseTable.tsx` hand-rolls sorting with `useState` + `useMemo`. TanStack Table provides column filtering, pagination, multi-sort, and row selection with zero styling opinions — all styled with existing Tailwind/shadcn patterns
-- Provisions library will need tables with: column filters (by topic, remedy type, year, company), multi-column sort, and pagination across potentially hundreds of filtered rows
-- shadcn/ui ships a Data Table guide built on TanStack Table — the integration is documented and well-worn
-
-**Why not react-table v7:** TanStack Table v8 is the successor; v7 is deprecated.
-
-**Why not AG Grid or MUI DataGrid:** Both bring their own styling systems that conflict with the law-library Tailwind aesthetic. shadcn/ui + TanStack Table is the correct integration for this project.
-
-**Confidence: HIGH** — TanStack Table v8 is the established standard for headless React tables with shadcn/ui. Version is stable and actively maintained.
-
----
-
-### 4. Cross-Case Pattern Detection (Text Similarity)
-
-**Recommended: No new library — implement with normalized string comparison in the build script**
-
-Cross-case pattern detection ("how boilerplate language evolves") does not require an NLP similarity library. The approach:
-
-1. In `build-ftc-data.ts`, for each provision category (e.g., `affirmative_obligation` with title containing "comprehensive security program"), collect all `quoted_text` values across cases, sorted by date
-2. Emit a `patterns` object in the aggregated JSON keyed by pattern name (defined statically — "comprehensive_security_program", "algorithmic_destruction", etc.)
-3. Each pattern entry contains an array of `{ case_id, date, provision_number, quoted_text, similarity_to_canonical }` sorted chronologically
-4. Similarity to a canonical template can be computed with a simple character-level Jaccard or Levenshtein ratio — both implementable in ~20 lines of TypeScript with no library dependency
-
-**Why not a string-similarity library (string-similarity, natural, fastest-levenshtein):**
-- The pattern set is predefined, not discovered dynamically
-- At 293 cases, even O(n²) pairwise comparison is fast at build time
-- Adding a library to the build script for a 20-line utility function adds dependency surface without benefit
-
-**If dynamic similarity is needed later:** `fastest-levenshtein` is the correct choice (pure JS, no WASM dependency, ~3KB). Add it at that point.
-
-**Confidence: HIGH** — reasoning based directly on the data structure and the project constraints. "Cross-case patterns" as defined in PROJECT.md is about tracking known provision language evolution, not discovering novel clusters.
-
----
-
-### 5. URL State Management for Provisions Browsing
-
-**Recommended: Existing React Router DOM ^6.30 + `useSearchParams` — no new library**
-
-The existing app already uses URL-driven state via search params (noted in PROJECT.md as an existing feature). The provisions browsing UI (topic selection, active filters, selected provision) maps cleanly to search params:
-
-```
-/ftc-provisions?topic=data-security&year=2019&company=google&provision=abc123
-```
-
-React Router 6's `useSearchParams` hook handles this without additional libraries.
-
-**Why not nuqs or react-router-dom's createSearchParamStore:** Unnecessary abstraction on top of a standard hook the project already uses.
-
-**Confidence: HIGH.**
-
----
-
-### 6. Analytics Charts — Extended (Line/Area Charts)
-
-**Recommended: Extend existing Recharts ^2.15 — no new charting library**
-
-The existing `FTCGroupChart.tsx` uses Recharts BarChart and PieChart. The new analytics requirements (enforcement trends over time, topic shifts by year) need:
-- `LineChart` / `AreaChart` — already in Recharts
-- `ComposedChart` for combined chart types — already in Recharts
-- Brush component for timeline scrubbing — already in Recharts
-
-Recharts has all chart types required. Adding a second charting library creates visual inconsistency and bundle bloat.
-
-**The one limitation:** Recharts tooltips require careful styling to match the law-library aesthetic (already demonstrated in `FTCGroupChart.tsx` with custom `contentStyle`). This is a DX cost, not a blocker.
-
-**Confidence: HIGH** — Recharts 2.x component list is stable and well-documented.
-
----
-
-### 7. Highlight Matched Text in Search Results
-
-**Recommended: `mark.js` browser port via `mark.js` npm package, or inline implementation**
-
-When a user searches for "algorithmic destruction" and provisions display, matched terms should be highlighted in the quoted_text. Two options:
-
-**Option A — `mark.js` npm package (~5KB gzipped):** Mature, actively maintained, handles regex and fuzzy highlighting in DOM elements. Works well with React via `ref` + `useEffect`.
-
-**Option B — Inline highlight utility (~15 lines):** Split text on matched terms, wrap in `<mark>` tags, render as JSX. Sufficient for single-term and phrase matching.
-
-**Recommendation: Start with Option B (inline utility).** MiniSearch returns match positions — use those to reconstruct highlighted text without a library. Add `mark.js` only if multi-term highlighting with overlapping matches becomes complex.
-
-**Confidence: HIGH** — this is a standard pattern with well-understood tradeoffs.
-
----
-
-### 8. TypeScript Types for the Extended Data Model
-
-**Recommended: Extend `src/types/ftc.ts` — no new library**
-
-The new data model adds `topic_tags` arrays to provisions, pattern entries, and potentially industry/sector fields. These are plain TypeScript interface additions.
-
-The extended provision type will look like:
+**Existing @anthropic-ai/sdk 0.78 is sufficient.** The pattern is identical to `classify-provisions.ts`:
 
 ```typescript
-export interface FTCProvision {
-  provision_number: string;
-  title: string;
-  category: "prohibition" | "affirmative_obligation" | "assessment" | "reporting" | "other";
-  summary: string;
-  topic_tags: {
-    statutory: string[];      // e.g. ["COPPA", "FCRA"]
-    practice_area: string[];  // e.g. ["Data Security", "AI / ADM"]
-    remedy_type: string[];    // e.g. ["Algorithmic Destruction", "Comprehensive Security Program"]
-  };
-  requirements: FTCRequirement[];
-  // case context (denormalized for browsing performance)
-  case_id: string;
-  company_name: string;
-  date_issued: string;
-  ftc_url?: string;
+import Anthropic from "@anthropic-ai/sdk";
+const anthropic = new Anthropic(); // reads ANTHROPIC_API_KEY from env
+
+const response = await anthropic.messages.create({
+  model: "claude-sonnet-4-5",   // keep consistent with existing scripts
+  max_tokens: 512,               // takeaways are short; 512 is ample
+  messages: [{ role: "user", content: prompt }],
+});
+```
+
+**Why claude-sonnet-4-5 not claude-opus-4-6:**
+- Takeaway generation is a short summarization task, not complex reasoning
+- Sonnet is 5-10x cheaper per token than Opus; 285 cases × ~1,000 tokens = ~285K tokens
+- The existing classify-provisions.ts uses Sonnet and produces high-quality classifications — same model is appropriate here
+- **Confidence: HIGH** — based on direct reading of the existing script and cost-quality tradeoff analysis
+
+**No new library needed.** The sdk is already in devDependencies at `^0.78.0`.
+
+### Data Model Change: Add `key_takeaways` to Source JSON
+
+The takeaways are written into each `public/data/ftc-files/*.json` source file (same pattern as classification), then surfaced in the aggregated `ftc-cases.json` by `build-ftc-data.ts`.
+
+```typescript
+// Addition to EnhancedFTCCaseSummary in src/types/ftc.ts
+export interface EnhancedFTCCaseSummary extends FTCCaseSummary {
+  statutory_topics: StatutoryTopic[];
+  practice_areas: PracticeArea[];
+  industry_sectors: IndustrySector[];
+  remedy_types: RemedyType[];
+  provision_counts_by_topic: Record<string, number>;
+  key_takeaways?: string[];  // NEW — 3-5 bullets, e.g. "Collected precise location data without consent"
 }
 ```
 
-Denormalizing case context into each provision object at build time eliminates the need for client-side joins when rendering the provisions browsing UI. This is the correct pattern for static JSON + client-side rendering.
+**Skip-if-present pattern:** Check for `case_info.key_takeaways` in source file before calling API. Same pattern as `isAlreadyClassified()` in classify-provisions.ts. This makes the script idempotent and cheap to re-run.
 
-**Confidence: HIGH.**
+**Confidence: HIGH** — direct derivation from existing codebase pattern.
+
+---
+
+## New Capability: Remedy Reclassification
+
+**What is needed:** A new build-time script (`scripts/reclassify-remedies.ts`) that reads provisions with `remedy_types: ["Other"]`, prompts Claude to propose a more specific category, and optionally introduces new `RemedyType` values or remaps to existing ones.
+
+### Claude API — Same SDK, Structured Output Pattern
+
+Use the same `@anthropic-ai/sdk` 0.78. The reclassification prompt should request JSON output with a `proposed_remedy_type` field, following the same JSON extraction pattern as the existing classify-provisions.ts (parse the assistant message text for a JSON block).
+
+**Scale consideration:** 282 of 285 cases have "Other" in their remedy_types. However, each case has multiple provisions — only some provisions are tagged "Other". The actual count at provision level is what matters. Claude should be given provision title + verbatim_text and propose the most specific RemedyType that fits.
+
+**Decision point: Extend the RemedyType enum or remap to existing values?**
+Claude should be prompted to choose from the existing `RemedyType` union first, and only propose a new label if none fit. New labels should be reviewed by a human before committing — the script should output a proposal file (`public/data/remedy-proposals.json`) for review, not write directly into source files.
+
+**Two-phase approach:**
+1. Script generates `remedy-proposals.json` (proposal only, no writes)
+2. Human reviews, approves, runs a second `apply-remedy-proposals.ts` pass that writes approved changes into source files
+
+**Confidence: HIGH** — this pattern (generate-then-review) is safer than direct write for a taxonomy-changing operation, and follows the project's general philosophy of deterministic, reviewable pipeline outputs.
+
+---
+
+## New Capability: Pattern Condensing / Merging
+
+**What is needed:** Improvements to `scripts/build-patterns.ts` to merge semantically similar patterns (not just exact-normalized title matches), prune low-value patterns, and resort by most recent example.
+
+### Text Similarity for Pattern Merging — No New Library
+
+The existing `build-patterns.ts` already implements:
+- Pass 1: Exact normalized title matching (lowercase, dashes to spaces, strip punctuation)
+- Pass 2: Prefix merge for orphan groups (< 3 cases merged into parent if title starts with parent title)
+
+The 126 current patterns include redundancy that survives both passes because the titles are not prefix-related. For example, "Annual Privacy Notice" and "Annual Notice to Consumers" should merge but won't under current logic.
+
+**Recommended approach: Bigram/token Jaccard similarity at build time.**
+
+Implement in `build-patterns.ts` as a ~30-line utility function — no library dependency:
+
+```typescript
+function tokenJaccard(a: string, b: string): number {
+  const tokensA = new Set(a.split(" "));
+  const tokensB = new Set(b.split(" "));
+  const intersection = [...tokensA].filter(x => tokensB.has(x)).length;
+  const union = new Set([...tokensA, ...tokensB]).size;
+  return union === 0 ? 0 : intersection / union;
+}
+```
+
+**Merge threshold:** Jaccard >= 0.6 AND both groups have fewer than 10 cases each. Groups with 10+ cases are large enough to stand alone. This avoids false merges on high-frequency terms like "recordkeeping" appearing in different provision types.
+
+**Why not a library:**
+- O(n²) pairwise comparisons over 126 groups is 7,875 operations — runs in < 100ms at build time
+- The utility function is 10 lines; adding a dependency for 10 lines adds maintenance risk
+- `fastest-levenshtein` and `string-similarity` are designed for character-level edit distance, not the token-overlap metric that fits title comparison better
+
+**Pruning criteria (no library):**
+- Remove patterns with exactly 1 variant (no cross-case repetition — these are one-offs, not patterns)
+- Consider removing patterns where all variants come from the same 2-year window (potentially era-specific artifacts, not durable patterns)
+
+**Resorting:** Already implemented — `most_recent_year` descending is the existing default sort in build-patterns.ts. Confirm this is exposed in UI sort options. No pipeline change needed.
+
+**Confidence: HIGH** — based on direct reading of the existing algorithm and the dataset size.
+
+---
+
+## New Capability: Case Provisions Panel (Modal / Sheet)
+
+**What is needed:** In the Industry tab, clicking "View provisions" on a `CaseCard` should open a side panel showing that case's provisions, rather than navigating to the Provisions tab.
+
+### Component: shadcn/ui Sheet — Already Installed
+
+`Sheet` (`src/components/ui/sheet.tsx`) is already in the codebase. It wraps `@radix-ui/react-dialog` with a slide-in animation from the right (`side="right"`). The Sheet component provides:
+- `SheetContent` — full-height right-side panel with backdrop
+- `SheetHeader`, `SheetTitle`, `SheetDescription` — accessible header
+- `SheetClose` — built-in close button
+
+**No new library needed.** The case provisions panel is a straightforward Sheet implementation:
+
+```typescript
+import {
+  Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription
+} from "@/components/ui/sheet";
+
+// Usage in FTCIndustryTab.tsx:
+const [panelCase, setPanelCase] = useState<EnhancedFTCCaseSummary | null>(null);
+
+// The existing handleViewProvisions currently navigates to provisions tab.
+// Change it to: setPanelCase(caseData)
+
+<Sheet open={panelCase !== null} onOpenChange={(open) => !open && setPanelCase(null)}>
+  <SheetContent side="right" className="w-[600px] sm:max-w-[600px] overflow-y-auto">
+    <SheetHeader>
+      <SheetTitle className="font-garamond">{panelCase?.company_name}</SheetTitle>
+      <SheetDescription>{panelCase?.year} · {panelCase?.docket_number}</SheetDescription>
+    </SheetHeader>
+    {panelCase && <CaseProvisionsPanel caseId={panelCase.id} />}
+  </SheetContent>
+</Sheet>
+```
+
+### Data Fetching: Load Provision Shards Lazily
+
+Provisions are already stored in topic-sharded files under `public/data/provisions/[topic]-provisions.json`. For a given `case_id`, provisions can be found by:
+
+1. Reading the manifest (`public/data/provisions/manifest.json`) to get all shard filenames
+2. Fetching each shard and filtering for matching `case_id`
+
+**Better approach:** Add a `case-index.json` at build time — a map from `case_id` → array of `{ shard, provision_number }`. This allows the panel to fetch only the shards containing that case's provisions (typically 1-3 shards per case) rather than all 15 shards.
+
+```typescript
+// public/data/provisions/case-index.json structure
+{
+  "08.97_bruno_s": ["fcra-provisions.json"],
+  "09.97_aldi": ["fcra-provisions.json"],
+  ...
+}
+```
+
+**Why not a flat all-provisions.json:** The full flat file would be ~8-10 MB uncompressed. Per-case lazy loading (1-3 shards, ~200-800 KB each) is faster to first paint and more respectful of bandwidth. TanStack Query caches shard responses — revisiting another case in the same topic is instant.
+
+**TanStack Query pattern** (already used in the app):
+
+```typescript
+const { data: provisions } = useQuery({
+  queryKey: ["case-provisions", caseId],
+  queryFn: () => fetchProvisionsByCaseId(caseId, caseIndex, shardCache),
+  staleTime: Infinity,   // Static data — never refetch
+  enabled: !!caseId,
+});
+```
+
+**Confidence: HIGH** — Sheet component is already installed and styled. TanStack Query is already the fetching pattern. The case-index build step is a straightforward additive pipeline change.
+
+---
+
+## Summary: What Changes and What Doesn't
+
+### New Scripts (build pipeline only)
+
+| Script | Purpose | New Deps |
+|--------|---------|----------|
+| `scripts/build-takeaways.ts` | Claude-generated key takeaways per case | None (reuses @anthropic-ai/sdk) |
+| `scripts/reclassify-remedies.ts` | Claude-proposed remedy reclassification | None |
+| `scripts/apply-remedy-proposals.ts` | Apply reviewed remedy proposals to source files | None |
+
+### Modified Scripts
+
+| Script | Change | Impact |
+|--------|--------|--------|
+| `scripts/build-patterns.ts` | Add token Jaccard merge pass + pruning | Reduces pattern count from 126 |
+| `scripts/build-ftc-data.ts` | Read `key_takeaways` from source files, pass through to ftc-cases.json | Additive field |
+| `scripts/build-provisions.ts` | Emit `case-index.json` mapping case_id → shards | New output file |
+
+### New UI Components
+
+| Component | Implements | Uses |
+|-----------|-----------|------|
+| `src/components/ftc/industry/CaseProvisionsPanel.tsx` | Provisions list for a single case | Existing ProvisionRecord types |
+| Sheet wrapper in `FTCIndustryTab.tsx` | Opens CaseProvisionsPanel | Existing Sheet component |
+
+### Type Changes
+
+| Type | Change |
+|------|--------|
+| `EnhancedFTCCaseSummary` | Add optional `key_takeaways?: string[]` |
+| No new types for remedies | Proposed remedy labels go through review before becoming `RemedyType` values |
 
 ---
 
 ## What NOT to Add
 
-| Rejected Library | Reason |
-|-----------------|--------|
-| Elasticsearch / OpenSearch | Requires a server. Project constraint is client-side static JSON. |
-| Algolia / Typesense | External service with API key and network dependency. Overkill for 5,000 provisions. |
-| D3.js | Recharts already covers all chart types needed. D3 adds complexity without benefit given existing Recharts investment. |
-| Prisma / any ORM | No database. FTC data is static JSON. |
-| React Virtual / TanStack Virtual | Premature. 293 cases visible at once is fine. Add if provisions list virtualization is needed (> 500 rows rendered). |
-| Next.js / Remix | Framework migration explicitly forbidden by constraint. |
-| Redux / Zustand | TanStack Query + React Router search params already handle all state. URL state is better than in-memory for a reference tool (shareable links). |
-| Fuse.js | Fuzzy matching without an inverted index. Not suited for legal text corpus at this scale. |
-| lunr.js | Unmaintained since 2022. |
-| natural / compromise (NLP) | Overkill for a closed legal taxonomy. Keyword matching on structured legal authority strings is more accurate. |
-| FlexSearch | More complex API, weaker TypeScript support than MiniSearch for equivalent functionality at this scale. |
+| Rejected Addition | Reason |
+|------------------|--------|
+| string-similarity / fastest-levenshtein | Token Jaccard in 10 lines is better suited to title comparison than character edit distance; no dependency warranted at 126 patterns |
+| natural / compromise (NLP) | Still overkill for a closed taxonomy. Claude handles nuanced reclassification better than NLP libraries for this legal domain |
+| New UI modal library (react-modal, headlessui) | Sheet is already installed; adding a second modal system creates visual inconsistency |
+| All-provisions flat JSON file | Too large for initial load; case-indexed shard loading is faster and already achievable with TanStack Query |
+| Separate Claude Opus model for takeaways | Sonnet is sufficient for summarization; Opus cost penalty (~10x) not justified for 285 cases |
+| Pattern clustering library (ml-kmeans, kmeans-ts) | 126 groups at build time: O(n²) Jaccard is 7,875 comparisons, completes in < 100ms, no ML infrastructure needed |
+| React Virtual / TanStack Virtual | Case provisions panel will show at most ~20-30 provisions per case — no virtualization needed |
 
 ---
 
-## Installation Summary
+## Installation
+
+No new production or dev dependencies are required for this milestone.
+
+All four features (takeaways, remedy reclassification, pattern condensing, case provisions panel) are implementable with:
+- Existing @anthropic-ai/sdk 0.78 (build-time scripts)
+- Existing shadcn/ui Sheet component (UI panel)
+- Existing TanStack Query (data fetching)
+- Inline TypeScript utilities (text similarity)
 
 ```bash
-# New production dependencies
-npm install minisearch @tanstack/react-table
-
-# New dev dependencies
-# None required — tsx, TypeScript, and existing toolchain handle the build pipeline extension
+# No npm install commands needed
 ```
-
-**Total new bundle impact:** MiniSearch ~7KB gzipped + TanStack Table ~15KB gzipped = ~22KB additional. Acceptable given the feature surface added.
-
----
-
-## Build Pipeline Extension Pattern
-
-The existing pattern (confirmed by reading `scripts/build-ftc-data.ts`):
-
-```
-offline source JSONs → build-ftc-data.ts (tsx) → public/data/ftc-cases.json + public/data/ftc-files/*.json
-```
-
-Extended pattern for this milestone:
-
-```
-offline source JSONs
-  → build-ftc-data.ts (tsx)
-      → topic classification (new classifyProvisionTopics function, same file)
-      → pattern extraction (new extractPatterns function, same file)
-  → public/data/ftc-cases.json          (existing, extended with topic_tags)
-  → public/data/ftc-provisions.json     (new: flat list of all provisions, denormalized)
-  → public/data/ftc-patterns.json       (new: provision language pattern groups)
-  → public/data/ftc-files/*.json        (existing, unchanged)
-```
-
-The `ftc-provisions.json` flat file allows the provisions browsing UI to load all provisions in one fetch and filter/search entirely client-side. At ~5,000 provisions × ~1,500 bytes average (with quoted_text), the file is ~7.5 MB uncompressed. Vercel serves this gzipped (~1.5-2 MB compressed) — acceptable for a reference tool. If size becomes a concern, split by topic at build time.
-
-**Confidence: HIGH** — this is derived directly from reading the existing build script and data structure.
 
 ---
 
@@ -253,21 +276,27 @@ The `ftc-provisions.json` flat file allows the provisions browsing UI to load al
 
 | Decision | Level | Basis |
 |----------|-------|-------|
-| MiniSearch for search | MEDIUM-HIGH | Architectural reasoning is HIGH; exact current version needs npm verification |
-| TanStack Table v8 | HIGH | Stable, well-documented, ecosystem match with existing TanStack Query |
-| No NLP library for classification | HIGH | Closed taxonomy + structured legal authority fields make keyword matching superior |
-| Recharts extension (no new charting lib) | HIGH | All required chart types confirmed present in Recharts 2.x |
-| Build pipeline extension pattern | HIGH | Derived from direct reading of existing build script |
-| Denormalized provisions flat file | HIGH | Standard pattern for static JSON + client-side search |
-| No Zustand/Redux | HIGH | URL state + TanStack Query covers all state needs |
+| @anthropic-ai/sdk 0.78 sufficient (no upgrade) | HIGH | Installed version confirmed; messages.create API is stable |
+| claude-sonnet-4-5 for takeaways | HIGH | Direct reading of classify-provisions.ts; same task complexity |
+| Two-phase remedy reclassification (propose then apply) | HIGH | Architectural reasoning from project's deterministic pipeline philosophy |
+| Token Jaccard for pattern merging (no library) | HIGH | Dataset size (126 groups) makes inline implementation trivially fast |
+| Sheet component for case provisions panel | HIGH | Component confirmed installed and working in src/components/ui/sheet.tsx |
+| Case-index build artifact (not flat all-provisions.json) | HIGH | Shard architecture already exists; case-index is the natural complement |
+| No new npm dependencies | HIGH | Derived from direct codebase inspection |
 
 ---
 
 ## Sources
 
-- Existing codebase: `scripts/build-ftc-data.ts`, `src/types/ftc.ts`, `src/hooks/use-ftc-data.ts`, `src/components/ftc/FTCGroupChart.tsx`, `src/components/ftc/FTCCaseTable.tsx` (direct inspection)
-- Existing data structure: `public/data/ftc-files/03.24_rite_aid.json` (provision schema confirmed)
-- Project constraints: `.planning/PROJECT.md` (direct inspection)
-- MiniSearch project: https://lucaong.github.io/minisearch/ — **version not verified against current npm release, check before install**
-- TanStack Table: https://tanstack.com/table/v8 — **HIGH confidence, stable v8 API**
-- Recharts component list: https://recharts.org/en-US/api — **HIGH confidence for 2.x components**
+- Existing codebase (direct inspection):
+  - `scripts/classify-provisions.ts` — Claude API invocation pattern, model choice, rate-limiting approach
+  - `scripts/build-patterns.ts` — Full algorithm: exact-normalized pass, prefix-merge pass, filter threshold, sort
+  - `scripts/build-ftc-data.ts` — Pipeline structure, output file format
+  - `src/components/ui/sheet.tsx` — Confirmed installed, @radix-ui/react-dialog based
+  - `src/components/ftc/FTCIndustryTab.tsx` — Current handleViewProvisions behavior (navigates to provisions tab)
+  - `src/components/ftc/industry/CaseCard.tsx` — onViewProvisions callback already wired
+  - `src/types/ftc.ts` — Full data model including EnhancedFTCCaseSummary, ProvisionRecord, RemedyType enum
+  - `package.json` — All installed versions confirmed
+- Data files (direct inspection):
+  - `public/data/ftc-cases.json` — 285 cases, field schema confirmed
+  - `public/data/ftc-patterns.json` — 126 patterns, current algorithm output confirmed

@@ -1,533 +1,484 @@
 # Architecture Patterns
 
-**Domain:** Legal provisions library / FTC enforcement research tool
-**Researched:** 2026-02-24
-**Confidence:** HIGH — based on direct inspection of codebase, data files, and existing patterns
+**Domain:** FTC enforcement provisions library — v1.1 Data Quality & Case Insights milestone
+**Researched:** 2026-02-26
+**Confidence:** HIGH — all findings grounded in direct codebase inspection
 
 ---
 
-## Recommended Architecture
+## Context: What Already Exists
 
-The new provisions library, classification upgrade, and analytics should be structured as a **replacement** of the existing FTC Analytics page, preserving the established static-JSON pipeline pattern and extending it with two new data artifacts: a provisions index and a cross-case patterns index.
+This is a subsequent milestone on a shipped product. The v1.0 architecture is stable and must not be disrupted:
 
-The core insight: **all data transformation happens at build time**. The browser receives pre-computed, denormalized JSON that requires no server-side queries. Client-side work is filtering, sorting, and rendering only.
+- **4-tab SPA**: FTCTabShell routes between Analytics, Provisions Library, Industries, Patterns tabs via `?tab=` URL params
+- **Build pipeline**: `scripts/build-ftc-data.ts` → `scripts/classify-provisions.ts` → `scripts/build-provisions.ts` → `scripts/build-patterns.ts`, run as `npm run build:data`
+- **Source files**: `public/data/ftc-files/{id}.json` — 293 classified case JSON files; each has `case_info`, `complaint`, `order`, `metadata`
+- **Static artifacts**: `public/data/ftc-cases.json` (case summaries), `public/data/provisions/*.json` (25 topic-sharded provision files), `public/data/ftc-patterns.json` (126 pattern groups, 4.0 MB)
+- **Data access**: Three React Query hooks (`useFTCData`, `useProvisionsManifest`/`useProvisionShard`, `usePatterns`), all `staleTime: Infinity`
+- **UI**: shadcn/ui + Tailwind + Recharts; law-library aesthetic (EB Garamond, cream/gold/dark-green)
+- **Existing handler stub**: `handleViewProvisions` in `FTCIndustryTab.tsx` currently navigates away to the Provisions tab — it is the exact hook point for the case provisions panel feature
 
-### System Overview
-
-```
-Build-Time Pipeline                Runtime SPA
-───────────────────────────────    ──────────────────────────────────
-FTC Source JSON (293 files)
-         │
-         ▼
-scripts/build-ftc-data.ts          /FTCAnalytics route
-  ├─ classifyCategories()              └── FTCAnalytics.tsx (page)
-  ├─ [NEW] classifyTopics()                ├── useEnforcementData() hook
-  ├─ [NEW] indexProvisions()               │     └── fetch ftc-cases.json (React Query)
-  └─ [NEW] detectPatterns()                ├── useProvisionsIndex() hook
-         │                                 │     └── fetch ftc-provisions.json (React Query)
-         ▼                                 ├── usePatternIndex() hook
-public/data/                               │     └── fetch ftc-patterns.json (React Query)
-  ├─ ftc-cases.json (existing)             │
-  ├─ [NEW] ftc-provisions.json             ├── ProvisionsLibrary (topic-first browser)
-  ├─ [NEW] ftc-patterns.json               ├── EnforcementAnalytics (charts + tables)
-  └─ ftc-files/{id}.json (per-case)        └── CrossCasePatterns (language evolution)
-```
+The four v1.1 features divide cleanly into **two pipeline features** (key takeaways, remedy reclassification) and **two UI features** (pattern condensing, case provisions panel). The pattern condensing straddles both layers.
 
 ---
 
-## Component Boundaries
+## The Four Features: Integration Points
 
-### Layer 1: Build-Time Pipeline (scripts/build-ftc-data.ts)
+### Feature 1: Key Takeaways
 
-**Responsibility:** Read raw case JSON, classify provisions, compute indexes, write output.
+**What:** Claude-generated summaries per enforcement action — what the business did wrong. Short form on case cards, long form in a case detail view.
 
-No runtime code can depend on or call this layer. It runs offline via `npm run build:ftc-data`.
+**Pipeline integration:**
 
-| Function | Input | Output | Notes |
-|----------|-------|--------|-------|
-| `classifyCategories()` | count titles, legal authority, factual background | `string[]` case topics | Already exists, keyword-based |
-| `classifyTopics()` | individual provision: title + summary + requirements | `TopicTag[]` | New — provision-level tagging using expanded taxonomy |
-| `buildProvisionsIndex()` | all cases + provisions | `ProvisionsIndex` | Flat array of every provision, enriched with case context |
-| `detectPatterns()` | provisions index | `PatternIndex` | Groups provisions by normalized language fingerprint |
-| `computeGroupStats()` | cases array | `GroupStats[]` | Already exists |
-| `generateAnalysis()` | groupings | narrative text | Already exists |
+The natural home for takeaway generation is a new build script `scripts/build-takeaways.ts`, following the existing pattern of one script per concern. The script reads each `public/data/ftc-files/{id}.json` source file (which already contains `complaint.factual_background`, `complaint.counts[].title`, `case_info.violation_type`, `case_info.legal_authority`), invokes Claude, and writes the takeaway back into a new field on `case_info` in the source file — the same write-back pattern used by `classify-provisions.ts`.
 
-**Output artifacts:**
+After the takeaway script runs, `build-ftc-data.ts` is re-run to rebuild `ftc-cases.json`. The takeaway text needs to propagate to the case summary artifact so the UI can read it from the existing `useFTCData` hook without a new file or hook.
 
-`ftc-cases.json` — unchanged shape, but `FTCCaseSummary` gains `topic_tags: string[]` (provision-derived, richer than current `categories`).
-
-`ftc-provisions.json` — flat list of all provisions across all cases, each provision enriched with case context. This is the core new artifact.
-
-`ftc-patterns.json` — grouped provisions that share normalized boilerplate language, with timeline of when each variant appeared.
-
----
-
-### Layer 2: Data Access Hooks (src/hooks/)
-
-**Responsibility:** Fetch JSON from `/data/`, cache with React Query, expose typed data to components.
-
-Components never fetch directly. All data access goes through hooks. Hooks never filter or transform — that belongs in `useMemo` inside components.
-
-| Hook | Fetches | Returns | Used By |
-|------|---------|---------|---------|
-| `useFTCData()` | `ftc-cases.json` | `FTCDataPayload` | Analytics page |
-| `useProvisionsIndex()` | `ftc-provisions.json` | `ProvisionsIndexPayload` | Provisions Library page |
-| `usePatternIndex()` | `ftc-patterns.json` | `PatternIndexPayload` | Cross-case Patterns page |
-
-All hooks use `staleTime: Infinity` — data never changes during a session. This is the established pattern and should be preserved.
-
----
-
-### Layer 3: Page Components (src/pages/)
-
-**Responsibility:** Top-level route components. Own URL state via `useSearchParams`. Orchestrate feature components via props. Handle loading and error states.
-
-Pages do not contain rendering logic — they pass data down. The FTC Analytics page replaces the existing `FTCAnalytics.tsx`. No new routes are needed if the three feature areas (Library, Analytics, Patterns) are implemented as tabs within one page. This is the correct approach — it avoids URL proliferation and matches the existing pattern.
-
-**Recommended page structure:**
-
-```
-/FTCAnalytics?tab=analytics     → EnforcementAnalytics view (existing + deepened)
-/FTCAnalytics?tab=library       → ProvisionsLibrary view (new)
-/FTCAnalytics?tab=library&topic=COPPA        → Topic detail within library
-/FTCAnalytics?tab=patterns      → CrossCasePatterns view (new)
-```
-
-A single `FTCAnalytics.tsx` page handles all three tabs. This keeps the existing route, preserves backward-compatible URLs for the analytics view (the tab defaults to analytics), and avoids adding new routes to `App.tsx`.
-
----
-
-### Layer 4: Feature Component Groups (src/components/ftc/)
-
-**Responsibility:** Receive typed data via props, render domain UI. No fetching. No URL state access. Pure rendering + local interaction state only.
-
-Three feature groups, each in its own subdirectory or clearly named prefix:
-
-**Enforcement Analytics** (existing components, extended):
-
-| Component | Responsibility | Input Props |
-|-----------|---------------|-------------|
-| `FTCHeader` | Page-level header and tab navigation | `activeTab`, `onTabChange` |
-| `FTCOverviewStats` | Summary stat cards | `data: FTCDataPayload` |
-| `FTCGroupingSelector` | Year / Admin / Category pivot control | `mode`, `onModeChange` |
-| `FTCGroupChart` | Bar chart of enforcement counts | `data`, `mode`, `onBarClick` |
-| `FTCGroupList` | Tabular group list with selection | `data`, `mode`, `selectedGroup`, `onSelectGroup` |
-| `FTCGroupDetail` | Detail panel for selected group | `data`, `mode`, `groupKey` |
-| `FTCAnalysisPanel` | Narrative text for group | `data`, `mode`, `groupKey` |
-| `FTCCaseTable` | Sortable case list table | `cases: FTCCaseSummary[]` |
-
-**Provisions Library** (new components):
-
-| Component | Responsibility | Input Props |
-|-----------|---------------|-------------|
-| `ProvisionTopicNav` | Sidebar or tab strip listing all topics | `topics: string[]`, `activeTopic`, `onTopicSelect` |
-| `ProvisionTopicView` | All provisions for one topic | `topic: string`, `provisions: ProvisionRecord[]` |
-| `ProvisionCard` | Single provision: quoted text, citation, case context | `provision: ProvisionRecord` |
-| `ProvisionFilterBar` | Sort/filter controls (date, remedy type, company) | `filters`, `onFilterChange` |
-| `ProvisionCitationLink` | Paragraph-level citation + FTC.gov external link | `provision: ProvisionRecord` |
-
-**Cross-Case Patterns** (new components):
-
-| Component | Responsibility | Input Props |
-|-----------|---------------|-------------|
-| `PatternList` | List of detected boilerplate language clusters | `patterns: PatternGroup[]` |
-| `PatternDetail` | Timeline showing how one language cluster evolved | `pattern: PatternGroup` |
-| `PatternVariantCard` | One variant of a pattern: quoted text, date, company | `variant: PatternVariant` |
-
----
-
-### Layer 5: Types and Constants (src/types/, src/constants/)
-
-**Responsibility:** Shared TypeScript interfaces, taxonomy constants, classification functions. No runtime logic beyond pure functions.
-
-New types needed alongside existing `src/types/ftc.ts`:
+**Data schema change — `EnhancedFTCCaseSummary` in `ftc-cases.json`:**
 
 ```typescript
-// Provision-level record in the flat index
-interface ProvisionRecord {
-  case_id: string;
-  company_name: string;
-  date_issued: string;
-  year: number;
-  administration: string;
-  ftc_url?: string;
-  // Provision fields
-  provision_number: string;         // "II" or "II.A.3"
-  provision_title: string;
-  provision_category: string;       // structural: prohibition | affirmative_obligation | etc.
-  provision_summary: string;
-  topic_tags: string[];             // substantive: ["COPPA", "Data Retention"]
-  remedy_tags: string[];            // remedy type: ["Algorithmic Destruction"]
-  // Requirement fields
-  requirements: ProvisionRequirement[];
-}
-
-interface ProvisionRequirement {
-  description: string;
-  quoted_text: string;
-  quote_start_line: number;
-  quote_end_line: number;
-}
-
-interface ProvisionsIndexPayload {
-  generated_at: string;
-  total_provisions: number;
-  topics: string[];                 // sorted topic list for navigation
-  provisions: ProvisionRecord[];    // flat, all provisions
-}
-
-// Cross-case pattern
-interface PatternGroup {
-  pattern_id: string;
-  pattern_title: string;
-  canonical_language: string;       // exemplar quoted text
-  topic_tags: string[];
-  variant_count: number;
-  first_seen: string;               // date_issued of earliest case
-  last_seen: string;
-  variants: PatternVariant[];
-}
-
-interface PatternVariant {
-  case_id: string;
-  company_name: string;
-  date_issued: string;
-  administration: string;
-  quoted_text: string;
-  provision_number: string;
-}
-
-interface PatternIndexPayload {
-  generated_at: string;
-  total_patterns: number;
-  patterns: PatternGroup[];
+// Existing interface in src/types/ftc.ts — add one field
+interface EnhancedFTCCaseSummary {
+  // ... all existing fields unchanged ...
+  key_takeaway?: string;  // NEW: 1-3 sentence summary, undefined if not yet generated
 }
 ```
 
-Topic taxonomy constants (in `src/constants/ftc.ts`, extended):
+The source file (`ftc-files/{id}.json`) gains `case_info.key_takeaway: string` written by the build script. `build-ftc-data.ts` already reads `classifiedData?.case_info.*` fields and maps them to case summaries — adding `key_takeaway` is a one-line addition in `processFile()`.
 
-```typescript
-// Statutory topics
-export const STATUTORY_TOPICS = [
-  "COPPA", "FCRA", "GLBA", "Health Breach Notification Rule",
-  "CAN-SPAM", "TCPA", "FTC Act Section 5"
-];
+**UI integration:**
 
-// Practice area topics
-export const PRACTICE_TOPICS = [
-  "Privacy", "Data Security", "Deceptive Design / Dark Patterns",
-  "AI / Automated Decision-Making", "Surveillance", "Location Data"
-];
+`CaseCard.tsx` in `src/components/ftc/industry/` renders case cards in `SectorDetail`. Add a takeaway line below the provision count. `EnhancedFTCCaseSummary` is already available as the `caseData` prop — no prop drilling change needed.
 
-// Remedy types
-export const REMEDY_TAGS = [
-  "Monetary Penalty", "Algorithmic Destruction", "Data Deletion",
-  "Comprehensive Security Program", "Biometric Ban",
-  "Record-keeping", "Compliance Monitoring", "Third-Party Assessment"
-];
-```
+For case detail view: `SectorDetail` currently shows `SectorPatternCharts` + `CaseCardList`. The full takeaway text belongs in the expanded state of `CaseCard` or a modal — to be decided in roadmap planning. The short form (first sentence or 150 chars) goes on the card inline.
+
+**New components needed:** None required. Extend `CaseCard.tsx` in place.
+
+**Modified components:** `CaseCard.tsx` (render takeaway field), `build-ftc-data.ts` (read and propagate `key_takeaway` from source files).
+
+**New script:** `scripts/build-takeaways.ts` — reads source files, invokes Claude via Anthropic SDK (same pattern as `classify-provisions.ts`), writes `case_info.key_takeaway` back to source files. Skips files where `case_info.key_takeaway` already exists (idempotent, same pattern as classify-provisions).
 
 ---
 
-## Data Flow
+### Feature 2: Remedy Reclassification
 
-### Build-Time Data Flow
+**What:** 280 provisions currently classified as `remedy_type: "Other"` need reclassification into meaningful categories. Claude proposes; human reviews; pipeline writes back.
+
+**The problem in the data:** `build-provisions.ts` shards provisions by `remedy_types` array. When `remedy_types` is `["Other"]`, the provision goes into `rt-other-provisions.json`, which is the "catch-all" shard (currently a large, undifferentiated bucket). The existing `RemedyType` union in `src/types/ftc.ts` has 10 values — reclassification expands assignment into the existing 9 named types without adding new taxonomy values, or optionally adds 1-2 new types if Claude identifies a consistent unnamed pattern.
+
+**Pipeline integration:**
+
+Option A (recommended): A new script `scripts/reclassify-remedies.ts` reads each source file in `ftc-files/`, finds provisions where `remedy_types` contains only `"Other"`, asks Claude to reclassify them against the existing taxonomy, writes the corrected `remedy_types` arrays back to the source file. Then `build-provisions.ts` is re-run — provisions move from `rt-other-provisions.json` into their correct topic shards. No schema changes. The existing data pipeline handles everything.
+
+Option B (simpler for review): The script writes a proposed-reclassification JSON file that a human approves before the actual write-back. Adds a review step but reduces risk of incorrect auto-classification.
+
+**The key insight:** `build-provisions.ts` and `build-patterns.ts` consume source files as input. No UI code touches `remedy_types` classification logic. Fixing classification data automatically propagates to all downstream artifacts on the next pipeline run. This is the highest-leverage fix: change data, not code.
+
+**Schema changes:** None if using existing taxonomy values. If adding new `RemedyType` values, `src/types/ftc.ts` must be updated and `build-provisions.ts` must include the new slugs in `TOPIC_LABELS`.
+
+**New components needed:** None. This is a pure data pipeline change.
+
+**New script:** `scripts/reclassify-remedies.ts`
+
+**UI effect:** After re-running `build-provisions.ts`, `rt-other-provisions.json` shrinks and the named remedy type shards grow. The existing `TopicSidebar` in the Provisions tab will reflect new counts automatically (it reads from `manifest.json`). No UI changes required.
+
+---
+
+### Feature 3: Pattern Condensing
+
+**What:** Merge similar patterns, prune low-value patterns, and sort by most recent example. Target: reduce 126 patterns to a meaningful subset, defaulting to recency sort.
+
+**Pipeline integration:**
+
+`build-patterns.ts` currently groups by normalized title (exact match after punctuation stripping), then prefix-merges orphans into parents. Two enhancement points:
+
+**Merge similar patterns** — The current prefix-merge pass (Pass 2) only merges `small_key.startsWith(large_key + " ")`. A semantic similarity pass is not feasible at build time without a large ML model. Instead, add a **manual merge map** (a config object in `build-patterns.ts` or a separate `scripts/pattern-merge-config.ts`) that lists pairs or groups of normalized titles to merge. Claude Code generates the config by reviewing the 126 patterns and proposing consolidation; a human approves; the map is committed. The merge map is applied as Pass 2.5 before the qualification filter.
+
+**Prune low-value patterns** — Add an optional blocklist of normalized titles to suppress. Structural boilerplate patterns (compliance reporting, recordkeeping, monitoring) that already exist in `STRUCTURAL_CATEGORIES` can be filtered to reduce noise without removing data.
+
+**Sort by recency** — Already done in Step 7 of `build-patterns.ts`: `patternGroups.sort((a, b) => b.most_recent_year - a.most_recent_year)`. The default sort is already recency. UI just needs to ensure it renders in the order the file provides (no re-sorting in the UI).
+
+**Data schema changes:** None to `PatternsFile` or `PatternGroup`. The pipeline emits the same shape, just fewer patterns.
+
+**New components needed:** None. `PatternList.tsx` renders whatever `ftc-patterns.json` contains.
+
+**Modified:** `build-patterns.ts` — add merge config map and optional prune blocklist. May also be extracted to a separate `scripts/condense-patterns.ts` if the merge logic is substantial enough to warrant isolation.
+
+**UI integration:** `FTCPatternsTab` → `usePatterns` → `PatternList` — the entire chain is unchanged. Fewer patterns in the file = fewer rows rendered. No UI work needed for condensing itself. The sort improvement is also already handled in the pipeline.
+
+---
+
+### Feature 4: Case Provisions Panel
+
+**What:** In the Industries tab, clicking "View provisions" on a case card opens a modal (or side panel) showing that case's provisions inline, without navigating away to the Provisions tab.
+
+**Existing hook point:** `FTCIndustryTab.tsx` already defines `handleViewProvisions(caseData)` which currently just calls `setSearchParams({ tab: "provisions" })` — a navigation away. This function is passed as a prop through `SectorDetail` → `CaseCardList` → `CaseCard` → `onViewProvisions`.
+
+**Data access:** Individual case provisions are not currently available in `ftc-cases.json` (it contains case summaries only, not provision text). The provision text lives in `public/data/ftc-files/{id}.json` and in the topic-sharded files under `public/data/provisions/`.
+
+Two data access options:
+
+**Option A — Fetch from source file (recommended):** A new hook `useCaseProvisions(caseId: string | null)` fetches `public/data/ftc-files/{caseId}.json` on demand when the modal opens. This file contains the full `order.provisions` array with `title`, `summary`, and `requirements[].quoted_text`. Size per file is 20-200 KB. Network fetch is fast because modal opens after user interaction (acceptable latency). No pre-aggregation needed.
+
+```typescript
+// src/hooks/use-case-provisions.ts
+export function useCaseProvisions(caseId: string | null) {
+  return useQuery({
+    queryKey: ["case-provisions", caseId],
+    queryFn: async () => {
+      const res = await fetch(`/data/ftc-files/${caseId}.json`);
+      if (!res.ok) throw new Error("Failed to load case provisions");
+      const data = await res.json();
+      return (data.order?.provisions ?? []) as ClassifiedProvision[];
+    },
+    enabled: !!caseId,
+    staleTime: Infinity,
+  });
+}
+```
+
+**Option B — Read from topic-sharded files:** Filter existing provision shards by `case_id`. Works but requires loading multiple shard files (one per topic) and de-duplicating. More network overhead for this targeted use case. Not recommended.
+
+**Component design:**
+
+New component `CaseProvisionsModal.tsx` in `src/components/ftc/industry/`. Uses shadcn/ui `Dialog` (already in dependencies as `@radix-ui/react-dialog`, available through shadcn). Receives `caseData: EnhancedFTCCaseSummary` (for header metadata) and `isOpen: boolean` / `onClose: () => void`. Internally calls `useCaseProvisions(caseData?.id)`.
 
 ```
-FTC Source JSON (293 files, external path)
-         │
-         ▼
-scripts/build-ftc-data.ts
-         │
-         ├─[existing]─► classifyCategories(counts, authority, factual)
-         │                      └─► case.categories[] (keyword match)
-         │
-         ├─[new]──────► classifyTopics(provision.title, provision.summary, requirements)
-         │                      └─► provision.topic_tags[], provision.remedy_tags[]
-         │
-         ├─[new]──────► buildProvisionsIndex(all cases)
-         │                      └─► flat array of ProvisionRecord[]
-         │                          (one record per provision, enriched with case context)
-         │
-         └─[new]──────► detectPatterns(provisions index)
-                                └─► PatternGroup[] (normalized language fingerprinting)
-
-         Output ─►  public/data/ftc-cases.json      (enhanced FTCDataPayload)
-                    public/data/ftc-provisions.json  (ProvisionsIndexPayload)
-                    public/data/ftc-patterns.json    (PatternIndexPayload)
-                    public/data/ftc-files/{id}.json  (unchanged per-case files)
+CaseProvisionsModal
+  ├── Dialog.Header: company name, year, docket number, FTC.gov link
+  ├── Loading state (spinner while fetching)
+  └── Provision list:
+        forEach provision:
+          provision_number + title
+          summary (1-2 lines)
+          verbatim_text (collapsible, blockquote style)
+          remedy_types badges
 ```
 
-### Runtime Data Flow (Provisions Library)
+**State management in `FTCIndustryTab`:**
 
-```
-User navigates to /FTCAnalytics?tab=library
-         │
-         ▼
-FTCAnalytics.tsx
-  ├─ reads tab from useSearchParams()
-  ├─ calls useProvisionsIndex() → React Query fetches ftc-provisions.json (once, staleTime: Infinity)
-  └─ passes { provisionsData, activeTopic } to <ProvisionsLibraryView />
-              │
-              ├─ <ProvisionTopicNav topics={data.topics} activeTopic />
-              │       User clicks topic
-              │         └─► setSearchParams({ tab: 'library', topic: 'COPPA' })
-              │
-              └─ <ProvisionTopicView topic="COPPA" provisions={filtered}>
-                      │
-                      │  [useMemo: filter data.provisions where topic_tags includes activeTopic]
-                      │
-                      ├─ <ProvisionFilterBar filters onFilterChange />
-                      └─ [filtered, sorted provisions].map(p =>
-                              <ProvisionCard provision={p} />
-                                ├─ quoted_text (blockquote)
-                                ├─ provision_number + provision_title (citation)
-                                └─ <ProvisionCitationLink /> → external FTC.gov link
-                         )
+```typescript
+// Add to FTCIndustryTab state
+const [provisionsCase, setProvisionsCase] = useState<EnhancedFTCCaseSummary | null>(null);
+
+// Replace handleViewProvisions stub
+const handleViewProvisions = useCallback((caseData: EnhancedFTCCaseSummary) => {
+  setProvisionsCase(caseData);
+}, []);
+
+// In JSX
+<CaseProvisionsModal
+  caseData={provisionsCase}
+  isOpen={!!provisionsCase}
+  onClose={() => setProvisionsCase(null)}
+/>
 ```
 
-**Key rule:** Filtering always happens via `useMemo` in the rendering component, never in the hook. The hook returns the full dataset; the component slices it. This matches the established `FTCGroupDetail` pattern.
+This change is contained entirely within `FTCIndustryTab.tsx` (state) and a new `CaseProvisionsModal.tsx`. No other component is modified.
 
-### Runtime Data Flow (Analytics, enhanced)
+**New components needed:** `CaseProvisionsModal.tsx`, `use-case-provisions.ts` hook.
+
+**Modified:** `FTCIndustryTab.tsx` — add modal state and wire `handleViewProvisions` to open modal instead of navigating.
+
+---
+
+## Component Boundaries Summary
+
+### New Files
+
+| File | Type | Purpose |
+|------|------|---------|
+| `scripts/build-takeaways.ts` | Build script | Generate `key_takeaway` for each case via Claude, write to source files |
+| `scripts/reclassify-remedies.ts` | Build script | Propose reclassification of "Other" remedy provisions, write to source files |
+| `src/hooks/use-case-provisions.ts` | Hook | Fetch single case file on demand for provisions modal |
+| `src/components/ftc/industry/CaseProvisionsModal.tsx` | UI component | Modal showing case provisions inline in the Industries tab |
+
+### Modified Files
+
+| File | Change | Why |
+|------|--------|-----|
+| `scripts/build-ftc-data.ts` | Read `case_info.key_takeaway` from source files and include in case summary | Propagate takeaway to `ftc-cases.json` |
+| `scripts/build-patterns.ts` | Add merge config map, optional prune blocklist | Pattern condensing |
+| `src/types/ftc.ts` | Add `key_takeaway?: string` to `EnhancedFTCCaseSummary`; optionally add new `RemedyType` values | Schema for takeaway |
+| `src/components/ftc/industry/CaseCard.tsx` | Render `caseData.key_takeaway` (short form) | Display takeaway on case cards |
+| `src/components/ftc/FTCIndustryTab.tsx` | Add modal open state, replace `handleViewProvisions` stub | Case provisions panel |
+
+### Unchanged Files
+
+Everything in `provisions/`, `analytics/`, `patterns/` subdirectories. `FTCTabShell.tsx`. `FTCProvisionsTab.tsx`. `FTCPatternsTab.tsx`. `FTCAnalyticsTab.tsx`. All hooks except the one new file. `build-provisions.ts` (only re-run after reclassification writes back to source files).
+
+---
+
+## Data Flow Changes
+
+### Takeaway Pipeline Flow
 
 ```
-User at /FTCAnalytics?tab=analytics&mode=year&group=2020
-         │
-         ▼
-FTCAnalytics.tsx
-  ├─ calls useFTCData() → ftc-cases.json (React Query, staleTime: Infinity)
-  ├─ calls useProvisionsIndex() → ftc-provisions.json (same session, cached)
-  └─ passes data to analytics components
-              │
-              ├─ Existing: FTCGroupingSelector, FTCGroupChart, FTCGroupList, FTCGroupDetail
-              └─ New: TopicTrendChart (provisions data: topic frequency over time)
-                       TopicBreakdownTable (rows per topic, columns per year/admin)
+public/data/ftc-files/{id}.json
+  └── case_info.factual_background + complaint.counts
+        │
+        ▼
+scripts/build-takeaways.ts
+  └── Claude API → key_takeaway string
+        │
+        ▼  (write-back to source file)
+public/data/ftc-files/{id}.json
+  └── case_info.key_takeaway: "Lenovo preinstalled..."
+        │
+        ▼  (rebuild)
+npm run build:ftc-data
+        │
+        ▼
+public/data/ftc-cases.json
+  └── cases[].key_takeaway: "Lenovo preinstalled..."
+        │
+        ▼  (existing hook, no change)
+useFTCData() → EnhancedFTCCaseSummary.key_takeaway
+        │
+        ▼  (existing component, minor change)
+CaseCard.tsx → renders takeaway text
 ```
 
-Note: Both hooks are called on the page regardless of active tab. React Query handles this gracefully — each fetch runs once and is cached. There is no performance concern; the two JSON files are loaded in parallel on first visit.
+### Remedy Reclassification Flow
+
+```
+public/data/ftc-files/{id}.json
+  └── order.provisions[].remedy_types: ["Other"]
+        │
+        ▼
+scripts/reclassify-remedies.ts
+  └── Claude API → new remedy_types: ["Compliance Monitoring", "Recordkeeping"]
+        │
+        ▼  (write-back to source file)
+public/data/ftc-files/{id}.json
+  └── order.provisions[].remedy_types: ["Compliance Monitoring", "Recordkeeping"]
+        │
+        ▼  (rebuild — same command as v1.0)
+npm run build:provisions
+        │
+        ▼
+public/data/provisions/rt-other-provisions.json (shrinks)
+public/data/provisions/rt-compliance-monitoring-provisions.json (grows)
+public/data/provisions/manifest.json (counts update)
+        │
+        ▼  (existing hooks, no change)
+useProvisionsManifest() → updated counts in TopicSidebar
+```
+
+### Case Provisions Panel Flow
+
+```
+User clicks "View provisions" on CaseCard in SectorDetail
+        │
+        ▼  (state change in FTCIndustryTab — was navigation)
+setProvisionsCase(caseData)   [new]
+        │
+        ▼
+CaseProvisionsModal isOpen=true  [new component]
+        │
+        ▼
+useCaseProvisions(caseData.id)  [new hook]
+  └── fetch /data/ftc-files/{caseId}.json   [existing file, new runtime access]
+        │
+        ▼
+render provisions list inline in Dialog
+```
 
 ---
 
 ## Suggested Build Order
 
-The build order is driven by data dependencies: components cannot be built until the data they consume exists and is typed.
+Dependencies between features drive the order:
 
-### Phase 1: Data Pipeline Extension (prerequisite to all UI)
+### Step 1: Takeaway pipeline (prerequisite to CaseCard change)
 
-Build the enhanced classification and new index generation in `scripts/build-ftc-data.ts`.
+1. Write `scripts/build-takeaways.ts` with Claude API invocation and write-back pattern (from `classify-provisions.ts` as template)
+2. Add `key_takeaway` field to `EnhancedFTCCaseSummary` in `src/types/ftc.ts`
+3. Extend `processFile()` in `build-ftc-data.ts` to read and forward `case_info.key_takeaway`
+4. Run `build:classify-takeaways` → `build:ftc-data`, verify `ftc-cases.json` contains takeaway strings
+5. Update `CaseCard.tsx` to display `key_takeaway` (short form)
 
-1. Define all new TypeScript interfaces in `src/types/ftc.ts` and `src/types/ftc-provisions.ts`
-2. Extend topic taxonomy in `src/constants/ftc.ts` (statutory, practice, remedy tags)
-3. Implement `classifyTopics()` — provision-level classification
-4. Implement `buildProvisionsIndex()` — flat provision records with case context
-5. Implement `detectPatterns()` — language fingerprinting for cross-case patterns
-6. Run pipeline, verify output JSON shape and provision counts
-7. Create `useProvisionsIndex()` and `usePatternIndex()` hooks
+Rationale: Type extension in step 2 must precede UI work in step 5. The pipeline scripts (1-4) have no UI dependency and can be verified independently.
 
-No UI work should begin until this phase is complete. The data shape drives component props.
+### Step 2: Remedy reclassification (independent, data-only)
 
-### Phase 2: Analytics Enhancement (least new surface area, highest value)
+6. Write `scripts/reclassify-remedies.ts` — identify all "Other"-only provisions, invoke Claude, write back
+7. Review proposed reclassifications (manual spot-check of output)
+8. Run `build:provisions` to rebuild topic shards
+9. Verify `rt-other-provisions.json` count drops; named shard counts increase
 
-Extend the existing analytics page with provision-derived data. Builds on existing infrastructure.
+Rationale: Completely independent of all UI features and of the takeaway pipeline. Can run in parallel with Step 1. No UI changes needed.
 
-1. Upgrade `FTCHeader` to support tab navigation (analytics / library / patterns)
-2. Add topic-trend charts to the analytics tab (uses `ftc-provisions.json`)
-3. Add `TopicBreakdownTable` for drill-down by topic x time period
-4. Wire URL state for the new tab param
+### Step 3: Pattern condensing (pipeline + config, no UI change)
 
-### Phase 3: Provisions Library (core new feature)
+10. Run existing `build:patterns` and export current pattern list to inspect
+11. Identify merge candidates (similar titles that weren't caught by prefix merge) and pruning candidates (structural noise)
+12. Add merge config map to `build-patterns.ts` (or separate config file)
+13. Re-run `build:patterns`, verify pattern count reduction and recency sort
 
-1. `ProvisionTopicNav` — topic list sidebar/tabs
-2. `ProvisionTopicView` + `useMemo` filtering
-3. `ProvisionCard` — quoted text display, citation, link
-4. `ProvisionFilterBar` — sort by date, filter by remedy type
-5. `ProvisionCitationLink` — paragraph ref display and FTC.gov URL
+Rationale: No UI changes needed. The existing `PatternList` renders whatever the file contains. This step is safe to run at any point after the data is understood.
 
-### Phase 4: Cross-Case Patterns (most technically novel)
+### Step 4: Case provisions panel (UI + hook, depends on nothing else)
 
-1. `PatternList` — all detected pattern groups
-2. `PatternDetail` — timeline view of one pattern
-3. `PatternVariantCard` — individual variant display
+14. Write `src/hooks/use-case-provisions.ts`
+15. Write `src/components/ftc/industry/CaseProvisionsModal.tsx` with loading state and provision list
+16. Update `FTCIndustryTab.tsx`: add `provisionsCase` state, replace `handleViewProvisions` stub, add `<CaseProvisionsModal />`
+17. Verify modal opens, loads provisions, closes without affecting URL or tab state
+
+Rationale: Fully independent of the other three features. No shared data or component dependencies. The existing `ftc-files/` source files are already the data source — no new build step needed.
 
 ---
 
 ## Patterns to Follow
 
-### Pattern 1: Single Fetch, Client-Side Filter
+### Pattern 1: Write-Back to Source Files for Pipeline Classification
 
-**What:** Fetch the entire data artifact once per session (React Query, `staleTime: Infinity`). Filter and slice in `useMemo` inside rendering components.
+**What:** Build scripts that classify or generate content write results back into `public/data/ftc-files/{id}.json` under `case_info.*` or `order.provisions[].field`. Downstream build scripts re-read those enriched files.
 
-**When:** Always, for FTC data. The dataset is bounded (293 cases, ~2,000 provisions estimated). There is no case for paginated or partial fetching.
+**When:** Takeaway generation, remedy reclassification. Both follow this pattern because it preserves classification results across pipeline re-runs and makes results auditable (inspectable files).
+
+**Example (from `classify-provisions.ts`):**
+```typescript
+// Read existing file, merge new fields, write back
+const existing = JSON.parse(fs.readFileSync(filepath, "utf-8"));
+existing.case_info.key_takeaway = generatedTakeaway;
+writeJSONSafe(filepath, existing);
+```
+
+**Skip condition:** If `case_info.key_takeaway` already exists, skip — same idempotency check as `classify-provisions.ts` uses for `statutory_topics`.
+
+### Pattern 2: Modal With On-Demand Fetch for Case Detail
+
+**What:** Use a controlled shadcn/ui `Dialog` managed by parent state. The modal's data hook is guarded by `enabled: !!caseId`. Data is fetched once and cached by React Query.
+
+**When:** Case provisions panel. This is the correct pattern because: (a) Dialog is already in the shadcn/ui install, (b) `staleTime: Infinity` means repeat opens of the same case are instant, (c) the fetch is deferred until user action, so it doesn't block initial tab render.
 
 **Example:**
 ```typescript
-// In the page component
-const { data } = useProvisionsIndex();
-const activeTopic = searchParams.get("topic") ?? data?.topics[0];
+// Parent manages open state
+const [selectedCase, setSelectedCase] = useState<EnhancedFTCCaseSummary | null>(null);
 
-// In the topic view component
-const filtered = useMemo(
-  () => provisions.filter(p => p.topic_tags.includes(activeTopic)),
-  [provisions, activeTopic]
-);
+// Hook is disabled when no case selected
+const { data: provisions, isLoading } = useCaseProvisions(selectedCase?.id ?? null);
 ```
 
-**Why:** Matches established pattern. Keeps components pure. Avoids prop drilling of filter state. Allows instant client-side filtering without network round-trips.
+### Pattern 3: Single-Field Schema Extension
 
-### Pattern 2: URL-Driven Navigational State
+**What:** Add new optional fields to existing interfaces rather than creating new interfaces. `key_takeaway?: string` on `EnhancedFTCCaseSummary` rather than a new `CaseTakeaway` wrapper type.
 
-**What:** Shareable page state (active tab, selected topic, selected group) lives in URL search params. Ephemeral UI state (sort direction, hover state) lives in `useState`.
+**When:** Takeaway field. The field is small, directly associated with the case record, and the existing interface is the natural owner. Making it optional (`?`) means old `ftc-cases.json` files without the field remain type-safe.
 
-**When:** Any state a user should be able to bookmark or share.
+### Pattern 4: Config-Driven Merge Map for Patterns
 
-**Example:**
+**What:** Pattern consolidation logic is expressed as a static merge config object, not algorithmic. Claude generates the config; a human approves; the map is committed and versioned.
+
+**When:** Pattern condensing. The alternative (runtime semantic similarity) requires a large model at build time and produces unpredictable results. A reviewed config is deterministic and transparent.
+
+**Example structure:**
 ```typescript
-// In FTCAnalytics.tsx
-const [searchParams, setSearchParams] = useSearchParams();
-const tab = searchParams.get("tab") ?? "analytics";
-const topic = searchParams.get("topic") ?? null;
-
-function handleTopicSelect(t: string) {
-  setSearchParams({ tab: "library", topic: t });
-}
+// In build-patterns.ts or scripts/pattern-merge-config.ts
+const MERGE_MAP: Record<string, string[]> = {
+  // target normalized title -> list of source normalized titles to merge into it
+  "security program": [
+    "information security program",
+    "comprehensive information security program",
+    "data security program",
+  ],
+};
 ```
-
-### Pattern 3: Page Orchestrates, Feature Components Render
-
-**What:** The page component handles data fetching (via hooks), URL state, and passing props down. Feature components receive typed props and render without knowing about URLs, hooks, or global state.
-
-**When:** Always. Feature components in `src/components/ftc/` should never call hooks directly or access `useSearchParams`.
-
-**Example (existing, should be preserved):**
-```typescript
-// FTCGroupDetail.tsx — receives props, uses useMemo, renders
-export default function FTCGroupDetail({ data, mode, groupKey }: Props) {
-  const filteredCases = useMemo(() => {
-    return data.cases.filter(c => { ... });
-  }, [data.cases, mode, groupKey]);
-  return <FTCCaseTable cases={filteredCases} />;
-}
-```
-
-### Pattern 4: Build-Time Classification, Never Runtime
-
-**What:** All topic tagging, pattern detection, and index generation happens in the build script. The browser receives pre-classified data and never runs classification logic.
-
-**When:** For FTC data exclusively. Classification is deterministic and the data changes only when the pipeline is re-run.
-
-**Why:** Keeps bundle size small (no NLP libraries in browser). Keeps runtime fast (no classification latency). Makes outputs auditable (pipeline output is inspectable JSON).
 
 ---
 
 ## Anti-Patterns to Avoid
 
-### Anti-Pattern 1: Fetching Individual Case Files at Runtime for Provisions
+### Anti-Pattern 1: Generating Takeaways at Runtime
 
-**What:** Fetching `ftc-files/{id}.json` for each case individually to read provisions in the browser.
+**What:** Calling the Claude API from the browser or a Vercel function to generate takeaways on demand.
 
-**Why bad:** 293 sequential or parallel fetches. Latency is unbearable. The whole point of the build pipeline is to pre-aggregate.
+**Why bad:** Breaks the "no backend" constraint. Adds API key management complexity. Adds latency to every case card render. Takeaways are deterministic for fixed source data — there is no reason to regenerate them per request.
 
-**Instead:** The build script reads all 293 files, extracts provisions, and writes `ftc-provisions.json` as a single pre-aggregated artifact. The browser fetches one file.
+**Instead:** Build-time generation via `scripts/build-takeaways.ts`. Results are committed to `public/data/ftc-files/{id}.json` and re-emitted into `ftc-cases.json` on the next pipeline run.
 
-### Anti-Pattern 2: React Context for FTC Data
+### Anti-Pattern 2: Fetching All Case Files at Modal Open
 
-**What:** Putting FTC data into a React Context and consuming it in deep component trees.
+**What:** When the case provisions panel opens, fetching all 293 `ftc-files/*.json` files to build a complete index, then filtering to the selected case.
 
-**Why bad:** Causes unnecessary re-renders across the component tree. React Query is already the cache. The existing prop-drilling pattern is intentional and appropriate at this scale.
+**Why bad:** 293 fetches, tens of megabytes transferred, significant latency. The entire point of the `useCaseProvisions` hook is to fetch exactly one file.
 
-**Instead:** Continue passing data down via props from page to feature components. The tree is at most 3 levels deep.
+**Instead:** `useCaseProvisions(caseId)` fetches `/data/ftc-files/${caseId}.json` — one file, one fetch.
 
-### Anti-Pattern 3: Separate Routes for Library and Patterns
+### Anti-Pattern 3: Modifying the Provisions Tab for Case-Level Browsing
 
-**What:** Adding `/FTCLibrary` and `/FTCPatterns` as separate top-level routes.
+**What:** Extending `FTCProvisionsTab` to accept a `caseId` filter param and wiring the "View provisions" button in the Industries tab to navigate there with `?tab=provisions&case=lenovo`.
 
-**Why bad:** Adds complexity to `App.tsx` and `vercel.json`. Splits page-level loading state. Makes it harder to share data fetched by one feature with another (e.g., analytics and library both need case data).
+**Why bad:** The Provisions tab is topic-first; forcing it into case-first mode requires loading all topic shards and filtering across them. Architecturally incoherent. The existing `handleViewProvisions` stub navigated to provisions without a case filter — it just dumped the user on the provisions landing page. The modal pattern avoids this entirely.
 
-**Instead:** Single `/FTCAnalytics` route with tab navigation via search params. All three feature areas share the same page component, can share the same React Query cache, and the URL conveys the active view.
+**Instead:** Case provisions panel is a modal in the Industries tab. It is not a mode of the Provisions tab.
 
-### Anti-Pattern 4: Runtime Topic Classification
+### Anti-Pattern 4: Auto-Applying Remedy Reclassifications Without Review
 
-**What:** Shipping the taxonomy rules and a classification function to the browser, then classifying provisions client-side on first load.
+**What:** Running `reclassify-remedies.ts` and immediately writing Claude's proposed classifications back to source files without a human review step.
 
-**Why bad:** Adds classification latency to every page load. Makes classification non-auditable (output changes if rules change, with no artifact to inspect). Increases bundle size unnecessarily.
+**Why bad:** The entire point of reclassification is to improve data quality. Unchecked LLM output can introduce new errors. The existing `classify-provisions.ts` script ran in a Claude Code session where the agent could be monitored. A standalone script with no review step removes that oversight.
 
-**Instead:** Classification is a build-time concern. Output is static JSON. When taxonomy rules change, re-run the pipeline and redeploy.
-
-### Anti-Pattern 5: Zod Validation of FTC JSON at Runtime
-
-**What:** Using Zod schemas to parse/validate `ftc-cases.json` or `ftc-provisions.json` in the browser.
-
-**Why bad:** The JSON is produced by the build pipeline we control. Runtime validation adds latency on every session start and provides no safety benefit — if the pipeline produces bad data, the build should catch it, not the browser.
-
-**Instead:** Use Zod in the build script to validate pipeline output before writing files (optional but valuable). In the browser, trust the types.
+**Instead:** The script writes proposed reclassifications to a separate `proposed-reclassifications.json` review file (or prints them to stdout) before writing back to source files. A human spot-checks the proposals and confirms before the final write-back runs. Alternatively, build a `--dry-run` flag (same as `classify-provisions.ts`) that prints proposed changes without committing them.
 
 ---
 
 ## Scalability Considerations
 
-| Concern | Current scale (293 cases) | Future scale |
-|---------|--------------------------|--------------|
-| `ftc-cases.json` size | ~500KB uncompressed | Linear with cases; fine to 5K cases |
-| `ftc-provisions.json` size | ~2–5MB estimated (provisions with quoted text) | Gzip brings to ~400KB; fine for a reference tool |
-| Client-side filter speed | Sub-millisecond with useMemo | `useMemo` + array filter scales to 10K provisions without issue |
-| Build script runtime | Seconds | Minutes at 10K files; still acceptable for an offline pipeline |
-| `ftc-patterns.json` size | Unknown until implemented | Start simple: exact/near-exact title matching |
+| Concern | Current | v1.1 Impact |
+|---------|---------|-------------|
+| `ftc-cases.json` size | ~500 KB | Grows by ~50 KB (293 takeaway strings at ~170 chars each). Negligible. |
+| `ft-files/{id}.json` per-case fetch | Never done at runtime before | Single file 20-200 KB. React Query caches on first open. No concern. |
+| Build time for takeaways | N/A | 293 Claude API calls. Sequential: ~15-30 min. Idempotent — only runs for uncached cases. |
+| Pattern file size | 4.0 MB | Shrinks as patterns are condensed. |
+| Remedy reclassification build time | N/A | 280 provisions to reclassify. Single batch or sequential Claude calls. ~5-10 min. |
 
-Pattern detection is the only technically open question. A simple approach (normalize provision titles, group by normalized title hash) will work at this scale and should be the starting point. More sophisticated fuzzy matching can be added in a later phase if needed.
+No scalability concerns that require architectural changes.
 
 ---
 
-## File Layout for New Code
+## File Layout for v1.1 Changes
 
 ```
-src/
-├── types/
-│   ├── ftc.ts                    # Existing — extend FTCCaseSummary with topic_tags
-│   └── ftc-provisions.ts         # New — ProvisionRecord, ProvisionsIndexPayload, PatternGroup, PatternIndexPayload
-├── constants/
-│   └── ftc.ts                    # Existing — extend with STATUTORY_TOPICS, PRACTICE_TOPICS, REMEDY_TAGS
-├── hooks/
-│   ├── use-ftc-data.ts           # Existing — unchanged
-│   ├── use-provisions-index.ts   # New — fetches ftc-provisions.json
-│   └── use-pattern-index.ts      # New — fetches ftc-patterns.json
-├── components/ftc/
-│   ├── FTCHeader.tsx             # Existing — extend with tab navigation
-│   ├── FTCOverviewStats.tsx      # Existing — unchanged
-│   ├── FTCGroupingSelector.tsx   # Existing — unchanged
-│   ├── FTCGroupChart.tsx         # Existing — unchanged
-│   ├── FTCGroupList.tsx          # Existing — unchanged
-│   ├── FTCGroupDetail.tsx        # Existing — unchanged
-│   ├── FTCAnalysisPanel.tsx      # Existing — unchanged
-│   ├── FTCCaseTable.tsx          # Existing — unchanged
-│   ├── FTCMissingCasesNotice.tsx # Existing — unchanged
-│   ├── TopicTrendChart.tsx       # New — analytics: topic frequency over time
-│   ├── TopicBreakdownTable.tsx   # New — analytics: topic x period breakdown
-│   ├── ProvisionTopicNav.tsx     # New — library: topic list navigation
-│   ├── ProvisionTopicView.tsx    # New — library: all provisions for one topic
-│   ├── ProvisionCard.tsx         # New — library: single provision display
-│   ├── ProvisionFilterBar.tsx    # New — library: filter/sort controls
-│   ├── ProvisionCitationLink.tsx # New — library: citation + FTC.gov link
-│   ├── PatternList.tsx           # New — patterns: list of pattern groups
-│   ├── PatternDetail.tsx         # New — patterns: timeline for one pattern
-│   └── PatternVariantCard.tsx    # New — patterns: one variant in a timeline
-├── pages/
-│   └── FTCAnalytics.tsx          # Existing — replace with tabbed version
 scripts/
-└── build-ftc-data.ts             # Existing — extend with classifyTopics, buildProvisionsIndex, detectPatterns
+  build-ftc-data.ts         MODIFIED — read and propagate key_takeaway from source files
+  build-patterns.ts         MODIFIED — add merge config map, optional prune blocklist
+  build-takeaways.ts        NEW — Claude API generation + write-back for key_takeaway
+  reclassify-remedies.ts    NEW — Claude API reclassification of "Other" remedy provisions
+
+src/
+  types/
+    ftc.ts                  MODIFIED — add key_takeaway?: string to EnhancedFTCCaseSummary
+  hooks/
+    use-case-provisions.ts  NEW — on-demand fetch of single case file for modal
+  components/ftc/
+    FTCIndustryTab.tsx      MODIFIED — add provisionsCase state, replace handleViewProvisions stub
+    industry/
+      CaseCard.tsx          MODIFIED — render key_takeaway short form
+      CaseProvisionsModal.tsx  NEW — Dialog with provision list for selected case
+
 public/data/
-├── ftc-cases.json                # Existing — enhanced shape
-├── ftc-provisions.json           # New artifact
-├── ftc-patterns.json             # New artifact
-└── ftc-files/{id}.json           # Existing per-case files
+  ftc-cases.json            REBUILT — cases gain key_takeaway field
+  ftc-files/{id}.json       ENRICHED — case_info gains key_takeaway; provision remedy_types corrected
+  provisions/
+    rt-other-provisions.json        REBUILT — fewer provisions (reclassified away)
+    rt-*.json               REBUILT — some shards grow with newly classified provisions
+    manifest.json           REBUILT — counts update automatically
+  ftc-patterns.json         REBUILT — fewer patterns after condensing
 ```
 
 ---
 
 ## Sources
 
-- Direct codebase inspection: `src/types/ftc.ts`, `src/hooks/use-ftc-data.ts`, `scripts/build-ftc-data.ts`, `src/pages/FTCAnalytics.tsx`, `src/components/ftc/*`
-- Raw provision data structure: `public/data/ftc-files/01.05_assail.json` (representative case)
-- Existing architecture: `.planning/codebase/ARCH.md`
-- Project requirements: `.planning/PROJECT.md`
-- Confidence: HIGH on all component boundaries and data flow — directly grounded in existing code and data shapes
+- Direct codebase inspection: `scripts/build-ftc-data.ts`, `scripts/classify-provisions.ts`, `scripts/build-provisions.ts`, `scripts/build-patterns.ts` — pipeline write-back pattern, idempotency checks, artifact shapes
+- Direct codebase inspection: `src/components/ftc/FTCIndustryTab.tsx` — existing `handleViewProvisions` stub (line 92-99) is the exact integration point for the case provisions modal
+- Direct codebase inspection: `src/components/ftc/industry/CaseCard.tsx`, `CaseCardList.tsx`, `SectorDetail.tsx` — component hierarchy for takeaway display
+- Direct codebase inspection: `src/types/ftc.ts` — all existing interfaces; `EnhancedFTCCaseSummary` is the correct type to extend for `key_takeaway`
+- Direct codebase inspection: `src/hooks/use-ftc-data.ts`, `use-patterns.ts`, `use-provisions.ts` — established React Query hook pattern (`staleTime: Infinity`, single fetch)
+- Direct data inspection: `public/data/ftc-files/01.18_lenovo.json` — confirmed `case_info`, `complaint.factual_background`, `order.provisions` structure; field availability for takeaway generation
+- Direct data inspection: `public/data/ftc-patterns.json` — confirmed `total_patterns: 126`, existing `most_recent_year` sort already in place
+- Project requirements: `.planning/PROJECT.md` — v1.1 feature scope, constraints
+- Confidence: HIGH on all integration points — every claim is grounded in direct inspection of existing code and data

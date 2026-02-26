@@ -1,17 +1,17 @@
 # Project Research Summary
 
-**Project:** FTC Enforcement Provisions Library (Milestone 2)
-**Domain:** Legal enforcement database / regulatory provisions library
-**Researched:** 2026-02-24
+**Project:** FTC Enforcement Provisions Library (v1.1 — Data Quality & Case Insights)
+**Domain:** Legal enforcement database / regulatory provisions library (subsequent milestone)
+**Researched:** 2026-02-26
 **Confidence:** HIGH
 
 ## Executive Summary
 
-The FTC Enforcement Provisions Library is a specialized legal research tool built on top of an existing React/Vite/TypeScript/Tailwind SPA. The defining characteristic of this product type is that all heavy computation must happen at build time: topic classification, provision indexing, and cross-case pattern detection are all offline pipeline work. The browser receives pre-computed, denormalized JSON and performs only filtering, sorting, and rendering. This is the established pattern for static-site legal reference tools and is the correct approach given the project's no-backend constraint.
+This is a subsequent milestone on a shipped v1.0 product. The four v1.1 features — key takeaways, remedy reclassification, pattern condensing, and a case provisions panel — all layer onto a stable, static-first architecture built with React 18.3, Vite 5.4, TanStack Query, and shadcn/ui. No new npm dependencies are required. Every feature is achievable with the existing stack: the Anthropic SDK (already installed as a devDependency) handles all build-time LLM work, the existing shadcn Dialog/Sheet component handles the modal UI, TanStack Query handles lazy case file fetching, and a 10-line inline token Jaccard function handles text similarity for pattern merging. The absence of new dependencies is a research-confirmed finding from direct codebase inspection, not an assumption.
 
-The recommended implementation path is additive, not a rewrite. Two production libraries are needed: MiniSearch for client-side full-text search and TanStack Table for headless sortable/filterable tables. Both integrate cleanly with the existing TanStack Query, shadcn/ui, and Recharts infrastructure. The build pipeline (scripts/build-ftc-data.ts) is extended with three new functions — provision classification, provision index generation, and pattern detection — that emit two new static JSON artifacts consumed by two new React Query hooks. The page architecture uses a single tabbed route (/FTCAnalytics?tab=...) rather than new routes, which is the correct call given the shared data fetching.
+The recommended delivery order is data pipeline first, UI second. Remedy reclassification and pattern condensing are pure pipeline changes with no UI risk — they improve the existing UI automatically on the next build and can ship without any frontend work. The case provisions panel follows as a self-contained UI feature whose data source (individual `ftc-files/*.json`) already exists at runtime, though it requires a `case-index.json` build artifact created in the same phase. Key takeaways are last because they require a new pipeline script, Claude API calls across 293 cases (~15-30 min build time), a type extension, and a UI surface — and they depend on the provisions panel being ready to host the full takeaway display.
 
-The primary risk in this project is not implementation complexity but classification correctness and data quality. Two pitfalls dominate: first, keyword matching that over-tags provisions as "Privacy" and collapses the taxonomy into noise; second, presenting extracted quoted text as authoritative legal citations when the OCR pipeline introduced transcription errors. Both risks must be mitigated before any UI surface is built — classification accuracy is the critical path dependency for the entire provisions library, and citation data quality is the trust dependency for the entire product.
+The critical risk across all four features is the taxonomy change protocol for remedy reclassification. The `RemedyType` union is encoded in four separate locations simultaneously (TypeScript type, build script label map, classification prompt enum, shard file structure), and all four must be updated atomically before any reclassification script runs. A second critical risk is hallucination in LLM-generated takeaways: generation must be constrained to structured fields only (`legal_authority`, `violation_type`, provision titles), output must be validated programmatically, and all AI-generated content must be labeled in the UI. Pattern condensing carries a data loss risk — merges are one-way transforms and must be expressed as a reviewed config file with a git checkpoint before execution.
 
 ---
 
@@ -19,152 +19,161 @@ The primary risk in this project is not implementation complexity but classifica
 
 ### Recommended Stack
 
-The existing stack (React 18.3, Vite 5.4, TypeScript 5.8, Tailwind 3.4, shadcn/ui, Recharts 2.15, TanStack Query 5.83, React Router 6.30) is fixed and requires no re-evaluation. Only two new production dependencies are warranted: **MiniSearch** (~7KB gzipped) for client-side full-text search over the provisions corpus, and **TanStack Table v8** (~15KB gzipped) for column filtering, pagination, and multi-sort on provision tables. Total new bundle impact is ~22KB.
+The v1.0 stack is fixed by project constraint and is not re-evaluated. All v1.1 capability is additive. The key finding from STACK.md is that **zero new dependencies are required**: the existing `@anthropic-ai/sdk 0.78` handles build-time LLM generation for both takeaways and remedy reclassification, the installed `shadcn/ui Sheet` component handles the provisions panel modal, TanStack Query handles on-demand case file fetching, and an inline token Jaccard function handles pattern similarity more appropriately than any character-level edit distance library. `claude-sonnet-4-5` is the right model choice — it matches the existing `classify-provisions.ts` precedent and avoids Opus pricing (~10x more expensive) for a summarization task.
 
-No NLP library is needed for topic classification — the FTC's legal_authority strings are highly specific ("Children's Online Privacy Protection Act, 15 U.S.C. § 6502"), making keyword matching against structured fields more accurate than statistical NLP for this closed taxonomy. No new charting library is needed (Recharts 2.x includes all LineChart, AreaChart, and ComposedChart types required). No state management library is needed (TanStack Query + React Router useSearchParams covers all state needs). Cross-case similarity computation is feasible in ~20 lines of TypeScript at build time.
+**Core technologies (all pre-installed, none new):**
+- `@anthropic-ai/sdk 0.78`: Build-time LLM generation — reused as-is for two new pipeline scripts
+- `shadcn/ui Sheet/Dialog`: Case provisions panel modal — already installed and confirmed in `src/components/ui/sheet.tsx`
+- `TanStack Query 5.83`: On-demand case file fetching with `staleTime: Infinity` — same pattern as all existing hooks
+- Inline `tokenJaccard()` (~10 lines): Pattern similarity merging — O(n²) over 126 groups completes in < 100ms at build time
 
-**Core new technologies:**
-- **MiniSearch ^7.x** — client-side full-text search with inverted index; handles ~5,000 provisions at sub-200ms index time
-- **TanStack Table ^8.x** — headless sortable/filterable/paginated tables; composable with existing shadcn/ui primitives
-- **Extended build-ftc-data.ts** — three new functions in the existing TypeScript pipeline; no new build tooling
-
-See `.planning/research/STACK.md` for full rationale and rejected alternatives.
+**No new `npm install` commands needed.** See `.planning/research/STACK.md` for full rationale and all rejected additions.
 
 ### Expected Features
 
-The provisions library inverts the existing analytics-first mental model into a topic-first browsing experience. Legal practitioners research by legal issue, not by company. The critical insight from FEATURES.md: citation is king. Every provision card must include case name, paragraph reference, and a working FTC.gov link — missing any of these makes the tool unusable for professional work.
+All four v1.1 features are table stakes for this milestone — missing any one means the milestone delivers no real improvement over v1.0. FEATURES.md research grounds every feature scope claim in direct data analysis, not assumptions.
 
 **Must have (table stakes):**
-- Topic-first browsing — primary mental model for legal research; the whole product depends on this
-- Exact paragraph-level citations — practitioners cannot cite uncited sources; paragraph refs already exist in the JSON
-- Verbatim quoted order language — paraphrases introduce error; practitioners quote consent orders in briefs
-- Working FTC.gov source links per provision — verification requirement for any legal use
-- Case metadata visible on each provision card (company, year, administration, legal authority)
-- Filtering within topic views — date range, company, remedy type
-- Date sort within topic views — newest-first default (current practice), oldest-first available (historical trend)
-- Provision count per topic on topic selector — tells practitioners how settled or sparse the enforcement record is
+- Remedy reclassification: 885 provisions in `rt-other` are unbrowsable — the remedy type filter returns no useful results for most topics. The actual reclassification target is ~200-300 `prohibition` and `affirmative_obligation` provisions (not all 885 — structural provisions like `duration` and `acknowledgment` are correctly "Other" and should stay that way)
+- Pattern condensing: 12 assessment-pattern variants and 10 acknowledgment-pattern variants show as separate rows — merge into 3-4 and 1 groups respectively; prune the 11 structural patterns with < 6 cases that add noise without research value
+- Case provisions panel: "View provisions" currently navigates away from the industry tab, losing sector context — an inline slide-in modal is table stakes for research tools at this maturity level (Bloomberg Law and Westlaw both use this pattern)
+- Key takeaways: Plain-English "what the FTC alleged" summary per case — factual only, labeled as AI-generated, derived from structured fields (`legal_authority`, `case_info.violation_type`, provision titles)
 
 **Should have (differentiators):**
-- Three-axis taxonomy (statutory + remedy type at minimum) — no public FTC tool offers provision-level tagging; NOTE: Pitfalls research recommends reducing to two orthogonal axes (statutory + remedy type) rather than three
-- Remedy type as a first-class filter — practitioners building compliance programs need "what does a security program provision look like across cases"
-- Administration-era context on provisions — policy context for enforcement era
-- Enforcement trend charts by topic — how FTC focus has shifted within a topic over time
-- Language evolution tracking — how boilerplate provision language has changed across enforcement eras
+- Factual-only takeaway framing ("The FTC alleged that...") — avoids legal advice liability; practitioners trust AI-summarized complaint facts more than AI legal analysis
+- Provisions panel showing case takeaway and provisions together in one surface — no existing FTC case browser does this
+- Newly categorized remedies exposed as first-class filter options — "Data Retention/Deletion", "Consumer Notification", "Consent/Opt-out" filling real browsing gaps
 
-**Defer to v2+:**
-- Full-text search across all order language — topic tagging covers the primary use case for v1
-- Side-by-side order comparison tool — separate product surface; high UI investment
-- Industry sector drill-down — requires additional classification work not currently in the data
-- Penalty/monetary remedy tracking — requires data enrichment
+**Defer (v2+):**
+- Case detail page as a new route — modal achieves the same goal without routing complexity
+- Showing all takeaways on the industry sector landing page — volume overwhelming at that level
+- Manual curation of all 885 "other" provisions — months of work; build-time Claude classification is the correct approach
+- Pattern merging via external fuzzy text library — token Jaccard inline is better suited to title comparison
 
-See `.planning/research/FEATURES.md` for full feature landscape, anti-features, and feature dependencies.
+See `.planning/research/FEATURES.md` for full feature landscape, anti-features, data reality notes, and feature dependency chain.
 
 ### Architecture Approach
 
-The architecture is a four-layer system: a build-time pipeline that pre-computes all data artifacts, React Query hooks that fetch and cache those artifacts, a single FTCAnalytics page component that manages URL state and orchestrates data fetching, and feature component groups (EnforcementAnalytics, ProvisionsLibrary, CrossCasePatterns) that receive typed props and render without side effects. The page replaces the current FTCAnalytics.tsx with a tabbed version (/FTCAnalytics?tab=analytics|library|patterns). This avoids adding new routes and preserves backward-compatible URLs. All three feature areas share the same React Query cache.
+All four features integrate cleanly into the existing pipeline-driven write-back architecture: build scripts enrich `public/data/ftc-files/*.json` source files (same pattern as `classify-provisions.ts`), downstream build scripts re-read enriched files and regenerate static artifacts, and the React UI reads artifacts via TanStack Query hooks with `staleTime: Infinity`. No new data flow patterns are introduced. The case provisions panel introduces the first runtime fetch of individual `ftc-files/*.json` files; a `case-index.json` build artifact is required so the modal fetches only the 1-3 relevant provision shards rather than all 15+.
 
-**Major components:**
-1. **scripts/build-ftc-data.ts (extended)** — classifyTopics(), buildProvisionsIndex(), detectPatterns(); emits ftc-provisions.json and ftc-patterns.json as new static artifacts
-2. **useProvisionsIndex() + usePatternIndex() hooks** — fetch/cache new JSON artifacts with staleTime: Infinity; never filter, never transform
-3. **FTCAnalytics.tsx (tabbed)** — owns URL state, orchestrates data fetching, passes typed props down; feature components are pure rendering units
-4. **ProvisionCard + ProvisionTopicView** — the core new UI; quoted text, citation link, case metadata, filter bar
-5. **PatternDetail + PatternVariantCard** — language evolution timeline; most technically novel surface area
+**New files:**
 
-**Key patterns to follow:**
-- Single fetch, client-side filter: fetch entire JSON artifact once (staleTime: Infinity), filter in useMemo in rendering components
-- URL-driven navigational state: active tab, selected topic, selected provision live in search params; ephemeral state (sort direction, hover) lives in useState
-- Page orchestrates, feature components render: feature components in src/components/ftc/ never call hooks or access useSearchParams directly
+| File | Type | Purpose |
+|------|------|---------|
+| `scripts/build-takeaways.ts` | Build script | Claude API generation + write-back for `key_takeaway` per case |
+| `scripts/reclassify-remedies.ts` | Build script | Generate proposal file for "Other" remedy reclassification (does not auto-apply) |
+| `scripts/apply-remedy-proposals.ts` | Build script | Apply human-reviewed proposals to source files |
+| `src/hooks/use-case-provisions.ts` | Hook | On-demand fetch of single case file, guarded by `enabled: !!caseId` |
+| `src/components/ftc/industry/CaseProvisionsModal.tsx` | UI component | Dialog with provision list, takeaway header, loading state |
 
-See `.planning/research/ARCHITECTURE.md` for full component boundaries, data flow diagrams, and anti-patterns.
+**Modified files:** `scripts/build-ftc-data.ts`, `scripts/build-patterns.ts`, `src/types/ftc.ts`, `src/components/ftc/industry/CaseCard.tsx`, `src/components/ftc/FTCIndustryTab.tsx`
+
+**Unchanged:** Everything in `provisions/`, `analytics/`, `patterns/` subdirectories. `FTCTabShell.tsx`. `FTCProvisionsTab.tsx`. `FTCPatternsTab.tsx`. `FTCAnalyticsTab.tsx`.
+
+See `.planning/research/ARCHITECTURE.md` for full component boundaries, data flow diagrams, patterns to follow, and anti-patterns to avoid.
 
 ### Critical Pitfalls
 
-1. **Keyword classification that over-tags as "Privacy" collapses the taxonomy** — Provision text contains "privacy" in boilerplate across nearly every data order. Prevention: classify against structured fields first (legal_authority field for statutory topic, provision.category for remedy type), treat "Privacy" as a residual/fallback only. Validate per-topic counts before any UI work begins.
+The following are the top pitfalls from PITFALLS.md, ranked by severity and likelihood:
 
-2. **Flat provisions JSON grows to 12-18 MB, breaking page load** — 9,224 quoted_text fields across 292 source files; the largest cases have 80-120 instances. Prevention: topic-shard the output (emit ftc-provisions-data-security.json, ftc-provisions-coppa.json, etc.) OR separate an index file (titles, citations, tags) from detail files (full quoted text). Design the file split before building any fetch calls.
+1. **Remedy taxonomy updated in only some of the four required locations** — The `RemedyType` union exists simultaneously in: (a) `src/types/ftc.ts`, (b) `TOPIC_LABELS` in `build-provisions.ts`, (c) the classification prompt enum, (d) shard file naming. All four must be updated atomically. Omitting any one causes TypeScript compile errors, unlabeled UI filter entries, or double-counted manifest entries. Prevention: finalize the complete new taxonomy in writing and update all four locations in a single commit before touching any source files.
 
-3. **Extracted quoted text contains OCR/LLM extraction errors** — confirmed in Assail sample file ("Defendat," "Masterard," etc.). Prevention: label all extracted text as "Extracted language — verify against source order"; make FTC.gov source link the primary citation CTA, not a footnote. Surface the confidence field on provision cards.
+2. **LLM takeaways hallucinate specific legal facts** — Dollar amounts, statute names, and violation years can be wrong when generated from already-extracted JSON (not ground-truth PDFs). A takeaway claiming "$1.2M penalty" when the actual figure is $500K destroys attorney trust immediately. Prevention: constrain generation to structured fields only (`legal_authority`, `violation_type`, provision titles); validate `statute` field against `legal_authority` programmatically; reject and retry on mismatch; display "AI-generated summary" badge in the UI.
 
-4. **Three-axis taxonomy with overlapping axes confuses practitioners** — Statutory and Practice Area axes heavily overlap (COPPA case is always a Privacy/Children's Privacy case). Prevention: reduce to two orthogonal axes (Statutory Authority + Remedy Type). Validate axes answer distinct practitioner questions before writing classification rules.
+3. **Pattern condensing permanently destroys original pattern groupings** — `build-patterns.ts` is a one-way transform; after merging, original groupings are unrecoverable without a full pipeline re-run from source files. Prevention: git checkpoint before any merge operation; express all merges as a reviewed `pattern-condense-config.json` with `merged_from` IDs recorded in the output; apply composite keep criterion (case_count >= 5 OR (>= 3 AND most_recent_year >= 2020)) to preserve recent enforcement signals.
 
-5. **Boilerplate structural provisions dominate pattern detection** — compliance reporting, recordkeeping, and acknowledgment provisions are near-identical across all orders by design. Prevention: exclude structural provision categories (compliance_reporting, recordkeeping, monitoring) from pattern detection; define 5-10 named patterns statically rather than discovering them dynamically.
+4. **Case provisions modal loads wrong or partial provisions** — Provision data is sharded by statutory topic, not by case. A case spanning multiple topics has provisions split across multiple shard files. Fetching only one shard returns incomplete results silently. Prevention: build a `case-index.json` mapping `case_id` to shard filenames at pipeline time; the modal fetches only the 1-3 relevant shards rather than all 15+. This pipeline step is a hard prerequisite to the UI work.
 
-See `.planning/research/PITFALLS.md` for full pitfall detail including moderate pitfalls (filter performance, URL special characters, sparse topic trend charts, broken FTC.gov URLs for old cases).
+5. **Old navigate-away handler conflicts with new modal** — `handleViewProvisions` in `FTCIndustryTab.tsx` currently calls `setSearchParams({ tab: "provisions" })`. If the modal state is added without removing this navigation, "View provisions" both opens a modal and navigates away. Prevention: replace (not supplement) the `setSearchParams` call with local state `setProvisionsCase(caseData)` in the same handler.
+
+See `.planning/research/PITFALLS.md` for full pitfall detail, including all 11 pitfalls and the phase-specific warnings table.
 
 ---
 
 ## Implications for Roadmap
 
-Based on research, the critical path dependency is classification. The data pipeline must be built and validated before any UI surface. Architecture research explicitly states: "No UI work should begin until this phase is complete. The data shape drives component props."
+Based on combined research, four phases are suggested in dependency order. The ordering is driven by: (a) data pipeline changes feed the UI automatically with no additional work, (b) the provisions panel requires a build-time `case-index.json` artifact, and (c) key takeaways require both pipeline data and a UI surface (the provisions panel) to display the full takeaway. Phases 1 and 2 can be developed concurrently — they have no shared data dependencies.
 
-### Phase 1: Data Pipeline Extension
+### Phase 1: Remedy Reclassification
 
-**Rationale:** Everything in the provisions library — topic views, filter bars, trend charts, pattern library — is blocked until the build pipeline produces correctly classified provision data. This is the absolute prerequisite. Two pitfalls (taxonomy design, keyword over-classification) must be solved here before they can propagate to UI. Getting this wrong means reclassifying all 293 cases twice.
+**Rationale:** Highest-leverage improvement with zero UI risk. 885 provisions labeled "Other" make the remedy type filter useless across the entire Provisions tab. This is a pure data change that improves the existing UI automatically. Must come first because it establishes the final `RemedyType` taxonomy that all downstream work builds on. The final taxonomy is a product decision, not a research question — it must be made before any code is written.
 
-**Delivers:** Three new static JSON artifacts — ftc-provisions.json (or topic-sharded variants), ftc-patterns.json, and extended ftc-cases.json. Verified per-topic provision counts. New TypeScript types in src/types/ftc-provisions.ts.
+**Delivers:** Correct remedy categorization for ~200-300 `prohibition`/`affirmative_obligation` provisions; functional remedy type filter across all statutory topics; `rt-other` shard shrinks substantially; named remedy shards grow with newly classified provisions; no UI changes required.
 
-**Addresses:** Critical path dependency (FEATURES.md), all four "data pipeline" phase rows in the pitfalls phase table
+**Addresses:** Remedy reclassification table stakes from FEATURES.md; "Data Retention/Deletion", "Consumer Notification", "Consent/Opt-out" become first-class filter options automatically.
 
-**Avoids:** Pitfall 1 (over-classification), Pitfall 2 (oversized flat file), Pitfall 4 (overlapping taxonomy axes), Pitfall 6 (boilerplate dominating pattern detection), Pitfall 8 (broken FTC.gov URLs)
+**Critical pre-condition:** Finalize new `RemedyType` enum values with display labels; update all four taxonomy locations atomically; back up source JSON files to git before running reclassification; pre-filter to `prohibition`/`affirmative_obligation` categories only (structural provisions correctly stay "Other").
 
-**Requires deeper research during planning:** Taxonomy design (Statutory + Remedy axes — validate against actual legal_authority field values in source data), file splitting strategy (determine topic-sharded vs index+detail approach based on actual measured file sizes)
+**Avoids:** Pitfall 1 (taxonomy desync across four locations), Pitfall 6 (misscoping the 885 — filter to prohibition/affirmative_obligation only).
 
-### Phase 2: Analytics Enhancement
+**Research flag:** Standard patterns. The write-back script structure is directly templated from `classify-provisions.ts`. Two-phase propose-then-apply approach is fully specified in STACK.md and ARCHITECTURE.md. No additional phase research needed.
 
-**Rationale:** Extends existing infrastructure with minimum new surface area. Builds on the tab navigation mechanism needed by all three feature areas. Higher confidence because it extends proven components (FTCGroupChart, FTCCaseTable) with the new provision data. Validating topic trend charts here — before building the full provisions library — de-risks Pitfall 7 (sparse topic charts) in a lower-stakes context.
+---
 
-**Delivers:** Tabbed FTCAnalytics page (analytics/library/patterns tabs), TopicTrendChart, TopicBreakdownTable, upgraded FTCHeader. URL state for tab navigation.
+### Phase 2: Pattern Condensing
 
-**Uses:** Recharts (existing LineChart/AreaChart), useProvisionsIndex hook (new), URL search params pattern (existing)
+**Rationale:** Pure pipeline change, no UI risk, standalone value. Cleaner provision data from Phase 1 produces better post-condense pattern groups (remedy types are now accurate, so pattern groupings gain signal quality). The `FTCPatternsTab` renders the improved list automatically — no frontend work required.
 
-**Implements:** Layer 3 (page component tab architecture) and the analytics feature group extension
+**Delivers:** Condensed pattern list (target: 80-90 patterns from 126); 12 assessment-pattern variants merged into 3-4 groups; 10 acknowledgment variants merged into 1; structural noise pruned by composite threshold; `ftc-patterns.json` shrinks from 4.0 MB. Pattern IDs for existing patterns preserved to avoid breaking bookmarked URLs.
 
-**Standard patterns — skip research-phase:** Tab navigation with useSearchParams and conditional rendering is a well-documented React pattern. Chart type selection based on data count (Pitfall 7 prevention) is straightforward conditional logic.
+**Addresses:** Pattern condensing table stakes from FEATURES.md; recency sort validation.
 
-### Phase 3: Provisions Library (Core New Feature)
+**Critical pre-condition:** Commit current `ftc-patterns.json` to git as a checkpoint. Write `pattern-condense-config.json` with explicit merge map and `merged_from` IDs. Apply composite keep criterion (>= 5 cases, OR >= 3 cases AND most_recent_year >= 2020).
 
-**Rationale:** The product's core value proposition. Builds on the data pipeline output from Phase 1 and the tab navigation shell from Phase 2. This is the longest phase because it introduces the most new component surface area (5 new components, filter logic, citation display). Citation data quality (Pitfall 3) must be handled in ProvisionCard design.
+**Avoids:** Pitfall 3 (permanent data loss from merge without checkpoint), Pitfall 7 (flat threshold drops recent location/biometric patterns), Pitfall 10 (post-merge IDs break bookmarked URLs — preserve pre-merge IDs as canonical in the config).
 
-**Delivers:** ProvisionTopicNav, ProvisionTopicView, ProvisionCard with proper citation labeling, ProvisionFilterBar with debounced inputs, ProvisionCitationLink with paragraph references and FTC.gov links.
+**Research flag:** Standard patterns. Config-driven merge approach is fully specified in ARCHITECTURE.md. Token Jaccard utility is specified in STACK.md. No additional phase research needed.
 
-**Uses:** TanStack Table v8 (new), MiniSearch (new, if full-text search is included in this phase), useProvisionsIndex hook
+---
 
-**Implements:** Layer 4 Provisions Library feature group; all table-stakes features from FEATURES.md
+### Phase 3: Case Provisions Panel
 
-**Requires deeper research during planning:** ProvisionCard citation UX — how to surface extraction confidence and distinguish "extracted" from "verified" text without undermining the tool's utility; MiniSearch index architecture (index once in hook vs module-level cache)
+**Rationale:** Self-contained UI feature with standalone value — does not depend on key takeaways (the panel is useful without them; takeaway display is additive). Requires exactly one pipeline artifact (`case-index.json`) that is built in this same phase. The existing `ftc-files/*.json` source files are already the data source at runtime — no new build step is needed beyond the index.
 
-**Avoids:** Pitfall 3 (garbled extracted text), Pitfall 5 (filter lag — use debounce + useMemo from day one), Pitfall 9 (per-case fetch waterfall — all provision data from pre-aggregated file), Pitfall 10 (URL special characters — define slugs in taxonomy constants), Pitfall 12 (dense layout — use cards not tables)
+**Delivers:** Inline provisions modal in the industry tab; practitioners can drill into a specific case's provisions without losing sector context; modal loads correct provisions for all cases including multi-topic cases; shadcn Dialog with loading state, provision list with verbatim text, remedy type badges; `case-index.json` pipeline artifact emitted by `build-provisions.ts`.
 
-### Phase 4: Cross-Case Patterns (Language Evolution)
+**Addresses:** Case provisions panel table stakes from FEATURES.md; in-context case browsing matching Bloomberg Law / Westlaw inline panel conventions.
 
-**Rationale:** The most technically novel surface area and the most uncertain in terms of implementation (pattern detection quality is unknown until the pipeline runs). Should come last so that pattern quality can be assessed against real data before investing in the UI. If pattern detection produces poor signal, the UI investment can be scoped down or deferred.
+**Pipeline prerequisite (built in this phase):** `build-provisions.ts` must emit `public/data/provisions/case-index.json` mapping each `case_id` to its shard filenames. This is a build change, not a UI change, but it is a hard prerequisite for correct modal behavior on multi-topic cases.
 
-**Delivers:** PatternList, PatternDetail timeline view, PatternVariantCard. Shows how provision language evolves across enforcement eras for 5-10 statically-defined pattern names.
+**Avoids:** Pitfall 4 (old navigate-away handler must be replaced, not supplemented), Pitfall 8 (case-keyed queries require build-time index, not runtime shard aggregation), Pitfall 11 (modal scroll conflicts with existing `overflow-y-auto` containers — use Radix UI Portal, test on Windows Chrome).
 
-**Implements:** Layer 4 Cross-Case Patterns feature group; language evolution differentiator from FEATURES.md
+**Research flag:** Standard patterns. All components are existing shadcn/ui primitives. Hook pattern mirrors existing `use-provisions.ts`. No additional phase research needed.
 
-**Requires deeper research during planning:** Pattern detection quality assessment — run the pipeline, inspect output, validate that named patterns (comprehensive security program, algorithmic destruction, data deletion) return meaningful variant counts (3-40 provisions per pattern) before committing to the UI design
+---
 
-**Avoids:** Pitfall 6 (boilerplate dominating patterns — exclude structural provision categories), Pitfall 7 (sparse data misleading — label variant counts prominently)
+### Phase 4: Key Takeaways
+
+**Rationale:** Most complex feature — requires a new pipeline script, Claude API calls across 293 cases (~15-30 min build time), a type extension in `src/types/ftc.ts`, and UI changes in two components. Placed last because: (a) the provisions panel must exist to host the full takeaway display, (b) the pipeline work is directly templated from `classify-provisions.ts`, (c) the UI work is small once the panel exists.
+
+**Delivers:** `key_takeaway` field on every case in `ftc-cases.json`; short form on `CaseCard` (first sentence, structured as `{what_company_did, what_ftc_required}` each ≤ 25 words); full text in `CaseProvisionsModal` header; "AI-generated summary" label in the UI; idempotent pipeline script that skips already-processed cases on restart; per-case error handling that does not abort remaining cases.
+
+**Addresses:** Key takeaways table stakes from FEATURES.md; factual framing that avoids legal advice liability; differentiator — provisions and conduct summary side by side in one panel.
+
+**Critical pre-condition:** Define structured output format (`{"what_company_did": "...", "what_ftc_required": "..."}`, each field ≤ 25 words) before starting; run dry-run on 10 representative cases (1 COPPA, 1 TSR, 1 data security, 1 financial) to validate consistency; build `statute` field validation against `legal_authority` before running the full 293-case batch.
+
+**Avoids:** Pitfall 2 (hallucinated legal facts — constrain to structured fields, validate programmatically), Pitfall 5 (length/tone inconsistency — enforce hard word limits in prompt and programmatically), Pitfall 9 (pipeline crashes lose progress — write `key_takeaway` to source JSON after each successful case, per-case `try/catch`).
+
+**Research flag:** Standard patterns. Script structure mirrors `classify-provisions.ts` exactly. Legal AI summarization conventions are documented in FEATURES.md (Westlaw AI, Casetext CARA precedents). No additional phase research needed.
+
+---
 
 ### Phase Ordering Rationale
 
-- **Data first, UI second:** Architecture research is unambiguous — component props are derived from the data shape. Building UI against mock data that differs from the real pipeline output causes rework.
-- **Taxonomy must be settled before classification:** The three-vs-two axis decision (Pitfall 4) cannot be changed after classification runs across 293 cases without redoing all the pipeline work. This decision belongs at the start of Phase 1.
-- **File split strategy must be decided before the first hook is written:** Whether the provisions browsing hook fetches one flat file or multiple topic-sharded files determines the hook API and all dependent component interfaces. Change it after the fact means updating every fetch call.
-- **Pattern detection is the riskiest unknown:** No research can predict output quality until the algorithm runs against real data. Phase 4 placement gives the most information before committing to that UI.
+- Phases 1 and 2 are pipeline-only: they deliver value through the existing UI with zero frontend risk. This matches the FEATURES.md MVP recommendation ("build data pipeline first, UI second").
+- Phases 1 and 2 can be developed concurrently if needed — remedy reclassification and pattern condensing have no shared data dependencies.
+- Phase 3 is independent of Phases 1 and 2. It requires exactly one pipeline artifact (`case-index.json`) that is built within Phase 3 itself. No shared state with the earlier phases.
+- Phase 4 depends on Phase 3 (the provisions panel must exist to host the full takeaway display). The pipeline sub-step of Phase 4 can begin as soon as Phase 3's `CaseProvisionsModal` component exists.
+- The critical path is: taxonomy decision (before Phase 1) → Phase 1 pipeline → Phase 3 panel exists → Phase 4 takeaway UI.
 
 ### Research Flags
 
-Phases needing deeper research during planning:
-- **Phase 1 — Taxonomy Design:** Inspect all unique legal_authority strings across the 293 source files to derive the actual statutory topic list from data, not from assumptions. The ARCHITECTURE.md STATUTORY_TOPICS list is an estimate; the actual distribution may have fewer categories than planned or unexpected values.
-- **Phase 1 — File Split Strategy:** Measure actual uncompressed size of a candidate flat ftc-provisions.json before committing to topic-sharded output. If gzipped size is under 2 MB, the flat file is acceptable and simplifies the hook API significantly.
-- **Phase 3 — Citation UX Pattern:** Research legal tech citation disclosure patterns (CourtListener, Casetext) to determine the right balance between surfacing extraction uncertainty and maintaining tool credibility.
-- **Phase 4 — Pattern Detection Quality:** No research-phase needed; instead, run the pipeline and inspect output before designing PatternDetail UI.
+No phase requires additional `/gsd:research-phase` depth. All four features are grounded in direct codebase inspection with HIGH confidence across all four research dimensions.
 
-Phases with standard patterns (no additional research needed):
-- **Phase 2 — Tab navigation and chart extension:** Established React + Recharts patterns; TanStack Query hook extension is straightforward.
-- **Phase 3 — Filter/sort mechanics:** Debounce + useMemo pattern is well-documented; TanStack Table v8 shadcn/ui integration has official guide.
+- **Phase 1:** Standard patterns — `classify-provisions.ts` is the direct template; two-phase propose/apply approach is fully specified. The only pre-planning decision needed is the product-level taxonomy choice (which new `RemedyType` values to add), which is not a research question.
+- **Phase 2:** Standard patterns — merge config approach is fully specified; token Jaccard utility is self-contained; no external references needed.
+- **Phase 3:** Standard patterns — shadcn Dialog + TanStack Query + `staleTime: Infinity`; hook structure mirrors existing `use-provisions.ts` exactly.
+- **Phase 4:** Standard patterns — `classify-provisions.ts` is the direct template; structured output validation approach is fully specified in PITFALLS.md.
 
 ---
 
@@ -172,45 +181,48 @@ Phases with standard patterns (no additional research needed):
 
 | Area | Confidence | Notes |
 |------|------------|-------|
-| Stack | HIGH | Two new dependencies (MiniSearch, TanStack Table) — rationale grounded in direct codebase inspection and confirmed ecosystem compatibility. MiniSearch version number needs npm verification before install. |
-| Features | HIGH | Grounded in direct data model inspection and established legal research tool conventions. Feature dependency chain is explicit and validated against actual JSON fields. |
-| Architecture | HIGH | All component boundaries and data flows derived from direct inspection of existing code (build script, hooks, components, types). No inferences made without codebase evidence. |
-| Pitfalls | HIGH | Two critical pitfalls (OCR extraction errors, keyword over-classification) confirmed against actual data files. File size risk assessed against actual grep count of 9,224 quoted_text fields. Pattern boilerplate pitfall derived from structural understanding of FTC order conventions. |
+| Stack | HIGH | All findings from direct codebase inspection (`package.json`, installed components, existing scripts). Dependency conclusions are zero-speculation — verified against installed versions. |
+| Features | HIGH | All feature scope grounded in direct data analysis (`rt-other` shard: 885 provisions, 229 unique titles; `ftc-patterns.json`: 126 patterns confirmed; individual case file structure confirmed). Legal research tool conventions verified against Bloomberg Law, Westlaw, CourtListener, Casetext precedents. |
+| Architecture | HIGH | All integration points verified against running code. `handleViewProvisions` stub confirmed at `FTCIndustryTab.tsx` lines 92-99. Pipeline write-back pattern confirmed in `classify-provisions.ts`. All four taxonomy encoding locations confirmed by reading `build-provisions.ts` and `src/types/ftc.ts`. |
+| Pitfalls | HIGH | All 11 pitfalls derived from direct code and data inspection. Taxonomy desync confirmed by reading all four encoding locations. Shard architecture confirmed by reading `build-provisions.ts` and `manifest.json`. 885-vs-280 provision count discrepancy confirmed by reading the `rt-other` shard directly. |
 
 **Overall confidence: HIGH**
 
 ### Gaps to Address
 
-- **Taxonomy axis count (2 vs 3):** Pitfalls research recommends reducing Statutory + Practice Area + Remedy Type to Statutory + Remedy Type only. This is a strong recommendation but requires validation against the actual legal_authority field distribution before the classification rules are written. If the legal_authority values cleanly map to non-overlapping categories, the two-axis model is correct. Resolve in Phase 1 planning.
-
-- **MiniSearch current major version:** STACK.md notes the version may have advanced from 6.x to 7.x since training cutoff. Check npm before installing.
-
-- **ftc-provisions.json actual size:** The 7.5-18 MB range is wide because it depends on how much case metadata is denormalized per provision. Measure actual size after the first pipeline run; this determines whether file splitting is required.
-
-- **Pattern detection quality:** Cannot be assessed from research alone. Run the detectPatterns() function, inspect output JSON, validate named pattern variant counts before Phase 4 UI design begins.
-
-- **FTC.gov URL validity for pre-2005 cases:** Pitfalls research flags that early case URLs may have broken path structures. A URL validation pipeline step is recommended before launch but was not executed during research.
+- **New `RemedyType` enum values (product decision, not research gap):** Research identified the natural clusters from data analysis (Order Administration, Consumer Notification, Consent/Opt-out, Data Retention/Deletion, Breach Notification, Cooperation with Assessor, Disclosure Requirements) but the final taxonomy requires a human product decision. Must be decided before Phase 1 begins. The decision criterion is: each new category must contain at least 20 provisions to be a meaningful browsing dimension.
+- **Pattern merge config content (planning task, not research gap):** The merge config structure is designed; the specific pattern ID groupings require a 30-60 minute review pass over the 126 current patterns during Phase 2 planning. Claude Code generates the initial config; a human approves it.
+- **Takeaway output validation thresholds (execution validation, not research gap):** The 25-word-per-field limit is a reasonable starting point. Validate against 10 representative cases before committing to the full 293-case run in Phase 4.
 
 ---
 
 ## Sources
 
-### Primary (HIGH confidence)
-- Direct codebase inspection: `scripts/build-ftc-data.ts`, `src/types/ftc.ts`, `src/hooks/use-ftc-data.ts`, `src/pages/FTCAnalytics.tsx`, `src/components/ftc/*` — architecture and patterns
-- Direct data inspection: `public/data/ftc-files/01.05_assail.json` — confirmed provision data structure, OCR artifacts, quoted_text fields
-- Direct data inspection: grep count across 292 source files — confirmed 9,224 quoted_text instances (corpus scale)
-- Project requirements: `.planning/PROJECT.md` — constraints, requirements, Milestone 2 scope
-- `.planning/codebase/ARCH.md` — existing architecture baseline
+### Primary (HIGH confidence — direct codebase inspection)
 
-### Secondary (MEDIUM confidence)
-- MiniSearch project documentation: https://lucaong.github.io/minisearch/ — API design and indexing approach; version not verified against current npm release
-- TanStack Table v8: https://tanstack.com/table/v8 — headless table API; HIGH confidence for stable v8 API
-- Recharts 2.x component list: https://recharts.org/en-US/api — chart type availability
+- `scripts/classify-provisions.ts` — Template for all new build scripts (Claude API invocation, rate limiting, idempotency pattern, write-back to source files)
+- `scripts/build-patterns.ts` — Full algorithm confirmed: exact-normalized pass, prefix-merge pass, 3-case filter, `most_recent_year` descending sort
+- `scripts/build-provisions.ts` — `TOPIC_LABELS` map and shard architecture; confirmed four-location taxonomy encoding
+- `scripts/build-ftc-data.ts` — Pipeline structure and `processFile()` extension point for `key_takeaway`
+- `src/types/ftc.ts` — All type definitions; `EnhancedFTCCaseSummary`, `RemedyType` union, `StatutoryTopic`
+- `src/components/ftc/FTCIndustryTab.tsx` — `handleViewProvisions` stub at lines 92-99; confirmed navigate-away behavior
+- `src/components/ftc/industry/CaseCard.tsx` — `onViewProvisions` callback wiring; layout for takeaway field placement
+- `src/components/ui/sheet.tsx` — Confirmed installed; `@radix-ui/react-dialog` based
+- `package.json` — All installed versions confirmed; zero new dependencies needed
 
-### Tertiary (informed by training data)
-- Legal research tool conventions (Westlaw, LexisNexis, Bloomberg Law, CourtListener) — UX patterns for citation standards, topic-first browsing, chronological defaults
-- FTC.gov enforcement database UI conventions — confidence HIGH for core patterns, MEDIUM for post-August 2025 UI changes
+### Primary (HIGH confidence — direct data inspection)
+
+- `public/data/provisions/rt-other-provisions.json` — 885 provisions, 229 unique titles; reclassification scope confirmed
+- `public/data/ftc-patterns.json` — 126 patterns, 4.0 MB; 43 structural / 83 substantive; 45 patterns with 3-4 cases including recent location data and biometric patterns; `most_recent_year` sort confirmed
+- `public/data/provisions/manifest.json` — 2,783 total provisions across 293 cases; shard architecture confirmed
+- `public/data/ftc-files/01.18_lenovo.json` — Case file structure confirmed: `case_info`, `complaint.factual_background`, `complaint.counts[]`, `order.provisions[]`
+
+### Secondary (MEDIUM confidence — domain knowledge)
+
+- Bloomberg Law, Westlaw — Inline case detail panel conventions; AI-generated summary labeling standards; remedy taxonomy breadth norms for regulatory enforcement databases (15-30 categories)
+- CourtListener, Casetext CARA — AI-generated headnote and summary conventions; factual-only framing standards for legal research tools
 
 ---
-*Research completed: 2026-02-24*
+
+*Research completed: 2026-02-26*
 *Ready for roadmap: yes*
