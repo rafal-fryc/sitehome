@@ -27,13 +27,20 @@ A legal practitioner can find every FTC consent order provision relevant to a sp
 
 ### Active
 
-- [ ] Full-text search across consent order documents (not just provisions)
-- [ ] Saved searches and bookmarked provisions
-- [ ] Side-by-side consent order comparison tool
-- [ ] Fuzzy text similarity for provision language evolution (beyond exact title matching)
-- [ ] Automatic detection of novel provision language not seen in prior orders
-- [ ] Commissioner voting records and dissent tracking per case
-- [ ] Commissioner-level enforcement trend analysis
+- [ ] Key takeaways per enforcement action — what the business did that violated the law (Claude-generated at build time)
+- [ ] Remedy reclassification — reclassify 280 "other" remedies into meaningful categories (Claude-proposed)
+- [ ] Pattern condensing — merge similar patterns, prune low-value, sort by most recent example
+- [ ] Case provisions panel — industry tab "view provisions" opens modal with that case's provisions
+
+### Deferred
+
+- Full-text search across consent order documents (not just provisions)
+- Saved searches and bookmarked provisions
+- Side-by-side consent order comparison tool
+- Fuzzy text similarity for provision language evolution (beyond exact title matching)
+- Automatic detection of novel provision language not seen in prior orders
+- Commissioner voting records and dissent tracking per case
+- Commissioner-level enforcement trend analysis
 
 ### Out of Scope
 
@@ -43,6 +50,16 @@ A legal practitioner can find every FTC consent order provision relevant to a sp
 - Backend database for FTC data — static JSON pattern proven sufficient for 293 cases
 - Server-side rendering — SPA architecture adequate for this dataset size
 - PDF generation / export — users can print/copy citations
+
+## Current Milestone: v1.1 Data Quality & Case Insights
+
+**Goal:** Improve data quality (remedy categories, pattern grouping) and add case-level insights (key takeaways, case provisions panel).
+
+**Target features:**
+- Key takeaways from each enforcement action (Claude-generated at build time, brief on cards + full on case detail)
+- Reclassify 280 "other" remedies into proper categories (Claude proposes new categories)
+- Condense 126 patterns by merging similar + pruning low-value, sort by most recent
+- Case-specific provisions panel in industry tab (modal/side panel instead of navigating to provisions tab)
 
 ## Context
 
@@ -77,4 +94,4 @@ A legal practitioner can find every FTC consent order provision relevant to a sp
 | Structural classification via category majority vote | Data-driven, no manual curation | ✓ Good — 43 structural / 83 substantive |
 
 ---
-*Last updated: 2026-02-25 after v1.0 milestone*
+*Last updated: 2026-02-26 after v1.1 milestone initialization*
