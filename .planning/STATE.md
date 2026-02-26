@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 6 of 9 (Remedy Reclassification)
-Plan: -- (not yet planned)
-Status: Ready to plan
-Last activity: 2026-02-26 -- Roadmap created for v1.1 milestone
+Plan: 06-02 (next -- awaiting user approval of proposed categories)
+Status: Awaiting user decision
+Last activity: 2026-02-26 -- Plan 06-01 complete (enum + proposal script + category analysis)
 
-Progress: [##########..........] 53% (v1.0 complete, v1.1 starting)
+Progress: [###########.........] 56% (v1.0 complete, v1.1 plan 06-01 done)
 
 ## Performance Metrics
 
@@ -23,9 +23,11 @@ Progress: [##########..........] 53% (v1.0 complete, v1.1 starting)
 - Average duration: 3 min
 - Total execution time: 1.05 hours
 
-**v1.1 plans completed:** 0
+**v1.1 plans completed:** 1
 
-*Updated after v1.0 milestone completion*
+| Phase | Plan | Duration | Tasks | Files |
+|-------|------|----------|-------|-------|
+| 06 | 06-01 | 7 min | 4 | 6 |
 
 ## Accumulated Context
 
@@ -37,6 +39,9 @@ Recent decisions affecting current work:
 - [v1.1 roadmap]: Data pipeline phases first (6, 7), then UI phases (8, 9) -- pipeline changes improve existing UI automatically
 - [v1.1 roadmap]: Phase 9 depends on Phase 8 (provisions panel hosts full takeaway display)
 - [v1.1 roadmap]: Phases 6 and 7 are independent -- no shared data dependencies
+- [06-01]: classify-provisions.ts uses import not inline type -- updated prompt string for Order Administration
+- [06-01]: Added TOPIC_LABELS entry for order-administration in build-provisions.ts (manifest correctness)
+- [06-01]: Proposed 4 new + 2 existing-category reclassifications to reduce Other from 885 to ~32 (3.6%)
 
 ### Pending Todos
 
@@ -44,10 +49,10 @@ None.
 
 ### Blockers/Concerns
 
-- New RemedyType enum values must be finalized as a product decision before Phase 6 planning begins
+- User must approve proposed remedy categories before Plan 06-02 can proceed (see proposal output)
 
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: v1.1 roadmap created, ready to plan Phase 6
+Stopped at: Completed 06-01-PLAN.md -- awaiting user approval of proposed categories
 Resume file: None

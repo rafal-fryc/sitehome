@@ -9,9 +9,9 @@ Requirements for milestone v1.1: Data Quality & Case Insights.
 
 ### Remedy Reclassification
 
-- [ ] **RMED-01**: Pipeline analyzes 885 "other" provisions and proposes new remedy categories
-- [ ] **RMED-02**: RemedyType taxonomy updated atomically across all 4 code locations (types, build-provisions, classify-provisions, manifest)
-- [ ] **RMED-03**: Dry-run mode generates proposals for human review before committing reclassification
+- [x] **RMED-01**: Pipeline analyzes 885 "other" provisions and proposes new remedy categories
+- [x] **RMED-02**: RemedyType taxonomy updated atomically across all 4 code locations (types, build-provisions, classify-provisions, manifest)
+- [x] **RMED-03**: Dry-run mode generates proposals for human review before committing reclassification
 - [ ] **RMED-04**: Pipeline reclassifies ~200-300 meaningful "other" provisions into new categories
 - [ ] **RMED-05**: Structural/administrative provisions (~585) appropriately categorized or retained
 - [ ] **RMED-06**: Provisions tab remedy filter reflects new categories immediately after rebuild
@@ -64,9 +64,9 @@ Deferred from PROJECT.md Active list:
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| RMED-01 | Phase 6 | Pending |
-| RMED-02 | Phase 6 | Pending |
-| RMED-03 | Phase 6 | Pending |
+| RMED-01 | Phase 6 | Complete (06-01) |
+| RMED-02 | Phase 6 | Complete (06-01) |
+| RMED-03 | Phase 6 | Complete (06-01) |
 | RMED-04 | Phase 6 | Pending |
 | RMED-05 | Phase 6 | Pending |
 | RMED-06 | Phase 6 | Pending |
@@ -91,4 +91,4 @@ Deferred from PROJECT.md Active list:
 
 ---
 *Requirements defined: 2026-02-26*
-*Last updated: 2026-02-26 after roadmap creation*
+*Last updated: 2026-02-26 after plan 06-01 completion*
