@@ -18,7 +18,7 @@ Requirements for milestone v1.1: Data Quality & Case Insights.
 
 ### Pattern Condensing
 
-- [ ] **PTRN-01**: Similar patterns merged into groups (e.g., 12 assessment variants → 3-4, 10 acknowledgment variants → 1)
+- [ ] **PTRN-01**: Similar patterns merged into groups (e.g., 12 assessment variants -> 3-4, 10 acknowledgment variants -> 1)
 - [ ] **PTRN-02**: Low-value patterns pruned using composite criterion (case count >= threshold OR recent activity)
 - [ ] **PTRN-03**: Patterns sorted by most recent example
 - [ ] **PTRN-04**: Config-driven merge map for auditable, reviewable merge decisions
@@ -64,31 +64,31 @@ Deferred from PROJECT.md Active list:
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| RMED-01 | — | Pending |
-| RMED-02 | — | Pending |
-| RMED-03 | — | Pending |
-| RMED-04 | — | Pending |
-| RMED-05 | — | Pending |
-| RMED-06 | — | Pending |
-| PTRN-01 | — | Pending |
-| PTRN-02 | — | Pending |
-| PTRN-03 | — | Pending |
-| PTRN-04 | — | Pending |
-| PTRN-05 | — | Pending |
-| CPNL-01 | — | Pending |
-| CPNL-02 | — | Pending |
-| CPNL-03 | — | Pending |
-| TAKE-01 | — | Pending |
-| TAKE-02 | — | Pending |
-| TAKE-03 | — | Pending |
-| TAKE-04 | — | Pending |
-| TAKE-05 | — | Pending |
+| RMED-01 | Phase 6 | Pending |
+| RMED-02 | Phase 6 | Pending |
+| RMED-03 | Phase 6 | Pending |
+| RMED-04 | Phase 6 | Pending |
+| RMED-05 | Phase 6 | Pending |
+| RMED-06 | Phase 6 | Pending |
+| PTRN-01 | Phase 7 | Pending |
+| PTRN-02 | Phase 7 | Pending |
+| PTRN-03 | Phase 7 | Pending |
+| PTRN-04 | Phase 7 | Pending |
+| PTRN-05 | Phase 7 | Pending |
+| CPNL-01 | Phase 8 | Pending |
+| CPNL-02 | Phase 8 | Pending |
+| CPNL-03 | Phase 8 | Pending |
+| TAKE-01 | Phase 9 | Pending |
+| TAKE-02 | Phase 9 | Pending |
+| TAKE-03 | Phase 9 | Pending |
+| TAKE-04 | Phase 9 | Pending |
+| TAKE-05 | Phase 9 | Pending |
 
 **Coverage:**
 - v1.1 requirements: 19 total
-- Mapped to phases: 0
-- Unmapped: 19 ⚠️
+- Mapped to phases: 19
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-26*
-*Last updated: 2026-02-26 after initial definition*
+*Last updated: 2026-02-26 after roadmap creation*
