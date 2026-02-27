@@ -53,11 +53,11 @@ Plans:
   2. Low-value structural patterns (below composite threshold) are pruned from the pattern browser
   3. Patterns are sorted by most recent example, so practitioners see current enforcement trends first
   4. Original ftc-patterns.json is checkpointed in git before any changes, and merge decisions are recorded in a config file
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 07-01: TBD
-- [ ] 07-02: TBD
+- [ ] 07-01: Checkpoint + Merge/Prune Proposal Script (PTRN-04, PTRN-05)
+- [ ] 07-02: Apply Merge Config + Rebuild + UI Polish (PTRN-01, PTRN-02, PTRN-03)
 
 ### Phase 8: Case Provisions Panel
 **Goal**: Practitioners can drill into a specific case's provisions from the industry tab without losing sector context
@@ -103,6 +103,6 @@ Phases execute in numeric order: 6 -> 7 -> 8 -> 9
 | 4. Company & Industry View | v1.0 | 4/4 | Complete | 2026-02-25 |
 | 5. Cross-Case Patterns | v1.0 | 3/3 | Complete | 2026-02-25 |
 | 6. Remedy Reclassification | v1.1 | 2/2 | Complete | 2026-02-26 |
-| 7. Pattern Condensing | v1.1 | 0/0 | Not started | - |
+| 7. Pattern Condensing | v1.1 | 0/2 | Planning complete | - |
 | 8. Case Provisions Panel | v1.1 | 0/0 | Not started | - |
 | 9. Key Takeaways | v1.1 | 0/0 | Not started | - |
