@@ -194,6 +194,7 @@ export interface PatternGroup {
   variant_count: number;
   year_range: [number, number];
   most_recent_year: number;
+  most_recent_date?: string;
   enforcement_topics: string[];
   practice_areas: string[];
   variants: PatternVariant[];

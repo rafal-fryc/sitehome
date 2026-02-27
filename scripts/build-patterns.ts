@@ -52,6 +52,7 @@ interface PatternGroup {
   variant_count: number;
   year_range: [number, number];
   most_recent_year: number;
+  most_recent_date?: string;
   enforcement_topics: string[];
   practice_areas: string[];
   variants: PatternVariant[];
@@ -62,6 +63,24 @@ interface PatternsFile {
   total_patterns: number;
   total_variants: number;
   patterns: PatternGroup[];
+}
+
+// --- Merge config types (from pattern-merge-config.json) ---
+
+interface MergeGroup {
+  target_name: string;
+  target_id: string;
+  topic_area: string;
+  source_patterns: string[];
+}
+
+interface PruneEntry {
+  pattern_id: string;
+}
+
+interface MergeConfig {
+  merge_groups: MergeGroup[];
+  prune_list: PruneEntry[];
 }
 
 // --- Helpers ---
@@ -104,6 +123,23 @@ const STRUCTURAL_CATEGORIES = new Set([
 
 const PROVISIONS_DIR = path.resolve("public/data/provisions");
 const OUT_FILE = path.resolve("public/data/ftc-patterns.json");
+const MERGE_CONFIG_PATH = path.resolve("scripts/pattern-merge-config.json");
+
+let mergeConfig: MergeConfig = { merge_groups: [], prune_list: [] };
+if (fs.existsSync(MERGE_CONFIG_PATH)) {
+  const raw = JSON.parse(fs.readFileSync(MERGE_CONFIG_PATH, "utf-8"));
+  mergeConfig = {
+    merge_groups: raw.merge_groups || [],
+    prune_list: raw.prune_list || [],
+  };
+  console.log(
+    `Loaded merge config: ${mergeConfig.merge_groups.length} merge groups, ${mergeConfig.prune_list.length} prune entries`
+  );
+} else {
+  console.log(
+    "No merge config found -- running in passthrough mode (no merges, no prunes)"
+  );
+}
 
 console.log("Building cross-case pattern groups...");
 console.log(`Source: ${PROVISIONS_DIR}`);
@@ -299,10 +335,103 @@ const patternGroups: PatternGroup[] = qualifiedGroups.map((g) => {
   };
 });
 
-// Step 7: Sort pattern groups by most_recent_year descending (default recency sort)
+// Step 6.5: Pass 3 — Apply merge config (merge groups + prune)
+if (mergeConfig.merge_groups.length > 0 || mergeConfig.prune_list.length > 0) {
+  console.log("");
+  console.log("Pass 3 (merge config):");
+
+  const toRemove = new Set<string>();
+  const mergedPatterns: PatternGroup[] = [];
+
+  // Apply merges: collect source patterns, build merged groups, defer adding
+  for (const group of mergeConfig.merge_groups) {
+    const sourceIds = new Set(group.source_patterns);
+    const sources = patternGroups.filter((p) => sourceIds.has(p.id));
+    if (sources.length === 0) {
+      console.log(
+        `  WARN: No matching patterns for merge group "${group.target_name}"`
+      );
+      continue;
+    }
+
+    // Combine all variants
+    const allVariants: PatternVariant[] = [];
+    const allCases = new Set<string>();
+    const allTopics = new Set<string>();
+    const allAreas = new Set<string>();
+
+    for (const src of sources) {
+      for (const v of src.variants) {
+        allVariants.push(v);
+        allCases.add(v.case_id);
+      }
+      for (const t of src.enforcement_topics) allTopics.add(t);
+      for (const a of src.practice_areas) allAreas.add(a);
+      toRemove.add(src.id);
+    }
+
+    // Sort variants chronologically
+    allVariants.sort((a, b) => a.date_issued.localeCompare(b.date_issued));
+
+    // Compute stats
+    const years = allVariants.map((v) => v.year);
+    const minYear = Math.min(...years);
+    const maxYear = Math.max(...years);
+
+    // Structural status: majority vote from source patterns
+    const structuralCount = sources.filter((s) => s.is_structural).length;
+    const isStructural = structuralCount > sources.length * 0.5;
+
+    const merged: PatternGroup = {
+      id: group.target_id,
+      name: group.target_name,
+      is_structural: isStructural,
+      case_count: allCases.size,
+      variant_count: allVariants.length,
+      year_range: [minYear, maxYear],
+      most_recent_year: maxYear,
+      enforcement_topics: [...allTopics].sort(),
+      practice_areas: [...allAreas].sort(),
+      variants: allVariants,
+    };
+
+    mergedPatterns.push(merged);
+    console.log(
+      `  Merged ${sources.length} patterns -> "${group.target_name}" (${allCases.size} unique cases, ${allVariants.length} variants)`
+    );
+  }
+
+  // Apply prunes
+  const pruneIds = new Set(mergeConfig.prune_list.map((p) => p.pattern_id));
+  for (const id of pruneIds) toRemove.add(id);
+
+  // Remove source patterns and pruned patterns, then add merged patterns
+  const beforeCount = patternGroups.length;
+  const filtered = patternGroups.filter((p) => !toRemove.has(p.id));
+  patternGroups.length = 0;
+  patternGroups.push(...filtered, ...mergedPatterns);
+
+  const removed = beforeCount - filtered.length;
+  console.log(
+    `  Removed ${removed} patterns (merged sources + pruned), added ${mergedPatterns.length} merged groups`
+  );
+  console.log(`  Result: ${patternGroups.length} patterns`);
+}
+
+// Step 7: Sort pattern groups by most_recent_date descending (date-level precision)
+// Compute most_recent_date for each group
+for (const group of patternGroups) {
+  group.most_recent_date = group.variants.reduce(
+    (max: string, v: PatternVariant) =>
+      v.date_issued > max ? v.date_issued : max,
+    "0000-00-00"
+  );
+}
+
 patternGroups.sort((a, b) => {
-  if (b.most_recent_year !== a.most_recent_year)
-    return b.most_recent_year - a.most_recent_year;
+  const dateA = a.most_recent_date || String(a.most_recent_year);
+  const dateB = b.most_recent_date || String(b.most_recent_year);
+  if (dateB !== dateA) return dateB.localeCompare(dateA);
   return b.case_count - a.case_count; // Tiebreak by case count
 });
 
