@@ -22,12 +22,12 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 
 ## Current Position
 
-Phase: 7 of 9 (Pattern Condensing)
-Plan: 07-02 (next)
-Status: In progress
-Last activity: 2026-02-27 -- Plan 07-01 complete (merge/prune proposal approved)
+Phase: 7 of 9 (Pattern Condensing) -- COMPLETE
+Plan: 07-02 (done, 2/2 plans complete)
+Status: Phase 7 complete
+Last activity: 2026-02-27 -- Plan 07-02 complete (merge/prune/sort applied, 52 patterns)
 
-Progress: [#############.......] 65% (v1.0 complete, v1.1 phase 6 done, 07-01 done)
+Progress: [##############......] 70% (v1.0 complete, v1.1 phases 6-7 done)
 
 ## Performance Metrics
 
@@ -36,13 +36,14 @@ Progress: [#############.......] 65% (v1.0 complete, v1.1 phase 6 done, 07-01 do
 - Average duration: 3 min
 - Total execution time: 1.05 hours
 
-**v1.1 plans completed:** 3
+**v1.1 plans completed:** 4
 
 | Phase | Plan | Duration | Tasks | Files |
 |-------|------|----------|-------|-------|
 | 06 | 06-01 | 7 min | 4 | 6 |
 | 06 | 06-02 | 61 min | 5 | 323 |
 | 07 | 07-01 | 14 min | 2 | 3 |
+| 07 | 07-02 | 9 min | 2 | 4 |
 
 ## Accumulated Context
 
@@ -65,6 +66,9 @@ Recent decisions affecting current work:
 - [07-01]: Composite prune threshold: case_count < 5 AND most_recent_year < 2020 (4 patterns pruned)
 - [07-01]: Projected 52 final patterns from 126 current (59% reduction)
 - [07-01]: User consolidated 4 sets of merge groups for broader topic coverage
+- [07-02]: Deferred-add merge pattern to handle self-referential target_id overlap (10 of 15 groups)
+- [07-02]: 52 final patterns from 126 (59% reduction, matching projection exactly)
+- [07-02]: most_recent_date for date-level sort precision in both build pipeline and UI
 
 ### Pending Todos
 
@@ -77,5 +81,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-27
-Stopped at: Completed 07-01-PLAN.md -- Merge/prune proposal approved
+Stopped at: Completed 07-02-PLAN.md -- Phase 7 complete (52 condensed patterns)
 Resume file: None
