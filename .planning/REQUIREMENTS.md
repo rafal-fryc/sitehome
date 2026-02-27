@@ -21,8 +21,8 @@ Requirements for milestone v1.1: Data Quality & Case Insights.
 - [ ] **PTRN-01**: Similar patterns merged into groups (e.g., 12 assessment variants -> 3-4, 10 acknowledgment variants -> 1)
 - [ ] **PTRN-02**: Low-value patterns pruned using composite criterion (case count >= threshold OR recent activity)
 - [ ] **PTRN-03**: Patterns sorted by most recent example
-- [ ] **PTRN-04**: Config-driven merge map for auditable, reviewable merge decisions
-- [ ] **PTRN-05**: Current ftc-patterns.json checkpointed before any changes
+- [x] **PTRN-04**: Config-driven merge map for auditable, reviewable merge decisions
+- [x] **PTRN-05**: Current ftc-patterns.json checkpointed before any changes
 
 ### Case Provisions Panel
 
@@ -73,8 +73,8 @@ Deferred from PROJECT.md Active list:
 | PTRN-01 | Phase 7 | Pending |
 | PTRN-02 | Phase 7 | Pending |
 | PTRN-03 | Phase 7 | Pending |
-| PTRN-04 | Phase 7 | Pending |
-| PTRN-05 | Phase 7 | Pending |
+| PTRN-04 | Phase 7 | Complete (07-01) |
+| PTRN-05 | Phase 7 | Complete (07-01) |
 | CPNL-01 | Phase 8 | Pending |
 | CPNL-02 | Phase 8 | Pending |
 | CPNL-03 | Phase 8 | Pending |
@@ -91,4 +91,4 @@ Deferred from PROJECT.md Active list:
 
 ---
 *Requirements defined: 2026-02-26*
-*Last updated: 2026-02-26 after plan 06-02 completion*
+*Last updated: 2026-02-27 after plan 07-01 completion*

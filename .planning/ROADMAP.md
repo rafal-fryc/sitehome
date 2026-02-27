@@ -56,7 +56,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 07-01: Checkpoint + Merge/Prune Proposal Script (PTRN-04, PTRN-05)
+- [x] 07-01: Checkpoint + Merge/Prune Proposal Script (PTRN-04, PTRN-05) -- completed 2026-02-27
 - [ ] 07-02: Apply Merge Config + Rebuild + UI Polish (PTRN-01, PTRN-02, PTRN-03)
 
 ### Phase 8: Case Provisions Panel
@@ -103,6 +103,6 @@ Phases execute in numeric order: 6 -> 7 -> 8 -> 9
 | 4. Company & Industry View | v1.0 | 4/4 | Complete | 2026-02-25 |
 | 5. Cross-Case Patterns | v1.0 | 3/3 | Complete | 2026-02-25 |
 | 6. Remedy Reclassification | v1.1 | 2/2 | Complete | 2026-02-26 |
-| 7. Pattern Condensing | v1.1 | 0/2 | Planning complete | - |
+| 7. Pattern Condensing | v1.1 | 1/2 | In progress | - |
 | 8. Case Provisions Panel | v1.1 | 0/0 | Not started | - |
 | 9. Key Takeaways | v1.1 | 0/0 | Not started | - |
