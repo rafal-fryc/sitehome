@@ -57,11 +57,13 @@ export default function PatternList({ patterns }: Props) {
     const sorted = [...result];
     switch (sortBy) {
       case "recency":
-        sorted.sort(
-          (a, b) =>
-            b.most_recent_year - a.most_recent_year ||
-            b.case_count - a.case_count
-        );
+        sorted.sort((a, b) => {
+          // Prefer date-level sort if available, fall back to year
+          const dateA = a.most_recent_date || String(a.most_recent_year);
+          const dateB = b.most_recent_date || String(b.most_recent_year);
+          if (dateB !== dateA) return dateB.localeCompare(dateA);
+          return b.case_count - a.case_count;
+        });
         break;
       case "cases":
         sorted.sort((a, b) => b.case_count - a.case_count);
