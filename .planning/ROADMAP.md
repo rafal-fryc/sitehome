@@ -23,8 +23,8 @@
 **Milestone Goal:** Improve data quality (remedy categories, pattern grouping) and add case-level insights (key takeaways, case provisions panel).
 
 - [x] **Phase 6: Remedy Reclassification** - Reclassify 885 "other" provisions into meaningful remedy categories via build pipeline
-- [ ] **Phase 7: Pattern Condensing** - Merge similar patterns, prune low-value, sort by most recent example
-- [ ] **Phase 8: Case Provisions Panel** - Inline provisions modal in the industry tab for case-specific browsing
+- [x] **Phase 7: Pattern Condensing** - Merge similar patterns, prune low-value, sort by most recent example
+- [x] **Phase 8: Case Provisions Panel** - Inline provisions modal in the industry tab for case-specific browsing
 - [ ] **Phase 9: Key Takeaways** - Claude-generated "what the business did wrong" summaries on case cards and provisions panel
 
 ## Phase Details
@@ -57,7 +57,7 @@ Plans:
 
 Plans:
 - [x] 07-01: Checkpoint + Merge/Prune Proposal Script (PTRN-04, PTRN-05) -- completed 2026-02-27
-- [ ] 07-02: Apply Merge Config + Rebuild + UI Polish (PTRN-01, PTRN-02, PTRN-03)
+- [x] 07-02: Apply Merge Config + Rebuild + UI Polish (PTRN-01, PTRN-02, PTRN-03) -- completed 2026-02-27
 
 ### Phase 8: Case Provisions Panel
 **Goal**: Practitioners can drill into a specific case's provisions from the industry tab without losing sector context
@@ -70,8 +70,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 08-01: Hook + Sheet Component + ProvisionRow (CPNL-02)
-- [ ] 08-02: Wire into FTCIndustryTab + Update CaseCard (CPNL-01, CPNL-03)
+- [x] 08-01: Hook + Sheet Component + ProvisionRow (CPNL-02) -- completed 2026-03-01
+- [x] 08-02: Wire into FTCIndustryTab + Update CaseCard (CPNL-01, CPNL-03) -- completed 2026-03-01
 
 ### Phase 9: Key Takeaways
 **Goal**: Practitioners can quickly understand what each business did wrong and what the FTC required, without reading the full consent order
@@ -103,6 +103,6 @@ Phases execute in numeric order: 6 -> 7 -> 8 -> 9
 | 4. Company & Industry View | v1.0 | 4/4 | Complete | 2026-02-25 |
 | 5. Cross-Case Patterns | v1.0 | 3/3 | Complete | 2026-02-25 |
 | 6. Remedy Reclassification | v1.1 | 2/2 | Complete | 2026-02-26 |
-| 7. Pattern Condensing | v1.1 | 1/2 | In progress | - |
-| 8. Case Provisions Panel | v1.1 | 0/2 | Planned | - |
+| 7. Pattern Condensing | v1.1 | 2/2 | Complete | 2026-02-27 |
+| 8. Case Provisions Panel | v1.1 | 2/2 | Complete | 2026-03-01 |
 | 9. Key Takeaways | v1.1 | 0/0 | Not started | - |

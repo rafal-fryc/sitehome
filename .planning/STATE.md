@@ -31,16 +31,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** A legal practitioner can find every FTC consent order provision relevant to a specific topic, with exact paragraph-level citations and source links, in under 30 seconds.
-**Current focus:** Phase 8 - Case Provisions Panel (v1.1)
+**Current focus:** Phase 9 - Key Takeaways (v1.1)
 
 ## Current Position
 
-Phase: 8 of 9 (Case Provisions Panel) -- IN PROGRESS
-Plan: 08-01 (done, 1/2 plans complete)
-Status: Plan 08-01 complete, Plan 08-02 next
-Last activity: 2026-03-01 -- Plan 08-01 complete (Sheet components created)
+Phase: 9 of 9 (Key Takeaways) -- NOT STARTED
+Plan: 09-01 (next)
+Status: Phase 8 complete (2/2 plans), Phase 9 next
+Last activity: 2026-03-01 -- Plan 08-02 complete (CaseProvisionsSheet wired into FTCIndustryTab)
 
-Progress: [###############.....] 75% (v1.0 complete, v1.1 phases 6-7 done, 08-01 done)
+Progress: [#################...] 87% (v1.0 complete, v1.1 phases 6-8 done, phase 9 remaining)
 
 ## Performance Metrics
 
@@ -49,7 +49,7 @@ Progress: [###############.....] 75% (v1.0 complete, v1.1 phases 6-7 done, 08-01
 - Average duration: 3 min
 - Total execution time: 1.05 hours
 
-**v1.1 plans completed:** 5
+**v1.1 plans completed:** 6
 
 | Phase | Plan | Duration | Tasks | Files |
 |-------|------|----------|-------|-------|
@@ -58,6 +58,7 @@ Progress: [###############.....] 75% (v1.0 complete, v1.1 phases 6-7 done, 08-01
 | 07 | 07-01 | 14 min | 2 | 3 |
 | 07 | 07-02 | 9 min | 2 | 4 |
 | 08 | 08-01 | 2 min | 2 | 3 |
+| 08 | 08-02 | 2 min | 2 | 2 |
 
 ## Accumulated Context
 
@@ -86,6 +87,8 @@ Recent decisions affecting current work:
 - [08-01]: data-state CSS selector on CollapsibleTrigger for chevron rotation, matching accordion pattern
 - [08-01]: Provisions with no statutory_topics grouped under 'Other' heading
 - [08-01]: Sheet width 50vw desktop / full-width mobile for readable provision text
+- [08-02]: Sheet rendered at tab level (not inside SectorDetail) so it persists across view transitions
+- [08-02]: handleViewProvisions sets local state instead of navigating to Provisions tab via URL params
 
 ### Pending Todos
 
@@ -98,5 +101,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-03-01
-Stopped at: Completed 08-01-PLAN.md -- Sheet components created (useCaseFile, ProvisionRow, CaseProvisionsSheet)
+Stopped at: Completed 08-02-PLAN.md -- CaseProvisionsSheet wired into FTCIndustryTab, phase 8 complete
 Resume file: None
