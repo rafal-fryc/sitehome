@@ -61,17 +61,17 @@ Plans:
 
 ### Phase 8: Case Provisions Panel
 **Goal**: Practitioners can drill into a specific case's provisions from the industry tab without losing sector context
-**Depends on**: Nothing (independent of Phases 6-7; requires only a case-index.json build artifact created within this phase)
+**Depends on**: Nothing (independent of Phases 6-7; case id maps directly to /data/ftc-files/{id}.json -- no build artifact needed)
 **Requirements**: CPNL-01, CPNL-02, CPNL-03
 **Success Criteria** (what must be TRUE):
   1. Clicking "View provisions" on a case card in the industry tab opens an inline modal/Sheet showing that case's provisions
   2. The modal displays verbatim provision text with citations for every provision in that case, including provisions spanning multiple statutory topics
   3. The user remains on the industry tab after closing the modal (no navigation to the Provisions tab)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 08-01: TBD
-- [ ] 08-02: TBD
+- [ ] 08-01: Hook + Sheet Component + ProvisionRow (CPNL-02)
+- [ ] 08-02: Wire into FTCIndustryTab + Update CaseCard (CPNL-01, CPNL-03)
 
 ### Phase 9: Key Takeaways
 **Goal**: Practitioners can quickly understand what each business did wrong and what the FTC required, without reading the full consent order
@@ -104,5 +104,5 @@ Phases execute in numeric order: 6 -> 7 -> 8 -> 9
 | 5. Cross-Case Patterns | v1.0 | 3/3 | Complete | 2026-02-25 |
 | 6. Remedy Reclassification | v1.1 | 2/2 | Complete | 2026-02-26 |
 | 7. Pattern Condensing | v1.1 | 1/2 | In progress | - |
-| 8. Case Provisions Panel | v1.1 | 0/0 | Not started | - |
+| 8. Case Provisions Panel | v1.1 | 0/2 | Planned | - |
 | 9. Key Takeaways | v1.1 | 0/0 | Not started | - |
