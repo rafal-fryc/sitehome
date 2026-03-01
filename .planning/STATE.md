@@ -31,16 +31,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** A legal practitioner can find every FTC consent order provision relevant to a specific topic, with exact paragraph-level citations and source links, in under 30 seconds.
-**Current focus:** Phase 7 - Pattern Condensing (v1.1)
+**Current focus:** Phase 8 - Case Provisions Panel (v1.1)
 
 ## Current Position
 
-Phase: 7 of 9 (Pattern Condensing) -- COMPLETE
-Plan: 07-02 (done, 2/2 plans complete)
-Status: Phase 7 complete
-Last activity: 2026-02-27 -- Plan 07-02 complete (merge/prune/sort applied, 52 patterns)
+Phase: 8 of 9 (Case Provisions Panel) -- IN PROGRESS
+Plan: 08-01 (done, 1/2 plans complete)
+Status: Plan 08-01 complete, Plan 08-02 next
+Last activity: 2026-03-01 -- Plan 08-01 complete (Sheet components created)
 
-Progress: [##############......] 70% (v1.0 complete, v1.1 phases 6-7 done)
+Progress: [###############.....] 75% (v1.0 complete, v1.1 phases 6-7 done, 08-01 done)
 
 ## Performance Metrics
 
@@ -49,7 +49,7 @@ Progress: [##############......] 70% (v1.0 complete, v1.1 phases 6-7 done)
 - Average duration: 3 min
 - Total execution time: 1.05 hours
 
-**v1.1 plans completed:** 4
+**v1.1 plans completed:** 5
 
 | Phase | Plan | Duration | Tasks | Files |
 |-------|------|----------|-------|-------|
@@ -57,6 +57,7 @@ Progress: [##############......] 70% (v1.0 complete, v1.1 phases 6-7 done)
 | 06 | 06-02 | 61 min | 5 | 323 |
 | 07 | 07-01 | 14 min | 2 | 3 |
 | 07 | 07-02 | 9 min | 2 | 4 |
+| 08 | 08-01 | 2 min | 2 | 3 |
 
 ## Accumulated Context
 
@@ -82,6 +83,9 @@ Recent decisions affecting current work:
 - [07-02]: Deferred-add merge pattern to handle self-referential target_id overlap (10 of 15 groups)
 - [07-02]: 52 final patterns from 126 (59% reduction, matching projection exactly)
 - [07-02]: most_recent_date for date-level sort precision in both build pipeline and UI
+- [08-01]: data-state CSS selector on CollapsibleTrigger for chevron rotation, matching accordion pattern
+- [08-01]: Provisions with no statutory_topics grouped under 'Other' heading
+- [08-01]: Sheet width 50vw desktop / full-width mobile for readable provision text
 
 ### Pending Todos
 
@@ -93,6 +97,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-27
-Stopped at: Completed 07-02-PLAN.md -- Phase 7 complete (52 condensed patterns)
+Last session: 2026-03-01
+Stopped at: Completed 08-01-PLAN.md -- Sheet components created (useCaseFile, ProvisionRow, CaseProvisionsSheet)
 Resume file: None

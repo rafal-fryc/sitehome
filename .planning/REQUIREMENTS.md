@@ -27,7 +27,7 @@ Requirements for milestone v1.1: Data Quality & Case Insights.
 ### Case Provisions Panel
 
 - [ ] **CPNL-01**: User can view case-specific provisions in a modal/Sheet from industry tab
-- [ ] **CPNL-02**: Modal shows verbatim provision text with citations for that case only
+- [x] **CPNL-02**: Modal shows verbatim provision text with citations for that case only
 - [ ] **CPNL-03**: Industry tab "view provisions" opens panel instead of navigating to provisions tab
 
 ### Key Takeaways
@@ -76,7 +76,7 @@ Deferred from PROJECT.md Active list:
 | PTRN-04 | Phase 7 | Complete (07-01) |
 | PTRN-05 | Phase 7 | Complete (07-01) |
 | CPNL-01 | Phase 8 | Pending |
-| CPNL-02 | Phase 8 | Pending |
+| CPNL-02 | Phase 8 | Complete |
 | CPNL-03 | Phase 8 | Pending |
 | TAKE-01 | Phase 9 | Pending |
 | TAKE-02 | Phase 9 | Pending |
