@@ -1,4 +1,3 @@
-import { ExternalLink } from "lucide-react";
 import type { EnhancedFTCCaseSummary } from "@/types/ftc";
 
 interface Props {
@@ -27,10 +26,9 @@ export default function CaseCard({ caseData, onViewProvisions }: Props) {
       </div>
       <button
         onClick={onViewProvisions}
-        className="text-sm text-gold hover:text-gold/80 font-garamond inline-flex items-center gap-1 shrink-0"
+        className="text-sm text-gold hover:text-gold/80 font-garamond shrink-0"
       >
         View provisions
-        <ExternalLink className="h-3.5 w-3.5" />
       </button>
     </article>
   );

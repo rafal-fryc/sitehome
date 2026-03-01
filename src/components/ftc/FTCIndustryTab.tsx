@@ -5,6 +5,7 @@ import { getSectorLabel } from "@/components/ftc/industry/industry-utils";
 import SectorGrid from "@/components/ftc/industry/SectorGrid";
 import SectorDetail from "@/components/ftc/industry/SectorDetail";
 import SectorCompare from "@/components/ftc/industry/SectorCompare";
+import CaseProvisionsSheet from "@/components/ftc/industry/CaseProvisionsSheet";
 
 interface Props {
   data: FTCDataPayload;
@@ -52,6 +53,8 @@ export default function FTCIndustryTab({ data }: Props) {
     new Set()
   );
 
+  const [sheetCase, setSheetCase] = useState<EnhancedFTCCaseSummary | null>(null);
+
   const handleSelectSector = useCallback(
     (slug: string) => {
       const newParams = new URLSearchParams(searchParams);
@@ -90,12 +93,10 @@ export default function FTCIndustryTab({ data }: Props) {
   }, [setSearchParams]);
 
   const handleViewProvisions = useCallback(
-    (_caseData: EnhancedFTCCaseSummary) => {
-      const newParams = new URLSearchParams();
-      newParams.set("tab", "provisions");
-      setSearchParams(newParams);
+    (caseData: EnhancedFTCCaseSummary) => {
+      setSheetCase(caseData);
     },
-    [setSearchParams]
+    []
   );
 
   // Get cases for the selected sector (lookup by label from slug)
@@ -111,18 +112,18 @@ export default function FTCIndustryTab({ data }: Props) {
     : [];
 
   // Route between views based on URL params
+  let view: React.ReactNode;
+
   if (compareSectors.length > 0) {
-    return (
+    view = (
       <SectorCompare
         sectorSlugs={compareSectors}
         sectorStats={sectorStats}
         onBack={handleBack}
       />
     );
-  }
-
-  if (sectorParam) {
-    return (
+  } else if (sectorParam) {
+    view = (
       <SectorDetail
         sectorSlug={sectorParam}
         cases={sectorCases}
@@ -130,15 +131,26 @@ export default function FTCIndustryTab({ data }: Props) {
         onViewProvisions={handleViewProvisions}
       />
     );
+  } else {
+    view = (
+      <SectorGrid
+        sectorStats={sectorStats}
+        onSelectSector={handleSelectSector}
+        selectedSectors={selectedSectors}
+        onToggleSelect={handleToggleSelect}
+        onCompare={handleCompare}
+      />
+    );
   }
 
   return (
-    <SectorGrid
-      sectorStats={sectorStats}
-      onSelectSector={handleSelectSector}
-      selectedSectors={selectedSectors}
-      onToggleSelect={handleToggleSelect}
-      onCompare={handleCompare}
-    />
+    <>
+      {view}
+      <CaseProvisionsSheet
+        caseData={sheetCase}
+        open={!!sheetCase}
+        onOpenChange={(open) => { if (!open) setSheetCase(null); }}
+      />
+    </>
   );
 }
