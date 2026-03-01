@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "@/hooks/use-toast";
 
 interface Article {
   id: string;
@@ -18,60 +16,13 @@ interface Article {
 const ArticlesSection = () => {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
-  const [syncing, setSyncing] = useState(false);
-  const { toast } = useToast();
-
-  // Fetch articles from database
-  const fetchArticles = async () => {
-    try {
-      const { data, error } = await supabase
-        .from('articles')
-        .select('*')
-        .order('published_date', { ascending: false });
-
-      if (error) throw error;
-      setArticles(data || []);
-    } catch (error) {
-      console.error('Error fetching articles:', error);
-      toast({
-        title: "Error",
-        description: "Failed to load articles. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // Sync articles from Substack
-  const syncSubstack = async () => {
-    setSyncing(true);
-    try {
-      const { data, error } = await supabase.functions.invoke('sync-substack');
-
-      if (error) throw error;
-
-      toast({
-        title: "Success",
-        description: `${data.message}. ${data.newArticles} new, ${data.updatedArticles} updated.`,
-      });
-
-      // Refresh articles after sync
-      await fetchArticles();
-    } catch (error) {
-      console.error('Error syncing Substack:', error);
-      toast({
-        title: "Error",
-        description: "Failed to sync Substack articles. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setSyncing(false);
-    }
-  };
 
   useEffect(() => {
-    fetchArticles();
+    fetch('/data/articles.json')
+      .then(res => res.json())
+      .then((data: Article[]) => setArticles(data))
+      .catch(err => console.error('Error loading articles:', err))
+      .finally(() => setLoading(false));
   }, []);
 
   return (
@@ -82,16 +33,6 @@ const ArticlesSection = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Articles & Analysis
             </h2>
-            <Button
-              onClick={syncSubstack}
-              disabled={syncing}
-              variant="outline"
-              size="sm"
-              className="border-rule-dark hover:bg-accent hover:border-gold"
-            >
-              <RefreshCw className={`h-4 w-4 ${syncing ? 'animate-spin' : ''}`} />
-              {syncing ? 'Syncing...' : 'Sync'}
-            </Button>
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl">
             Thoughtful exploration of contemporary legal issues, academic research,
@@ -110,12 +51,8 @@ const ArticlesSection = () => {
             <div className="max-w-md mx-auto">
               <h3 className="text-xl font-semibold text-foreground mb-4">No articles yet</h3>
               <p className="text-muted-foreground mb-6">
-                Articles from your Substack will appear here once you publish them.
+                Articles will appear here once they are added.
               </p>
-              <Button onClick={syncSubstack} disabled={syncing} className="bg-primary text-primary-foreground border border-gold hover:bg-primary-light">
-                <RefreshCw className={`mr-2 h-4 w-4 ${syncing ? 'animate-spin' : ''}`} />
-                {syncing ? 'Syncing...' : 'Sync Now'}
-              </Button>
             </div>
           </div>
         ) : (
