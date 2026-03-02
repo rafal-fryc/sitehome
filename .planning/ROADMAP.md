@@ -86,5 +86,5 @@
 | 8. Case Provisions Panel | v1.1 | 2/2 | Complete | 2026-03-01 |
 | 9. Key Takeaways | v1.1 | 2/2 | Complete | 2026-03-02 |
 | 10. Analytics Cleanup | 1/1 | Complete    | 2026-03-02 | - |
-| 11. Library Restructure | v1.2 | 0/? | Not started | - |
+| 11. Library Restructure | 1/2 | In Progress|  | - |
 | 12. Patterns Overhaul | v1.2 | 0/? | Not started | - |
