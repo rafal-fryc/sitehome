@@ -70,7 +70,10 @@
   2. A new behavioral summary pattern category exists showing common "what the business did wrong" patterns extracted from takeaway data across cases
   3. Remedy pattern categories have been consolidated per user-directed merge decisions, reducing redundant or overlapping category groupings
   4. Behavioral summary patterns display case counts, timeline data, and are browsable in the same manner as existing pattern types
-**Plans**: TBD
+**Plans**: 3 plans
+- [ ] 12-01-PLAN.md -- Remedy category consolidation (7 merge groups + rebuild)
+- [ ] 12-02-PLAN.md -- Behavioral pattern extraction from takeaway data (with user review checkpoint)
+- [ ] 12-03-PLAN.md -- Patterns tab UI overhaul (sub-tabs, structural grouping, behavioral display)
 
 ## Progress
 
@@ -87,4 +90,4 @@
 | 9. Key Takeaways | v1.1 | 2/2 | Complete | 2026-03-02 |
 | 10. Analytics Cleanup | 1/1 | Complete    | 2026-03-02 | - |
 | 11. Library Restructure | v1.2 | Complete    | 2026-03-02 | 2026-03-01 |
-| 12. Patterns Overhaul | v1.2 | 0/? | Not started | - |
+| 12. Patterns Overhaul | v1.2 | 0/3 | Not started | - |
