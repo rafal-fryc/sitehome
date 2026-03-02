@@ -9,8 +9,8 @@ Requirements for milestone v1.2: Library & Patterns Overhaul.
 
 ### Analytics Cleanup
 
-- [ ] **ANLZ-01**: Analytics tables beneath bar charts are collapsible and start in collapsed state
-- [ ] **ANLZ-02**: Order Administration is hidden from all remedy type UI presentations (filters, charts, tables) while retained in underlying data
+- [x] **ANLZ-01**: Analytics tables beneath bar charts are collapsible and start in collapsed state
+- [x] **ANLZ-02**: Order Administration is hidden from all remedy type UI presentations (filters, charts, tables) while retained in underlying data
 
 ### Library Restructure
 
@@ -50,8 +50,8 @@ Deferred from PROJECT.md:
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| ANLZ-01 | Phase 10 | Pending |
-| ANLZ-02 | Phase 10 | Pending |
+| ANLZ-01 | Phase 10 | Complete |
+| ANLZ-02 | Phase 10 | Complete |
 | LIB-01 | Phase 11 | Pending |
 | LIB-02 | Phase 11 | Pending |
 | LIB-03 | Phase 11 | Pending |

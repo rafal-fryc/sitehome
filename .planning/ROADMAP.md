@@ -31,7 +31,7 @@
 
 ### v1.2 Library & Patterns Overhaul
 
-- [ ] **Phase 10: Analytics Cleanup** - Collapsible tables and Order Administration removal from UI
+- [x] **Phase 10: Analytics Cleanup** - Collapsible tables and Order Administration removal from UI (completed 2026-03-02)
 - [ ] **Phase 11: Library Restructure** - Split provisions library into provision search and case search with unified case access
 - [ ] **Phase 12: Patterns Overhaul** - Behavioral summary patterns from takeaways and remedy category consolidation
 
@@ -83,6 +83,6 @@
 | 7. Pattern Condensing | v1.1 | 2/2 | Complete | 2026-02-27 |
 | 8. Case Provisions Panel | v1.1 | 2/2 | Complete | 2026-03-01 |
 | 9. Key Takeaways | v1.1 | 2/2 | Complete | 2026-03-02 |
-| 10. Analytics Cleanup | v1.2 | 0/1 | Planned | - |
+| 10. Analytics Cleanup | 1/1 | Complete   | 2026-03-02 | - |
 | 11. Library Restructure | v1.2 | 0/? | Not started | - |
 | 12. Patterns Overhaul | v1.2 | 0/? | Not started | - |
