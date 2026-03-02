@@ -10,6 +10,7 @@ import {
   Cell,
 } from "recharts";
 import type { EnhancedFTCCaseSummary } from "@/types/ftc";
+import { HIDDEN_REMEDY_TYPES } from "@/constants/ftc";
 import ReferenceTable from "@/components/ftc/analytics/ReferenceTable";
 
 interface Props {
@@ -40,6 +41,7 @@ export default function SectorPatternCharts({ cases, sectorLabel }: Props) {
       }
     }
     return Object.entries(counts)
+      .filter(([name]) => !HIDDEN_REMEDY_TYPES.includes(name))
       .sort((a, b) => b[1] - a[1])
       .map(([name, count]) => ({ name, count }));
   }, [cases]);

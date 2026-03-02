@@ -23,6 +23,14 @@ export const REMEDY_TYPE_OPTIONS: RemedyType[] = [
   "Other",
 ];
 
+/** Remedy types hidden from all UI surfaces per v1.2 */
+export const HIDDEN_REMEDY_TYPES: readonly string[] = ["Order Administration"];
+
+/** Remedy types shown in UI -- excludes Order Administration per v1.2 */
+export const DISPLAY_REMEDY_TYPE_OPTIONS = REMEDY_TYPE_OPTIONS.filter(
+  (rt) => !HIDDEN_REMEDY_TYPES.includes(rt)
+);
+
 export const ADMINISTRATIONS: { label: string; start: string; end: string }[] = [
   { label: "Clinton", start: "1993-01-20", end: "2001-01-20" },
   { label: "G.W. Bush", start: "2001-01-20", end: "2009-01-20" },

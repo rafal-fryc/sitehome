@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { HIDDEN_REMEDY_TYPES } from "@/constants/ftc";
 
 import type { ProvisionsManifest, ManifestTopic } from "@/types/ftc";
 
@@ -36,6 +37,11 @@ export default function TopicSidebar({
     for (const [slug, topic] of Object.entries(manifest.topics)) {
       groups[topic.category]?.push({ slug, topic });
     }
+
+    // Filter out hidden remedy types from sidebar
+    groups.remedy_type = groups.remedy_type.filter(
+      (entry) => !HIDDEN_REMEDY_TYPES.includes(entry.topic.label)
+    );
 
     // Sort alphabetically within each group
     for (const entries of Object.values(groups)) {

@@ -10,6 +10,7 @@ import {
   Cell,
 } from "recharts";
 import type { FTCDataPayload, EnhancedFTCCaseSummary } from "@/types/ftc";
+import { HIDDEN_REMEDY_TYPES } from "@/constants/ftc";
 import ReferenceTable from "./ReferenceTable";
 
 interface Props {
@@ -30,6 +31,7 @@ export default function ProvisionAnalytics({ data }: Props) {
     }
 
     return Object.entries(counts)
+      .filter(([name]) => !HIDDEN_REMEDY_TYPES.includes(name))
       .sort((a, b) => b[1] - a[1])
       .map(([name, count]) => ({ name, count }));
   }, [cases]);

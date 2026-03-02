@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowUpDown, ChevronDown, Check, Search, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { DATE_PRESETS, REMEDY_TYPE_OPTIONS } from "@/constants/ftc";
+import { DATE_PRESETS, DISPLAY_REMEDY_TYPE_OPTIONS } from "@/constants/ftc";
 import CompanyAutocomplete from "@/components/ftc/provisions/CompanyAutocomplete";
 import FilterChips, {
   type FilterChip,
@@ -201,7 +201,7 @@ export default function ProvisionFilterBar({
           </PopoverTrigger>
           <PopoverContent className="w-64 p-2" align="start">
             <div className="space-y-1">
-              {REMEDY_TYPE_OPTIONS.map((rt) => (
+              {DISPLAY_REMEDY_TYPE_OPTIONS.map((rt) => (
                 <label
                   key={rt}
                   className="flex items-center gap-2 px-2 py-1.5 text-sm font-garamond hover:bg-accent rounded-sm cursor-pointer"
