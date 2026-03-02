@@ -32,7 +32,7 @@
 ### v1.2 Library & Patterns Overhaul
 
 - [x] **Phase 10: Analytics Cleanup** - Collapsible tables and Order Administration removal from UI (completed 2026-03-02)
-- [ ] **Phase 11: Library Restructure** - Split provisions library into provision search and case search with unified case access
+- [x] **Phase 11: Library Restructure** - Split provisions library into provision search and case search with unified case access (completed 2026-03-01)
 - [ ] **Phase 12: Patterns Overhaul** - Behavioral summary patterns from takeaways and remedy category consolidation
 
 ## Phase Details
@@ -58,8 +58,8 @@
   3. User can search for a specific company or case title in the actions/cases section and find matching enforcement actions
   4. User can view a case's provisions via inline expansion (accordion) for any case from within the library, without navigating to the industry tab
 **Plans**: 2 plans
-- [ ] 11-01-PLAN.md -- Sub-tab layout + sidebar practice area removal
-- [ ] 11-02-PLAN.md -- Case browser with search, sort, and inline provision expansion
+- [x] 11-01-PLAN.md -- Sub-tab layout + sidebar practice area removal
+- [x] 11-02-PLAN.md -- Case browser with search, sort, and inline provision expansion
 
 ### Phase 12: Patterns Overhaul
 **Goal**: Patterns section includes behavioral summary patterns derived from takeaway data alongside restructured remedy patterns with consolidated categories
@@ -86,5 +86,5 @@
 | 8. Case Provisions Panel | v1.1 | 2/2 | Complete | 2026-03-01 |
 | 9. Key Takeaways | v1.1 | 2/2 | Complete | 2026-03-02 |
 | 10. Analytics Cleanup | 1/1 | Complete    | 2026-03-02 | - |
-| 11. Library Restructure | 1/2 | In Progress|  | - |
+| 11. Library Restructure | v1.2 | 2/2 | Complete | 2026-03-01 |
 | 12. Patterns Overhaul | v1.2 | 0/? | Not started | - |

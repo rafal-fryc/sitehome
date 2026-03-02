@@ -16,8 +16,8 @@ Requirements for milestone v1.2: Library & Patterns Overhaul.
 
 - [x] **LIB-01**: Practice area sections removed from provisions library sidebar/navigation
 - [x] **LIB-02**: Provisions library has two distinct search sections — one for provisions, one for actions/cases
-- [ ] **LIB-03**: Case search bar allows finding individual enforcement actions by company name or case title
-- [ ] **LIB-04**: "View provisions" for a specific case is accessible from the library (not only from industry tab)
+- [x] **LIB-03**: Case search bar allows finding individual enforcement actions by company name or case title
+- [x] **LIB-04**: "View provisions" for a specific case is accessible from the library (not only from industry tab)
 
 ### Patterns Overhaul
 
@@ -54,8 +54,8 @@ Deferred from PROJECT.md:
 | ANLZ-02 | Phase 10 | Complete |
 | LIB-01 | Phase 11 | Complete |
 | LIB-02 | Phase 11 | Complete |
-| LIB-03 | Phase 11 | Pending |
-| LIB-04 | Phase 11 | Pending |
+| LIB-03 | Phase 11 | Complete |
+| LIB-04 | Phase 11 | Complete |
 | PATN-01 | Phase 12 | Pending |
 | PATN-02 | Phase 12 | Pending |
 | PATN-03 | Phase 12 | Pending |
