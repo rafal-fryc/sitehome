@@ -32,7 +32,14 @@ A legal practitioner can find every FTC consent order provision relevant to a sp
 
 ### Active
 
-(No active requirements — define in next milestone via `/gsd:new-milestone`)
+- [ ] Collapsible analytics tables (start collapsed beneath bar charts)
+- [ ] Hide Order Administration from all remedy type UI presentations
+- [ ] Remove practice area sections from provisions library
+- [ ] Split provisions library into provisions search vs actions/cases search
+- [ ] Case search bar in provisions library for finding individual cases
+- [ ] Move "View provisions" from industry tab into provisions library
+- [ ] Behavioral summary patterns — new pattern category from takeaway data
+- [ ] Combine remedy pattern categories (user-directed consolidation)
 
 ### Deferred
 
@@ -52,6 +59,19 @@ A legal practitioner can find every FTC consent order provision relevant to a sp
 - Backend database for FTC data — static JSON pattern proven sufficient for 293 cases
 - Server-side rendering — SPA architecture adequate for this dataset size
 - PDF generation / export — users can print/copy citations
+
+## Current Milestone: v1.2 Library & Patterns Overhaul
+
+**Goal:** Restructure the provisions library with separate provision/case search, add behavioral summary patterns from takeaway data, clean up analytics and remedy type presentation.
+
+**Target features:**
+- Collapsible analytics tables (default collapsed)
+- Hide Order Administration from remedy type UI
+- Provisions library split: provisions search + actions/cases search with case search bar
+- "View provisions" accessible from library (not just industry tab)
+- Remove practice area sections from provisions library
+- New behavioral summary pattern category from AI-generated takeaways
+- User-directed remedy pattern category consolidation
 
 ## Context
 
@@ -94,4 +114,4 @@ A legal practitioner can find every FTC consent order provision relevant to a sp
 | Composite prune threshold (case_count < 5 AND most_recent < 2020) | Preserves recent and frequent patterns | ✓ Good — only 4 patterns pruned |
 
 ---
-*Last updated: 2026-03-02 after v1.1 milestone completion*
+*Last updated: 2026-03-02 after v1.2 milestone initialization*
