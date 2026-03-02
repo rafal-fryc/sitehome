@@ -1,5 +1,21 @@
 # Milestones
 
+## v1.2 Library & Patterns Overhaul (Shipped: 2026-03-02)
+
+**Phases completed:** 3 phases, 6 plans, 14 tasks
+
+**Key accomplishments:**
+- Analytics tables start collapsed with toggle buttons; Order Administration hidden from all remedy type UI surfaces
+- Provisions library split into dual-workflow: "By Topic" search + "By Case" browser with filter-as-you-type search
+- Case browser with sort controls and inline provision accordion for browsing enforcement actions from the library
+- Remedy pattern categories consolidated from 52 to 36 via 7 user-directed merge groups (config-only changes)
+- 13 behavioral pattern categories extracted from 285 case takeaways with user-reviewed category refinements
+- Patterns tab redesigned with Behavioral/Remedy sub-tabs, structural pattern separation, and full behavioral display
+
+**Stats:** 25 commits, 42 files changed, +19,589/-7,396 lines, 2 days (2026-03-01 → 2026-03-02)
+
+---
+
 ## v1.1 Data Quality & Case Insights (Shipped: 2026-03-02)
 
 **Phases completed:** 4 phases, 8 plans, 0 tasks

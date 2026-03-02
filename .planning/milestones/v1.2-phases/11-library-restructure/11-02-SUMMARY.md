@@ -73,7 +73,7 @@ Each task was committed atomically:
 2. **Task 2: Wire CaseBrowser into FTCProvisionsTab "By Case" sub-tab** - `f44a344` (feat)
 3. **Task 3: Visual verification checkpoint** - approved by user (no commit, checkpoint only)
 
-**Plan metadata:** pending
+**Plan metadata:** `33ad95f` (docs: complete plan)
 
 ## Files Created/Modified
 - `src/components/ftc/provisions/CaseBrowser.tsx` - Case browser with search bar, sort controls, CaseCard list, pagination, and expansion management (293 lines)

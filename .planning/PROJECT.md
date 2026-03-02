@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A comprehensive, topic-first research tool for exploring FTC enforcement actions and their substantive provisions. Legal practitioners can browse 2,783 provisions across 293 consent orders by statutory topic, practice area, or remedy type — with verbatim order language, exact paragraph-level citations, and source links. Includes enforcement trend analytics, industry sector browsing with case-level provisions panels, 52 curated cross-case provision patterns with chronological evolution, and AI-generated "what the business did wrong" takeaways for every case.
+A comprehensive, topic-first research tool for exploring FTC enforcement actions and their substantive provisions. Legal practitioners can browse 2,783 provisions across 293 consent orders by statutory topic or remedy type — with verbatim order language, exact paragraph-level citations, and source links. Includes enforcement trend analytics with collapsible detail tables, a dual-workflow provisions library (topic search + case browser), industry sector browsing with case-level provisions panels, 36 curated remedy patterns with structural/substantive separation, 13 behavioral pattern categories showing "what the business did wrong" across 285 cases, and AI-generated takeaways for every case.
 
 ## Core Value
 
@@ -30,16 +30,18 @@ A legal practitioner can find every FTC consent order provision relevant to a sp
 - ✓ Case provisions panel — inline Sheet modal in industry tab for case-specific browsing — v1.1
 - ✓ Key takeaways per enforcement action — Claude-generated summaries with hallucination guardrails — v1.1
 
+- ✓ Collapsible analytics tables (start collapsed beneath bar charts) — v1.2
+- ✓ Hide Order Administration from all remedy type UI presentations — v1.2
+- ✓ Remove practice area sections from provisions library — v1.2
+- ✓ Split provisions library into provisions search vs actions/cases search — v1.2
+- ✓ Case search bar in provisions library for finding individual cases — v1.2
+- ✓ Move "View provisions" from industry tab into provisions library — v1.2
+- ✓ Behavioral summary patterns — 13 categories from 285 case takeaways — v1.2
+- ✓ Remedy pattern categories consolidated from 52 to 36 via user-directed merges — v1.2
+
 ### Active
 
-- [ ] Collapsible analytics tables (start collapsed beneath bar charts)
-- [ ] Hide Order Administration from all remedy type UI presentations
-- [ ] Remove practice area sections from provisions library
-- [ ] Split provisions library into provisions search vs actions/cases search
-- [ ] Case search bar in provisions library for finding individual cases
-- [ ] Move "View provisions" from industry tab into provisions library
-- [ ] Behavioral summary patterns — new pattern category from takeaway data
-- [ ] Combine remedy pattern categories (user-directed consolidation)
+(None — next milestone not yet defined)
 
 ### Deferred
 
@@ -60,28 +62,15 @@ A legal practitioner can find every FTC consent order provision relevant to a sp
 - Server-side rendering — SPA architecture adequate for this dataset size
 - PDF generation / export — users can print/copy citations
 
-## Current Milestone: v1.2 Library & Patterns Overhaul
-
-**Goal:** Restructure the provisions library with separate provision/case search, add behavioral summary patterns from takeaway data, clean up analytics and remedy type presentation.
-
-**Target features:**
-- Collapsible analytics tables (default collapsed)
-- Hide Order Administration from remedy type UI
-- Provisions library split: provisions search + actions/cases search with case search bar
-- "View provisions" accessible from library (not just industry tab)
-- Remove practice area sections from provisions library
-- New behavioral summary pattern category from AI-generated takeaways
-- User-directed remedy pattern category consolidation
-
 ## Context
 
-**Shipped v1.1** (2026-03-01). React 18 + Vite 5 + TypeScript SPA on Vercel. 14,745 LOC TypeScript. Uses shadcn/ui + Tailwind CSS + Recharts.
+**Shipped v1.2** (2026-03-02). React 18 + Vite 5 + TypeScript SPA on Vercel. 16,594 LOC TypeScript. Uses shadcn/ui + Tailwind CSS + Recharts.
 
-**Data pipeline:** Offline build scripts (`build-ftc-data.ts`, `build-provisions.ts`, `build-patterns.ts`, `generate-takeaways.ts`) produce static JSON artifacts. Classification by Claude Code agents at build time. 13 remedy type categories across 18 topic-sharded provision files. `ftc-patterns.json` contains 52 curated patterns (merged/pruned from 126). Takeaway generation via Anthropic SDK with temperature 0.
+**Data pipeline:** Offline build scripts (`build-ftc-data.ts`, `build-provisions.ts`, `build-patterns.ts`, `generate-takeaways.ts`, `extract-behavioral-patterns.ts`) produce static JSON artifacts. Classification by Claude Code agents at build time. 13 remedy type categories across 18 topic-sharded provision files. `ftc-patterns.json` contains 36 curated remedy patterns (consolidated from 52). `ftc-behavioral-patterns.json` contains 13 behavioral categories across 284 cases. Takeaway generation via Anthropic SDK with temperature 0.
 
 **Key libraries:** MiniSearch (full-text search), jsdiff (word-level diff), cmdk (company autocomplete), @anthropic-ai/sdk (takeaway generation).
 
-**v1.1 additions:** Rule-based remedy reclassification pipeline (`reclassify-remedy-other.ts`), config-driven pattern condensing (`condense-patterns.ts`), inline CaseProvisionsSheet component, AI-generated takeaways with brief/full display and content badges.
+**v1.2 additions:** Collapsible ReferenceTable with HIDDEN_REMEDY_TYPES filtering, dual-workflow provisions library (By Topic + By Case sub-tabs), CaseBrowser with filter-as-you-type search and CaseProvisionAccordion, remedy pattern super-merge consolidation, behavioral pattern extraction pipeline, Patterns tab sub-tabs (Behavioral/Remedy) with structural pattern separation.
 
 ## Constraints
 
@@ -112,6 +101,13 @@ A legal practitioner can find every FTC consent order provision relevant to a sp
 | Temperature 0 for takeaway generation | Deterministic output consistency | ✓ Good — reproducible across runs |
 | Takeaway_brief at top level of case JSON | Propagated to ftc-cases.json via build pipeline | ✓ Good — no extra fetch for brief display |
 | Composite prune threshold (case_count < 5 AND most_recent < 2020) | Preserves recent and frequent patterns | ✓ Good — only 4 patterns pruned |
+| Collapsible wrapper with collapsible/defaultOpen props | Backward-compatible table collapsing | ✓ Good — non-analytics usages unaffected |
+| HIDDEN_REMEDY_TYPES constant for UI filtering | Consistent Order Administration hiding | ✓ Good — single source of truth across all surfaces |
+| Sub-tab routing via URL view param | No page navigation for workflow switching | ✓ Good — provisions and patterns tabs both use pattern |
+| Cross-directory component reuse (CaseCard, ProvisionRow) | Avoid duplication between industry/ and provisions/ | ✓ Good — single component definitions |
+| Super-merge flattening for pattern consolidation | Avoid single-pass merge dependency issues | ✓ Good — config-only changes, no code modifications |
+| Keyword-based behavioral categorization with user review | Deterministic extraction with human quality gate | ✓ Good — 13 categories, 284/285 cases categorized |
+| Behavioral patterns as default sub-tab | New feature gets primary visibility | ✓ Good — remedy patterns still accessible via URL |
 
 ---
-*Last updated: 2026-03-02 after v1.2 milestone initialization*
+*Last updated: 2026-03-02 after v1.2 milestone completion*
