@@ -83,11 +83,11 @@ Plans:
   3. All takeaway text is labeled as "AI-generated summary" in the UI
   4. Takeaways contain only factual claims derivable from structured case data (legal authority, violation type, provision titles) -- no hallucinated dollar amounts, statute names, or dates
   5. A dry-run validation on 10 representative sample cases was completed before full batch generation
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 09-01: TBD
-- [ ] 09-02: TBD
+- [ ] 09-01: Takeaway Generation Pipeline + Dry-Run Validation (TAKE-01, TAKE-04, TAKE-05)
+- [ ] 09-02: Display Takeaways on CaseCard + CaseProvisionsSheet (TAKE-02, TAKE-03)
 
 ## Progress
 
@@ -105,4 +105,4 @@ Phases execute in numeric order: 6 -> 7 -> 8 -> 9
 | 6. Remedy Reclassification | v1.1 | 2/2 | Complete | 2026-02-26 |
 | 7. Pattern Condensing | v1.1 | 2/2 | Complete | 2026-02-27 |
 | 8. Case Provisions Panel | v1.1 | 2/2 | Complete | 2026-03-01 |
-| 9. Key Takeaways | v1.1 | 0/0 | Not started | - |
+| 9. Key Takeaways | v1.1 | 0/2 | Not started | - |
