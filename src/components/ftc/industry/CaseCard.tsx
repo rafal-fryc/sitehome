@@ -1,4 +1,5 @@
 import type { EnhancedFTCCaseSummary } from "@/types/ftc";
+import { Badge } from "@/components/ui/badge";
 
 interface Props {
   caseData: EnhancedFTCCaseSummary;
@@ -20,9 +21,18 @@ export default function CaseCard({ caseData, onViewProvisions }: Props) {
             {caseData.violation_type}
           </span>
         </div>
-        <div className="text-xs text-muted-foreground mt-0.5">
-          {provisionCount} provision{provisionCount !== 1 ? "s" : ""}
-        </div>
+        {caseData.takeaway_brief ? (
+          <div className="text-xs text-muted-foreground mt-0.5 flex items-start gap-1.5">
+            <span className="font-garamond leading-snug line-clamp-2">{caseData.takeaway_brief}</span>
+            <Badge variant="outline" className="text-[9px] px-1 py-0 font-normal text-muted-foreground/60 shrink-0 mt-0.5">
+              AI-generated
+            </Badge>
+          </div>
+        ) : (
+          <div className="text-xs text-muted-foreground mt-0.5">
+            {provisionCount} provision{provisionCount !== 1 ? "s" : ""}
+          </div>
+        )}
       </div>
       <button
         onClick={onViewProvisions}

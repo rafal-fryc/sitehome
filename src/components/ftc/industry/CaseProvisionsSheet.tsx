@@ -96,6 +96,16 @@ export default function CaseProvisionsSheet({
               </>
             )}
           </SheetDescription>
+          {data?.takeaway_full && (
+            <div className="mt-3 space-y-1">
+              <p className="text-sm text-foreground font-garamond leading-relaxed">
+                {data.takeaway_full}
+              </p>
+              <p className="text-xs text-muted-foreground italic font-garamond">
+                AI-generated from structured case data
+              </p>
+            </div>
+          )}
         </SheetHeader>
 
         <div className="border-t border-rule mt-4" />
