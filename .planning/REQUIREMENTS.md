@@ -50,21 +50,21 @@ Deferred from PROJECT.md:
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| ANLZ-01 | TBD | Pending |
-| ANLZ-02 | TBD | Pending |
-| LIB-01 | TBD | Pending |
-| LIB-02 | TBD | Pending |
-| LIB-03 | TBD | Pending |
-| LIB-04 | TBD | Pending |
-| PATN-01 | TBD | Pending |
-| PATN-02 | TBD | Pending |
-| PATN-03 | TBD | Pending |
+| ANLZ-01 | Phase 10 | Pending |
+| ANLZ-02 | Phase 10 | Pending |
+| LIB-01 | Phase 11 | Pending |
+| LIB-02 | Phase 11 | Pending |
+| LIB-03 | Phase 11 | Pending |
+| LIB-04 | Phase 11 | Pending |
+| PATN-01 | Phase 12 | Pending |
+| PATN-02 | Phase 12 | Pending |
+| PATN-03 | Phase 12 | Pending |
 
 **Coverage:**
 - v1.2 requirements: 9 total
-- Mapped to phases: 0
-- Unmapped: 9
+- Mapped to phases: 9
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-02*
-*Last updated: 2026-03-02 after initial definition*
+*Last updated: 2026-03-02 after roadmap creation*
