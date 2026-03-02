@@ -25,7 +25,7 @@
 - [x] **Phase 6: Remedy Reclassification** - Reclassify 885 "other" provisions into meaningful remedy categories via build pipeline
 - [x] **Phase 7: Pattern Condensing** - Merge similar patterns, prune low-value, sort by most recent example
 - [x] **Phase 8: Case Provisions Panel** - Inline provisions modal in the industry tab for case-specific browsing
-- [ ] **Phase 9: Key Takeaways** - Claude-generated "what the business did wrong" summaries on case cards and provisions panel
+- [x] **Phase 9: Key Takeaways** - Claude-generated "what the business did wrong" summaries on case cards and provisions panel (completed 2026-03-02)
 
 ## Phase Details
 
@@ -105,4 +105,4 @@ Phases execute in numeric order: 6 -> 7 -> 8 -> 9
 | 6. Remedy Reclassification | v1.1 | 2/2 | Complete | 2026-02-26 |
 | 7. Pattern Condensing | v1.1 | 2/2 | Complete | 2026-02-27 |
 | 8. Case Provisions Panel | v1.1 | 2/2 | Complete | 2026-03-01 |
-| 9. Key Takeaways | v1.1 | 1/2 | In Progress | - |
+| 9. Key Takeaways | 2/2 | Complete   | 2026-03-02 | - |

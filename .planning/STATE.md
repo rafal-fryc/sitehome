@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: Data Quality & Case Insights
-status: unknown
-last_updated: "2026-03-02T00:10:34.000Z"
+status: complete
+last_updated: "2026-03-01T00:00:00.000Z"
 progress:
   total_phases: 9
-  completed_phases: 8
+  completed_phases: 9
   total_plans: 29
-  completed_plans: 28
+  completed_plans: 29
 ---
 
 ---
@@ -48,12 +48,12 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 
 ## Current Position
 
-Phase: 9 of 9 (Key Takeaways) -- IN PROGRESS
-Plan: 09-02 (next)
-Status: Plan 09-01 complete (1/2 plans), Phase 9 in progress
-Last activity: 2026-03-02 -- Plan 09-01 complete (takeaway generation pipeline + build propagation)
+Phase: 9 of 9 (Key Takeaways) -- COMPLETE
+Plan: 09-02 (complete)
+Status: All plans complete (2/2 plans), Phase 9 complete, v1.1 milestone complete
+Last activity: 2026-03-01 -- Plan 09-02 complete (takeaway UI display on case cards and provisions panel)
 
-Progress: [##################..] 93% (v1.0 complete, v1.1 phases 6-8 done, phase 9 plan 1/2 done)
+Progress: [####################] 100% (v1.0 complete, v1.1 complete -- all 9 phases, 29 plans done)
 
 ## Performance Metrics
 
@@ -62,7 +62,7 @@ Progress: [##################..] 93% (v1.0 complete, v1.1 phases 6-8 done, phase
 - Average duration: 3 min
 - Total execution time: 1.05 hours
 
-**v1.1 plans completed:** 7
+**v1.1 plans completed:** 8
 
 | Phase | Plan | Duration | Tasks | Files |
 |-------|------|----------|-------|-------|
@@ -73,6 +73,7 @@ Progress: [##################..] 93% (v1.0 complete, v1.1 phases 6-8 done, phase
 | 08 | 08-01 | 2 min | 2 | 3 |
 | 08 | 08-02 | 2 min | 2 | 2 |
 | 09 | 09-01 | 5 min | 2 | 4 |
+| 09 | 09-02 | 5 min | 2 | 2 |
 
 ## Accumulated Context
 
@@ -106,6 +107,8 @@ Recent decisions affecting current work:
 - [09-01]: 10 representative sample cases for dry-run covering COPPA, data security, surveillance, TSR/GLBA, FCRA, health data, dark patterns, edge cases
 - [09-01]: Temperature 0 for deterministic output consistency; post-generation validation warns on hallucinated content
 - [09-01]: takeaway_brief at top level of case JSON (not inside case_info); propagated to ftc-cases.json via build-ftc-data.ts
+- [09-02]: AI-generated badge uses 9px outline badge with muted-foreground/60 for subtle appearance
+- [09-02]: line-clamp-2 CSS safety net on brief takeaway; full takeaway uses text-foreground as primary content
 
 ### Pending Todos
 
@@ -117,6 +120,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-02
-Stopped at: Completed 09-01-PLAN.md -- takeaway generation pipeline + build propagation (API key needed for actual generation)
+Last session: 2026-03-01
+Stopped at: Completed 09-02-PLAN.md -- v1.1 milestone complete (all 9 phases, 29 plans done)
 Resume file: None
