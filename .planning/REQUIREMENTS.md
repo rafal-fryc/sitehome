@@ -32,11 +32,11 @@ Requirements for milestone v1.1: Data Quality & Case Insights.
 
 ### Key Takeaways
 
-- [ ] **TAKE-01**: Pipeline generates "what the business did wrong" summaries from complaint data at build time
+- [x] **TAKE-01**: Pipeline generates "what the business did wrong" summaries from complaint data at build time
 - [ ] **TAKE-02**: Brief takeaway visible on case cards across all relevant tabs
 - [ ] **TAKE-03**: Full takeaway displayed on case detail view
-- [ ] **TAKE-04**: Generation constrained to structured fields (legal_authority, provision titles, complaint counts) to prevent hallucination
-- [ ] **TAKE-05**: Dry-run validation on 10 sample cases before full batch generation
+- [x] **TAKE-04**: Generation constrained to structured fields (legal_authority, provision titles, complaint counts) to prevent hallucination
+- [x] **TAKE-05**: Dry-run validation on 10 sample cases before full batch generation
 
 ## Future Requirements
 
@@ -78,11 +78,11 @@ Deferred from PROJECT.md Active list:
 | CPNL-01 | Phase 8 | Complete |
 | CPNL-02 | Phase 8 | Complete |
 | CPNL-03 | Phase 8 | Complete |
-| TAKE-01 | Phase 9 | Pending |
+| TAKE-01 | Phase 9 | Complete |
 | TAKE-02 | Phase 9 | Pending |
 | TAKE-03 | Phase 9 | Pending |
-| TAKE-04 | Phase 9 | Pending |
-| TAKE-05 | Phase 9 | Pending |
+| TAKE-04 | Phase 9 | Complete |
+| TAKE-05 | Phase 9 | Complete |
 
 **Coverage:**
 - v1.1 requirements: 19 total

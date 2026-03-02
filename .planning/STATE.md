@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: Data Quality & Case Insights
 status: unknown
-last_updated: "2026-03-01T23:43:07.488Z"
+last_updated: "2026-03-02T00:10:34.000Z"
 progress:
-  total_phases: 8
+  total_phases: 9
   completed_phases: 8
-  total_plans: 27
-  completed_plans: 27
+  total_plans: 29
+  completed_plans: 28
 ---
 
 ---
@@ -48,12 +48,12 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 
 ## Current Position
 
-Phase: 9 of 9 (Key Takeaways) -- NOT STARTED
-Plan: 09-01 (next)
-Status: Phase 8 complete (2/2 plans), Phase 9 next
-Last activity: 2026-03-01 -- Plan 08-02 complete (CaseProvisionsSheet wired into FTCIndustryTab)
+Phase: 9 of 9 (Key Takeaways) -- IN PROGRESS
+Plan: 09-02 (next)
+Status: Plan 09-01 complete (1/2 plans), Phase 9 in progress
+Last activity: 2026-03-02 -- Plan 09-01 complete (takeaway generation pipeline + build propagation)
 
-Progress: [#################...] 87% (v1.0 complete, v1.1 phases 6-8 done, phase 9 remaining)
+Progress: [##################..] 93% (v1.0 complete, v1.1 phases 6-8 done, phase 9 plan 1/2 done)
 
 ## Performance Metrics
 
@@ -62,7 +62,7 @@ Progress: [#################...] 87% (v1.0 complete, v1.1 phases 6-8 done, phase
 - Average duration: 3 min
 - Total execution time: 1.05 hours
 
-**v1.1 plans completed:** 6
+**v1.1 plans completed:** 7
 
 | Phase | Plan | Duration | Tasks | Files |
 |-------|------|----------|-------|-------|
@@ -72,6 +72,7 @@ Progress: [#################...] 87% (v1.0 complete, v1.1 phases 6-8 done, phase
 | 07 | 07-02 | 9 min | 2 | 4 |
 | 08 | 08-01 | 2 min | 2 | 3 |
 | 08 | 08-02 | 2 min | 2 | 2 |
+| 09 | 09-01 | 5 min | 2 | 4 |
 
 ## Accumulated Context
 
@@ -102,6 +103,9 @@ Recent decisions affecting current work:
 - [08-01]: Sheet width 50vw desktop / full-width mobile for readable provision text
 - [08-02]: Sheet rendered at tab level (not inside SectorDetail) so it persists across view transitions
 - [08-02]: handleViewProvisions sets local state instead of navigating to Provisions tab via URL params
+- [09-01]: 10 representative sample cases for dry-run covering COPPA, data security, surveillance, TSR/GLBA, FCRA, health data, dark patterns, edge cases
+- [09-01]: Temperature 0 for deterministic output consistency; post-generation validation warns on hallucinated content
+- [09-01]: takeaway_brief at top level of case JSON (not inside case_info); propagated to ftc-cases.json via build-ftc-data.ts
 
 ### Pending Todos
 
@@ -113,6 +117,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-01
-Stopped at: Completed 08-02-PLAN.md -- CaseProvisionsSheet wired into FTCIndustryTab, phase 8 complete
+Last session: 2026-03-02
+Stopped at: Completed 09-01-PLAN.md -- takeaway generation pipeline + build propagation (API key needed for actual generation)
 Resume file: None

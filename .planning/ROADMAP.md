@@ -86,7 +86,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 09-01: Takeaway Generation Pipeline + Dry-Run Validation (TAKE-01, TAKE-04, TAKE-05)
+- [x] 09-01: Takeaway Generation Pipeline + Dry-Run Validation (TAKE-01, TAKE-04, TAKE-05) -- completed 2026-03-02
 - [ ] 09-02: Display Takeaways on CaseCard + CaseProvisionsSheet (TAKE-02, TAKE-03)
 
 ## Progress
@@ -105,4 +105,4 @@ Phases execute in numeric order: 6 -> 7 -> 8 -> 9
 | 6. Remedy Reclassification | v1.1 | 2/2 | Complete | 2026-02-26 |
 | 7. Pattern Condensing | v1.1 | 2/2 | Complete | 2026-02-27 |
 | 8. Case Provisions Panel | v1.1 | 2/2 | Complete | 2026-03-01 |
-| 9. Key Takeaways | v1.1 | 0/2 | Not started | - |
+| 9. Key Takeaways | v1.1 | 1/2 | In Progress | - |
