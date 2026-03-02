@@ -18,7 +18,6 @@ interface TopicEntry {
 
 const CATEGORY_ORDER: { key: ManifestTopic["category"]; heading: string }[] = [
   { key: "statutory", heading: "Statutory Authority" },
-  { key: "practice_area", heading: "Practice Area" },
   { key: "remedy_type", heading: "Remedy Type" },
 ];
 
@@ -30,7 +29,6 @@ export default function TopicSidebar({
   const grouped = useMemo(() => {
     const groups: Record<string, TopicEntry[]> = {
       statutory: [],
-      practice_area: [],
       remedy_type: [],
     };
 
