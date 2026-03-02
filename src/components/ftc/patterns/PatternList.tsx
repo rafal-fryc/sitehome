@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Search } from "lucide-react";
+import { Search, ChevronDown } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -8,6 +8,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import type { PatternGroup } from "@/types/ftc";
 import PatternRow from "@/components/ftc/patterns/PatternRow";
 
@@ -24,6 +29,7 @@ export default function PatternList({ patterns }: Props) {
   const [searchQuery, setSearchQuery] = useState("");
   const [topicFilter, setTopicFilter] = useState<string>("");
   const [sortBy, setSortBy] = useState<SortBy>("recency");
+  const [structuralOpen, setStructuralOpen] = useState(false);
 
   // Collect unique enforcement topics across all patterns
   const allTopics = useMemo(() => {
@@ -76,6 +82,16 @@ export default function PatternList({ patterns }: Props) {
     return sorted;
   }, [patterns, searchQuery, topicFilter, sortBy]);
 
+  // Separate substantive and structural patterns
+  const substantivePatterns = useMemo(
+    () => filtered.filter((p) => !p.is_structural),
+    [filtered]
+  );
+  const structuralPatterns = useMemo(
+    () => filtered.filter((p) => p.is_structural),
+    [filtered]
+  );
+
   return (
     <div>
       {/* Controls bar */}
@@ -124,12 +140,15 @@ export default function PatternList({ patterns }: Props) {
 
       {/* Summary line */}
       <p className="text-sm text-muted-foreground mb-3 font-garamond">
-        {filtered.length} pattern{filtered.length !== 1 ? "s" : ""} found
+        {substantivePatterns.length} substantive pattern{substantivePatterns.length !== 1 ? "s" : ""}
+        {structuralPatterns.length > 0 && (
+          <>, {structuralPatterns.length} structural</>
+        )}
       </p>
 
-      {/* Pattern list */}
+      {/* Substantive pattern list */}
       <div className="border-t border-rule">
-        {filtered.map((pattern) => (
+        {substantivePatterns.map((pattern) => (
           <PatternRow
             key={pattern.id}
             pattern={pattern}
@@ -141,12 +160,44 @@ export default function PatternList({ patterns }: Props) {
             }
           />
         ))}
-        {filtered.length === 0 && (
+        {substantivePatterns.length === 0 && structuralPatterns.length === 0 && (
           <p className="py-8 text-center text-muted-foreground font-garamond">
             No patterns match your search criteria.
           </p>
         )}
       </div>
+
+      {/* Structural patterns — collapsible Order Mechanics section */}
+      {structuralPatterns.length > 0 && (
+        <Collapsible open={structuralOpen} onOpenChange={setStructuralOpen} className="mt-6">
+          <CollapsibleTrigger className="flex items-center gap-2 w-full px-4 py-3 bg-muted/30 border border-rule rounded-lg hover:bg-muted/50 transition-colors">
+            <ChevronDown
+              className={`h-4 w-4 text-muted-foreground transition-transform ${
+                structuralOpen ? "rotate-180" : ""
+              }`}
+            />
+            <span className="text-sm font-medium text-muted-foreground">
+              Order Mechanics ({structuralPatterns.length} structural pattern{structuralPatterns.length !== 1 ? "s" : ""})
+            </span>
+          </CollapsibleTrigger>
+          <CollapsibleContent>
+            <div className="border-t border-rule mt-2">
+              {structuralPatterns.map((pattern) => (
+                <PatternRow
+                  key={pattern.id}
+                  pattern={pattern}
+                  isExpanded={expandedPatternId === pattern.id}
+                  onToggle={() =>
+                    setExpandedPatternId(
+                      expandedPatternId === pattern.id ? null : pattern.id
+                    )
+                  }
+                />
+              ))}
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
+      )}
     </div>
   );
 }
