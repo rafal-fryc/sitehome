@@ -17,6 +17,8 @@ export interface FTCCaseSummary {
   num_provisions: number;
   num_requirements: number;
   order_duration_years: number | null;
+  takeaway_brief?: string;  // AI-generated brief summary (card display)
+  takeaway_full?: string;   // AI-generated full summary (panel display)
 }
 
 export interface GroupStats {
