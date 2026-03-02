@@ -45,7 +45,8 @@
   1. Bar charts on the analytics tab display without tables beneath them by default; user can expand tables on demand
   2. Order Administration does not appear in any remedy type filter option, chart segment, or table row across the entire application
   3. Underlying data files still contain Order Administration classifications (UI-only hiding, no data loss)
-**Plans**: TBD
+**Plans**: 1 plan
+- [ ] 10-01-PLAN.md — Collapsible analytics tables + Order Administration UI hiding
 
 ### Phase 11: Library Restructure
 **Goal**: Provisions library offers distinct workflows for searching provisions by topic and browsing enforcement actions by case, with case-level provision access from the library
@@ -82,6 +83,6 @@
 | 7. Pattern Condensing | v1.1 | 2/2 | Complete | 2026-02-27 |
 | 8. Case Provisions Panel | v1.1 | 2/2 | Complete | 2026-03-01 |
 | 9. Key Takeaways | v1.1 | 2/2 | Complete | 2026-03-02 |
-| 10. Analytics Cleanup | v1.2 | 0/? | Not started | - |
+| 10. Analytics Cleanup | v1.2 | 0/1 | Planned | - |
 | 11. Library Restructure | v1.2 | 0/? | Not started | - |
 | 12. Patterns Overhaul | v1.2 | 0/? | Not started | - |
