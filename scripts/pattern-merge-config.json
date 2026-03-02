@@ -3,10 +3,10 @@
   "status": "proposed",
   "summary": {
     "current_patterns": 126,
-    "merge_groups": 15,
-    "patterns_merged": 85,
+    "merge_groups": 16,
+    "patterns_merged": 104,
     "patterns_pruned": 4,
-    "projected_final": 52
+    "projected_final": 35
   },
   "merge_groups": [
     {
@@ -126,8 +126,8 @@
       "rationale": "All misrepresentation prohibitions: general, privacy/security-specific, and program compliance — consolidated by user request"
     },
     {
-      "target_name": "Information Security Program",
-      "target_id": "information-security-program",
+      "target_name": "Data Protection Program",
+      "target_id": "data-protection-program",
       "topic_area": "security",
       "source_patterns": [
         "comprehensive-information-security-program",
@@ -135,7 +135,12 @@
         "mandated-information-security-program-for-covered-businesses",
         "mandated-data-security-program",
         "comprehensive-security-program",
-        "information-security-program"
+        "information-security-program",
+        "mandated-privacy-program",
+        "comprehensive-privacy-program",
+        "privacy-program",
+        "mandated-privacy-and-information-security-program",
+        "protection-of-data"
       ],
       "source_names": [
         "Comprehensive Information Security Program",
@@ -143,35 +148,20 @@
         "Mandated Information Security Program for Covered Businesses",
         "Mandated Data Security Program",
         "Comprehensive Security Program",
-        "Information Security Program"
+        "Information Security Program",
+        "Mandated Privacy Program",
+        "Comprehensive Privacy Program",
+        "Privacy Program",
+        "Mandated Privacy and Information Security Program",
+        "Protection of Data"
       ],
-      "estimated_unique_cases": 66,
-      "variant_count": 67,
+      "estimated_unique_cases": 95,
+      "variant_count": 100,
       "year_range": [
         2002,
         2025
       ],
-      "rationale": "All variants of mandated information security program requirements, including comprehensive and covered business variants"
-    },
-    {
-      "target_name": "Privacy Program",
-      "target_id": "privacy-program",
-      "topic_area": "privacy",
-      "source_patterns": [
-        "mandated-privacy-program",
-        "comprehensive-privacy-program"
-      ],
-      "source_names": [
-        "Mandated Privacy Program",
-        "Comprehensive Privacy Program"
-      ],
-      "estimated_unique_cases": 17,
-      "variant_count": 17,
-      "year_range": [
-        2011,
-        2025
-      ],
-      "rationale": "Mandated privacy program requirements, distinct from security programs"
+      "rationale": "All data protection program requirements: information security programs, privacy programs, and combined privacy/security programs — consolidated per user-directed merge"
     },
     {
       "target_name": "Recordkeeping",
@@ -334,90 +324,158 @@
       "rationale": "All COPPA-related provisions: injunctions against collecting children's data and requirements to delete it — consolidated by user request"
     },
     {
-      "target_name": "Civil Penalty",
-      "target_id": "civil-penalty",
+      "target_name": "Financial Remedies",
+      "target_id": "financial-remedies",
       "topic_area": "monetary",
       "source_patterns": [
         "monetary-judgment-for-civil-penalty",
         "civil-penalty",
-        "civil-penalty-payment"
+        "civil-penalty-payment",
+        "additional-monetary-provisions",
+        "monetary-relief",
+        "monetary-judgment",
+        "monetary-relief-and-judgment",
+        "costs-and-attorneys-fees",
+        "fees-and-costs",
+        "costs-and-fees"
       ],
       "source_names": [
         "Monetary Judgment for Civil Penalty",
         "Civil Penalty",
-        "Civil Penalty Payment"
+        "Civil Penalty Payment",
+        "Additional Monetary Provisions",
+        "Monetary Relief",
+        "Monetary Judgment",
+        "Monetary Relief and Judgment",
+        "Costs and Attorneys' Fees",
+        "Fees and Costs",
+        "Costs and Fees"
       ],
-      "estimated_unique_cases": 61,
-      "variant_count": 62,
+      "estimated_unique_cases": 138,
+      "variant_count": 152,
       "year_range": [
         2001,
         2025
       ],
-      "rationale": "Civil penalty judgments and payment requirements"
+      "rationale": "All financial remedy provisions: civil penalties, monetary relief/judgment, and costs/fees — consolidated per user-directed merge"
     },
     {
-      "target_name": "Monetary Relief and Judgment",
-      "target_id": "monetary-relief-and-judgment",
-      "topic_area": "monetary",
-      "source_patterns": [
-        "additional-monetary-provisions",
-        "monetary-relief",
-        "monetary-judgment"
-      ],
-      "source_names": [
-        "Additional Monetary Provisions",
-        "Monetary Relief",
-        "Monetary Judgment"
-      ],
-      "estimated_unique_cases": 61,
-      "variant_count": 74,
-      "year_range": [
-        2002,
-        2025
-      ],
-      "rationale": "Monetary relief, judgment, and additional monetary provisions"
-    },
-    {
-      "target_name": "Costs and Fees",
-      "target_id": "costs-and-fees",
-      "topic_area": "monetary",
-      "source_patterns": [
-        "costs-and-attorneys-fees",
-        "fees-and-costs"
-      ],
-      "source_names": [
-        "Costs and Attorneys' Fees",
-        "Fees and Costs"
-      ],
-      "estimated_unique_cases": 16,
-      "variant_count": 16,
-      "year_range": [
-        2002,
-        2015
-      ],
-      "rationale": "Attorney fees, costs, and related fee provisions"
-    },
-    {
-      "target_name": "Data Deletion Requirements",
-      "target_id": "data-deletion-requirements",
+      "target_name": "Data Lifecycle Requirements",
+      "target_id": "data-lifecycle-requirements",
       "topic_area": "data-handling",
       "source_patterns": [
         "data-deletion",
         "deletion",
-        "required-deletion-of-data"
+        "required-deletion-of-data",
+        "data-deletion-requirements",
+        "data-retention-limits"
       ],
       "source_names": [
         "Data Deletion",
         "Deletion",
-        "Required Deletion of Data"
+        "Required Deletion of Data",
+        "Data Deletion Requirements",
+        "Data Retention Limits"
       ],
-      "estimated_unique_cases": 16,
-      "variant_count": 16,
+      "estimated_unique_cases": 23,
+      "variant_count": 23,
       "year_range": [
         2017,
         2025
       ],
-      "rationale": "General data deletion and required deletion of data provisions"
+      "rationale": "All data lifecycle provisions: deletion requirements and retention limits — consolidated per user-directed merge"
+    },
+    {
+      "target_name": "Annual Certification",
+      "target_id": "annual-certification",
+      "topic_area": "structural",
+      "source_patterns": [
+        "annual-certification",
+        "annual-certifications"
+      ],
+      "source_names": [
+        "Annual Certification",
+        "Annual Certifications"
+      ],
+      "estimated_unique_cases": 35,
+      "variant_count": 35,
+      "year_range": [
+        2003,
+        2025
+      ],
+      "rationale": "Annual certification singular and plural variants — consolidated per user-directed merge"
+    },
+    {
+      "target_name": "Notice and Affirmative Express Consent",
+      "target_id": "notice-and-affirmative-express-consent",
+      "topic_area": "consent",
+      "source_patterns": [
+        "notice-and-affirmative-express-consent-provision",
+        "notice-and-affirmative-express-consent"
+      ],
+      "source_names": [
+        "Notice and Affirmative Express Consent Provision",
+        "Notice and Affirmative Express Consent"
+      ],
+      "estimated_unique_cases": 6,
+      "variant_count": 6,
+      "year_range": [
+        2018,
+        2025
+      ],
+      "rationale": "Notice and affirmative express consent provision variants — consolidated per user-directed merge"
+    },
+    {
+      "target_name": "Tracking & Surveillance Restrictions",
+      "target_id": "tracking-surveillance-restrictions",
+      "topic_area": "surveillance",
+      "source_patterns": [
+        "monitoring-technology-prohibited",
+        "use-of-tracking-technology-limited",
+        "sensitive-location-data-program",
+        "location-data-deletion-requests"
+      ],
+      "source_names": [
+        "Monitoring Technology Prohibited",
+        "Use of Tracking Technology Limited",
+        "Sensitive Location Data Program",
+        "Location Data Deletion Requests"
+      ],
+      "estimated_unique_cases": 26,
+      "variant_count": 26,
+      "year_range": [
+        2022,
+        2025
+      ],
+      "rationale": "All tracking, surveillance, and location data restrictions — consolidated per user-directed merge"
+    },
+    {
+      "target_name": "Biometric Data Protections",
+      "target_id": "biometric-data-protections",
+      "topic_area": "biometric",
+      "source_patterns": [
+        "use-of-facial-recognition-or-analysis-systems-prohibited",
+        "deletion-of-covered-biometric-information",
+        "mandated-automated-biometric-security-or-surveillance-system-monitoring-program",
+        "mandatory-notice-and-complaint-procedures-for-automated-biometric-security-or-surveillance-systems",
+        "required-retention-limits-for-biometric-information",
+        "disclosure-of-automated-biometric-security-or-surveillance-systems"
+      ],
+      "source_names": [
+        "Use of Facial Recognition or Analysis Systems Prohibited",
+        "Deletion of Covered Biometric Information",
+        "Mandated Automated Biometric Security or Surveillance System Monitoring Program",
+        "Mandatory Notice and Complaint Procedures for Automated Biometric Security or Surveillance Systems",
+        "Required Retention Limits for Biometric Information",
+        "Disclosure of Automated Biometric Security or Surveillance Systems"
+      ],
+      "estimated_unique_cases": 5,
+      "variant_count": 6,
+      "year_range": [
+        2023,
+        2024
+      ],
+      "rationale": "All biometric data protection provisions: facial recognition, biometric deletion, monitoring programs, notice procedures, retention limits — consolidated per user-directed merge"
     }
   ],
   "prune_list": [
