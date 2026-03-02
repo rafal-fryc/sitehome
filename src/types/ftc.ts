@@ -208,3 +208,36 @@ export interface PatternsFile {
   total_variants: number;
   patterns: PatternGroup[];
 }
+
+// Phase 12: Behavioral Patterns — extracted from case takeaway data
+
+export interface BehavioralCase {
+  case_id: string;
+  company_name: string;
+  date_issued: string;
+  year: number;
+  takeaway_brief: string;
+  docket_number: string;
+  ftc_url?: string;
+  statutory_topics: string[];
+  categories: string[];
+}
+
+export interface BehavioralPattern {
+  id: string;
+  name: string;
+  description: string;
+  case_count: number;
+  year_range: [number, number];
+  most_recent_year: number;
+  most_recent_date?: string;
+  enforcement_topics: string[];
+  cases: BehavioralCase[];
+}
+
+export interface BehavioralPatternsFile {
+  generated_at: string;
+  total_patterns: number;
+  total_cases_categorized: number;
+  patterns: BehavioralPattern[];
+}
