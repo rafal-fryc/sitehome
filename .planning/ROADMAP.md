@@ -56,8 +56,10 @@
   1. Practice area sections no longer appear in the provisions library sidebar or navigation
   2. Provisions library has two visually distinct sections: one for searching provisions by topic/text, one for browsing enforcement actions/cases
   3. User can search for a specific company or case title in the actions/cases section and find matching enforcement actions
-  4. User can open a case provisions panel (Sheet modal) for any case from within the library, without navigating to the industry tab
-**Plans**: TBD
+  4. User can view a case's provisions via inline expansion (accordion) for any case from within the library, without navigating to the industry tab
+**Plans**: 2 plans
+- [ ] 11-01-PLAN.md -- Sub-tab layout + sidebar practice area removal
+- [ ] 11-02-PLAN.md -- Case browser with search, sort, and inline provision expansion
 
 ### Phase 12: Patterns Overhaul
 **Goal**: Patterns section includes behavioral summary patterns derived from takeaway data alongside restructured remedy patterns with consolidated categories
