@@ -166,6 +166,8 @@ export default function TopicTrendLines({ data }: Props) {
           headers={["Year", ...TOPICS]}
           rows={tableRows}
           caption="Click a row to see all enforcement actions for that year with their statutory topics"
+          collapsible
+          defaultOpen={false}
         />
       </div>
     </div>

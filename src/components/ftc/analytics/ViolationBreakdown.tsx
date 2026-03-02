@@ -107,6 +107,8 @@ export default function ViolationBreakdown({ data }: Props) {
       <ReferenceTable
         headers={["Type", "Count", "Percentage"]}
         rows={tableRows}
+        collapsible
+        defaultOpen={false}
       />
     </div>
   );

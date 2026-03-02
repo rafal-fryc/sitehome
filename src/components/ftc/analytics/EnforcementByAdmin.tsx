@@ -176,6 +176,8 @@ export default function EnforcementByAdmin({ data }: Props) {
         ]}
         rows={tableRows}
         caption="Click a row to see all enforcement actions for that administration"
+        collapsible
+        defaultOpen={false}
       />
     </div>
   );

@@ -7,6 +7,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import {
+  Collapsible,
+  CollapsibleTrigger,
+  CollapsibleContent,
+} from "@/components/ui/collapsible";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -20,10 +25,19 @@ interface Props {
   headers: string[];
   rows: ReferenceRow[];
   caption?: string;
+  collapsible?: boolean;
+  defaultOpen?: boolean;
 }
 
-export default function ReferenceTable({ headers, rows, caption }: Props) {
+export default function ReferenceTable({
+  headers,
+  rows,
+  caption,
+  collapsible = false,
+  defaultOpen = true,
+}: Props) {
   const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set());
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
   const toggleRow = (key: string) => {
     setExpandedRows((prev) => {
@@ -34,7 +48,7 @@ export default function ReferenceTable({ headers, rows, caption }: Props) {
     });
   };
 
-  return (
+  const table = (
     <Table>
       {caption && (
         <caption className="mt-4 text-sm text-muted-foreground font-garamond">
@@ -98,5 +112,23 @@ export default function ReferenceTable({ headers, rows, caption }: Props) {
         })}
       </TableBody>
     </Table>
+  );
+
+  if (!collapsible) return table;
+
+  return (
+    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+      <CollapsibleTrigger asChild>
+        <button className="text-xs text-muted-foreground font-garamond flex items-center gap-1 hover:text-foreground transition-colors py-1">
+          {isOpen ? (
+            <ChevronDown className="h-3.5 w-3.5" />
+          ) : (
+            <ChevronRight className="h-3.5 w-3.5" />
+          )}
+          {isOpen ? "Hide table" : "Show table"}
+        </button>
+      </CollapsibleTrigger>
+      <CollapsibleContent>{table}</CollapsibleContent>
+    </Collapsible>
   );
 }

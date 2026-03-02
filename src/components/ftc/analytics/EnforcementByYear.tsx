@@ -135,6 +135,8 @@ export default function EnforcementByYear({ data }: Props) {
         headers={["Year", "Cases", "Violation Breakdown", "Top Categories"]}
         rows={tableRows}
         caption="Click a row to see all enforcement actions for that year"
+        collapsible
+        defaultOpen={false}
       />
     </div>
   );

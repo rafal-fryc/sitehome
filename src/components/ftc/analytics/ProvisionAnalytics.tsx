@@ -131,6 +131,8 @@ export default function ProvisionAnalytics({ data }: Props) {
         <ReferenceTable
           headers={["Remedy Type", "Cases"]}
           rows={remedyTableRows}
+          collapsible
+          defaultOpen={false}
         />
       </div>
 
@@ -182,6 +184,8 @@ export default function ProvisionAnalytics({ data }: Props) {
         <ReferenceTable
           headers={["Topic", "Provisions"]}
           rows={topicTableRows}
+          collapsible
+          defaultOpen={false}
         />
       </div>
     </div>
