@@ -2,26 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: Library & Patterns Overhaul
-status: unknown
-last_updated: "2026-03-02T14:27:18.796Z"
-progress:
-  total_phases: 7
-  completed_phases: 7
-  total_plans: 24
-  completed_plans: 24
----
-
----
-gsd_state_version: 1.0
-milestone: v1.2
-milestone_name: Library & Patterns Overhaul
 status: executing
-last_updated: "2026-03-01T21:05:00.000Z"
+last_updated: "2026-03-02T19:45:27Z"
 progress:
   total_phases: 3
   completed_phases: 2
-  total_plans: 4
-  completed_plans: 3
+  total_plans: 6
+  completed_plans: 4
 ---
 
 # Project State
@@ -35,18 +22,18 @@ See: .planning/PROJECT.md (updated 2026-03-02)
 
 ## Current Position
 
-Phase: 11 of 12 (Library Restructure) -- second phase of v1.2
-Plan: 2 of 2 complete
-Status: Phase 11 complete, ready for Phase 12
-Last activity: 2026-03-01 -- Completed 11-02 case browser with search and inline provisions
+Phase: 12 of 12 (Patterns Overhaul) -- third phase of v1.2
+Plan: 1 of 3 complete
+Status: 12-01 complete, ready for 12-02
+Last activity: 2026-03-02 -- Completed 12-01 remedy pattern consolidation (52 -> 36 patterns)
 
-Progress: [███████████████░░░░░] 75% (v1.2)
+Progress: [█████████████░░░░░░░] 67% (v1.2)
 
 ## Performance Metrics
 
 **v1.0:** 5 phases, 21 plans, 70 commits, 2 days
 **v1.1:** 4 phases, 8 plans, 41 commits, 4 days
-**v1.2:** 3 phases, 3/4 plans completed (3 min for 10-01, 2 min for 11-01, 3 min for 11-02)
+**v1.2:** 3 phases, 4/6 plans completed (3 min for 10-01, 2 min for 11-01, 3 min for 11-02, 3 min for 12-01)
 
 ## Accumulated Context
 
@@ -62,6 +49,8 @@ All prior decisions logged in PROJECT.md Key Decisions table.
 - Phase 11-02: Reused CaseCard and ProvisionRow from industry/ via cross-directory imports
 - Phase 11-02: Copied groupByTopic helper locally rather than extracting shared module
 - Phase 11-02: Cases with zero classified provisions excluded from case browser
+- Phase 12-01: Replaced sub-merge groups with expanded super-merges to avoid single-pass merge dependency issue
+- Phase 12-01: Included all original sub-sources in super-merge source_patterns instead of referencing intermediate target IDs
 
 ### Pending Todos
 
@@ -69,10 +58,10 @@ None.
 
 ### Blockers/Concerns
 
-- PATN-03 (remedy category consolidation) requires user input during execution to decide which categories to merge
+None.
 
 ## Session Continuity
 
-Last session: 2026-03-01
-Stopped at: Completed 11-02-PLAN.md
-Resume file: .planning/phases/11-library-restructure/11-02-SUMMARY.md
+Last session: 2026-03-02
+Stopped at: Completed 12-01-PLAN.md
+Resume file: .planning/phases/12-patterns-overhaul/12-01-SUMMARY.md

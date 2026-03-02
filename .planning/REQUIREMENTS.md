@@ -21,9 +21,9 @@ Requirements for milestone v1.2: Library & Patterns Overhaul.
 
 ### Patterns Overhaul
 
-- [ ] **PATN-01**: Existing remedy provision patterns are presented as their own distinct category in the patterns section
+- [x] **PATN-01**: Existing remedy provision patterns are presented as their own distinct category in the patterns section
 - [ ] **PATN-02**: New behavioral summary pattern category generated from takeaway data showing what companies did wrong and common behavioral patterns
-- [ ] **PATN-03**: Remedy pattern categories consolidated per user-directed merge decisions
+- [x] **PATN-03**: Remedy pattern categories consolidated per user-directed merge decisions
 
 ## Future Requirements
 
@@ -56,9 +56,9 @@ Deferred from PROJECT.md:
 | LIB-02 | Phase 11 | Complete |
 | LIB-03 | Phase 11 | Complete |
 | LIB-04 | Phase 11 | Complete |
-| PATN-01 | Phase 12 | Pending |
+| PATN-01 | Phase 12 | Complete |
 | PATN-02 | Phase 12 | Pending |
-| PATN-03 | Phase 12 | Pending |
+| PATN-03 | Phase 12 | Complete |
 
 **Coverage:**
 - v1.2 requirements: 9 total
