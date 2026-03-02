@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/collapsible";
 import type { BehavioralPattern } from "@/types/ftc";
 import BehavioralCaseCard from "@/components/ftc/patterns/BehavioralCaseCard";
+import CaseProvisionAccordion from "@/components/ftc/provisions/CaseProvisionAccordion";
 
 const INITIAL_DISPLAY_COUNT = 15;
 
@@ -19,6 +20,7 @@ interface Props {
 
 export default function BehavioralPatternRow({ pattern, isExpanded, onToggle }: Props) {
   const [showAll, setShowAll] = useState(false);
+  const [expandedCaseId, setExpandedCaseId] = useState<string | null>(null);
   const ChevronIcon = isExpanded ? ChevronUp : ChevronDown;
 
   // Group cases by year for timeline
@@ -36,6 +38,10 @@ export default function BehavioralPatternRow({ pattern, isExpanded, onToggle }: 
     ? pattern.cases
     : pattern.cases.slice(0, INITIAL_DISPLAY_COUNT);
   const hasMore = pattern.cases.length > INITIAL_DISPLAY_COUNT;
+
+  const handleToggleCase = (caseId: string) => {
+    setExpandedCaseId((prev) => (prev === caseId ? null : caseId));
+  };
 
   return (
     <Collapsible open={isExpanded} onOpenChange={onToggle}>
@@ -108,7 +114,18 @@ export default function BehavioralPatternRow({ pattern, isExpanded, onToggle }: 
           {/* Case cards */}
           <div className="space-y-2">
             {displayedCases.map((c) => (
-              <BehavioralCaseCard key={c.case_id} caseData={c} />
+              <div key={c.case_id}>
+                <BehavioralCaseCard
+                  caseData={c}
+                  onToggle={() => handleToggleCase(c.case_id)}
+                />
+                {expandedCaseId === c.case_id && (
+                  <CaseProvisionAccordion
+                    caseId={c.case_id}
+                    ftcUrl={c.ftc_url}
+                  />
+                )}
+              </div>
             ))}
           </div>
 

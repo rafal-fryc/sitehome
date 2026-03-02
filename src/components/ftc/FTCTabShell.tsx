@@ -58,7 +58,7 @@ export default function FTCTabShell() {
       <Tabs value={activeTab} onValueChange={handleTabChange}>
         <TabsList className="w-full justify-start">
           <TabsTrigger value="analytics">Analytics</TabsTrigger>
-          <TabsTrigger value="provisions">Provisions Library</TabsTrigger>
+          <TabsTrigger value="provisions">Library</TabsTrigger>
           <TabsTrigger value="industries">Industries</TabsTrigger>
           <TabsTrigger value="patterns">Patterns</TabsTrigger>
         </TabsList>

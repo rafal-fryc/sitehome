@@ -36,8 +36,8 @@ export default function FTCMissingCasesNotice() {
       <div className="flex items-start gap-2.5">
         <Info className="h-4 w-4 text-muted-foreground mt-0.5 shrink-0" />
         <p className="text-xs text-muted-foreground leading-relaxed">
-          The following {MISSING_CASE_NAMES.length} cases (1998–2010) could not
-          be parsed due to unavailable or incomplete documents:{" "}
+          The following {MISSING_CASE_NAMES.length} cases could not be parsed
+          due to unavailable or incomplete documents:{" "}
           {MISSING_CASE_NAMES.join(", ")}.
         </p>
       </div>

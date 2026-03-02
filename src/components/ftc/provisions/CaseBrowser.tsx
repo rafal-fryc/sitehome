@@ -230,7 +230,7 @@ export default function CaseBrowser({ cases }: Props) {
               {expandedCaseId === caseData.id && (
                 <CaseProvisionAccordion
                   caseId={caseData.id}
-                  caseData={caseData}
+                  ftcUrl={caseData.ftc_url}
                 />
               )}
             </div>

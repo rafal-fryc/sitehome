@@ -3,11 +3,10 @@ import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useCaseFile } from "@/hooks/use-case-file";
 import ProvisionRow from "@/components/ftc/industry/ProvisionRow";
-import type { EnhancedFTCCaseSummary } from "@/types/ftc";
 
 interface Props {
   caseId: string;
-  caseData: EnhancedFTCCaseSummary;
+  ftcUrl?: string;
 }
 
 interface Provision {
@@ -37,7 +36,7 @@ function groupByTopic(provisions: Provision[]): Map<string, Provision[]> {
   return groups;
 }
 
-export default function CaseProvisionAccordion({ caseId, caseData }: Props) {
+export default function CaseProvisionAccordion({ caseId, ftcUrl }: Props) {
   const { data, isLoading, isError } = useCaseFile(caseId);
 
   const provisions: Provision[] = data?.order?.provisions ?? [];
@@ -71,10 +70,10 @@ export default function CaseProvisionAccordion({ caseId, caseData }: Props) {
   return (
     <div className="border border-rule border-t-0 bg-cream/20 px-4 py-3">
       {/* FTC.gov link */}
-      {caseData.ftc_url && (
+      {ftcUrl && (
         <div className="mb-3">
           <a
-            href={caseData.ftc_url}
+            href={ftcUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-gold hover:text-gold/80 inline-flex items-center gap-1 font-garamond"

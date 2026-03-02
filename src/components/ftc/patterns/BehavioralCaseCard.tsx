@@ -4,9 +4,10 @@ import type { BehavioralCase } from "@/types/ftc";
 
 interface Props {
   caseData: BehavioralCase;
+  onToggle: () => void;
 }
 
-export default function BehavioralCaseCard({ caseData }: Props) {
+export default function BehavioralCaseCard({ caseData, onToggle }: Props) {
   return (
     <div className="p-4 bg-cream border border-rule">
       {/* Header row */}
@@ -37,20 +38,24 @@ export default function BehavioralCaseCard({ caseData }: Props) {
         {caseData.takeaway_brief}
       </p>
 
-      {/* Enforcement topic badges */}
-      {caseData.statutory_topics.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 mt-3">
-          {caseData.statutory_topics.map((topic) => (
-            <Badge
-              key={topic}
-              variant="secondary"
-              className="bg-muted text-muted-foreground text-xs"
-            >
-              {topic}
-            </Badge>
-          ))}
-        </div>
-      )}
+      {/* Footer: topic badges + view provisions */}
+      <div className="flex flex-wrap items-center gap-1.5 mt-3">
+        {caseData.statutory_topics.map((topic) => (
+          <Badge
+            key={topic}
+            variant="secondary"
+            className="bg-muted text-muted-foreground text-xs"
+          >
+            {topic}
+          </Badge>
+        ))}
+        <button
+          onClick={onToggle}
+          className="ml-auto text-sm text-gold hover:text-gold-dark font-medium font-garamond"
+        >
+          View action
+        </button>
+      </div>
     </div>
   );
 }
