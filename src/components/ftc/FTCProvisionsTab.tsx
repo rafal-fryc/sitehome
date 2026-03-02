@@ -2,15 +2,20 @@ import { useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { useProvisionsManifest } from "@/hooks/use-provisions";
+import { useFTCData } from "@/hooks/use-ftc-data";
+import type { EnhancedFTCCaseSummary } from "@/types/ftc";
 import TopicSidebar from "@/components/ftc/provisions/TopicSidebar";
 import ProvisionsContent from "@/components/ftc/provisions/ProvisionsContent";
 import SearchResults from "@/components/ftc/provisions/SearchResults";
+import CaseBrowser from "@/components/ftc/provisions/CaseBrowser";
 
 type ProvisionsView = "topic" | "case";
 
 export default function FTCProvisionsTab() {
   const [searchParams, setSearchParams] = useSearchParams();
   const { data: manifest, isLoading, error } = useProvisionsManifest();
+  const { data: ftcData, isLoading: isCasesLoading } = useFTCData();
+  const cases = (ftcData?.cases ?? []) as EnhancedFTCCaseSummary[];
 
   // Sub-tab state from URL — default to "case"
   const viewParam = searchParams.get("view") as ProvisionsView | null;
@@ -119,11 +124,18 @@ export default function FTCProvisionsTab() {
       </TabsList>
 
       <TabsContent value="case">
-        <div className="py-6 text-center">
-          <p className="text-muted-foreground font-garamond">
-            Case browser loading...
-          </p>
-        </div>
+        {isCasesLoading ? (
+          <div className="flex items-center justify-center py-24">
+            <div className="text-center">
+              <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4" />
+              <p className="text-muted-foreground font-garamond">
+                Loading cases...
+              </p>
+            </div>
+          </div>
+        ) : (
+          <CaseBrowser cases={cases} />
+        )}
       </TabsContent>
 
       <TabsContent value="topic">
