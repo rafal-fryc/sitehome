@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A comprehensive, topic-first research tool for exploring FTC enforcement actions and their substantive provisions. Legal practitioners can browse 2,783 provisions across 293 consent orders by statutory topic, practice area, or remedy type — with verbatim order language, exact paragraph-level citations, and source links. Includes enforcement trend analytics, industry sector browsing with cross-sector comparison, and 126 cross-case provision language patterns with chronological evolution timelines.
+A comprehensive, topic-first research tool for exploring FTC enforcement actions and their substantive provisions. Legal practitioners can browse 2,783 provisions across 293 consent orders by statutory topic, practice area, or remedy type — with verbatim order language, exact paragraph-level citations, and source links. Includes enforcement trend analytics, industry sector browsing with case-level provisions panels, 52 curated cross-case provision patterns with chronological evolution, and AI-generated "what the business did wrong" takeaways for every case.
 
 ## Core Value
 
@@ -25,12 +25,14 @@ A legal practitioner can find every FTC consent order provision relevant to a sp
 - ✓ Cross-case pattern browser with chronological timelines, variant cards, and word-level diff — v1.0
 - ✓ Law-library aesthetic (EB Garamond, cream/gold/dark-green palette) across all surfaces — v1.0
 
+- ✓ Remedy reclassification — 885 "Other" provisions into 5 named categories via rule-based pipeline — v1.1
+- ✓ Pattern condensing — 126 patterns merged/pruned to 52 with config-driven merge map — v1.1
+- ✓ Case provisions panel — inline Sheet modal in industry tab for case-specific browsing — v1.1
+- ✓ Key takeaways per enforcement action — Claude-generated summaries with hallucination guardrails — v1.1
+
 ### Active
 
-- [ ] Key takeaways per enforcement action — what the business did that violated the law (Claude-generated at build time)
-- [ ] Remedy reclassification — reclassify 280 "other" remedies into meaningful categories (Claude-proposed)
-- [ ] Pattern condensing — merge similar patterns, prune low-value, sort by most recent example
-- [ ] Case provisions panel — industry tab "view provisions" opens modal with that case's provisions
+(No active requirements — define in next milestone via `/gsd:new-milestone`)
 
 ### Deferred
 
@@ -51,23 +53,15 @@ A legal practitioner can find every FTC consent order provision relevant to a sp
 - Server-side rendering — SPA architecture adequate for this dataset size
 - PDF generation / export — users can print/copy citations
 
-## Current Milestone: v1.1 Data Quality & Case Insights
-
-**Goal:** Improve data quality (remedy categories, pattern grouping) and add case-level insights (key takeaways, case provisions panel).
-
-**Target features:**
-- Key takeaways from each enforcement action (Claude-generated at build time, brief on cards + full on case detail)
-- Reclassify 280 "other" remedies into proper categories (Claude proposes new categories)
-- Condense 126 patterns by merging similar + pruning low-value, sort by most recent
-- Case-specific provisions panel in industry tab (modal/side panel instead of navigating to provisions tab)
-
 ## Context
 
-**Shipped v1.0** with React 18 + Vite 5 + TypeScript SPA deployed to Vercel. Uses shadcn/ui + Tailwind CSS + Recharts. 70 commits, 426 files, ~305K lines added over 2 days.
+**Shipped v1.1** (2026-03-01). React 18 + Vite 5 + TypeScript SPA on Vercel. 14,745 LOC TypeScript. Uses shadcn/ui + Tailwind CSS + Recharts.
 
-**Data pipeline:** Offline build scripts (`build-ftc-data.ts`, `build-provisions.ts`, `build-patterns.ts`) produce static JSON artifacts. Classification by Claude Code agents (Opus 4.6) at build time. 15 topic-sharded provision files, manifest.json, ftc-patterns.json (4.0 MB, 126 patterns).
+**Data pipeline:** Offline build scripts (`build-ftc-data.ts`, `build-provisions.ts`, `build-patterns.ts`, `generate-takeaways.ts`) produce static JSON artifacts. Classification by Claude Code agents at build time. 13 remedy type categories across 18 topic-sharded provision files. `ftc-patterns.json` contains 52 curated patterns (merged/pruned from 126). Takeaway generation via Anthropic SDK with temperature 0.
 
-**Key libraries added in v1.0:** MiniSearch (full-text search), jsdiff (word-level diff), cmdk (company autocomplete).
+**Key libraries:** MiniSearch (full-text search), jsdiff (word-level diff), cmdk (company autocomplete), @anthropic-ai/sdk (takeaway generation).
+
+**v1.1 additions:** Rule-based remedy reclassification pipeline (`reclassify-remedy-other.ts`), config-driven pattern condensing (`condense-patterns.ts`), inline CaseProvisionsSheet component, AI-generated takeaways with brief/full display and content badges.
 
 ## Constraints
 
@@ -92,6 +86,12 @@ A legal practitioner can find every FTC consent order provision relevant to a sp
 | Native overflow-y-auto over ScrollArea | ScrollArea conflicts with CSS sticky | ✓ Good — sidebar scrolls independently |
 | Pattern names from most common title variant | No curated mapping needed | ✓ Good — minimal maintenance |
 | Structural classification via category majority vote | Data-driven, no manual curation | ✓ Good — 43 structural / 83 substantive |
+| Rule-based remedy reclassification (not LLM) | Category field is deterministic signal | ✓ Good — 875 provisions moved, 10 remain Other (1.1%) |
+| Config-driven pattern merge/prune | Auditable merge decisions in JSON config | ✓ Good — 59% reduction, exactly matched projection |
+| Sheet modal at tab level (not inside SectorDetail) | Persists across view transitions | ✓ Good — no state loss on navigation |
+| Temperature 0 for takeaway generation | Deterministic output consistency | ✓ Good — reproducible across runs |
+| Takeaway_brief at top level of case JSON | Propagated to ftc-cases.json via build pipeline | ✓ Good — no extra fetch for brief display |
+| Composite prune threshold (case_count < 5 AND most_recent < 2020) | Preserves recent and frequent patterns | ✓ Good — only 4 patterns pruned |
 
 ---
-*Last updated: 2026-02-26 after v1.1 milestone initialization*
+*Last updated: 2026-03-02 after v1.1 milestone completion*

@@ -1,5 +1,20 @@
 # Milestones
 
+## v1.1 Data Quality & Case Insights (Shipped: 2026-03-02)
+
+**Phases completed:** 4 phases, 8 plans, 0 tasks
+
+**Key accomplishments:**
+- Reclassified 885 "Other" provisions into 5 named remedy categories, reducing Other to 1.1% via rule-based pipeline with human-reviewed proposals
+- Condensed 126 cross-case patterns to 52 (59% reduction) through config-driven merge/prune with date-level recency sort
+- Built inline case provisions panel (Sheet modal) in industry tab for case-specific provision browsing without navigation
+- Generated Claude-powered "what the business did wrong" takeaways for all 293 cases with AI-generated content badges and hallucination guardrails
+- Added 3 new provision shard files (Consumer Notification, Consumer Redress, Order Administration) to the topic-sharded data model
+
+**Stats:** 41 commits, 383 files changed, +56,182/-49,224 lines, 4 days (2026-02-26 → 2026-03-01)
+
+---
+
 ## v1.0 MVP (Shipped: 2026-02-25)
 
 **Phases completed:** 5 phases, 21 plans, 0 tasks
