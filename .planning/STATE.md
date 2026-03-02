@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: Library & Patterns Overhaul
 status: executing
-last_updated: "2026-03-02T19:45:27Z"
+last_updated: "2026-03-02T20:05:00Z"
 progress:
   total_phases: 3
   completed_phases: 2
   total_plans: 6
-  completed_plans: 4
+  completed_plans: 5
 ---
 
 # Project State
@@ -23,11 +23,11 @@ See: .planning/PROJECT.md (updated 2026-03-02)
 ## Current Position
 
 Phase: 12 of 12 (Patterns Overhaul) -- third phase of v1.2
-Plan: 1 of 3 complete
-Status: 12-01 complete, ready for 12-02
-Last activity: 2026-03-02 -- Completed 12-01 remedy pattern consolidation (52 -> 36 patterns)
+Plan: 2 of 3 complete
+Status: 12-01, 12-02 complete, ready for 12-03
+Last activity: 2026-03-02 -- Completed 12-02 behavioral pattern extraction (13 categories, 284 cases)
 
-Progress: [█████████████░░░░░░░] 67% (v1.2)
+Progress: [████████████████░░░░] 83% (v1.2)
 
 ## Performance Metrics
 
@@ -51,6 +51,8 @@ All prior decisions logged in PROJECT.md Key Decisions table.
 - Phase 11-02: Cases with zero classified provisions excluded from case browser
 - Phase 12-01: Replaced sub-merge groups with expanded super-merges to avoid single-pass merge dependency issue
 - Phase 12-01: Included all original sub-sources in super-merge source_patterns instead of referencing intermediate target IDs
+- Phase 12-02: Absorbed 41 privacy-related cases from "Deceptive Marketing Claims" into expanded "False Security & Privacy Claims" (125 cases)
+- Phase 12-02: Narrowed marketing category to "Deceptive Product & Service Claims" (18 truly marketing cases)
 
 ### Pending Todos
 
@@ -63,5 +65,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-03-02
-Stopped at: Completed 12-01-PLAN.md
-Resume file: .planning/phases/12-patterns-overhaul/12-01-SUMMARY.md
+Stopped at: Completed 12-02-PLAN.md
+Resume file: .planning/phases/12-patterns-overhaul/12-02-SUMMARY.md
