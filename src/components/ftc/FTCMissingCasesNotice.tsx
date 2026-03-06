@@ -32,7 +32,6 @@ const MISSING_CASE_NAMES = [
   "Cash Today, Ltd.",
   "Asset Acceptance, LLC",
   "American United Mortgage Company",
-  "GoodRx Holdings, Inc.",
   "Rite Aid Corporation (2010)",
 ];
 
