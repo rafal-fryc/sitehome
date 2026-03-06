@@ -1,26 +1,17 @@
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import type { PatternVariant } from "@/types/ftc";
-import TextDiff from "@/components/ftc/patterns/TextDiff";
 
 interface Props {
   variant: PatternVariant;
-  previousText: string | null;
-  isFirst: boolean;
 }
 
-export default function VariantCard({ variant, previousText, isFirst }: Props) {
+export default function VariantCard({ variant }: Props) {
   const [showFull, setShowFull] = useState(false);
-  const [showDiff, setShowDiff] = useState(false);
 
   const hasVerbatim = !!variant.verbatim_text;
   const hasLongText =
     hasVerbatim && variant.verbatim_text.length > variant.text_preview.length;
-  const canDiff =
-    !isFirst &&
-    !!previousText &&
-    hasVerbatim &&
-    previousText !== variant.verbatim_text;
 
   const displayText = showFull
     ? variant.verbatim_text
@@ -51,45 +42,27 @@ export default function VariantCard({ variant, previousText, isFirst }: Props) {
 
       {/* Text area */}
       <div className="font-garamond text-foreground leading-relaxed">
-        {showDiff && canDiff ? (
-          <TextDiff
-            oldText={previousText!}
-            newText={variant.verbatim_text}
-          />
-        ) : (
-          <div className="whitespace-pre-line">
-            {displayText}
-            {!hasVerbatim && (
-              <span className="text-xs text-muted-foreground italic ml-1">
-                (preview only)
-              </span>
-            )}
-          </div>
-        )}
+        <div className="whitespace-pre-line">
+          {displayText}
+          {!hasVerbatim && (
+            <span className="text-xs text-muted-foreground italic ml-1">
+              (preview only)
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Toggle buttons */}
-      <div className="flex gap-3 mt-2">
-        {hasLongText && !showDiff && (
+      {hasLongText && (
+        <div className="flex gap-3 mt-2">
           <button
             onClick={() => setShowFull(!showFull)}
             className="text-xs text-gold hover:text-gold-dark font-medium"
           >
             {showFull ? "Show less" : "Show full text"}
           </button>
-        )}
-        {canDiff && (
-          <button
-            onClick={() => {
-              setShowDiff(!showDiff);
-              if (!showDiff) setShowFull(false);
-            }}
-            className="text-xs text-gold hover:text-gold-dark font-medium"
-          >
-            {showDiff ? "Show full text" : "Show changes"}
-          </button>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

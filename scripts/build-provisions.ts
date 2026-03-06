@@ -128,6 +128,40 @@ function slugify(value: string): string {
     .replace(/^-|-$/g, "");
 }
 
+/**
+ * Normalize provision text for dedup comparison.
+ * Strips common legal preamble prefixes and collapses whitespace.
+ */
+function normalizeForDedup(text: string): string {
+  return text
+    .trim()
+    .replace(/^IT IS (?:FURTHER )?ORDERED that\s+/i, "")
+    .replace(/\s+/g, " ");
+}
+
+/**
+ * Deduplicate provisions with identical/near-identical verbatim_text.
+ * Keeps the first entry per group (discards true duplicates from different case files).
+ */
+function deduplicateProvisions(provisions: ProvisionRecord[]): ProvisionRecord[] {
+  const groups = new Map<string, ProvisionRecord>();
+  const unique: ProvisionRecord[] = [];
+
+  for (const p of provisions) {
+    const raw = (p.verbatim_text || p.summary || "").trim();
+    if (!raw) {
+      unique.push(p);
+      continue;
+    }
+    const key = normalizeForDedup(raw);
+    if (!groups.has(key)) {
+      groups.set(key, p);
+      unique.push(p);
+    }
+  }
+  return unique;
+}
+
 function writeJSONSafe(filePath: string, data: unknown): void {
   const tmp = filePath + ".tmp";
   const serialized = JSON.stringify(data, null, 2);
@@ -301,58 +335,61 @@ interface ShardStat {
 const shardStats: ShardStat[] = [];
 let totalAcrossShards = 0;
 
-// Write topic shards
+// Write topic shards (deduplicated)
 for (const [slug, provisions] of topicShards.entries()) {
+  const deduped = deduplicateProvisions(provisions);
   const filename = `${slug}-provisions.json`;
   const shardFile: ProvisionShardFile = {
     topic: slug,
     generated_at: new Date().toISOString(),
-    total_provisions: provisions.length,
-    provisions,
+    total_provisions: deduped.length,
+    provisions: deduped,
   };
 
   const outPath = path.join(OUT_DIR, filename);
   writeJSONSafe(outPath, shardFile);
 
   const bytes = Buffer.byteLength(JSON.stringify(shardFile, null, 2), "utf-8");
-  shardStats.push({ filename, provisions: provisions.length, bytes });
-  totalAcrossShards += provisions.length;
+  shardStats.push({ filename, provisions: deduped.length, bytes });
+  totalAcrossShards += deduped.length;
 }
 
-// Write practice-area shards
+// Write practice-area shards (deduplicated)
 for (const [slug, provisions] of practiceAreaShards.entries()) {
+  const deduped = deduplicateProvisions(provisions);
   const filename = `pa-${slug}-provisions.json`;
   const shardFile: ProvisionShardFile = {
     topic: slug,
     generated_at: new Date().toISOString(),
-    total_provisions: provisions.length,
-    provisions,
+    total_provisions: deduped.length,
+    provisions: deduped,
   };
 
   const outPath = path.join(OUT_DIR, filename);
   writeJSONSafe(outPath, shardFile);
 
   const bytes = Buffer.byteLength(JSON.stringify(shardFile, null, 2), "utf-8");
-  shardStats.push({ filename, provisions: provisions.length, bytes });
-  totalAcrossShards += provisions.length;
+  shardStats.push({ filename, provisions: deduped.length, bytes });
+  totalAcrossShards += deduped.length;
 }
 
-// Write remedy-type shards
+// Write remedy-type shards (deduplicated)
 for (const [slug, provisions] of remedyTypeShards.entries()) {
+  const deduped = deduplicateProvisions(provisions);
   const filename = `rt-${slug}-provisions.json`;
   const shardFile: ProvisionShardFile = {
     topic: slug,
     generated_at: new Date().toISOString(),
-    total_provisions: provisions.length,
-    provisions,
+    total_provisions: deduped.length,
+    provisions: deduped,
   };
 
   const outPath = path.join(OUT_DIR, filename);
   writeJSONSafe(outPath, shardFile);
 
   const bytes = Buffer.byteLength(JSON.stringify(shardFile, null, 2), "utf-8");
-  shardStats.push({ filename, provisions: provisions.length, bytes });
-  totalAcrossShards += provisions.length;
+  shardStats.push({ filename, provisions: deduped.length, bytes });
+  totalAcrossShards += deduped.length;
 }
 
 // --- Human-readable labels for manifest ---
@@ -403,7 +440,7 @@ const manifestTopics: Record<string, ManifestTopic> = {};
 for (const [slug, provisions] of topicShards.entries()) {
   const key = slug;
   manifestTopics[key] = {
-    count: provisions.length,
+    count: deduplicateProvisions(provisions).length,
     shard: `${slug}-provisions.json`,
     category: "statutory",
     label: TOPIC_LABELS[slug] || slug,
@@ -413,7 +450,7 @@ for (const [slug, provisions] of topicShards.entries()) {
 for (const [slug, provisions] of practiceAreaShards.entries()) {
   const key = `pa-${slug}`;
   manifestTopics[key] = {
-    count: provisions.length,
+    count: deduplicateProvisions(provisions).length,
     shard: `pa-${slug}-provisions.json`,
     category: "practice_area",
     label: TOPIC_LABELS[slug] || slug,
@@ -423,7 +460,7 @@ for (const [slug, provisions] of practiceAreaShards.entries()) {
 for (const [slug, provisions] of remedyTypeShards.entries()) {
   const key = `rt-${slug}`;
   manifestTopics[key] = {
-    count: provisions.length,
+    count: deduplicateProvisions(provisions).length,
     shard: `rt-${slug}-provisions.json`,
     category: "remedy_type",
     label: TOPIC_LABELS[slug] || slug,

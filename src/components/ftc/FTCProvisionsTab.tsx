@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { useProvisionsManifest } from "@/hooks/use-provisions";
@@ -89,6 +89,17 @@ export default function FTCProvisionsTab() {
     [searchParams, setSearchParams]
   );
 
+  // Track deduplicated counts reported by ProvisionsContent
+  const [dedupCounts, setDedupCounts] = useState<Record<string, number>>({});
+  const handleDedupCount = useCallback(
+    (topicSlug: string, count: number) => {
+      setDedupCounts((prev) =>
+        prev[topicSlug] === count ? prev : { ...prev, [topicSlug]: count }
+      );
+    },
+    []
+  );
+
   // Show cross-topic search when scope is "all" and there's a query
   const showCrossTopicSearch =
     searchScope === "all" && searchQuery.trim().length > 0;
@@ -144,6 +155,7 @@ export default function FTCProvisionsTab() {
             manifest={manifest}
             selectedTopic={showCrossTopicSearch ? null : selectedTopic}
             onSelectTopic={handleTopicSelect}
+            countOverrides={dedupCounts}
           />
           <div className="flex-1 min-w-0">
             {showCrossTopicSearch ? (
@@ -160,6 +172,7 @@ export default function FTCProvisionsTab() {
                 onSearchChange={handleSearchChange}
                 searchScope={searchScope}
                 onSearchScopeChange={handleSearchScopeChange}
+                onDedupCount={handleDedupCount}
               />
             ) : (
               <div className="py-16 text-center">

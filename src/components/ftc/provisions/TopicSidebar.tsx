@@ -9,6 +9,7 @@ interface Props {
   manifest: ProvisionsManifest;
   selectedTopic: string | null;
   onSelectTopic: (topicSlug: string) => void;
+  countOverrides?: Record<string, number>;
 }
 
 interface TopicEntry {
@@ -25,6 +26,7 @@ export default function TopicSidebar({
   manifest,
   selectedTopic,
   onSelectTopic,
+  countOverrides,
 }: Props) {
   const grouped = useMemo(() => {
     const groups: Record<string, TopicEntry[]> = {
@@ -76,7 +78,7 @@ export default function TopicSidebar({
                           variant="secondary"
                           className="text-[10px] px-1.5 py-0 shrink-0"
                         >
-                          {topic.count}
+                          {countOverrides?.[slug] ?? topic.count}
                         </Badge>
                       </button>
                     </li>
@@ -108,7 +110,7 @@ export default function TopicSidebar({
                     )}
                   >
                     {topic.label}{" "}
-                    <span className="opacity-70">({topic.count})</span>
+                    <span className="opacity-70">({countOverrides?.[slug] ?? topic.count})</span>
                   </button>
                 ))}
               </div>

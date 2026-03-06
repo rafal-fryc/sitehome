@@ -14,7 +14,84 @@ import {
   PaginationLink,
   PaginationEllipsis,
 } from "@/components/ui/pagination";
-import type { ProvisionsManifest } from "@/types/ftc";
+import type { ProvisionRecord, ProvisionsManifest } from "@/types/ftc";
+
+export interface MergedCase {
+  case_id: string;
+  company_name: string;
+  year: number;
+  docket_number: string;
+  ftc_url?: string;
+}
+
+export type DeduplicatedProvision = ProvisionRecord & {
+  merged_cases?: MergedCase[];
+};
+
+/**
+ * Normalize provision text for dedup comparison.
+ * Strips common legal preamble prefixes and collapses whitespace.
+ */
+function normalizeForDedup(text: string): string {
+  return text
+    .trim()
+    .replace(/^IT IS (?:FURTHER )?ORDERED that\s+/i, "")
+    .replace(/\s+/g, " ");
+}
+
+/**
+ * Deduplicate provisions that share identical or near-identical verbatim_text.
+ * Keeps the first entry per group and attaches merged_cases metadata.
+ */
+function deduplicateProvisions(
+  provisions: ProvisionRecord[]
+): DeduplicatedProvision[] {
+  const groups = new Map<string, ProvisionRecord[]>();
+  for (const p of provisions) {
+    const raw = (p.verbatim_text || p.summary || "").trim();
+    if (!raw) {
+      // No text to compare — keep as-is (unique group)
+      groups.set(`__empty__${Math.random()}`, [p]);
+      continue;
+    }
+    const key = normalizeForDedup(raw);
+    const existing = groups.get(key);
+    if (existing) {
+      existing.push(p);
+    } else {
+      groups.set(key, [p]);
+    }
+  }
+
+  const result: DeduplicatedProvision[] = [];
+  for (const group of groups.values()) {
+    if (group.length === 1) {
+      result.push(group[0]);
+    } else {
+      // Keep first entry, merge case metadata from all
+      const representative: DeduplicatedProvision = { ...group[0] };
+      const seenCaseIds = new Set<string>();
+      const mergedCases: MergedCase[] = [];
+      for (const p of group) {
+        if (!seenCaseIds.has(p.case_id)) {
+          seenCaseIds.add(p.case_id);
+          mergedCases.push({
+            case_id: p.case_id,
+            company_name: p.company_name,
+            year: p.year,
+            docket_number: p.docket_number,
+            ftc_url: p.ftc_url,
+          });
+        }
+      }
+      if (mergedCases.length > 1) {
+        representative.merged_cases = mergedCases;
+      }
+      result.push(representative);
+    }
+  }
+  return result;
+}
 
 interface Props {
   topic: string;
@@ -23,6 +100,7 @@ interface Props {
   onSearchChange: (query: string) => void;
   searchScope: "topic" | "all";
   onSearchScopeChange: (scope: "topic" | "all") => void;
+  onDedupCount?: (topic: string, count: number) => void;
 }
 
 const PAGE_SIZE = 50;
@@ -34,6 +112,7 @@ export default function ProvisionsContent({
   onSearchChange,
   searchScope,
   onSearchScopeChange,
+  onDedupCount,
 }: Props) {
   const topicMeta = manifest.topics[topic];
   const { data: shard, isLoading, error } = useProvisionShard(topicMeta?.shard ?? null);
@@ -53,6 +132,17 @@ export default function ProvisionsContent({
   // Search hook for in-topic search
   const shardProvisions = useMemo(() => shard?.provisions ?? [], [shard]);
   const { search } = useProvisionSearch(shardProvisions);
+
+  // Report deduplicated count for sidebar badge
+  const dedupTotalCount = useMemo(
+    () => (shard ? deduplicateProvisions(shard.provisions).length : null),
+    [shard]
+  );
+  useEffect(() => {
+    if (dedupTotalCount !== null && onDedupCount) {
+      onDedupCount(topic, dedupTotalCount);
+    }
+  }, [topic, dedupTotalCount, onDedupCount]);
 
   // Reset page and filters when topic changes
   const prevTopicRef = useRef(topic);
@@ -130,8 +220,11 @@ export default function ProvisionsContent({
       );
     }
 
+    // Deduplicate provisions with identical verbatim_text
+    const deduped = deduplicateProvisions(result);
+
     // Sort (PROV-08)
-    result.sort((a, b) => {
+    deduped.sort((a, b) => {
       let cmp = 0;
       switch (sortKey) {
         case "date":
@@ -148,7 +241,7 @@ export default function ProvisionsContent({
       return sortDir === "asc" ? cmp : -cmp;
     });
 
-    return result;
+    return deduped;
   }, [shard, searchMatchIds, dateStart, dateEnd, selectedCompany, selectedRemedyTypes, sortKey, sortDir]);
 
   // Derived counts

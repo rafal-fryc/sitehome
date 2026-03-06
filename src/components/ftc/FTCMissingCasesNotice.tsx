@@ -28,6 +28,10 @@ const MISSING_CASE_NAMES = [
   "AT&T",
   "Sprint Corporation",
   "Iconic Hearts Holdings (Pending)",
+  "Illuminate Education, Inc.",
+  "Cash Today, Ltd.",
+  "Asset Acceptance, LLC",
+  "American United Mortgage Company",
 ];
 
 export default function FTCMissingCasesNotice() {

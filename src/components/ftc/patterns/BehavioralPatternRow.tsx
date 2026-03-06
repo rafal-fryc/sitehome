@@ -34,9 +34,13 @@ export default function BehavioralPatternRow({ pattern, isExpanded, onToggle }: 
 
   const maxCount = Math.max(...casesByYear.map(([, c]) => c));
 
+  const sortedCases = useMemo(
+    () => [...pattern.cases].sort((a, b) => b.year - a.year),
+    [pattern.cases]
+  );
   const displayedCases = showAll
-    ? pattern.cases
-    : pattern.cases.slice(0, INITIAL_DISPLAY_COUNT);
+    ? sortedCases
+    : sortedCases.slice(0, INITIAL_DISPLAY_COUNT);
   const hasMore = pattern.cases.length > INITIAL_DISPLAY_COUNT;
 
   const handleToggleCase = (caseId: string) => {
