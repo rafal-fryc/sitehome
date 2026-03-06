@@ -12,7 +12,6 @@ import {
 import type {
   FTCDataPayload,
   EnhancedFTCCaseSummary,
-  StatutoryTopic,
 } from "@/types/ftc";
 import ReferenceTable from "./ReferenceTable";
 

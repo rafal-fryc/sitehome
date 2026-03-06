@@ -32,6 +32,8 @@ const MISSING_CASE_NAMES = [
   "Cash Today, Ltd.",
   "Asset Acceptance, LLC",
   "American United Mortgage Company",
+  "GoodRx Holdings, Inc.",
+  "Rite Aid Corporation (2010)",
 ];
 
 export default function FTCMissingCasesNotice() {
@@ -42,7 +44,8 @@ export default function FTCMissingCasesNotice() {
         <p className="text-xs text-muted-foreground leading-relaxed">
           The following {MISSING_CASE_NAMES.length} cases could not be parsed
           due to unavailable or incomplete documents:{" "}
-          {MISSING_CASE_NAMES.join(", ")}.
+          {MISSING_CASE_NAMES.join(", ")}. Additionally, pending cases may
+          have incomplete data and are not included until fully resolved.
         </p>
       </div>
     </div>

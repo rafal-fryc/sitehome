@@ -29,7 +29,7 @@ export default function HighlightText({ text, query, className }: Props) {
   }
 
   // Build pattern matching any of the query terms
-  const pattern = new RegExp(`(${terms.join("|")})`, "gi");
+  const pattern = new RegExp(`(${terms.join("|")})`, "i");
   const parts = text.split(pattern);
 
   return (
