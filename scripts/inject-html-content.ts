@@ -388,6 +388,181 @@ function generateDataIndex(): void {
   console.log(`✓ Generated data/data-index.json`);
 }
 
+// --- 7. Generate standalone HTML page (zero JavaScript) ---
+
+function generateStandaloneHtml(): void {
+  const recentCaseRows = recentCases
+    .map((c: any) => {
+      const year = new Date(c.date_issued).getFullYear();
+      const topics = (c.statutory_topics || []).join(", ");
+      const takeaway = c.takeaway_brief ? escapeHtml(c.takeaway_brief) : "";
+      return `      <tr>
+        <td>${escapeHtml(c.company_name)}</td>
+        <td>${year}</td>
+        <td>${escapeHtml(topics)}</td>
+        <td>${takeaway}</td>
+      </tr>`;
+    })
+    .join("\n");
+
+  const allCaseRows = [...cases.cases]
+    .sort((a: any, b: any) => new Date(b.date_issued).getTime() - new Date(a.date_issued).getTime())
+    .map((c: any) => {
+      const topics = (c.statutory_topics || []).join(", ");
+      const takeaway = c.takeaway_brief ? escapeHtml(c.takeaway_brief) : "";
+      const ftcLink = c.ftc_url ? `<a href="${escapeHtml(c.ftc_url)}">Order</a>` : "";
+      return `      <tr>
+        <td>${escapeHtml(c.company_name)}</td>
+        <td>${c.date_issued}</td>
+        <td>${escapeHtml(topics)}</td>
+        <td>${takeaway}</td>
+        <td>${ftcLink}</td>
+      </tr>`;
+    })
+    .join("\n");
+
+  const topicItems = Object.entries(manifest.topics as Record<string, any>)
+    .filter(([, t]) => t.category === "statutory")
+    .sort((a, b) => b[1].count - a[1].count)
+    .map(([, t]) => `      <li><strong>${escapeHtml(t.label)}</strong> — ${t.count} provisions (<a href="/data/provisions/${t.shard}">JSON</a>)</li>`)
+    .join("\n");
+
+  const patternItems = patterns.patterns
+    .sort((a: any, b: any) => b.case_count - a.case_count)
+    .map((p: any) => `      <li><strong>${escapeHtml(p.name)}</strong> — ${p.case_count} cases</li>`)
+    .join("\n");
+
+  const behavioralItems = behavioral.patterns
+    .sort((a: any, b: any) => b.case_count - a.case_count)
+    .map((b: any) => `      <li><strong>${escapeHtml(b.name)}</strong> (${b.case_count} cases)${b.description ? ` — ${escapeHtml(b.description)}` : ""}</li>`)
+    .join("\n");
+
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "FTC Enforcement Provisions Library",
+    "description": `Searchable database of ${totalProvisions.toLocaleString()} provisions from ${totalCases} FTC consent orders (${earliestYear}–${latestYear}).`,
+    "url": `${SITE_URL}/ftc`,
+    "creator": { "@type": "Person", "name": "Rafal Fryc" },
+    "temporalCoverage": `${earliestYear}/${latestYear}`,
+    "distribution": [
+      { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": `${SITE_URL}/data/ftc-cases.json`, "name": "FTC Cases" },
+      { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": `${SITE_URL}/data/ftc-patterns.json`, "name": "Remedy Patterns" },
+      { "@type": "DataDownload", "encodingFormat": "text/plain", "contentUrl": `${SITE_URL}/llms-full.txt`, "name": "Full Content Export" }
+    ],
+    "keywords": ["FTC", "Federal Trade Commission", "enforcement", "consent orders", "COPPA", "FCRA", "GLBA", "data security", "privacy"]
+  });
+
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FTC Enforcement Provisions Library</title>
+  <meta name="description" content="Searchable database of ${totalProvisions.toLocaleString()} provisions from ${totalCases} FTC consent orders (${earliestYear}–${latestYear}). Browse by statute, practice area, or remedy type.">
+  <meta property="og:title" content="FTC Enforcement Provisions Library">
+  <meta property="og:description" content="Searchable database of ${totalProvisions.toLocaleString()} provisions from ${totalCases} FTC consent orders (${earliestYear}–${latestYear}).">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${SITE_URL}/ftc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">${jsonLd}</script>
+  <style>
+    body { max-width: 960px; margin: 0 auto; padding: 2rem; font-family: 'EB Garamond', Georgia, serif; background: #f4f1eb; color: #17362a; line-height: 1.6; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.5rem; margin-top: 2rem; border-bottom: 1px solid #d9d0bf; padding-bottom: 0.5rem; }
+    h3 { font-size: 1.2rem; margin-top: 1.5rem; }
+    a { color: #cfa117; }
+    a:hover { color: #a07d10; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+    th, td { text-align: left; padding: 0.5rem; border-bottom: 1px solid #d9d0bf; }
+    th { background: #e8e3d9; font-weight: 600; }
+    .stats { display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 1.5rem 0; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2rem; font-weight: 700; color: #cfa117; display: block; }
+    .stat-label { font-size: 0.9rem; color: #4a6a5a; }
+    nav { border-bottom: 1px solid #d9d0bf; padding-bottom: 0.75rem; margin-bottom: 1.5rem; }
+    nav a { margin-right: 1.5rem; text-decoration: none; font-weight: 500; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d9d0bf; color: #4a6a5a; font-size: 0.9rem; }
+    ul { padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/ftc">Overview</a>
+    <a href="/FTCAnalytics">Interactive Dashboard</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+
+  <h1>FTC Enforcement Provisions Library</h1>
+  <p>A searchable database of <strong>${totalProvisions.toLocaleString()}</strong> provisions from <strong>${totalCases}</strong> FTC consent orders (${earliestYear}–${latestYear}), organized by statutory topic, practice area, and remedy type. Every provision includes verbatim order language with paragraph-level citations and links to source documents on FTC.gov.</p>
+
+  <div class="stats">
+    <div class="stat"><span class="stat-num">${totalCases}</span><span class="stat-label">Enforcement Actions</span></div>
+    <div class="stat"><span class="stat-num">${totalProvisions.toLocaleString()}</span><span class="stat-label">Provisions</span></div>
+    <div class="stat"><span class="stat-num">${totalPatterns}</span><span class="stat-label">Remedy Patterns</span></div>
+    <div class="stat"><span class="stat-num">${totalBehavioral}</span><span class="stat-label">Behavioral Categories</span></div>
+    <div class="stat"><span class="stat-num">${latestYear - earliestYear + 1}</span><span class="stat-label">Years of Coverage</span></div>
+  </div>
+
+  <h2>Statutory Topics</h2>
+  <ul>
+${topicItems}
+  </ul>
+
+  <h2>Recent Enforcement Actions</h2>
+  <table>
+    <thead><tr><th>Company</th><th>Year</th><th>Topics</th><th>Key Takeaway</th></tr></thead>
+    <tbody>
+${recentCaseRows}
+    </tbody>
+  </table>
+
+  <h2>All ${totalCases} Cases</h2>
+  <table>
+    <thead><tr><th>Company</th><th>Date</th><th>Topics</th><th>Takeaway</th><th>Link</th></tr></thead>
+    <tbody>
+${allCaseRows}
+    </tbody>
+  </table>
+
+  <h2>Remedy Patterns (${totalPatterns})</h2>
+  <ul>
+${patternItems}
+  </ul>
+
+  <h2>Behavioral Categories (${totalBehavioral})</h2>
+  <ul>
+${behavioralItems}
+  </ul>
+
+  <h2>Data Access</h2>
+  <p>All data is available as structured JSON:</p>
+  <ul>
+    <li><a href="/data/ftc-cases.json">Case Database</a> — ${totalCases} cases with full metadata</li>
+    <li><a href="/data/provisions/manifest.json">Provisions Index</a> — ${totalProvisions.toLocaleString()} provisions across ${Object.keys(manifest.topics).length} topics</li>
+    <li><a href="/data/ftc-patterns.json">Remedy Patterns</a> — ${totalPatterns} patterns</li>
+    <li><a href="/data/ftc-behavioral-patterns.json">Behavioral Patterns</a> — ${totalBehavioral} categories</li>
+    <li><a href="/llms.txt">llms.txt</a> — Structured overview for LLMs</li>
+    <li><a href="/llms-full.txt">Full Content Export</a> — Comprehensive Markdown</li>
+    <li><a href="/data/data-index.json">Data Catalog</a> — Machine-readable index with schemas</li>
+  </ul>
+
+  <footer>
+    <p><a href="/FTCAnalytics">Interactive Dashboard</a> — Full-featured SPA with search, filtering, charts, and drill-down analysis</p>
+    <p>Built by <a href="/">Rafal Fryc</a></p>
+  </footer>
+</body>
+</html>`;
+
+  mkdirSync(resolve(DIST, "ftc"), { recursive: true });
+  writeFileSync(resolve(DIST, "ftc/index.html"), html, "utf-8");
+  const size = (Buffer.byteLength(html) / 1024).toFixed(1);
+  console.log(`✓ Generated ftc/index.html (${size} KB) — standalone, zero JavaScript`);
+}
+
 // --- Main ---
 
 console.log("\n📄 Injecting LLM-accessible content into build output...\n");
@@ -396,5 +571,6 @@ injectIntoHtml();
 generateLlmsTxt();
 generateLlmsFullTxt();
 generateDataIndex();
+generateStandaloneHtml();
 
 console.log("\n✅ Done. LLM content injection complete.\n");
