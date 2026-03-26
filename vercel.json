@@ -4,6 +4,11 @@
     { "source": "/checklists", "destination": "https://law-list-buddy-34.vercel.app" },
     { "source": "/checklists/:path*", "destination": "https://law-list-buddy-34.vercel.app/:path*" },
     { "source": "/checklists/api/:path*", "destination": "https://law-list-buddy-34.vercel.app/api/:path*" },
+    {
+      "source": "/FTCAnalytics",
+      "has": [{ "type": "header", "key": "user-agent", "value": "(?i).*(bot|crawl|spider|GPTBot|ClaudeBot|Claude-User|ChatGPT-User|OAI-SearchBot|PerplexityBot|Google-Extended|Meta-ExternalAgent|facebookexternalhit|Twitterbot|Slurp|DuckDuckBot|Baiduspider|YandexBot).*" }],
+      "destination": "/ftc/"
+    },
     { "source": "/((?!data|GDPRorders|checklists|llms|sitemap|robots|ftc).*)", "destination": "/index.html" }
   ]
 }
