@@ -403,6 +403,22 @@ for (const c of dedupedCases) {
 }
 console.log(`Copied ${copied} files to ${FILES_DIR}${skippedClassified > 0 ? ` (${skippedClassified} classified files preserved)` : ""}`);
 
+// Remove stale files not in deduped set
+const validIds = new Set(dedupedCases.map((c) => c.id));
+const existingFiles = fs.readdirSync(FILES_DIR).filter((f) => f.endsWith(".json"));
+let removed = 0;
+for (const file of existingFiles) {
+  const id = file.replace(/\.json$/, "");
+  if (!validIds.has(id)) {
+    fs.unlinkSync(path.join(FILES_DIR, file));
+    removed++;
+    console.log(`  Removed stale: ${file}`);
+  }
+}
+if (removed > 0) {
+  console.log(`Removed ${removed} stale files from ${FILES_DIR}`);
+}
+
 // Print enhanced summary
 const withStatutoryTopics = dedupedCases.filter((c) => c.statutory_topics.length > 0).length;
 const withIndustrySectors = dedupedCases.filter((c) => c.industry_sectors.length > 0).length;
