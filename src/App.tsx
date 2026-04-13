@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import FTCAnalytics from "./pages/FTCAnalytics";
+import ReportsIndex from "./pages/ReportsIndex";
+import ReportDetail from "./pages/ReportDetail";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +20,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/FTCAnalytics" element={<FTCAnalytics />} />
+          <Route path="/reports" element={<ReportsIndex />} />
+          <Route path="/reports/:slug" element={<ReportDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
