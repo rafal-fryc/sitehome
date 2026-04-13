@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Gavel, Search, FileCheck, Calculator, BarChart3 } from "lucide-react";
+import { Github, ExternalLink, Gavel, Search, FileCheck, Calculator, BarChart3, ScrollText } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
@@ -48,6 +48,15 @@ const ProjectsSection = () => {
       icon: BarChart3,
       githubUrl: "#",
       demoUrl: "/FTCAnalytics"
+    },
+    {
+      title: "Zwiad — Regulatory Research Memos",
+      description: "Source-verified regulatory intelligence memos on US privacy, cybersecurity, and AI law developments. Produced by a multi-agent Claude Code pipeline that scans sources, researches findings, and fact-checks before publishing.",
+      technologies: ["Claude Code", "Multi-Agent Pipeline", "Regulatory Research"],
+      status: "Live",
+      icon: ScrollText,
+      githubUrl: "https://github.com/rafal-fryc/Zwiad",
+      demoUrl: "/reports"
     }
   ];
 
