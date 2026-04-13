@@ -17,7 +17,7 @@ const TOPIC_DOT: Record<string, string> = {
 };
 
 export default function ReportsIndex() {
-  useDocumentTitle("Regulatory Research Memos | Rafal's Portfolio");
+  useDocumentTitle("Zwiad Regulatory Monitoring | Rafal's Portfolio");
   const [data, setData] = useState<ReportsData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [topic, setTopic] = useState<Topic>("all");
@@ -51,7 +51,7 @@ export default function ReportsIndex() {
           <Link to="/" className="text-sm text-muted-foreground hover:underline">
             ← Home
           </Link>
-          <h1 className="text-3xl font-bold mt-4 font-garamond">Regulatory Research Memos</h1>
+          <h1 className="text-3xl font-bold mt-4 font-garamond">Zwiad Regulatory Monitoring</h1>
           <p className="text-muted-foreground mt-2 font-garamond">
             Privacy, cybersecurity, and AI-law developments across US state and federal jurisdictions.
           </p>
