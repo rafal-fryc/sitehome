@@ -149,7 +149,7 @@ export default function ReportsGraph({ reports }: { reports: GraphReport[] }) {
         {/* Report nodes */}
         <g>
           {nodes.map((n) => {
-            const isHover = hover?.memo.slug === n.slug;
+            const isHover = hover?.report.slug === n.slug;
             return (
               <circle
                 key={n.slug}
