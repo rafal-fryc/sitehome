@@ -21,6 +21,7 @@ type ManifestEntry = {
   title: string;
   date: string;
   topic: string;
+  jurisdiction?: string;
   summary: string;
 };
 
@@ -68,6 +69,7 @@ async function main() {
       title: fm.title || entry.title,
       date: normalizeDate(fm.date ?? entry.date),
       topic: fm.topic || entry.topic,
+      jurisdiction: fm.jurisdiction || entry.jurisdiction || "Unknown",
       summary: fm.summary || entry.summary,
       body: parsed.content.trim(),
     });

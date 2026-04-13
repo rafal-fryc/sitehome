@@ -1,0 +1,147 @@
+<h2>What else lives on the page?</h2>
+<p class="subtitle">The graph is the hero. What sits around it? Pick a layout and we'll refine.</p>
+
+<style>
+  .wire { background:#f7f2ea; border:1px solid #d7c9af; border-radius:8px; padding:0; overflow:hidden; font-family:'EB Garamond',serif; color:#3d3426; font-size:12px; }
+  .wire-header { background:#ede4d3; border-bottom:1px solid #d7c9af; padding:8px 14px; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#6b5d4b; }
+  .wire-row { display:flex; gap:10px; padding:14px; }
+  .wire-box { background:#fff; border:1px solid #d7c9af; border-radius:6px; padding:10px; }
+  .graph-stub { background:#fff; border:1px dashed #b9a98a; border-radius:6px; height:180px; display:flex; align-items:center; justify-content:center; color:#9a6b3f; font-style:italic; }
+  .graph-stub svg { width:85%; height:85%; }
+  .stat { padding:8px 10px; background:#fff; border:1px solid #d7c9af; border-radius:4px; text-align:center; flex:1; }
+  .stat-big { font-size:20px; font-family:'EB Garamond',serif; color:#9a6b3f; line-height:1; }
+  .stat-label { font-size:10px; text-transform:uppercase; color:#6b5d4b; letter-spacing:0.08em; margin-top:4px; }
+  .chip { display:inline-block; padding:3px 9px; background:#ede4d3; border:1px solid #d7c9af; border-radius:999px; font-size:10px; margin-right:4px; }
+  .list-row { display:flex; justify-content:space-between; padding:6px 0; border-top:1px solid #ede4d3; font-size:11px; }
+  .list-row:first-child { border-top:0; }
+  .dot { display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:6px; }
+  .p{background:#9a6b3f}.c{background:#2d5c5c}.a{background:#8a3a3a}
+  .mini-orbit { position:relative; height:100%; }
+</style>
+
+<div class="cards">
+
+  <!-- Layout 1: graph hero + stats strip + list below -->
+  <div class="card" data-choice="stacked" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="wire">
+        <div class="wire-header">Layout 1 — Stacked</div>
+        <div style="padding:10px;">
+          <div class="wire-row" style="padding:0 0 10px 0; gap:8px;">
+            <div class="stat"><div class="stat-big">15</div><div class="stat-label">memos</div></div>
+            <div class="stat"><div class="stat-big">3</div><div class="stat-label">topics</div></div>
+            <div class="stat"><div class="stat-big">9</div><div class="stat-label">jurisdictions</div></div>
+            <div class="stat"><div class="stat-big">Apr 12</div><div class="stat-label">latest</div></div>
+          </div>
+          <div class="graph-stub">
+            <svg viewBox="0 0 420 180">
+              <circle cx="110" cy="90" r="24" fill="#9a6b3f" opacity="0.25"/>
+              <circle cx="210" cy="55" r="24" fill="#2d5c5c" opacity="0.25"/>
+              <circle cx="310" cy="100" r="24" fill="#8a3a3a" opacity="0.25"/>
+              <g fill="#9a6b3f"><circle cx="60" cy="75" r="5"/><circle cx="75" cy="130" r="5"/><circle cx="150" cy="140" r="5"/><circle cx="160" cy="60" r="5"/></g>
+              <g fill="#2d5c5c"><circle cx="245" cy="30" r="5"/><circle cx="170" cy="40" r="5"/><circle cx="240" cy="90" r="5"/></g>
+              <g fill="#8a3a3a"><circle cx="345" cy="75" r="5"/><circle cx="355" cy="145" r="5"/><circle cx="265" cy="125" r="5"/></g>
+              <g stroke="#b9a98a" stroke-width="0.8" opacity="0.5">
+                <circle cx="110" cy="90" r="52" fill="none"/>
+                <circle cx="210" cy="55" r="42" fill="none"/>
+                <circle cx="310" cy="100" r="48" fill="none"/>
+              </g>
+            </svg>
+          </div>
+          <div style="padding-top:10px;">
+            <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:#6b5d4b;margin-bottom:4px;">Recent</div>
+            <div class="list-row"><span><span class="dot p"></span>CalPrivacy DROP audits</span><span>Apr 12</span></div>
+            <div class="list-row"><span><span class="dot c"></span>Claude Mythos cyberattack</span><span>Apr 12</span></div>
+            <div class="list-row"><span><span class="dot a"></span>Trump AI EO preemption</span><span>Apr 12</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>1 — Stacked</h3>
+      <p>Stats row on top · graph hero · recent list below. Simple, scannable. Filters appear as clickable chips in a row above the graph.</p>
+    </div>
+  </div>
+
+  <!-- Layout 2: graph left + side panel right -->
+  <div class="card" data-choice="sidepanel" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="wire">
+        <div class="wire-header">Layout 2 — Side panel</div>
+        <div style="padding:10px;display:flex;gap:8px;">
+          <div style="flex:2;">
+            <div class="graph-stub" style="height:220px;">
+              <svg viewBox="0 0 300 220">
+                <circle cx="80" cy="110" r="22" fill="#9a6b3f" opacity="0.25"/>
+                <circle cx="160" cy="65" r="22" fill="#2d5c5c" opacity="0.25"/>
+                <circle cx="230" cy="130" r="22" fill="#8a3a3a" opacity="0.25"/>
+                <g fill="#9a6b3f"><circle cx="40" cy="90" r="5"/><circle cx="50" cy="150" r="5"/><circle cx="115" cy="155" r="5"/></g>
+                <g fill="#2d5c5c"><circle cx="190" cy="35" r="5"/><circle cx="130" cy="40" r="5"/></g>
+                <g fill="#8a3a3a"><circle cx="265" cy="100" r="5"/><circle cx="260" cy="175" r="5"/></g>
+              </svg>
+            </div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:8px;">
+            <div class="wire-box" style="padding:8px;">
+              <div class="stat-label">Search</div>
+              <div style="border-bottom:1px solid #d7c9af;height:16px;margin-top:3px;"></div>
+            </div>
+            <div class="wire-box" style="padding:8px;">
+              <div class="stat-label">Filter</div>
+              <div style="margin-top:4px;"><span class="chip">privacy</span><span class="chip">cyber</span><span class="chip">ai-law</span></div>
+              <div style="margin-top:4px;"><span class="chip">all dates</span></div>
+            </div>
+            <div class="wire-box" style="padding:8px;flex:1;">
+              <div class="stat-label">Selected memo</div>
+              <div style="margin-top:6px;font-family:'EB Garamond',serif;font-size:11px;color:#3d3426;line-height:1.3;">
+                <em>Click a node to preview its summary here →</em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>2 — Side panel</h3>
+      <p>Graph takes 2/3. Right 1/3 has search, topic filters, and a live preview pane. Clicking a node fills the preview (title + summary + "read more" → detail page).</p>
+    </div>
+  </div>
+
+  <!-- Layout 3: full-bleed graph + floating chrome -->
+  <div class="card" data-choice="fullbleed" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="wire">
+        <div class="wire-header">Layout 3 — Full-bleed</div>
+        <div style="padding:0;position:relative;">
+          <div class="graph-stub" style="height:240px;border-radius:0;border:0;">
+            <svg viewBox="0 0 420 240">
+              <circle cx="110" cy="130" r="28" fill="#9a6b3f" opacity="0.2"/>
+              <circle cx="210" cy="90" r="28" fill="#2d5c5c" opacity="0.2"/>
+              <circle cx="310" cy="140" r="28" fill="#8a3a3a" opacity="0.2"/>
+              <g fill="#9a6b3f"><circle cx="60" cy="110" r="5"/><circle cx="75" cy="170" r="5"/><circle cx="150" cy="180" r="5"/><circle cx="160" cy="100" r="5"/><circle cx="55" cy="150" r="5"/></g>
+              <g fill="#2d5c5c"><circle cx="245" cy="65" r="5"/><circle cx="170" cy="75" r="5"/><circle cx="240" cy="125" r="5"/></g>
+              <g fill="#8a3a3a"><circle cx="345" cy="110" r="5"/><circle cx="355" cy="180" r="5"/><circle cx="265" cy="160" r="5"/><circle cx="295" cy="195" r="5"/></g>
+            </svg>
+          </div>
+          <!-- floating chrome overlays -->
+          <div style="position:absolute;top:10px;left:10px;background:rgba(255,255,255,0.9);border:1px solid #d7c9af;border-radius:4px;padding:5px 9px;font-size:10px;">
+            <span class="stat-label">15 memos · 9 jurisdictions</span>
+          </div>
+          <div style="position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.9);border:1px solid #d7c9af;border-radius:999px;padding:4px 12px;font-size:10px;">
+            Search memos…
+          </div>
+          <div style="position:absolute;bottom:10px;left:10px;background:rgba(255,255,255,0.9);border:1px solid #d7c9af;border-radius:4px;padding:5px 9px;font-size:10px;">
+            <span class="chip">privacy</span><span class="chip">cyber</span><span class="chip">ai-law</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>3 — Full-bleed</h3>
+      <p>Graph fills the viewport. Stats, search, and filter chips float as translucent overlays. Most "wow" but less info-dense. List view accessible via a button.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:20px;">Click to pick. I'll follow up with details (edge semantics, click behavior, mobile fallback).</p>
