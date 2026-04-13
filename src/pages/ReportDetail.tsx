@@ -50,12 +50,22 @@ export default function ReportDetail() {
   );
 
   useEffect(() => {
+    // Reset state so we don't show stale content or stale "not found" when
+    // the slug changes (e.g., clicking a link in the Related memos list).
+    setMemo(null);
+    setRelated([]);
+    setNotFound(false);
+    setError(null);
+    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+
+    let cancelled = false;
     fetch("/data/reports.json")
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json() as Promise<ReportsData>;
       })
       .then((data) => {
+        if (cancelled) return;
         const found = data.memos.find((m) => m.slug === slug);
         if (!found) {
           setNotFound(true);
@@ -64,7 +74,12 @@ export default function ReportDetail() {
         setMemo(found);
         setRelated(pickRelated(found, data.memos));
       })
-      .catch((e) => setError(String(e)));
+      .catch((e) => {
+        if (!cancelled) setError(String(e));
+      });
+    return () => {
+      cancelled = true;
+    };
   }, [slug]);
 
   return (
