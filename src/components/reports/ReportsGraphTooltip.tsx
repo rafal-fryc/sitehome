@@ -1,20 +1,18 @@
 type TooltipProps = {
   x: number;
   y: number;
-  title: string;
+  name: string;
   topic: string;
-  jurisdiction: string;
-  date: string;
+  reportCount: number;
   summary: string;
 };
 
 export default function ReportsGraphTooltip({
   x,
   y,
-  title,
+  name,
   topic,
-  jurisdiction,
-  date,
+  reportCount,
   summary,
 }: TooltipProps) {
   return (
@@ -26,11 +24,11 @@ export default function ReportsGraphTooltip({
         transform: "translate(-50%, calc(-100% - 12px))",
       }}
     >
-      <div className="font-semibold mb-0.5">{title}</div>
+      <div className="font-semibold mb-0.5">{name}</div>
       <div className="text-[10px] uppercase tracking-wider opacity-70 mb-1">
-        {jurisdiction} · {topic} · {date}
+        {topic} · {reportCount} {reportCount === 1 ? "report" : "reports"}
       </div>
-      <div className="line-clamp-3 opacity-90">{summary}</div>
+      {summary && <div className="line-clamp-3 opacity-90">{summary}</div>}
     </div>
   );
 }

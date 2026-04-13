@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import FTCAnalytics from "./pages/FTCAnalytics";
 import ReportsIndex from "./pages/ReportsIndex";
+import ReportsCluster from "./pages/ReportsCluster";
 import ReportDetail from "./pages/ReportDetail";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/FTCAnalytics" element={<FTCAnalytics />} />
           <Route path="/reports" element={<ReportsIndex />} />
+          <Route path="/reports/cluster/:slug" element={<ReportsCluster />} />
           <Route path="/reports/:slug" element={<ReportDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

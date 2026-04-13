@@ -2,10 +2,20 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDocumentTitle } from "@/hooks/use-document-title";
 import ReportsStatsBar from "@/components/reports/ReportsStatsBar";
-import ReportsGraph, { GraphReport } from "@/components/reports/ReportsGraph";
+import ReportsGraph, { GraphCluster } from "@/components/reports/ReportsGraph";
 
-type Report = GraphReport;
-type ReportsData = { memos: Report[] };
+type Report = {
+  slug: string;
+  title: string;
+  date: string;
+  topic: string;
+  jurisdiction: string;
+  summary: string;
+  cluster?: string;
+  cluster_slug?: string;
+};
+
+type ReportsData = { memos: Report[]; clusters: GraphCluster[] };
 
 const TOPICS = ["all", "privacy", "cybersecurity", "ai-law"] as const;
 type Topic = (typeof TOPICS)[number];
@@ -34,15 +44,31 @@ export default function ReportsIndex() {
   }, []);
 
   const allReports = data?.memos ?? [];
+  const allClusters = data?.clusters ?? [];
 
-  const filtered = useMemo(() => {
+  const filteredReports = useMemo(() => {
     const q = query.trim().toLowerCase();
     return allReports.filter((r) => {
       if (topic !== "all" && r.topic !== topic) return false;
-      if (q && !(r.title + " " + r.summary).toLowerCase().includes(q)) return false;
+      if (q) {
+        const haystack = `${r.title} ${r.summary} ${r.cluster || ""}`.toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
       return true;
     });
   }, [allReports, topic, query]);
+
+  const filteredClusters = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return allClusters.filter((c) => {
+      if (topic !== "all" && c.topic !== topic) return false;
+      if (q) {
+        const haystack = `${c.name} ${c.summary}`.toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
+      return true;
+    });
+  }, [allClusters, topic, query]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -61,7 +87,7 @@ export default function ReportsIndex() {
 
         {data && (
           <>
-            <ReportsStatsBar reports={allReports} />
+            <ReportsStatsBar reports={allReports} clusterCount={allClusters.length} />
 
             <div className="flex flex-wrap gap-2 mb-4 items-center">
               {TOPICS.map((t) => (
@@ -81,15 +107,15 @@ export default function ReportsIndex() {
               ))}
               <input
                 type="search"
-                placeholder="Search reports…"
+                placeholder="Search clusters and reports…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="flex-1 min-w-[160px] px-3 py-1 text-xs rounded-full border border-border bg-background font-garamond focus:outline-none focus:ring-2 focus:ring-ring"
+                className="flex-1 min-w-[200px] px-3 py-1 text-xs rounded-full border border-border bg-background font-garamond focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
 
             <div className="hidden md:block mb-6">
-              <ReportsGraph reports={filtered} />
+              <ReportsGraph clusters={filteredClusters} />
             </div>
 
             <div className="mb-2 flex items-baseline justify-between">
@@ -100,13 +126,13 @@ export default function ReportsIndex() {
               <div className="text-[11px] text-muted-foreground">sorted by date ↓</div>
             </div>
 
-            {filtered.length === 0 ? (
+            {filteredReports.length === 0 ? (
               <div className="text-muted-foreground text-sm border border-rule rounded p-6 text-center">
                 No reports match.
               </div>
             ) : (
               <ul className="bg-cream border border-rule rounded divide-y divide-rule">
-                {filtered.map((r) => (
+                {filteredReports.map((r) => (
                   <li key={r.slug}>
                     <Link
                       to={`/reports/${r.slug}`}

@@ -23,9 +23,21 @@ type ManifestEntry = {
   topic: string;
   jurisdiction?: string;
   summary: string;
+  cluster?: string;
+  cluster_slug?: string;
 };
 
-type GeneratedMemo = ManifestEntry & { body: string };
+type GeneratedReport = ManifestEntry & { body: string };
+
+type Cluster = {
+  slug: string;
+  name: string;
+  topic: string;
+  summary: string;
+  reports: string[];
+  dateRange: { first: string; latest: string };
+  jurisdictions: string[];
+};
 
 function normalizeDate(value: unknown): string {
   if (value instanceof Date) return value.toISOString().slice(0, 10);
@@ -65,7 +77,7 @@ async function main() {
     throw new Error("index.json missing 'memos' array");
   }
 
-  const memos: GeneratedMemo[] = [];
+  const memos: GeneratedReport[] = [];
   const slugs = new Set<string>();
 
   for (const entry of manifest.memos) {
@@ -86,6 +98,8 @@ async function main() {
       topic: fm.topic || entry.topic,
       jurisdiction: fm.jurisdiction || entry.jurisdiction || "Unknown",
       summary: fm.summary || entry.summary,
+      cluster: fm.cluster || entry.cluster || "",
+      cluster_slug: fm.cluster_slug || entry.cluster_slug || "",
       body: cleanBody(parsed.content),
     });
     console.log(`[build-reports] + ${entry.slug}`);
@@ -93,9 +107,21 @@ async function main() {
 
   memos.sort((a, b) => (a.date < b.date ? 1 : -1));
 
+  // Fetch clusters.json — tolerate a 404 in case it's the pre-cluster state of the repo
+  let clusters: Cluster[] = [];
+  try {
+    const clustersRaw = await fetchText(`${RAW_BASE}/clusters.json`);
+    clusters = JSON.parse(clustersRaw) as Cluster[];
+    if (!Array.isArray(clusters)) throw new Error("clusters.json is not an array");
+    console.log(`[build-reports] Loaded ${clusters.length} clusters`);
+  } catch (e) {
+    console.warn(`[build-reports] clusters.json unavailable — falling back to empty list: ${e}`);
+    clusters = [];
+  }
+
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
-  fs.writeFileSync(OUT_FILE, JSON.stringify({ memos }, null, 2));
-  console.log(`[build-reports] Wrote ${memos.length} memo(s) to ${OUT_FILE}`);
+  fs.writeFileSync(OUT_FILE, JSON.stringify({ memos, clusters }, null, 2));
+  console.log(`[build-reports] Wrote ${memos.length} report(s) and ${clusters.length} cluster(s) to ${OUT_FILE}`);
 }
 
 main().catch((err) => {

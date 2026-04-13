@@ -2,13 +2,14 @@ import { useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReportsGraphTooltip from "./ReportsGraphTooltip";
 
-export type GraphReport = {
+export type GraphCluster = {
   slug: string;
-  title: string;
-  date: string;
+  name: string;
   topic: string;
-  jurisdiction: string;
   summary: string;
+  reports: string[];
+  dateRange: { first: string; latest: string };
+  jurisdictions: string[];
 };
 
 const VIEWBOX_W = 780;
@@ -28,78 +29,65 @@ function hashSlug(slug: string): number {
   return h;
 }
 
-type LaidOut = GraphReport & { x: number; y: number; r: number; color: string };
+type LaidOut = GraphCluster & { x: number; y: number; r: number; color: string };
 
 type HoverState = {
-  report: GraphReport;
+  cluster: GraphCluster;
   clientX: number;
   clientY: number;
 } | null;
 
-export default function ReportsGraph({ reports }: { reports: GraphReport[] }) {
+export default function ReportsGraph({ clusters }: { clusters: GraphCluster[] }) {
   const navigate = useNavigate();
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [hover, setHover] = useState<HoverState>(null);
 
-  // Distribute reports on their topic's orbit by slug-hash, then count jurisdictional neighbors for size
   const nodes = useMemo<LaidOut[]>(() => {
-    const byTopic: Record<string, GraphReport[]> = {};
-    for (const m of reports) {
-      const key = TOPICS[m.topic] ? m.topic : "privacy";
-      (byTopic[key] ||= []).push(m);
-    }
-
-    const jurCounts: Record<string, number> = {};
-    for (const m of reports) {
-      if (m.jurisdiction && m.jurisdiction !== "Unknown") {
-        jurCounts[m.jurisdiction] = (jurCounts[m.jurisdiction] || 0) + 1;
-      }
+    const byTopic: Record<string, GraphCluster[]> = {};
+    for (const c of clusters) {
+      const key = TOPICS[c.topic] ? c.topic : "privacy";
+      (byTopic[key] ||= []).push(c);
     }
 
     const out: LaidOut[] = [];
     for (const [topic, list] of Object.entries(byTopic)) {
       const cfg = TOPICS[topic];
-      list.forEach((m, i) => {
-        // Stable angle seeded by slug hash, plus small index-based jitter so same-hash collisions spread
-        const hash = hashSlug(m.slug);
+      list.forEach((c, i) => {
+        const hash = hashSlug(c.slug);
         const base = (hash % 360) * (Math.PI / 180);
         const offset = (i * 37) * (Math.PI / 180);
         const angle = base + offset;
         const x = cfg.cx + cfg.radius * Math.cos(angle);
         const y = cfg.cy + cfg.radius * Math.sin(angle);
-        const neighbors = jurCounts[m.jurisdiction] || 1;
-        const r = Math.max(5, Math.min(11, 4 + neighbors * 1.5));
-        out.push({ ...m, x, y, r, color: cfg.color });
+        const r = Math.max(6, Math.min(16, 5 + c.reports.length * 2.5));
+        out.push({ ...c, x, y, r, color: cfg.color });
       });
     }
     return out;
-  }, [reports]);
+  }, [clusters]);
 
-  // Edges: pairs sharing a non-Unknown jurisdiction
+  // Edges: clusters sharing any jurisdiction (excluding "Unknown")
   const edges = useMemo(() => {
     const e: Array<{ a: LaidOut; b: LaidOut }> = [];
     for (let i = 0; i < nodes.length; i++) {
       for (let j = i + 1; j < nodes.length; j++) {
         const a = nodes[i];
         const b = nodes[j];
-        if (
-          a.jurisdiction &&
-          a.jurisdiction !== "Unknown" &&
-          a.jurisdiction === b.jurisdiction
-        ) {
-          e.push({ a, b });
-        }
+        const overlap = a.jurisdictions.some(
+          (j) => j && j !== "Unknown" && b.jurisdictions.includes(j),
+        );
+        if (overlap) e.push({ a, b });
       }
     }
     return e;
   }, [nodes]);
 
-  function handleMove(e: React.MouseEvent<SVGCircleElement>, report: GraphReport) {
+  function handleMove(e: React.MouseEvent<SVGCircleElement>, cluster: GraphCluster) {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     setHover({
-      report,
+      cluster,
       clientX: e.clientX - rect.left,
       clientY: e.clientY - rect.top,
     });
@@ -112,9 +100,8 @@ export default function ReportsGraph({ reports }: { reports: GraphReport[] }) {
         viewBox={`0 0 ${VIEWBOX_W} ${VIEWBOX_H}`}
         className="w-full h-[320px] bg-cream border border-rule rounded"
         role="img"
-        aria-label="Knowledge graph of regulatory research reports organized by topic and jurisdiction"
+        aria-label="Knowledge graph of regulatory subject clusters"
       >
-        {/* Topic anchor glows */}
         {Object.entries(TOPICS).map(([k, cfg]) => (
           <g key={k}>
             <circle cx={cfg.cx} cy={cfg.cy} r={44} fill={cfg.color} opacity={0.14} />
@@ -132,24 +119,22 @@ export default function ReportsGraph({ reports }: { reports: GraphReport[] }) {
           </g>
         ))}
 
-        {/* Orbit rings */}
         <g fill="none" stroke="#c9b88f" strokeWidth={0.6} opacity={0.7}>
           {Object.values(TOPICS).map((cfg, i) => (
             <circle key={i} cx={cfg.cx} cy={cfg.cy} r={cfg.radius} />
           ))}
         </g>
 
-        {/* Jurisdictional edges */}
         <g stroke="#9a8b72" strokeWidth={0.8} opacity={0.55} strokeDasharray="2,2">
           {edges.map(({ a, b }, i) => (
             <line key={i} x1={a.x} y1={a.y} x2={b.x} y2={b.y} />
           ))}
         </g>
 
-        {/* Report nodes */}
+        {/* Cluster nodes */}
         <g>
           {nodes.map((n) => {
-            const isHover = hover?.report.slug === n.slug;
+            const isHover = hover?.cluster.slug === n.slug;
             return (
               <circle
                 key={n.slug}
@@ -163,18 +148,18 @@ export default function ReportsGraph({ reports }: { reports: GraphReport[] }) {
                 onMouseEnter={(e) => handleMove(e, n)}
                 onMouseMove={(e) => handleMove(e, n)}
                 onMouseLeave={() => setHover(null)}
-                onClick={() => navigate(`/reports/${n.slug}`)}
+                onClick={() => navigate(`/reports/cluster/${n.slug}`)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
-                    navigate(`/reports/${n.slug}`);
+                    navigate(`/reports/cluster/${n.slug}`);
                   }
                 }}
                 tabIndex={0}
                 role="button"
-                aria-label={`${n.title} — ${n.jurisdiction}, ${n.topic}, ${n.date}`}
+                aria-label={`${n.name} cluster — ${n.reports.length} reports`}
               >
-                <title>{n.title}</title>
+                <title>{n.name}</title>
               </circle>
             );
           })}
@@ -185,11 +170,10 @@ export default function ReportsGraph({ reports }: { reports: GraphReport[] }) {
         <ReportsGraphTooltip
           x={hover.clientX}
           y={hover.clientY}
-          title={hover.report.title}
-          topic={hover.report.topic}
-          jurisdiction={hover.report.jurisdiction}
-          date={hover.report.date}
-          summary={hover.report.summary}
+          name={hover.cluster.name}
+          topic={hover.cluster.topic}
+          reportCount={hover.cluster.reports.length}
+          summary={hover.cluster.summary}
         />
       )}
     </div>
