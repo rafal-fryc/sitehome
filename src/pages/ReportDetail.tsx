@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { useDocumentTitle } from "@/hooks/use-document-title";
 
 type Memo = {
   slug: string;
@@ -19,6 +20,10 @@ export default function ReportDetail() {
   const [memo, setMemo] = useState<Memo | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [notFound, setNotFound] = useState(false);
+
+  useDocumentTitle(
+    memo ? `${memo.title} | Rafal's Portfolio` : "Memo | Rafal's Portfolio",
+  );
 
   useEffect(() => {
     fetch("/data/reports.json")

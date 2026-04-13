@@ -3,8 +3,10 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ArticlesSection from '@/components/ArticlesSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import { useDocumentTitle } from '@/hooks/use-document-title';
 
 const Index = () => {
+  useDocumentTitle("Rafal's Portfolio");
   const [activeSection, setActiveSection] = useState('home');
 
   const renderSection = () => {

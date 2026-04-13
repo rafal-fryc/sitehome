@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useDocumentTitle } from "@/hooks/use-document-title";
 
 type MemoListing = {
   slug: string;
@@ -15,6 +16,7 @@ const TOPICS = ["all", "privacy", "cybersecurity", "ai-law"] as const;
 type Topic = (typeof TOPICS)[number];
 
 export default function ReportsIndex() {
+  useDocumentTitle("Regulatory Research Memos | Rafal's Portfolio");
   const [data, setData] = useState<ReportsData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [filter, setFilter] = useState<Topic>("all");
