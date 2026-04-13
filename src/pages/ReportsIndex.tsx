@@ -2,10 +2,10 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDocumentTitle } from "@/hooks/use-document-title";
 import ReportsStatsBar from "@/components/reports/ReportsStatsBar";
-import ReportsGraph, { GraphMemo } from "@/components/reports/ReportsGraph";
+import ReportsGraph, { GraphReport } from "@/components/reports/ReportsGraph";
 
-type Memo = GraphMemo;
-type ReportsData = { memos: Memo[] };
+type Report = GraphReport;
+type ReportsData = { memos: Report[] };
 
 const TOPICS = ["all", "privacy", "cybersecurity", "ai-law"] as const;
 type Topic = (typeof TOPICS)[number];
@@ -33,16 +33,16 @@ export default function ReportsIndex() {
       .catch((e) => setError(String(e)));
   }, []);
 
-  const allMemos = data?.memos ?? [];
+  const allReports = data?.memos ?? [];
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return allMemos.filter((m) => {
-      if (topic !== "all" && m.topic !== topic) return false;
-      if (q && !(m.title + " " + m.summary).toLowerCase().includes(q)) return false;
+    return allReports.filter((r) => {
+      if (topic !== "all" && r.topic !== topic) return false;
+      if (q && !(r.title + " " + r.summary).toLowerCase().includes(q)) return false;
       return true;
     });
-  }, [allMemos, topic, query]);
+  }, [allReports, topic, query]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -61,7 +61,7 @@ export default function ReportsIndex() {
 
         {data && (
           <>
-            <ReportsStatsBar memos={allMemos} />
+            <ReportsStatsBar reports={allReports} />
 
             <div className="flex flex-wrap gap-2 mb-4 items-center">
               {TOPICS.map((t) => (
@@ -81,7 +81,7 @@ export default function ReportsIndex() {
               ))}
               <input
                 type="search"
-                placeholder="Search memos…"
+                placeholder="Search reports…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 className="flex-1 min-w-[160px] px-3 py-1 text-xs rounded-full border border-border bg-background font-garamond focus:outline-none focus:ring-2 focus:ring-ring"
@@ -89,12 +89,12 @@ export default function ReportsIndex() {
             </div>
 
             <div className="hidden md:block mb-6">
-              <ReportsGraph memos={filtered} />
+              <ReportsGraph reports={filtered} />
             </div>
 
             <div className="mb-2 flex items-baseline justify-between">
               <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                {topic === "all" ? "All memos" : `${topic} memos`}
+                {topic === "all" ? "All reports" : `${topic} reports`}
                 {query && ` matching "${query}"`}
               </div>
               <div className="text-[11px] text-muted-foreground">sorted by date ↓</div>
@@ -102,27 +102,27 @@ export default function ReportsIndex() {
 
             {filtered.length === 0 ? (
               <div className="text-muted-foreground text-sm border border-rule rounded p-6 text-center">
-                No memos match.
+                No reports match.
               </div>
             ) : (
               <ul className="bg-cream border border-rule rounded divide-y divide-rule">
-                {filtered.map((m) => (
-                  <li key={m.slug}>
+                {filtered.map((r) => (
+                  <li key={r.slug}>
                     <Link
-                      to={`/reports/${m.slug}`}
+                      to={`/reports/${r.slug}`}
                       className="grid grid-cols-[16px_1fr_110px_70px] gap-3 items-center px-4 py-3 hover:bg-background transition"
                     >
                       <span
                         className="w-2 h-2 rounded-full"
-                        style={{ backgroundColor: TOPIC_DOT[m.topic] || "#888" }}
+                        style={{ backgroundColor: TOPIC_DOT[r.topic] || "#888" }}
                         aria-hidden
                       />
-                      <span className="text-sm font-garamond leading-snug">{m.title}</span>
+                      <span className="text-sm font-garamond leading-snug">{r.title}</span>
                       <span className="text-xs text-muted-foreground font-garamond truncate">
-                        {m.jurisdiction}
+                        {r.jurisdiction}
                       </span>
                       <span className="text-xs text-muted-foreground font-garamond text-right">
-                        {m.date}
+                        {r.date}
                       </span>
                     </Link>
                   </li>

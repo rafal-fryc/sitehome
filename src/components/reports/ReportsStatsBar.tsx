@@ -1,20 +1,20 @@
-type Memo = {
+type Report = {
   slug: string;
   date: string;
   topic: string;
   jurisdiction: string;
 };
 
-export default function ReportsStatsBar({ memos }: { memos: Memo[] }) {
-  const topics = new Set(memos.map((m) => m.topic));
-  const jurisdictions = new Set(memos.map((m) => m.jurisdiction).filter((j) => j && j !== "Unknown"));
-  const latest = memos.reduce((max, m) => (m.date > max ? m.date : max), "");
+export default function ReportsStatsBar({ reports }: { reports: Report[] }) {
+  const topics = new Set(reports.map((r) => r.topic));
+  const jurisdictions = new Set(reports.map((r) => r.jurisdiction).filter((j) => j && j !== "Unknown"));
+  const latest = reports.reduce((max, r) => (r.date > max ? r.date : max), "");
   const latestFormatted = latest
     ? new Date(latest).toLocaleDateString("en-US", { month: "short", day: "numeric" })
     : "—";
 
   const cards = [
-    { big: memos.length.toString(), label: "memos" },
+    { big: reports.length.toString(), label: "reports" },
     { big: topics.size.toString(), label: "topics" },
     { big: jurisdictions.size.toString(), label: "jurisdictions" },
     { big: latestFormatted, label: "latest" },

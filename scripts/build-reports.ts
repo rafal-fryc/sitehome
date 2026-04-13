@@ -33,6 +33,21 @@ function normalizeDate(value: unknown): string {
   throw new Error(`Invalid date: ${String(value)}`);
 }
 
+function cleanBody(body: string): string {
+  // Strip in-body "Related Reports" section — the site provides its own
+  // related-reports footer with working links, and the embedded section
+  // is either empty ("No related reports found in the knowledge base.")
+  // or has broken markdown-relative links.
+  let out = body.replace(
+    /^##\s+Related\s+Reports[\s\S]*?(?=^##\s|\Z)/gim,
+    "",
+  );
+  // Strip confidence tags like "[HIGH confidence]", "[MEDIUM confidence]",
+  // "[LOW confidence]" that the pipeline appends to headings.
+  out = out.replace(/\s*\[(HIGH|MEDIUM|LOW)\s+confidence\]/gi, "");
+  return out.trim();
+}
+
 async function fetchText(url: string): Promise<string> {
   const res = await fetch(url);
   if (!res.ok) {
@@ -71,7 +86,7 @@ async function main() {
       topic: fm.topic || entry.topic,
       jurisdiction: fm.jurisdiction || entry.jurisdiction || "Unknown",
       summary: fm.summary || entry.summary,
-      body: parsed.content.trim(),
+      body: cleanBody(parsed.content),
     });
     console.log(`[build-reports] + ${entry.slug}`);
   }

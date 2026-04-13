@@ -2,7 +2,7 @@ import { useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReportsGraphTooltip from "./ReportsGraphTooltip";
 
-export type GraphMemo = {
+export type GraphReport = {
   slug: string;
   title: string;
   date: string;
@@ -28,30 +28,30 @@ function hashSlug(slug: string): number {
   return h;
 }
 
-type LaidOut = GraphMemo & { x: number; y: number; r: number; color: string };
+type LaidOut = GraphReport & { x: number; y: number; r: number; color: string };
 
 type HoverState = {
-  memo: GraphMemo;
+  report: GraphReport;
   clientX: number;
   clientY: number;
 } | null;
 
-export default function ReportsGraph({ memos }: { memos: GraphMemo[] }) {
+export default function ReportsGraph({ reports }: { reports: GraphReport[] }) {
   const navigate = useNavigate();
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [hover, setHover] = useState<HoverState>(null);
 
-  // Distribute memos on their topic's orbit by slug-hash, then count jurisdictional neighbors for size
+  // Distribute reports on their topic's orbit by slug-hash, then count jurisdictional neighbors for size
   const nodes = useMemo<LaidOut[]>(() => {
-    const byTopic: Record<string, GraphMemo[]> = {};
-    for (const m of memos) {
+    const byTopic: Record<string, GraphReport[]> = {};
+    for (const m of reports) {
       const key = TOPICS[m.topic] ? m.topic : "privacy";
       (byTopic[key] ||= []).push(m);
     }
 
     const jurCounts: Record<string, number> = {};
-    for (const m of memos) {
+    for (const m of reports) {
       if (m.jurisdiction && m.jurisdiction !== "Unknown") {
         jurCounts[m.jurisdiction] = (jurCounts[m.jurisdiction] || 0) + 1;
       }
@@ -74,7 +74,7 @@ export default function ReportsGraph({ memos }: { memos: GraphMemo[] }) {
       });
     }
     return out;
-  }, [memos]);
+  }, [reports]);
 
   // Edges: pairs sharing a non-Unknown jurisdiction
   const edges = useMemo(() => {
@@ -95,11 +95,11 @@ export default function ReportsGraph({ memos }: { memos: GraphMemo[] }) {
     return e;
   }, [nodes]);
 
-  function handleMove(e: React.MouseEvent<SVGCircleElement>, memo: GraphMemo) {
+  function handleMove(e: React.MouseEvent<SVGCircleElement>, report: GraphReport) {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     setHover({
-      memo,
+      report,
       clientX: e.clientX - rect.left,
       clientY: e.clientY - rect.top,
     });
@@ -112,7 +112,7 @@ export default function ReportsGraph({ memos }: { memos: GraphMemo[] }) {
         viewBox={`0 0 ${VIEWBOX_W} ${VIEWBOX_H}`}
         className="w-full h-[320px] bg-cream border border-rule rounded"
         role="img"
-        aria-label="Knowledge graph of regulatory research memos organized by topic and jurisdiction"
+        aria-label="Knowledge graph of regulatory research reports organized by topic and jurisdiction"
       >
         {/* Topic anchor glows */}
         {Object.entries(TOPICS).map(([k, cfg]) => (
@@ -146,7 +146,7 @@ export default function ReportsGraph({ memos }: { memos: GraphMemo[] }) {
           ))}
         </g>
 
-        {/* Memo nodes */}
+        {/* Report nodes */}
         <g>
           {nodes.map((n) => {
             const isHover = hover?.memo.slug === n.slug;
@@ -185,11 +185,11 @@ export default function ReportsGraph({ memos }: { memos: GraphMemo[] }) {
         <ReportsGraphTooltip
           x={hover.clientX}
           y={hover.clientY}
-          title={hover.memo.title}
-          topic={hover.memo.topic}
-          jurisdiction={hover.memo.jurisdiction}
-          date={hover.memo.date}
-          summary={hover.memo.summary}
+          title={hover.report.title}
+          topic={hover.report.topic}
+          jurisdiction={hover.report.jurisdiction}
+          date={hover.report.date}
+          summary={hover.report.summary}
         />
       )}
     </div>

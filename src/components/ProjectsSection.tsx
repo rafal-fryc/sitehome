@@ -50,8 +50,8 @@ const ProjectsSection = () => {
       demoUrl: "/FTCAnalytics"
     },
     {
-      title: "Zwiad — Regulatory Research Memos",
-      description: "Source-verified regulatory intelligence memos on US privacy, cybersecurity, and AI law developments. Produced by a multi-agent Claude Code pipeline that scans sources, researches findings, and fact-checks before publishing.",
+      title: "Zwiad Regulatory Monitoring",
+      description: "Source-verified regulatory intelligence reports on US privacy, cybersecurity, and AI law developments. Produced by a multi-agent Claude Code pipeline that scans sources, researches findings, and fact-checks before publishing.",
       technologies: ["Claude Code", "Multi-Agent Pipeline", "Regulatory Research"],
       status: "Live",
       icon: ScrollText,
