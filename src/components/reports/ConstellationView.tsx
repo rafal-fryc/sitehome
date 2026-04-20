@@ -417,20 +417,12 @@ export function ConstellationView({
         )}
       </div>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: active ? "1fr 380px" : "1fr",
-          border: `1px solid ${ZWIAD.rule}`,
-          background: "#0b1118",
-          transition: "grid-template-columns 300ms",
-        }}
-      >
+      <div>
         <div
           ref={containerRef}
           style={{
             position: "relative",
-            borderRight: active ? `1px solid ${ZWIAD.rule}` : "none",
+            border: `1px solid ${ZWIAD.rule}`,
             background: "#0b1118",
             cursor: isDragging ? "grabbing" : "grab",
             overflow: "hidden",
@@ -743,15 +735,17 @@ export function ConstellationView({
           </div>
         </div>
 
-        {active && (
-          <div
-            style={{
-              padding: "18px 22px",
-              background: ZWIAD.cream,
-              maxHeight: 700,
-              overflow: "auto",
-            }}
-          >
+      </div>
+
+      {active && (
+        <div
+          style={{
+            padding: "18px 22px",
+            background: ZWIAD.cream,
+            border: `1px solid ${ZWIAD.rule}`,
+            marginTop: 16,
+          }}
+        >
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
               <TopicDot topic={active.topic} />
               <Label>
@@ -850,7 +844,6 @@ export function ConstellationView({
             </div>
           </div>
         )}
-      </div>
     </div>
   );
 }
