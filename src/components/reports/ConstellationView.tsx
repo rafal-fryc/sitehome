@@ -324,12 +324,12 @@ export function ConstellationView({
   }, [edgeMode, visibleClusters, eased]);
 
   const hoverEdges = useMemo<[Node, Node][]>(() => {
-    if (edgeMode !== "hover" || !hoverCluster) return [];
+    if (edgeMode !== "hover" || !hoverCluster || activeCluster) return [];
     const src = laid.find((n) => n.slug === hoverCluster);
     if (!src) return [];
     return laid.filter((n) => n.slug !== hoverCluster && n.topic === src.topic).map((n) => [src, n]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [edgeMode, hoverCluster, visibleClusters, eased]);
+  }, [edgeMode, hoverCluster, activeCluster, visibleClusters, eased]);
 
   const zoom = VBW / Math.max(1, view.w);
 
