@@ -1,165 +1,171 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDocumentTitle } from "@/hooks/use-document-title";
-import ReportsStatsBar from "@/components/reports/ReportsStatsBar";
-import ReportsGraph, { GraphCluster } from "@/components/reports/ReportsGraph";
+import { useReportsData } from "@/hooks/useReportsData";
+import { ConstellationView } from "@/components/reports/ConstellationView";
+import { ReportModal } from "@/components/reports/ReportModal";
+import { StatCard, TopicChip } from "@/components/reports/primitives";
+import { ZWIAD } from "@/components/reports/tokens";
+import type { EnrichedMemo, FilterKey } from "@/types/reports";
 
-type Report = {
-  slug: string;
-  title: string;
-  date: string;
-  topic: string;
-  jurisdiction: string;
-  summary: string;
-  cluster?: string;
-  cluster_slug?: string;
-};
-
-type ReportsData = { memos: Report[]; clusters: GraphCluster[] };
-
-const TOPICS = ["all", "privacy", "cybersecurity", "ai-law"] as const;
-type Topic = (typeof TOPICS)[number];
-
-const TOPIC_DOT: Record<string, string> = {
-  privacy: "#9a6b3f",
-  cybersecurity: "#2d5c5c",
-  "ai-law": "#8a3a3a",
-};
+const TOPIC_ORDER: FilterKey[] = ["all", "privacy", "cybersecurity", "ai-law"];
 
 export default function ReportsIndex() {
   useDocumentTitle("Zwiad Regulatory Monitoring | Rafal's Portfolio");
-  const [data, setData] = useState<ReportsData | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [topic, setTopic] = useState<Topic>("all");
+  const { data, isLoading, error } = useReportsData();
+  const [filter, setFilter] = useState<FilterKey>("all");
   const [query, setQuery] = useState("");
+  const [openReport, setOpenReport] = useState<EnrichedMemo | null>(null);
 
-  useEffect(() => {
-    fetch("/data/reports.json")
-      .then((r) => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
-      .then(setData)
-      .catch((e) => setError(String(e)));
-  }, []);
-
-  const allReports = data?.memos ?? [];
-  const allClusters = data?.clusters ?? [];
-
-  const filteredReports = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    return allReports.filter((r) => {
-      if (topic !== "all" && r.topic !== topic) return false;
-      if (q) {
-        const haystack = `${r.title} ${r.summary} ${r.cluster || ""}`.toLowerCase();
-        if (!haystack.includes(q)) return false;
-      }
-      return true;
-    });
-  }, [allReports, topic, query]);
-
-  const filteredClusters = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    return allClusters.filter((c) => {
-      if (topic !== "all" && c.topic !== topic) return false;
-      if (q) {
-        const haystack = `${c.name} ${c.summary}`.toLowerCase();
-        if (!haystack.includes(q)) return false;
-      }
-      return true;
-    });
-  }, [allClusters, topic, query]);
+  const topicCounts = useMemo(() => {
+    const out: Record<FilterKey, number> = { all: 0, privacy: 0, cybersecurity: 0, "ai-law": 0 };
+    if (!data) return out;
+    out.all = data.memos.length;
+    for (const m of data.memos) out[m.topic] = (out[m.topic] ?? 0) + 1;
+    return out;
+  }, [data]);
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-4 py-10">
-        <div className="mb-6">
-          <Link to="/" className="text-sm text-muted-foreground hover:underline">
+    <div
+      style={{
+        minHeight: "100vh",
+        background: ZWIAD.background,
+        color: ZWIAD.foreground,
+        fontFamily: "'EB Garamond', serif",
+      }}
+    >
+      <div style={{ maxWidth: 1040, margin: "0 auto", padding: "40px 16px" }}>
+        <div style={{ marginBottom: 18 }}>
+          <Link
+            to="/"
+            style={{
+              fontSize: 13,
+              color: ZWIAD.muted,
+              textDecoration: "none",
+            }}
+          >
             ← Home
           </Link>
-          <h1 className="text-3xl font-bold mt-4 font-garamond">Zwiad Regulatory Monitoring</h1>
-          <p className="text-muted-foreground mt-2 font-garamond">
+          <h1
+            style={{
+              fontFamily: "'EB Garamond', serif",
+              fontWeight: 700,
+              fontSize: 36,
+              letterSpacing: "-0.015em",
+              margin: "14px 0 6px",
+              color: ZWIAD.foreground,
+              lineHeight: 1.1,
+            }}
+          >
+            Zwiad Regulatory Monitoring
+          </h1>
+          <p style={{ color: ZWIAD.muted, margin: 0, fontSize: 16 }}>
             Privacy, cybersecurity, and AI-law developments across US state and federal jurisdictions.
           </p>
         </div>
 
-        {error && <div className="text-destructive mb-4">Failed to load reports: {error}</div>}
+        {isLoading && (
+          <div style={{ padding: 60, textAlign: "center", color: ZWIAD.muted }}>
+            Loading reports…
+          </div>
+        )}
+        {error && (
+          <div style={{ padding: 60, textAlign: "center", color: ZWIAD.destructive }}>
+            Failed to load reports data.
+          </div>
+        )}
 
         {data && (
           <>
-            <ReportsStatsBar reports={allReports} clusterCount={allClusters.length} />
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(5, 1fr)",
+                gap: 10,
+                marginBottom: 16,
+              }}
+            >
+              <StatCard big={data.stats.reports} label="reports" />
+              <StatCard big={data.stats.topics} label="topics" />
+              <StatCard big={data.stats.clusters} label="clusters" />
+              <StatCard big={data.stats.jurisdictions} label="jurisdictions" />
+              <StatCard
+                big={data.stats.latestFormatted}
+                label="latest"
+                accent={ZWIAD.topics.privacy.color}
+              />
+            </div>
 
-            <div className="flex flex-wrap gap-2 mb-4 items-center">
-              {TOPICS.map((t) => (
-                <button
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: 8,
+                alignItems: "center",
+                marginBottom: 18,
+              }}
+            >
+              {TOPIC_ORDER.map((t) => (
+                <TopicChip
                   key={t}
-                  type="button"
-                  onClick={() => setTopic(t)}
-                  aria-pressed={topic === t}
-                  className={`px-3 py-1 text-xs rounded-full border transition font-garamond ${
-                    topic === t
-                      ? "bg-foreground text-background border-foreground"
-                      : "bg-background border-border hover:bg-muted"
-                  }`}
-                >
-                  {t}
-                </button>
+                  topic={t}
+                  active={filter === t}
+                  onClick={() => setFilter(t)}
+                  count={topicCounts[t]}
+                />
               ))}
               <input
                 type="search"
                 placeholder="Search clusters and reports…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="flex-1 min-w-[200px] px-3 py-1 text-xs rounded-full border border-border bg-background font-garamond focus:outline-none focus:ring-2 focus:ring-ring"
+                style={{
+                  flex: 1,
+                  minWidth: 220,
+                  fontFamily: "'EB Garamond', serif",
+                  fontSize: 14,
+                  background: ZWIAD.background,
+                  border: `1px solid ${ZWIAD.rule}`,
+                  padding: "4px 12px",
+                  borderRadius: 999,
+                  color: ZWIAD.foreground,
+                }}
               />
             </div>
 
-            <div className="hidden md:block mb-6">
-              <ReportsGraph clusters={filteredClusters} />
-            </div>
+            <ConstellationView
+              memos={data.memos}
+              clusters={data.clusters}
+              filter={filter}
+              query={query}
+              onOpenReport={setOpenReport}
+              bgStyle="map"
+              edgeMode="hover"
+            />
 
-            <div className="mb-2 flex items-baseline justify-between">
-              <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                {topic === "all" ? "All reports" : `${topic} reports`}
-                {query && ` matching "${query}"`}
-              </div>
-              <div className="text-[11px] text-muted-foreground">sorted by date ↓</div>
-            </div>
-
-            {filteredReports.length === 0 ? (
-              <div className="text-muted-foreground text-sm border border-rule rounded p-6 text-center">
-                No reports match.
-              </div>
-            ) : (
-              <ul className="bg-cream border border-rule rounded divide-y divide-rule">
-                {filteredReports.map((r) => (
-                  <li key={r.slug}>
-                    <Link
-                      to={`/reports/${r.slug}`}
-                      className="grid grid-cols-[16px_1fr_110px_70px] gap-3 items-center px-4 py-3 hover:bg-background transition"
-                    >
-                      <span
-                        className="w-2 h-2 rounded-full"
-                        style={{ backgroundColor: TOPIC_DOT[r.topic] || "#888" }}
-                        aria-hidden
-                      />
-                      <span className="text-sm font-garamond leading-snug">{r.title}</span>
-                      <span className="text-xs text-muted-foreground font-garamond truncate">
-                        {r.jurisdiction}
-                      </span>
-                      <span className="text-xs text-muted-foreground font-garamond text-right">
-                        {r.date}
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
+            <footer
+              style={{
+                marginTop: 48,
+                paddingTop: 18,
+                borderTop: `1px solid ${ZWIAD.rule}`,
+                color: ZWIAD.muted,
+                fontSize: 12,
+                display: "flex",
+                justifyContent: "space-between",
+                flexWrap: "wrap",
+                gap: 8,
+              }}
+            >
+              <span>Zwiad Regulatory Monitoring</span>
+              <span>
+                Data through {data.stats.latestFormatted} · {data.stats.reports} reports
+              </span>
+            </footer>
           </>
         )}
-
-        {!error && !data && <div className="text-muted-foreground">Loading…</div>}
       </div>
+
+      <ReportModal report={openReport} onClose={() => setOpenReport(null)} />
     </div>
   );
 }
