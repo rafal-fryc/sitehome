@@ -15,6 +15,17 @@ const BRANCH = "main";
 const RAW_BASE = `https://raw.githubusercontent.com/${REPO}/${BRANCH}`;
 const OUT_FILE = path.resolve("public/data/reports.json");
 
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+if (!GITHUB_TOKEN) {
+  throw new Error(
+    "GITHUB_TOKEN env var is required — zwiad-reports is private. " +
+      "Set it locally in .env.local and in Vercel project env vars."
+  );
+}
+const AUTH_HEADERS: Record<string, string> = {
+  Authorization: `Bearer ${GITHUB_TOKEN}`,
+};
+
 type ManifestEntry = {
   slug: string;
   file: string;
@@ -61,7 +72,7 @@ function cleanBody(body: string): string {
 }
 
 async function fetchText(url: string): Promise<string> {
-  const res = await fetch(url);
+  const res = await fetch(url, { headers: AUTH_HEADERS });
   if (!res.ok) {
     throw new Error(`Fetch ${url} failed: ${res.status} ${res.statusText}`);
   }
