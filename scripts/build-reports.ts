@@ -12,8 +12,21 @@ import matter from "gray-matter";
 
 const REPO = "rafal-fryc/zwiad-reports";
 const BRANCH = "main";
-const RAW_BASE = `https://raw.githubusercontent.com/${REPO}/${BRANCH}`;
+const API_BASE = `https://api.github.com/repos/${REPO}/contents`;
 const OUT_FILE = path.resolve("public/data/reports.json");
+
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+if (!GITHUB_TOKEN) {
+  console.error(
+    "[build-reports] FAILED: GITHUB_TOKEN env var is required to read the private zwiad-reports repo. " +
+      "Set it locally (export GITHUB_TOKEN=...) or in Vercel Project Settings → Environment Variables.",
+  );
+  process.exit(1);
+}
+
+function contentUrl(filePath: string): string {
+  return `${API_BASE}/${filePath}?ref=${BRANCH}`;
+}
 
 type ManifestEntry = {
   slug: string;
@@ -61,7 +74,13 @@ function cleanBody(body: string): string {
 }
 
 async function fetchText(url: string): Promise<string> {
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      Accept: "application/vnd.github.raw",
+      "User-Agent": "sitehome-build",
+    },
+  });
   if (!res.ok) {
     throw new Error(`Fetch ${url} failed: ${res.status} ${res.statusText}`);
   }
@@ -69,8 +88,8 @@ async function fetchText(url: string): Promise<string> {
 }
 
 async function main() {
-  console.log(`[build-reports] Fetching manifest from ${RAW_BASE}/index.json`);
-  const manifestRaw = await fetchText(`${RAW_BASE}/index.json`);
+  console.log(`[build-reports] Fetching manifest from ${contentUrl("index.json")}`);
+  const manifestRaw = await fetchText(contentUrl("index.json"));
   const manifest = JSON.parse(manifestRaw) as { memos: ManifestEntry[] };
 
   if (!Array.isArray(manifest.memos)) {
@@ -86,7 +105,7 @@ async function main() {
     }
     slugs.add(entry.slug);
 
-    const raw = await fetchText(`${RAW_BASE}/${entry.file}`);
+    const raw = await fetchText(contentUrl(entry.file));
     const parsed = matter(raw);
     const fm = parsed.data as Partial<ManifestEntry>;
 
@@ -110,7 +129,7 @@ async function main() {
   // Fetch clusters.json — tolerate a 404 in case it's the pre-cluster state of the repo
   let clusters: Cluster[] = [];
   try {
-    const clustersRaw = await fetchText(`${RAW_BASE}/clusters.json`);
+    const clustersRaw = await fetchText(contentUrl("clusters.json"));
     clusters = JSON.parse(clustersRaw) as Cluster[];
     if (!Array.isArray(clusters)) throw new Error("clusters.json is not an array");
     console.log(`[build-reports] Loaded ${clusters.length} clusters`);
