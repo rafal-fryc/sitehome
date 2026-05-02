@@ -579,22 +579,6 @@ export default function IVO() {
         </div>
       </section>
 
-      <footer className="foot">
-        <div className="wrap">
-          <div>
-            <span className="label">Colophon</span>
-            <h4>Set in EB Garamond, with JetBrains Mono.</h4>
-            <p>
-              Citations refer to bills as introduced or amended: Minnesota S.F. No. 4636 (94th Sess., 2026, Sens. Frentz &amp; Lucero); Ohio H.B. No. 628 (136th Gen. Assembly, Reg. Sess. 2025–26, Rep. Mathews); California S.B. 813 (Sen. McNerney, as amended).
-            </p>
-          </div>
-          <div className="sig">
-            <span className="label">Compiled by</span>
-            <span className="name">Rafal Fryc</span><br />
-            <a href="https://www.rafalsportfolio.me/">rafalsportfolio.me</a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

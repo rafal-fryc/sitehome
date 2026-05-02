@@ -146,16 +146,6 @@
 .ivo-page table.matrix .v em { font-style: italic; color: var(--diverge); }
 .ivo-page table.matrix .cite { display: block; font-family: "JetBrains Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 5px; letter-spacing: .02em; }
 
-/* FOOTER */
-.ivo-page footer.foot { background: var(--ink); color: #c9bfa0; padding: 52px 0 72px; border-top: 1px solid var(--rule); }
-.ivo-page footer.foot .wrap { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
-.ivo-page footer.foot h4 { font-family: "EB Garamond", serif; font-size: 30px; font-weight: 500; font-style: italic; margin: 0 0 12px; letter-spacing: -.015em; line-height: 1.1; color: var(--paper); }
-.ivo-page footer.foot p { font-family: "EB Garamond", serif; font-size: 14.5px; line-height: 1.65; color: #bdb594; margin: 0; }
-.ivo-page footer.foot a { color: var(--ca); text-decoration-thickness: 1px; }
-.ivo-page footer.foot .label { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #8a8268; display: block; margin-bottom: 8px; }
-.ivo-page footer.foot .sig { text-align: right; }
-.ivo-page footer.foot .sig .name { font-family: "EB Garamond", serif; font-style: italic; font-size: 24px; color: var(--paper); font-weight: 500; }
-
 /* responsive */
 @media (max-width: 1024px) {
   .ivo-page .plates { grid-template-columns: 1fr; }
@@ -165,8 +155,6 @@
   .ivo-page .twocol { grid-template-columns: 1fr; }
   .ivo-page .toc { grid-template-columns: 1fr; }
   .ivo-page .toc a { border-right: none; }
-  .ivo-page footer.foot .wrap { grid-template-columns: 1fr; }
-  .ivo-page footer.foot .sig { text-align: left; }
   .ivo-page .secrow .secnum { display: none; }
 }
 @media print {
