@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Gavel, Search, FileCheck, Calculator, BarChart3, ScrollText } from "lucide-react";
+import { Github, ExternalLink, Gavel, Search, FileCheck, Calculator, BarChart3, ScrollText, Scale } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
@@ -21,6 +21,15 @@ const ProjectsSection = () => {
       icon: FileCheck,
       githubUrl: "#",
       demoUrl: "/GDPRorders"
+    },
+    {
+      title: "IVO Comparison · MN · OH · CA",
+      description: "Side-by-side reading of three Independent Verification Organization bills — Minnesota S.F. 4636, Ohio H.B. 628, and California S.B. 813. Six mind-map branches, twenty-one matrix dimensions, every cell carrying its statutory citation.",
+      technologies: ["Comparative Statutes", "AI Regulation", "Editorial Design"],
+      status: "Live",
+      icon: Scale,
+      githubUrl: "#",
+      demoUrl: "/ivo"
     },
     {
       title: "Statute Analysis Guide",

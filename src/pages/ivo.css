@@ -1,0 +1,175 @@
+.ivo-page {
+  --ink: #10182c;
+  --ink-2: #2c3550;
+  --muted: #6a7088;
+  --line: #dad2b8;
+  --line-2: #c4b994;
+  --paper: #f3ecd5;
+  --paper-2: #ede4c5;
+  --card: #fbf6e1;
+  --rule: #94734a;
+  --mn: #1c3f8a;
+  --mn-tint: #dfe6f1;
+  --oh: #9b1d29;
+  --oh-tint: #f3ddde;
+  --ca: #a86a18;
+  --ca-tint: #f4e3c4;
+  --shared: #1f5236;
+  --shared-tint: #dde9d8;
+  --diverge: #7a2330;
+  --diverge-tint: #efd9d8;
+
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "EB Garamond", "Charter", "Iowan Old Style", ui-serif, serif;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(168, 106, 24, 0.05), transparent 55%),
+    radial-gradient(circle at 85% 100%, rgba(28, 63, 138, 0.05), transparent 55%);
+  min-height: 100vh;
+}
+.ivo-page * { box-sizing: border-box; }
+.ivo-page a { color: var(--mn); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.ivo-page a:hover { color: var(--oh); }
+.ivo-page .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+.ivo-page .wrap { max-width: 1180px; margin: 0 auto; padding: 0 36px; }
+.ivo-page .meta { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+/* HERO */
+.ivo-page header.hero { padding: 64px 0 40px; border-bottom: 1px solid var(--line-2); }
+.ivo-page .eyebrow-row { display: flex; gap: 10px; align-items: center; margin-bottom: 22px; flex-wrap: wrap; }
+.ivo-page .chip { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 5px 11px; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); }
+.ivo-page .chip.fill { background: var(--ink); color: var(--paper); }
+.ivo-page .chip.ca { background: var(--ca); border-color: var(--ca); color: var(--ink); }
+
+.ivo-page h1.title { font-family: "EB Garamond", serif; font-size: clamp(48px, 7vw, 84px); line-height: 1.04; letter-spacing: -.015em; margin: 8px 0 14px; font-weight: 500; text-wrap: balance; }
+.ivo-page h1.title em { font-style: italic; font-weight: 400; }
+.ivo-page h1.title .mn-acc { color: var(--mn); }
+.ivo-page h1.title .oh-acc { color: var(--oh); }
+.ivo-page h1.title .ca-acc { color: var(--ca); }
+.ivo-page .subtitle { font-family: "EB Garamond", serif; font-style: italic; font-size: 22px; color: var(--ink-2); margin: 6px 0 24px; font-weight: 400; max-width: 820px; }
+.ivo-page p.lede { font-size: 18.5px; line-height: 1.65; color: var(--ink-2); max-width: 820px; margin: 0; text-wrap: pretty; }
+.ivo-page p.lede strong { color: var(--ink); font-weight: 600; }
+
+/* STATE PLATES */
+.ivo-page .plates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+.ivo-page .plate { background: var(--card); border: 1px solid var(--line-2); padding: 22px 24px 20px; position: relative; }
+.ivo-page .plate::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+.ivo-page .plate.mn::before { background: var(--mn); }
+.ivo-page .plate.oh::before { background: var(--oh); }
+.ivo-page .plate.ca::before { background: var(--ca); }
+.ivo-page .plate .pcrest { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.ivo-page .plate .abbr { font-family: "EB Garamond", serif; font-size: 38px; font-weight: 600; line-height: 1; letter-spacing: -.01em; }
+.ivo-page .plate.mn .abbr { color: var(--mn); }
+.ivo-page .plate.oh .abbr { color: var(--oh); }
+.ivo-page .plate.ca .abbr { color: var(--ca); }
+.ivo-page .plate .billno { font-family: "JetBrains Mono", monospace; font-size: 11.5px; letter-spacing: .1em; color: var(--muted); text-transform: uppercase; }
+.ivo-page .plate .pname { font-family: "EB Garamond", serif; font-size: 22px; font-weight: 600; letter-spacing: -.01em; margin: 8px 0 4px; color: var(--ink); }
+.ivo-page .plate .pmeta { font-size: 14px; color: var(--ink-2); line-height: 1.55; font-style: italic; }
+
+/* SECTIONS */
+.ivo-page section.block { padding: 64px 0; }
+.ivo-page section.block + section.block { border-top: 1px solid var(--line-2); }
+.ivo-page .secrow { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 28px; flex-wrap: wrap; }
+.ivo-page .secrow .sectag { font-family: "JetBrains Mono", monospace; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding-bottom: 4px; border-bottom: 1px solid var(--rule); }
+.ivo-page .secrow .secnum { font-family: "EB Garamond", serif; font-size: 84px; line-height: .85; font-weight: 400; font-style: italic; color: var(--ink); opacity: .1; letter-spacing: -.04em; }
+.ivo-page h3.head { font-family: "EB Garamond", serif; font-size: clamp(34px, 4.5vw, 52px); line-height: 1.05; margin: 0 0 22px; letter-spacing: -.02em; font-weight: 500; text-wrap: balance; color: var(--ink); }
+.ivo-page h3.head em { font-style: italic; font-weight: 400; }
+.ivo-page p.body { font-family: "EB Garamond", serif; font-size: 17.5px; line-height: 1.65; color: var(--ink-2); max-width: 780px; }
+
+/* TOC */
+.ivo-page .toc { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border: 1px solid var(--ink); background: var(--card); }
+.ivo-page .toc a { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 16px 22px; border-bottom: 1px solid var(--line-2); border-right: 1px solid var(--line-2); text-decoration: none; color: var(--ink); font-family: "EB Garamond", serif; font-size: 17px; font-weight: 500; }
+.ivo-page .toc a:nth-child(even) { border-right: none; }
+.ivo-page .toc a:nth-last-child(-n+2) { border-bottom: none; }
+.ivo-page .toc a:hover { background: var(--paper-2); color: var(--mn); }
+.ivo-page .toc a .label { display: flex; align-items: baseline; gap: 14px; flex: 1; }
+.ivo-page .toc a .n { font-family: "JetBrains Mono", monospace; font-size: 11.5px; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; font-weight: 400; }
+
+/* BRANCHES */
+.ivo-page .branch { padding: 32px 0; border-top: 1px solid var(--line-2); display: grid; grid-template-columns: 260px 1fr; gap: 44px; }
+.ivo-page .branch:first-of-type { border-top: none; padding-top: 8px; }
+.ivo-page .branch .topic { position: sticky; top: 24px; align-self: start; border-left: 2px solid var(--rule); padding-left: 18px; }
+.ivo-page .branch .topic .num { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.ivo-page .branch .topic h5 { font-family: "EB Garamond", serif; font-size: 24px; margin: 8px 0 10px; font-weight: 500; letter-spacing: -.012em; line-height: 1.1; color: var(--ink); }
+.ivo-page .branch .topic h5 em { font-style: italic; }
+.ivo-page .branch .topic p { font-family: "EB Garamond", serif; font-style: italic; font-size: 15px; color: var(--muted); margin: 0; line-height: 1.55; }
+.ivo-page .nodes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.ivo-page .node { background: var(--card); border: 1px solid var(--line-2); padding: 18px 20px 16px; font-size: 14.5px; line-height: 1.6; position: relative; }
+.ivo-page .node::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
+.ivo-page .node.mn::before { background: var(--mn); }
+.ivo-page .node.oh::before { background: var(--oh); }
+.ivo-page .node.ca::before { background: var(--ca); }
+.ivo-page .node .flag { display: inline-flex; align-items: center; font-family: "JetBrains Mono", monospace; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; color: white; padding: 3px 9px; margin-bottom: 12px; }
+.ivo-page .node.mn .flag { background: var(--mn); }
+.ivo-page .node.oh .flag { background: var(--oh); }
+.ivo-page .node.ca .flag { background: var(--ca); color: var(--ink); }
+.ivo-page .node .text { font-family: "EB Garamond", serif; font-size: 15.5px; line-height: 1.55; color: var(--ink); }
+.ivo-page .node .text strong { font-weight: 600; background: var(--paper-2); padding: 0 2px; }
+.ivo-page .node .text em { font-style: italic; color: var(--ink-2); }
+.ivo-page .node .cite { display: block; margin-top: 12px; font-family: "JetBrains Mono", monospace; font-size: 10.5px; color: var(--muted); line-height: 1.55; border-top: 1px dashed var(--line-2); padding-top: 8px; letter-spacing: .02em; }
+
+/* TWO-COL SHARED/DIFF */
+.ivo-page .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px; }
+.ivo-page .pane { background: var(--card); border: 1px solid var(--line-2); padding: 28px 32px 24px; position: relative; }
+.ivo-page .pane::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+.ivo-page .pane.same::before { background: var(--shared); }
+.ivo-page .pane.diff::before { background: var(--diverge); }
+.ivo-page .pane h6 { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 6px; font-weight: 500; color: var(--muted); }
+.ivo-page .pane.same h6 { color: var(--shared); }
+.ivo-page .pane.diff h6 { color: var(--diverge); }
+.ivo-page .pane h4 { font-family: "EB Garamond", serif; font-size: 30px; margin: 0 0 18px; font-weight: 500; letter-spacing: -.018em; line-height: 1.05; color: var(--ink); }
+.ivo-page .pane h4 em { font-style: italic; font-weight: 400; }
+.ivo-page .pane ul { margin: 0; padding: 0; list-style: none; }
+.ivo-page .pane li { padding: 13px 0; border-top: 1px solid var(--line-2); font-family: "EB Garamond", serif; font-size: 15.5px; line-height: 1.55; }
+.ivo-page .pane li:first-child { border-top: none; padding-top: 2px; }
+.ivo-page .pane li strong { font-weight: 600; }
+.ivo-page .pane li em { font-style: italic; color: var(--ink-2); }
+.ivo-page .pane li .cite { display: block; font-family: "JetBrains Mono", monospace; font-size: 10.5px; margin-top: 5px; letter-spacing: .02em; color: var(--muted); }
+
+/* MATRIX */
+.ivo-page .matrix-wrap { overflow-x: auto; border: 1px solid var(--ink); background: var(--card); }
+.ivo-page table.matrix { border-collapse: collapse; width: 100%; font-size: 14px; }
+.ivo-page table.matrix th, .ivo-page table.matrix td { padding: 14px 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; text-align: left; }
+.ivo-page table.matrix thead th { background: var(--ink); color: var(--paper); font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; font-weight: 500; position: sticky; top: 0; border-bottom: none; }
+.ivo-page table.matrix thead th:nth-child(2) { background: var(--mn); }
+.ivo-page table.matrix thead th:nth-child(3) { background: var(--oh); }
+.ivo-page table.matrix thead th:nth-child(4) { background: var(--ca); color: var(--ink); }
+.ivo-page table.matrix tbody tr:nth-child(odd) td { background: rgba(168, 106, 24, .03); }
+.ivo-page table.matrix tbody tr:last-child td { border-bottom: none; }
+.ivo-page table.matrix td.label { font-family: "EB Garamond", serif; font-weight: 600; font-size: 15.5px; background: var(--paper-2) !important; width: 200px; letter-spacing: -.005em; border-right: 1px solid var(--ink); color: var(--ink); }
+.ivo-page table.matrix .v { font-family: "EB Garamond", serif; font-size: 15px; line-height: 1.5; color: var(--ink); }
+.ivo-page table.matrix .v strong { font-weight: 600; background: rgba(168, 106, 24, .12); padding: 0 2px; }
+.ivo-page table.matrix .v em { font-style: italic; color: var(--diverge); }
+.ivo-page table.matrix .cite { display: block; font-family: "JetBrains Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 5px; letter-spacing: .02em; }
+
+/* FOOTER */
+.ivo-page footer.foot { background: var(--ink); color: #c9bfa0; padding: 52px 0 72px; border-top: 1px solid var(--rule); }
+.ivo-page footer.foot .wrap { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+.ivo-page footer.foot h4 { font-family: "EB Garamond", serif; font-size: 30px; font-weight: 500; font-style: italic; margin: 0 0 12px; letter-spacing: -.015em; line-height: 1.1; color: var(--paper); }
+.ivo-page footer.foot p { font-family: "EB Garamond", serif; font-size: 14.5px; line-height: 1.65; color: #bdb594; margin: 0; }
+.ivo-page footer.foot a { color: var(--ca); text-decoration-thickness: 1px; }
+.ivo-page footer.foot .label { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #8a8268; display: block; margin-bottom: 8px; }
+.ivo-page footer.foot .sig { text-align: right; }
+.ivo-page footer.foot .sig .name { font-family: "EB Garamond", serif; font-style: italic; font-size: 24px; color: var(--paper); font-weight: 500; }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .ivo-page .plates { grid-template-columns: 1fr; }
+  .ivo-page .branch { grid-template-columns: 1fr; gap: 18px; }
+  .ivo-page .branch .topic { position: static; }
+  .ivo-page .nodes { grid-template-columns: 1fr; }
+  .ivo-page .twocol { grid-template-columns: 1fr; }
+  .ivo-page .toc { grid-template-columns: 1fr; }
+  .ivo-page .toc a { border-right: none; }
+  .ivo-page footer.foot .wrap { grid-template-columns: 1fr; }
+  .ivo-page footer.foot .sig { text-align: left; }
+  .ivo-page .secrow .secnum { display: none; }
+}
+@media print {
+  .ivo-page { background: #fff; background-image: none; }
+  .ivo-page .branch .topic { position: static; }
+}
