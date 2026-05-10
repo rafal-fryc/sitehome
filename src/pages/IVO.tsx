@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { useDocumentTitle } from "@/hooks/use-document-title";
 import "./ivo.css";
 
-type State = "mn" | "oh" | "ca";
-const STATE_LABEL: Record<State, string> = { mn: "Minnesota", oh: "Ohio", ca: "California" };
+type State = "mn" | "oh" | "ca" | "ct";
+const STATE_LABEL: Record<State, string> = { mn: "Minnesota", oh: "Ohio", ca: "California", ct: "Connecticut" };
 
 type NodeCell = { text: string; cite: string };
 type SubBranch = {
@@ -35,6 +35,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Commissioner of Commerce; advisory council seated inside the Department of Commerce.", cite: "MN S.F. 4636 § 1, subd. 4 [325M.50, subd. 4]; § 4, subd. 1(a) [325M.53]." },
           oh: { text: "Attorney General, in conjunction with the Auditor of State; advisory council in the AG's office.", cite: "OH H.B. 628 § 3755.03(A); § 3755.06(A)." },
           ca: { text: "A new <em>California AI Standards and Safety Commission</em> within the Government Operations Agency.", cite: "CA S.B. 813 § 8898.1(a); § 8898(c)." },
+          ct: { text: "Commissioner of Consumer Protection; Department of Consumer Protection. UConn Institute for Municipal and Regional Policy as statutory evaluator.", cite: "CT H.B. 5222 § 47(a)(1)–(2), (b); § 47(g)(1)." },
         },
       },
       {
@@ -45,6 +46,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "<strong>License</strong> issued by the Commissioner; must specify covered risks and any market segments.", cite: "§ 2, subd. 1 [325M.51, subd. 1]; subd. 3(d)." },
           oh: { text: "<strong>License</strong> issued by the Attorney General; must \"expressly and specifically identify\" risks and market segments.", cite: "§ 3755.02; § 3755.03(D)(1)–(2)." },
           ca: { text: "<strong>Designation</strong> by the Commission, expiring after three years and renewable.", cite: "§ 8898.3(a), (c)." },
+          ct: { text: "<strong>Pilot approval</strong> by the Commissioner. Cap of <strong>5 IVOs</strong>; entire program sunsets <strong>March 31, 2031</strong>.", cite: "§ 47(b), (d)." },
         },
       },
       {
@@ -55,6 +57,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Voluntary: nothing requires an AI model or application to seek IVO verification.", cite: "§ 2, subd. 7 [325M.51, subd. 7]." },
           oh: { text: "Voluntary: same opt-in posture as Minnesota.", cite: "§ 3755.07(B)." },
           ca: { text: "Voluntary: designation itself is described as \"voluntary.\"", cite: "§ 8898.1(d), (e)." },
+          ct: { text: "Voluntary: pilot creates incentives but does not compel verification.", cite: "§ 47(b), (e)(1)." },
         },
       },
     ],
@@ -73,6 +76,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Plan must define acceptable risk levels, measurable metrics, target levels (with sources/methods), and an evaluation/reporting protocol.", cite: "§ 2, subd. 2(1)(i)–(iv) [325M.51, subd. 2]." },
           oh: { text: "Same four elements, organized as (A)(2)(a)–(c) plus the protocol clause.", cite: "§ 3755.02(A)(1)–(2)(a)–(c)." },
           ca: { text: "Same four elements: definition, metrics, targets, protocol.", cite: "§ 8898.4(a)(4)(A)–(D)." },
+          ct: { text: "Same four elements (A)–(D), <strong>plus an explicit alignment clause</strong> requiring the protocol to describe alignment with NIST, ISO, and IEEE guidance.", cite: "§ 47(c)(2)(A)–(D)." },
         },
       },
       {
@@ -83,6 +87,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Pre- and post-development; ongoing risk monitoring; ongoing assessment of mitigation efficacy.", cite: "§ 2, subd. 2(2)(i)–(ii) [325M.51, subd. 2]." },
           oh: { text: "Same: pre/post development; ongoing monitoring; ongoing efficacy assessment.", cite: "§ 3755.02(B)(1)–(2)." },
           ca: { text: "Heightened-care framing: predeployment + postdeployment best practices to prevent personal injury, foreseeable harm, or property damage.", cite: "§ 8898.4(a)(1)." },
+          ct: { text: "Ongoing monitoring, reassessment &amp; remediation; corrective action; suspension/revocation; conflicts policies; governance — all bundled into a single application element.", cite: "§ 47(c)(4)(A)–(D)." },
         },
       },
       {
@@ -93,6 +98,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Detected risks, incidents, and material changes, including pre-verification risks and risks from later fine-tuning/modification.", cite: "§ 2, subd. 2(6) [325M.51, subd. 2]." },
           oh: { text: "Substantively identical disclosure trigger.", cite: "§ 3755.02(F)." },
           ca: { text: "Detected risks, material risk-profile changes, fine-tuning/modification risks, incident reports, and mitigation efforts.", cite: "§ 8898.4(a)(3)." },
+          ct: { text: "IVO must establish reassessment/suspension procedures for <strong>material changes — explicitly including changes to training data, deployment context, or intended use</strong>.", cite: "§ 47(d)(4)." },
         },
       },
       {
@@ -103,6 +109,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "IVO <em>must</em> revoke verification for failed mitigation, refusal to cooperate with monitoring, governance violations, or failed corrective action.", cite: "§ 3, subd. 2(1)–(4) [325M.52, subd. 2]; § 2, subd. 2(7)." },
           oh: { text: "Same four mandatory revocation triggers.", cite: "§ 3755.08(A)–(D); § 3755.02(G)(1)–(3)." },
           ca: { text: "IVO must <em>decertify</em> non-compliant models; ongoing supervision &amp; revocation procedures must be in plan.", cite: "§ 8898.5(c); § 8898.3(b)(2)(C)(iii)–(iv)." },
+          ct: { text: "Each pilot IVO <em>must</em> have minimum auditing standards and suspension/revocation procedures; corrective action procedures are part of the application.", cite: "§ 47(d)(1)(A)–(B); § 47(c)(4)(B)(i)–(ii)." },
         },
       },
       {
@@ -113,6 +120,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Detailed: written notice required; <strong>changes take effect on notification</strong>; Commissioner has <strong>6 months</strong> to reject; IVO then has 30 days to comply.", cite: "§ 3, subd. 3(a)–(e) [325M.52, subd. 3]." },
           oh: { text: "Mirror image of MN: same enumerated elements, same notification-effective rule, same 6-month review and 30-day cure.", cite: "§ 3755.09(A)–(C); § 3755.091(A)–(B)." },
           ca: { text: "<strong>Commission may not modify a plan</strong> submitted by an applicant; statute is otherwise silent on modification.", cite: "§ 8898.4(c)." },
+          ct: { text: "Statute silent on a formal plan-amendment process; Commissioner retains broad approval/suspension/revocation discretion.", cite: "§ 47(c)(6); § 47(f)." },
         },
       },
     ],
@@ -131,6 +139,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "AI Advisory Council inside Dept. of Commerce; Commissioner sets size and appoints all; Commissioner <em>must</em> delegate licensing &amp; auditing powers.", cite: "§ 4, subd. 1(a), subd. 2(a) [325M.53]." },
           oh: { text: "AI Safety Advisory Council in AG's office (with Auditor of State); AG <em>may</em> convey powers, including licensing.", cite: "§ 3755.06(A)–(B)." },
           ca: { text: "Standing 8-member Commission; gubernatorial seats for small developers, frontier developers, civil society, workers, academia, plus ex officio AG &amp; OES Director and an ethics expert.", cite: "§ 8898.1(b)(1)(A)–(E), (b)(2)(A)–(C)." },
+          ct: { text: "<strong>No advisory council.</strong> Statutory consultant role for the UConn Institute for Municipal and Regional Policy on the pilot evaluation.", cite: "§ 47(g)(1)–(2); § 47(h)." },
         },
       },
       {
@@ -141,6 +150,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "At least one civil-society member (NGOs, research, policy, consumer/business advocates).", cite: "§ 4, subd. 1(b) [325M.53]." },
           oh: { text: "Same: at least one civil-society member with the same enumerated categories.", cite: "§ 3755.06(C)." },
           ca: { text: "Dedicated civil-society seat <em>and</em> a separate worker-interest seat.", cite: "§ 8898.1(b)(1)(C), (b)(1)(D)." },
+          ct: { text: "<em>Not applicable</em> — no advisory body. IVO-level conflicts/independence/transparency policies required in the application.", cite: "§ 47(c)(4)(C)." },
         },
       },
       {
@@ -151,6 +161,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "No undue influence; no incompatible employment; <strong>flat equity ban</strong> in AI companies (no carve-out); 1-year cooling-off; max 2 consecutive terms.", cite: "§ 4, subd. 2(b)(1)–(5); subd. 3(a) [325M.53]." },
           oh: { text: "Same independence rules; equity ban with explicit <strong>mutual fund / ETF carve-out</strong>; 1-year cooling-off; max 2 consecutive terms.", cite: "§ 3755.06(D)(1)–(5), (E); ETF carve-out at (D)(3)(b)." },
           ca: { text: "Free from undue influence; equity ban with mutual fund/ETF carve-out; 4-year terms (max 2 full); 1-year cooling-off from designated/applicant IVOs.", cite: "§ 8898.1(c)(2)–(4), (e), (f)(1)–(2)." },
+          ct: { text: "IVO itself must adopt policies for <strong>independence, transparency, and conflict avoidance</strong>; the IVO must in fact be an \"independent third-party entity\" — a standing condition of approval.", cite: "§ 47(a)(3); § 47(c)(4)(C); revocation ground at § 47(f)(3)." },
         },
       },
       {
@@ -161,6 +172,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Reimbursement of necessary expenses; salary permitted; removal for inefficiency, neglect, or malfeasance; majority quorum.", cite: "§ 4, subd. 3(b)–(d) [325M.53]." },
           oh: { text: "Same expense + optional salary; AG may remove for inefficiency, neglect, malfeasance; majority quorum.", cite: "§ 3755.06(F)–(H)." },
           ca: { text: "Fixed <strong>$100 per diem</strong> + travel; removable by appointing authority for inefficiency, neglect, or malfeasance.", cite: "§ 8898.1(g); § 8898.1(f)(1)(B)." },
+          ct: { text: "<em>Not applicable</em> — no body to compensate or remove.", cite: "cf. § 47 generally." },
         },
       },
     ],
@@ -179,6 +191,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Annual report to legislature; capabilities, risks/benefits, evaluation adequacy, anonymized remediation compliance, observed risks, verified models, methods, and governance/funding changes. Redactions allowed.", cite: "§ 3, subd. 4(a)(1)–(8), (b) [325M.52, subd. 4]." },
           oh: { text: "Annual report to General Assembly, AG, and Auditor of State; same enumerated elements; redactions for trade secrets, PII, and security-sensitive content.", cite: "§ 3755.10(A)(1)–(8), (B)(1)–(4)." },
           ca: { text: "Annual report to Legislature (per § 9795) and Commission; six enumerated elements covering capabilities, evaluation, certifications, results, remediation, and additional risks.", cite: "§ 8898.5(d)(1)–(6)." },
+          ct: { text: "Each pilot IVO must <strong>share data with</strong> the Department and submit an annual report in a form prescribed by the Commissioner. Statute does not enumerate report contents.", cite: "§ 47(d)(2)." },
         },
       },
       {
@@ -189,6 +202,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Verification, monitoring, and corrective-action documentation, retained <strong>10 years</strong> after the activity.", cite: "§ 3, subd. 4(c) [325M.52, subd. 4]." },
           oh: { text: "Documentation used to prepare the report, retained <strong>10 years</strong> after submission.", cite: "§ 3755.10(C)." },
           ca: { text: "Documents related to chapter activities, retained <strong>10 years</strong>.", cite: "§ 8898.5(f)." },
+          ct: { text: "<strong>No statutory retention period.</strong>", cite: "cf. § 47 generally." },
         },
       },
       {
@@ -199,6 +213,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Commissioner publishes <strong>redacted versions</strong> of IVO reports on Department of Commerce website.", cite: "§ 3, subd. 4(d) [325M.52, subd. 4]." },
           oh: { text: "Advisory council publishes redacted reports on AG's website.", cite: "§ 3755.06(J)." },
           ca: { text: "Public, accessible <strong>registry</strong> of IVOs and their standards/updates; published findings; biennial commission report to Legislature.", cite: "§ 8898.2(d)(1)–(5), (e), (f)." },
+          ct: { text: "Each IVO must require participants in its program to participate <strong>in a manner transparent to the public</strong>.", cite: "§ 47(d)(3)." },
         },
       },
       {
@@ -209,6 +224,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Reasonable application and renewal fees sufficient to offset administrative costs.", cite: "§ 2, subd. 6 [325M.51, subd. 6]." },
           oh: { text: "Reasonable application + annual renewal fees, restricted to four uses.", cite: "§ 3755.05(A)–(C)(1)–(4)." },
           ca: { text: "Commission <em>may</em> establish a reasonable fee structure to offset its costs.", cite: "§ 8898.6(c)." },
+          ct: { text: "No fee provision; pilot operates \"within available appropriations.\"", cite: "§ 47(b)." },
         },
       },
       {
@@ -219,6 +235,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Commissioner <em>may</em> adopt rules necessary to implement §§ 325M.51–.54. No mandatory floor.", cite: "§ 2, subd. 8 [325M.51, subd. 8]." },
           oh: { text: "AG <em>shall</em> adopt rules under R.C. Ch. 119; rules <em>shall</em> at minimum cover six enumerated topics; stakeholder input required.", cite: "§ 3755.12(A)–(C); (B)(1)–(6)." },
           ca: { text: "Commission <em>may</em> adopt regulations covering minimum plan requirements, IVO conflicts, and fee structure.", cite: "§ 8898.6(a)–(c)." },
+          ct: { text: "<em>No statutory rulemaking authority.</em> Commissioner sets application form/manner administratively and may require additional information.", cite: "§ 47(c) (chapeau); § 47(c)(6)." },
         },
       },
     ],
@@ -237,6 +254,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Commissioner <em>must</em> revoke if (1) plan is materially misleading; (2) IVO fails to adhere to plan; (3) material change compromises independence; (4) tech evolution renders methods obsolete; (5) verified AI causes material harm of the type the plan deems acceptable.", cite: "§ 2, subd. 4(1)–(5) [325M.51, subd. 4]." },
           oh: { text: "Same five mandatory grounds, in the same order.", cite: "§ 3755.04(A)–(E)." },
           ca: { text: "Commission <em>may</em> revoke (discretionary) on the same five grounds.", cite: "§ 8898.3(d)(1)–(5)." },
+          ct: { text: "Commissioner <em>may</em> suspend or revoke pilot approval on 5 grounds, including a catch-all <strong>\"not in the public interest.\"</strong>", cite: "§ 47(f)(1)–(5); catch-all at (f)(5)." },
         },
       },
       {
@@ -247,6 +265,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "Commissioner <em>may</em> allow cure before terminating; this remains discretionary.", cite: "§ 2, subd. 5 [325M.51, subd. 5]." },
           oh: { text: "AG may grant cure if \"the public interest so requires\"; this is discretionary.", cite: "§ 3755.041." },
           ca: { text: "No statutory cure provision; instead, the <strong>3-year designation expires</strong> and the IVO must reapply.", cite: "§ 8898.3(c)." },
+          ct: { text: "No statutory cure; Commissioner may also <strong>suspend</strong> (not just revoke), which can function as a soft cure.", cite: "§ 47(f) (chapeau)." },
         },
       },
       {
@@ -257,6 +276,7 @@ const BRANCHES: Branch[] = [
           mn: { text: "IVO licensed only for risks the plan adequately mitigates; license must specify covered risks and any markets.", cite: "§ 2, subd. 3(c)–(d) [325M.51, subd. 3]." },
           oh: { text: "Same: licensed only for risks the plan covers; license must \"expressly and specifically\" identify covered risks and segments.", cite: "§ 3755.03(C); § 3755.03(D)(1)–(2)." },
           ca: { text: "Commission considers whether plan ensures acceptable mitigation across enumerated factors; statute does not expressly contemplate partial designation.", cite: "§ 8898.3(b)(1)–(4)." },
+          ct: { text: "Pilot approval has a <strong>\"state-approved scope\"</strong> of harms/risks — risk-scoped on its face.", cite: "§ 47(c)(1); § 47(e)(1)." },
         },
       },
     ],
@@ -275,6 +295,26 @@ const BRANCHES: Branch[] = [
           mn: { text: "In a civil action for personal injury or property damage caused by AI: <strong>rebuttable presumption against liability</strong> if (1) AI was IVO-verified at time of injury; (2) injury arose from a verified risk; (3) AI was within the IVO's licensed market segment. <em>No statutory rebuttal standard.</em>", cite: "§ 5 [325M.54](1)–(3)." },
           oh: { text: "Same three threshold elements, plus a <strong>detailed rebuttal framework</strong>: rebutted by <em>clear and convincing evidence</em> of intentional/willful/reckless misconduct, material misrepresentation, failure to adhere to representations, failure to disclose new risks, or failure to implement corrective action, and that the conduct was a <em>proximate cause</em> of injury.", cite: "§ 3755.11(A)(1)–(3); (B)(1)(a)–(f), (B)(2)." },
           ca: { text: "<strong>No liability shield.</strong> S.B. 813 contains no rebuttable-presumption provision; the bill is regulatory/standard-setting only.", cite: "cf. §§ 8898–8898.6 (no analog)." },
+          ct: { text: "<strong>Admissibility-only</strong>: verification or good-standing evidence is admissible only in <em>private</em> personal-injury/property-damage actions within the state-approved scope; <strong>not admissible</strong> in AG or any state agency enforcement; creates <strong>no presumption, inference, or defense</strong>. Even the limited admissibility is unavailable for willful/wanton/reckless conduct, material misrepresentation to the IVO, or failed corrective action.", cite: "§ 47(e)(1); exceptions at § 47(e)(2)(A)–(C)." },
+        },
+      },
+    ],
+  },
+  {
+    id: "b7",
+    roman: "Section VII",
+    arabic: "7",
+    title: "Sunset, evaluation &amp; <em>reciprocity</em> (CT-specific)",
+    subs: [
+      {
+        num: "VII · i",
+        heading: "Program duration &amp; review",
+        topic: "How long the regime lives and what happens next.",
+        cells: {
+          mn: { text: "Permanent statute; no sunset.", cite: "§§ 1–5 generally." },
+          oh: { text: "Permanent statute; no sunset.", cite: "§§ 3755.01–.12 generally." },
+          ca: { text: "Permanent Commission; individual designations expire after 3 years and may be renewed.", cite: "§ 8898.3(c)." },
+          ct: { text: "Pilot <strong>terminates March 31, 2031</strong>. UConn IMRP develops evaluation criteria; DCP must complete an evaluation by <strong>Dec. 31, 2028</strong>; legislative report due <strong>Jan. 31, 2029</strong>; mandatory <strong>landscape analysis of other states' laws</strong> and recommendations for <strong>interstate reciprocity</strong>.", cite: "§ 47(b); § 47(g)(1)(A)–(B), (g)(2)(A)–(F); § 47(h)." },
         },
       },
     ],
@@ -302,96 +342,142 @@ const SPLITS: { html: string; cite: string }[] = [
   { html: "<strong>Public registry.</strong> CA requires a public registry of IVOs and standards; MN/OH publish redacted reports only.", cite: "CA § 8898.2(e) · MN § 3, subd. 4(d) · OH § 3755.06(J)." },
   { html: "<strong>Worker representation.</strong> Only CA designates a seat for the legal/economic interests of workers.", cite: "CA § 8898.1(b)(1)(D)." },
   { html: "<strong>Compensation.</strong> Optional salary (MN, OH) vs. fixed $100 per diem (CA).", cite: "MN § 4, subd. 3(b) · OH § 3755.06(F) · CA § 8898.1(g)." },
+  { html: "<strong>Permanent regime vs. pilot.</strong> MN/OH/CA are permanent; <strong>CT is a 5-IVO pilot</strong> sunsetting March 31, 2031, with a UConn-led evaluation feeding into a 2029 report.", cite: "CT § 47(b), (d), (g)(1), (h)." },
+  { html: "<strong>Liability treatment.</strong> Rebuttable presumption (MN, OH); none (CA); narrow <em>admissibility-only</em> carve-out limited to private actions and unavailable to AG/agency enforcement (CT).", cite: "MN § 5 · OH § 3755.11 · CT § 47(e)(1)–(2)." },
+  { html: "<strong>Standards alignment.</strong> Only CT explicitly tells applicants to align methodologies with NIST/ISO/IEEE.", cite: "CT § 47(c)(2)(D)." },
+  { html: "<strong>Caps on number of IVOs.</strong> Only CT caps it — at five.", cite: "CT § 47(d)." },
+  { html: "<strong>Reciprocity.</strong> Only CT requires the evaluator to consider interstate reciprocity.", cite: "CT § 47(g)(1)(B)(ii)." },
 ];
 
 type MatrixCell = { html: string; cite: string };
-type MatrixRow = { label: string; mn: MatrixCell; oh: MatrixCell; ca: MatrixCell };
+type MatrixRow = { label: string; mn: MatrixCell; oh: MatrixCell; ca: MatrixCell; ct: MatrixCell };
 
 const MATRIX: MatrixRow[] = [
   { label: "Codification",
     mn: { html: "New Minn. Stat. ch. 325M, §§ 325M.50–.54.", cite: "Bill caption; § 1." },
     oh: { html: "New Ohio R.C. ch. 3755, §§ 3755.01–.12.", cite: "Enacting clause § 1." },
-    ca: { html: "New Cal. Gov. Code ch. 14, §§ 8898–8898.6.", cite: "Sec. 1." } },
+    ca: { html: "New Cal. Gov. Code ch. 14, §§ 8898–8898.6.", cite: "Sec. 1." },
+    ct: { html: "Uncodified pilot under H.B. 5222 § 47.", cite: "§ 47 (eff. Oct. 1, 2027)." } },
   { label: "Regulator",
     mn: { html: "Commissioner of Commerce.", cite: "§ 1, subd. 4." },
     oh: { html: "Attorney General (with Auditor of State).", cite: "§ 3755.03; § 3755.06(A)." },
-    ca: { html: "CA AI Standards &amp; Safety Commission, in GovOps Agency.", cite: "§ 8898.1(a)." } },
+    ca: { html: "CA AI Standards &amp; Safety Commission, in GovOps Agency.", cite: "§ 8898.1(a)." },
+    ct: { html: "Commissioner of Consumer Protection.", cite: "§ 47(a)(1)–(2)." } },
   { label: "Recognition",
     mn: { html: "License (no statutory term).", cite: "§ 2, subd. 1." },
     oh: { html: "License (renewable annual fees).", cite: "§ 3755.02; § 3755.05(A)." },
-    ca: { html: "Designation; <strong>3-year term, renewable.</strong>", cite: "§ 8898.3(a), (c)." } },
+    ca: { html: "Designation; <strong>3-year term, renewable.</strong>", cite: "§ 8898.3(a), (c)." },
+    ct: { html: "Pilot approval; <strong>capped at 5 IVOs</strong>.", cite: "§ 47(d)." } },
   { label: "Voluntariness",
     mn: { html: "Voluntary.", cite: "§ 2, subd. 7." },
     oh: { html: "Voluntary.", cite: "§ 3755.07(B)." },
-    ca: { html: "Voluntary.", cite: "§ 8898.1(d)–(e)." } },
+    ca: { html: "Voluntary.", cite: "§ 8898.1(d)–(e)." },
+    ct: { html: "Voluntary.", cite: "§ 47(b), (e)." } },
   { label: "Plan elements",
     mn: { html: "13 enumerated elements.", cite: "§ 2, subd. 2(1)–(13)." },
     oh: { html: "14 enumerated elements (A)–(N).", cite: "§ 3755.02(A)–(N)." },
-    ca: { html: "12 enumerated elements.", cite: "§ 8898.4(a)(1)–(12)." } },
+    ca: { html: "12 enumerated elements.", cite: "§ 8898.4(a)(1)–(12)." },
+    ct: { html: "6 enumerated.", cite: "§ 47(c)(1)–(6)." } },
   { label: "Risk metric",
     mn: { html: "Definition + measurable metrics + targets + protocol.", cite: "§ 2, subd. 2(1)(i)–(iv)." },
     oh: { html: "Definition + outcome metrics + baselines/targets + protocol.", cite: "§ 3755.02(A)(2)(a)–(c)." },
-    ca: { html: "Definition + metrics + targets + protocol.", cite: "§ 8898.4(a)(4)(A)–(D)." } },
+    ca: { html: "Definition + metrics + targets + protocol.", cite: "§ 8898.4(a)(4)(A)–(D)." },
+    ct: { html: "Same four + explicit <strong>NIST/ISO/IEEE alignment</strong> clause.", cite: "§ 47(c)(2)(A)–(D)." } },
   { label: "Revocation grounds",
     mn: { html: "5 mandatory grounds.", cite: "§ 2, subd. 4(1)–(5)." },
     oh: { html: "5 mandatory grounds.", cite: "§ 3755.04(A)–(E)." },
-    ca: { html: "5 grounds, <em>discretionary</em>.", cite: "§ 8898.3(d)(1)–(5)." } },
+    ca: { html: "5 grounds, <em>discretionary</em>.", cite: "§ 8898.3(d)(1)–(5)." },
+    ct: { html: "5 discretionary grounds + <strong>public-interest catch-all</strong>.", cite: "§ 47(f)(1)–(5)." } },
   { label: "Cure opportunity",
     mn: { html: "May allow cure (discretionary).", cite: "§ 2, subd. 5." },
     oh: { html: "May allow cure if public interest requires.", cite: "§ 3755.041." },
-    ca: { html: "Not explicit; 3-yr re-designation cycle.", cite: "§ 8898.3(c)." } },
+    ca: { html: "Not explicit; 3-yr re-designation cycle.", cite: "§ 8898.3(c)." },
+    ct: { html: "No statutory cure; suspension available as soft cure.", cite: "§ 47(f) (chapeau)." } },
   { label: "IVO-side revocation",
     mn: { html: "Mandatory (4 triggers).", cite: "§ 3, subd. 2(1)–(4)." },
     oh: { html: "Mandatory (4 triggers).", cite: "§ 3755.08(A)–(D)." },
-    ca: { html: "Decertify non-compliant AI; revocation procedure required in plan.", cite: "§ 8898.5(c); § 8898.3(b)(2)(C)(iv)." } },
+    ca: { html: "Decertify non-compliant AI; revocation procedure required in plan.", cite: "§ 8898.5(c); § 8898.3(b)(2)(C)(iv)." },
+    ct: { html: "Mandatory: minimum auditing standards + suspension/revocation procedures.", cite: "§ 47(d)(1)(A)–(B)." } },
   { label: "Plan amendment",
     mn: { html: "Notice; effective on notification; 6-mo. review; 30-day cure.", cite: "§ 3, subd. 3(a)–(e)." },
     oh: { html: "Same as MN.", cite: "§§ 3755.09, 3755.091." },
-    ca: { html: "<strong>Commission cannot modify plan;</strong> no notice/review process.", cite: "§ 8898.4(c)." } },
+    ca: { html: "<strong>Commission cannot modify plan;</strong> no notice/review process.", cite: "§ 8898.4(c)." },
+    ct: { html: "Silent; Commissioner may demand additional info.", cite: "§ 47(c)(6)." } },
   { label: "Annual report to",
     mn: { html: "Legislature (AI committee).", cite: "§ 3, subd. 4(a)." },
     oh: { html: "General Assembly, AG, Auditor of State.", cite: "§ 3755.10(A)." },
-    ca: { html: "Legislature (per § 9795) and Commission.", cite: "§ 8898.5(d)." } },
+    ca: { html: "Legislature (per § 9795) and Commission.", cite: "§ 8898.5(d)." },
+    ct: { html: "Department of Consumer Protection.", cite: "§ 47(d)(2)." } },
   { label: "Public transparency",
     mn: { html: "Redacted reports on Dept. of Commerce site.", cite: "§ 3, subd. 4(d)." },
     oh: { html: "Redacted reports on AG site.", cite: "§ 3755.06(J)." },
-    ca: { html: "Public IVO/standards <strong>registry</strong> + biennial commission report.", cite: "§ 8898.2(d)–(e)." } },
+    ca: { html: "Public IVO/standards <strong>registry</strong> + biennial commission report.", cite: "§ 8898.2(d)–(e)." },
+    ct: { html: "Participants must operate \"in a manner transparent to the public.\"", cite: "§ 47(d)(3)." } },
   { label: "Document retention",
     mn: { html: "10 years post-activity.", cite: "§ 3, subd. 4(c)." },
     oh: { html: "10 years post-report.", cite: "§ 3755.10(C)." },
-    ca: { html: "10 years.", cite: "§ 8898.5(f)." } },
+    ca: { html: "10 years.", cite: "§ 8898.5(f)." },
+    ct: { html: "<em>None specified.</em>", cite: "cf. § 47 generally." } },
   { label: "Fees",
     mn: { html: "Reasonable application + renewal.", cite: "§ 2, subd. 6." },
     oh: { html: "Reasonable application + annual renewal; 4 permitted uses.", cite: "§ 3755.05." },
-    ca: { html: "Discretionary fee structure.", cite: "§ 8898.6(c)." } },
+    ca: { html: "Discretionary fee structure.", cite: "§ 8898.6(c)." },
+    ct: { html: "None; \"within available appropriations.\"", cite: "§ 47(b)." } },
   { label: "Oversight body",
     mn: { html: "Advisory Council; Commissioner sets size; mandatory delegation of licensing/audit power.", cite: "§ 4, subd. 1(a), 2(a)." },
     oh: { html: "AI Safety Advisory Council; AG may delegate licensing.", cite: "§ 3755.06(A)–(B)." },
-    ca: { html: "8 named seats (5 gubernatorial + 3 ex officio/ethics).", cite: "§ 8898.1(b)." } },
+    ca: { html: "8 named seats (5 gubernatorial + 3 ex officio/ethics).", cite: "§ 8898.1(b)." },
+    ct: { html: "<em>None;</em> UConn IMRP as evaluator.", cite: "§ 47(g)(2); § 47(h)." } },
   { label: "Equity carve-out",
     mn: { html: "<strong>None</strong>: flat ban on equity in AI companies.", cite: "§ 4, subd. 2(b)(3)." },
     oh: { html: "Mutual fund / ETF carve-out.", cite: "§ 3755.06(D)(3)(b)." },
-    ca: { html: "Mutual fund / ETF carve-out.", cite: "§ 8898.1(c)(4)." } },
+    ca: { html: "Mutual fund / ETF carve-out.", cite: "§ 8898.1(c)(4)." },
+    ct: { html: "<em>N/A</em> — no oversight body.", cite: "cf. § 47 generally." } },
   { label: "Term limits",
     mn: { html: "Max 2 consecutive terms.", cite: "§ 4, subd. 3(a)." },
     oh: { html: "Max 2 consecutive terms.", cite: "§ 3755.06(E)." },
-    ca: { html: "4-year terms; max 2 full terms.", cite: "§ 8898.1(f)(1)–(2)." } },
+    ca: { html: "4-year terms; max 2 full terms.", cite: "§ 8898.1(f)(1)–(2)." },
+    ct: { html: "<em>N/A</em> — no oversight body.", cite: "cf. § 47 generally." } },
   { label: "Cooling-off",
     mn: { html: "1 year (AI firms or IVOs).", cite: "§ 4, subd. 2(b)(4)." },
     oh: { html: "1 year (IVO applicants/licensees, developers, deployers).", cite: "§ 3755.06(D)(4)." },
-    ca: { html: "1 year (designated/applicant IVOs).", cite: "§ 8898.1(e)." } },
+    ca: { html: "1 year (designated/applicant IVOs).", cite: "§ 8898.1(e)." },
+    ct: { html: "<em>N/A</em> — no oversight body. IVO must itself be independent.", cite: "§ 47(a)(3); § 47(c)(4)(C)." } },
   { label: "Compensation",
     mn: { html: "Expenses + optional salary.", cite: "§ 4, subd. 3(b)." },
     oh: { html: "Expenses + optional salary.", cite: "§ 3755.06(F)." },
-    ca: { html: "<strong>$100/day per diem</strong> + travel.", cite: "§ 8898.1(g)." } },
+    ca: { html: "<strong>$100/day per diem</strong> + travel.", cite: "§ 8898.1(g)." },
+    ct: { html: "<em>N/A</em> — no oversight body.", cite: "cf. § 47 generally." } },
   { label: "Liability shield",
     mn: { html: "Rebuttable presumption (3 conditions); no rebuttal standard.", cite: "§ 5 [325M.54](1)–(3)." },
     oh: { html: "Presumption + <strong>clear &amp; convincing</strong> rebuttal (6 categories; proximate cause).", cite: "§ 3755.11(A)(1)–(3); (B)(1)(a)–(f), (2)." },
-    ca: { html: "<em>None.</em>", cite: "cf. §§ 8898–8898.6 (no analog)." } },
+    ca: { html: "<em>None.</em>", cite: "cf. §§ 8898–8898.6 (no analog)." },
+    ct: { html: "<strong>Admissibility-only</strong> in private personal-injury/property cases; <em>no</em> presumption/inference/defense; barred in AG/agency enforcement.", cite: "§ 47(e)(1)–(2)." } },
   { label: "Rulemaking",
     mn: { html: "Permissive (\"may adopt\").", cite: "§ 2, subd. 8." },
     oh: { html: "<strong>Mandatory</strong> (\"shall adopt\") with 6-topic floor.", cite: "§ 3755.12(A)–(C); (B)(1)–(6)." },
-    ca: { html: "Permissive; 3 enumerated subjects.", cite: "§ 8898.6(a)–(c)." } },
+    ca: { html: "Permissive; 3 enumerated subjects.", cite: "§ 8898.6(a)–(c)." },
+    ct: { html: "<em>None statutorily.</em>", cite: "cf. § 47 generally." } },
+  { label: "Sunset",
+    mn: { html: "None.", cite: "—" },
+    oh: { html: "None.", cite: "—" },
+    ca: { html: "Permanent commission; 3-yr designations.", cite: "§ 8898.3(c)." },
+    ct: { html: "<strong>Mar. 31, 2031.</strong>", cite: "§ 47(b)." } },
+  { label: "NIST/ISO/IEEE alignment",
+    mn: { html: "Not required.", cite: "—" },
+    oh: { html: "Not required.", cite: "—" },
+    ca: { html: "Not required.", cite: "—" },
+    ct: { html: "<strong>Required</strong> in evaluation/reporting protocol.", cite: "§ 47(c)(2)(D)." } },
+  { label: "Cap on number of IVOs",
+    mn: { html: "None.", cite: "—" },
+    oh: { html: "None.", cite: "—" },
+    ca: { html: "None.", cite: "—" },
+    ct: { html: "<strong>Five.</strong>", cite: "§ 47(d)." } },
+  { label: "Reciprocity / interstate",
+    mn: { html: "Not addressed.", cite: "—" },
+    oh: { html: "Not addressed.", cite: "—" },
+    ca: { html: "Not addressed.", cite: "—" },
+    ct: { html: "Mandatory landscape analysis + reciprocity recommendation.", cite: "§ 47(g)(1)(B)." } },
 ];
 
 const TOC = [
@@ -401,20 +487,22 @@ const TOC = [
   { href: "#b4", label: "Reporting, fees & rulemaking", n: "§ IV" },
   { href: "#b5", label: "License / designation revocation", n: "§ V" },
   { href: "#b6", label: "Liability shield (the carrot)", n: "§ VI" },
+  { href: "#b7", label: "Sunset, evaluation & reciprocity (CT)", n: "§ VII" },
   { href: "#shared", label: "Shared DNA vs. divergence", n: "§ Synth." },
-  { href: "#matrix", label: "Side-by-side matrix · 21 dimensions", n: "§ Ref." },
+  { href: "#matrix", label: "Side-by-side matrix · 25 dimensions", n: "§ Ref." },
 ];
 
 const PLATES: { state: State; abbr: string; billno: string; pname: string; pmeta: string }[] = [
   { state: "mn", abbr: "MN", billno: "S.F. 4636", pname: "Minnesota", pmeta: "Sens. Frentz &amp; Lucero · 94th Sess. (2026)<br>Minn. Stat. §§ 325M.50–.54" },
   { state: "oh", abbr: "OH", billno: "H.B. 628", pname: "Ohio", pmeta: "Rep. Mathews · 136th Gen. Assembly<br>Ohio R.C. §§ 3755.01–.12" },
   { state: "ca", abbr: "CA", billno: "S.B. 813", pname: "California", pmeta: "Sen. McNerney, as amended<br>Cal. Gov. Code §§ 8898–8898.6" },
+  { state: "ct", abbr: "CT", billno: "H.B. 5222 § 47", pname: "Connecticut", pmeta: "House Amend. LCO 6124 · eff. Oct. 1, 2027<br>Pilot · sunset Mar. 31, 2031" },
 ];
 
 const FONTS_HREF = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap";
 
 export default function IVO() {
-  useDocumentTitle("IVO Comparison · MN · OH · CA | Rafal's Portfolio");
+  useDocumentTitle("IVO Comparison · MN · OH · CA · CT | Rafal's Portfolio");
 
   useEffect(() => {
     const pre1 = document.createElement("link");
@@ -445,11 +533,11 @@ export default function IVO() {
             <span className="chip ca">Working Draft</span>
           </div>
           <h1 className="title">
-            Three states, <em>one</em> regulatory idea: <span className="mn-acc">Minnesota</span>, <span className="oh-acc">Ohio</span>, <span className="ca-acc">California</span>.
+            Four states, <em>one</em> regulatory idea: <span className="mn-acc">Minnesota</span>, <span className="oh-acc">Ohio</span>, <span className="ca-acc">California</span>, <span className="ct-acc">Connecticut</span>.
           </h1>
-          <div className="subtitle">A side-by-side reading of <em>S.F. 4636</em>, <em>H.B. 628</em>, and <em>S.B. 813</em>.</div>
+          <div className="subtitle">A side-by-side reading of <em>S.F. 4636</em>, <em>H.B. 628</em>, <em>S.B. 813</em>, and <em>H.B. 5222 § 47</em>.</div>
           <p className="lede">
-            Each bill creates a voluntary regime in which third-party "Independent Verification Organizations" certify AI systems against published risk plans. The structure is shared. The institutional choices, the discretion levels, and the carrot-and-stick details <strong>diverge</strong>, sometimes loudly. Below: <strong>six sections</strong>, <strong>twenty-one matrix dimensions</strong>, every cell with its statutory citation.
+            Each bill creates a voluntary regime in which third-party "Independent Verification Organizations" certify AI systems against published risk plans. The structure is shared. The institutional choices, the discretion levels, and the carrot-and-stick details <strong>diverge</strong>, sometimes loudly — and Connecticut adds a fourth shape: a <strong>5-IVO capped pilot</strong> that sunsets March&nbsp;31,&nbsp;2031. Below: <strong>seven sections</strong>, <strong>twenty-five matrix dimensions</strong>, every cell with its statutory citation.
           </p>
 
           <div className="plates">
@@ -493,7 +581,7 @@ export default function IVO() {
                   <p>{sub.topic}</p>
                 </div>
                 <div className="nodes">
-                  {(["mn", "oh", "ca"] as State[]).map((s) => (
+                  {(["mn", "oh", "ca", "ct"] as State[]).map((s) => (
                     <div key={s} className={`node ${s}`}>
                       <div className="flag">{STATE_LABEL[s]}</div>
                       <div className="text">
@@ -546,7 +634,7 @@ export default function IVO() {
       <section className="block" id="matrix">
         <div className="wrap">
           <div className="secrow"><span className="sectag">§ Reference</span><span className="secnum">§</span></div>
-          <h3 className="head">Side-by-side <em>matrix</em> · 21 dimensions</h3>
+          <h3 className="head">Side-by-side <em>matrix</em> · 25 dimensions</h3>
           <p className="body" style={{ marginBottom: 22 }}>
             Every cell carries its statutory citation. Use this when you need to look up a specific provision; use the sections above when you want to read the regime as a whole.
           </p>
@@ -559,13 +647,14 @@ export default function IVO() {
                   <th>MN · S.F. 4636</th>
                   <th>OH · H.B. 628</th>
                   <th>CA · S.B. 813</th>
+                  <th>CT · H.B. 5222 § 47</th>
                 </tr>
               </thead>
               <tbody>
                 {MATRIX.map((row) => (
                   <tr key={row.label}>
                     <td className="label">{row.label}</td>
-                    {(["mn", "oh", "ca"] as State[]).map((s) => (
+                    {(["mn", "oh", "ca", "ct"] as State[]).map((s) => (
                       <td key={s}>
                         <span className="v" dangerouslySetInnerHTML={{ __html: row[s].html }} />
                         <span className="cite">{row[s].cite}</span>

@@ -16,7 +16,7 @@ const Index = () => {
       case 'projects':
         return <ProjectsSection />;
       default:
-        return <HeroSection />;
+        return <HeroSection onSectionChange={setActiveSection} />;
     }
   };
 

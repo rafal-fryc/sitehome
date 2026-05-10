@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Gavel, Search, FileCheck, Calculator, BarChart3, ScrollText, Scale } from "lucide-react";
+import { Github, ExternalLink, Gavel, Search, FileCheck, Calculator, BarChart3, ScrollText, Scale, Laptop } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
@@ -23,8 +23,8 @@ const ProjectsSection = () => {
       demoUrl: "/GDPRorders"
     },
     {
-      title: "IVO Comparison · MN · OH · CA",
-      description: "Side-by-side reading of three Independent Verification Organization bills — Minnesota S.F. 4636, Ohio H.B. 628, and California S.B. 813. Six mind-map branches, twenty-one matrix dimensions, every cell carrying its statutory citation.",
+      title: "IVO Comparison · MN · OH · CA · CT",
+      description: "Side-by-side reading of four Independent Verification Organization bills — Minnesota S.F. 4636, Ohio H.B. 628, California S.B. 813, and Connecticut H.B. 5222 § 47 (a 5-IVO capped pilot sunsetting March 31, 2031). Seven mind-map branches, twenty-five matrix dimensions, every cell carrying its statutory citation.",
       technologies: ["Comparative Statutes", "AI Regulation", "Editorial Design"],
       status: "Live",
       icon: Scale,
@@ -57,6 +57,15 @@ const ProjectsSection = () => {
       icon: BarChart3,
       githubUrl: "#",
       demoUrl: "/FTCAnalytics"
+    },
+    {
+      title: "Mike — Local Desktop Edition",
+      description: "Downloadable Electron desktop fork of the Mike AI legal platform. Storage moves from Supabase/S3 to a local SQLite database and workspace folder; auth moves from Supabase to a scrypt-hashed password with per-launch HS256 JWT; distribution ships as a Windows NSIS installer bundling LibreOffice for DOCX previews. Only network calls are to your configured Anthropic/Gemini API keys.",
+      technologies: ["Electron", "Next.js", "Express", "SQLite", "TypeScript"],
+      status: "Live",
+      icon: Laptop,
+      githubUrl: "https://github.com/LegalQuants/LQmikelocal",
+      demoUrl: "#"
     },
     {
       title: "Zwiad Regulatory Monitoring",

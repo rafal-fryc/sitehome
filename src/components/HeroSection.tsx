@@ -2,7 +2,11 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { FileText, Code, Scale, Mail } from "lucide-react";
 
-const HeroSection = () => {
+type HeroSectionProps = {
+  onSectionChange?: (section: string) => void;
+};
+
+const HeroSection = ({ onSectionChange }: HeroSectionProps) => {
   const [showEmail, setShowEmail] = useState(false);
 
   return (
@@ -25,7 +29,11 @@ const HeroSection = () => {
 
           {/* Feature Cards */}
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12">
-            <div className="p-8 bg-cream border border-rule border-l-[3px] border-l-primary">
+            <button
+              type="button"
+              onClick={() => onSectionChange?.("articles")}
+              className="p-8 bg-cream border border-rule border-l-[3px] border-l-primary text-left transition hover:bg-accent hover:border-l-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-primary cursor-pointer"
+            >
               <div className="flex items-center space-x-4 mb-4">
                 <div className="p-3 bg-primary/10 border border-rule">
                   <FileText className="h-8 w-8 text-primary" />
@@ -36,9 +44,13 @@ const HeroSection = () => {
                 In-depth analysis of contemporary legal issues, case studies, and academic research
                 exploring the evolving landscape of law.
               </p>
-            </div>
+            </button>
 
-            <div className="p-8 bg-cream border border-rule border-l-[3px] border-l-primary">
+            <button
+              type="button"
+              onClick={() => onSectionChange?.("projects")}
+              className="p-8 bg-cream border border-rule border-l-[3px] border-l-primary text-left transition hover:bg-accent hover:border-l-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-primary cursor-pointer"
+            >
               <div className="flex items-center space-x-4 mb-4">
                 <div className="p-3 bg-primary/10 border border-rule">
                   <Code className="h-8 w-8 text-primary" />
@@ -49,7 +61,7 @@ const HeroSection = () => {
                 Practical applications and digital tools designed to streamline legal research,
                 case management, and academic workflows.
               </p>
-            </div>
+            </button>
           </div>
 
           {/* CTA Section */}
