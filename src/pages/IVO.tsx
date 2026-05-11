@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useDocumentTitle } from "@/hooks/use-document-title";
 import "./ivo.css";
 
@@ -527,6 +528,7 @@ export default function IVO() {
     <div className="ivo-page">
       <header className="hero">
         <div className="wrap">
+          <Link to="/" className="home-link"><span aria-hidden="true">←</span> Back to home</Link>
           <div className="eyebrow-row">
             <span className="chip fill">Comparative Statutes</span>
             <span className="chip">2025–2026</span>
