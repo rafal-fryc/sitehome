@@ -75,6 +75,13 @@
 .ivo-page .plate .billno { font-family: "JetBrains Mono", monospace; font-size: 11.5px; letter-spacing: .1em; color: var(--muted); text-transform: uppercase; }
 .ivo-page .plate .pname { font-family: "EB Garamond", serif; font-size: 22px; font-weight: 600; letter-spacing: -.01em; margin: 8px 0 4px; color: var(--ink); }
 .ivo-page .plate .pmeta { font-size: 14px; color: var(--ink-2); line-height: 1.55; font-style: italic; }
+.ivo-page .plate .pcite { display: inline-block; margin-top: 12px; font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 2px; transition: color .15s ease, border-color .15s ease; }
+.ivo-page .plate .pcite:hover { color: var(--ink); }
+.ivo-page .plate .pcite span { margin-left: 4px; }
+.ivo-page .plate.mn .pcite:hover { color: var(--mn); border-color: var(--mn); }
+.ivo-page .plate.oh .pcite:hover { color: var(--oh); border-color: var(--oh); }
+.ivo-page .plate.ca .pcite:hover { color: var(--ca); border-color: var(--ca); }
+.ivo-page .plate.ct .pcite:hover { color: var(--ct); border-color: var(--ct); }
 
 /* SECTIONS */
 .ivo-page section.block { padding: 64px 0; }

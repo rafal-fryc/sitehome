@@ -492,11 +492,11 @@ const TOC = [
   { href: "#matrix", label: "Side-by-side matrix · 25 dimensions", n: "§ Ref." },
 ];
 
-const PLATES: { state: State; abbr: string; billno: string; pname: string; pmeta: string }[] = [
-  { state: "mn", abbr: "MN", billno: "S.F. 4636", pname: "Minnesota", pmeta: "Sens. Frentz &amp; Lucero · 94th Sess. (2026)<br>Minn. Stat. §§ 325M.50–.54" },
-  { state: "oh", abbr: "OH", billno: "H.B. 628", pname: "Ohio", pmeta: "Rep. Mathews · 136th Gen. Assembly<br>Ohio R.C. §§ 3755.01–.12" },
-  { state: "ca", abbr: "CA", billno: "S.B. 813", pname: "California", pmeta: "Sen. McNerney, as amended<br>Cal. Gov. Code §§ 8898–8898.6" },
-  { state: "ct", abbr: "CT", billno: "H.B. 5222 § 47", pname: "Connecticut", pmeta: "House Amend. LCO 6124 · eff. Oct. 1, 2027<br>Pilot · sunset Mar. 31, 2031" },
+const PLATES: { state: State; abbr: string; billno: string; pname: string; pmeta: string; url: string }[] = [
+  { state: "mn", abbr: "MN", billno: "S.F. 4636", pname: "Minnesota", pmeta: "Sens. Frentz &amp; Lucero · 94th Sess. (2026)<br>Minn. Stat. §§ 325M.50–.54", url: "https://www.revisor.mn.gov/bills/94/2026/0/SF/4636/versions/latest/" },
+  { state: "oh", abbr: "OH", billno: "H.B. 628", pname: "Ohio", pmeta: "Rep. Mathews · 136th Gen. Assembly<br>Ohio R.C. §§ 3755.01–.12", url: "https://www.legislature.ohio.gov/legislation/136/hb628" },
+  { state: "ca", abbr: "CA", billno: "S.B. 813", pname: "California", pmeta: "Sen. McNerney, as amended<br>Cal. Gov. Code §§ 8898–8898.6", url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB813" },
+  { state: "ct", abbr: "CT", billno: "H.B. 5222 § 47", pname: "Connecticut", pmeta: "House Amend. LCO 6124 · eff. Oct. 1, 2027<br>Pilot · sunset Mar. 31, 2031", url: "https://www.cga.ct.gov/asp/CGABillStatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB5222" },
 ];
 
 const FONTS_HREF = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap";
@@ -546,6 +546,7 @@ export default function IVO() {
                 <div className="pcrest"><span className="abbr">{p.abbr}</span><span className="billno">{p.billno}</span></div>
                 <div className="pname">{p.pname}</div>
                 <div className="pmeta" dangerouslySetInnerHTML={{ __html: p.pmeta }} />
+                <a className="pcite" href={p.url} target="_blank" rel="noopener noreferrer">Read bill <span aria-hidden="true">→</span></a>
               </div>
             ))}
           </div>
