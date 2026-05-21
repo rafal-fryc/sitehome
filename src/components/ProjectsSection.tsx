@@ -10,7 +10,7 @@ const ProjectsSection = () => {
       technologies: ["Lawve.ai", "NIST AI RMF", "Prompt Engineering"],
       status: "Live",
       icon: Search,
-      githubUrl: "https://lawve.ai/en/skills/nist-ai-rmf-rafal-fryc",
+      githubUrl: "https://github.com/rafal-fryc/NIST-AI-RMF-Skill",
       demoUrl: "https://lawve.ai/en/skills/nist-ai-rmf-rafal-fryc"
     },
     {
@@ -209,11 +209,6 @@ const ProjectsSection = () => {
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-gold hover:bg-accent">
-            View All Projects
-          </Button>
-        </div>
       </div>
     </section>
   );
