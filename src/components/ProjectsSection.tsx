@@ -5,13 +5,13 @@ import { Github, ExternalLink, Gavel, Search, FileCheck, Calculator, BarChart3, 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Compliance Checklist Generator",
-      description: "Stay on top of dozens of laws with a customizable checklist generator, allowing you to discern the requirements with a few clicks.",
-      technologies: ["Vite", "TypeScript", "OpenAI Codex"],
+      title: "NIST AI RMF Skill",
+      description: "A Lawve.ai skill that operationalizes the NIST AI Risk Management Framework, helping teams map, measure, and manage AI risks through structured guidance.",
+      technologies: ["Lawve.ai", "NIST AI RMF", "Prompt Engineering"],
       status: "Live",
       icon: Search,
-      githubUrl: "https://github.com/rafal-fryc/law-list-buddy-34",
-      demoUrl: "https://www.rafalsportfolio.me/checklists"
+      githubUrl: "https://lawve.ai/en/skills/nist-ai-rmf-rafal-fryc",
+      demoUrl: "https://lawve.ai/en/skills/nist-ai-rmf-rafal-fryc"
     },
     {
       title: "GDPR Stop Processing Orders Report",
